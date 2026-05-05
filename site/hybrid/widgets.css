@@ -1,0 +1,462 @@
+/* widgets.css — shared styles for the W5 supporting widgets.
+   Selector prefixes: .gauge-, .citations-, .tally-
+   Aesthetic: warm-paper background, serif headings (Fraunces / Newsreader),
+   mono for citations. No external dependencies.
+*/
+
+:root {
+  --w-paper:       #f6f1e7;
+  --w-paper-deep:  #efe7d4;
+  --w-ink:         #2b2620;
+  --w-ink-soft:    #5b5346;
+  --w-rule:        #d9cfb9;
+  --w-rule-soft:   #e7dccb;
+
+  --w-red:         #c5524a;
+  --w-amber:       #c89a3a;
+  --w-moss:        #5a8a4f;
+
+  --w-serif: "Fraunces", "Newsreader", "Source Serif Pro", Georgia, serif;
+  --w-mono:  "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --w-sans:  "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   GAUGE
+   ────────────────────────────────────────────────────────────────────────── */
+
+.gauge-root {
+  font-family: var(--w-sans);
+  color: var(--w-ink);
+  width: 100%;
+}
+
+.gauge-frame {
+  background: var(--w-paper);
+  border: 1px solid var(--w-rule);
+  border-radius: 12px;
+  padding: 14px 16px 12px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 6px;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  display: block;
+}
+
+.gauge-track-bg {
+  /* base track sits behind the gradient and softens the curve */
+}
+
+.gauge-ticks line {
+  stroke: var(--w-ink-soft);
+  stroke-width: 1.6;
+  opacity: 0.55;
+}
+
+.gauge-needle {
+  stroke: var(--w-ink);
+  stroke-width: 3;
+  stroke-linecap: round;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.15));
+}
+
+.gauge-hub {
+  fill: var(--w-ink);
+  stroke: var(--w-paper);
+  stroke-width: 1.5;
+}
+
+.gauge-needle-group {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 80ms linear;
+}
+
+.gauge-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: var(--w-ink-soft);
+  margin-top: -4px;
+  text-align: center;
+}
+.gauge-label-left  { color: var(--w-red);   text-align: left;  }
+.gauge-label-mid   { color: var(--w-amber); text-align: center; line-height: 1.15; }
+.gauge-label-right { color: var(--w-moss);  text-align: right; }
+
+.gauge-readout {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px dashed var(--w-rule);
+  padding-top: 8px;
+}
+
+.gauge-value {
+  font-family: var(--w-serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+.gauge-value.s-0 { color: var(--w-red);   }
+.gauge-value.s-1 { color: var(--w-amber); }
+.gauge-value.s-2 { color: var(--w-moss);  }
+
+.gauge-pct {
+  font-family: var(--w-mono);
+  font-size: 13px;
+  color: var(--w-ink-soft);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   CITATIONS
+   ────────────────────────────────────────────────────────────────────────── */
+
+.citations-root {
+  font-family: var(--w-sans);
+  color: var(--w-ink);
+  background: var(--w-paper);
+  border: 1px solid var(--w-rule);
+  border-radius: 12px;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.citations-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.citations-title {
+  font-family: var(--w-serif);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--w-ink);
+  letter-spacing: 0.005em;
+}
+
+.citations-meta {
+  font-family: var(--w-mono);
+  font-size: 11.5px;
+  color: var(--w-ink-soft);
+}
+
+.citations-track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  align-items: center;
+  min-height: 56px;
+  padding: 6px 0;
+  border-top: 1px dashed var(--w-rule);
+}
+
+.citations-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.25;
+  border: 1px solid var(--w-rule);
+  background: var(--w-paper);
+  opacity: 0;
+  transform: translateX(-8px) scale(0.9);
+  transform-origin: left center;
+  transition:
+    opacity 280ms ease-out,
+    transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 220ms ease,
+    background 220ms ease;
+  white-space: nowrap;
+}
+
+.citations-chip-label {
+  display: inline-block;
+}
+
+/* "vague" — OOB-only, no real citation */
+.citations-chip-vague {
+  font-style: italic;
+  color: var(--w-ink-soft);
+  border-color: #c8bfa9;
+  background: #f1eadb;
+}
+.citations-chip-vague.is-active {
+  border-style: dashed;
+}
+
+/* "code" — PCC / Title sections — mono with amber border (MCP-introduced) */
+.citations-chip-code .citations-chip-label {
+  font-family: var(--w-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.005em;
+  color: #5a4626;
+}
+.citations-chip-code {
+  border-color: #d9b56a;
+  background: #fbf3df;
+}
+.citations-chip-code.is-active {
+  border-color: var(--w-amber);
+  box-shadow: 0 0 0 1px rgba(200, 154, 58, 0.18) inset;
+}
+
+/* "authority" — Enhanced-tier sources w/ named publisher */
+.citations-chip-authority .citations-chip-label {
+  font-family: var(--w-mono);
+  font-size: 11.5px;
+  color: #2f4a2a;
+}
+.citations-chip-authority {
+  border-color: #95b487;
+  background: #eaf2e3;
+}
+.citations-chip-authority.is-active {
+  border-color: var(--w-moss);
+  box-shadow: 0 0 0 1px rgba(90, 138, 79, 0.20) inset;
+}
+
+.citations-chip-badge {
+  font-family: var(--w-sans);
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1px 5px;
+  border-radius: 999px;
+  color: #2f4a2a;
+  background: rgba(90, 138, 79, 0.15);
+  border: 1px solid rgba(90, 138, 79, 0.35);
+}
+
+.citations-chip-count {
+  font-family: var(--w-mono);
+  font-size: 10.5px;
+  color: var(--w-ink-soft);
+  opacity: 0.8;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   TALLY — panel
+   ────────────────────────────────────────────────────────────────────────── */
+
+.tally-panel-root {
+  font-family: var(--w-sans);
+  color: var(--w-ink);
+  background: var(--w-paper);
+  border: 1px solid var(--w-rule);
+  border-radius: 12px;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.tally-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.tally-title {
+  font-family: var(--w-serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+.tally-total {
+  font-family: var(--w-mono);
+  font-size: 11.5px;
+  color: var(--w-ink-soft);
+}
+
+.tally-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px dashed var(--w-rule);
+}
+
+.tally-row {
+  --tally-emphasis: 0;
+  --tally-tint: #5b5346;
+  display: grid;
+  grid-template-columns: 6px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(217, 207, 185, 0.55);
+  cursor: default;
+  transition: background 180ms ease;
+}
+.tally-row:last-child { border-bottom: none; }
+
+.tally-row-bar {
+  display: block;
+  width: 4px;
+  height: 22px;
+  border-radius: 2px;
+  background: var(--tally-tint);
+  /* Dim bar by default; emphasis brightens it. */
+  opacity: calc(0.45 + 0.55 * var(--tally-emphasis));
+  box-shadow: 0 0 0 1px rgba(0,0,0,0) ;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.tally-row.is-emphasized .tally-row-bar {
+  transform: scaleY(1.08);
+}
+.tally-row.is-highlight .tally-row-bar {
+  opacity: 1;
+}
+
+.tally-row-label {
+  font-family: var(--w-sans);
+  font-size: 13px;
+  color: var(--w-ink);
+  /* Brighten label slightly with emphasis. */
+  opacity: calc(0.78 + 0.22 * var(--tally-emphasis));
+  transition: opacity 200ms ease, color 200ms ease;
+}
+
+.tally-row-count {
+  font-family: var(--w-mono);
+  font-size: 13px;
+  color: var(--w-ink-soft);
+  min-width: 20px;
+  text-align: right;
+  opacity: calc(0.7 + 0.3 * var(--tally-emphasis));
+  transition: opacity 200ms ease, color 200ms ease;
+}
+
+.tally-row.is-empty .tally-row-bar   { opacity: 0.22; }
+.tally-row.is-empty .tally-row-label { opacity: 0.4; font-style: italic; }
+.tally-row.is-empty .tally-row-count { opacity: 0.4; }
+
+.tally-row.is-highlight {
+  background: rgba(0,0,0,0.025);
+}
+.tally-row.is-highlight .tally-row-label {
+  color: var(--w-ink);
+  opacity: 1;
+  font-weight: 500;
+}
+.tally-row.is-highlight .tally-row-count {
+  color: var(--w-ink);
+  opacity: 1;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   TALLY — proportional summary tape
+   ────────────────────────────────────────────────────────────────────────── */
+
+.tally-tape-root {
+  font-family: var(--w-sans);
+  color: var(--w-ink);
+  background: var(--w-paper);
+  border: 1px solid var(--w-rule);
+  border-radius: 12px;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.tally-tape-label {
+  font-family: var(--w-serif);
+  font-size: 13.5px;
+  color: var(--w-ink-soft);
+  margin-bottom: 8px;
+  letter-spacing: 0.005em;
+  font-style: italic;
+}
+
+.tally-tape-bar {
+  --tally-emphasis: 0;
+  display: flex;
+  width: 100%;
+  height: 28px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--w-paper-deep);
+  border: 1px solid var(--w-rule);
+}
+
+.tally-tape-seg {
+  --tally-emphasis: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  color: rgba(255,255,255,0.92);
+  font-family: var(--w-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  /* Default: dim, emphasis brings to full brightness. */
+  filter: saturate(calc(0.55 + 0.45 * var(--tally-emphasis))) brightness(calc(0.85 + 0.20 * var(--tally-emphasis)));
+  transition: filter 200ms ease, flex-grow 200ms ease, transform 200ms ease;
+}
+
+.tally-tape-seg.is-empty { display: none; }
+
+.tally-tape-seg.is-highlight {
+  filter: saturate(1.12) brightness(1.05);
+  outline: 2px solid rgba(0,0,0,0.12);
+  outline-offset: -2px;
+  z-index: 1;
+}
+
+.tally-tape-num {
+  display: inline-block;
+  padding: 0 4px;
+  font-weight: 500;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.18);
+}
+
+/* Hide the count if the segment is too narrow to fit comfortably. */
+.tally-tape-seg {
+  /* Use container query fallback via min-width — at <28px wide, hide the num. */
+}
+.tally-tape-seg .tally-tape-num {
+  visibility: visible;
+}
+@supports (container-type: inline-size) {
+  .tally-tape-seg {
+    container-type: inline-size;
+  }
+  @container (max-width: 28px) {
+    .tally-tape-num { visibility: hidden; }
+  }
+}
+
+.tally-tape-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 8px;
+  font-size: 11.5px;
+  color: var(--w-ink-soft);
+}
+
+.tally-tape-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tally-tape-legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.08);
+}

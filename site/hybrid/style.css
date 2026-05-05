@@ -1,0 +1,366 @@
+/* =====================================================================
+   style.css — W7 page shell for the hybrid mockup.
+   Owns: page background, layout grid, typography, header, legend, footer.
+   Does NOT own: per-module styling (scrubber.css, lobes.css, widgets.css,
+   chips.css, sidepanel.css).
+   Aesthetic: warm paper, editorial, NYT-graphics-desk-adjacent.
+   ===================================================================== */
+
+:root {
+  /* Palette — warm paper + near-black ink. */
+  --paper:        #f6f1e7;
+  --paper-deep:   #efe7d4;
+  --paper-edge:   #e7dccb;
+  --ink:          #221a13;
+  --ink-soft:     #5b5346;
+  --ink-mute:     #8a8170;
+  --rule:         #d9cfb9;
+  --rule-soft:    #e7dccb;
+  --rule-strong:  #a89e87;
+
+  /* Variant tints — match lobes.js / widgets.css. */
+  --c-oob:        #c5524a;
+  --c-mcp:        #c89a3a;
+  --c-enh:        #5a8a4f;
+
+  /* Typography. */
+  --serif:  "Fraunces", "Newsreader", "Source Serif Pro", Georgia, serif;
+  --sans:   "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:   "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Layout. */
+  --page-max:     1320px;
+  --page-pad-x:   48px;
+  --page-pad-y:   24px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle paper texture: two soft dot grids. Editorial, not loud. */
+body {
+  background-image:
+    radial-gradient(rgba(34,26,19,0.035) 1px, transparent 1px),
+    radial-gradient(rgba(34,26,19,0.020) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 1px;
+  min-height: 100vh;
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   PAGE FRAME
+   ────────────────────────────────────────────────────────────────────── */
+
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--page-pad-y) var(--page-pad-x) 60px;
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   HEADER — compact horizontal band; H1 + meta share one row at desktop
+   so the scrubber + diagram fit above the fold.
+   ────────────────────────────────────────────────────────────────────── */
+
+.page-header {
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule-strong);
+  padding: 10px 0 14px;
+  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "eyebrow eyebrow"
+    "title   meta";
+  column-gap: 32px;
+  row-gap: 6px;
+  align-items: end;
+}
+
+.eyebrow {
+  grid-area: eyebrow;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.page-title {
+  grid-area: title;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(30px, 3.0vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.014em;
+  color: var(--ink);
+  margin: 0;
+  max-width: 24ch;
+}
+
+.page-meta {
+  grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  padding-bottom: 4px;
+}
+
+.address-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  background: var(--paper-deep);
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+
+.page-subtitle {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   SCRUBBER ROW — host for W2.
+   ────────────────────────────────────────────────────────────────────── */
+
+.scrubber-row {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 18px;
+  width: 100%;
+  /* The Scrubber owns its own padding/sizing internally
+     (max-width 880px set in scrubber.css). */
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   DIAGRAM ROW — 60% diagram / 40% side panel at desktop.
+   Collapses to single column under 1024px.
+   ────────────────────────────────────────────────────────────────────── */
+
+.diagram-row {
+  display: grid;
+  grid-template-columns: minmax(0, 65fr) minmax(0, 35fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 36px;
+}
+
+.diagram {
+  position: relative;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.diagram .lobes-svg {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 820 / 600;
+  display: block;
+  overflow: visible;
+}
+
+/* Legend sits below the diagram, three small swatches. */
+.legend {
+  display: flex;
+  justify-content: flex-start;
+  gap: 28px;
+  padding-top: 14px;
+  margin-top: 8px;
+  border-top: 1px solid var(--rule-soft);
+  font-family: var(--sans);
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.legend-item .swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.swatch-oob { background: var(--c-oob); }
+.swatch-mcp { background: var(--c-mcp); }
+.swatch-enh { background: var(--c-enh); }
+
+.legend-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+
+.legend-sub {
+  color: var(--ink-mute);
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* Side panel host — W6 fills it. Provide a sturdy shell so the page
+   doesn't collapse before W6 ships. */
+.side-panel {
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 22px 26px 26px;
+  min-height: 0;
+  max-height: 640px;
+  overflow-y: auto;
+  font-family: var(--serif);
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel:empty::before {
+  content: "AI response panel will mount here.";
+  font-style: italic;
+  color: var(--ink-mute);
+  font-size: 14px;
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   WIDGETS ROW — three columns: gauge / citations / tally panel.
+   ────────────────────────────────────────────────────────────────────── */
+
+.widgets-row {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 36px;
+  margin-bottom: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+
+.widget {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  min-height: 0;
+}
+
+.widget:empty::before {
+  content: "widget loading…";
+  font-family: var(--sans);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--ink-mute);
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   FOOTER
+   ────────────────────────────────────────────────────────────────────── */
+
+.page-footer {
+  border-top: 1px solid var(--ink);
+  padding-top: 20px;
+  margin-top: 8px;
+}
+
+.tape-host {
+  width: 100%;
+  min-height: 28px;
+  margin-bottom: 16px;
+}
+
+.legend-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--ink-soft);
+  letter-spacing: 0.01em;
+}
+
+.legend-bottom span {
+  position: relative;
+  padding-left: 14px;
+}
+.legend-bottom span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 1px;
+  background: var(--ink-soft);
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   RESPONSIVE — single column under 1024px.
+   ────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  :root {
+    --page-pad-x: 28px;
+  }
+
+  .diagram-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .diagram { min-height: 520px; }
+  .side-panel { min-height: 320px; }
+
+  .widgets-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .page-title {
+    font-size: clamp(36px, 6vw, 48px);
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   FOCUS — keep keyboard focus visible across the page.
+   ────────────────────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}

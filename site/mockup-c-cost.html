@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cost of Being Wrong — Portland AI Code Search Risk Prospectus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f1ece1;
+    --paper-2: #ebe5d6;
+    --paper-3: #e4ddca;
+    --ink: #14110d;
+    --ink-2: #2a251c;
+    --ink-3: #564e3f;
+    --ink-4: #8a8170;
+    --rule: #1a160f;
+    --rule-soft: rgba(20, 17, 13, 0.18);
+    --oxblood: #7a1d1d;
+    --oxblood-deep: #4a1010;
+    --oxblood-bright: #b32424;
+    --amber: #a86815;
+    --amber-soft: #d6a04a;
+    --moss: #2f4a28;
+    --moss-soft: #6b8a4f;
+    --gold: #b08a3e;
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --body: "Newsreader", "Georgia", serif;
+    --mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body);
+    font-weight: 400;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "lnum", "tnum" 0, "kern", "liga";
+    background-image:
+      radial-gradient(1200px 600px at 10% -10%, rgba(122, 29, 29, 0.04), transparent 60%),
+      radial-gradient(900px 500px at 110% 5%, rgba(176, 138, 62, 0.05), transparent 60%);
+  }
+
+  /* Subtle paper grain */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08  0 0 0 0 0.07  0 0 0 0 0.05  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  .page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 56px 72px 96px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── Document header ── */
+  .doc-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 14px;
+    margin-bottom: 0;
+    gap: 32px;
+  }
+  .doc-mark {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .doc-mark .mark-square {
+    width: 9px; height: 9px;
+    background: var(--oxblood);
+    display: inline-block;
+  }
+  .doc-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+    text-align: right;
+    line-height: 1.7;
+  }
+  .doc-meta strong { color: var(--ink); font-weight: 500; }
+
+  /* Subtitle bar (filing-strip) */
+  .filing-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 4px double var(--rule);
+    padding: 10px 0 14px;
+    margin-bottom: 56px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .filing-strip .left { font-weight: 500; }
+  .filing-strip .center { color: var(--oxblood); font-weight: 600; }
+
+  /* ── Hero block ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 72px;
+    align-items: end;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 64px;
+    position: relative;
+  }
+
+  .hero-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--oxblood);
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-label::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--oxblood);
+  }
+
+  .hero-deck {
+    font-family: var(--serif);
+    font-size: 62px;
+    line-height: 0.96;
+    letter-spacing: -0.028em;
+    color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 28px;
+    max-width: 18ch;
+  }
+  .hero-deck em {
+    font-style: italic;
+    color: var(--oxblood);
+    font-feature-settings: "swsh";
+  }
+
+  .hero-blurb {
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    max-width: 38ch;
+  }
+  .hero-blurb .smallcaps {
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* The tombstone */
+  .tombstone {
+    position: relative;
+    padding-left: 40px;
+    border-left: 1px solid var(--rule);
+  }
+  .tombstone-eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tombstone-eyebrow .scenario {
+    color: var(--oxblood);
+  }
+  .big-figure {
+    font-family: var(--serif);
+    font-size: clamp(140px, 18vw, 232px);
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    color: var(--ink);
+    font-weight: 400;
+    font-variant-numeric: tabular-nums lining-nums;
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .big-figure .currency {
+    font-size: 0.42em;
+    vertical-align: 0.5em;
+    color: var(--oxblood);
+    margin-right: 0.05em;
+    font-style: italic;
+    letter-spacing: 0;
+  }
+  .big-figure .underline-stamp {
+    position: absolute;
+    left: 0; right: 0; bottom: 8px;
+    height: 6px;
+    background: linear-gradient(90deg, var(--oxblood) 0 60%, transparent 60%);
+    opacity: 0.18;
+  }
+  .tombstone-caption {
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-2);
+    max-width: 46ch;
+    border-top: 1px solid var(--rule);
+    padding-top: 14px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .tombstone-caption .badge {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--oxblood);
+    padding: 4px 8px;
+    margin-top: 2px;
+    white-space: nowrap;
+  }
+  .tombstone-caption strong { color: var(--ink); font-weight: 500; }
+  .footnote-mark {
+    font-family: var(--mono);
+    font-size: 9px;
+    vertical-align: super;
+    color: var(--oxblood);
+    font-weight: 600;
+  }
+
+  /* ── Section header pattern ── */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 36px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--oxblood);
+    font-weight: 600;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 32px;
+    line-height: 1;
+    color: var(--ink);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    flex: 1;
+  }
+  .section-title em { font-style: italic; }
+  .section-aside {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* ── Risk Axis ── */
+  .risk-section { margin-bottom: 96px; }
+
+  .risk-axis-wrap {
+    background: var(--paper-2);
+    border: 1px solid var(--rule-soft);
+    padding: 44px 48px 36px;
+    position: relative;
+  }
+
+  .risk-axis-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .risk-axis {
+    position: relative;
+    height: 96px;
+    margin-bottom: 12px;
+  }
+
+  .risk-axis-bar {
+    position: absolute;
+    left: 0; right: 0; top: 50%;
+    height: 14px;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg,
+      #2f4a28 0%,
+      #6b8a4f 18%,
+      #c8a847 38%,
+      #d68a2a 58%,
+      #b32424 78%,
+      #4a1010 100%);
+    border: 1px solid var(--rule);
+  }
+  .risk-axis-bar::after {
+    /* stripes for prospectus feel */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(90deg,
+      transparent 0,
+      transparent 9px,
+      rgba(0,0,0,0.06) 9px,
+      rgba(0,0,0,0.06) 10px);
+  }
+
+  .risk-tick {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    pointer-events: none;
+  }
+  .risk-tick .pin {
+    position: absolute;
+    left: 0;
+    width: 1px;
+    background: var(--ink);
+  }
+  .risk-tick .dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 9px; height: 9px;
+    background: var(--ink);
+    border: 2px solid var(--paper-2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  .risk-tick.danger .dot { background: var(--oxblood); }
+  .risk-tick.caution .dot { background: var(--amber); }
+  .risk-tick.safe .dot { background: var(--moss); }
+  .risk-tick.above .pin { top: 0; height: calc(50% - 4px); }
+  .risk-tick.below .pin { bottom: 0; height: calc(50% - 4px); }
+  .risk-tick .label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .risk-tick.above .label { bottom: calc(50% + 8px); padding-bottom: 6px; }
+  .risk-tick.below .label { top: calc(50% + 8px); padding-top: 6px; }
+
+  .risk-tick .name {
+    font-family: var(--serif);
+    font-size: 18px;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    margin-bottom: 2px;
+    line-height: 1.1;
+  }
+  .risk-tick .name em { font-style: italic; color: var(--ink-2); }
+  .risk-tick .display {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 500;
+  }
+  .risk-tick.danger .display { color: var(--oxblood); }
+  .risk-tick.caution .display { color: var(--amber); }
+  .risk-tick.safe .display { color: var(--moss); }
+
+  .risk-axis-scale {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 26px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--rule-soft);
+  }
+
+  /* ── Variant cards (three columns of detail) ── */
+  .variants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 96px;
+  }
+  .variant {
+    padding: 32px 28px 28px;
+    border-right: 1px solid var(--rule-soft);
+    position: relative;
+  }
+  .variant:last-child { border-right: none; }
+
+  .variant-tag {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .variant.v-oob .variant-tag { color: var(--oxblood); }
+  .variant.v-mcp .variant-tag { color: var(--amber); }
+  .variant.v-enh .variant-tag { color: var(--moss); }
+  .variant-tag .glyph {
+    width: 18px; height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 13px;
+    color: #fff;
+    border-radius: 50%;
+    font-style: italic;
+  }
+  .v-oob .glyph { background: var(--oxblood); }
+  .v-mcp .glyph { background: var(--amber); }
+  .v-enh .glyph { background: var(--moss); }
+
+  .variant-name {
+    font-family: var(--serif);
+    font-size: 26px;
+    line-height: 1.05;
+    margin-bottom: 4px;
+    letter-spacing: -0.015em;
+  }
+  .variant-tool {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed var(--rule-soft);
+  }
+
+  /* Stop-work order percentage */
+  .swo-block {
+    margin-bottom: 28px;
+  }
+  .swo-label {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 4px;
+  }
+  .swo-figure {
+    font-family: var(--serif);
+    font-size: 88px;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+  }
+  .swo-figure .pct {
+    font-size: 0.4em;
+    vertical-align: 0.6em;
+    margin-left: 0.05em;
+    font-style: italic;
+    color: var(--ink-3);
+  }
+  .v-oob .swo-figure { color: var(--oxblood); }
+  .v-mcp .swo-figure { color: var(--amber); }
+  .v-enh .swo-figure { color: var(--moss); }
+  .swo-caption {
+    font-family: var(--body);
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--ink-2);
+    margin-top: 8px;
+    font-style: italic;
+    max-width: 32ch;
+  }
+
+  /* Subhead inside variant */
+  .variant-sub {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 26px 0 12px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--rule-soft);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Stacked exposure bar (vertical, layered) */
+  .exposure {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 0;
+    width: 100%;
+    background: var(--paper-3);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    transition: height 0.6s ease;
+  }
+  .exposure-wrap {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 14px;
+    align-items: end;
+  }
+  .exposure-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 0;
+    border-right: 1px dashed var(--rule-soft);
+    padding-right: 10px;
+  }
+  .exposure-frame {
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+  .exposure-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    background: var(--paper-3);
+    border: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+  .exposure-seg {
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    transition: height 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    min-height: 0;
+  }
+  .exposure-seg:first-child { border-top: none; }
+  .exposure-seg .seg-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.94);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .exposure-seg .seg-amt {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: rgba(255,255,255,0.78);
+    margin-left: 6px;
+    font-weight: 400;
+  }
+  /* Hide label when the segment is too short to read it cleanly */
+  .exposure-seg[data-tiny="1"] .seg-label,
+  .exposure-seg[data-tiny="1"] .seg-amt { display: none; }
+
+  /* Color palettes for segments — tuned to variant */
+  .v-oob .seg-permit  { background: #5a2a2a; }
+  .v-oob .seg-fines   { background: #7a1d1d; }
+  .v-oob .seg-rework  { background: #a32525; }
+  .v-oob .seg-sdc     { background: #c14a2c; }
+  .v-oob .seg-legal   { background: #d6a04a; }
+
+  .v-mcp .seg-permit  { background: #6b5d2a; }
+  .v-mcp .seg-fines   { background: #856a1d; }
+  .v-mcp .seg-rework  { background: #a86815; }
+  .v-mcp .seg-sdc     { background: #c08a2e; }
+  .v-mcp .seg-legal   { background: #d6a04a; }
+
+  .v-enh .seg-permit  { background: #2f4a28; }
+  .v-enh .seg-fines   { background: #4a6532; }
+  .v-enh .seg-rework  { background: #6b8a4f; }
+  .v-enh .seg-sdc     { background: #8aa365; }
+  .v-enh .seg-legal   { background: #b08a3e; }
+
+  .exposure-totals {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--rule-soft);
+  }
+  .exposure-totals .figure {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--ink);
+    text-transform: none;
+    letter-spacing: -0.01em;
+  }
+  .v-oob .exposure-totals .figure.worst { color: var(--oxblood); }
+  .v-mcp .exposure-totals .figure.worst { color: var(--amber); }
+  .v-enh .exposure-totals .figure.worst { color: var(--moss); }
+
+  /* Box-and-whisker for exposure (median p25 p75 worst) */
+  .whisker {
+    position: relative;
+    height: 36px;
+    margin: 14px 0 4px;
+  }
+  .whisker .axis {
+    position: absolute;
+    left: 0; right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--rule);
+  }
+  .whisker .iqr {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    border: 1px solid var(--ink);
+  }
+  .v-oob .whisker .iqr { background: rgba(122, 29, 29, 0.18); }
+  .v-mcp .whisker .iqr { background: rgba(168, 104, 21, 0.18); }
+  .v-enh .whisker .iqr { background: rgba(47, 74, 40, 0.18); }
+  .whisker .median, .whisker .worst {
+    position: absolute;
+    top: 50%;
+    width: 2px;
+    background: var(--ink);
+    transform: translate(-50%, -50%);
+  }
+  .whisker .median { height: 22px; }
+  .whisker .worst { height: 28px; background: var(--oxblood); }
+  .v-mcp .whisker .worst { background: var(--amber); }
+  .v-enh .whisker .worst { background: var(--moss); }
+
+  .whisker-scale {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Time spine (horizontal) */
+  .timespine {
+    position: relative;
+    height: 22px;
+    margin: 10px 0 6px;
+    background: var(--paper-3);
+    border: 1px solid var(--rule);
+  }
+  .timespine .span {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    background: repeating-linear-gradient(45deg,
+      currentColor 0 6px,
+      transparent 6px 12px);
+    opacity: 0.7;
+    border-right: 1px solid var(--ink);
+  }
+  .v-oob .timespine .span { color: var(--oxblood); }
+  .v-mcp .timespine .span { color: var(--amber); }
+  .v-enh .timespine .span { color: var(--moss); }
+  .timespine-scale {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .timespine-figure {
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1;
+    margin-top: 8px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .timespine-figure .unit {
+    font-size: 12px;
+    color: var(--ink-3);
+    font-style: italic;
+    font-family: var(--body);
+    letter-spacing: 0;
+  }
+  .v-oob .timespine-figure { color: var(--oxblood); }
+  .v-mcp .timespine-figure { color: var(--amber); }
+  .v-enh .timespine-figure { color: var(--moss); }
+
+  /* Decision silhouettes — figure icons */
+  .decisions {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 6px;
+    margin: 10px 0 4px;
+  }
+  .dec {
+    aspect-ratio: 6/10;
+    position: relative;
+    background: transparent;
+  }
+  .dec::before {
+    /* head */
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 38%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--paper-3);
+    border: 1px solid var(--ink-4);
+  }
+  .dec::after {
+    /* shoulders / body */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: var(--paper-3);
+    border: 1px solid var(--ink-4);
+    border-bottom: none;
+    border-radius: 50% 50% 0 0 / 35% 35% 0 0;
+  }
+  .dec.confident::before, .dec.confident::after {
+    border-color: var(--ink);
+  }
+  .v-oob .dec.confident::before, .v-oob .dec.confident::after { background: var(--oxblood); border-color: var(--oxblood-deep); }
+  .v-mcp .dec.confident::before, .v-mcp .dec.confident::after { background: var(--amber); border-color: #6b4710; }
+  .v-enh .dec.confident::before, .v-enh .dec.confident::after { background: var(--moss); border-color: #1c2f17; }
+  .decisions-scale {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .decisions-scale .count {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    text-transform: none;
+  }
+
+  /* Variant footer / quote */
+  .variant-quote {
+    margin-top: 24px;
+    padding: 14px 0 0;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.3;
+    color: var(--ink-2);
+    position: relative;
+  }
+  .variant-quote::before {
+    content: "“";
+    font-family: var(--serif);
+    font-size: 32px;
+    color: var(--ink-4);
+    position: absolute;
+    left: -2px;
+    top: 6px;
+    line-height: 0;
+  }
+  .variant-quote .quote-body {
+    padding-left: 18px;
+    display: block;
+  }
+
+  /* ── Ledger summary ── */
+  .ledger-section {
+    margin-bottom: 88px;
+  }
+  .ledger {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--body);
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .ledger thead th {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: right;
+    padding: 12px 14px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 600;
+  }
+  .ledger thead th:first-child { text-align: left; }
+  .ledger tbody td {
+    padding: 14px;
+    border-bottom: 1px dashed var(--rule-soft);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .ledger tbody td:first-child {
+    text-align: left;
+    font-family: var(--body);
+    font-size: 14.5px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .ledger tbody td:first-child .desc {
+    display: block;
+    font-family: var(--body);
+    font-size: 12px;
+    color: var(--ink-3);
+    font-weight: 400;
+    margin-top: 2px;
+    font-style: italic;
+  }
+  .ledger tbody tr:hover td { background: var(--paper-2); }
+  .ledger .col-oob { color: var(--oxblood); }
+  .ledger .col-mcp { color: var(--amber); }
+  .ledger .col-enh { color: var(--moss); }
+  .ledger tfoot td {
+    padding: 14px;
+    border-top: 2px solid var(--rule);
+    border-bottom: 4px double var(--rule);
+    font-family: var(--mono);
+    font-size: 14px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .ledger tfoot td:first-child {
+    text-align: left;
+    font-family: var(--serif);
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+  }
+  .ledger tfoot .col-oob { color: var(--oxblood); font-size: 18px; }
+  .ledger tfoot .col-mcp { color: var(--amber); font-size: 18px; }
+  .ledger tfoot .col-enh { color: var(--moss); font-size: 18px; }
+
+  /* ── Methodology / Footnotes ── */
+  .closer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .closer h3 {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .closer p {
+    font-family: var(--body);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin-bottom: 12px;
+  }
+  .footnotes {
+    font-family: var(--body);
+    font-size: 12px;
+    color: var(--ink-3);
+    line-height: 1.55;
+  }
+  .footnotes .fn {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  .footnotes .fn .num {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--oxblood);
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  /* Closing colophon */
+  .colophon {
+    margin-top: 64px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* Typographic accent */
+  .ornament {
+    font-family: var(--serif);
+    color: var(--oxblood);
+    font-style: italic;
+  }
+
+  /* Reveal animation prep — kept very subtle so static screenshots still capture content */
+  .reveal { opacity: 1; transform: none; transition: opacity 0.6s ease, transform 0.6s ease; }
+  /* Only the hero gets the entrance */
+  .hero.reveal { opacity: 0; transform: translateY(10px); }
+  .hero.reveal.in { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 1080px) {
+    .hero { grid-template-columns: 1fr; gap: 36px; }
+    .tombstone { padding-left: 0; border-left: none; padding-top: 24px; border-top: 1px solid var(--rule); }
+    .variants { grid-template-columns: 1fr; }
+    .variant { border-right: none; border-bottom: 1px solid var(--rule-soft); }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ─────────── Document header ─────────── -->
+  <header class="doc-header">
+    <div class="doc-mark">
+      <span class="mark-square"></span>
+      Risk Prospectus &nbsp;·&nbsp; Form CCA-7
+    </div>
+    <div class="doc-meta">
+      <strong>City of Portland</strong> · Hackathon Track 1 Evaluation<br>
+      Filing date 2026-05-01 &nbsp;·&nbsp; Document 03 of 03
+    </div>
+  </header>
+
+  <div class="filing-strip">
+    <span class="left">Bureau of Planning &amp; Sustainability — AI Code &amp; Regulation Search Assistant</span>
+    <span class="center">▌ The Cost of Being Wrong</span>
+    <span class="right">Scenario 01 · ADU on a Sunnyside lot</span>
+  </div>
+
+  <!-- ─────────── Hero ─────────── -->
+  <section class="hero reveal">
+    <div class="hero-text">
+      <div class="hero-label">If a resident acts on this answer&hellip;</div>
+      <h1 class="hero-deck">A bad AI answer to a simple <em>tiny-house</em> question can cost a Portlander five figures and eight months of their life.</h1>
+      <p class="hero-blurb">This prospectus models the <span class="smallcaps">financial exposure</span>, <span class="smallcaps">schedule slip</span>, and <span class="smallcaps">enforcement risk</span> a homeowner inherits when they take an AI&rsquo;s answer at face value. Three identical questions. Three different toolings. Three very different bills.</p>
+    </div>
+
+    <aside class="tombstone">
+      <div class="tombstone-eyebrow">
+        <span>Worst-case exposure</span>
+        <span class="scenario">OUT-OF-BOX AI · P95</span>
+      </div>
+      <span class="big-figure" id="bigfig">
+        <span class="currency">$</span><span data-count-to="42400" data-format="comma">0</span>
+        <span class="underline-stamp"></span>
+      </span>
+      <div class="tombstone-caption">
+        <span class="badge">RED ZONE</span>
+        <div>
+          A homeowner who follows the out-of-the-box AI&rsquo;s answer to its logical conclusion <strong>builds a non-conforming structure</strong>, gets red-tagged, pays SDCs twice, and demolishes drywall.<sup class="footnote-mark">1</sup> Median outcome is milder. P95 is not.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ─────────── §I Risk axis ─────────── -->
+  <section class="risk-section reveal">
+    <header class="section-head">
+      <span class="section-num">§ I</span>
+      <h2 class="section-title">Three answers, plotted on a single <em>risk axis</em></h2>
+      <span class="section-aside">x-axis: composite resident risk score</span>
+    </header>
+
+    <div class="risk-axis-wrap">
+      <div class="risk-axis-title">
+        <span>Composite risk &nbsp;·&nbsp; weighted: 0.5 financial · 0.3 schedule · 0.2 enforcement</span>
+        <span>n = 1 scenario · Monte Carlo n = 10,000</span>
+      </div>
+
+      <div class="risk-axis">
+        <div class="risk-axis-bar"></div>
+
+        <!-- Enhanced -->
+        <div class="risk-tick safe above" style="left: 8%;">
+          <span class="label">
+            <div class="name"><em>Enriched</em> + MCP</div>
+            <div class="display">low risk</div>
+          </span>
+          <div class="pin"></div>
+          <div class="dot"></div>
+        </div>
+
+        <!-- MCP -->
+        <div class="risk-tick caution below" style="left: 44%;">
+          <div class="pin"></div>
+          <div class="dot"></div>
+          <span class="label">
+            <div class="name">+ MCP only</div>
+            <div class="display">moderate</div>
+          </span>
+        </div>
+
+        <!-- OOB -->
+        <div class="risk-tick danger above" style="left: 88%;">
+          <span class="label">
+            <div class="name"><em>Out-of-box</em> AI</div>
+            <div class="display">high risk</div>
+          </span>
+          <div class="pin"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="risk-axis-scale">
+        <span>SAFE · resident can act</span>
+        <span>CAUTION</span>
+        <span>HAZARD · review required</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── §II Variant detail ─────────── -->
+  <section class="variant-detail-section reveal">
+    <header class="section-head">
+      <span class="section-num">§ II</span>
+      <h2 class="section-title">What the resident is <em>actually betting</em>, by variant</h2>
+      <span class="section-aside">stop-work · exposure · schedule · decision quality</span>
+    </header>
+
+    <div class="variants">
+      <!-- ── Variant 1: OOB ── -->
+      <article class="variant v-oob">
+        <div class="variant-tag"><span class="glyph">i</span>Variant 01 · Out-of-Box AI</div>
+        <div class="variant-name">ChatGPT, no tools.</div>
+        <div class="variant-tool">No PortlandMaps · No Title 33 · No address lookup</div>
+
+        <div class="swo-block">
+          <div class="swo-label">Stop-work order probability</div>
+          <div class="swo-figure"><span data-count-to="47">0</span><span class="pct">%</span></div>
+          <div class="swo-caption">Almost a coin flip. Vague citations send the resident in the wrong permitting direction.</div>
+        </div>
+
+        <div class="variant-sub"><span>Financial exposure (USD)</span><span>p25 — p75 — p95</span></div>
+        <div class="exposure-wrap">
+          <div class="exposure-meta">
+            <span>$50k</span><span>$25k</span><span>$0</span>
+          </div>
+          <div class="exposure-frame">
+            <div class="exposure-bar">
+              <!-- segments sum to ~$42,400 worst-case (84.8% of $50k frame) -->
+              <div class="exposure-seg seg-permit"  style="height: 4%"><span class="seg-label">Permits</span><span class="seg-amt">$2k</span></div>
+              <div class="exposure-seg seg-fines"   style="height: 10%"><span class="seg-label">BDS fines</span><span class="seg-amt">$5k</span></div>
+              <div class="exposure-seg seg-rework"  style="height: 17%"><span class="seg-label">Rework / demo</span><span class="seg-amt">$8.5k</span></div>
+              <div class="exposure-seg seg-sdc"     style="height: 40%"><span class="seg-label">SDC overcharge</span><span class="seg-amt">$20k</span></div>
+              <div class="exposure-seg seg-legal"   style="height: 14%"><span class="seg-label">Legal &amp; reapply</span><span class="seg-amt">$6.9k</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="whisker">
+          <div class="axis"></div>
+          <div class="iqr" style="left: 14%; width: 24%;"></div>
+          <div class="median" style="left: 24%;"></div>
+          <div class="worst" style="left: 84%;"></div>
+        </div>
+        <div class="whisker-scale"><span>$0</span><span>median $9.2k</span><span>worst $42.4k</span></div>
+        <div class="exposure-totals">
+          <span>median <span class="figure">$9,200</span></span>
+          <span>p95 <span class="figure worst">$42,400</span></span>
+        </div>
+
+        <div class="variant-sub"><span>Schedule slip</span><span>weeks added</span></div>
+        <div class="timespine"><div class="span" style="width: 100%;"></div></div>
+        <div class="timespine-scale"><span>0w</span><span>16w</span><span>32w</span></div>
+        <div class="timespine-figure">+34<span class="unit">weeks worst-case</span></div>
+
+        <div class="variant-sub"><span>Decisions homeowner can make confidently</span><span>filled = confident</span></div>
+        <div class="decisions" data-confident="2" data-total="10">
+          <div class="dec confident"></div><div class="dec confident"></div>
+          <div class="dec"></div><div class="dec"></div><div class="dec"></div>
+          <div class="dec"></div><div class="dec"></div><div class="dec"></div>
+          <div class="dec"></div><div class="dec"></div>
+        </div>
+        <div class="decisions-scale"><span><span class="count">2</span> of 10</span><span>8 guesses</span></div>
+
+        <div class="variant-quote"><span class="quote-body">I think I can probably build something. Sounds like a permit is needed.</span></div>
+      </article>
+
+      <!-- ── Variant 2: MCP ── -->
+      <article class="variant v-mcp">
+        <div class="variant-tag"><span class="glyph">ii</span>Variant 02 · AI + Portland data</div>
+        <div class="variant-name">Claude with MCP tools.</div>
+        <div class="variant-tool">PortlandMaps · Title 33 · Address-aware</div>
+
+        <div class="swo-block">
+          <div class="swo-label">Stop-work order probability</div>
+          <div class="swo-figure"><span data-count-to="12">0</span><span class="pct">%</span></div>
+          <div class="swo-caption">Citations are correct. Resident still misreads jargon (FAR, SDC) and skips a sub-permit.</div>
+        </div>
+
+        <div class="variant-sub"><span>Financial exposure (USD)</span><span>p25 — p75 — p95</span></div>
+        <div class="exposure-wrap">
+          <div class="exposure-meta"><span>$50k</span><span>$25k</span><span>$0</span></div>
+          <div class="exposure-frame">
+            <div class="exposure-bar">
+              <div class="exposure-seg seg-permit"  style="height: 3%"><span class="seg-label">Permits</span><span class="seg-amt">$1.4k</span></div>
+              <div class="exposure-seg seg-fines"   style="height: 4%"><span class="seg-label">BDS fines</span><span class="seg-amt">$2k</span></div>
+              <div class="exposure-seg seg-rework"  style="height: 6%"><span class="seg-label">Rework</span><span class="seg-amt">$3k</span></div>
+              <div class="exposure-seg seg-sdc"     style="height: 8%"><span class="seg-label">SDC delta</span><span class="seg-amt">$4k</span></div>
+              <div class="exposure-seg seg-legal"   style="height: 4%"><span class="seg-label">Reapply</span><span class="seg-amt">$2k</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="whisker">
+          <div class="axis"></div>
+          <div class="iqr" style="left: 5%; width: 12%;"></div>
+          <div class="median" style="left: 9%;"></div>
+          <div class="worst" style="left: 25%;"></div>
+        </div>
+        <div class="whisker-scale"><span>$0</span><span>median $3.4k</span><span>worst $12.4k</span></div>
+        <div class="exposure-totals">
+          <span>median <span class="figure">$3,400</span></span>
+          <span>p95 <span class="figure worst">$12,400</span></span>
+        </div>
+
+        <div class="variant-sub"><span>Schedule slip</span><span>weeks added</span></div>
+        <div class="timespine"><div class="span" style="width: 38%;"></div></div>
+        <div class="timespine-scale"><span>0w</span><span>16w</span><span>32w</span></div>
+        <div class="timespine-figure">+12<span class="unit">weeks worst-case</span></div>
+
+        <div class="variant-sub"><span>Decisions homeowner can make confidently</span><span>filled = confident</span></div>
+        <div class="decisions" data-confident="6" data-total="10">
+          <div class="dec confident"></div><div class="dec confident"></div>
+          <div class="dec confident"></div><div class="dec confident"></div>
+          <div class="dec confident"></div><div class="dec confident"></div>
+          <div class="dec"></div><div class="dec"></div>
+          <div class="dec"></div><div class="dec"></div>
+        </div>
+        <div class="decisions-scale"><span><span class="count">6</span> of 10</span><span>4 guesses</span></div>
+
+        <div class="variant-quote"><span class="quote-body">My lot is R2.5, ADU max 800 sf — but what&rsquo;s an SDC and which permit do I file first?</span></div>
+      </article>
+
+      <!-- ── Variant 3: Enhanced ── -->
+      <article class="variant v-enh">
+        <div class="variant-tag"><span class="glyph">iii</span>Variant 03 · Enriched + MCP</div>
+        <div class="variant-name">Question rewritten, then asked.</div>
+        <div class="variant-tool">PortlandMaps · Title 33 · Plain-language guardrails</div>
+
+        <div class="swo-block">
+          <div class="swo-label">Stop-work order probability</div>
+          <div class="swo-figure"><span data-count-to="2">0</span><span class="pct">%</span></div>
+          <div class="swo-caption">Resident gets sequenced next steps. Stop-work risk approaches the city baseline.</div>
+        </div>
+
+        <div class="variant-sub"><span>Financial exposure (USD)</span><span>p25 — p75 — p95</span></div>
+        <div class="exposure-wrap">
+          <div class="exposure-meta"><span>$50k</span><span>$25k</span><span>$0</span></div>
+          <div class="exposure-frame">
+            <div class="exposure-bar">
+              <div class="exposure-seg seg-permit"  style="height: 1%"><span class="seg-label">Permits</span><span class="seg-amt">$0.5k</span></div>
+              <div class="exposure-seg seg-fines"   style="height: 1%"><span class="seg-label">Fines</span><span class="seg-amt">$0.4k</span></div>
+              <div class="exposure-seg seg-rework"  style="height: 1.5%"><span class="seg-label">Rework</span><span class="seg-amt">$0.7k</span></div>
+              <div class="exposure-seg seg-sdc"     style="height: 1%"><span class="seg-label">SDC delta</span><span class="seg-amt">$0.5k</span></div>
+              <div class="exposure-seg seg-legal"   style="height: 0.5%"><span class="seg-label">Legal</span><span class="seg-amt">$0.2k</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="whisker">
+          <div class="axis"></div>
+          <div class="iqr" style="left: 1%; width: 3%;"></div>
+          <div class="median" style="left: 2%;"></div>
+          <div class="worst" style="left: 5%;"></div>
+        </div>
+        <div class="whisker-scale"><span>$0</span><span>median $400</span><span>worst $2.3k</span></div>
+        <div class="exposure-totals">
+          <span>median <span class="figure">$400</span></span>
+          <span>p95 <span class="figure worst">$2,300</span></span>
+        </div>
+
+        <div class="variant-sub"><span>Schedule slip</span><span>weeks added</span></div>
+        <div class="timespine"><div class="span" style="width: 12%;"></div></div>
+        <div class="timespine-scale"><span>0w</span><span>16w</span><span>32w</span></div>
+        <div class="timespine-figure">+2<span class="unit">weeks worst-case</span></div>
+
+        <div class="variant-sub"><span>Decisions homeowner can make confidently</span><span>filled = confident</span></div>
+        <div class="decisions" data-confident="10" data-total="10">
+          <div class="dec confident"></div><div class="dec confident"></div>
+          <div class="dec confident"></div><div class="dec confident"></div>
+          <div class="dec confident"></div><div class="dec confident"></div>
+          <div class="dec confident"></div><div class="dec confident"></div>
+          <div class="dec confident"></div><div class="dec confident"></div>
+        </div>
+        <div class="decisions-scale"><span><span class="count">10</span> of 10</span><span>0 guesses</span></div>
+
+        <div class="variant-quote"><span class="quote-body">I know my zone, my limits, my next three calls, and the order to file. I can act Monday.</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ─────────── §III Ledger ─────────── -->
+  <section class="ledger-section reveal">
+    <header class="section-head">
+      <span class="section-num">§ III</span>
+      <h2 class="section-title">The bill, line-by-line.</h2>
+      <span class="section-aside">USD · p95 worst-case exposure</span>
+    </header>
+
+    <table class="ledger">
+      <thead>
+        <tr>
+          <th>Cost item</th>
+          <th>Out-of-Box</th>
+          <th>+ MCP</th>
+          <th>+ Enriched</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Wrong permit fees paid<span class="desc">Resident files for the wrong permit type, or pays for sub-permits not actually required.<sup class="footnote-mark">2</sup></span></td>
+          <td class="col-oob">$2,000</td>
+          <td class="col-mcp">$1,400</td>
+          <td class="col-enh">$500</td>
+        </tr>
+        <tr>
+          <td>BDS code violation fines<span class="desc">Title 29 / Title 33 enforcement when the structure is built outside compliance.<sup class="footnote-mark">3</sup></span></td>
+          <td class="col-oob">$5,000</td>
+          <td class="col-mcp">$2,000</td>
+          <td class="col-enh">$400</td>
+        </tr>
+        <tr>
+          <td>Rework, demolition, salvage<span class="desc">Tearing out non-conforming framing, drywall, plumbing rough-in.<sup class="footnote-mark">4</sup></span></td>
+          <td class="col-oob">$8,500</td>
+          <td class="col-mcp">$3,000</td>
+          <td class="col-enh">$700</td>
+        </tr>
+        <tr>
+          <td>SDC overcharge / re-assessment<span class="desc">Misclassified ADU vs. accessory structure triggers full water/sewer/transport/parks SDCs.<sup class="footnote-mark">5</sup></span></td>
+          <td class="col-oob">$20,000</td>
+          <td class="col-mcp">$4,000</td>
+          <td class="col-enh">$500</td>
+        </tr>
+        <tr>
+          <td>Legal &amp; reapplication<span class="desc">Stop-work order remediation, attorney consult, plan-review re-submittal.<sup class="footnote-mark">6</sup></span></td>
+          <td class="col-oob">$6,900</td>
+          <td class="col-mcp">$2,000</td>
+          <td class="col-enh">$200</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total worst-case</td>
+          <td class="col-oob">$42,400</td>
+          <td class="col-mcp">$12,400</td>
+          <td class="col-enh">$2,300</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <!-- ─────────── Closer ─────────── -->
+  <section class="closer reveal">
+    <div>
+      <h3>What this tells the City</h3>
+      <p>Citation quality is not an academic metric. Each missing or wrong section number maps onto a specific dollar amount on a Portlander&rsquo;s ledger and a specific number of weeks taken from their life. The gap between &ldquo;Out-of-Box&rdquo; and &ldquo;Enriched&rdquo; is roughly <span class="ornament">18&times;</span> in worst-case dollars and <span class="ornament">17&times;</span> in worst-case weeks.</p>
+      <p>The cheapest investment the City can make is the prompt-side fix — re-writing the resident&rsquo;s question before it ever reaches the model. That alone moves the answer from the red zone toward the green.</p>
+    </div>
+    <div class="footnotes">
+      <h3>Sources &amp; methodology</h3>
+      <div class="fn"><span class="num">1</span><span>P95 exposure assumes structure built without zoning confirmation; demolish-and-rebuild path triggered. Monte Carlo (n=10,000) over the line items at right.</span></div>
+      <div class="fn"><span class="num">2</span><span>BDS Permit Fee Schedule, FY2025-26: residential building permits $400–$2,000 depending on valuation.</span></div>
+      <div class="fn"><span class="num">3</span><span>PCC Title 29 enforcement schedule: civil penalties $500–$5,000 per violation, escalating with non-compliance duration.</span></div>
+      <div class="fn"><span class="num">4</span><span>Estimated demolition + disposal cost for unpermitted accessory structure: $3,000–$8,000 (regional contractor average, 2025).</span></div>
+      <div class="fn"><span class="num">5</span><span>Portland System Development Charges for new ADU, FY2025-26: water + sewer + transportation + parks combined $15,000–$25,000.</span></div>
+      <div class="fn"><span class="num">6</span><span>Stop-work order remediation + plan-review re-submittal: $1,500–$3,000 plus optional legal counsel.</span></div>
+      <div class="fn"><span class="num">*</span><span>All figures are illustrative ranges grounded in publicly available Portland fee schedules. This document does not constitute financial advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <span>Form CCA-7 · v1.0</span>
+    <span>USS Civic Hackathon Codes</span>
+    <span>BDS / BPS · Track 1</span>
+  </footer>
+
+</div>
+
+<script>
+  // ── Animated count-up using rAF ──
+  function animateCount(el, to, duration = 1700, format = 'comma') {
+    const start = performance.now();
+    const from = 0;
+    const ease = (t) => 1 - Math.pow(1 - t, 3); // cubic out
+    function frame(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const v = Math.floor(from + (to - from) * ease(t));
+      if (format === 'comma') {
+        el.textContent = v.toLocaleString('en-US');
+      } else {
+        el.textContent = v.toString();
+      }
+      if (t < 1) requestAnimationFrame(frame);
+      else el.textContent = format === 'comma' ? to.toLocaleString('en-US') : to.toString();
+    }
+    requestAnimationFrame(frame);
+  }
+
+  // Set every counter to its final value first (so static screenshots are correct),
+  // then animate from 0 only when the element scrolls into view.
+  const counters = document.querySelectorAll('[data-count-to]');
+  const fired = new WeakSet();
+  counters.forEach((el) => {
+    const to = parseInt(el.getAttribute('data-count-to'), 10);
+    const fmt = el.getAttribute('data-format') || (to > 999 ? 'comma' : 'plain');
+    el.textContent = fmt === 'comma' ? to.toLocaleString('en-US') : to.toString();
+    el.dataset.fmt = fmt;
+  });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting && !fired.has(e.target)) {
+        fired.add(e.target);
+        const to = parseInt(e.target.getAttribute('data-count-to'), 10);
+        const fmt = e.target.dataset.fmt;
+        animateCount(e.target, to, 1700, fmt);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  counters.forEach((c) => io.observe(c));
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add('in');
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach((r) => ro.observe(r));
+
+  // Mark tiny segments so their labels don't render and overflow
+  document.querySelectorAll('.exposure-seg').forEach((seg) => {
+    const h = parseFloat(seg.style.height) || 0;
+    if (h < 4) seg.setAttribute('data-tiny', '1');
+  });
+
+  // Stagger the exposure segment reveal (only when in viewport, preserves static screenshot)
+  const expIO = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const bar = e.target;
+      if (bar.dataset.animated) return;
+      bar.dataset.animated = '1';
+      const segs = bar.querySelectorAll('.exposure-seg');
+      segs.forEach((seg, j) => {
+        const target = seg.style.height;
+        seg.style.height = '0%';
+        // force reflow
+        // eslint-disable-next-line no-unused-expressions
+        seg.offsetHeight;
+        setTimeout(() => { seg.style.height = target; }, 80 + j * 90);
+      });
+      expIO.unobserve(bar);
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.exposure-bar').forEach((bar) => expIO.observe(bar));
+</script>
+
+</body>
+</html>

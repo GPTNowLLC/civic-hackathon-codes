@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria's Six Months — Three AIs, Three Outcomes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f3efe7;
+    --paper-2: #ebe6da;
+    --ink: #1a1814;
+    --ink-soft: #4a443b;
+    --ink-mute: #8a8276;
+    --rule: #d4cdbd;
+    --accent: #b34a2c;     /* terracotta */
+    --red: #a8321b;
+    --amber: #b08038;
+    --green: #4f6b3a;
+    --hl: #e8c97a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.55;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .serif { font-family: 'Fraunces', 'Times New Roman', serif; }
+  .mono  { font-family: 'JetBrains Mono', monospace; }
+
+  /* paper texture */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(255,255,255,0.4), transparent 50%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0.03), transparent 60%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 48px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─────────────────────── HERO ─────────────────────── */
+  .hero {
+    padding: 80px 0 120px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 80px;
+    position: relative;
+  }
+  .hero .kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--ink-mute);
+    font-weight: 600;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero .kicker::before {
+    content: ""; width: 28px; height: 1px; background: var(--ink-mute);
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(56px, 9vw, 124px);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+    margin-bottom: 36px;
+    font-variation-settings: "SOFT" 50;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .hero h1 .num {
+    font-feature-settings: "lnum", "ss01";
+    font-weight: 600;
+  }
+  .hero .deck {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 720px;
+    letter-spacing: -0.005em;
+  }
+  .hero .deck strong { color: var(--ink); font-weight: 500; }
+
+  .hero-meta {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--rule);
+  }
+  .hero-meta .cell .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-mute);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .hero-meta .cell .val {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--ink-mute);
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: bob 2.4s ease-in-out infinite;
+  }
+  .scroll-cue::after {
+    content: ""; width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--ink-mute), transparent);
+  }
+  @keyframes bob {
+    0%, 100% { transform: translate(-50%, 0); opacity: 0.7; }
+    50% { transform: translate(-50%, 6px); opacity: 1; }
+  }
+
+  /* ─────────────────────── MEET MARIA ─────────────────────── */
+  .meet {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 80px;
+    padding: 60px 0 100px;
+    align-items: start;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 100px;
+  }
+  .portrait {
+    aspect-ratio: 1 / 1.15;
+    background: var(--paper-2);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .portrait svg { display: block; width: 100%; height: 100%; }
+  .portrait .caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 14px 18px;
+    background: rgba(26,24,20,0.88);
+    color: var(--paper);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+  }
+  .portrait .caption em { font-style: normal; color: var(--paper-2); opacity: 0.7; }
+
+  .meet .body h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 28px;
+  }
+  .meet .body h2 em { font-style: italic; color: var(--accent); }
+  .meet .body p {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+    max-width: 620px;
+  }
+  .meet .body p strong { color: var(--ink); font-weight: 500; }
+
+  .question-card {
+    margin-top: 36px;
+    padding: 28px 32px;
+    background: var(--paper-2);
+    border-left: 3px solid var(--accent);
+    max-width: 620px;
+  }
+  .question-card .q-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .question-card .q-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  /* ─────────────────────── THE FORK ─────────────────────── */
+  .fork-intro {
+    text-align: center;
+    padding: 40px 0 80px;
+  }
+  .fork-intro .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--ink-mute);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .fork-intro h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5.5vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .fork-intro h2 em { font-style: italic; color: var(--accent); }
+  .fork-intro p {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  /* ─────────────────────── TIMELINE ─────────────────────── */
+  .timeline-wrap {
+    position: relative;
+    padding-bottom: 120px;
+  }
+
+  .timeline-rail {
+    position: sticky;
+    top: 24px;
+    z-index: 10;
+    background: var(--paper);
+    padding: 18px 0 14px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .timeline-rail .ticks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    position: relative;
+    padding: 0 24px;
+  }
+  .timeline-rail .ticks::before {
+    content: "";
+    position: absolute;
+    left: 24px; right: 24px; top: 50%;
+    height: 1px;
+    background: var(--rule);
+  }
+  .timeline-rail .tick {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+  }
+  .timeline-rail .tick::before {
+    content: "";
+    display: block;
+    width: 9px; height: 9px;
+    background: var(--paper);
+    border: 1.5px solid var(--ink-mute);
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    transition: all 0.3s;
+  }
+  .timeline-rail .tick.active::before {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(179, 74, 44, 0.15);
+  }
+  .timeline-rail .tick .t-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--ink-mute);
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  .timeline-rail .tick.active .t-label { color: var(--ink); }
+
+  .progress-bar {
+    position: absolute;
+    left: 24px; top: 50%;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.15s linear;
+    z-index: 1;
+  }
+
+  /* tracks: a grid where each row is a timeline step shared across 3 tracks */
+  .tracks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 0 28px;
+    margin-top: 60px;
+  }
+
+  .track-header {
+    padding: 24px 24px 22px;
+    border-top: 3px solid;
+    margin-bottom: 28px;
+  }
+  .track-1.track-header { border-top-color: var(--red); }
+  .track-2.track-header { border-top-color: var(--amber); }
+  .track-3.track-header { border-top-color: var(--green); }
+  .track-header.track-1 { border-top-color: var(--red); }
+  .track-header.track-2 { border-top-color: var(--amber); }
+  .track-header.track-3 { border-top-color: var(--green); }
+
+  .track-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .track-header.track-1 .track-tag { color: var(--red); }
+  .track-header.track-2 .track-tag { color: var(--amber); }
+  .track-header.track-3 .track-tag { color: var(--green); }
+
+  .track-name {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .track-sub {
+    font-size: 12px;
+    color: var(--ink-mute);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* row marker spans the full width of the tracks grid; locks all 3 tracks
+     into the same chronological row */
+  .row-marker {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 22px;
+    margin: 56px 0 24px;
+    padding: 0 4px;
+  }
+  .row-marker .rm-stamp {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    font-feature-settings: "lnum";
+  }
+  .row-marker .rm-rule {
+    height: 1px;
+    background: var(--rule);
+    position: relative;
+  }
+  .row-marker .rm-rule::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 7px; height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .row-marker .rm-note {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-mute);
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* episodes */
+  .episode {
+    padding: 4px 24px 32px;
+    background: transparent;
+    opacity: 0.3;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .episode.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .episode .ep-headline {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+  .episode.track-1 .ep-headline em { font-style: italic; color: var(--red); }
+  .episode.track-2 .ep-headline em { font-style: italic; color: var(--amber); }
+  .episode.track-3 .ep-headline em { font-style: italic; color: var(--green); }
+
+  .episode p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+  .episode p strong { color: var(--ink); font-weight: 600; }
+
+  /* AI answer panels */
+  .ai-answer {
+    margin: 14px 0 4px;
+    padding: 16px 18px;
+    background: var(--paper-2);
+    border-left: 2px solid var(--ink-mute);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .ai-answer .ai-label {
+    display: block;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-mute);
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+  }
+  .ai-answer .err {
+    background: rgba(168, 50, 27, 0.12);
+    color: var(--red);
+    padding: 0 3px;
+    text-decoration: line-through wavy rgba(168, 50, 27, 0.5);
+    text-decoration-thickness: 1px;
+  }
+  .ai-answer .vague {
+    background: rgba(176, 128, 56, 0.18);
+    padding: 0 3px;
+  }
+  .ai-answer .good {
+    background: rgba(79, 107, 58, 0.18);
+    padding: 0 3px;
+    font-weight: 500;
+  }
+
+  /* damage / cost ledger */
+  .ledger {
+    margin: 14px 0 4px;
+    padding: 14px 18px;
+    border: 1px solid var(--rule);
+    border-left: 3px solid;
+  }
+  .episode.track-1 .ledger { border-left-color: var(--red); }
+  .episode.track-2 .ledger { border-left-color: var(--amber); }
+  .episode.track-3 .ledger { border-left-color: var(--green); }
+  .ledger .ledger-label {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ink-mute);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .ledger ul { list-style: none; }
+  .ledger li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 13px;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .ledger li:last-child { border-bottom: none; }
+  .ledger li .item { color: var(--ink-soft); }
+  .ledger li .amt {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .episode.track-1 .ledger li .amt.neg { color: var(--red); }
+  .episode.track-2 .ledger li .amt.neg { color: var(--amber); }
+  .episode.track-3 .ledger li .amt.pos { color: var(--green); }
+
+  /* citation chips */
+  .cites {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .cite {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    padding: 3px 8px;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    color: var(--ink-soft);
+    border-radius: 1px;
+  }
+  .cite.cite-good { border-color: var(--green); color: var(--green); }
+  .cite.cite-vague { border-color: var(--amber); color: var(--amber); }
+  .cite.cite-none { border-style: dashed; color: var(--ink-mute); font-style: italic; }
+
+  /* ─────────────────────── EPILOGUE ─────────────────────── */
+  .epilogue {
+    margin-top: 100px;
+    padding: 80px 0 60px;
+    border-top: 1px solid var(--rule);
+  }
+  .epilogue h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(44px, 6vw, 84px);
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
+    max-width: 920px;
+  }
+  .epilogue h2 em { font-style: italic; color: var(--accent); }
+  .epilogue h2 .num {
+    font-feature-settings: "lnum";
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .summary-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .summary-grid .col {
+    padding: 36px 28px;
+    border-right: 1px solid var(--rule);
+  }
+  .summary-grid .col:last-child { border-right: none; }
+  .summary-grid .col .tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .summary-grid .col-1 .tag { color: var(--red); }
+  .summary-grid .col-2 .tag { color: var(--amber); }
+  .summary-grid .col-3 .tag { color: var(--green); }
+  .summary-grid .col .big {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 6px;
+    font-feature-settings: "lnum";
+  }
+  .summary-grid .col-1 .big { color: var(--red); }
+  .summary-grid .col-2 .big { color: var(--amber); }
+  .summary-grid .col-3 .big { color: var(--green); }
+  .summary-grid .col .big-sub {
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 22px;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .summary-grid .col p {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  .closing {
+    margin-top: 80px;
+    text-align: center;
+    padding: 0 0 80px;
+  }
+  .closing p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .closing p strong { font-style: normal; font-weight: 500; color: var(--ink); }
+  .closing .signoff {
+    margin-top: 40px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--ink-mute);
+    font-weight: 600;
+  }
+
+  /* selection */
+  ::selection { background: var(--hl); color: var(--ink); }
+
+  /* responsive */
+  @media (max-width: 980px) {
+    .container { padding: 0 24px; }
+    .meet { grid-template-columns: 1fr; gap: 40px; }
+    .portrait { max-width: 320px; }
+    .tracks { grid-template-columns: 1fr; gap: 8px; }
+    .summary-grid { grid-template-columns: 1fr; }
+    .summary-grid .col { border-right: none; border-bottom: 1px solid var(--rule); }
+    .hero-meta { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="kicker">A City of Portland Hackathon Brief · Track 1 Evaluation</div>
+    <h1>Maria asked an AI<br>about her tiny house.<br><em>Six months later</em>—</h1>
+    <p class="deck">three versions of the same chatbot gave her three different answers. One cost her <strong>$4,200 and a demolished foundation</strong>. One stalled her for <strong>eight weeks</strong>. One got her permitted by Memorial Day. This is what the difference between &ldquo;an AI&rdquo; and &ldquo;an AI that can actually look things up&rdquo; looks like in a real life.</p>
+
+    <div class="hero-meta">
+      <div class="cell">
+        <div class="label">Resident</div>
+        <div class="val serif">Maria Vasquez, 38</div>
+      </div>
+      <div class="cell">
+        <div class="label">Property</div>
+        <div class="val serif">4521 SE Belmont St</div>
+      </div>
+      <div class="cell">
+        <div class="label">Question</div>
+        <div class="val serif">Can I build a tiny house?</div>
+      </div>
+      <div class="cell">
+        <div class="label">Window</div>
+        <div class="val serif">Nov 2025 &mdash; May 2026</div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">Scroll · follow Maria</div>
+  </div>
+</section>
+
+<!-- ═══════════════ MEET MARIA ═══════════════ -->
+<section class="meet container">
+  <div class="portrait">
+    <!-- editorial CSS portrait, no external images -->
+    <svg viewBox="0 0 300 345" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#d9c9a8"/>
+          <stop offset="100%" stop-color="#c9b48b"/>
+        </linearGradient>
+        <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#d9a47a"/>
+          <stop offset="100%" stop-color="#b8825c"/>
+        </linearGradient>
+        <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2a1a10"/>
+          <stop offset="100%" stop-color="#3d2a1a"/>
+        </linearGradient>
+        <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7d3a25"/>
+          <stop offset="100%" stop-color="#5a2818"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="300" height="345" fill="url(#bg)"/>
+
+      <!-- soft texture -->
+      <circle cx="60" cy="60" r="80" fill="rgba(255,255,255,0.08)"/>
+      <circle cx="240" cy="280" r="100" fill="rgba(0,0,0,0.06)"/>
+
+      <!-- shoulders / shirt -->
+      <path d="M 30 345 Q 30 240, 90 230 L 210 230 Q 270 240, 270 345 Z" fill="url(#shirt)"/>
+      <!-- collar -->
+      <path d="M 110 232 Q 150 252, 190 232 L 188 250 Q 150 268, 112 250 Z" fill="#3a1a0e"/>
+
+      <!-- neck -->
+      <path d="M 130 220 L 130 248 Q 150 258, 170 248 L 170 220 Z" fill="url(#skin)"/>
+
+      <!-- hair back -->
+      <path d="M 80 130 Q 70 70, 150 55 Q 230 70, 220 135 L 225 200 Q 220 215, 210 215 L 210 145 L 90 145 L 90 215 Q 80 215, 75 200 Z" fill="url(#hair)"/>
+
+      <!-- face -->
+      <ellipse cx="150" cy="155" rx="62" ry="78" fill="url(#skin)"/>
+
+      <!-- hair front (parted, falling sides) -->
+      <path d="M 88 110 Q 110 75, 150 70 Q 195 75, 212 115 Q 200 100, 175 100 Q 158 102, 152 118 Q 146 102, 128 100 Q 105 100, 88 115 Z" fill="url(#hair)"/>
+      <path d="M 88 110 Q 84 160, 92 200 L 95 175 Q 92 140, 100 118 Z" fill="url(#hair)"/>
+      <path d="M 212 115 Q 218 165, 210 205 L 208 180 Q 211 145, 204 122 Z" fill="url(#hair)"/>
+
+      <!-- eyebrows -->
+      <path d="M 118 142 Q 128 138, 138 142" stroke="#2a1a10" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M 162 142 Q 172 138, 182 142" stroke="#2a1a10" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+      <!-- eyes -->
+      <ellipse cx="128" cy="156" rx="5" ry="3.5" fill="#1a1814"/>
+      <ellipse cx="172" cy="156" rx="5" ry="3.5" fill="#1a1814"/>
+      <circle cx="129.5" cy="155" r="1" fill="#fff"/>
+      <circle cx="173.5" cy="155" r="1" fill="#fff"/>
+
+      <!-- nose -->
+      <path d="M 150 162 Q 146 178, 144 188 Q 150 192, 156 188 Q 154 178, 150 162" fill="rgba(120,70,40,0.25)"/>
+
+      <!-- mouth - small thoughtful smile -->
+      <path d="M 138 200 Q 150 206, 162 200" stroke="#7a3a25" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+      <!-- cheek warmth -->
+      <ellipse cx="108" cy="180" rx="14" ry="8" fill="rgba(180,80,50,0.18)"/>
+      <ellipse cx="192" cy="180" rx="14" ry="8" fill="rgba(180,80,50,0.18)"/>
+
+      <!-- earring hint -->
+      <circle cx="92" cy="175" r="2.5" fill="#c9a050"/>
+      <circle cx="208" cy="175" r="2.5" fill="#c9a050"/>
+    </svg>
+    <div class="caption">Maria Vasquez · <em>Sunnyside, Portland</em></div>
+  </div>
+
+  <div class="body">
+    <h2>She bought the house in 2019<br>and saved <em>seven years</em><br>for the backyard.</h2>
+    <p>Maria works as a pediatric dental hygienist at OHSU. Her mom, Lupe, is moving up from Reno next spring &mdash; the long-distance care thing has finally tipped &mdash; and Maria wants her on the property but in her own space. Privacy for both of them. A real door.</p>
+    <p>She has roughly <strong>$95,000 saved</strong> for construction, a contractor cousin in Beaverton, and a 4,800&nbsp;sq&nbsp;ft lot in Sunnyside with a big pear tree out back. She has zero experience with city permitting. So in November, on a slow Sunday, she opens her laptop and does what anyone would do.</p>
+
+    <div class="question-card">
+      <div class="q-label">November 12, 2025 &middot; 9:47 PM</div>
+      <div class="q-text">&ldquo;Can I build a tiny house on my lot at 4521 SE Belmont in Portland? What are the rules and what permits do I need?&rdquo;</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ THE FORK ═══════════════ -->
+<section class="fork-intro container">
+  <div class="label">The fork in the road</div>
+  <h2>Three AIs. <em>One question.</em><br>Three Marias.</h2>
+  <p>Watch the same person, the same property, the same Sunday-night search &mdash; play out three times.</p>
+</section>
+
+<!-- ═══════════════ TIMELINE ═══════════════ -->
+<section class="timeline-wrap container">
+
+  <!-- sticky rail -->
+  <div class="timeline-rail">
+    <div class="ticks" id="ticks">
+      <div class="progress-bar" id="progressBar" style="width:0%"></div>
+      <div class="tick" data-step="0"><div class="t-label">Day 0 &middot; Nov 12</div></div>
+      <div class="tick" data-step="1"><div class="t-label">Week 1</div></div>
+      <div class="tick" data-step="2"><div class="t-label">Week 4</div></div>
+      <div class="tick" data-step="3"><div class="t-label">Month 3</div></div>
+      <div class="tick" data-step="4"><div class="t-label">Month 6</div></div>
+    </div>
+  </div>
+
+  <div class="tracks">
+
+    <!-- ─── ROW 0: track headers ─── -->
+    <div class="track-header track-1">
+      <div class="track-tag">Path A &middot; The Confident Stranger</div>
+      <div class="track-name">Out-of-the-box ChatGPT</div>
+      <div class="track-sub">no city data &middot; no MCP &middot; gpt-5.5</div>
+    </div>
+    <div class="track-header track-2">
+      <div class="track-tag">Path B &middot; The Right Facts, Wrong Voice</div>
+      <div class="track-name">AI + Portland data (MCP)</div>
+      <div class="track-sub">PortlandMaps + Title 33 lookup</div>
+    </div>
+    <div class="track-header track-3">
+      <div class="track-tag">Path C &middot; The Right Friend</div>
+      <div class="track-name">AI + data + better question</div>
+      <div class="track-sub">MCP + enrichment layer</div>
+    </div>
+
+    <!-- ═════ ROW: DAY 0 ═════ -->
+    <div class="row-marker" data-step="0">
+      <span class="rm-stamp">Day 0 &middot; Nov 12, 2025</span>
+      <span class="rm-rule"></span>
+      <span class="rm-note">Sunday, 9:47 PM &middot; Maria sends one question</span>
+    </div>
+
+    <div class="episode track-1" data-step="0">
+      <div class="ep-headline">The AI sounds <em>certain.</em> Maria takes notes.</div>
+      <div class="ai-answer">
+        <span class="ai-label">ChatGPT &middot; reply</span>
+        Building a tiny house in Portland is generally allowed under the city's <span class="vague">Accessory Dwelling Unit (ADU) rules</span>. Most residential lots permit a second small dwelling of <span class="err">up to 1,000 square feet</span>. Setbacks are typically <span class="err">5 feet from all property lines</span>. You'll likely need a building permit&mdash;contact Portland's permit office.
+      </div>
+      <div class="cites">
+        <span class="cite cite-vague">&ldquo;Portland zoning code&rdquo;</span>
+        <span class="cite cite-none">no section #</span>
+      </div>
+      <p style="margin-top:14px;">Maria writes down <strong>1,000 sq ft, 5-foot setbacks</strong>. She texts her cousin: <em>&ldquo;We're good, let's start drafting.&rdquo;</em></p>
+    </div>
+
+    <div class="episode track-2" data-step="0">
+      <div class="ep-headline">Accurate. <em>Dense.</em> Maria reads it twice.</div>
+      <div class="ai-answer">
+        <span class="ai-label">Claude + MCP &middot; reply</span>
+        4521 SE Belmont: base zone <span class="good">R2.5</span>; no overlay zones detected. ADU permitted under <span class="good">PCC 33.205.040</span>: max <span class="good">800 sf or 75% of main dwelling</span>, whichever is less. Setbacks per <span class="good">33.110.220</span>: front 10', side 5', rear 5'. Height limit 20'. SDCs apply (water, sewer, transportation, parks). Stormwater management may trigger if impervious threshold exceeded.
+      </div>
+      <div class="cites">
+        <span class="cite cite-good">PCC 33.205.040</span>
+        <span class="cite cite-good">PCC 33.110.220</span>
+        <span class="cite cite-vague">PortlandMaps</span>
+      </div>
+      <p style="margin-top:14px;">Maria circles &ldquo;<strong>SDC</strong>&rdquo; and &ldquo;<strong>impervious threshold</strong>.&rdquo; Googles both. Sort of understands.</p>
+    </div>
+
+    <div class="episode track-3" data-step="0">
+      <div class="ep-headline">It reads <em>like a person</em> wrote it for her.</div>
+      <div class="ai-answer">
+        <span class="ai-label">Claude + MCP + enrichment &middot; reply</span>
+        <strong>Your property:</strong> 4521 SE Belmont, zoned <span class="good">R2.5</span>. An ADU is allowed. A &ldquo;tiny house on wheels&rdquo; would <span class="good">not</span> count as a permanent residence here &mdash; you want a tiny house <span class="good">on foundation</span>.<br><br>
+        <strong>Size &amp; placement</strong> (<span class="good">PCC 33.205.040</span>): up to <span class="good">800 sf</span>, max 20' tall. Setbacks (<span class="good">PCC 33.110.220</span>): 10' front, 5' sides, 5' rear.<br><br>
+        <strong>Heads up:</strong> the pear tree on PortlandMaps may be a regulated tree under <span class="good">Title 11</span> &mdash; get an Urban Forestry assessment before you site the slab.<br><br>
+        <strong>Order:</strong> (1) free zoning confirmation at BDS, (2) Urban Forestry tree review, (3) BES sewer letter, (4) building permit + sub-permits, (5) erosion control.
+      </div>
+      <div class="cites">
+        <span class="cite cite-good">PCC 33.205.040</span>
+        <span class="cite cite-good">PCC 33.110.220</span>
+        <span class="cite cite-good">Title 11 / UF</span>
+        <span class="cite cite-good">BDS Code Guide</span>
+      </div>
+      <p style="margin-top:14px;">Maria has a checklist. She knows the <strong>tree</strong> is the long pole. Emails Urban Forestry first thing Monday.</p>
+    </div>
+
+    <!-- ═════ ROW: WEEK 1 ═════ -->
+    <div class="row-marker" data-step="1">
+      <span class="rm-stamp">Week 1 &middot; Nov 19</span>
+      <span class="rm-rule"></span>
+      <span class="rm-note">Maria translates the answer into action</span>
+    </div>
+
+    <div class="episode track-1" data-step="1">
+      <div class="ep-headline">She designs to the <em>wrong numbers.</em></div>
+      <p>Cousin Hector sketches a 28&times;32 footprint &mdash; <strong>896&nbsp;sq&nbsp;ft</strong>, comfortably &ldquo;under 1,000.&rdquo; Sited 5 feet off the rear fence. Maria orders a survey, books a foundation crew for January.</p>
+    </div>
+
+    <div class="episode track-2" data-step="1">
+      <div class="ep-headline">She knows the limit. Not the <em>order of operations.</em></div>
+      <p>800 sq ft, 5-foot rear setback &mdash; correct. Hector redesigns to <strong>768 sq ft</strong>. But Maria doesn't know whether to file building first or zoning first, doesn't know what <em>BES</em> stands for, and the AI used &ldquo;impervious area&rdquo; without defining it.</p>
+    </div>
+
+    <div class="episode track-3" data-step="1">
+      <div class="ep-headline">Three appointments <em>booked.</em></div>
+      <p>Free zoning confirmation: scheduled for Nov 21. Urban Forestry site visit: Dec 1. Hector starts a 768 sq ft design with the slab pulled <strong>13&nbsp;ft</strong> from the pear's drip line. No surprises baked in.</p>
+    </div>
+
+    <!-- ═════ ROW: WEEK 4 ═════ -->
+    <div class="row-marker" data-step="2">
+      <span class="rm-stamp">Week 4 &middot; Dec 10</span>
+      <span class="rm-rule"></span>
+      <span class="rm-note">The first real-world consequence shows up</span>
+    </div>
+
+    <div class="episode track-1" data-step="2">
+      <div class="ep-headline">Footings poured. <em>No permit pulled.</em></div>
+      <p>The AI never said &ldquo;file a zoning confirmation first.&rdquo; Maria thought the building permit would come later. The crew breaks ground on a cold Tuesday. Concrete cures over the weekend.</p>
+    </div>
+
+    <div class="episode track-2" data-step="2">
+      <div class="ep-headline">Stuck in <em>permit-portal limbo.</em></div>
+      <p>The BDS portal asks for a <strong>zoning confirmation number</strong>, then a <strong>BES sewer availability letter</strong>, then asks whether Urban Forestry has cleared the pear tree. Three different bureaus. She emails three different addresses. Two reply.</p>
+    </div>
+
+    <div class="episode track-3" data-step="2">
+      <div class="ep-headline">Tree cleared. <em>Sewer letter in.</em></div>
+      <p>Pear tree: regulated, but the relocated slab clears the root protection zone &mdash; no mitigation triggered. BES confirms sewer capacity. Maria submits her building permit packet Dec 9 with all four supporting docs attached.</p>
+    </div>
+
+    <!-- ═════ ROW: MONTH 3 ═════ -->
+    <div class="row-marker" data-step="3">
+      <span class="rm-stamp">Month 3 &middot; Feb 4, 2026</span>
+      <span class="rm-rule"></span>
+      <span class="rm-note">The system meets reality</span>
+    </div>
+
+    <div class="episode track-1" data-step="3">
+      <div class="ep-headline">A neighbor calls 311. <em>Stop-work order.</em></div>
+      <p>A BDS inspector arrives Thursday at 11 AM and posts a yellow notice on the framing. The actual rules for <strong>4521 SE Belmont</strong>:</p>
+      <div class="ai-answer" style="border-left-color: var(--red);">
+        <span class="ai-label">What the code actually says</span>
+        Zone <span class="good">R2.5</span>, ADU max <span class="good">800 sq ft</span> per <span class="good">PCC 33.205.040</span>. Rear setback <span class="good">5'</span>, but the slab also crowds the protected root zone of a <span class="good">28" DBH pear</span> &mdash; <span class="good">Title 11</span> Urban Forestry violation. Footings sit <span class="err">96 sq ft over</span> the size cap.
+      </div>
+      <p>The structure has to come down. Or be cut. Either way, the slab is wrong.</p>
+    </div>
+
+    <div class="episode track-2" data-step="3">
+      <div class="ep-headline">Eight weeks of <em>back-and-forth.</em></div>
+      <p>Zoning confirmation comes through Jan 14. Urban Forestry assessment: Feb 2 (the pear is regulated; mitigation plan required). BES sewer letter: still pending. Maria has paid for plans she can't yet submit. Hector has taken another job. The build is paused.</p>
+    </div>
+
+    <div class="episode track-3" data-step="3">
+      <div class="ep-headline">Permit issued. <em>Ground broken.</em></div>
+      <p>Plan review came back with two minor corrections (smoke alarm spec, vapor barrier note). Hector resubmits in 4 days. Permit issued Jan 28. Footings poured Feb 3. Inspector signs off Feb 9.</p>
+    </div>
+
+    <!-- ═════ ROW: MONTH 6 ═════ -->
+    <div class="row-marker" data-step="4">
+      <span class="rm-stamp">Month 6 &middot; May 1, 2026</span>
+      <span class="rm-rule"></span>
+      <span class="rm-note">Today &mdash; six months after that one Sunday-night question</span>
+    </div>
+
+    <div class="episode track-1" data-step="4">
+      <div class="ep-headline">Lupe is still in <em>Reno.</em></div>
+      <div class="ledger">
+        <div class="ledger-label">What the wrong answer cost</div>
+        <ul>
+          <li><span class="item">BDS stop-work + after-the-fact penalty</span><span class="amt neg">&minus;$2,400</span></li>
+          <li><span class="item">Title 11 tree-protection violation</span><span class="amt neg">&minus;$800</span></li>
+          <li><span class="item">Demo &amp; haul of non-conforming slab</span><span class="amt neg">&minus;$3,100</span></li>
+          <li><span class="item">Concrete &amp; framing labor (sunk)</span><span class="amt neg">&minus;$8,500</span></li>
+          <li><span class="item">Re-survey + redesign fees</span><span class="amt neg">&minus;$1,900</span></li>
+          <li><span class="item"><strong>Out-of-pocket damage</strong></span><span class="amt neg"><strong>&minus;$16,700</strong></span></li>
+        </ul>
+      </div>
+      <p style="margin-top:14px; color: var(--red);"><strong>Nothing built. Mom not moved. Trust in the city, fractured.</strong></p>
+    </div>
+
+    <div class="episode track-2" data-step="4">
+      <div class="ep-headline">Permitted in March. Foundation in April. <em>No catastrophe.</em></div>
+      <div class="ledger">
+        <div class="ledger-label">What &ldquo;technically right&rdquo; cost her</div>
+        <ul>
+          <li><span class="item">8-week delay (carrying + reschedule)</span><span class="amt neg">&minus;$3,200</span></li>
+          <li><span class="item">Standard SDCs (correct, expected)</span><span class="amt">$18,400</span></li>
+          <li><span class="item">Permit + plan-review fees</span><span class="amt">$2,650</span></li>
+          <li><span class="item">Tree mitigation per Title 11</span><span class="amt">$1,100</span></li>
+          <li><span class="item"><strong>Avoidable friction (the delay)</strong></span><span class="amt neg"><strong>&minus;$3,200</strong></span></li>
+        </ul>
+      </div>
+      <p style="margin-top:14px; color: var(--amber);"><strong>Framing up. Mom arriving in August instead of June.</strong></p>
+    </div>
+
+    <div class="episode track-3" data-step="4">
+      <div class="ep-headline">Framed. Inspected. <em>Lupe arriving Memorial Day.</em></div>
+      <div class="ledger">
+        <div class="ledger-label">What a good answer made possible</div>
+        <ul>
+          <li><span class="item">SDCs (paid on schedule)</span><span class="amt">$17,900</span></li>
+          <li><span class="item">Permit + plan-review fees</span><span class="amt">$2,650</span></li>
+          <li><span class="item">Tree mitigation</span><span class="amt pos">$0</span></li>
+          <li><span class="item">Penalties / demo / rework</span><span class="amt pos">$0</span></li>
+          <li><span class="item">Weeks question &rarr; permit</span><span class="amt pos">11 wks</span></li>
+          <li><span class="item"><strong>On budget. On schedule.</strong></span><span class="amt pos"><strong>&#10003;</strong></span></li>
+        </ul>
+      </div>
+      <p style="margin-top:14px; color: var(--green);"><strong>Drywall this month. Mom moves in Memorial Day weekend.</strong></p>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════ EPILOGUE ═══════════════ -->
+  <section class="epilogue">
+    <h2>The same chatbot.<br>The same address.<br>A <em>$16,700 swing</em> &mdash; and <span class="num">10 weeks</span><br>of Maria's life.</h2>
+
+    <div class="summary-grid">
+      <div class="col col-1">
+        <div class="tag">Path A &middot; out-of-box</div>
+        <div class="big">&minus;$16,700</div>
+        <div class="big-sub">Stop-work, demo, rebuild</div>
+        <p>The AI gave her a confident, wrong number. She acted on it. The city had to step in. <strong>The damage is the cost of pretending you have data you don't.</strong></p>
+      </div>
+      <div class="col col-2">
+        <div class="tag">Path B &middot; data-only</div>
+        <div class="big">&minus;8 wks</div>
+        <div class="big-sub">Right facts, wrong onboarding</div>
+        <p>Citations were perfect. Sequencing was opaque. Maria wasted two months figuring out which bureau to talk to in what order &mdash; data she didn't know to ask for.</p>
+      </div>
+      <div class="col col-3">
+        <div class="tag">Path C &middot; data + a real question</div>
+        <div class="big">&#10003;</div>
+        <div class="big-sub">Permit by Jan, foundation by Feb</div>
+        <p>Same data, framed for a person without a code background. Acronyms defined, sequence given, the <em>right</em> warning surfaced (the tree). She acted &mdash; correctly &mdash; that night.</p>
+      </div>
+    </div>
+
+    <div class="closing">
+      <p>The hackathon brief asked: <strong>how might we help community members easily find and apply relevant rules to real-world situations?</strong></p>
+      <p style="margin-top: 18px;">For Maria, the answer is the difference between having her mom in the backyard by Memorial Day, or watching a $4,200 fine arrive in the mail and starting over in July.</p>
+      <div class="signoff">USS Civic Hackathon Codes &middot; Track 1 Evaluation &middot; May 2026</div>
+    </div>
+  </section>
+
+</section>
+
+<script>
+  // Scroll-driven progression: as the user scrolls through the timeline,
+  // tick marks light up in lockstep across all three tracks.
+  (function() {
+    const ticks = document.querySelectorAll('.timeline-rail .tick');
+    const progressBar = document.getElementById('progressBar');
+    const episodes = document.querySelectorAll('.episode');
+    const tracksWrap = document.querySelector('.tracks');
+
+    function updateActive() {
+      // Determine the "current step" by which episode rows are most visible.
+      // Group episodes by step (0..4) and find the deepest step that has at
+      // least one of its episodes past the viewport's mid-line.
+      const midY = window.innerHeight * 0.55;
+      let deepestStep = -1;
+
+      episodes.forEach(ep => {
+        const r = ep.getBoundingClientRect();
+        const step = parseInt(ep.dataset.step, 10);
+        if (r.top < midY && r.bottom > 80) {
+          ep.classList.add('visible');
+        }
+        // for tick activation, count an episode as "reached" once its top crosses 0.65vh
+        if (r.top < window.innerHeight * 0.7) {
+          if (step > deepestStep) deepestStep = step;
+        }
+      });
+
+      ticks.forEach((tick, i) => {
+        if (i <= deepestStep) tick.classList.add('active');
+        else tick.classList.remove('active');
+      });
+
+      // progress bar fills from 0% (before first tick) to 100% (at/after last)
+      if (!tracksWrap) return;
+      const tw = tracksWrap.getBoundingClientRect();
+      const totalHeight = tw.height;
+      const scrolled = Math.min(Math.max(-tw.top + window.innerHeight * 0.4, 0), totalHeight);
+      const pct = Math.min(100, Math.max(0, (scrolled / totalHeight) * 100));
+      // visual span of the rail is from 10% to 90% (centered ticks). approximate.
+      const railPct = Math.min(100, pct);
+      progressBar.style.width = (railPct * 0.92) + '%';
+    }
+
+    let raf = null;
+    function onScroll() {
+      if (raf) return;
+      raf = requestAnimationFrame(() => { updateActive(); raf = null; });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    updateActive();
+  })();
+</script>
+
+</body>
+</html>

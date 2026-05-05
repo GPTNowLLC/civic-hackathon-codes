@@ -1,0 +1,506 @@
+{
+  "scenario": "building-records",
+  "scenario_label": "Building records",
+  "address": "1719 SE Ladd Ave, Portland, OR 97214",
+  "neighborhood": "Ladd's Addition",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "For your address, there's a quick online path and a formal records request path; for a home on SE Ladd Ave you'll probably want both, plus some bonus resources I'll get to in a moment.\n\n**The quick path: PortlandMaps**\n\nGo to portlandmaps.com, search 1719 SE Ladd Ave, click into the property, then open the **Permits & Zoning** section. You'll see active and historical building, trade, land use, and code enforcement records from roughly 2000 to today. There's also a **Historic Permits** subsection that often has scanned older records, and a **Historic Plumbing** section worth checking (it can document original sewer connections and even cesspool records). For any permit issued after June 1, 2012, the actual plans and applications are viewable for free; you just need a free City of Portland account.\n\n**The formal path: Public Records Request**\n\nFor anything older than what shows up on PortlandMaps (especially permits issued before mid-2012), submit a Public Records Request through Portland Permitting & Development at portland.gov/ppd/public-records. They use a GovQA portal. Have the property address and the Property ID ready (the \"R Number\" from PortlandMaps' Assessor Detail). They'll respond within five business days about scope and any fees.\n\nFor active code-enforcement cases, call the Property Compliance Help Line at 503-823-2633.\n\n**One thing worth flagging**\n\n1719 SE Ladd Ave sits inside Ladd's Addition, which became one of Portland's first Historic Conservation Districts in 1977 and was added to the National Register of Historic Places in 1988. That has real implications: any exterior alteration visible from the street (doors, windows, roofs, similar character-defining elements) typically triggers Historic Resource Review, with its own forms, fees, and timeline. If the records pull is part of planning a project, factor that in early; rear or non-character-defining work usually has more flexibility.\n\n**The deeper path (since you live in one of the most documented neighborhoods in Oregon)**\n\nMost Ladd's Addition houses were built between 1905 and 1930, and the neighborhood is unusually well-archived. Permits are just one slice. A few resources that go well beyond the city records:\n\n- **Historic Resource Inventory of Portland (1984)**, held at the Oregon Historical Society research library. Arranged by street address; each listed building gets legal description, date built, architectural style, and first owner. Ladd's is heavily represented.\n- **Digital Sanborn Maps, 1867 to 1970**, free with a Multnomah County Library card via multcolib.org. Shows your home's footprint, construction materials, and number of stories at multiple points in time. Sheets 701 to 799 of the original Portland atlases cover East Portland and Ladd's Addition specifically.\n- **Portland City Directories** (Multnomah County Library and OHS). Pre-internet phone books; you can trace who lived at 1719 SE Ladd Ave year by year for over a century, often with their occupations and workplaces.\n- **Multnomah County Assessment & Taxation**, 501 SE Hawthorne Blvd, Suite 175. They keep microfilm with construction date and ownership history; bring the exact address.\n- **Architectural Heritage Center** (visitahc.org). Portland-specific research archive with photographs, ephemera, and an extensive list of online databases curated for this exact use case.\n- **Oregon Historic Sites Database** via SHPO (heritagedata.prd.state.or.us). Worth checking whether your specific house has its own record beyond just being a contributing property in the district.\n- **Block Book of Portland (1907)** at OHS. Documents land ownership at a snapshot during the early build-out of the neighborhood.\n\nA couple of evenings with the Sanborns, a city directory or two, and the Historic Resource Inventory will usually let you piece together who built the house, who lived in it through each decade, what construction materials and additions show up over time, and how the lot evolved. For a Ladd's home specifically, the trail tends to be unusually rich.\n\nAll of the above are official government or established nonprofit archives; nothing requires paying a third-party \"house history\" service, which is good because most of those just resell what the libraries above offer for free."
+    },
+    "mcp": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll go beyond just telling you the process \u2014 let me actually pull what's available for your property right now, then explain how to request anything that isn't online.Let me verify the current official process for Portland building records \u2014 those request workflows have changed in recent years.Good news: most of what you'd ask for is already online, and I pulled it. Here's what's currently on file for **1719 SE Ladd Ave** (Property ID **R200340**, state ID **1S1E02CA 3100**, built 1911, zoned R5):\n\n**Permits already digitized (6 on record)**\n- **2019-242222-ET** \u2014 100A garage subpanel + NEMA 14-50 receptacle (Final, Approved)\n- **2014-198902-ET** \u2014 Modify 3 circuits (VOID)\n- **2014-197300-MT** \u2014 Gas furnace + A/C install (VOID)\n- **2013-209630-PT** \u2014 Inside sewer line connection (Final)\n- **2013-206680-PT** \u2014 Sewer service line repair, ~40 ft on property (Final)\n- **2004-020466-PT** \u2014 60 ft water service + 2 backflow preventers (Final)\n\nFor each one you can pull plans, applications, and inspection cards free at PortlandMaps.com \u2014 search the address, expand **Permits & Zoning \u2192 Permits**, click into a permit, and select the document IDs to view (a free Portland account is required to actually see the scanned PDFs). Plans and applications for permits issued from June 1, 2012, through December 2023 are available for free on Portland Maps. Also check the upper-right of your property page for a **\"Historic Permits\"** link \u2014 older plumbing/sewer connection records and underground tank records are often scanned there too.\n\n**Requesting what isn't online**\n\nFor a 1911 house, the interesting stuff (original construction permits, anything pre-2004, microfilm rolls) requires a formal records request. The official path:\n\n1. Go to **portland.gov/ppd/public-records** and create a free city account.\n2. Log in and go to the Records Request Center to begin the request. Select Submit a Records Request > Public Records Request. Select Public for the Type of Requester, then the Community and Economic Development service area, then **Permitting and Development**.\n3. In the description, paste these identifiers up front to speed things up: *\"All historic permit, plan, and microfilm records for 1719 SE Ladd Ave \u2014 Property ID R200340, IVR/account R463302570, state ID 1S1E02CA 3100. Include any pre-2012 paper or microfilm permits and any Historic Resource Review records.\"*\n4. Submit. Due to limited staffing and a large workload, it could take two weeks or more to fulfill requests for building permit records.\n\nIf you'd rather mail it: Public Records Coordinator, Portland Permitting & Development, 1900 SW 4th Avenue, Suite 5000, Portland, OR 97201. There are per-page printing fees for paper copies.\n\n**Heads up \u2014 Ladd's Addition specifics**\n\nYour block is inside the **Ladd's Addition Historic Conservation District** (National Register, 1988). I checked the land use case database for the address and didn't find any reviews on file, which is genuinely useful information if you're planning anything: it means no prior demolitions, partitions, or Historic Resource Reviews to inherit, but it also means **any exterior change visible from the street is likely your first time triggering Conservation District review**. Worth flagging before scoping a project.\n\n---\n\n**The \"above and beyond\" part \u2014 richer history sources for a 1911 home**\n\nA records request gets you permits. If you want to actually understand your house and lot through time, four sources hold the real treasure for a Ladd's home (and they're all free or library-free):\n\n- **Sanborn Fire Insurance Maps via Multnomah County Library** (multcolib.org, with a library card). Sanborns from 1908, 1924, and 1950 show your exact lot \u2014 footprint, construction materials (frame vs. brick), outbuildings, even porches. For a 1911 build you'll almost certainly catch your house appearing between the 1908 and 1924 sheets, which dates the original construction more precisely than the assessor's \"1911.\"\n- **Portland City Archives** at 1800 SW 6th \u2014 separate agency from PP&D. Holds the original Ladd's Addition plat, block surveys, and pre-1980s water/sewer records that PP&D's records request *won't* surface.\n- **Architectural Heritage Center (Bosco-Milligan Foundation)**, inner SE Portland. They maintain a Portland builder/architect index and can sometimes match a 1900s\u20131920s home to its original stock plan or builder. Worth a phone call once you have the construction date narrowed down from Sanborns.\n- **Oregon Historical Society Research Library** \u2014 city directories tell you who lived in your house each year back to the 1910s, and the *Oregonian* archives often carried building-permit announcements at construction. For a Ladd's house this is sometimes how people discover the original commissioning family.\n\nIf you want, I can draft the records request text for you to paste in, or fetch the Sanborn page covering your block. Just say which."
+    },
+    "enhanced": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll do this properly \u2014 verify the current bureau structure (since you flagged the BDS reorganization), pull actual records for your specific address, and confirm the code citations. Let me work through this in stages.Good \u2014 I've confirmed the bureau reorganized into Portland Permitting & Development (PP&D). Now let me actually look up your property to give you something concrete.This is incredibly useful \u2014 your property has 6 permits in the digital database, including some interesting voids. Let me confirm a few more things: the historic district status, code citations, and fees.I have what I need. Before the formal write-up, here's the lead \u2014 because you asked me to think about the question behind the question:\n\n**Your specific property has only 6 permits in the digitized database, and two of them are interesting.** Property R200340 (Ladd's Addition, Block 12, Lot 22, built 1911) shows two **VOID** permits from August 2014 that were issued but never finaled: an electrical permit (3 circuits modified) and a mechanical permit for a gas furnace + A/C installation. If a furnace and A/C are physically in the house today, that work may not have been finalized through inspection \u2014 which is exactly the kind of thing a new owner doing diligence would want to investigate. (The August 2025 sale showing in assessor records suggests you may be a recent buyer; if that's the wrong assumption, ignore.)\n\nNow, the full answer to your nine questions.\n\n---\n\n## 1. The actual request process, in order\n\nPortland reorganized in 2024\u20132025: the Bureau of Development Services (BDS) was folded into a new bureau called **Portland Permitting & Development (PP&D)** under the Community and Economic Development service area. PP&D is now the entity that handles building permits and the related records requests, and the city explicitly steers people to PortlandMaps **first** before filing a formal request.\n\nThe order to follow:\n\n**Step 1 \u2014 Free public lookups (no request needed):**\n- **PortlandMaps.com** \u2014 type the address. The \"Permits\" panel shows building/electrical/mechanical permit history, and the \"Sewer & Environmental \u2192 Sewer Assets\" panel shows sewer as-builts and service requests. Plans and applications for permits issued from June 1, 2012 through December 2023 are available for free on PortlandMaps.\n- **Historic Permits link** on PortlandMaps (upper-right of the property page when available) \u2014 this is where some pre-digitization microfilmed permits surface. Some historic permits can be found on Portland Maps under the \"Historic Permits\" link.\n- **Plumbing Permits & Building Code Appeals search** at portlandoregon.gov/bds/plumbing_permits \u2014 separate database; it covers plumbing permit history and most building, electrical, mechanical, or plumbing code appeals heard prior to September 2003. This is the \"sewer card / plumbing record\" archive you mentioned. **Most homeowners miss this one.**\n- **Development Hub PDX (DevHub)** at devhub.portlandoregon.gov \u2014 for status of any active permit.\n\n**Step 2 \u2014 Formal request (if Step 1 doesn't have what you need):**\n- File at the city's central **Public Records Request Portal** (portland.gov/public-records/request).\n- Select service area = **Community and Economic Development** \u2192 bureau = **Permitting & Development**.\n- A free account is required. Per City rule ARA-8.03, the City in general will not accept records requests via phone or email.\n- Two forms must be completed: the **Uniform Public Records Request form** and the **copyright indemnification form**. The indemnification form is required because building plans may be copyrighted, and the City must be indemnified against the release of copyrighted material. This is the single biggest gotcha for first-timers \u2014 they file without the indemnification form and the request stalls.\n\n**Step 3 \u2014 Other bureaus, separate requests:**\n- Sewer/stormwater **billing** records \u2192 **Portland Water Bureau** (Public Works service area).\n- BES industrial/stormwater permits or spill cleanup \u2192 **Bureau of Environmental Services**.\n- Fire-related permits/violations \u2192 **Portland Fire & Rescue** (Public Safety service area).\n- Elevator permits \u2192 **Oregon Building Codes Division** (state, not city).\n\n---\n\n## 2. What records exist and where, for your property specifically\n\nI pulled the actual permit history. Here it is \u2014 these are the IVR numbers you'll want to reference:\n\n| Year | Permit # | Type | What | Status |\n|------|----------|------|------|--------|\n| 2019 | 2019-242222-ET | Electrical | 100A subpanel in garage + NEMA 14-50 (EV charger receptacle) | **Final Approved** |\n| 2014 | 2014-198902-ET | Electrical | Modify 3 circuits | **VOID** |\n| 2014 | 2014-197300-MT | Mechanical | Gas furnace + A/C install | **VOID** |\n| 2013 | 2013-209630-PT | Plumbing | Inside sewer line connection | **Final Approved** |\n| 2013 | 2013-206680-PT | Plumbing | Sewer service line repair (~40 ft on property) | **Final Approved** |\n| 2004 | 2004-020466-PT | Plumbing | 60 ft water service + 2 backflow preventers | **Final Approved** |\n\nProperty ID: **R200340** \u00b7 State ID: **1S1E02CA 3100** \u00b7 Legal: **Ladd's Addition, Block 12, Lot 22**.\n\nWhat's notably **missing** from this list:\n- **No building permit at all.** The 1911 original construction predates the digital database entirely.\n- **No plans for the original house.** For homes built before roughly the 1950s\u201360s, original drawings were rarely filed, and what was filed often hasn't survived. The plumbing-permits search engine (Step 1 above) is your best shot at finding microfilmed pre-1980 records \u2014 search by address there in addition to PortlandMaps.\n- **Certificates of Occupancy** for old single-family homes generally don't exist. C of Os became standard for commercial and multi-family but were inconsistently issued for SFRs, especially for homes this old. PP&D may confirm none exists rather than producing one.\n\nFor each category you asked about:\n- **Permit history (building/electrical/plumbing/mechanical)** \u2014 PortlandMaps + the BDS plumbing-permits database. The two together usually cover everything digital.\n- **Original plans / blueprints** \u2014 for a 1911 home, almost certainly not on file. Worth asking PP&D in a formal request, but set expectations low. Also try **Architectural Heritage Center** (Bosco-Milligan Foundation, visitahc.org) and the **Oregon Historical Society** for neighborhood-level historical drawings.\n- **Sewer connection / plumbing records (Title 25)** \u2014 PortlandMaps \"Sewer Assets\" + the dedicated plumbing-permits search. Your property has at least three plumbing/sewer events on record (2004, 2013\u00d72).\n- **Electrical (Title 26)** \u2014 covered above. Note: state electrical permits can also be filed through the Oregon BCD; for Portland properties this is less common but possible.\n- **Open/expired permits, violations, code cases** \u2014 search PortlandMaps \"Code Cases\" panel and ask explicitly in your records request for \"any open or closed enforcement cases at the address.\"\n\n---\n\n## 3. Historic district considerations \u2014 yes, this matters for your property\n\nLadd's Addition is **both**: listed on the National Register of Historic Places in 1988 (NRIS #88001310) **and** locally designated as Portland's first residential historic district in 1977. That dual status triggers **Title 33.445 (Historic Resource Overlay Zone)** \u2014 and your specific lot sits inside the boundary (Hawthorne / Division / SE 12th / SE 20th).\n\nWhat that adds to the records picture:\n\n- **Historic Resource Review case files** \u2014 Any exterior alteration above the 150 sq ft threshold, demolitions, or new construction since the district was established would have triggered a Type II or Type III land use review under **Title 33.846 (Historic Reviews)** and the **Title 33.730 procedures**. These case files (LU numbers, often formatted \"LU 14-XXXXXX HR\") are separate from permit records and need to be requested by case number or by address. None showed up in the permit pull for your address, suggesting no major reviewable exterior work has happened since digitization \u2014 but ask anyway in your records request.\n- **Historic Landmarks Commission** hearings \u2014 scheduled the 2nd and 4th Monday of each month; minutes/agendas are public.\n- **Ladd's Addition Conservation District Guidelines (1988)** \u2014 a separate design-review document used during review of restoration projects. Available through the Hosford-Abernethy Neighborhood Development Association website and PP&D.\n- **State Historic Preservation Office (SHPO)** \u2014 Oregon SHPO holds the original 1988 National Register nomination form (which often includes a property-by-property inventory that may name your house as contributing or non-contributing). Worth requesting a copy of the nomination if you want to know how your house was characterized in 1988. Contact: Oregon Parks and Recreation Department, Heritage Programs.\n\n---\n\n## 4. Specific code citations, in plain language\n\n| Citation | Plain-language meaning |\n|---|---|\n| **Title 24** | Portland Building Regulations \u2014 the umbrella for building permits and structural review. |\n| **Title 25** | Plumbing Regulations \u2014 covers sewer, water service, fixtures. Your 2004/2013 permits are Title 25 work. |\n| **Title 26** | Electrical Regulations \u2014 your 2014 (void) and 2019 permits are Title 26 work. |\n| **Title 27** | Heating & Ventilating Regulations \u2014 your 2014 (void) furnace/AC permit is Title 27 work. |\n| **Title 33** | Planning and Zoning \u2014 the land-use code. |\n| **Chapter 33.445** | Historic Resource Overlay Zone \u2014 defines what reviews apply to Historic Landmarks, Conservation Landmarks, and resources within Historic Districts. This is the chapter that governs what you can do to a Ladd's Addition house exterior. |\n| **Chapter 33.730** | Quasi-judicial procedures \u2014 how Type II / III land use reviews are noticed, heard, and decided. |\n| **Chapter 33.846** | Historic resource reviews and demolition reviews. |\n| **ORS 192.311\u2013192.478** | Oregon Public Records Law \u2014 the state statute that gives you the right to request city records and sets the framework for fees and exemptions. |\n| **City Rule ARA-8.03** | The city's administrative rule implementing ORS 192. Sets fee calculation, the requirement that requests go through the portal rather than email/phone, and the 5-day acknowledgement / 15-day response framework. |\n\n---\n\n## 5. Costs and timeline\n\n- **Free if under one hour of staff time.** If a request takes less than one hour of staff time and doesn't involve a pre-paid estimated fee, the City will waive the fees.\n- **$25 estimate threshold.** If estimated costs exceed $25, the City will tell you the estimate and require a 50% deposit before starting work.\n- **Hourly rate basis.** Labor cost is based on the hourly wage plus direct overhead of the lowest-paid employee with the skills to complete the request \u2014 typically $40\u2013$80/hour effective.\n- **Standard Fee Schedule** (incorporated into ARA-8.03) covers per-page copy charges, large-format plan copies (24\u00d736 and larger are billed per side), and digital exports. Download it from portland.gov/auditor.\n- **Timeline.** The City has 5 business days to acknowledge and 15 business days to either complete the response or give a reasonable estimated completion date. PP&D itself warns building-records requests could take two weeks or more due to limited staffing and a large workload. Two to six weeks is realistic for typical residential pulls; complex requests with many archived files can stretch longer.\n- **Expedited option:** there's no formal expedited records-request track, but for permit *processing* (not records requests) PP&D offers an Applicant Paid Overtime program. Not applicable to records pulls.\n- **Fee waivers.** Available for public-interest requests, financial hardship, government use, or when the records concern a victim of crime/fire.\n\n---\n\n## 6. Common gotchas \u2014 Portland-specific ones, not just generic\n\n- **The plumbing-permits database is separate from PortlandMaps.** If you only check PortlandMaps, you'll miss decades of microfilmed plumbing/sewer cards. Always check both.\n- **\"Sewer card\" \u2260 \"plumbing permit\" \u2260 \"permit history.\"** A \"sewer card\" is the BES record of where the sewer lateral connects to the main; a \"plumbing permit\" is the BDS/PP&D record of work done on the building plumbing; the \"permit history\" on PortlandMaps is a third, broader rollup. Title professionals often want all three for a single transaction.\n- **Indemnification form is mandatory** for any plan release \u2014 file it the first time, not after a stalled request.\n- **Pre-digitization (roughly pre-2002) records may exist only on microfilm or in off-site storage**, which is why fees go up \u2014 staff has to physically retrieve them. State the year range you care about so the staff can scope the work and quote you accurately.\n- **VOID permits are not the same as no permit.** A VOID status means the permit was issued, but never finaled \u2014 it could mean the work was never done, or it could mean the work was done and never inspected. **Absence of a finaled permit is not proof work was unpermitted; presence of a void/expired permit is a yellow flag worth investigating.** This applies to your two 2014 permits.\n- **Pre-1970s plans are usually incomplete or missing entirely** for residential. Don't assume \"the city must have the originals.\" For a 1911 home, they almost certainly do not.\n- **Email/phone don't work as request channels.** Per ARA-8.03 the City will not accept records requests via phone or email except as an accommodation.\n- **The ORS 192 / city procedure distinction.** State law gives you the right; the city rule (ARA-8.03) controls *how* you exercise it. If you ever have to escalate, you escalate under ORS 192 to the Multnomah County DA's office, not to the city.\n- **Fire records are a separate request to a separate bureau.** If you want fire history (incidents at the address, fire code violations, pre-existing inspection notes), that's Portland Fire & Rescue under the Public Safety service area.\n- **The bureau name change is real but won't break anything.** Old \"BDS\" links on portlandoregon.gov still work and old permit numbers (2014-XXXXXX, etc.) still resolve. You don't need to convert anything.\n\n---\n\n## 7. Who to contact\n\n| Need | Where to start |\n|---|---|\n| Online lookup (free) | PortlandMaps.com \u2014 search by address; check the Permits, Sewer Assets, Code Cases, and Historic Permits panels |\n| Plumbing/older permit search | portlandoregon.gov/bds/plumbing_permits |\n| Formal records request (city) | portland.gov/public-records/request \u2192 service area \"Community and Economic Development\" \u2192 bureau \"Permitting & Development\" |\n| PP&D phone | 503-823-7300, weekdays 8 a.m.\u20135 p.m. |\n| PP&D address (mail-in form alternative) | 1900 SW 4th Ave., Suite 5000, Portland OR 97201; in-person Permit Center open Tuesdays/Thursdays 8\u20134 |\n| Records portal technical help | PRRHelp@portlandoregon.gov \u00b7 503-823-6040 |\n| Sewer/water billing | Portland Water Bureau (records request via Public Works service area) |\n| BES sewer-asset records | bureau of Environmental Services (Public Works service area) |\n| Historic district info | PP&D Land Use Services; Historic Landmarks Commission (2nd & 4th Mondays) |\n| State historic records / National Register | Oregon SHPO \u2014 Oregon Parks & Recreation Heritage Programs, Salem |\n| Multnomah County Records (deeds, surveys) | multco.us \u2192 Recording (separate from city; useful for chain of title and survey records) |\n\nI'd recommend bookmarking only the .gov / .us pages above. I'd avoid third-party \"permit lookup\" sites that scrape this data \u2014 they often have stale information, and there's no need when the official sources are free.\n\n---\n\n## 8. How your use case changes priorities\n\n- **Real estate diligence (your most likely case given the recent sale):** prioritize a permit history pull, the BDS plumbing-permits search for older sewer/plumbing work, and a code-case search. If anything appears VOID, expired, or open, escalate to a formal records request for that specific permit's documents.\n- **Renovation planning:** prioritize sewer card + plumbing record (so your contractor knows where the lateral is), the most recent electrical permit (panel size/capacity), and any historic-resource files. Pull the **Ladd's Addition Conservation District Guidelines** before you scope exterior work \u2014 anything visible from a public street is potentially review-triggering.\n- **Investigating a suspected unpermitted addition:** pull the full permit history, **then** request the actual plan sets (not just the permit cards) for any building permits that did exist, so you can compare to what's there now. Also useful: request enforcement/code-case history specifically.\n- **Historic review preparation:** request any prior LU (land use) case files at the address, the National Register nomination from SHPO, and the conservation district guidelines.\n\nFor *your* situation specifically \u2014 given the 2014 voided furnace/AC permit and the 1911 build date \u2014 I'd prioritize: (1) confirming whether the furnace/AC mentioned in the 2014 void permit is now physically installed, (2) requesting any inspection notes from that 2014 permit (even VOIDs sometimes have inspection history), and (3) getting whatever historic plumbing/sewer cards exist via the BDS plumbing-permits search.\n\n---\n\n## 9. Next-steps checklist \u2014 do these in order, today\n\n1. **Open PortlandMaps.com**, search \"1719 SE Ladd Ave,\" and screenshot the Permits, Sewer Assets, Code Cases, and (if visible) Historic Permits panels. Free, takes 10 minutes.\n2. **Search the BDS plumbing-permits database** at portlandoregon.gov/bds/plumbing_permits by address. Save anything that comes back \u2014 especially anything pre-2002.\n3. **Walk the house** with your phone and inventory what's physically there: the furnace/AC unit (note brand and any installation date plate), the electrical panel (brand, amperage), and visible plumbing. You're trying to confirm whether the 2014 VOID permits represent done-but-uninspected work or never-done work.\n4. **Create a free account** on the Portland Public Records Request Portal (portland.gov/public-records/request).\n5. **File a single, well-scoped records request** to PP&D for: (a) all permit applications, plans, and inspection records for property R200340 / 1719 SE Ladd Ave, including IVR 3502923 and 3504546 (the 2014 voids); (b) any code enforcement history; (c) any historic resource review or land use case files. Submit the **copyright indemnification form** at the same time.\n6. **At the same time, send a separate request** to Portland Fire & Rescue (Public Safety service area) for fire incident history at the address. It's a different intake queue.\n7. **Optional but high-value:** email Oregon SHPO and ask whether the 1988 Ladd's Addition National Register nomination identifies this lot as contributing or non-contributing. Free, and it tells you what restoration latitude you'll have.\n8. **Wait 5 business days** for acknowledgement; 15 for substantive response. If PP&D quotes more than $25, you'll get an estimate to approve before any charges.\n9. **When the records arrive,** match them against what you saw on the walk-through. Anything physically in the house that isn't on a finaled permit is your unpermitted-work universe \u2014 discuss with a contractor or PP&D about retroactive permitting (they have a process for it).\n\n---\n\n### Accuracy caveats I want to flag\n\n- The BDS \u2192 PP&D reorganization is real and recent; some city web pages still say \"Bureau of Development Services\" but the records request flow goes through PP&D under Community and Economic Development. If a form or web page asks for \"BDS,\" that's still the right destination \u2014 they just haven't all been relabeled.\n- Ladd's Addition's National Register listing is confirmed (NRIS #88001310, 1988). Whether your *specific* lot is identified as a \"contributing resource\" inside the district vs. non-contributing is what changes how Title 33.445 applies to you. Verify via PortlandMaps' historic-overlay layer or the SHPO nomination form.\n- I haven't pulled the BES sewer-card image for your address (that lives in a separate viewer that requires interactive paging). When you check PortlandMaps, look specifically at the Sewer Assets panel \u2014 your two 2013 plumbing permits suggest there's a sewer card with notes.\n- Fee schedule numbers above are accurate to ARA-8.03 as currently published, but the Standard Fee Schedule has been amended several times in 2024\u20132025; if you need an exact per-page rate, download the current PDF from the city auditor's page rather than relying on my summary.\n- The 2014 VOID permits are a *signal*, not proof of unpermitted work. They could mean nothing. They could mean something. The walk-through in step 3 is what tells you which.\n\nWant me to package this as a Word doc you can share with a real estate attorney or contractor? Or draft the actual text of the records request for step 5 so you can paste it into the portal? Either is a one-step ask from here."
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Start with PortlandMaps for free lookup",
+      "claim_full": "Begin by searching the address on PortlandMaps.com to view permit history before filing a formal records request.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.95,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "PortlandMaps.com",
+      "verified_truth": "PortlandMaps is the city's authoritative public-facing portal and the recommended first step before a formal records request."
+    },
+    {
+      "id": "A2",
+      "claim_short": "Plans free for permits June 2012+",
+      "claim_full": "Plans and applications for permits issued from June 1, 2012 are viewable for free with a free City of Portland account on PortlandMaps.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.85,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "verified_truth": "Confirmed by accuracy flags: plans/applications for permits issued June 1, 2012 through December 2023 are free on PortlandMaps."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Property ID R200340",
+      "claim_full": "1719 SE Ladd Ave has Property ID R200340 and state ID 1S1E02CA 3100.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "verified_truth": "Confirmed by accuracy flags in both MCP and enhanced responses."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Six permits on file with numbers",
+      "claim_full": "PortlandMaps lists six digitized permits for the property: 2019-242222-ET, 2014-198902-ET (VOID), 2014-197300-MT (VOID), 2013-209630-PT, 2013-206680-PT, and 2004-020466-PT.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PortlandMaps Permits",
+      "verified_truth": "Confirmed by accuracy flags: six specific permits listed with IVR numbers, dates, scope, and statuses."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Two 2014 VOID permits flagged",
+      "claim_full": "Two 2014 permits \u2014 an electrical (3-circuit modification) and a mechanical (gas furnace + A/C) \u2014 were issued but voided, meaning work may have been done without inspection finalization.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.95,
+      "correctness": "correct-judg",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm the two VOID permits exist; flagging them as a diligence concern is a correct judgment call for a homeowner."
+    },
+    {
+      "id": "A6",
+      "claim_short": "House built 1911 in Ladd's",
+      "claim_full": "The property is a 1911 home in Ladd's Addition, Block 12, Lot 22, zoned R5.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps Assessor",
+      "verified_truth": "Confirmed by accuracy flags: built 1911, Ladd's Addition Block 12 Lot 22."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Formal request via portland.gov/ppd/public-records",
+      "claim_full": "File a formal records request through portland.gov/ppd/public-records (or portland.gov/public-records/request) using the GovQA / Records Request Center portal.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.85,
+      "actionability": 0.95,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "portland.gov/ppd/public-records",
+      "verified_truth": "Confirmed by accuracy flags: official Records Request Center pathway under Community and Economic Development \u2192 Permitting and Development."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Five-business-day initial response",
+      "claim_full": "The City has five business days to acknowledge a public records request before substantive response.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "ARA-8.03",
+      "verified_truth": "Accuracy flags confirm 5 business days to acknowledge / 15 business days to respond framework attributed to ARA-8.03."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Two-week-plus fulfillment timeline",
+      "claim_full": "PP&D warns that fulfilling building-permit records requests can take two weeks or more due to limited staffing and workload.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm a two-week-or-more fulfillment timeline for building permit records."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Mailing address 1900 SW 4th Ave Suite 5000",
+      "claim_full": "Mail-in records requests can be sent to Public Records Coordinator, Portland Permitting & Development, 1900 SW 4th Avenue, Suite 5000, Portland, OR 97201.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.85,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Confirmed by accuracy flags in both MCP and enhanced responses."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Property Compliance Help Line 503-823-2633",
+      "claim_full": "For active code-enforcement cases, call the Property Compliance Help Line at 503-823-2633.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Phone number is confirmed in accuracy flags."
+    },
+    {
+      "id": "A12",
+      "claim_short": "PP&D main phone 503-823-7300",
+      "claim_full": "Portland Permitting & Development's main contact line is 503-823-7300, weekdays 8 a.m.\u20135 p.m.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm PP&D phone 503-823-7300 and 1900 SW 4th Ave Suite 5000."
+    },
+    {
+      "id": "A13",
+      "claim_short": "BDS reorganized into PP&D",
+      "claim_full": "The Bureau of Development Services was folded into Portland Permitting & Development under the Community and Economic Development service area in 2024\u20132025.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Confirmed by accuracy flags: bureau reorganization to PP&D in 2024\u20132025."
+    },
+    {
+      "id": "A14",
+      "claim_short": "Plumbing-permits database is separate",
+      "claim_full": "Portland's plumbing-permits and pre-September-2003 building/code-appeals search at portlandoregon.gov/bds/plumbing_permits is a separate archive from PortlandMaps and contains many older microfilmed records.",
+      "topic": "plumbing",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portlandoregon.gov/bds/plumbing_permits",
+      "verified_truth": "Accuracy flags confirm the plumbing-permits database covers code appeals heard prior to September 2003."
+    },
+    {
+      "id": "A15",
+      "claim_short": "ARA-8.03 bars phone/email requests",
+      "claim_full": "Per City Administrative Rule ARA-8.03, the City will not accept records requests by phone or email \u2014 they must go through the portal.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "ARA-8.03",
+      "verified_truth": "Accuracy flags confirm: per ARA-8.03 the City will not accept records requests via phone or email."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Copyright indemnification form required",
+      "claim_full": "Two forms are required for plan release: the Uniform Public Records Request form and a copyright indemnification form, the latter being a common first-time-filer gotcha.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.95,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm two forms are required: Uniform Public Records Request form plus copyright indemnification form."
+    },
+    {
+      "id": "A17",
+      "claim_short": "Free under one staff hour",
+      "claim_full": "Records requests are free if they take less than one hour of staff time; estimated costs above $25 require a 50% deposit before work begins.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.85,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "ARA-8.03",
+      "verified_truth": "Accuracy flags confirm: free if under one hour of staff time; $25 estimate threshold requires 50% deposit."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Ladd's NRIS #88001310 listed 1988",
+      "claim_full": "Ladd's Addition is on the National Register of Historic Places (NRIS #88001310, listed 1988) and was locally designated in 1977 as Portland's first residential historic district.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "NRIS #88001310",
+      "verified_truth": "Accuracy flags confirm National Register listing 1988 and local designation 1977 as Portland's first residential historic district."
+    },
+    {
+      "id": "A19",
+      "claim_short": "District bounded Hawthorne/Division/12th/20th",
+      "claim_full": "The Ladd's Addition Conservation District boundary is Hawthorne, Division, SE 12th, and SE 20th.",
+      "topic": "zoning",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm the district boundary description."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Exterior changes trigger historic review",
+      "claim_full": "Exterior alterations visible from the street typically trigger Historic Resource Review under the Conservation District designation.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Title 33.445",
+      "verified_truth": "Accuracy flags confirm exterior changes visible from the street trigger Conservation District review and that 150 sq ft is the threshold for Type II/III historic review."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Title 33.445, 33.730, 33.846 govern",
+      "claim_full": "Title 33.445 (Historic Resource Overlay), 33.730 (Type II/III procedures), and 33.846 (historic resource and demolition reviews) govern review of work in Ladd's Addition.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.445 / 33.730 / 33.846",
+      "verified_truth": "Accuracy flags confirm Title 33.445 is the Historic Resource Overlay Zone, 33.846 governs historic resource and demolition reviews, and 33.730 governs Type II/III procedures."
+    },
+    {
+      "id": "A22",
+      "claim_short": "ORS 192.311\u2013192.478 is governing law",
+      "claim_full": "The Oregon Public Records Law at ORS 192.311\u2013192.478 is the state statute giving the right to request city records and setting the framework for fees and exemptions.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "ORS 192.311\u2013192.478",
+      "verified_truth": "Accuracy flags confirm escalation under ORS 192 and that ARA-8.03 implements the state statute."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Titles 24/25/26/27 cover building trades",
+      "claim_full": "Title 24 covers building, Title 25 plumbing, Title 26 electrical, and Title 27 heating/ventilating regulations \u2014 mapping to the property's permits.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Titles 24, 25, 26, 27",
+      "verified_truth": "These Title assignments match the hackathon brief's data sources."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Records portal help PRRHelp@portlandoregon.gov",
+      "claim_full": "Records portal technical help is available at PRRHelp@portlandoregon.gov or 503-823-6040.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm PRRHelp@portlandoregon.gov / 503-823-6040 as records portal help."
+    },
+    {
+      "id": "A25",
+      "claim_short": "Historic Landmarks Commission 2nd/4th Mondays",
+      "claim_full": "Portland's Historic Landmarks Commission meets the 2nd and 4th Mondays of each month and its hearings are public.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Confirmed by accuracy flags."
+    },
+    {
+      "id": "A26",
+      "claim_short": "150 sq ft historic review threshold",
+      "claim_full": "Exterior alterations above 150 square feet within the historic district trigger Type II/III historic review.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.85,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Title 33.846",
+      "verified_truth": "Accuracy flags confirm a 150 sq ft threshold for exterior alteration triggering Type II/III historic review."
+    },
+    {
+      "id": "A27",
+      "claim_short": "No land use cases on file",
+      "claim_full": "A query of the city's land use case database showed no Historic Resource Reviews or other land use cases on file for the address.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm the claim that no land use cases are on file for the address."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Sanborn Maps via Multnomah Library",
+      "claim_full": "Sanborn Fire Insurance Maps, free with a Multnomah County Library card, document the property's footprint and construction materials over time, with sheets 701\u2013799 covering East Portland and Ladd's Addition.",
+      "topic": "other",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm Sanborn sheets 701\u2013799 cover East Portland and Ladd's Addition."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Multnomah Assessment 501 SE Hawthorne",
+      "claim_full": "Multnomah County Assessment & Taxation, located at 501 SE Hawthorne Blvd, Suite 175, holds microfilm with construction date and ownership history.",
+      "topic": "other",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm Multnomah County Assessment & Taxation address: 501 SE Hawthorne Blvd, Suite 175."
+    },
+    {
+      "id": "A30",
+      "claim_short": "SHPO holds nomination form",
+      "claim_full": "The Oregon State Historic Preservation Office holds the original 1988 National Register nomination form, which often identifies a property as contributing or non-contributing.",
+      "topic": "other",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.85,
+      "actionability": 0.75,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Consistent with the National Register listing for Ladd's Addition (NRIS #88001310, 1988) confirmed in accuracy flags."
+    },
+    {
+      "id": "A31",
+      "claim_short": "BES sewer-card image not pulled",
+      "claim_full": "The AI explicitly noted it did not retrieve the BES sewer-card image because it lives in a separate interactive viewer.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "admitted-gap",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Data-quality notes confirm the AI flagged what it did NOT pull rather than fabricating."
+    }
+  ]
+}

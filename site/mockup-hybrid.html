@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440, initial-scale=1">
+<title>Scenario detail · Portland Code AI</title>
+
+<!--
+  ============================================================================
+  HYBRID MOCKUP — W7 PAGE SHELL
+  ============================================================================
+  Container ID contract for the orchestrator (W8). These IDs are STABLE.
+
+    #scrubber-host       → new Scrubber(el, { onPositionChange })
+    #lobes-svg           → SVG element passed to new Lobes(svg, layout)
+    #lobes-layer         → <g> the Lobes module appends paths into
+    #chips-layer         → <g> the Chips module appends chip nodes into
+    #response-host       → new ResponsePanel(el, data)
+    #gauge-host          → new Gauge(el)
+    #citations-host      → new Citations(el, atoms)
+    #tally-panel-host    → tally panel target  (Tally arg 1)
+    #tally-tape-host     → tally tape target   (Tally arg 2)
+
+  The orchestrator owns position state and broadcasts to all modules.
+  ============================================================================
+-->
+
+<!-- Google Fonts: Fraunces (display + body), JetBrains Mono (citations),
+     Inter (sans body fallback for small UI bits). Single request. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Module styles. Order: shell first, then per-module. -->
+<link rel="stylesheet" href="hybrid/style.css">
+<link rel="stylesheet" href="hybrid/scrubber.css">
+<link rel="stylesheet" href="hybrid/lobes.css">
+<link rel="stylesheet" href="hybrid/chips.css">
+<link rel="stylesheet" href="hybrid/widgets.css">
+<link rel="stylesheet" href="hybrid/sidepanel.css">
+<link rel="stylesheet" href="hybrid/fallback.css">
+</head>
+
+<body>
+<div class="page">
+
+  <header class="page-header">
+    <div class="eyebrow" id="page-eyebrow">PORTLAND CODE &amp; REGULATION SEARCH ASSISTANT</div>
+    <h1 class="page-title" id="page-title">Loading scenario&hellip;</h1>
+    <div class="page-meta">
+      <span class="address-pill" id="page-address">&nbsp;</span>
+      <span class="page-subtitle" id="page-subtitle">What three AI configurations told the resident</span>
+    </div>
+    <a class="back-link" href="/three-column.html" id="back-link" aria-label="Back to comparison overview">&larr; Back to comparison</a>
+  </header>
+
+  <!-- Scrubber: the page's gravitational center. W2 mounts here.
+       Hidden when the atomized-claim payload isn't available; the fallback
+       view below replaces the diagram + widgets in that case. -->
+  <section class="scrubber-row" id="scrubber-row" aria-label="AI configuration scrubber">
+    <div id="scrubber-host"></div>
+  </section>
+
+  <!-- Fallback detail view. Populated from data/three-column-state.json
+       when no /data/atoms/<scenario>.json file exists. -->
+  <section class="fallback-detail" id="fallback-detail" hidden aria-label="AI response detail"></section>
+
+  <!-- Diagram + side panel. 60/40 at 1440, single column under 1024. -->
+  <main class="diagram-row" id="diagram-row">
+
+    <div class="diagram">
+      <svg
+        id="lobes-svg"
+        class="lobes-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="90 110 820 600"
+        preserveAspectRatio="xMidYMid meet"
+        role="img"
+        aria-label="Three overlapping lobes representing the OOB, MCP, and Enhanced AI variants">
+        <!-- W3 (Lobes) appends paths into #lobes-layer.
+             W4 (Chips) appends chip nodes into #chips-layer. -->
+        <g id="lobes-layer"></g>
+        <g id="chips-layer"></g>
+      </svg>
+
+      <div class="legend" aria-label="Variant legend">
+        <span class="legend-item">
+          <span class="swatch swatch-oob" aria-hidden="true"></span>
+          <span class="legend-label">OOB</span>
+          <span class="legend-sub">no tools</span>
+        </span>
+        <span class="legend-item">
+          <span class="swatch swatch-mcp" aria-hidden="true"></span>
+          <span class="legend-label">+ City Data</span>
+          <span class="legend-sub">MCP access</span>
+        </span>
+        <span class="legend-item">
+          <span class="swatch swatch-enh" aria-hidden="true"></span>
+          <span class="legend-label">+ Better Question</span>
+          <span class="legend-sub">enriched prompt</span>
+        </span>
+      </div>
+    </div>
+
+    <aside class="side-panel" id="response-host" aria-label="Literal AI response and pinned atom detail">
+      <!-- W6 (ResponsePanel) mounts here. -->
+    </aside>
+
+  </main>
+
+  <!-- Supporting widgets row: gauge / citations / tally panel. -->
+  <section class="widgets-row" id="widgets-row" aria-label="Supporting widgets">
+    <div class="widget widget-gauge" id="gauge-host"></div>
+    <div class="widget widget-citations" id="citations-host"></div>
+    <div class="widget widget-tally" id="tally-panel-host"></div>
+  </section>
+
+  <!-- Footer: proportional summary tape + reading guide. -->
+  <footer class="page-footer" id="page-footer">
+    <div class="tape-host" id="tally-tape-host" aria-label="Proportional summary tape"></div>
+    <div class="legend-bottom">
+      <span>Each chip is one claim from one AI variant.</span>
+      <span>Chips sit in the lobe of every variant that produced them.</span>
+      <span>Drag the scrubber above to add tools and a better-framed question.</span>
+    </div>
+  </footer>
+
+</div>
+
+<!-- Single entry point. The orchestrator imports every other module. -->
+<script type="module" src="hybrid/orchestrator.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Information Atlas — Tiny House at 4521 SE Belmont</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  :root {
+    --bg-0: #07090d;
+    --bg-1: #0c1018;
+    --bg-2: #121826;
+    --ink: #e9eef7;
+    --ink-dim: #8693a8;
+    --ink-faint: #4a5468;
+    --rule: #1a2233;
+    --grid: #131b2c;
+    /* quality colors */
+    --q-gray:  #2a3344;
+    --q-red:   #ff4d6a;
+    --q-yellow:#f5c451;
+    --q-green: #4cd6a3;
+    --q-blue:  #5fb3ff;
+    /* topic palette (cluster halos) */
+    --t-zoning:    #5fb3ff;
+    --t-definitions:#b58bff;
+    --t-size:      #f5c451;
+    --t-setbacks:  #ff8a5b;
+    --t-permits:   #4cd6a3;
+    --t-sequence:  #6df0ff;
+    --t-costs:     #ff5fa0;
+    --t-address:   #ff4d6a;
+    /* variant accents */
+    --v-oob: #ff8a5b;
+    --v-mcp: #5fb3ff;
+    --v-enh: #4cd6a3;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; height:100%; background: var(--bg-0); color: var(--ink); font-family: "Fraunces", Georgia, serif; }
+  body {
+    background:
+      radial-gradient(1200px 700px at 12% -10%, rgba(95,179,255,0.07), transparent 60%),
+      radial-gradient(1000px 600px at 110% 20%, rgba(76,214,163,0.06), transparent 60%),
+      radial-gradient(900px 600px at 50% 110%, rgba(181,139,255,0.07), transparent 60%),
+      var(--bg-0);
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  body::before {
+    content:""; position: fixed; inset:0; pointer-events:none; z-index: 0;
+    background-image:
+      linear-gradient(to right, var(--grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    background-size: 56px 56px;
+    opacity: 0.35;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  body::after {
+    content:""; position: fixed; inset:0; pointer-events:none; z-index: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: 0.6;
+    mix-blend-mode: overlay;
+  }
+
+  header {
+    position: fixed; top:0; left:0; right:0; z-index: 50;
+    padding: 18px 28px 14px;
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 24px;
+    background: linear-gradient(180deg, rgba(7,9,13,0.92) 0%, rgba(7,9,13,0.78) 70%, rgba(7,9,13,0) 100%);
+    border-bottom: 1px solid var(--rule);
+    backdrop-filter: blur(8px);
+  }
+  .brand { display: flex; align-items: baseline; gap: 14px; }
+  .brand .mark {
+    font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.32em;
+    color: var(--ink-dim); padding: 4px 9px; border: 1px solid var(--rule); border-radius: 2px;
+    text-transform: uppercase;
+  }
+  .brand h1 {
+    margin:0; font-weight: 300; font-size: 26px; letter-spacing: -0.01em;
+    font-style: italic;
+  }
+  .brand h1 em { font-style: normal; font-weight: 600; font-variation-settings: "opsz" 144; }
+  .brand .sub {
+    font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--ink-faint);
+    letter-spacing: 0.08em; margin-top: 2px;
+  }
+
+  /* Variant selector */
+  .selector {
+    display: flex; gap: 0; align-items: stretch;
+    border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
+    background: rgba(12,16,24,0.85);
+  }
+  .selector button {
+    appearance: none; border: 0; background: transparent; color: var(--ink-dim);
+    font-family: "JetBrains Mono", monospace; font-size: 12px; letter-spacing: 0.18em;
+    padding: 12px 22px; cursor: pointer; text-transform: uppercase;
+    border-right: 1px solid var(--rule); position: relative;
+    transition: color 180ms ease, background 180ms ease;
+  }
+  .selector button:last-child { border-right: 0; }
+  .selector button:hover { color: var(--ink); background: rgba(255,255,255,0.03); }
+  .selector button.active { color: var(--ink); background: rgba(255,255,255,0.04); }
+  .selector button .dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    margin-right: 8px; vertical-align: middle;
+    box-shadow: 0 0 8px currentColor;
+  }
+  .selector button[data-v="all"] .dot { background: var(--ink); color: var(--ink); }
+  .selector button[data-v="oob"] .dot { background: var(--v-oob); color: var(--v-oob); }
+  .selector button[data-v="mcp"] .dot { background: var(--v-mcp); color: var(--v-mcp); }
+  .selector button[data-v="enh"] .dot { background: var(--v-enh); color: var(--v-enh); }
+  .selector button.active::after {
+    content:""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+    background: currentColor;
+  }
+  .selector button[data-v="oob"].active { color: var(--v-oob); }
+  .selector button[data-v="mcp"].active { color: var(--v-mcp); }
+  .selector button[data-v="enh"].active { color: var(--v-enh); }
+
+  /* Stats panel */
+  .stats {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+    font-family: "JetBrains Mono", monospace;
+  }
+  .stats .row {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; letter-spacing: 0.06em; color: var(--ink-dim);
+  }
+  .stats .row strong { color: var(--ink); font-weight: 700; min-width: 44px; text-align: right; }
+  .stats .row .label { min-width: 96px; text-align: right; text-transform: uppercase; }
+  .stats .row .bar {
+    width: 140px; height: 6px; background: var(--bg-2); border-radius: 1px;
+    position: relative; overflow: hidden;
+  }
+  .stats .row .bar i {
+    display:block; height:100%; transition: width 600ms cubic-bezier(.2,.8,.2,1);
+  }
+  .stats .row[data-v="oob"] .bar i { background: var(--v-oob); box-shadow: 0 0 12px var(--v-oob); }
+  .stats .row[data-v="mcp"] .bar i { background: var(--v-mcp); box-shadow: 0 0 12px var(--v-mcp); }
+  .stats .row[data-v="enh"] .bar i { background: var(--v-enh); box-shadow: 0 0 12px var(--v-enh); }
+
+  /* Atlas container */
+  #atlas {
+    position: fixed; inset: 0; z-index: 1;
+  }
+  #atlas svg { width: 100%; height: 100%; display: block; cursor: grab; }
+  #atlas svg:active { cursor: grabbing; }
+
+  /* Cluster halos */
+  .cluster-halo {
+    fill-opacity: 0.035;
+    stroke-opacity: 0.22;
+    stroke-width: 1;
+    stroke-dasharray: 2 5;
+    pointer-events: none;
+    transition: fill-opacity 400ms ease;
+    mix-blend-mode: screen;
+  }
+  .cluster-label {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 300;
+    fill: var(--ink-dim);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 10px;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .cluster-label .topic {
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9.5px;
+  }
+
+  /* Edges */
+  .edge {
+    fill: none;
+    stroke: var(--rule);
+    stroke-width: 1;
+    transition: stroke 300ms ease, stroke-opacity 300ms ease, stroke-width 300ms ease;
+  }
+  .edge.contradict {
+    stroke: var(--q-red);
+    stroke-width: 2;
+    stroke-dasharray: 7 5;
+    filter: drop-shadow(0 0 6px rgba(255,77,106,0.85)) drop-shadow(0 0 14px rgba(255,77,106,0.45));
+    animation: dash 12s linear infinite;
+    opacity: 0.95;
+  }
+  @keyframes dash { to { stroke-dashoffset: -240; } }
+  .edge.lit-oob { stroke: rgba(255,138,91,0.85); stroke-width: 1.7; filter: drop-shadow(0 0 8px rgba(255,138,91,0.55)); }
+  .edge.lit-mcp { stroke: rgba(95,179,255,0.85); stroke-width: 1.7; filter: drop-shadow(0 0 8px rgba(95,179,255,0.55)); }
+  .edge.lit-enh { stroke: rgba(76,214,163,0.85); stroke-width: 1.7; filter: drop-shadow(0 0 8px rgba(76,214,163,0.55)); }
+  .edge.dim { stroke-opacity: 0.025; }
+  .edge.contradict.dim { stroke-opacity: 0.18; filter: none; }
+
+  /* Nodes */
+  .node-card { cursor: pointer; }
+  .node-card .node-bg {
+    fill: var(--bg-1);
+    stroke: var(--ink-faint);
+    transition: stroke 200ms ease, fill 200ms ease, filter 200ms ease;
+  }
+  .node-card.dim .node-bg { fill: rgba(12,16,24,0.25); stroke: rgba(74,84,104,0.12); }
+  .node-card.dim .node-label, .node-card.dim .node-id { opacity: 0.08; }
+  .node-card.dim .quality-dot { opacity: 0.06; }
+  .node-card.dim rect { opacity: 0.18; }
+  .node-card:hover .node-bg {
+    fill: #15203a;
+    stroke: var(--ink);
+    filter: drop-shadow(0 0 12px rgba(233,238,247,0.25));
+  }
+  .node-card.has-contradict .node-bg {
+    stroke-dasharray: 3 3;
+  }
+  .node-label {
+    font-family: "Fraunces", serif;
+    fill: var(--ink);
+    font-size: 11px;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+  }
+  .node-id {
+    font-family: "JetBrains Mono", monospace;
+    fill: var(--ink-faint);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+  }
+  .quality-dot {
+    transition: opacity 200ms ease;
+  }
+  .quality-dot circle.core {
+    filter: drop-shadow(0 0 3px currentColor);
+  }
+  .quality-dot.gray   { color: var(--q-gray); }
+  .quality-dot.red    { color: var(--q-red); }
+  .quality-dot.yellow { color: var(--q-yellow); }
+  .quality-dot.green  { color: var(--q-green); }
+  .quality-dot.blue   { color: var(--q-blue); }
+  .quality-dot circle.core { fill: currentColor; }
+  .quality-dot.gray circle.core { filter: none; opacity: 0.5; }
+
+  /* Tooltip */
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 100;
+    width: 360px; max-width: 90vw;
+    background: rgba(7,9,13,0.96);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 16px 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(233,238,247,0.04);
+    backdrop-filter: blur(8px);
+    transform: translate(0, 0);
+    opacity: 0; transition: opacity 140ms ease;
+    font-family: "Fraunces", serif;
+  }
+  .tooltip.visible { opacity: 1; }
+  .tooltip .tt-head {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 8px; margin-bottom: 10px;
+  }
+  .tooltip .tt-id {
+    font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.18em;
+    color: var(--ink-faint);
+  }
+  .tooltip .tt-topic {
+    font-family: "JetBrains Mono", monospace; font-size: 9.5px; letter-spacing: 0.18em;
+    text-transform: uppercase; padding: 2px 6px; border-radius: 2px;
+    background: rgba(255,255,255,0.04);
+  }
+  .tooltip .tt-claim {
+    font-size: 14px; line-height: 1.35; margin-bottom: 4px;
+    font-weight: 400;
+  }
+  .tooltip .tt-importance {
+    font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--ink-faint);
+    margin-bottom: 12px; letter-spacing: 0.05em;
+  }
+  .tooltip .tt-importance .pip { color: var(--ink); }
+  .tooltip .tt-row {
+    display: grid; grid-template-columns: 28px 1fr; gap: 10px;
+    padding: 7px 0; border-top: 1px solid rgba(255,255,255,0.04);
+    font-size: 12px; line-height: 1.35;
+  }
+  .tooltip .tt-row:first-of-type { border-top: 0; }
+  .tooltip .tt-row .v {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9.5px; letter-spacing: 0.15em;
+    color: var(--ink-faint);
+    padding-top: 2px;
+  }
+  .tooltip .tt-row[data-v="oob"] .v { color: var(--v-oob); }
+  .tooltip .tt-row[data-v="mcp"] .v { color: var(--v-mcp); }
+  .tooltip .tt-row[data-v="enh"] .v { color: var(--v-enh); }
+  .tooltip .tt-row[data-v="truth"] .v { color: var(--ink); }
+  .tooltip .tt-row .text {
+    color: var(--ink-dim);
+    font-family: "Fraunces", serif;
+    font-size: 12px;
+  }
+  .tooltip .tt-row[data-v="truth"] .text {
+    color: var(--ink); font-style: italic;
+  }
+  .tooltip .tt-row .text .qpill {
+    display: inline-block; font-family: "JetBrains Mono", monospace;
+    font-size: 9px; letter-spacing: 0.1em; padding: 1px 5px; border-radius: 2px;
+    margin-right: 6px; vertical-align: 1px; text-transform: uppercase;
+  }
+  .qpill.gray   { background: rgba(42,51,68,0.6); color: #95a1b8; }
+  .qpill.red    { background: rgba(255,77,106,0.18); color: var(--q-red); }
+  .qpill.yellow { background: rgba(245,196,81,0.16); color: var(--q-yellow); }
+  .qpill.green  { background: rgba(76,214,163,0.16); color: var(--q-green); }
+  .qpill.blue   { background: rgba(95,179,255,0.16); color: var(--q-blue); }
+  .tooltip .tt-cite {
+    margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--ink-faint);
+    letter-spacing: 0.06em;
+  }
+  .tooltip .tt-cite strong { color: var(--ink); font-weight: 500; }
+
+  /* Legend */
+  .legend {
+    position: fixed; left: 24px; bottom: 22px; z-index: 40;
+    background: rgba(7,9,13,0.85);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 16px;
+    backdrop-filter: blur(8px);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px; letter-spacing: 0.08em; color: var(--ink-dim);
+    width: 240px;
+  }
+  .legend h4 {
+    margin: 0 0 10px; font-family: "Fraunces", serif; font-style: italic; font-weight: 300;
+    font-size: 14px; letter-spacing: 0.04em; color: var(--ink); text-transform: none;
+  }
+  .legend .sect { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
+  .legend .sect:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+  .legend .sect h5 {
+    margin: 0 0 6px; font-size: 9px; letter-spacing: 0.22em; color: var(--ink-faint);
+    font-weight: 700; text-transform: uppercase;
+  }
+  .legend .item { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
+  .legend .swatch {
+    width: 10px; height: 10px; border-radius: 50%; box-shadow: 0 0 6px currentColor;
+    flex-shrink: 0;
+  }
+  .legend .swatch.gray   { background: var(--q-gray); box-shadow: none; }
+  .legend .swatch.red    { background: var(--q-red);    color: var(--q-red); }
+  .legend .swatch.yellow { background: var(--q-yellow); color: var(--q-yellow); }
+  .legend .swatch.green  { background: var(--q-green);  color: var(--q-green); }
+  .legend .swatch.blue   { background: var(--q-blue);   color: var(--q-blue); }
+  .legend .line {
+    width: 22px; height: 0; border-top: 1.5px solid; flex-shrink: 0;
+  }
+  .legend .line.solid { border-top-style: solid; color: var(--ink-faint); }
+  .legend .line.contradict {
+    border-top: 1.5px dashed var(--q-red); color: var(--q-red);
+    filter: drop-shadow(0 0 3px rgba(255,77,106,0.5));
+  }
+  .legend .border {
+    width: 14px; height: 14px; border: 1px solid var(--ink-faint);
+    flex-shrink: 0; background: var(--bg-1);
+  }
+  .legend .border.thick { border-width: 2.5px; border-color: var(--ink); }
+
+  /* Footer chrome */
+  .scenario-tag {
+    position: fixed; right: 24px; bottom: 22px; z-index: 40;
+    font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.18em;
+    color: var(--ink-faint); text-align: right; line-height: 1.6;
+    background: rgba(7,9,13,0.85); border: 1px solid var(--rule);
+    padding: 12px 14px; border-radius: 4px; backdrop-filter: blur(8px);
+  }
+  .scenario-tag strong { color: var(--ink); font-weight: 500; }
+
+  .pan-hint {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 40;
+    font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.22em;
+    color: var(--ink-faint); text-transform: uppercase;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  /* compass corner */
+  .corner {
+    position: fixed; top: 88px; left: 24px; z-index: 30;
+    font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.22em;
+    color: var(--ink-faint);
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+  .corner .quote {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 300;
+    font-size: 13px; letter-spacing: 0.01em; color: var(--ink-dim);
+    text-transform: none;
+    max-width: 280px; line-height: 1.4; margin-top: 8px;
+    border-left: 1px solid var(--rule); padding-left: 12px;
+  }
+
+  @media (max-width: 1100px) {
+    header { grid-template-columns: 1fr; gap: 10px; }
+    .stats, .selector { justify-self: start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="mark">Atlas / 01</span>
+    <div>
+      <h1>The <em>Information Atlas</em></h1>
+      <div class="sub">SCENARIO 1 · TINY HOUSE · 4521 SE BELMONT ST · 25 CLAIMS · 3 VARIANTS</div>
+    </div>
+  </div>
+
+  <nav class="selector" role="tablist" aria-label="Variant">
+    <button data-v="all" class="active" role="tab"><span class="dot"></span>All variants</button>
+    <button data-v="oob"  role="tab"><span class="dot"></span>Out-of-box</button>
+    <button data-v="mcp"  role="tab"><span class="dot"></span>+MCP</button>
+    <button data-v="enh"  role="tab"><span class="dot"></span>Enhanced</button>
+  </nav>
+
+  <div class="stats">
+    <div class="row" data-v="oob">
+      <span class="label">Out-of-box</span>
+      <span class="bar"><i style="width:24%"></i></span>
+      <strong data-pct="oob">24%</strong>
+    </div>
+    <div class="row" data-v="mcp">
+      <span class="label">+MCP</span>
+      <span class="bar"><i style="width:60%"></i></span>
+      <strong data-pct="mcp">60%</strong>
+    </div>
+    <div class="row" data-v="enh">
+      <span class="label">Enhanced</span>
+      <span class="bar"><i style="width:96%"></i></span>
+      <strong data-pct="enh">96%</strong>
+    </div>
+  </div>
+</header>
+
+<div class="corner">
+  Map of what a homeowner needs to know
+  <div class="quote">"Every claim a star, every dependency a thread of light. Where a variant goes dark, the homeowner is left in the dark."</div>
+</div>
+
+<div id="atlas"></div>
+
+<div class="legend" id="legend">
+  <h4>How to read the atlas</h4>
+  <div class="sect">
+    <h5>Quality (per variant)</h5>
+    <div class="item"><span class="swatch gray"></span> Not addressed</div>
+    <div class="item"><span class="swatch red"></span> Wrong / contradicts code</div>
+    <div class="item"><span class="swatch yellow"></span> Vague / partial</div>
+    <div class="item"><span class="swatch green"></span> Specific &amp; correct</div>
+    <div class="item"><span class="swatch blue"></span> Actionable next step</div>
+  </div>
+  <div class="sect">
+    <h5>Edges</h5>
+    <div class="item"><span class="line solid"></span> topical relation</div>
+    <div class="item"><span class="line contradict"></span> contradiction (wrong vs. right)</div>
+  </div>
+  <div class="sect">
+    <h5>Border thickness</h5>
+    <div class="item"><span class="border"></span> low importance</div>
+    <div class="item"><span class="border thick"></span> critical for homeowner</div>
+  </div>
+</div>
+
+<div class="scenario-tag">
+  TINY HOUSE / ADU<br/>
+  <strong>4521 SE Belmont St</strong> &nbsp;·&nbsp; Sunnyside<br/>
+  Title 33 Zoning · Title 24 Building
+</div>
+
+<div class="pan-hint">Drag to pan · scroll to zoom · hover any node</div>
+
+<div class="tooltip" id="tt"></div>
+
+<script>
+// ------------------------------------------------------------
+// Claim corpus — exactly as specified
+// ------------------------------------------------------------
+const VARIANTS = ["oob","mcp","enh"];
+
+// quality codes per spec (mapped to dot color)
+// gray: not addressed, red: wrong, yellow: vague, green: specific & correct, blue: actionable
+function q(o,m,e){ return {oob:o, mcp:m, enh:e}; }
+// helper: each value is one of: 'gray','red','yellow','green','blue'
+
+const NODES = [
+  { id:"A1",  topic:"definitions", importance:2, claim:"ADU rules generally apply",
+    quality: q("yellow","yellow","green"),
+    text: {
+      oob:"\"ADU rules will generally apply.\"",
+      mcp:"\"This falls under Portland's ADU regulations.\"",
+      enh:"\"Your tiny house must be permitted as an Accessory Dwelling Unit (ADU).\"",
+      truth:"Correct. In Portland, a habitable second dwelling on a residential lot is an ADU under PCC 33.205."
+    } },
+  { id:"A2",  topic:"size", importance:5, claim:"~1,000 sf second dwelling",
+    quality: q("red","gray","gray"),
+    text: {
+      oob:"\"Most lots permit a second dwelling around 1,000 square feet.\"",
+      mcp:"(not addressed)",
+      enh:"(not addressed)",
+      truth:"WRONG. Portland caps ADUs at 800 sf or 75% of the main dwelling, whichever is less."
+    } },
+  { id:"A3",  topic:"setbacks", importance:4, claim:"~5 ft setbacks from all lines",
+    quality: q("red","gray","gray"),
+    text: {
+      oob:"\"Setbacks are roughly 5 feet from all property lines.\"",
+      mcp:"(not addressed)",
+      enh:"(not addressed)",
+      truth:"PARTIALLY WRONG. Front setback in R2.5 is 10 ft, not 5. Side and rear are 5 ft. The single number is misleading."
+    } },
+  { id:"A4",  topic:"permits", importance:3, claim:"Building permit required",
+    quality: q("yellow","yellow","green"),
+    text: {
+      oob:"\"You'll need a building permit.\"",
+      mcp:"\"A building permit is required.\"",
+      enh:"\"A building permit is required, plus separate plumbing, electrical, and mechanical sub-permits.\"",
+      truth:"Correct, but the OOB answer omits the four sub-permits — see A13/A24."
+    } },
+  { id:"A5",  topic:"sequence", importance:2, claim:"Contact City permitting",
+    quality: q("yellow","gray","gray"),
+    text: {
+      oob:"\"Contact your local city permitting office.\"",
+      mcp:"(not addressed)",
+      enh:"(superseded by 5-step sequence)",
+      truth:"Vague but not wrong. The Enhanced variant replaces this with a concrete five-step sequence (A21-A25)."
+    } },
+  { id:"A6",  topic:"address", importance:5, claim:"Cannot retrieve address data",
+    quality: q("yellow","gray","gray"),
+    text: {
+      oob:"\"I cannot retrieve address-specific zoning data for 4521 SE Belmont St.\"",
+      mcp:"(not addressed — MCP retrieves the data)",
+      enh:"(not addressed — MCP retrieves the data)",
+      truth:"Honest gap admission. Triggers the address-specific cap (max usefulness = 2). MCP variants resolve this via PortlandMaps."
+    } },
+  { id:"A7",  topic:"zoning", importance:5, claim:"Base zone is R2.5",
+    quality: q("gray","green","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"Per PortlandMaps, the base zone for 4521 SE Belmont is R2.5 single-dwelling.\"",
+      enh:"\"The base zone is R2.5 single-dwelling, confirmed via PortlandMaps for this address.\"",
+      truth:"Correct per PortlandMaps. R2.5 allows ADUs by right with the standards in PCC 33.205.",
+      cite:"Source: PortlandMaps · property record"
+    } },
+  { id:"A8",  topic:"zoning", importance:4, claim:"No overlay zones detected",
+    quality: q("gray","green","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"No overlay zones detected (no historic, design, or environmental overlay).\"",
+      enh:"\"No overlay zones apply — no Sunnyside Conservation District, historic, or environmental overlay on this parcel.\"",
+      truth:"Correct. Sunnyside Conservation District does not extend to this block of SE Belmont.",
+      cite:"Source: PortlandMaps overlay query"
+    } },
+  { id:"A9",  topic:"definitions", importance:5, claim:"ADU permitted under PCC 33.205",
+    quality: q("gray","green","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"Accessory Dwelling Units are permitted under PCC Title 33.205.\"",
+      enh:"\"ADUs are permitted by right under PCC 33.205 in this zone.\"",
+      truth:"Correct citation. PCC 33.205 governs ADU standards citywide.",
+      cite:"PCC 33.205 — Accessory Dwelling Units"
+    } },
+  { id:"A10", topic:"size", importance:5, claim:"Max 800 sf or 75% of main",
+    quality: q("gray","green","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"Maximum ADU size: 800 sf or 75% of the main dwelling, whichever is less.\"",
+      enh:"\"Maximum ADU size is 800 sf OR 75% of the main dwelling area — whichever is less.\"",
+      truth:"Correct. PCC 33.205.040 sets this limit. Contradicts the Out-of-box \"~1,000 sf\" claim (A2).",
+      cite:"PCC 33.205.040 — Size and proportion"
+    } },
+  { id:"A11", topic:"setbacks", importance:5, claim:"Front 10', side 5', rear 5'",
+    quality: q("gray","green","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"Setbacks: 10 ft front, 5 ft side, 5 ft rear.\"",
+      enh:"\"Required setbacks in R2.5: front 10 ft, side 5 ft, rear 5 ft.\"",
+      truth:"Correct per PCC 33.110.220. Contradicts the Out-of-box \"5 ft from all lines\" claim (A3).",
+      cite:"PCC 33.110.220 — Setbacks"
+    } },
+  { id:"A12", topic:"size", importance:4, claim:"Height limit 20'",
+    quality: q("gray","green","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"ADU height is capped at 20 ft.\"",
+      enh:"\"Maximum height for the ADU is 20 ft to the highest point.\"",
+      truth:"Correct per PCC 33.205. Some attic configurations qualify for additional height under specific conditions.",
+      cite:"PCC 33.205 — Development standards"
+    } },
+  { id:"A13", topic:"permits", importance:5, claim:"Building + plumbing + electrical + mechanical",
+    quality: q("gray","green","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"You'll need building, plumbing, electrical, and mechanical permits.\"",
+      enh:"\"Four separate permits: building, plumbing, electrical, mechanical. Each has its own review.\"",
+      truth:"Correct. BDS handles building; the trade permits route through their respective inspection groups."
+    } },
+  { id:"A14", topic:"costs", importance:4, claim:"SDCs apply (water/sewer/transport/parks)",
+    quality: q("gray","yellow","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"System Development Charges apply (water, sewer, transportation, parks).\"",
+      enh:"\"Expect SDCs across four bureaus: Water, BES (sewer), PBOT (transportation), Parks.\"",
+      truth:"Correct. The MCP answer names the categories but no dollar range; the Enhanced variant gives a range (A19)."
+    } },
+  { id:"A15", topic:"permits", importance:3, claim:"Stormwater management may be required",
+    quality: q("gray","yellow","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"\"Stormwater management may be required.\"",
+      enh:"\"Stormwater management is required if you add ≥500 sf of impervious area — see Stormwater Manual.\"",
+      truth:"Correct. The threshold (500 sf) is the actionable detail the Enhanced variant adds."
+    } },
+  { id:"A16", topic:"definitions", importance:5, claim:"THOW not permitted as residence",
+    quality: q("gray","gray","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"A Tiny House on Wheels (THOW) is NOT permitted as a permanent residence under Portland code.\"",
+      truth:"Correct. THOWs are classified as RVs under PCC 33.910 definitions and cannot be permanent dwellings.",
+      cite:"PCC 33.910 — Definitions"
+    } },
+  { id:"A17", topic:"definitions", importance:5, claim:"Tiny house must be on foundation",
+    quality: q("gray","gray","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"To be legal, the tiny house must be on a permanent foundation and is then treated as an ADU.\"",
+      truth:"Correct. A foundation-mounted small dwelling unit on a residential lot is an ADU under PCC 33.205.",
+      cite:"PCC 33.205 — Accessory Dwelling Units"
+    } },
+  { id:"A18", topic:"setbacks", importance:3, claim:"Rear yard placement easiest",
+    quality: q("gray","gray","blue"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"Practical guidance: rear yard placement is usually easiest — fewer overlay/visibility issues than front.\"",
+      truth:"Correct judgment. The code permits front, side, and rear placement subject to setbacks, but rear yards typically minimize design review and neighbor friction."
+    } },
+  { id:"A19", topic:"costs", importance:5, claim:"SDCs typically $15,000–$25,000",
+    quality: q("gray","gray","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"SDCs for a typical 600-800 sf ADU run $15,000–$25,000 across all four bureaus.\"",
+      truth:"Correct order of magnitude per BDS Code Guide. Exact amount depends on lot and unit specifics; verify with bureau calculators.",
+      cite:"BDS ADU Code Guide (2024 fee schedule)"
+    } },
+  { id:"A20", topic:"costs", importance:3, claim:"Building permit fees separate from SDCs",
+    quality: q("gray","gray","green"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"Building permit fees are charged separately from SDCs — plan for both line items.\"",
+      truth:"Correct. SDCs cover infrastructure capacity; permit fees cover review and inspection labor."
+    } },
+  { id:"A21", topic:"sequence", importance:5, claim:"Step 1: free zoning confirmation at BDS",
+    quality: q("gray","gray","blue"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"Step 1: get a free zoning confirmation from BDS — this verifies zone, overlays, and ADU eligibility on paper.\"",
+      truth:"Correct first step. BDS offers free over-the-counter zoning confirmations and 15-minute appointments at the Development Services Center."
+    } },
+  { id:"A22", topic:"sequence", importance:4, claim:"Step 2: site plan",
+    quality: q("gray","gray","blue"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"Step 2: prepare a site plan showing setbacks, lot coverage, tree locations, and the proposed ADU footprint.\"",
+      truth:"Correct. Site plan is required for permit intake."
+    } },
+  { id:"A23", topic:"sequence", importance:4, claim:"Step 3: building permit application",
+    quality: q("gray","gray","blue"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"Step 3: submit the building permit application through Development Hub, with the site plan and structural drawings.\"",
+      truth:"Correct. Development Hub is BDS's online intake."
+    } },
+  { id:"A24", topic:"sequence", importance:4, claim:"Step 4: trade sub-permits",
+    quality: q("gray","gray","blue"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"Step 4: pull plumbing, electrical, and mechanical sub-permits — usually after the building permit is issued.\"",
+      truth:"Correct sequence. Trades typically follow building permit issuance."
+    } },
+  { id:"A25", topic:"sequence", importance:4, claim:"Step 5: erosion control before excavation",
+    quality: q("gray","gray","blue"),
+    text: {
+      oob:"(not addressed)",
+      mcp:"(not addressed)",
+      enh:"\"Step 5: install erosion and sediment control measures before any excavation — Title 10 requirement.\"",
+      truth:"Correct. Title 10 requires sediment control before ground disturbance.",
+      cite:"PCC Title 10 — Erosion and Sediment Control"
+    } }
+];
+
+// ------------------------------------------------------------
+// Edges — relations + contradictions
+// ------------------------------------------------------------
+const EDGES = [
+  // address gap connects to all zoning
+  ["A6","A7","relate"], ["A6","A8","relate"], ["A6","A11","relate"],
+  // zone determines size
+  ["A7","A10","relate"], ["A7","A12","relate"], ["A7","A2","relate"],
+  // zone determines setbacks
+  ["A7","A11","relate"], ["A7","A3","relate"],
+  // overlay relates to zoning + setbacks
+  ["A8","A7","relate"], ["A8","A11","relate"],
+  // sequence chain
+  ["A21","A22","relate"], ["A22","A23","relate"], ["A23","A24","relate"], ["A24","A25","relate"],
+  // step1 confirms zoning
+  ["A21","A7","relate"], ["A21","A8","relate"],
+  // permits → sequence
+  ["A4","A23","relate"], ["A13","A24","relate"], ["A13","A4","relate"],
+  ["A15","A25","relate"], ["A15","A23","relate"],
+  // costs → permits
+  ["A14","A13","relate"], ["A19","A14","relate"], ["A20","A4","relate"], ["A19","A20","relate"],
+  // definitions cluster
+  ["A16","A1","relate"], ["A17","A1","relate"], ["A17","A9","relate"], ["A16","A17","relate"],
+  ["A9","A1","relate"], ["A9","A10","relate"],
+  // OOB sequence vague → enhanced sequence
+  ["A5","A21","relate"],
+  // contradictions — wrong vs right
+  ["A2","A10","contradict"], ["A3","A11","contradict"]
+];
+
+// ------------------------------------------------------------
+// Topic palette
+// ------------------------------------------------------------
+const TOPICS = {
+  zoning:      { color:"#5fb3ff", label:"Zoning" },
+  definitions: { color:"#b58bff", label:"Definitions" },
+  size:        { color:"#f5c451", label:"Size" },
+  setbacks:    { color:"#ff8a5b", label:"Setbacks" },
+  permits:     { color:"#4cd6a3", label:"Permits" },
+  sequence:    { color:"#6df0ff", label:"Sequence" },
+  costs:       { color:"#ff5fa0", label:"Costs" },
+  address:     { color:"#ff4d6a", label:"Address" }
+};
+
+// ------------------------------------------------------------
+// Layout — manual cluster centers so the topology is readable
+// ------------------------------------------------------------
+const W = window.innerWidth;
+const H = window.innerHeight;
+const TOP_PAD = 110; // header
+const BOT_PAD = 80;  // legend / pan-hint
+const USABLE_H = H - TOP_PAD - BOT_PAD;
+function ny(t){ return TOP_PAD + t * USABLE_H; }
+
+const CLUSTER_CENTERS = {
+  // arranged around the canvas so the story reads left→right
+  address:     { x: 0.09, y: 0.48 },
+  zoning:      { x: 0.24, y: 0.32 },
+  definitions: { x: 0.22, y: 0.78 },
+  size:        { x: 0.42, y: 0.22 },
+  setbacks:    { x: 0.44, y: 0.66 },
+  permits:     { x: 0.62, y: 0.32 },
+  costs:       { x: 0.60, y: 0.80 },
+  sequence:    { x: 0.86, y: 0.50 }
+};
+
+// nodes per topic
+const byTopic = {};
+NODES.forEach(n => { (byTopic[n.topic] ||= []).push(n); });
+
+// build node objects with initial positions + cluster targets
+const nodeMap = new Map();
+NODES.forEach(n => {
+  const c = CLUSTER_CENTERS[n.topic];
+  n.cx = c.x * W; n.cy = ny(c.y);
+  // small per-node jitter so they don't start on top of each other
+  n.x = n.cx + (Math.random()-0.5)*60;
+  n.y = n.cy + (Math.random()-0.5)*60;
+  // sizing
+  n.w = Math.max(140, 8 * n.claim.length / 1.2);
+  n.w = Math.min(n.w, 200);
+  // pre-measure: claim length determines width band
+  if (n.claim.length < 22) n.w = 150;
+  else if (n.claim.length < 32) n.w = 178;
+  else n.w = 210;
+  n.h = 46;
+  n.color = TOPICS[n.topic].color;
+  nodeMap.set(n.id, n);
+});
+
+// edge objects
+const edges = EDGES.map(([s,t,kind]) => ({
+  source: nodeMap.get(s), target: nodeMap.get(t), kind
+}));
+
+// ------------------------------------------------------------
+// Render
+// ------------------------------------------------------------
+const atlas = d3.select("#atlas");
+const svg = atlas.append("svg")
+  .attr("viewBox", `0 0 ${W} ${H}`)
+  .attr("preserveAspectRatio", "xMidYMid meet");
+
+// defs: glow filters per quality
+const defs = svg.append("defs");
+defs.append("filter").attr("id","glow-soft")
+  .attr("x","-50%").attr("y","-50%").attr("width","200%").attr("height","200%")
+  .html(`<feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>`);
+
+// zoom/pan group
+const root = svg.append("g").attr("class","root");
+const zoom = d3.zoom().scaleExtent([0.4, 2.8]).on("zoom", (e) => {
+  root.attr("transform", e.transform);
+});
+svg.call(zoom);
+
+// Cluster halos (drawn first, behind everything)
+const haloG = root.append("g").attr("class","halos");
+const labelG = root.append("g").attr("class","cluster-labels");
+const edgeG = root.append("g").attr("class","edges");
+const nodeG = root.append("g").attr("class","nodes");
+
+// build halos by computing convex-ish ellipses around each topic's nodes
+function drawHalos() {
+  haloG.selectAll("*").remove();
+  labelG.selectAll("*").remove();
+  Object.entries(byTopic).forEach(([topic, ns]) => {
+    if (ns.length === 0) return;
+    const xs = ns.map(n=>n.x), ys = ns.map(n=>n.y);
+    const cx = d3.mean(xs), cy = d3.mean(ys);
+    const rx = Math.max(120, (d3.max(xs)-d3.min(xs))/2 + 110);
+    const ry = Math.max(80, (d3.max(ys)-d3.min(ys))/2 + 75);
+    haloG.append("ellipse")
+      .attr("class","cluster-halo")
+      .attr("cx", cx).attr("cy", cy)
+      .attr("rx", rx).attr("ry", ry)
+      .attr("fill", TOPICS[topic].color)
+      .attr("stroke", TOPICS[topic].color);
+    // label placed above the halo, with a small bullet
+    const labY = cy - ry - 12;
+    const lab = labelG.append("text")
+      .attr("class","cluster-label")
+      .attr("x", cx).attr("y", labY)
+      .attr("text-anchor","middle");
+    lab.append("tspan")
+      .attr("class","topic")
+      .attr("fill", TOPICS[topic].color)
+      .text("● ");
+    lab.append("tspan").text(TOPICS[topic].label.toUpperCase());
+  });
+}
+
+// edges
+const edgeSel = edgeG.selectAll("path").data(edges).enter().append("path")
+  .attr("class", d => "edge " + (d.kind==="contradict" ? "contradict" : ""));
+
+function curveEdge(d) {
+  const sx=d.source.x, sy=d.source.y, tx=d.target.x, ty=d.target.y;
+  const dx=tx-sx, dy=ty-sy;
+  const dist=Math.sqrt(dx*dx+dy*dy);
+  // gentle curve perpendicular to midpoint
+  const mx=(sx+tx)/2, my=(sy+ty)/2;
+  const nx=-dy/dist, ny=dx/dist;
+  const k = d.kind==="contradict" ? 60 : 28;
+  const cx=mx+nx*k, cy=my+ny*k;
+  return `M${sx},${sy} Q${cx},${cy} ${tx},${ty}`;
+}
+
+// nodes (rounded rect cards with quality dots)
+const nodeSel = nodeG.selectAll("g.node-card").data(NODES, d=>d.id).enter()
+  .append("g").attr("class", d => "node-card" + (d.quality.oob==="red" || d.quality.mcp==="red" || d.quality.enh==="red" ? " has-contradict":""))
+  .attr("transform", d => `translate(${d.x},${d.y})`);
+
+// node bg rect (centered on x,y)
+nodeSel.append("rect")
+  .attr("class","node-bg")
+  .attr("x", d => -d.w/2).attr("y", d => -d.h/2)
+  .attr("width", d => d.w).attr("height", d => d.h)
+  .attr("rx", 3).attr("ry", 3)
+  .attr("stroke-width", d => 0.5 + d.importance*0.45);
+
+// accent left bar (topic color)
+nodeSel.append("rect")
+  .attr("x", d => -d.w/2).attr("y", d => -d.h/2)
+  .attr("width", 3).attr("height", d => d.h)
+  .attr("fill", d => d.color)
+  .attr("opacity", 0.75)
+  .style("filter","drop-shadow(0 0 3px currentColor)");
+
+// id label (top-left of card)
+nodeSel.append("text")
+  .attr("class","node-id")
+  .attr("x", d => -d.w/2 + 10)
+  .attr("y", d => -d.h/2 + 13)
+  .text(d => d.id);
+
+// claim text
+nodeSel.append("text")
+  .attr("class","node-label")
+  .attr("x", d => -d.w/2 + 10)
+  .attr("y", d => -d.h/2 + 28)
+  .each(function(d){
+    const sel = d3.select(this);
+    // truncate text to fit width
+    const max = Math.floor((d.w - 18) / 6.0);
+    let text = d.claim;
+    if (text.length > max) text = text.slice(0, max-1) + "…";
+    sel.text(text);
+  });
+
+// quality dots row at the bottom of the card
+const dotR = 4.2;
+const dotSpacing = 14;
+nodeSel.each(function(d){
+  const g = d3.select(this);
+  const dotsG = g.append("g")
+    .attr("class","quality-dots")
+    .attr("transform", `translate(${d.w/2 - 8 - dotSpacing*2}, ${d.h/2 - 8})`);
+  VARIANTS.forEach((v,i) => {
+    const cls = d.quality[v];
+    const dot = dotsG.append("g").attr("class","quality-dot " + cls)
+      .attr("transform", `translate(${i*dotSpacing}, 0)`)
+      .attr("data-v", v);
+    // halo ring
+    dot.append("circle").attr("r", dotR+1.6)
+      .attr("fill","none")
+      .attr("stroke", "currentColor")
+      .attr("stroke-opacity", cls==="gray" ? 0.18 : 0.35)
+      .attr("stroke-width", 0.6);
+    // core
+    dot.append("circle").attr("class","core").attr("r", dotR);
+    // label letter
+    dot.append("text")
+      .attr("text-anchor","middle")
+      .attr("y", 12)
+      .attr("font-family","JetBrains Mono, monospace")
+      .attr("font-size","7.5px")
+      .attr("letter-spacing","0.1em")
+      .attr("fill","currentColor")
+      .attr("opacity", 0.8)
+      .text(v.toUpperCase());
+  });
+});
+
+// importance pips (top-right corner)
+nodeSel.each(function(d){
+  const g = d3.select(this);
+  const pipsG = g.append("g").attr("transform", `translate(${d.w/2 - 6}, ${-d.h/2 + 8})`);
+  for (let i=0; i<5; i++){
+    pipsG.append("rect")
+      .attr("x", -i*4).attr("y", -2)
+      .attr("width", 2.5).attr("height", 5)
+      .attr("fill", i < d.importance ? d.color : "#1c2436")
+      .attr("opacity", i < d.importance ? 0.85 : 1)
+      .attr("rx", 0.5);
+  }
+});
+
+// initial draw
+function tick(){
+  edgeSel.attr("d", curveEdge);
+  nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
+}
+
+// ------------------------------------------------------------
+// Tiny custom force pass to spread clustered nodes nicely
+// (we don't use d3.forceLink+forceCenter defaults — instead a
+//  cluster-attraction + node-repulsion + edge-spring pass)
+// ------------------------------------------------------------
+const sim = d3.forceSimulation(NODES)
+  .alpha(1).alphaDecay(0.025)
+  .force("cluster", function(alpha){
+    NODES.forEach(n => {
+      const c = CLUSTER_CENTERS[n.topic];
+      n.vx += (c.x*W - n.x) * 0.06 * alpha;
+      n.vy += (ny(c.y) - n.y) * 0.06 * alpha;
+    });
+  })
+  .force("collide", d3.forceCollide().radius(d => Math.max(d.w,d.h)/2 + 18).strength(0.95))
+  .force("link", d3.forceLink(edges).id(d => d.id).distance(d => d.kind==="contradict"? 220 : 110).strength(d => d.kind==="contradict" ? 0.04 : 0.18))
+  .on("tick", () => {
+    drawHalos();
+    tick();
+  });
+
+// stop after settling
+setTimeout(()=> sim.alphaTarget(0).stop(), 4500);
+
+// ------------------------------------------------------------
+// Variant selector
+// ------------------------------------------------------------
+let currentVariant = "all";
+const buttons = document.querySelectorAll(".selector button");
+buttons.forEach(b => b.addEventListener("click", () => {
+  buttons.forEach(x => x.classList.remove("active"));
+  b.classList.add("active");
+  currentVariant = b.dataset.v;
+  applyVariant();
+}));
+
+function applyVariant(){
+  // dim nodes that this variant didn't address (gray quality)
+  nodeSel.classed("dim", d => {
+    if (currentVariant === "all") return false;
+    return d.quality[currentVariant] === "gray";
+  });
+  // highlight quality dots: when a variant is selected, fade the other two dots
+  nodeSel.selectAll(".quality-dot").attr("opacity", function(){
+    const v = this.getAttribute("data-v");
+    if (currentVariant === "all") return 1;
+    return v === currentVariant ? 1 : 0.18;
+  });
+  // edges: dim if either endpoint not addressed by variant; light up if it IS addressed
+  edgeSel.attr("class", d => {
+    let cls = "edge";
+    if (d.kind === "contradict") cls += " contradict";
+    if (currentVariant === "all") return cls;
+    const sg = d.source.quality[currentVariant];
+    const tg = d.target.quality[currentVariant];
+    const sourceCovered = sg !== "gray";
+    const targetCovered = tg !== "gray";
+    if (sourceCovered && targetCovered && d.kind !== "contradict") {
+      cls += " lit-" + currentVariant;
+    } else if (!sourceCovered || !targetCovered) {
+      cls += " dim";
+    }
+    return cls;
+  });
+  // halo opacity: dim halos in clusters where no node is addressed
+  haloG.selectAll("ellipse").attr("opacity", function(_,i){
+    if (currentVariant === "all") return 1;
+    const topics = Object.keys(byTopic);
+    const t = topics[i];
+    const covered = byTopic[t].some(n => n.quality[currentVariant] !== "gray");
+    return covered ? 1 : 0.25;
+  });
+}
+
+// ------------------------------------------------------------
+// Tooltip
+// ------------------------------------------------------------
+const tt = document.getElementById("tt");
+function qPill(q){ return `<span class="qpill ${q}">${q==="gray"?"silent":q}</span>`; }
+
+nodeSel.on("mousemove", function(event, d){
+  const rect = svg.node().getBoundingClientRect();
+  const cite = d.text.cite || "";
+  tt.innerHTML = `
+    <div class="tt-head">
+      <div>
+        <span class="tt-id">${d.id}</span>
+        <span class="tt-topic" style="color:${d.color}">${TOPICS[d.topic].label}</span>
+      </div>
+      <span class="tt-importance">${'<span class="pip">●</span>'.repeat(d.importance)}${'<span style="opacity:0.2">●</span>'.repeat(5-d.importance)}</span>
+    </div>
+    <div class="tt-claim">${d.claim}</div>
+    <div class="tt-row" data-v="oob"><span class="v">OOB</span><span class="text">${qPill(d.quality.oob)}${d.text.oob}</span></div>
+    <div class="tt-row" data-v="mcp"><span class="v">MCP</span><span class="text">${qPill(d.quality.mcp)}${d.text.mcp}</span></div>
+    <div class="tt-row" data-v="enh"><span class="v">ENH</span><span class="text">${qPill(d.quality.enh)}${d.text.enh}</span></div>
+    <div class="tt-row" data-v="truth"><span class="v">TRUTH</span><span class="text">${d.text.truth}</span></div>
+    ${ cite ? `<div class="tt-cite"><strong>Citation:</strong> ${cite}</div>` : "" }
+  `;
+  // position tooltip avoiding edges
+  const x = Math.min(event.clientX + 18, window.innerWidth - 380);
+  const y = Math.min(event.clientY + 18, window.innerHeight - 320);
+  tt.style.left = x + "px";
+  tt.style.top  = y + "px";
+  tt.classList.add("visible");
+});
+nodeSel.on("mouseleave", () => tt.classList.remove("visible"));
+
+// ------------------------------------------------------------
+// URL param support: ?v=oob|mcp|enh|all (for screenshotting)
+// ------------------------------------------------------------
+const params = new URLSearchParams(location.search);
+const vParam = params.get("v");
+if (vParam && ["all","oob","mcp","enh"].includes(vParam)) {
+  document.querySelector(`.selector button[data-v="${vParam}"]`).click();
+}
+
+// resize
+window.addEventListener("resize", () => {
+  // light reflow: just re-fit viewBox
+  svg.attr("viewBox", `0 0 ${window.innerWidth} ${window.innerHeight}`);
+});
+</script>
+</body>
+</html>

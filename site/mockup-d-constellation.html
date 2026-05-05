@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Claim Constellation — Tiny House at 4521 SE Belmont</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4ecdc;
+    --paper-2: #ece2cc;
+    --ink: #1c1a16;
+    --ink-soft: #4a4538;
+    --ink-faint: #877e6a;
+    --rule: #c8bda1;
+    --rule-soft: #d8cdb1;
+    --oob: #b9412b;        /* terracotta red — out-of-box */
+    --mcp: #c98b1c;        /* warm amber — MCP only */
+    --enh: #2f6b4b;        /* deep moss green — Enhanced */
+    --shared-me: #6c8f33;  /* MCP+Enhanced shared (yellow-green) */
+    --shared-all: #8a6f3a; /* all three */
+    --bg-grid: rgba(120, 110, 88, 0.10);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(255, 246, 224, 0.55), transparent 55%),
+      radial-gradient(circle at 82% 88%, rgba(192, 168, 130, 0.18), transparent 60%);
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 56px 64px 80px;
+  }
+
+  /* ───────── Masthead ───────── */
+  .masthead {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 18px;
+    margin-bottom: 36px;
+    gap: 48px;
+  }
+  .masthead-l .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 14px;
+  }
+  .masthead-l h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0 0 10px;
+  }
+  .masthead-l h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink-soft);
+  }
+  .masthead-l .dek {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 640px;
+    font-weight: 300;
+  }
+  .masthead-r {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--ink-faint);
+  }
+  .masthead-r b { color: var(--ink); font-weight: 500; }
+
+  /* ───────── Layout ───────── */
+  .canvas-wrap {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* ───────── Plot ───────── */
+  .plot-card {
+    position: relative;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 18px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.6) inset,
+      0 18px 40px -28px rgba(60, 45, 20, 0.35);
+  }
+  svg.plot { display: block; width: 100%; height: auto; }
+
+  .quadrant-label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    fill: var(--ink-faint);
+    letter-spacing: 0.02em;
+  }
+  .axis-tick {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    fill: var(--ink-faint);
+  }
+  .axis-end {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    fill: var(--ink);
+    font-weight: 400;
+  }
+  .axis-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    fill: var(--ink-soft);
+  }
+  .grid-line { stroke: var(--bg-grid); stroke-width: 1; }
+  .axis-line { stroke: var(--ink); stroke-width: 1.2; }
+
+  .dot { cursor: pointer; transition: opacity 180ms ease, transform 120ms ease; transform-origin: center; transform-box: fill-box; }
+  .dot:hover { transform: scale(1.18); }
+  .dot.dimmed { opacity: 0.08 !important; }
+  .dot.pinned-other { opacity: 0.18; }
+  .hull { fill-opacity: 0.06; stroke-opacity: 0.55; stroke-width: 1; stroke-dasharray: 3 3; pointer-events: none; transition: opacity 180ms ease; }
+  .hull.dimmed { opacity: 0; }
+  .centroid { pointer-events: none; transition: opacity 180ms ease; }
+  .centroid-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+
+  /* ───────── Sidebar ───────── */
+  .sidebar { display: flex; flex-direction: column; gap: 28px; position: sticky; top: 24px; }
+
+  .legend h3, .keys h3, .detail h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 14px;
+    font-weight: 500;
+  }
+
+  .legend-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 4px;
+    border-bottom: 1px dotted var(--rule);
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 150ms ease;
+  }
+  .legend-row:last-child { border-bottom: none; }
+  .legend-row.off { opacity: 0.32; }
+  .legend-swatch {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-top: 2px;
+    box-shadow: 0 0 0 1.5px var(--paper-2), 0 0 0 2.5px currentColor;
+  }
+  .legend-text { flex: 1; }
+  .legend-text .label {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  .legend-text .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-top: 3px;
+    line-height: 1.35;
+  }
+
+  .keys { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--ink-soft); line-height: 1.55; }
+  .key-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; }
+  .key-row svg { flex: 0 0 22px; }
+
+  .detail {
+    background: #fbf5e6;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 18px 18px 20px;
+    min-height: 200px;
+  }
+  .detail .placeholder {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-faint);
+    line-height: 1.5;
+  }
+  .detail .atom-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .detail .atom-claim {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    line-height: 1.32;
+    color: var(--ink);
+    margin: 4px 0 14px;
+    font-weight: 400;
+  }
+  .detail .meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-top: 1px dotted var(--rule);
+    padding: 7px 0;
+  }
+  .detail .meta-row b { color: var(--ink); font-weight: 500; }
+  .detail .citation {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    background: var(--paper-2);
+    padding: 6px 8px;
+    border-left: 2px solid var(--ink-faint);
+    margin-top: 12px;
+    word-break: break-word;
+  }
+  .detail .verdict {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+  .v-correct { background: rgba(47,107,75,0.14); color: var(--enh); }
+  .v-wrong { background: rgba(185,65,43,0.16); color: var(--oob); }
+  .v-partial { background: rgba(201,139,28,0.18); color: #8d5d09; }
+  .v-vague { background: rgba(135,126,106,0.16); color: var(--ink-soft); }
+  .v-gap { background: rgba(135,126,106,0.16); color: var(--ink-soft); border: 1px dashed var(--ink-faint); }
+
+  /* ───────── Tooltip ───────── */
+  .tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: #1c1a16;
+    color: #f4ecdc;
+    padding: 10px 12px;
+    border-radius: 2px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 280px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 120ms ease;
+    z-index: 100;
+  }
+  .tooltip.visible { opacity: 1; transform: translateY(0); }
+  .tooltip .tt-id { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.14em; opacity: 0.55; margin-bottom: 4px; }
+  .tooltip .tt-claim { font-family: 'Fraunces', serif; font-size: 14px; line-height: 1.3; margin-bottom: 6px; }
+  .tooltip .tt-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.7; }
+
+  /* ───────── Reduction strip ───────── */
+  .reduction {
+    margin-top: 56px;
+    padding-top: 26px;
+    border-top: 1px solid var(--ink);
+  }
+  .reduction h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 6px;
+    font-weight: 500;
+  }
+  .reduction p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 22px;
+    max-width: 720px;
+    line-height: 1.45;
+  }
+  .reduction-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .mini-plot { background: var(--paper-2); border: 1px solid var(--rule); padding: 14px; }
+  .mini-plot svg { width: 100%; height: auto; display: block; }
+  .mini-plot .mini-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 8px;
+  }
+  .stat-card { padding-top: 4px; }
+  .stat-card .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 6px;
+  }
+  .stat-card .stat-value {
+    font-family: 'Fraunces', serif;
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+  .stat-card .stat-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+  .stat-card.oob .stat-value { color: var(--oob); }
+  .stat-card.mcp .stat-value { color: var(--mcp); }
+  .stat-card.enh .stat-value { color: var(--enh); }
+
+  .footer-note {
+    margin-top: 48px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    border-top: 1px dotted var(--rule);
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <div class="masthead-l">
+      <div class="eyebrow">Figure 01 · Three-axis claim cartography</div>
+      <h1>Where do the answers <em>actually land?</em></h1>
+      <p class="dek">A single homeowner question — <i>"Can I build a tiny house at 4521 SE Belmont?"</i> — produced 25 distinct factual claims across three AI configurations. Each claim is plotted by how specific it is, and how actionable it is. The shape of the resulting cloud is the finding.</p>
+    </div>
+    <div class="masthead-r">
+      <div><b>Scenario 01 / 07</b></div>
+      <div>4521 SE Belmont St</div>
+      <div>Sunnyside · R2.5</div>
+      <div style="margin-top:10px;">25 claims · 3 variants</div>
+      <div>captured 2026-05-01</div>
+    </div>
+  </header>
+
+  <div class="canvas-wrap">
+
+    <!-- ────────── PLOT ────────── -->
+    <div class="plot-card">
+      <svg class="plot" viewBox="0 0 980 720" preserveAspectRatio="xMidYMid meet" id="plot">
+        <!-- (rendered by JS) -->
+      </svg>
+    </div>
+
+    <!-- ────────── SIDEBAR ────────── -->
+    <aside class="sidebar">
+
+      <section class="legend" id="legend">
+        <h3>Variants — click to toggle</h3>
+        <div class="legend-row" data-variant="O" style="color: var(--oob);">
+          <div class="legend-swatch" style="background: var(--oob);"></div>
+          <div class="legend-text">
+            <div class="label">Out-of-box</div>
+            <div class="sub">No tools, no lookup. Pattern-matching only.</div>
+          </div>
+        </div>
+        <div class="legend-row" data-variant="M" style="color: var(--mcp);">
+          <div class="legend-swatch" style="background: var(--mcp);"></div>
+          <div class="legend-text">
+            <div class="label">+ MCP lookup</div>
+            <div class="sub">Live PortlandMaps + PCC retrieval.</div>
+          </div>
+        </div>
+        <div class="legend-row" data-variant="E" style="color: var(--enh);">
+          <div class="legend-swatch" style="background: var(--enh);"></div>
+          <div class="legend-text">
+            <div class="label">+ MCP + question enrichment</div>
+            <div class="sub">Resident-framed prompt with sequencing requested.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;margin-top:8px;font-family:'Inter',sans-serif;font-size:11px;color:var(--ink-faint);align-items:center;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <span style="width:11px;height:11px;border-radius:50%;background:var(--shared-me);display:inline-block;border:1px solid #1c1a16;"></span>
+            <span>shared by MCP & Enhanced</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;">
+            <span style="width:11px;height:11px;border-radius:50%;background:var(--shared-all);display:inline-block;border:1px solid #1c1a16;"></span>
+            <span>all three</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="keys">
+        <h3>How to read a dot</h3>
+        <div class="key-row">
+          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="6" fill="#2f6b4b"/></svg>
+          <span>Filled — claim is correct & verifiable</span>
+        </div>
+        <div class="key-row">
+          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="6" fill="none" stroke="#877e6a" stroke-width="1.5"/></svg>
+          <span>Open — vague but not wrong</span>
+        </div>
+        <div class="key-row">
+          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="6" fill="#b9412b"/><line x1="6" y1="6" x2="16" y2="16" stroke="#1c1a16" stroke-width="1.6"/><line x1="16" y1="6" x2="6" y2="16" stroke="#1c1a16" stroke-width="1.6"/></svg>
+          <span>X — factually wrong</span>
+        </div>
+        <div class="key-row">
+          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="6" fill="none" stroke="#877e6a" stroke-width="1.5" stroke-dasharray="2 2"/></svg>
+          <span>Dashed — admitted gap ("can't retrieve")</span>
+        </div>
+        <div class="key-row" style="margin-top:10px;">
+          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="6" cy="11" r="3" fill="#877e6a"/><circle cx="15" cy="11" r="6" fill="#877e6a"/></svg>
+          <span>Size = importance to the homeowner (1–5)</span>
+        </div>
+      </section>
+
+      <section class="detail" id="detail">
+        <h3>Selected claim</h3>
+        <div class="placeholder">
+          Hover to inspect, click to pin a claim. Each dot is one factual atom one of the AIs produced — the literal sentence, what's actually true, and where the truth came from.
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <!-- ────────── REDUCTION ────────── -->
+  <section class="reduction">
+    <h2>The constellation, reduced</h2>
+    <p>If you blur your eyes, three centroids drift across the field. Out-of-box hangs at the bottom-left — descriptive and vague. MCP climbs into specifics but stays technical. Only the enriched run reaches the upper-right: specific <i>and</i> the homeowner can act on it Monday.</p>
+    <div class="reduction-grid">
+      <div class="mini-plot">
+        <div class="mini-title">Centroids · variant means</div>
+        <svg viewBox="0 0 240 220" id="mini-plot"></svg>
+      </div>
+      <div class="stat-card oob">
+        <div class="stat-label">Out-of-box</div>
+        <div class="stat-value">2 / 25</div>
+        <div class="stat-sub">claims that are both specific and actionable. Two of its specific claims are factually wrong.</div>
+      </div>
+      <div class="stat-card mcp">
+        <div class="stat-label">+ MCP</div>
+        <div class="stat-value">9 / 25</div>
+        <div class="stat-sub">specific & sourced — but mostly describes the rules, not what to do.</div>
+      </div>
+      <div class="stat-card enh">
+        <div class="stat-label">+ MCP + Enrichment</div>
+        <div class="stat-value">14 / 25</div>
+        <div class="stat-sub">claims in the upper-right quadrant. The homeowner gets a sequenced plan with citations.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-note">
+    <span>USS Civic Hackathon Codes · benchmark scenario 01 of 07</span>
+    <span>Specificity & actionability scored 0–1 · jitter applied for legibility</span>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+/* ────────────── DATA ────────────── */
+const CORPUS = [
+  { id:"A1",  text:"ADU rules generally apply",                                  variants:"OME", x:0.15, y:0.20, ok:"vague",   imp:2, cite:null },
+  { id:"A2",  text:"Most lots permit ~1,000 sf second dwelling",                 variants:"O",   x:0.55, y:0.30, ok:"wrong",   imp:5, cite:null, truth:"Wrong. Title 33.205.040 caps ADUs at 800 sf or 75% of main, whichever is less." },
+  { id:"A3",  text:"Setbacks ~5 ft from all property lines",                     variants:"O",   x:0.50, y:0.35, ok:"partial", imp:4, cite:null, truth:"Partial. Side & rear are 5 ft, but front yard is 10 ft in R2.5 (PCC 33.110.220)." },
+  { id:"A4",  text:"Will need a building permit",                                variants:"OME", x:0.30, y:0.40, ok:"vague",   imp:3, cite:null },
+  { id:"A5",  text:"Contact City permitting office",                             variants:"O",   x:0.20, y:0.45, ok:"vague",   imp:2, cite:null },
+  { id:"A6",  text:"Cannot retrieve address-specific zoning data",               variants:"O",   x:0.10, y:0.05, ok:"gap",     imp:5, cite:null, truth:"Honest gap. Out-of-box AI has no PortlandMaps access, so it bails." },
+  { id:"A7",  text:"Base zone is R2.5 single-dwelling",                          variants:"ME",  x:0.95, y:0.50, ok:"correct", imp:5, cite:"PortlandMaps zoning lookup" },
+  { id:"A8",  text:"No overlay zones detected",                                  variants:"ME",  x:0.90, y:0.55, ok:"correct", imp:4, cite:"PortlandMaps overlay layer" },
+  { id:"A9",  text:"ADU permitted under Title 33.205",                           variants:"ME",  x:0.85, y:0.55, ok:"correct", imp:5, cite:"PCC 33.205" },
+  { id:"A10", text:"Max ADU 800 sf or 75% of main, whichever is less",           variants:"ME",  x:0.95, y:0.60, ok:"correct", imp:5, cite:"PCC 33.205.040" },
+  { id:"A11", text:"Front 10', side 5', rear 5' setbacks",                       variants:"ME",  x:0.95, y:0.65, ok:"correct", imp:5, cite:"PCC 33.110.220" },
+  { id:"A12", text:"Height limit 20'",                                           variants:"ME",  x:0.95, y:0.55, ok:"correct", imp:4, cite:"PCC 33.205" },
+  { id:"A13", text:"Permits: building + plumbing + electrical + mechanical",     variants:"ME",  x:0.80, y:0.65, ok:"correct", imp:5, cite:null },
+  { id:"A14", text:"SDCs apply (water, sewer, transportation, parks)",           variants:"ME",  x:0.65, y:0.45, ok:"vague",   imp:4, cite:null },
+  { id:"A15", text:"Stormwater management may be required",                      variants:"ME",  x:0.45, y:0.30, ok:"vague",   imp:3, cite:null },
+  { id:"A16", text:"THOW not permitted as permanent residence",                  variants:"E",   x:0.85, y:0.75, ok:"correct", imp:5, cite:"PCC 33.910" },
+  { id:"A17", text:"Tiny house must be on foundation, treated as ADU",           variants:"E",   x:0.85, y:0.75, ok:"correct", imp:5, cite:"PCC 33.205" },
+  { id:"A18", text:"Rear yard placement easiest",                                variants:"E",   x:0.70, y:0.85, ok:"correct", imp:3, cite:null },
+  { id:"A19", text:"SDCs typically $15,000–$25,000",                             variants:"E",   x:0.90, y:0.75, ok:"correct", imp:5, cite:"BDS Code Guide" },
+  { id:"A20", text:"Building permit fees separate from SDCs",                    variants:"E",   x:0.75, y:0.70, ok:"correct", imp:3, cite:null },
+  { id:"A21", text:"Step 1: free zoning confirmation at BDS",                    variants:"E",   x:0.85, y:0.95, ok:"correct", imp:5, cite:null },
+  { id:"A22", text:"Step 2: site plan",                                          variants:"E",   x:0.80, y:0.90, ok:"correct", imp:4, cite:null },
+  { id:"A23", text:"Step 3: building permit application",                        variants:"E",   x:0.85, y:0.90, ok:"correct", imp:4, cite:null },
+  { id:"A24", text:"Step 4: plumbing/electrical/mechanical sub-permits",         variants:"E",   x:0.85, y:0.85, ok:"correct", imp:4, cite:null },
+  { id:"A25", text:"Step 5: erosion control before excavation",                  variants:"E",   x:0.85, y:0.85, ok:"correct", imp:4, cite:null }
+];
+
+/* ─── Plot dimensions ─── */
+const W = 980, H = 720;
+const M = { top: 60, right: 60, bottom: 90, left: 90 };
+const innerW = W - M.left - M.right;
+const innerH = H - M.top - M.bottom;
+
+/* ─── Deterministic jitter ─── */
+function jitter(seed, range) {
+  // simple LCG-ish hash from string seed
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) | 0;
+  const r = ((Math.sin(h) * 10000) % 1 + 1) % 1;
+  return (r - 0.5) * 2 * range;
+}
+
+/* ─── X/Y mapping ─── */
+function px(x, id) {
+  const xj = x + jitter(id + "x", 0.018);
+  return M.left + Math.max(0, Math.min(1, xj)) * innerW;
+}
+function py(y, id) {
+  const yj = y + jitter(id + "y", 0.018);
+  // y=0 at bottom, y=1 at top → invert
+  return M.top + (1 - Math.max(0, Math.min(1, yj))) * innerH;
+}
+
+/* ─── Color per variants string ─── */
+function dotFill(variants) {
+  if (variants === "O") return "var(--oob)";
+  if (variants === "M") return "var(--mcp)";
+  if (variants === "E") return "var(--enh)";
+  if (variants === "ME") return "var(--shared-me)";
+  if (variants === "OME") return "var(--shared-all)";
+  return "var(--ink-faint)";
+}
+function dotStroke(variants) {
+  if (variants.length > 1) return "#1c1a16";
+  return dotFill(variants);
+}
+
+/* ─── Size ─── */
+function dotR(imp) { return 7 + imp * 2.4; }  // 9.4 .. 19
+
+/* ────────────── RENDER PLOT ────────────── */
+const svg = document.getElementById('plot');
+const NS = "http://www.w3.org/2000/svg";
+
+function el(tag, attrs = {}, parent = svg) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k,v] of Object.entries(attrs)) e.setAttribute(k, v);
+  parent.appendChild(e);
+  return e;
+}
+
+/* Background grid */
+for (let i = 1; i < 4; i++) {
+  const x = M.left + (i/4) * innerW;
+  el('line', { x1:x, y1:M.top, x2:x, y2:M.top+innerH, class:'grid-line' });
+}
+for (let i = 1; i < 4; i++) {
+  const y = M.top + (i/4) * innerH;
+  el('line', { x1:M.left, y1:y, x2:M.left+innerW, y2:y, class:'grid-line' });
+}
+
+/* Quadrant labels (subtle, italic) */
+const qPad = 14;
+el('text', { x:M.left + qPad,            y:M.top + innerH - qPad - 2, class:'quadrant-label', 'text-anchor':'start' }).textContent = 'speculative';
+el('text', { x:M.left + innerW - qPad,   y:M.top + innerH - qPad - 2, class:'quadrant-label', 'text-anchor':'end'   }).textContent = 'informed but stuck';
+el('text', { x:M.left + qPad,            y:M.top + qPad + 10,         class:'quadrant-label', 'text-anchor':'start' }).textContent = 'useful guidance';
+el('text', { x:M.left + innerW - qPad,   y:M.top + qPad + 10,         class:'quadrant-label', 'text-anchor':'end'   }).textContent = 'actionable specifics';
+
+/* Axes */
+el('line', { x1:M.left, y1:M.top+innerH, x2:M.left+innerW, y2:M.top+innerH, class:'axis-line' });
+el('line', { x1:M.left, y1:M.top,        x2:M.left,        y2:M.top+innerH, class:'axis-line' });
+
+/* X axis end labels */
+el('text', { x:M.left,            y:M.top+innerH+30, class:'axis-end', 'text-anchor':'start' }).textContent = 'vague hedge';
+el('text', { x:M.left+innerW,     y:M.top+innerH+30, class:'axis-end', 'text-anchor':'end'   }).textContent = 'exact citation';
+/* X axis title */
+const xTitle = el('text', { x:M.left+innerW/2, y:M.top+innerH+58, class:'axis-title', 'text-anchor':'middle' });
+xTitle.textContent = 'SPECIFICITY  →';
+
+/* Y axis end labels (rotated) */
+const yLow = el('text', { class:'axis-end', 'text-anchor':'end',  transform:`translate(${M.left-22},${M.top+innerH}) rotate(-90)` });
+yLow.textContent = 'merely describes';
+const yHigh = el('text', { class:'axis-end', 'text-anchor':'start', transform:`translate(${M.left-22},${M.top}) rotate(-90)` });
+yHigh.textContent = 'tells you what to do';
+const yTitle = el('text', { class:'axis-title', 'text-anchor':'middle', transform:`translate(${M.left-58},${M.top+innerH/2}) rotate(-90)` });
+yTitle.textContent = 'ACTIONABILITY  →';
+
+/* Tick markers (0, .25, .5, .75, 1 — minimal) */
+[0, 0.5, 1].forEach(v => {
+  const x = M.left + v*innerW;
+  el('line', { x1:x, y1:M.top+innerH, x2:x, y2:M.top+innerH+5, class:'axis-line' });
+});
+[0, 0.5, 1].forEach(v => {
+  const y = M.top + (1-v)*innerH;
+  el('line', { x1:M.left-5, y1:y, x2:M.left, y2:y, class:'axis-line' });
+});
+
+/* ─── Convex hulls per variant ─── */
+function pointsForVariant(v) {
+  return CORPUS.filter(d => d.variants.includes(v)).map(d => [px(d.x,d.id), py(d.y,d.id)]);
+}
+function convexHull(points) {
+  if (points.length < 3) return points.slice();
+  const pts = points.slice().sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
+  const cross = (o,a,b) => (a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);
+  const lower = [];
+  for (const p of pts) {
+    while (lower.length>=2 && cross(lower[lower.length-2], lower[lower.length-1], p)<=0) lower.pop();
+    lower.push(p);
+  }
+  const upper = [];
+  for (let i=pts.length-1;i>=0;i--){
+    const p = pts[i];
+    while (upper.length>=2 && cross(upper[upper.length-2], upper[upper.length-1], p)<=0) upper.pop();
+    upper.push(p);
+  }
+  return lower.slice(0,-1).concat(upper.slice(0,-1));
+}
+/* expand hull outward slightly so it surrounds the dots */
+function expandHull(hull, pad) {
+  const cx = hull.reduce((s,p)=>s+p[0],0)/hull.length;
+  const cy = hull.reduce((s,p)=>s+p[1],0)/hull.length;
+  return hull.map(([x,y])=>{
+    const dx = x-cx, dy=y-cy;
+    const d = Math.hypot(dx,dy)||1;
+    return [x + (dx/d)*pad, y + (dy/d)*pad];
+  });
+}
+
+const variantColors = { O:"#b9412b", M:"#c98b1c", E:"#2f6b4b" };
+const hullsLayer = el('g', { id:'hulls' });
+['O','M','E'].forEach(v => {
+  const pts = pointsForVariant(v);
+  const hull = expandHull(convexHull(pts), 18);
+  if (hull.length < 3) return;
+  const dStr = "M" + hull.map(p=>p.join(',')).join(' L') + " Z";
+  el('path', { d:dStr, class:'hull', 'data-variant':v, fill:variantColors[v], stroke:variantColors[v] }, hullsLayer);
+});
+
+/* ─── Dots ─── */
+const dotsLayer = el('g', { id:'dots' });
+const tooltip = document.getElementById('tooltip');
+const detail  = document.getElementById('detail');
+let pinnedId = null;
+
+function correctnessGlyph(d, cx, cy, r) {
+  // returns extra svg for the "shape" overlay
+  const g = document.createElementNS(NS,'g');
+  g.setAttribute('class','dot-glyph');
+  g.setAttribute('pointer-events','none');
+  if (d.ok === 'wrong' || d.ok === 'partial') {
+    const sw = d.ok === 'wrong' ? 2.6 : 1.8;
+    const reach = d.ok === 'wrong' ? 0.62 : 0.5;
+    const a = document.createElementNS(NS,'line');
+    a.setAttribute('x1', cx-r*reach); a.setAttribute('y1', cy-r*reach);
+    a.setAttribute('x2', cx+r*reach); a.setAttribute('y2', cy+r*reach);
+    a.setAttribute('stroke','#1c1a16'); a.setAttribute('stroke-width', sw);
+    a.setAttribute('stroke-linecap','round');
+    const b = document.createElementNS(NS,'line');
+    b.setAttribute('x1', cx+r*reach); b.setAttribute('y1', cy-r*reach);
+    b.setAttribute('x2', cx-r*reach); b.setAttribute('y2', cy+r*reach);
+    b.setAttribute('stroke','#1c1a16'); b.setAttribute('stroke-width', sw);
+    b.setAttribute('stroke-linecap','round');
+    g.appendChild(a); g.appendChild(b);
+  }
+  return g;
+}
+
+CORPUS.forEach(d => {
+  const cx = px(d.x, d.id);
+  const cy = py(d.y, d.id);
+  const r  = dotR(d.imp);
+  const fillStyle = dotFill(d.variants);
+  let strokeColor = dotStroke(d.variants);
+
+  let circleAttrs = {
+    cx, cy, r,
+    'data-id': d.id,
+    'data-variants': d.variants,
+    class: 'dot',
+    style: `fill: ${fillStyle}; stroke: ${strokeColor};`,
+    'stroke-width': d.variants.length > 1 ? 1.4 : 1.2
+  };
+
+  // shape encoding
+  if (d.ok === 'vague' || d.ok === 'partial') {
+    circleAttrs.style = `fill: var(--paper-2); stroke: ${fillStyle === 'var(--shared-all)' ? '#8a6f3a' : (fillStyle.startsWith('var') ? `var(${fillStyle.slice(4,-1)})` : fillStyle)};`;
+    circleAttrs['stroke-width'] = 2.2;
+  }
+  if (d.ok === 'gap') {
+    circleAttrs.style = `fill: var(--paper-2); stroke: var(--ink-faint);`;
+    circleAttrs['stroke-width'] = 1.6;
+    circleAttrs['stroke-dasharray'] = '3 2';
+  }
+
+  const c = el('circle', circleAttrs, dotsLayer);
+
+  // wrong/partial X overlay
+  if (d.ok === 'wrong' || d.ok === 'partial') {
+    const glyph = correctnessGlyph(d, cx, cy, r);
+    glyph.setAttribute('data-id', d.id);
+    dotsLayer.appendChild(glyph);
+  }
+
+  // small ID label for top-importance dots (subtle)
+  if (d.imp >= 4) {
+    const lbl = el('text', {
+      x: cx + r + 4,
+      y: cy + 3,
+      class: 'axis-tick',
+      'pointer-events': 'none',
+      style: 'fill: var(--ink-faint); font-size: 9px;'
+    }, dotsLayer);
+    lbl.textContent = d.id;
+  }
+
+  // events
+  c.addEventListener('mouseenter', e => showTooltip(e, d));
+  c.addEventListener('mousemove',  e => moveTooltip(e));
+  c.addEventListener('mouseleave', () => hideTooltip());
+  c.addEventListener('click',      () => pinDetail(d));
+});
+
+/* ─── Centroid markers ─── */
+function centroid(v) {
+  const pts = CORPUS.filter(d => d.variants.includes(v)).map(d => [px(d.x,d.id), py(d.y,d.id)]);
+  const cx = pts.reduce((s,p)=>s+p[0],0)/pts.length;
+  const cy = pts.reduce((s,p)=>s+p[1],0)/pts.length;
+  return [cx, cy];
+}
+const centroidLayer = el('g', { id:'centroids' });
+const centroids = {};
+['O','M','E'].forEach(v => {
+  centroids[v] = centroid(v);
+});
+// drift arrows O→M→E (subtle, behind dots? layer is appended after, so on top — keep it subtle)
+function arrowPath(a, b) {
+  return `M${a[0]},${a[1]} L${b[0]},${b[1]}`;
+}
+const driftG = el('g', { id:'drift', opacity: 0.45 }, centroidLayer);
+el('path', { d: arrowPath(centroids.O, centroids.M), stroke:'#1c1a16', 'stroke-width':1, 'stroke-dasharray':'1 5', fill:'none' }, driftG);
+el('path', { d: arrowPath(centroids.M, centroids.E), stroke:'#1c1a16', 'stroke-width':1, 'stroke-dasharray':'1 5', fill:'none' }, driftG);
+
+['O','M','E'].forEach(v => {
+  const [cx,cy] = centroids[v];
+  const g = el('g', { class:'centroid', 'data-variant':v }, centroidLayer);
+  el('circle', { cx, cy, r:18, fill:'none', stroke: variantColors[v], 'stroke-width':1.2, 'stroke-dasharray':'3 3', opacity:0.85 }, g);
+  el('circle', { cx, cy, r:5, fill: variantColors[v], stroke:'#1c1a16', 'stroke-width':1.4 }, g);
+  // small triangle marker
+  const labelX = v === 'O' ? cx - 22 : (v === 'E' ? cx + 22 : cx + 22);
+  const labelAnchor = v === 'O' ? 'end' : 'start';
+  const t = el('text', {
+    x: labelX, y: cy + 4,
+    'text-anchor': labelAnchor,
+    class:'centroid-label',
+    fill: variantColors[v]
+  }, g);
+  t.textContent = v === 'O' ? 'OOB ◐' : (v === 'M' ? 'MCP ◐' : '+ ENRICH ◐');
+});
+
+/* ────────────── TOOLTIP & DETAIL ────────────── */
+function variantLabel(v) {
+  const map = { O:'Out-of-box', M:'+ MCP', E:'+ MCP + Enrichment' };
+  return v.split('').map(x => map[x]).join(' & ');
+}
+function correctnessLabel(ok) {
+  return ({
+    correct:'verified correct',
+    vague:'vague but not wrong',
+    wrong:'factually wrong',
+    partial:'partially wrong',
+    gap:'admitted gap'
+  })[ok] || ok;
+}
+function correctnessClass(ok) {
+  return ({correct:'v-correct',wrong:'v-wrong',partial:'v-partial',vague:'v-vague',gap:'v-gap'})[ok] || 'v-vague';
+}
+
+function showTooltip(e, d) {
+  tooltip.innerHTML = `
+    <div class="tt-id">${d.id} · ${variantLabel(d.variants)}</div>
+    <div class="tt-claim">"${d.text}"</div>
+    <div class="tt-meta">${correctnessLabel(d.ok)} · importance ${d.imp}/5${d.cite ? ' · '+d.cite : ''}</div>
+  `;
+  tooltip.classList.add('visible');
+  moveTooltip(e);
+  if (!pinnedId) showDetail(d, false);
+}
+function moveTooltip(e) {
+  const pad = 14;
+  let x = e.clientX + pad, y = e.clientY + pad;
+  const rect = tooltip.getBoundingClientRect();
+  if (x + rect.width  > window.innerWidth)  x = e.clientX - rect.width  - pad;
+  if (y + rect.height > window.innerHeight) y = e.clientY - rect.height - pad;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top  = y + 'px';
+}
+function hideTooltip() {
+  tooltip.classList.remove('visible');
+  if (!pinnedId) clearDetail();
+}
+
+function showDetail(d, pinned) {
+  detail.innerHTML = `
+    <h3>Selected claim ${pinned ? '· pinned' : ''}</h3>
+    <div class="atom-id">${d.id} · ${variantLabel(d.variants)}</div>
+    <div class="atom-claim">"${d.text}"</div>
+    <div class="meta-row"><span>specificity</span><b>${d.x.toFixed(2)}</b></div>
+    <div class="meta-row"><span>actionability</span><b>${d.y.toFixed(2)}</b></div>
+    <div class="meta-row"><span>importance</span><b>${d.imp} / 5</b></div>
+    <div class="verdict ${correctnessClass(d.ok)}">${correctnessLabel(d.ok)}</div>
+    ${d.truth ? `<div class="citation"><b>truth:</b> ${d.truth}</div>` : ''}
+    ${d.cite ? `<div class="citation"><b>source:</b> ${d.cite}</div>` : (d.ok === 'correct' ? '<div class="citation" style="opacity:0.6;">no specific citation given by the AI</div>' : '')}
+  `;
+}
+function clearDetail() {
+  detail.innerHTML = `
+    <h3>Selected claim</h3>
+    <div class="placeholder">Hover to inspect, click to pin a claim. Each dot is one factual atom one of the AIs produced — the literal sentence, what's actually true, and where the truth came from.</div>
+  `;
+}
+function pinDetail(d) {
+  if (pinnedId === d.id) {
+    pinnedId = null;
+    clearDetail();
+    document.querySelectorAll('.dot').forEach(n => n.classList.remove('pinned-other'));
+    return;
+  }
+  pinnedId = d.id;
+  showDetail(d, true);
+  document.querySelectorAll('.dot').forEach(n => {
+    if (n.getAttribute('data-id') === d.id) n.classList.remove('pinned-other');
+    else n.classList.add('pinned-other');
+  });
+}
+
+/* ────────────── LEGEND TOGGLES ────────────── */
+const variantState = { O:true, M:true, E:true };
+document.querySelectorAll('#legend .legend-row').forEach(row => {
+  row.addEventListener('click', () => {
+    const v = row.dataset.variant;
+    variantState[v] = !variantState[v];
+    row.classList.toggle('off', !variantState[v]);
+    applyVariantFilter();
+  });
+});
+function applyVariantFilter() {
+  const active = Object.entries(variantState).filter(([_,on])=>on).map(([k])=>k);
+  document.querySelectorAll('.dot').forEach(n => {
+    const id = n.getAttribute('data-id');
+    if (!id) return;
+    const d = CORPUS.find(x=>x.id===id);
+    if (!d) return;
+    const matches = d.variants.split('').some(v => active.includes(v));
+    n.classList.toggle('dimmed', !matches);
+  });
+  document.querySelectorAll('.hull').forEach(h => {
+    const v = h.dataset.variant;
+    h.classList.toggle('dimmed', !active.includes(v));
+  });
+  document.querySelectorAll('.centroid').forEach(c => {
+    const v = c.dataset.variant;
+    c.style.opacity = active.includes(v) ? 1 : 0.05;
+  });
+}
+
+/* ────────────── MINI PLOT (centroids) ────────────── */
+(function miniPlot(){
+  const mini = document.getElementById('mini-plot');
+  const w = 240, h = 220, mp = { l:34, r:14, t:12, b:34 };
+  const iw = w-mp.l-mp.r, ih = h-mp.t-mp.b;
+  function mel(tag,attrs={}){const e=document.createElementNS(NS,tag);for(const[k,v] of Object.entries(attrs))e.setAttribute(k,v);mini.appendChild(e);return e;}
+  // frame
+  mel('rect',{x:mp.l,y:mp.t,width:iw,height:ih,fill:'none',stroke:'#c8bda1','stroke-width':1});
+  // axis labels
+  const t1 = mel('text',{x:mp.l,y:h-12,'font-family':'JetBrains Mono, monospace','font-size':9,'font-style':'italic',fill:'#877e6a'}); t1.textContent='vague';
+  const t2 = mel('text',{x:mp.l+iw,y:h-12,'text-anchor':'end','font-family':'JetBrains Mono, monospace','font-size':9,'font-style':'italic',fill:'#877e6a'}); t2.textContent='specific';
+  const t3 = mel('text',{x:8,y:mp.t+10,'font-family':'JetBrains Mono, monospace','font-size':9,'font-style':'italic',fill:'#877e6a'}); t3.textContent='action';
+  const t4 = mel('text',{x:8,y:mp.t+ih,'font-family':'JetBrains Mono, monospace','font-size':9,'font-style':'italic',fill:'#877e6a'}); t4.textContent='descr.';
+  // centroids
+  function centMini(v){
+    const pts = CORPUS.filter(d=>d.variants.includes(v));
+    const cx = pts.reduce((s,d)=>s+d.x,0)/pts.length;
+    const cy = pts.reduce((s,d)=>s+d.y,0)/pts.length;
+    return [mp.l + cx*iw, mp.t + (1-cy)*ih];
+  }
+  const labels = { O:'Out-of-box', M:'+ MCP', E:'+ MCP + Enrich' };
+  ['O','M','E'].forEach(v=>{
+    const [x,y] = centMini(v);
+    mel('circle',{cx:x,cy:y,r:8,fill:variantColors[v],stroke:'#1c1a16','stroke-width':1});
+    const lblOffset = v==='E' ? -10 : 12;
+    const anchor = v==='E' ? 'end' : 'start';
+    const lblX = v==='E' ? x-10 : x+12;
+    const t = mel('text',{x:lblX,y:y+3,'font-family':'JetBrains Mono, monospace','font-size':9,fill:'#1c1a16','text-anchor':anchor});
+    t.textContent = labels[v];
+  });
+  // arrow O→M→E
+  function arrow(a,b,opacity=0.45){
+    mel('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#1c1a16','stroke-width':1,'stroke-dasharray':'2 3',opacity});
+  }
+  arrow(centMini('O'),centMini('M'));
+  arrow(centMini('M'),centMini('E'));
+})();
+</script>
+</body>
+</html>

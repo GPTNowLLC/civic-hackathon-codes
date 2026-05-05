@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Information Overlap — What each AI uniquely contributed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f1ece1;
+    --paper-2: #ebe4d3;
+    --paper-3: #e2dac4;
+    --paper-edge: #d4ca b0;
+    --ink: #14110d;
+    --ink-2: #2a251c;
+    --ink-3: #564e3f;
+    --ink-4: #8a8170;
+    --ink-5: #b3a995;
+    --rule: rgba(20, 17, 13, 0.85);
+    --rule-soft: rgba(20, 17, 13, 0.18);
+    --rule-hair: rgba(20, 17, 13, 0.10);
+
+    /* Region colors — pastel fills + strong outlines */
+    --oob-fill: rgba(178, 36, 36, 0.13);
+    --oob-fill-strong: rgba(178, 36, 36, 0.26);
+    --oob-line: #7a1d1d;
+    --oob-bright: #b32424;
+    --oob-chip-bg: #f5e3df;
+    --oob-chip-border: #a8423b;
+
+    --mcp-fill: rgba(176, 138, 62, 0.16);
+    --mcp-fill-strong: rgba(176, 138, 62, 0.32);
+    --mcp-line: #8a651e;
+    --mcp-bright: #b08a3e;
+    --mcp-chip-bg: #f2e6c8;
+    --mcp-chip-border: #9c7a2c;
+
+    --enh-fill: rgba(47, 74, 40, 0.14);
+    --enh-fill-strong: rgba(47, 74, 40, 0.28);
+    --enh-line: #2f4a28;
+    --enh-bright: #4d7340;
+    --enh-chip-bg: #dfe7d3;
+    --enh-chip-border: #46673a;
+
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --body: "Newsreader", "Georgia", serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-image:
+      radial-gradient(rgba(20,17,13,0.045) 1px, transparent 1px),
+      radial-gradient(rgba(20,17,13,0.025) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 1px;
+    min-height: 100vh;
+    padding: 36px 48px 80px;
+  }
+
+  /* MASTHEAD ----------------------------------------------------------- */
+  .masthead {
+    border-top: 2px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 0 12px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: end;
+    gap: 32px;
+    margin-bottom: 26px;
+  }
+  .masthead .stamp {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .masthead .stamp.right { text-align: right; }
+  .masthead .title {
+    font-family: var(--serif);
+    font-size: 56px;
+    line-height: 0.92;
+    letter-spacing: -0.012em;
+    text-align: center;
+    font-weight: 400;
+  }
+  .masthead .title em {
+    font-style: italic;
+    color: var(--ink-2);
+  }
+
+  .deck {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 1340px;
+    margin: 0 auto 28px;
+    padding: 0 8px;
+  }
+  .deck .lede {
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.34;
+    color: var(--ink-2);
+    font-style: italic;
+  }
+  .deck .lede::first-letter {
+    font-size: 56px;
+    float: left;
+    line-height: 0.85;
+    padding: 6px 8px 0 0;
+    font-style: normal;
+    color: var(--ink);
+  }
+  .deck .meta {
+    font-family: var(--body);
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-3);
+  }
+  .deck .meta strong { color: var(--ink); font-weight: 600; }
+  .deck .meta .small {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    color: var(--ink-4);
+    margin-top: 12px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* LAYOUT ------------------------------------------------------------- */
+  .stage {
+    max-width: 1340px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* DIAGRAM ------------------------------------------------------------ */
+  .diagram-wrap {
+    position: relative;
+    border: 1px solid var(--rule);
+    background: var(--paper-2);
+    padding: 14px 14px 12px;
+    box-shadow:
+      0 1px 0 rgba(20,17,13,0.04),
+      0 24px 60px -28px rgba(20,17,13,0.30);
+  }
+  .diagram-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid var(--rule-hair);
+    pointer-events: none;
+  }
+  .diagram-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4px 8px 12px;
+    border-bottom: 1px solid var(--rule-soft);
+    margin-bottom: 6px;
+  }
+  .diagram-head .h {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-style: italic;
+    color: var(--ink);
+  }
+  .diagram-head .legend {
+    display: flex;
+    gap: 18px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .diagram-head .legend span::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    transform: translateY(1px);
+  }
+  .diagram-head .legend .lg-o::before { background: var(--oob-bright); }
+  .diagram-head .legend .lg-m::before { background: var(--mcp-bright); }
+  .diagram-head .legend .lg-e::before { background: var(--enh-bright); }
+
+  .canvas {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1180 / 820;
+    background: var(--paper);
+    overflow: hidden;
+  }
+  .canvas svg.blobs {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .canvas svg.blobs .lobe {
+    fill-opacity: 0.55;
+    mix-blend-mode: multiply;
+    transition: fill-opacity 280ms ease, stroke-width 280ms ease;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .canvas svg.blobs .lobe-stroke {
+    fill: none;
+    stroke-width: 1.4;
+    stroke-dasharray: none;
+    transition: stroke-width 280ms ease, opacity 280ms ease;
+    opacity: 0.75;
+  }
+  .canvas.dim-O svg.blobs #lobe-O { fill-opacity: 0.92; }
+  .canvas.dim-O svg.blobs #lobe-O-stroke { stroke-width: 2.4; opacity: 1; }
+  .canvas.dim-M svg.blobs #lobe-M { fill-opacity: 0.92; }
+  .canvas.dim-M svg.blobs #lobe-M-stroke { stroke-width: 2.4; opacity: 1; }
+  .canvas.dim-E svg.blobs #lobe-E { fill-opacity: 0.92; }
+  .canvas.dim-E svg.blobs #lobe-E-stroke { stroke-width: 2.4; opacity: 1; }
+  .canvas.dim-O svg.blobs #lobe-M, .canvas.dim-O svg.blobs #lobe-E { fill-opacity: 0.18; }
+  .canvas.dim-M svg.blobs #lobe-O, .canvas.dim-M svg.blobs #lobe-E { fill-opacity: 0.18; }
+  .canvas.dim-E svg.blobs #lobe-O, .canvas.dim-E svg.blobs #lobe-M { fill-opacity: 0.18; }
+
+  .labels {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .blob-label {
+    position: absolute;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1;
+    letter-spacing: -0.005em;
+    text-transform: lowercase;
+  }
+  .blob-label .sub {
+    display: block;
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 4px;
+    color: var(--ink-3);
+  }
+  .blob-label.lab-O { top: 4%; left: 3%; color: var(--oob-line); }
+  .blob-label.lab-M { top: 3%; right: 3%; color: var(--mcp-line); text-align: right; }
+  .blob-label.lab-E { bottom: 2%; left: 50%; transform: translateX(-50%); color: var(--enh-line); text-align: center; }
+
+  /* CHIPS -------------------------------------------------------------- */
+  .chips {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .chip {
+    position: absolute;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 5px 9px 5px 8px;
+    font-family: var(--body);
+    font-size: 11.6px;
+    line-height: 1.18;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+    max-width: 200px;
+    cursor: pointer;
+    transition: transform 220ms ease, box-shadow 220ms ease, z-index 0s;
+    box-shadow: 1px 1px 0 var(--rule);
+    z-index: 4;
+  }
+  .chip:hover {
+    z-index: 30;
+    transform: translate(-50%, -50%) scale(1.06);
+    box-shadow: 2px 2px 0 var(--rule), 0 14px 28px -10px rgba(20,17,13,0.4);
+  }
+  .chip .id {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: var(--ink-4);
+    display: inline-block;
+    margin-right: 4px;
+  }
+  .chip .cite {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 1px 4px;
+    font-family: var(--mono);
+    font-size: 8.5px;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    border: 1px solid var(--rule-soft);
+    background: var(--paper-2);
+    border-radius: 1px;
+    vertical-align: 1px;
+  }
+  .chip .cite.none { color: var(--ink-4); font-style: italic; }
+
+  /* tints */
+  .chip.region-O { background: var(--oob-chip-bg); border-color: var(--oob-chip-border); box-shadow: 1px 1px 0 var(--oob-chip-border); }
+  .chip.region-M { background: var(--mcp-chip-bg); border-color: var(--mcp-chip-border); box-shadow: 1px 1px 0 var(--mcp-chip-border); }
+  .chip.region-E { background: var(--enh-chip-bg); border-color: var(--enh-chip-border); box-shadow: 1px 1px 0 var(--enh-chip-border); }
+  .chip.region-OM { background: linear-gradient(105deg, var(--oob-chip-bg) 50%, var(--mcp-chip-bg) 50%); border-color: var(--ink-2); }
+  .chip.region-ME { background: linear-gradient(105deg, var(--mcp-chip-bg) 50%, var(--enh-chip-bg) 50%); border-color: var(--ink-2); }
+  .chip.region-OE { background: linear-gradient(105deg, var(--oob-chip-bg) 50%, var(--enh-chip-bg) 50%); border-color: var(--ink-2); }
+  .chip.region-OME {
+    background:
+      linear-gradient(115deg, var(--oob-chip-bg) 33%, var(--mcp-chip-bg) 33% 66%, var(--enh-chip-bg) 66%);
+    border-color: var(--ink);
+    box-shadow: 1px 1px 0 var(--ink);
+  }
+
+  /* correctness markers */
+  .chip.wrong {
+    background-image:
+      repeating-linear-gradient(135deg, transparent 0 6px, rgba(178,36,36,0.18) 6px 7px);
+  }
+  .chip.wrong .text {
+    text-decoration: line-through;
+    text-decoration-color: rgba(178, 36, 36, 0.85);
+    text-decoration-thickness: 1.5px;
+  }
+  .chip.partial {
+    background-image:
+      repeating-linear-gradient(135deg, transparent 0 8px, rgba(178,36,36,0.10) 8px 9px);
+  }
+  .chip.gap {
+    border-style: dashed;
+    background: var(--paper-2);
+    color: var(--ink-3);
+    font-style: italic;
+  }
+  .chip.gap .text { font-style: italic; }
+
+  .badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 4px;
+    margin-left: 4px;
+    background: var(--oob-bright);
+    color: var(--paper);
+    border-radius: 1px;
+    vertical-align: 1.5px;
+  }
+  .badge.gap-b { background: var(--ink-3); }
+  .badge.partial-b { background: var(--oob-line); }
+  .badge.judg { background: var(--ink-3); }
+  .badge.range { background: var(--mcp-line); }
+  .badge.action { background: var(--enh-line); }
+
+  /* empty-region markers */
+  .empty-mark { pointer-events: none; transform: translate(-50%, -50%); text-align: center; z-index: 1; }
+  .empty-bx {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--ink-4);
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border: 1px dashed var(--ink-4);
+    background: rgba(241, 236, 225, 0.85);
+    line-height: 1.3;
+  }
+  .empty-bx span {
+    font-size: 13px;
+    font-family: var(--serif);
+    font-style: italic;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink-3);
+    display: inline-block;
+    margin-top: 2px;
+  }
+
+  /* connector dots */
+  .dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--ink);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* SIDE PANEL --------------------------------------------------------- */
+  .side {
+    position: sticky;
+    top: 24px;
+  }
+  .side .panel {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    padding: 18px 18px 16px;
+    margin-bottom: 18px;
+  }
+  .side .panel h3 {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-weight: 500;
+  }
+
+  .tally {
+    display: grid;
+    gap: 10px;
+  }
+  .tally-row {
+    display: grid;
+    grid-template-columns: 16px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 8px;
+    background: var(--paper);
+    border: 1px solid var(--rule-soft);
+    cursor: pointer;
+    transition: border-color 200ms ease, background 200ms ease;
+  }
+  .tally-row:hover, .tally-row.active {
+    border-color: var(--rule);
+    background: var(--paper-3);
+  }
+  .tally-row .swatch {
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--rule);
+  }
+  .tally-row .swatch.tri {
+    background:
+      linear-gradient(120deg, var(--oob-fill-strong) 33%, var(--mcp-fill-strong) 33% 66%, var(--enh-fill-strong) 66%);
+  }
+  .tally-row .swatch.O { background: var(--oob-fill-strong); }
+  .tally-row .swatch.M { background: var(--mcp-fill-strong); }
+  .tally-row .swatch.E { background: var(--enh-fill-strong); }
+  .tally-row .swatch.OM { background: linear-gradient(105deg, var(--oob-fill-strong) 50%, var(--mcp-fill-strong) 50%); }
+  .tally-row .swatch.ME { background: linear-gradient(105deg, var(--mcp-fill-strong) 50%, var(--enh-fill-strong) 50%); }
+  .tally-row .swatch.OE { background: linear-gradient(105deg, var(--oob-fill-strong) 50%, var(--enh-fill-strong) 50%); }
+  .tally-row .label {
+    font-family: var(--body);
+    font-size: 13px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+  .tally-row .label small {
+    display: block;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.05em;
+    color: var(--ink-4);
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .tally-row .count {
+    font-family: var(--serif);
+    font-size: 26px;
+    line-height: 1;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .tally-row.empty .count { color: var(--ink-5); }
+  .tally-row.empty .label { color: var(--ink-3); font-style: italic; }
+
+  .reading {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 16px 16px 14px;
+  }
+  .reading h3 {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .reading p {
+    font-family: var(--serif);
+    font-size: 17.5px;
+    line-height: 1.42;
+    color: var(--ink-2);
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .reading p strong {
+    font-style: normal;
+    font-weight: 500;
+    background: linear-gradient(transparent 60%, rgba(176,138,62,0.45) 60%);
+    padding: 0 2px;
+  }
+
+  /* DETAIL POPUP ------------------------------------------------------- */
+  .detail {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    background: var(--paper);
+    border: 1.5px solid var(--rule);
+    padding: 18px 22px;
+    width: min(720px, 90vw);
+    box-shadow: 4px 6px 0 var(--rule), 0 30px 60px -20px rgba(20,17,13,0.45);
+    transition: opacity 220ms ease, transform 280ms cubic-bezier(.2,.8,.2,1);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .detail.show {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+  .detail .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-family: var(--mono);
+    font-size: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink-3);
+  }
+  .detail .row1 {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .detail .id-big {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--ink-3);
+    background: var(--paper-3);
+    padding: 2px 6px;
+    border: 1px solid var(--rule-soft);
+  }
+  .detail .where {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+  }
+  .detail .where b { color: var(--ink); }
+  .detail .quote {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.28;
+    color: var(--ink);
+    margin: 6px 0 12px;
+  }
+  .detail .verdict {
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-2);
+    border-top: 1px solid var(--rule-soft);
+    padding-top: 10px;
+  }
+  .detail .verdict b {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  /* SUMMARY TAPE ------------------------------------------------------- */
+  .tape-wrap {
+    max-width: 1340px;
+    margin: 36px auto 0;
+    padding: 0 8px;
+  }
+  .tape-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px;
+  }
+  .tape-head h4 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .tape-head .key {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .tape {
+    height: 56px;
+    border: 1px solid var(--rule);
+    display: flex;
+    overflow: hidden;
+    background: var(--paper-2);
+  }
+  .tape .seg {
+    position: relative;
+    height: 100%;
+    border-right: 1px solid rgba(20,17,13,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: filter 250ms ease;
+  }
+  .tape .seg:last-child { border-right: none; }
+  .tape .seg.O   { background: var(--oob-fill-strong); }
+  .tape .seg.M   { background: var(--mcp-fill-strong); }
+  .tape .seg.E   { background: var(--enh-fill-strong); }
+  .tape .seg.OM  { background: linear-gradient(180deg, var(--oob-fill-strong), var(--mcp-fill-strong)); }
+  .tape .seg.ME  { background: linear-gradient(180deg, var(--mcp-fill-strong), var(--enh-fill-strong)); }
+  .tape .seg.OE  { background: linear-gradient(180deg, var(--oob-fill-strong), var(--enh-fill-strong)); }
+  .tape .seg.OME { background: linear-gradient(180deg, var(--oob-fill-strong), var(--mcp-fill-strong), var(--enh-fill-strong)); }
+  .tape .seg.empty { background: repeating-linear-gradient(45deg, var(--paper-2) 0 6px, var(--paper-3) 6px 12px); }
+  .tape .seg .num {
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .tape .seg .num small {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: var(--ink-3);
+    margin-left: 2px;
+    text-transform: uppercase;
+  }
+  .tape-axis {
+    display: flex;
+    margin-top: 6px;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .tape-axis .ax {
+    border-right: 1px solid var(--rule-soft);
+    padding: 2px 4px;
+    text-align: center;
+  }
+  .tape-axis .ax:last-child { border-right: none; }
+
+  .takeaway {
+    margin-top: 18px;
+    padding: 14px 20px;
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--enh-line);
+    background: var(--paper-3);
+    font-family: var(--serif);
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.32;
+    color: var(--ink);
+  }
+  .takeaway b { font-style: normal; font-weight: 500; }
+  .takeaway .red { color: var(--oob-line); font-weight: 500; font-style: normal; }
+  .takeaway .green { color: var(--enh-line); font-weight: 500; font-style: normal; }
+
+  .footer {
+    max-width: 1340px;
+    margin: 28px auto 0;
+    padding: 12px 8px 0;
+    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+  }
+
+  @media (max-width: 1140px) {
+    .stage { grid-template-columns: 1fr; }
+    .side { position: static; }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="stamp">USS Civic Hackathon Codes &nbsp;·&nbsp; Track 1 / Mockup E</div>
+  <h1 class="title">The shape of <em>knowing</em></h1>
+  <div class="stamp right">Scenario 01 &nbsp;·&nbsp; 4521 SE Belmont</div>
+</header>
+
+<section class="deck">
+  <div class="lede">
+    Three AI variants answered the same Portland resident's question — <em>can I build a tiny house here?</em> — and each one knew different things. Plotted as overlapping fields, the geometry tells the story before the words do.
+  </div>
+  <div class="meta">
+    Every claim every variant produced is plotted exactly once, inside the region(s) where it appeared. Wrong claims are <span style="text-decoration: line-through; text-decoration-color: var(--oob-line); text-decoration-thickness: 1.5px;">struck through</span>. Admitted gaps are <span style="border:1px dashed var(--ink-3); padding:0 4px; font-style:italic; color:var(--ink-3);">dashed</span>. Citation badges show source specificity.
+    <span class="small">Click a region in the legend or any chip for detail · 25 claim atoms · 7 set regions</span>
+  </div>
+</section>
+
+<main class="stage">
+
+  <!-- DIAGRAM -->
+  <div class="diagram-wrap">
+    <div class="diagram-head">
+      <div class="h">Information overlap, plotted</div>
+      <div class="legend">
+        <span class="lg-o">Out-of-box</span>
+        <span class="lg-m">+MCP</span>
+        <span class="lg-e">+Enriched</span>
+      </div>
+    </div>
+
+    <div class="canvas" id="canvas">
+
+      <!-- Organic blobs (SVG) -->
+      <svg class="blobs" viewBox="0 0 1180 820" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+            <feGaussianBlur stdDeviation="2.6"/>
+          </filter>
+          <filter id="grain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+            <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0"/>
+          </filter>
+        </defs>
+
+        <!-- OOB blob — INTENTIONALLY SMALL and lean. Sized by content (5 chips). -->
+        <path id="lobe-O" class="lobe"
+          d="M 130 140
+             C 90 200, 80 290, 130 350
+             C 175 400, 270 420, 360 410
+             C 440 400, 510 380, 555 420
+             C 590 460, 575 500, 525 500
+             C 460 500, 400 470, 340 460
+             C 250 445, 170 430, 130 390
+             C 80 340, 80 250, 100 180
+             C 110 150, 120 140, 130 140 Z"
+          fill="var(--oob-fill)" filter="url(#soft)"/>
+        <path id="lobe-O-stroke" class="lobe-stroke"
+          d="M 130 140
+             C 90 200, 80 290, 130 350
+             C 175 400, 270 420, 360 410
+             C 440 400, 510 380, 555 420
+             C 590 460, 575 500, 525 500
+             C 460 500, 400 470, 340 460
+             C 250 445, 170 430, 130 390
+             C 80 340, 80 250, 100 180
+             C 110 150, 120 140, 130 140 Z"
+          stroke="var(--oob-line)"/>
+
+        <!-- MCP blob — mid-sized, top-right; reaches down/left to overlap with E and O at center -->
+        <path id="lobe-M" class="lobe"
+          d="M 1115 110
+             C 1165 210, 1155 350, 1080 420
+             C 1010 485, 900 505, 790 490
+             C 685 475, 605 440, 560 380
+             C 510 320, 525 250, 590 195
+             C 660 135, 770 100, 880 90
+             C 990 85, 1085 95, 1115 110 Z"
+          fill="var(--mcp-fill)" filter="url(#soft)"/>
+        <path id="lobe-M-stroke" class="lobe-stroke"
+          d="M 1115 110
+             C 1165 210, 1155 350, 1080 420
+             C 1010 485, 900 505, 790 490
+             C 685 475, 605 440, 560 380
+             C 510 320, 525 250, 590 195
+             C 660 135, 770 100, 880 90
+             C 990 85, 1085 95, 1115 110 Z"
+          stroke="var(--mcp-line)"/>
+
+        <!-- Enhanced blob — DELIBERATELY HUGE. Spans full bottom AND extends up into center.
+             Total area should be visually ~2x OOB lobe. -->
+        <path id="lobe-E" class="lobe"
+          d="M 80 720
+             C 40 640, 50 510, 130 420
+             C 220 320, 380 270, 560 270
+             C 740 270, 920 310, 1040 380
+             C 1140 440, 1170 540, 1140 640
+             C 1110 740, 1000 790, 850 800
+             C 700 808, 530 805, 380 795
+             C 250 785, 130 800, 80 720 Z"
+          fill="var(--enh-fill)" filter="url(#soft)"/>
+        <path id="lobe-E-stroke" class="lobe-stroke"
+          d="M 80 720
+             C 40 640, 50 510, 130 420
+             C 220 320, 380 270, 560 270
+             C 740 270, 920 310, 1040 380
+             C 1140 440, 1170 540, 1140 640
+             C 1110 740, 1000 790, 850 800
+             C 700 808, 530 805, 380 795
+             C 250 785, 130 800, 80 720 Z"
+          stroke="var(--enh-line)"/>
+
+        <!-- Light region anchors (almost invisible — guides only) -->
+        <g opacity="0.35">
+          <text x="180" y="220" font-family="JetBrains Mono" font-size="9" letter-spacing="2"
+                fill="var(--oob-line)">OOB ONLY</text>
+          <text x="930" y="180" font-family="JetBrains Mono" font-size="9" letter-spacing="2"
+                fill="var(--mcp-line)" text-anchor="end">MCP ONLY</text>
+          <text x="600" y="720" font-family="JetBrains Mono" font-size="9" letter-spacing="2"
+                fill="var(--enh-line)" text-anchor="middle">ENHANCED ONLY</text>
+          <text x="600" y="265" font-family="JetBrains Mono" font-size="8" letter-spacing="2"
+                fill="var(--ink-3)" text-anchor="middle">O ∩ M</text>
+          <text x="780" y="445" font-family="JetBrains Mono" font-size="8" letter-spacing="2"
+                fill="var(--ink-3)" text-anchor="middle">M ∩ E</text>
+          <text x="380" y="475" font-family="JetBrains Mono" font-size="8" letter-spacing="2"
+                fill="var(--ink-3)" text-anchor="middle">O ∩ E</text>
+          <text x="600" y="430" font-family="JetBrains Mono" font-size="8" letter-spacing="2"
+                fill="var(--ink-3)" text-anchor="middle">ALL THREE</text>
+        </g>
+      </svg>
+
+      <!-- Region labels -->
+      <div class="labels">
+        <div class="blob-label lab-O">out-of-box<span class="sub">no tools · no context</span></div>
+        <div class="blob-label lab-M">+ mcp<span class="sub">portland data access</span></div>
+        <div class="blob-label lab-E">+ enriched<span class="sub">resident-framed prompt</span></div>
+      </div>
+
+      <!-- Empty-region notes — small annotations for the empty zones -->
+      <div class="empty-mark" style="position:absolute; left:90%; top:14%;">
+        <div class="empty-bx">MCP-only<br><span>0 claims</span></div>
+      </div>
+
+      <!-- CHIPS — positioned by region -->
+      <div class="chips" id="chips"></div>
+
+    </div>
+  </div>
+
+  <!-- SIDE PANEL -->
+  <aside class="side">
+    <div class="panel">
+      <h3>Tally by region</h3>
+      <div class="tally" id="tally">
+        <div class="tally-row" data-region="O">
+          <div class="swatch O"></div>
+          <div class="label">Out-of-box only<small>red lobe · unique to OOB</small></div>
+          <div class="count">5</div>
+        </div>
+        <div class="tally-row empty" data-region="M">
+          <div class="swatch M"></div>
+          <div class="label">+MCP only<small>amber lobe · unique to MCP</small></div>
+          <div class="count">0</div>
+        </div>
+        <div class="tally-row" data-region="E">
+          <div class="swatch E"></div>
+          <div class="label">+Enriched only<small>green lobe · unique to Enhanced</small></div>
+          <div class="count">10</div>
+        </div>
+        <div class="tally-row" data-region="OM">
+          <div class="swatch OM"></div>
+          <div class="label">O ∩ M only<small>(no claims · subsumed by triple below)</small></div>
+          <div class="count">0</div>
+        </div>
+        <div class="tally-row" data-region="ME">
+          <div class="swatch ME"></div>
+          <div class="label">M ∩ E only<small>data-unlocked correctness</small></div>
+          <div class="count">9</div>
+        </div>
+        <div class="tally-row empty" data-region="OE">
+          <div class="swatch OE"></div>
+          <div class="label">O ∩ E only<small>structurally impossible here</small></div>
+          <div class="count">0</div>
+        </div>
+        <div class="tally-row" data-region="OME">
+          <div class="swatch tri"></div>
+          <div class="label">All three<small>generic facts everyone gave</small></div>
+          <div class="count">2</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reading">
+      <h3>How to read the shape</h3>
+      <p>The <strong>green-only field is the largest</strong> — that volume is what enrichment uniquely added: sequenced steps, THOW disambiguation, dollar ranges.</p>
+      <p>The <strong>red-only field is thin and contains the only wrong answers</strong> — what the AI uniquely had to say without data was either vague or incorrect.</p>
+      <p>The <strong>amber-and-green overlap</strong> holds the bulk of correct, citation-grade zoning facts. <em>Data access is what unlocks correctness.</em></p>
+    </div>
+  </aside>
+</main>
+
+<!-- SUMMARY TAPE -->
+<div class="tape-wrap">
+  <div class="tape-head">
+    <h4>Claims by region — single horizontal bar</h4>
+    <div class="key">N = 25 claim atoms · widths proportional to count</div>
+  </div>
+  <div class="tape" id="tape">
+    <div class="seg O"   style="flex: 5"><span class="num">5<small>OOB</small></span></div>
+    <div class="seg empty" style="flex: 0.6"><span class="num" style="font-size:11px; color:var(--ink-4); font-family:var(--mono); letter-spacing:0.06em;">0 OM</span></div>
+    <div class="seg OME" style="flex: 2"><span class="num">2<small>ALL</small></span></div>
+    <div class="seg empty" style="flex: 0.6"><span class="num" style="font-size:11px; color:var(--ink-4); font-family:var(--mono); letter-spacing:0.06em;">0 OE</span></div>
+    <div class="seg empty" style="flex: 0.6"><span class="num" style="font-size:11px; color:var(--ink-4); font-family:var(--mono); letter-spacing:0.06em;">0 M</span></div>
+    <div class="seg ME"  style="flex: 9"><span class="num">9<small>M∩E</small></span></div>
+    <div class="seg E"   style="flex: 10"><span class="num">10<small>ENRICHED</small></span></div>
+  </div>
+  <div class="tape-axis">
+    <div class="ax" style="flex:5">red 20%</div>
+    <div class="ax" style="flex:0.6">·</div>
+    <div class="ax" style="flex:2">8%</div>
+    <div class="ax" style="flex:0.6">·</div>
+    <div class="ax" style="flex:0.6">·</div>
+    <div class="ax" style="flex:9">amber+green 36%</div>
+    <div class="ax" style="flex:10">green 40%</div>
+  </div>
+
+  <div class="takeaway">
+    <b>The takeaway, in one glance:</b> &nbsp;the <span class="green">green field is twice the size of the red field</span> — that is precisely the volume of useful, specific, action-ready guidance the resident only receives when the AI has both data access <em>and</em> a question framed for them. <span class="red">The red-only field is small, and what is unique to it is wrong.</span>
+  </div>
+</div>
+
+<footer class="footer">
+  <div>Mockup E · Information Overlap</div>
+  <div>Scenario 01 of 07 · 25 claim atoms · 7 set regions</div>
+  <div>Track 1 · Codes &amp; Regs Benchmark</div>
+</footer>
+
+<!-- DETAIL POPUP -->
+<div class="detail" id="detail" role="dialog" aria-hidden="true">
+  <button class="close" id="detailClose" aria-label="Close">×</button>
+  <div class="row1">
+    <span class="id-big" id="dId">A0</span>
+    <span class="where" id="dWhere">REGION · CITE</span>
+  </div>
+  <div class="quote" id="dQuote">"…"</div>
+  <div class="verdict" id="dVerdict"><b>Verified:</b> …</div>
+</div>
+
+<script>
+// =========================================================================
+// CLAIM CORPUS — exact atoms from spec
+// =========================================================================
+// region codes: O = OOB-only, M = MCP-only, E = Enriched-only,
+//               OM, ME, OE, OME = overlap regions
+// correctness: vague-correct, wrong, partial-wrong, admitted-gap,
+//              correct, correct-vague, hedge-correct, correct-judg,
+//              correct-range, correct-action, vague-action
+
+const CLAIMS = [
+  // Triple overlap (all three)
+  { id:"A1",  text:"ADU rules generally apply",                        region:"OME", correct:"vague-correct", cite:null,
+    truth:"True but generic — every variant says this. Doesn't tell the resident anything actionable about their lot." },
+  { id:"A4",  text:"Will need a building permit",                      region:"OME", correct:"vague-correct", cite:null,
+    truth:"True but generic. Permitting is universal — the value is in WHICH permits, in what order, and what triggers them." },
+
+  // OOB-only (5)
+  { id:"A2",  text:"Most lots permit ~1,000 sf second dwelling",       region:"O",   correct:"wrong", cite:null,
+    truth:"WRONG. Portland's ADU max is 800 sf or 75% of the primary, whichever is less (PCC 33.205.040). The AI invented a plausible-sounding number." },
+  { id:"A3",  text:"Setbacks ~5 ft from all property lines",           region:"O",   correct:"partial-wrong", cite:null,
+    truth:"PARTIAL. Side and rear are 5', but FRONT is 10' in R2.5 (PCC 33.110.220). Treating all setbacks as equal would site the structure illegally." },
+  { id:"A5",  text:"Contact City permitting office",                   region:"O",   correct:"vague-action", cite:null,
+    truth:"Technically correct but unhelpful — Portland has BDS, BES, Water Bureau, Urban Forestry; none of them are 'the City permitting office.'" },
+  { id:"A6",  text:"Cannot retrieve address-specific zoning data",     region:"O",   correct:"admitted-gap", cite:null,
+    truth:"Honest admission. Triggers the address-specific cap: max usefulness = 2." },
+  { id:"A2b", text:"(no specific Title 33 sections cited)",            region:"O",   correct:"admitted-gap", cite:null,
+    truth:"OOB never produced a single PCC section reference for this scenario — the citation-quality floor for a homeowner who needs to verify." },
+
+  // M ∩ E (no OOB) — 9 zoning facts data access unlocks
+  { id:"A7",  text:"Base zone is R2.5 single-dwelling",                region:"ME",  correct:"correct",       cite:"PortlandMaps",
+    truth:"Confirmed via PortlandMaps zoning layer. R2.5 governs minimum lot size and ADU eligibility." },
+  { id:"A8",  text:"No overlay zones detected",                        region:"ME",  correct:"correct",       cite:"PortlandMaps",
+    truth:"Confirmed: 4521 SE Belmont sits outside historic, design, and conservation overlays as of capture date." },
+  { id:"A9",  text:"ADU permitted under Title 33.205",                 region:"ME",  correct:"correct",       cite:"PCC 33.205",
+    truth:"Correct chapter for accessory dwelling unit standards." },
+  { id:"A10", text:"Max ADU 800 sf or 75% of main, whichever is less", region:"ME",  correct:"correct",       cite:"PCC 33.205.040",
+    truth:"Correct subsection. The exact rule OOB invented a wrong version of." },
+  { id:"A11", text:"Front 10′, side 5′, rear 5′ setbacks",             region:"ME",  correct:"correct",       cite:"PCC 33.110.220",
+    truth:"Correct R2.5 single-dwelling setbacks." },
+  { id:"A12", text:"Height limit 20′",                                 region:"ME",  correct:"correct",       cite:"PCC 33.205",
+    truth:"Correct ADU height limit in single-dwelling zones." },
+  { id:"A13", text:"Permits: building + plumbing + electrical + mechanical", region:"ME", correct:"correct", cite:null,
+    truth:"Correct — sub-permits required for any habitable accessory structure with utilities." },
+  { id:"A14", text:"SDCs apply (water, sewer, transportation, parks)", region:"ME",  correct:"correct-vague", cite:null,
+    truth:"Correct that the four SDC categories apply, but no dollar amount given. Enriched variant lifts this to a range." },
+  { id:"A15", text:"Stormwater management may be required",            region:"ME",  correct:"hedge-correct", cite:null,
+    truth:"Hedged but correct — stormwater triggers depend on impervious surface added; both variants stop short of specifics." },
+
+  // Enhanced-only (10)
+  { id:"A16", text:"THOW not permitted as permanent residence",        region:"E",   correct:"correct",       cite:"PCC 33.910",
+    truth:"Tiny-house-on-wheels is treated as RV/trailer, not a dwelling. Critical disambiguation the resident needs upfront." },
+  { id:"A17", text:"Tiny house must be on foundation, treated as ADU", region:"E",   correct:"correct",       cite:"PCC 33.205",
+    truth:"To be a permanent residence, the structure must be on permanent foundation and meet ADU code." },
+  { id:"A18", text:"Rear yard placement easiest",                      region:"E",   correct:"correct-judg",  cite:null,
+    truth:"Practical judgment — rear setback is 5' and avoids streetscape concerns. Useful framing only the enriched variant volunteered." },
+  { id:"A19", text:"SDCs typically $15,000–$25,000",                   region:"E",   correct:"correct-range", cite:"BDS Code Guide",
+    truth:"Range from BDS Code Guide tables. Cost ranges are exactly what residents need to plan." },
+  { id:"A20", text:"Building permit fees separate from SDCs",          region:"E",   correct:"correct",       cite:null,
+    truth:"Important distinction — residents often conflate the two and underbudget." },
+  { id:"A21", text:"Step 1: free zoning confirmation at BDS",          region:"E",   correct:"correct-action",cite:null,
+    truth:"Free 15-min counter conversation; saves residents from designing toward an illegal site." },
+  { id:"A22", text:"Step 2: site plan",                                region:"E",   correct:"correct-action",cite:null,
+    truth:"Required submittal — sketch with dimensions, setbacks, existing structures." },
+  { id:"A23", text:"Step 3: building permit application",              region:"E",   correct:"correct-action",cite:null,
+    truth:"Main permit covering structural, energy code compliance." },
+  { id:"A24", text:"Step 4: plumbing/electrical/mechanical sub-permits",region:"E",  correct:"correct-action",cite:null,
+    truth:"Trade sub-permits, often pulled by licensed contractors." },
+  { id:"A25", text:"Step 5: erosion control before excavation",        region:"E",   correct:"correct-action",cite:null,
+    truth:"Title 10 trigger — required before ground disturbance." }
+];
+
+// =========================================================================
+// CHIP POSITIONS (% of canvas, centered) — placed manually inside lobe regions
+// O lobe occupies upper-left, M lobe upper-right, E lobe bottom.
+// O ∩ M near upper center; M ∩ E mid-right; O ∩ E mid-left; OME center-mid.
+// =========================================================================
+const POS = {
+  // OOB only — narrow upper-left lobe (5 chips stacked tight)
+  A2:  { x: 16, y: 24 },
+  A3:  { x: 28, y: 35 },
+  A5:  { x: 13, y: 38 },
+  A6:  { x: 26, y: 49 },
+  A2b: { x: 14, y: 52 },
+
+  // OME (triple overlap) — center where all 3 lobes meet
+  A1:  { x: 44, y: 49 },
+  A4:  { x: 50, y: 56 },
+
+  // M∩E — mid-to-right zone where amber and green overlap (clear lane)
+  A7:  { x: 73, y: 28 },
+  A8:  { x: 88, y: 25 },
+  A9:  { x: 65, y: 39 },
+  A10: { x: 82, y: 38 },
+  A11: { x: 67, y: 50 },
+  A12: { x: 84, y: 48 },
+  A13: { x: 64, y: 60 },
+  A14: { x: 81, y: 58 },
+  A15: { x: 91, y: 47 },
+
+  // E only — fills the wide bottom — spread broadly
+  A16: { x: 14, y: 70 },
+  A17: { x: 28, y: 67 },
+  A18: { x: 42, y: 73 },
+  A19: { x: 56, y: 73 },
+  A20: { x: 13, y: 84 },
+  A21: { x: 27, y: 88 },
+  A22: { x: 41, y: 89 },
+  A23: { x: 56, y: 89 },
+  A24: { x: 73, y: 86 },
+  A25: { x: 88, y: 78 },
+};
+
+// =========================================================================
+// RENDER
+// =========================================================================
+const chipsRoot = document.getElementById("chips");
+
+function badgeFor(c) {
+  switch(c){
+    case "wrong": return '<span class="badge">WRONG</span>';
+    case "partial-wrong": return '<span class="badge partial-b">PARTIAL</span>';
+    case "admitted-gap": return '<span class="badge gap-b">GAP</span>';
+    case "vague-correct": return '';
+    case "vague-action": return '';
+    case "correct": return '';
+    case "correct-vague": return '';
+    case "hedge-correct": return '';
+    case "correct-judg": return '<span class="badge judg">JUDG</span>';
+    case "correct-range": return '<span class="badge range">RANGE</span>';
+    case "correct-action": return '<span class="badge action">STEP</span>';
+    default: return '';
+  }
+}
+
+function classFor(c) {
+  switch(c){
+    case "wrong": return "wrong";
+    case "partial-wrong": return "partial";
+    case "admitted-gap": return "gap";
+    default: return "";
+  }
+}
+
+CLAIMS.forEach(claim => {
+  const pos = POS[claim.id];
+  if (!pos) return;
+  const el = document.createElement("div");
+  el.className = `chip region-${claim.region} ${classFor(claim.correct)}`;
+  el.style.left = pos.x + "%";
+  el.style.top  = pos.y + "%";
+  el.dataset.id = claim.id;
+  el.innerHTML = `
+    <span class="id">${claim.id}</span><span class="text">${claim.text}</span>${badgeFor(claim.correct)}
+    ${claim.cite ? `<span class="cite">${claim.cite}</span>` : `<span class="cite none">no cite</span>`}
+  `;
+  el.addEventListener("click", () => showDetail(claim));
+  chipsRoot.appendChild(el);
+});
+
+// =========================================================================
+// REGION HIGHLIGHTING
+// =========================================================================
+const canvas = document.getElementById("canvas");
+const tallyRows = document.querySelectorAll(".tally-row");
+
+function highlight(region) {
+  canvas.classList.remove("dim-O","dim-M","dim-E");
+  tallyRows.forEach(r => r.classList.remove("active"));
+  if (!region) return;
+  // For overlap regions (OM, ME, OE, OME) we light up all relevant lobes
+  const map = { O:["O"], M:["M"], E:["E"], OM:["O","M"], ME:["M","E"], OE:["O","E"], OME:["O","M","E"] };
+  (map[region] || []).forEach(L => canvas.classList.add("dim-"+L));
+  const row = document.querySelector(`.tally-row[data-region="${region}"]`);
+  if (row) row.classList.add("active");
+}
+
+tallyRows.forEach(row => {
+  row.addEventListener("click", () => {
+    const region = row.dataset.region;
+    if (row.classList.contains("active")) highlight(null);
+    else highlight(region);
+  });
+});
+
+// SVG lobe click → highlight lobe-only
+document.getElementById("lobe-O").addEventListener("click", () => highlight("O"));
+document.getElementById("lobe-M").addEventListener("click", () => highlight("M"));
+document.getElementById("lobe-E").addEventListener("click", () => highlight("E"));
+
+// =========================================================================
+// DETAIL POPUP
+// =========================================================================
+const detail = document.getElementById("detail");
+const dId = document.getElementById("dId");
+const dWhere = document.getElementById("dWhere");
+const dQuote = document.getElementById("dQuote");
+const dVerdict = document.getElementById("dVerdict");
+
+const REGION_LABEL = {
+  O:"OOB only", M:"MCP only", E:"Enriched only",
+  OM:"OOB ∩ MCP", ME:"MCP ∩ Enriched", OE:"OOB ∩ Enriched", OME:"All three"
+};
+
+function showDetail(c) {
+  dId.textContent = c.id;
+  dWhere.innerHTML = `<b>${REGION_LABEL[c.region]}</b> · ${c.cite ? c.cite : "no citation"}`;
+  dQuote.textContent = `"${c.text}"`;
+  let verdictWord;
+  switch(c.correct){
+    case "wrong": verdictWord = "Wrong"; break;
+    case "partial-wrong": verdictWord = "Partially wrong"; break;
+    case "admitted-gap": verdictWord = "Admitted gap"; break;
+    case "vague-correct": verdictWord = "Vague but correct"; break;
+    case "vague-action": verdictWord = "Vague action"; break;
+    case "correct": verdictWord = "Correct"; break;
+    case "correct-vague": verdictWord = "Correct, lacks specifics"; break;
+    case "hedge-correct": verdictWord = "Hedged, correct"; break;
+    case "correct-judg": verdictWord = "Correct judgment"; break;
+    case "correct-range": verdictWord = "Correct range"; break;
+    case "correct-action": verdictWord = "Actionable step"; break;
+    default: verdictWord = "—";
+  }
+  dVerdict.innerHTML = `<b>${verdictWord}</b>${c.truth}`;
+  detail.classList.add("show");
+  detail.setAttribute("aria-hidden","false");
+}
+document.getElementById("detailClose").addEventListener("click", () => {
+  detail.classList.remove("show");
+  detail.setAttribute("aria-hidden","true");
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    detail.classList.remove("show");
+    detail.setAttribute("aria-hidden","true");
+    highlight(null);
+  }
+});
+
+// =========================================================================
+// URL ?highlight=
+// =========================================================================
+const params = new URLSearchParams(location.search);
+const hi = params.get("highlight");
+if (hi) {
+  const map = { oob:"O", mcp:"M", enhanced:"E", overlap:"ME", all:"OME" };
+  const region = map[hi.toLowerCase()] || hi.toUpperCase();
+  if (REGION_LABEL[region]) highlight(region);
+}
+
+// Tape segment highlight on hover
+document.querySelectorAll(".tape .seg").forEach(seg => {
+  seg.addEventListener("mouseenter", () => {
+    document.querySelectorAll(".tape .seg").forEach(s => s.style.filter = "saturate(0.4) opacity(0.55)");
+    seg.style.filter = "saturate(1.3) brightness(1.05)";
+  });
+  seg.addEventListener("mouseleave", () => {
+    document.querySelectorAll(".tape .seg").forEach(s => s.style.filter = "");
+  });
+});
+
+</script>
+</body>
+</html>

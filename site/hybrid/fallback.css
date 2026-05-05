@@ -1,0 +1,253 @@
+/* =====================================================================
+   fallback.css — detail-page fallback view, used when no per-scenario
+   atomized claims file (data/atoms/<id>.json) exists. Renders the three
+   AI-variant responses verbatim plus their scores, rationale, accuracy
+   flags, and data-quality notes pulled from data/three-column-state.json.
+   Visual language matches style.css (warm paper, editorial typography).
+   ===================================================================== */
+
+/* Back-link sits in the top-right of the page header. The .page-header
+   grid uses 'eyebrow eyebrow / title meta' so we anchor the link with
+   position:absolute relative to a positioned header. */
+.page-header { position: relative; }
+.back-link {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 4px 12px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--paper);
+  white-space: nowrap;
+  z-index: 2;
+}
+.back-link:hover { color: var(--ink); border-color: var(--ink); }
+.page-header .eyebrow { padding-right: 220px; }
+@media (max-width: 760px) { .page-header .eyebrow { padding-right: 0; } .back-link { position: static; display: inline-block; margin-bottom: 6px; } }
+
+/* Hide-when-fallback helper. The orchestrator toggles .has-fallback on
+   <body> when atoms aren't available; we then suppress the venn UI and
+   show the fallback section. */
+body.has-fallback #scrubber-row,
+body.has-fallback #diagram-row,
+body.has-fallback #widgets-row,
+body.has-fallback #page-footer {
+  display: none;
+}
+
+/* ───── fallback section ───── */
+.fallback-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.fallback-question {
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink);
+  padding: 14px 18px;
+  border-radius: 4px;
+}
+.fallback-question h2 {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+.fallback-question .resident-q {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 0;
+}
+.fallback-question .enriched {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--rule);
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.fallback-question .enriched-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-enh);
+  margin-bottom: 4px;
+}
+
+/* Responses grid — 3 columns at desktop, stack on narrow viewports. */
+.fallback-responses {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 1100px) {
+  .fallback-responses { grid-template-columns: 1fr; }
+}
+
+.fallback-card {
+  background: #fbf7ed;
+  border: 1px solid var(--rule);
+  border-top-width: 4px;
+  border-radius: 4px;
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.fallback-card.col1 { border-top-color: var(--c-oob); }
+.fallback-card.col2 { border-top-color: var(--c-mcp); }
+.fallback-card.col3 { border-top-color: var(--c-enh); }
+
+.fb-card-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fb-card-eyebrow {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.fb-card-tool {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0;
+}
+.fb-card-model {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.fb-scores {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.fb-score {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 12px;
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+.fb-score .label { color: var(--ink-soft); font-weight: 600; }
+.fb-score .val { color: var(--ink); font-weight: 700; }
+.fb-score.s-0 .val { color: #b13a30; }
+.fb-score.s-1 .val { color: #c08a26; }
+.fb-score.s-2 .val { color: #5a8a4f; }
+.fb-score.s-3 .val { color: #2d6a3f; }
+.fb-score.s-na .val { color: var(--ink-mute); font-weight: 500; }
+
+.fb-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fb-section h3 {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin: 0;
+}
+
+.fb-response {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  white-space: pre-wrap;
+  background: #fffdf7;
+  border: 1px solid var(--rule-soft);
+  padding: 12px 14px;
+  border-radius: 3px;
+  max-height: 460px;
+  overflow-y: auto;
+}
+.fb-rationale {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.fb-list {
+  margin: 0;
+  padding-left: 18px;
+  font-family: var(--serif);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.fb-list li { margin-bottom: 4px; }
+.fb-empty {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--ink-mute);
+}
+
+.fb-collapsible > summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  list-style: none;
+  user-select: none;
+}
+.fb-collapsible > summary::-webkit-details-marker { display: none; }
+.fb-collapsible > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 120ms ease;
+}
+.fb-collapsible[open] > summary::before { content: "▾ "; }
+.fb-collapsible > summary:hover { color: var(--ink); }
+
+/* ───── error / pending states ───── */
+.fb-load-error {
+  background: #fdf3ef;
+  border: 1px solid #d6a89f;
+  color: #6b3a36;
+  padding: 16px 20px;
+  border-radius: 4px;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.5;
+}

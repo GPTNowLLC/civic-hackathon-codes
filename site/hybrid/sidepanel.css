@@ -1,0 +1,382 @@
+/* sidepanel.css — W6 of the hybrid mockup.
+ *
+ * Side-panel styling for the literal-AI-response card and the pinned-atom
+ * detail card. Selectors are prefixed with .response- and .atom-detail-
+ * to avoid collisions with chips/lobes/widgets CSS.
+ *
+ * Design notes:
+ * - Warm-paper background, slightly inset within the side panel column.
+ * - Serif body 16-17px (Fraunces / Newsreader), mono 13-14px (JetBrains Mono).
+ * - The pinned atom card sits BELOW the response and reads visually distinct:
+ *   slightly tinted background + a separator rule above it.
+ */
+
+/* --------------------------------------------------------------------------
+ * Side panel container (wraps both sections)
+ * -------------------------------------------------------------------------- */
+
+.response-root {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: 100%;
+  min-width: 0;
+  background: #faf4e7;
+  border-left: 1px solid rgba(120, 95, 60, 0.14);
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  color: #2f261c;
+  position: relative;
+}
+
+/* Subtle inset paper feel — 1px right edge that visually separates the side
+   panel from the diagram column. The page shell already provides a border
+   on the side panel as a whole; this is the inner accent. */
+.response-root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 1px 0 0 rgba(255, 248, 230, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+ * Section wrappers
+ * -------------------------------------------------------------------------- */
+
+.response-section {
+  padding: 22px 24px;
+  min-width: 0;
+}
+
+.response-section.response-top {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  border-bottom: 1px solid rgba(120, 95, 60, 0.16);
+}
+
+.response-section.atom-detail-section {
+  flex: 0 0 auto;
+  background: #f3ead8;
+  /* Subtle gradient up-top to read as a stacked card. */
+  background-image: linear-gradient(180deg, rgba(120, 95, 60, 0.04) 0%, transparent 18%),
+                    linear-gradient(180deg, #f3ead8, #efe4cd);
+  position: relative;
+  max-height: 52%;
+  overflow-y: auto;
+}
+
+/* --------------------------------------------------------------------------
+ * TOP — header row
+ * -------------------------------------------------------------------------- */
+
+.response-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted rgba(120, 95, 60, 0.28);
+}
+
+.response-tool {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6c4f2c;
+}
+
+.response-sep {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  color: #b3a385;
+}
+
+.response-variant {
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  color: #514333;
+}
+
+/* Variant accent bar across the header bottom border. Subtle hint of
+   which lobe owns the current text. */
+.response-root[data-variant="oob"]      .response-header { border-bottom-color: rgba(197, 82, 74, 0.45); }
+.response-root[data-variant="mcp"]      .response-header { border-bottom-color: rgba(200, 154, 58, 0.55); }
+.response-root[data-variant="enhanced"] .response-header { border-bottom-color: rgba(90, 138, 79, 0.55); }
+
+/* --------------------------------------------------------------------------
+ * TOP — body (literal response text, blockquote-style on warm paper)
+ * -------------------------------------------------------------------------- */
+
+.response-body {
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  font-size: 16.5px;
+  line-height: 1.62;
+  color: #2c2218;
+
+  /* Inset blockquote feel. */
+  background: #fdf8ec;
+  border-left: 3px solid rgba(120, 95, 60, 0.22);
+  padding: 14px 18px 14px 18px;
+  border-radius: 2px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(120, 95, 60, 0.06);
+
+  transition: opacity 200ms ease;
+  opacity: 1;
+}
+
+/* Match the variant accent on the inset stripe. */
+.response-root[data-variant="oob"]      .response-body { border-left-color: rgba(197, 82, 74, 0.55); }
+.response-root[data-variant="mcp"]      .response-body { border-left-color: rgba(200, 154, 58, 0.65); }
+.response-root[data-variant="enhanced"] .response-body { border-left-color: rgba(90, 138, 79, 0.65); }
+
+/* Cross-fade states. */
+.response-body.response-fading-out { opacity: 0; }
+.response-body.response-fading-in  { opacity: 1; }
+
+/* Phrase highlight: subtle dotted underline. Hover lifts to a stronger
+   dotted underline + tints the text in the variant color. */
+.response-phrase {
+  text-decoration: underline dotted rgba(120, 95, 60, 0.55);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+  transition: color 120ms ease, text-decoration-color 120ms ease, background-color 120ms ease;
+  border-radius: 2px;
+}
+.response-phrase:hover {
+  color: #6c4f2c;
+  background-color: rgba(200, 154, 58, 0.16);
+  text-decoration-color: rgba(120, 95, 60, 0.95);
+}
+
+.response-root[data-variant="oob"]      .response-phrase:hover { color: #8a3a32; background-color: rgba(197, 82, 74, 0.14); }
+.response-root[data-variant="mcp"]      .response-phrase:hover { color: #7a5e1f; background-color: rgba(200, 154, 58, 0.18); }
+.response-root[data-variant="enhanced"] .response-phrase:hover { color: #3d6234; background-color: rgba(90, 138, 79, 0.16); }
+
+/* --------------------------------------------------------------------------
+ * BOTTOM — Pinned atom detail
+ * -------------------------------------------------------------------------- */
+
+.atom-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.atom-detail-eyebrow {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a704a;
+}
+
+.atom-detail-close {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 1px solid rgba(120, 95, 60, 0.28);
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  font-size: 16px;
+  color: #6c4f2c;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+.atom-detail-close:hover {
+  background: rgba(120, 95, 60, 0.10);
+  border-color: rgba(120, 95, 60, 0.45);
+  color: #2f261c;
+}
+.atom-detail-close:focus-visible {
+  outline: 2px solid rgba(120, 95, 60, 0.55);
+  outline-offset: 2px;
+}
+
+/* Empty state */
+.atom-detail-empty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 4px 18px;
+  color: #8a704a;
+}
+.atom-detail-empty-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  color: rgba(120, 95, 60, 0.55);
+}
+.atom-detail-empty-text {
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #6c5942;
+}
+
+/* Pinned card */
+.atom-detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.atom-detail-claim {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #2c2218;
+  font-weight: 500;
+  /* Open quote glyph as a typographic accent. */
+  text-indent: -0.4em;
+  padding-left: 0.4em;
+}
+.atom-detail-claim::before { content: '\201C'; color: rgba(120, 95, 60, 0.55); }
+.atom-detail-claim::after  { content: '\201D'; color: rgba(120, 95, 60, 0.55); }
+
+/* Meta row: citation pill + correctness badge. */
+.atom-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.atom-detail-citation {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fdf8ec;
+  border: 1px solid rgba(120, 95, 60, 0.30);
+  color: #4a3826;
+}
+.atom-detail-citation-none {
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #8a8074;
+  background: transparent;
+  border-style: dashed;
+  border-color: rgba(120, 95, 60, 0.32);
+}
+
+.atom-detail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--badge-color, #7a6f60) 14%, #fdf8ec);
+  border: 1px solid color-mix(in srgb, var(--badge-color, #7a6f60) 55%, transparent);
+  color: color-mix(in srgb, var(--badge-color, #7a6f60) 88%, #2c2218);
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+.atom-detail-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--badge-color, #7a6f60);
+}
+
+/* Verified-truth quote block. */
+.atom-detail-truth-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 2px;
+}
+.atom-detail-truth-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a704a;
+}
+.atom-detail-truth {
+  margin: 0;
+  padding: 8px 12px 8px 14px;
+  background: #fdf8ec;
+  border-left: 3px solid rgba(90, 138, 79, 0.55);
+  border-radius: 2px;
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #2c2218;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Variants row */
+.atom-detail-variants {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+.atom-detail-variants-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a704a;
+}
+.atom-detail-variant-pills {
+  display: inline-flex;
+  gap: 5px;
+}
+.atom-detail-variant-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(120, 95, 60, 0.22);
+  color: #b3a385;
+}
+.atom-detail-variant-pill.is-present[data-variant="oob"]      { color: #8a3a32; border-color: rgba(197, 82, 74, 0.55); background: rgba(197, 82, 74, 0.10); }
+.atom-detail-variant-pill.is-present[data-variant="mcp"]      { color: #7a5e1f; border-color: rgba(200, 154, 58, 0.65); background: rgba(200, 154, 58, 0.12); }
+.atom-detail-variant-pill.is-present[data-variant="enhanced"] { color: #3d6234; border-color: rgba(90, 138, 79, 0.65); background: rgba(90, 138, 79, 0.12); }
+
+/* --------------------------------------------------------------------------
+ * Narrow-viewport degradation.
+ * Shell may stack the side panel below the diagram at <1024 px; in that
+ * case we cap the response section so the pinned card stays visible.
+ * -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .response-section.response-top { max-height: 360px; }
+  .response-section.atom-detail-section { max-height: none; }
+}

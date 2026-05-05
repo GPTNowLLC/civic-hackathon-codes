@@ -1,0 +1,382 @@
+{
+  "scenario": "pergola",
+  "scenario_label": "Pergola",
+  "address": "4773 SE 52nd Ave, Portland, OR 97206",
+  "neighborhood": "Foster-Powell",
+  "responses": {
+    "oob": {
+      "tool": "",
+      "text": "I'll research this thoroughly. A pergola sounds simple, but Portland has specific rules that depend on size, location on your lot, and your zoning \u2014 and the answer \"do I need a permit\" hinges on those details. Let me dig in properly.I have the general framework. Now I need to know the specific zoning for the user's property \u2014 that determines setbacks, lot coverage limits, and floor area ratio. Let me look up the address on PortlandMaps.Good \u2014 I have property facts (4,792 sq ft lot, 810 sq ft 2-bed/2-bath built 1988). Now let me look up the actual zoning from PortlandMaps.Let me try to pull the property's zoning directly from PortlandMaps.The neighborhood mostly shows R5 zoning, with some R2.5 nearby. Let me get the exact zoning for the user's property.I have the property ID format now. Let me pull the user's property record directly.Let me try the city's open data ArcGIS API to get zoning programmatically.Let me get more specific on how Portland treats pergolas \u2014 open-roof vs. covered makes a big difference, and so does attached vs. freestanding.Now I have the key distinction clear: open pergolas (just posts and beams) are classified differently from \"covered\" pergolas. Let me confirm the open-pergola rules, and try one more approach to identify zoning at this exact address.I have everything I need now. Let me write this up. (One note: I tried to pull your exact zoning from PortlandMaps directly but their site didn't return data through my search tools; I'll point you to where to verify it yourself in two clicks.)\n\n---\n\n**Short answer: yes, almost certainly. The design choices you make up front determine whether you can skip a permit entirely or need to file one.**\n\n## The single most useful distinction\n\nPortland classifies pergolas two different ways under Zoning Code 33.110.245, and the rules diverge sharply:\n\nAn **open pergola** (posts plus rafters, slats, lattice, or trellis material with no solid roof) is a *\"detached uncovered vertical structure\"*; the same category as trellises and arbors. Lightly regulated. It does not count toward your building coverage (which only counts impervious overhead structures), and it does not count toward floor area ratio (FAR).\n\nA **covered pergola** (polycarbonate panels, fabric canopy, louvered aluminum that closes, shingled mini-roof) is a *\"detached covered accessory structure\"*; the same category as a shed or carport. It triggers building coverage and the 20-ft height cap, and you'll need to keep it inside the buildable area unless it qualifies for a setback exception.\n\nThis is the lever most homeowners don't realize they're pulling.\n\n## The permit-free thresholds (Oregon state code, applied by Portland)\n\nFor a freestanding pergola: no building permit if it's \u2264 200 sq ft and \u2264 15 ft tall.\n\nFor a pergola attached to your house and covering a patio: no building permit if it's \u2264 200 sq ft, average roof height \u2264 12 ft, and at least 3 ft from any property line.\n\n200 sq ft is roughly 14\u00d714 or 12\u00d716; plenty for a dining-and-lounging space. Important caveat: skipping the *building* permit doesn't skip *zoning*. Setbacks, building coverage, and FAR still apply, and you may still need a small zoning permit if the structure changes the building footprint.\n\n## Setbacks for your property\n\nR5 zone (the most common designation around your address) typically requires 10 ft front, 5 ft side, 5 ft rear for primary structures, and accessory structures can sometimes go closer to side and rear lot lines if certain conditions are met. R2.5 (also present in your area) is more permissive.\n\nA useful loophole: an *open* pergola counted as an \"uncovered vertical structure\" is allowed inside required building setbacks if it's no larger than 3 ft in width/depth and no taller than 8 ft. So a slim, traditional pergola can hug a fence line. Bigger than that and the full setback rules apply. There's also a specific carve-out allowing a single arbor up to 6 ft wide, 3 ft deep, and 8 ft tall in the front setback (probably not what you want, but good to know).\n\n## Your specific situation, things to flag\n\nYour lot is 4,792 sq ft, just under the 5,000 sq ft R5 standard, so the FAR math is tight. The 2022 listing for your home mentions a \"new backyard shed\" already on the property; that shed counts as an existing accessory structure and eats into both the 20% accessory-structure-coverage cap and your overall FAR allowance. Worth measuring before you size the pergola.\n\nAlso worth knowing: there's a one-time 250 sq ft FAR exception per 5-year period for properties whose primary structure passed final inspection at least 5 years ago. Your house was built in 1988, so this is available if you ever need it for something more substantial.\n\n## Verify your exact zoning before committing\n\nI tried to pull your zoning directly but couldn't reach the live data from where I sit. The two-click verification: go to **portlandmaps.com**, search \"4773 SE 52nd Ave\", and click \"Permits & Zoning\" \u2192 \"Zoning & Districts\". You're looking for the base zone (likely R5 or R2.5) and any overlay letters (like \"a\", \"d\", or others). Overlays can change setback or design rules. While you're there, also check for any environmental overlay (rare on this block but worth a glance) and any \"z\" constrained-sites overlay.\n\n## Above-and-beyond bits\n\n**Free 15-minute zoning consultation.** Portland Permitting & Development offers a free 15-minute appointment with a planner who can confirm your zoning, setbacks, and whether your specific design needs a permit. Call 503-823-7300 to schedule. This is the single highest-leverage thing you can do; it's free and will save you from any surprises. They'll also tell you whether your block has any plan-district quirks.\n\n**Design hack if you want maximum flexibility.** Build it open (no impervious roof). You get shade from rafter spacing, climbing plants, or a removable shade cloth, while the structure stays in the lightly-regulated category. You can always add a removable canopy later for events. This keeps it out of building-coverage and FAR math entirely.\n\n**HOA / CC&Rs.** Your property is in Mt. Scott-Arleta and doesn't appear to have an HOA based on typical patterns for that neighborhood, but check your title docs for any recorded covenants from the original 1988 subdivision. Permit-free at the city level doesn't mean permit-free at the deed level.\n\n**Practical sequence.** Verify zoning on PortlandMaps, measure existing shed footprint, sketch a 12\u00d716 or 14\u00d714 open pergola sited at least 5 ft from side/rear lot lines, then call PP&D for the free 15-min consult to confirm. If everything checks out, you can build without a building permit; just keep it open-roof and within the thresholds above.\n\nIf you want, share what PortlandMaps shows for the zoning and I can tighten the setback numbers and confirm the exact FAR/building-coverage math for your situation."
+    },
+    "mcp": {
+      "tool": "",
+      "text": ""
+    },
+    "enhanced": {
+      "tool": "",
+      "text": ""
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Pergola permit depends on design",
+      "claim_full": "Whether a pergola needs a permit hinges on size, attached vs freestanding, and whether the roof is open or covered.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.4,
+      "actionability": 0.7,
+      "correctness": "correct-vague",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Not verified in this evaluation; consult Portland code directly."
+    },
+    {
+      "id": "A2",
+      "claim_short": "Open vs covered pergola distinction",
+      "claim_full": "Portland classifies an open pergola (posts plus rafters/lattice/trellis with no solid roof) as a detached uncovered vertical structure, while a covered pergola is treated as a detached covered accessory structure like a shed.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct-vague",
+      "importance": 5,
+      "citation": "Title 33.110.245",
+      "verified_truth": "Not verified in this evaluation; section 33.110.245 cited but section number appears wrong \u2014 accessory structure rules are in 33.110.250+ or 33.205."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Cited Title 33.110.245 for pergolas",
+      "claim_full": "The AI cited Zoning Code 33.110.245 as governing pergola classifications.",
+      "topic": "citations",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.3,
+      "correctness": "WRONG",
+      "importance": 3,
+      "citation": "Title 33.110.245",
+      "verified_truth": "33.110 is the RF zone chapter; accessory structure rules are in 33.110.250+ (R5) or 33.205 (general accessory structures). The cited section number appears incorrect."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Open pergolas excluded from coverage/FAR",
+      "claim_full": "Open pergolas do not count toward building coverage or floor area ratio because only impervious overhead structures count.",
+      "topic": "size",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct-vague",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Not verified in this evaluation; consult Portland code directly."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Covered pergola triggers 20-ft height cap",
+      "claim_full": "A covered pergola triggers building coverage rules and a 20-ft height cap for accessory structures.",
+      "topic": "size",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct-vague",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "20-ft height cap for covered accessory structures was claimed but not verified in this evaluation."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Freestanding \u2264200 sf, \u226415 ft permit-free",
+      "claim_full": "A freestanding pergola needs no building permit if it is 200 sq ft or less and 15 ft tall or less, per Oregon state code applied by Portland.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.9,
+      "correctness": "correct-vague",
+      "importance": 5,
+      "citation": "Oregon state code",
+      "verified_truth": "Permit-free thresholds attributed to Oregon state code; not independently verified in this evaluation."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Attached \u2264200 sf, \u226412 ft, 3 ft offset",
+      "claim_full": "A pergola attached to the house needs no building permit if it is 200 sq ft or less, average roof height 12 ft or less, and at least 3 ft from any property line.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.9,
+      "correctness": "correct-vague",
+      "importance": 5,
+      "citation": "Oregon state code",
+      "verified_truth": "Permit-free thresholds attributed to Oregon state code; not independently verified in this evaluation."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Permit-free \u2260 zoning-free",
+      "claim_full": "Skipping the building permit does not exempt the structure from setbacks, building coverage, or FAR, and a small zoning permit may still be required.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.8,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Not verified in this evaluation; consult Portland code directly."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Property likely R5 zoning",
+      "claim_full": "The most common designation around the address is the R5 zone, but the AI explicitly inferred this rather than retrieving it.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.4,
+      "correctness": "admitted-gap",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "AI explicitly admitted it could not pull zoning from PortlandMaps and inferred R5 from neighborhood patterns; address-specific cap applies."
+    },
+    {
+      "id": "A10",
+      "claim_short": "R5 setbacks 10/5/5",
+      "claim_full": "R5 zone typically requires 10 ft front, 5 ft side, and 5 ft rear setbacks for primary structures.",
+      "topic": "setbacks",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.8,
+      "correctness": "correct-vague",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "R5 setbacks stated as 10 ft front, 5 ft side, 5 ft rear for primary structures; not independently verified in this evaluation."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Accessory closer to side/rear",
+      "claim_full": "Accessory structures can sometimes go closer to side and rear lot lines than primary structures if certain conditions are met.",
+      "topic": "setbacks",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.4,
+      "actionability": 0.5,
+      "correctness": "correct-vague",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Not verified in this evaluation; consult Portland code directly."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Open structures 3x8 ft inside setbacks",
+      "claim_full": "Uncovered vertical structures up to 3 ft wide/deep and 8 ft tall are allowed inside required building setbacks.",
+      "topic": "setbacks",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.8,
+      "correctness": "correct-vague",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Specific dimensional claim not independently verified in this evaluation."
+    },
+    {
+      "id": "A13",
+      "claim_short": "Front setback arbor 6x3x8 exception",
+      "claim_full": "A single arbor up to 6 ft wide, 3 ft deep, and 8 ft tall is permitted in the front setback as a specific carve-out.",
+      "topic": "setbacks",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.6,
+      "correctness": "correct-vague",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Specific dimensional claim not independently verified in this evaluation."
+    },
+    {
+      "id": "A14",
+      "claim_short": "R2.5 more permissive than R5",
+      "claim_full": "R2.5 zoning, also present in the area, is more permissive than R5.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.4,
+      "actionability": 0.4,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Not verified in this evaluation; consult Portland code directly."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Lot 4,792 sf, house 810 sf, 1988",
+      "claim_full": "The property has a 4,792 sq ft lot and an 810 sq ft 2BR/2BA house built in 1988.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "hedge-correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Property facts (lot size, build year) appear pulled from a real estate listing rather than an authoritative city source and were not verified."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Existing shed eats accessory cap",
+      "claim_full": "A 'new backyard shed' from a 2022 listing already counts as an existing accessory structure and reduces both the 20% accessory-structure-coverage cap and overall FAR allowance.",
+      "topic": "size",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct-vague",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "20% accessory-structure-coverage cap claim not independently verified in this evaluation."
+    },
+    {
+      "id": "A17",
+      "claim_short": "250 sf FAR exception every 5 years",
+      "claim_full": "There is a one-time 250 sq ft FAR exception per 5-year period for properties whose primary structure passed final inspection at least 5 years ago.",
+      "topic": "size",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct-vague",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "FAR exception claim not independently verified in this evaluation."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Verify zoning on PortlandMaps",
+      "claim_full": "The resident should verify exact zoning by searching the address on portlandmaps.com under Permits & Zoning \u2192 Zoning & Districts and noting base zone and overlays.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "PortlandMaps",
+      "verified_truth": "AI explicitly admitted it could not retrieve zoning data and directed user to verify via PortlandMaps."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Check for environmental/'z' overlays",
+      "claim_full": "While checking PortlandMaps the resident should also look for environmental overlays and any 'z' constrained-sites overlay that can change setback or design rules.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Not verified in this evaluation; consult Portland code directly."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Free 15-min PP&D consultation",
+      "claim_full": "Portland Permitting & Development offers a free 15-minute appointment with a planner, reachable at 503-823-7300, to confirm zoning, setbacks, and permit needs.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "PP&D 15-minute zoning consultation phone number 503-823-7300 cited; not independently verified but presented as actionable next step."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Build it open for max flexibility",
+      "claim_full": "Building the pergola with an open roof keeps it in the lightly-regulated category and out of building-coverage and FAR math entirely.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.9,
+      "correctness": "correct-judg",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Design recommendation consistent with the open-vs-covered distinction described."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Check title for HOA/CC&Rs",
+      "claim_full": "The resident should check title documents for any recorded covenants from the original 1988 subdivision because permit-free at the city level does not mean permit-free at the deed level.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.5,
+      "actionability": 0.8,
+      "correctness": "correct-action",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "General advice; not specific to Portland code."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Practical build sequence",
+      "claim_full": "Recommended sequence: verify zoning, measure existing shed, sketch a 12x16 or 14x14 open pergola at least 5 ft from side/rear lot lines, then book the free PP&D consult.",
+      "topic": "sequence",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Sequencing advice consistent with claims made; not separately verified."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Could not retrieve zoning from PortlandMaps",
+      "claim_full": "The AI explicitly admitted it could not pull the property's zoning directly from PortlandMaps through its tools.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "admitted-gap",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "AI explicitly admitted retrieval failure, triggering the address-specific usefulness cap at 2."
+    }
+  ]
+}

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How does AI answer Portland code questions? — Comparison mockup</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: #f5f4ef;
+    color: #1f2933;
+    line-height: 1.5;
+    padding: 32px 40px 80px;
+  }
+
+  /* ── Page header ── */
+  .page-header { max-width: 1480px; margin: 0 auto 28px; }
+  .eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .page-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+  .page-header .deck {
+    font-size: 15px;
+    color: #4b5563;
+    max-width: 880px;
+  }
+
+  /* ── Scenario card ── */
+  .scenario {
+    max-width: 1480px;
+    margin: 0 auto 24px;
+    background: #fff;
+    border: 1px solid #d6d3c7;
+    border-left: 4px solid #1d4ed8;
+    padding: 18px 22px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+  .scenario-q {
+    font-size: 16px;
+    color: #111827;
+    font-weight: 500;
+  }
+  .scenario-q .label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .scenario-meta {
+    font-size: 12px;
+    color: #4b5563;
+    text-align: right;
+    border-left: 1px solid #e5e7eb;
+    padding-left: 24px;
+  }
+  .scenario-meta strong { color: #111827; }
+
+  /* ── Three-column grid ── */
+  .grid {
+    max-width: 1480px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .col {
+    background: #fff;
+    border: 1px solid #d6d3c7;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .col-header {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .col-1 .col-header { background: #fef2f2; border-bottom-color: #fecaca; }
+  .col-2 .col-header { background: #fefce8; border-bottom-color: #fde68a; }
+  .col-3 .col-header { background: #f0fdf4; border-bottom-color: #bbf7d0; }
+
+  .col-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.01em;
+  }
+  .col-title .num {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 11px;
+    margin-right: 6px;
+    color: #fff;
+    font-weight: 700;
+  }
+  .col-1 .num { background: #dc2626; }
+  .col-2 .num { background: #ca8a04; }
+  .col-3 .num { background: #16a34a; }
+  .col-tool {
+    font-size: 10px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  /* ── Homeowner walks away callout ── */
+  .walkaway {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .walkaway .label {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .col-1 .walkaway { background: #fff5f5; }
+  .col-1 .walkaway .label { color: #b91c1c; }
+  .col-2 .walkaway { background: #fffbeb; }
+  .col-2 .walkaway .label { color: #a16207; }
+  .col-3 .walkaway { background: #f7fef9; }
+  .col-3 .walkaway .label { color: #15803d; }
+  .walkaway .quote {
+    font-style: italic;
+    color: #1f2933;
+  }
+
+  /* ── Response body ── */
+  .response {
+    padding: 16px 18px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #1f2933;
+    flex: 1;
+  }
+  .response p { margin-bottom: 10px; }
+  .response strong { font-weight: 600; }
+
+  /* Inline highlights */
+  .hl-good {
+    background: linear-gradient(180deg, transparent 60%, #bbf7d0 60%);
+    padding: 0 2px;
+  }
+  .hl-meh {
+    background: linear-gradient(180deg, transparent 60%, #fde68a 60%);
+    padding: 0 2px;
+  }
+  .hl-bad {
+    background: linear-gradient(180deg, transparent 60%, #fecaca 60%);
+    padding: 0 2px;
+    text-decoration: line-through wavy #dc2626;
+    text-decoration-thickness: 1px;
+  }
+  .hl-missing {
+    color: #b91c1c;
+    font-style: italic;
+    background: #fef2f2;
+    padding: 0 4px;
+    border-radius: 2px;
+  }
+
+  /* ── Citation ribbon ── */
+  .citations {
+    padding: 10px 18px;
+    border-top: 1px solid #e5e7eb;
+    background: #fafaf7;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .citations .label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b7280;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+  .chip {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: "SF Mono", Menlo, monospace;
+  }
+  .chip-good { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+  .chip-meh  { background: #fef3c7; color: #854d0e; border: 1px solid #fcd34d; }
+  .chip-bad  { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+  .chip-none { background: #f3f4f6; color: #6b7280; border: 1px dashed #d1d5db; font-style: italic; }
+
+  /* ── Rubric strip ── */
+  .rubric {
+    padding: 14px 18px;
+    border-top: 2px solid #e5e7eb;
+    background: #fff;
+  }
+  .rubric-row {
+    display: grid;
+    grid-template-columns: 110px 1fr 28px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+  .rubric-row:last-child { margin-bottom: 0; }
+  .rubric-label {
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    font-size: 10px;
+  }
+  .battery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    height: 14px;
+  }
+  .cell {
+    background: #e5e7eb;
+    border-radius: 2px;
+  }
+  .cell.f-1 { background: #dc2626; }
+  .cell.f-2 { background: #ca8a04; }
+  .cell.f-3 { background: #16a34a; }
+  .rubric-score {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .rubric-score .denom { color: #9ca3af; font-weight: 400; font-size: 11px; }
+
+  .total-row {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 11px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+  .total-row .total {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: none;
+  }
+  .col-1 .total { color: #dc2626; }
+  .col-2 .total { color: #ca8a04; }
+  .col-3 .total { color: #16a34a; }
+
+  /* ── Legend footer ── */
+  .legend {
+    max-width: 1480px;
+    margin: 32px auto 0;
+    padding: 18px 22px;
+    background: #fff;
+    border: 1px solid #d6d3c7;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    font-size: 12px;
+    color: #4b5563;
+  }
+  .legend h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #111827;
+    margin-bottom: 10px;
+  }
+  .legend ul { list-style: none; }
+  .legend li { margin-bottom: 6px; }
+  .legend .swatch {
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+    margin-right: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">City of Portland · AI Code Search Hackathon · Track 1 evaluation</div>
+  <h1>What does it take to make an AI answer actually useful for a Portland resident?</h1>
+  <p class="deck">Three versions of the same question. Same homeowner, same address. Only the AI's tooling and prompt differ. Read across to see how the answer changes.</p>
+</div>
+
+<section class="scenario">
+  <div class="scenario-q">
+    <span class="label">The resident's question</span>
+    "Can I build a tiny house on my lot? What's allowed and what permits do I need?"
+  </div>
+  <div class="scenario-meta">
+    <strong>4521 SE Belmont St</strong><br>
+    Sunnyside neighborhood<br>
+    <span style="color: #6b7280;">Sample scenario #1 of 7</span>
+  </div>
+</section>
+
+<div class="grid">
+
+  <!-- ── Column 1: Out-of-box ── -->
+  <article class="col col-1">
+    <header class="col-header">
+      <div class="col-title"><span class="num">1</span>Out-of-the-box AI</div>
+      <div class="col-tool">ChatGPT · no tools</div>
+    </header>
+
+    <div class="walkaway">
+      <span class="label">What this resident walks away with</span>
+      <span class="quote">"I think I can probably build something. I'll just start designing — sounds like a permit is needed but I'm not sure which one."</span>
+    </div>
+
+    <div class="response">
+      <p>Building a tiny house in Portland is generally allowed under the city's <span class="hl-meh">Accessory Dwelling Unit (ADU) rules</span>. You'll want to check Portland's zoning code for the specifics.</p>
+      <p>Most residential lots permit a second small dwelling of <span class="hl-bad">up to 1,000 square feet</span>. Setbacks are typically <span class="hl-bad">5 feet from property lines</span>, and the structure should fit the character of the neighborhood.</p>
+      <p>You'll likely need a building permit. <span class="hl-missing">[no address-specific zoning lookup]</span> Contact the City of Portland's permitting office for next steps.</p>
+    </div>
+
+    <div class="citations">
+      <span class="label">Sources cited</span>
+      <span class="chip chip-meh">"Portland zoning code"</span>
+      <span class="chip chip-none">no section number</span>
+    </div>
+
+    <div class="rubric">
+      <div class="rubric-row">
+        <span class="rubric-label">Usefulness</span>
+        <div class="battery"><span class="cell f-1"></span><span class="cell"></span><span class="cell"></span></div>
+        <span class="rubric-score">1<span class="denom">/3</span></span>
+      </div>
+      <div class="rubric-row">
+        <span class="rubric-label">Citations</span>
+        <div class="battery"><span class="cell f-1"></span><span class="cell"></span><span class="cell"></span></div>
+        <span class="rubric-score">1<span class="denom">/3</span></span>
+      </div>
+      <div class="rubric-row">
+        <span class="rubric-label">Plain language</span>
+        <div class="battery"><span class="cell f-2"></span><span class="cell f-2"></span><span class="cell"></span></div>
+        <span class="rubric-score">2<span class="denom">/3</span></span>
+      </div>
+      <div class="total-row">
+        <span>Composite</span>
+        <span class="total">4<span style="color:#9ca3af; font-size:14px;">/9</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── Column 2: +MCP ── -->
+  <article class="col col-2">
+    <header class="col-header">
+      <div class="col-title"><span class="num">2</span>AI + Portland data access</div>
+      <div class="col-tool">Claude · MCP tools</div>
+    </header>
+
+    <div class="walkaway">
+      <span class="label">What this resident walks away with</span>
+      <span class="quote">"OK, my lot is R2.5, ADU is allowed up to 800 sf, and I need to check Title 33.205 — but what's an SDC and which permit do I file first?"</span>
+    </div>
+
+    <div class="response">
+      <p>For 4521 SE Belmont St: base zone is <span class="hl-good">R2.5 (single-dwelling)</span>; no overlay zones detected. ADU permitted under <span class="hl-good">Title 33.205</span>.</p>
+      <p>Per <span class="hl-good">PCC 33.205.040</span>: max ADU size is <span class="hl-good">800 sf or 75% of main dwelling</span>, whichever is less. Setbacks per <span class="hl-good">33.110.220</span>: front 10', side 5', rear 5'. Height limit 20'.</p>
+      <p>Permits: building, plumbing, electrical, mechanical. SDCs apply — water, sewer, transportation, parks. Stormwater management may be required if impervious area threshold is exceeded.</p>
+    </div>
+
+    <div class="citations">
+      <span class="label">Sources cited</span>
+      <span class="chip chip-good">PCC 33.205.040</span>
+      <span class="chip chip-good">PCC 33.110.220</span>
+      <span class="chip chip-meh">PortlandMaps</span>
+    </div>
+
+    <div class="rubric">
+      <div class="rubric-row">
+        <span class="rubric-label">Usefulness</span>
+        <div class="battery"><span class="cell f-2"></span><span class="cell f-2"></span><span class="cell"></span></div>
+        <span class="rubric-score">2<span class="denom">/3</span></span>
+      </div>
+      <div class="rubric-row">
+        <span class="rubric-label">Citations</span>
+        <div class="battery"><span class="cell f-3"></span><span class="cell f-3"></span><span class="cell f-3"></span></div>
+        <span class="rubric-score">3<span class="denom">/3</span></span>
+      </div>
+      <div class="rubric-row">
+        <span class="rubric-label">Plain language</span>
+        <div class="battery"><span class="cell f-1"></span><span class="cell"></span><span class="cell"></span></div>
+        <span class="rubric-score">1<span class="denom">/3</span></span>
+      </div>
+      <div class="total-row">
+        <span>Composite</span>
+        <span class="total">6<span style="color:#9ca3af; font-size:14px;">/9</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── Column 3: +MCP +Enrichment ── -->
+  <article class="col col-3">
+    <header class="col-header">
+      <div class="col-title"><span class="num">3</span>AI + data + better question</div>
+      <div class="col-tool">Claude · MCP + enrichment</div>
+    </header>
+
+    <div class="walkaway">
+      <span class="label">What this resident walks away with</span>
+      <span class="quote">"I know my zone, my limits, my next three calls, and which permits to file in what order. I can act on Monday morning."</span>
+    </div>
+
+    <div class="response">
+      <p><strong>Your property:</strong> 4521 SE Belmont, zoned <span class="hl-good">R2.5</span>. ADU is allowed. A "tiny house on wheels" is <em>not</em> permitted as a permanent residence — you need a tiny house <strong>on foundation</strong>, treated as an ADU.</p>
+      <p><strong>Size and placement</strong> (<span class="hl-good">PCC 33.205.040</span>): up to <span class="hl-good">800 sf</span>, max 20' tall. Setbacks (<span class="hl-good">PCC 33.110.220</span>): 10' front, 5' sides, 5' rear. Rear yard placement is easiest.</p>
+      <p><strong>Costs to budget:</strong> System Development Charges (SDCs) for water, sewer, transportation, parks — typically <strong>$15,000–$25,000</strong>. Building permit fees separate.</p>
+      <p><strong>Your next steps, in order:</strong> (1) Free zoning confirmation at <strong>BDS</strong>, (2) site plan, (3) building permit application, (4) plumbing/electrical/mechanical sub-permits, (5) erosion control before excavation.</p>
+    </div>
+
+    <div class="citations">
+      <span class="label">Sources cited</span>
+      <span class="chip chip-good">PCC 33.205.040</span>
+      <span class="chip chip-good">PCC 33.110.220</span>
+      <span class="chip chip-good">PCC 33.910 (defs)</span>
+      <span class="chip chip-good">BDS Code Guide</span>
+      <span class="chip chip-good">PortlandMaps</span>
+    </div>
+
+    <div class="rubric">
+      <div class="rubric-row">
+        <span class="rubric-label">Usefulness</span>
+        <div class="battery"><span class="cell f-3"></span><span class="cell f-3"></span><span class="cell f-3"></span></div>
+        <span class="rubric-score">3<span class="denom">/3</span></span>
+      </div>
+      <div class="rubric-row">
+        <span class="rubric-label">Citations</span>
+        <div class="battery"><span class="cell f-3"></span><span class="cell f-3"></span><span class="cell f-3"></span></div>
+        <span class="rubric-score">3<span class="denom">/3</span></span>
+      </div>
+      <div class="rubric-row">
+        <span class="rubric-label">Plain language</span>
+        <div class="battery"><span class="cell f-3"></span><span class="cell f-3"></span><span class="cell f-3"></span></div>
+        <span class="rubric-score">3<span class="denom">/3</span></span>
+      </div>
+      <div class="total-row">
+        <span>Composite</span>
+        <span class="total">9<span style="color:#9ca3af; font-size:14px;">/9</span></span>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+<aside class="legend">
+  <div>
+    <h3>How to read the highlights</h3>
+    <ul>
+      <li><span class="swatch"><span class="hl-good">good</span></span> Specific, verifiable, correct citation</li>
+      <li><span class="swatch"><span class="hl-meh">meh</span></span> Vague or unverified — directionally right</li>
+      <li><span class="swatch"><span class="hl-bad">bad</span></span> Wrong number or contradicted by code</li>
+      <li><span class="swatch"><span class="hl-missing">missing</span></span> AI admitted (or should have admitted) it can't answer</li>
+    </ul>
+  </div>
+  <div>
+    <h3>The pattern across all 7 scenarios</h3>
+    <ul>
+      <li><strong>Out-of-the-box:</strong> sounds confident, often wrong on numbers, citations are vague.</li>
+      <li><strong>+ Data access (MCP):</strong> citations become specific and accurate. Language gets technical.</li>
+      <li><strong>+ Better question (enrichment):</strong> answer becomes actionable plain-English guidance the resident can use.</li>
+    </ul>
+  </div>
+</aside>
+
+</body>
+</html>

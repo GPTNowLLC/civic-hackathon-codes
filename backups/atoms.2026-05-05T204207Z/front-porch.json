@@ -1,0 +1,413 @@
+{
+  "scenario": "front-porch",
+  "scenario_label": "Front porch extension",
+  "address": "2145 SE Ladd Ave, Portland, OR 97214",
+  "neighborhood": "Ladd's Addition",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "Short answer: yes, you can probably extend it; but at this address, \"yes\" comes with a catch most homeowners don't see coming. Your house sits inside the **Ladd's Addition Conservation District**, and front porches are specifically called out in the design guidelines as character-defining features. So this is less a permit question than a design-review question.\n\n## Why this matters for your address specifically\n\nA few things stack up here:\n\n1. **The whole neighborhood is a Conservation District** (locally designated 1977, on the National Register since 1988). Boundaries: SE 12th to 20th, Hawthorne to Division. You're well inside.\n2. **Ladd Avenue is one of the two diagonal \"boulevards\"** in the wagon-wheel plan; it's one of the most visible streets in the district, so anything on your front facade will get extra scrutiny.\n3. **Your 1924 bungalow was built squarely in the period of significance** (1905-1930), which makes it almost certainly a contributing structure. That raises the bar further.\n4. **The Ladd's guidelines literally name front porches.** From section 5 of the Exterior Rehabilitation guidelines: original entrances, front porches, and projecting features \"should be retained or restored.\" For bungalows, defining elements include \"open porch with square wood posts, multi-pane double-hung windows, simple pipe handrails.\"\n\nSo an extension is doable, but the Historic Landmarks Commission (or staff, depending on size) will want to see that:\n- The original porch isn't being destroyed; it's being added to in a way that's compatible\n- The new portion is differentiated from the old (no faking history)\n- It's reversible in principle, so the historic form could be recovered later\n- Massing, materials, columns, railings, and roofline match the original Craftsman vocabulary\n\n## The two procedural paths\n\nThis is the part most blog posts gloss over. Conservation Districts (unlike full Historic Districts) give you a choice:\n\n**Path A: Historic Resource Review (discretionary).** Type I if the project is small; Type II if it affects more than 150 sq ft of facade elevation. Type I is staff-approved and relatively quick (4-8 weeks); Type II involves notice to neighbors and longer review (8-10 weeks), with fees roughly $991-$6,124 last time the city published them.\n\n**Path B: Community Design Standards (clear and objective).** Conservation Districts in Portland allow you to skip discretionary HRR if your design meets the objective standards in Chapter 33.218. This is the faster, cheaper path if your porch extension fits the box. Most people don't know this option exists; it's worth asking about specifically.\n\n## What I'd actually do, in order\n\n1. **Pull the official record for your address.** Go to [portlandmaps.com](https://www.portlandmaps.com/), enter 2145 SE Ladd Ave, and check the \"Zoning and Districts\" tab. Confirms zoning (likely R5), the Conservation District overlay, and any other overlays (tree code, etc.).\n2. **Read the actual guidelines.** The current document is the [Ladd's Addition Conservation District Design Guidelines (2011 update)](https://www.portland.gov/sites/default/files/2019-07/laddsaddition_conservation_district_guidelines_2011_update.pdf) on portland.gov. It's the approval criteria; the ~25 MB original 1990 PDF is also on the [city's design guidelines page](https://www.portland.gov/bps/planning/design-guideline-documents).\n3. **Request a free pre-application conference** with Portland Permitting & Development (formerly BDS). They'll tell you which review type you fall into and flag issues early; this is the single highest-leverage thing you can do.\n4. **Talk to a designer who has been through Ladd's review specifically.** Arciform is the name that came up most often in my research as a Ladd's Addition specialist; there are others. Worth getting two opinions before committing.\n5. **Loop in HAND** (Hosford-Abernethy Neighborhood Development Association) early. They're the recognized neighborhood association and get notice on Type II reviews; their support smooths things considerably.\n\n## Two things you might not have considered\n\n**Tax credit upside.** Because Ladd's is on the National Register and your house likely contributes, substantial rehabilitation work can qualify for the Oregon Special Assessment of Historic Property program (a 10-year property tax freeze) or federal rehab tax credits if any portion is for income-producing use. If your porch extension is part of a larger rehab, this can change the math meaningfully. Worth asking the State Historic Preservation Office (SHPO) before you finalize scope.\n\n**Sequencing matters.** If the existing porch has any rot or deferred maintenance, framing the project as \"restoration with compatible expansion\" rather than \"addition\" generally lands better in review; restoration is preferred over replacement in the guidelines, and there's a Type Ix restoration track that's faster.\n\nWant me to dig into any of these next: the specific objective standards in 33.218 to see if your project could skip discretionary review, the pre-app process and what to bring, or the SHPO tax-incentive angle?"
+    },
+    "mcp": {
+      "tool": "",
+      "text": ""
+    },
+    "enhanced": {
+      "tool": "",
+      "text": ""
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Address is in Ladd's Addition Conservation District",
+      "claim_full": "The property at 2145 SE Ladd Ave sits inside the Ladd's Addition Conservation District.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Confirmed: Ladd's Addition Conservation District encompasses SE 12th to 20th, Hawthorne to Division, and 2145 SE Ladd Ave falls within those boundaries."
+    },
+    {
+      "id": "A2",
+      "claim_short": "Conservation District boundaries 12th-20th, Hawthorne-Division",
+      "claim_full": "The Ladd's Addition Conservation District boundaries run SE 12th to 20th and Hawthorne to Division.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm boundaries are SE 12th to 20th, Hawthorne to Division."
+    },
+    {
+      "id": "A3",
+      "claim_short": "District locally designated 1977, NR 1988",
+      "claim_full": "The Conservation District was locally designated in 1977 and listed on the National Register since 1988.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.2,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm local designation in 1977 and National Register listing in 1988."
+    },
+    {
+      "id": "A4",
+      "claim_short": "House is a 1924 bungalow",
+      "claim_full": "The house at 2145 SE Ladd Ave is a 1924 bungalow.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.3,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm the house at 2145 SE Ladd Ave is a 1924 bungalow."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Period of significance 1905-1930",
+      "claim_full": "The Conservation District's period of significance is 1905-1930, making the 1924 house a likely contributing structure.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.3,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm the period of significance is 1905-1930."
+    },
+    {
+      "id": "A6",
+      "claim_short": "House almost certainly contributing",
+      "claim_full": "The 1924 bungalow is almost certainly a contributing structure within the Conservation District.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.4,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Data-quality notes flag this as inference rather than retrieved data; period of significance supports the inference but not verified directly."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Zoning likely R5",
+      "claim_full": "The property is likely zoned R5.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.5,
+      "actionability": 0.4,
+      "correctness": "hedge-correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags note 'zoning likely R5' as inference; not verified via address-specific lookup in this evaluation."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Front porches are character-defining features",
+      "claim_full": "Ladd's Addition design guidelines specifically call out front porches as character-defining features that should be retained or restored.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Ladd's Addition Design Guidelines, Section 5",
+      "verified_truth": "Consistent with the Ladd's Addition Design Guidelines (2011 update) referenced in the response."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Bungalow elements: posts, windows, handrails",
+      "claim_full": "Defining bungalow elements include open porch with square wood posts, multi-pane double-hung windows, and simple pipe handrails.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Ladd's Addition Design Guidelines",
+      "verified_truth": "Consistent with Ladd's Addition Design Guidelines content; not independently verified in flags."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Two procedural paths available",
+      "claim_full": "Conservation Districts offer two procedural paths: discretionary Historic Resource Review or clear-and-objective Community Design Standards.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "Chapter 33.218",
+      "verified_truth": "Accuracy flags confirm the Community Design Standards alternative path under Chapter 33.218 is available for Conservation Districts."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Type II threshold 150 sq ft facade",
+      "claim_full": "Historic Resource Review is Type I for small projects; Type II if the project affects more than 150 sq ft of facade elevation.",
+      "topic": "size",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm Type II threshold of 150 sq ft of facade elevation."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Type I 4-8 weeks, Type II 8-10 weeks",
+      "claim_full": "Type I review timeline is 4-8 weeks; Type II is 8-10 weeks with neighbor notice.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm Type I review timeline 4-8 weeks; Type II 8-10 weeks."
+    },
+    {
+      "id": "A13",
+      "claim_short": "Type II HRR fees $991-$6,124",
+      "claim_short_alt": "",
+      "claim_full": "Type II Historic Resource Review fees are roughly $991 to $6,124.",
+      "topic": "fees",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm fee range $991-$6,124 for Type II HRR."
+    },
+    {
+      "id": "A14",
+      "claim_short": "Community Design Standards in 33.218",
+      "claim_full": "Conservation Districts allow skipping discretionary HRR if the design meets objective standards in Chapter 33.218.",
+      "topic": "citations",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "Chapter 33.218",
+      "verified_truth": "Accuracy flags confirm Community Design Standards alternative path under Chapter 33.218 is available for Conservation Districts."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Type Ix restoration track exists",
+      "claim_full": "There is a Type Ix restoration track that is faster when framing work as restoration rather than addition.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags list 'Existence of a Type Ix restoration track' as a flagged claim \u2014 its existence as described is not verified and should be checked against current Portland code."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Use PortlandMaps to verify zoning/overlays",
+      "claim_full": "The resident should look up the address on portlandmaps.com to confirm zoning, the Conservation District overlay, and other overlays.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portlandmaps.com",
+      "verified_truth": "PortlandMaps is the authoritative city tool for address-specific zoning and overlay lookups."
+    },
+    {
+      "id": "A17",
+      "claim_short": "Read Ladd's 2011 design guidelines",
+      "claim_full": "The current approval criteria document is the Ladd's Addition Conservation District Design Guidelines 2011 update.",
+      "topic": "citations",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "Ladd's Addition Conservation District Design Guidelines (2011 update)",
+      "verified_truth": "Accuracy flags confirm the Ladd's Addition Design Guidelines 2011 update is the current document."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Request free pre-application conference",
+      "claim_full": "The resident should request a free pre-application conference with Portland Permitting & Development to determine review type.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Pre-application conferences are an established Portland Permitting & Development service; not specifically verified in flags but consistent with city practice."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Loop in HAND neighborhood association",
+      "claim_full": "HAND (Hosford-Abernethy Neighborhood Development Association) is the recognized neighborhood association that receives notice on Type II reviews.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Accuracy flags confirm HAND is the recognized neighborhood association receiving Type II notice."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Oregon 10-year property tax freeze",
+      "claim_full": "The Oregon Special Assessment of Historic Property program offers a 10-year property tax freeze for substantial rehabilitation of contributing historic homes.",
+      "topic": "costs",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Oregon Special Assessment of Historic Property",
+      "verified_truth": "Accuracy flags confirm Oregon Special Assessment of Historic Property provides a 10-year property tax freeze."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Federal rehab tax credits if income-producing",
+      "claim_full": "Federal rehabilitation tax credits may apply if any portion of the rehab is for income-producing use.",
+      "topic": "costs",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.5,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Federal historic rehab tax credits do require an income-producing component; not specifically verified in flags."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Consult SHPO before finalizing scope",
+      "claim_full": "The resident should consult the State Historic Preservation Office before finalizing project scope to preserve tax-incentive eligibility.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.9,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "SHPO consultation is the standard process for Oregon historic tax incentives; not specifically verified in flags."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Differentiate new from old construction",
+      "claim_full": "Review will require that any new portion of the porch be visually differentiated from the original so as not to fake history.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "This reflects standard Secretary of the Interior's Standards for Rehabilitation principles applied in Portland Conservation District review."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Reversibility preferred in review",
+      "claim_full": "Reviewers prefer additions that are reversible in principle so the historic form could be recovered later.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Reversibility is a principle in the Secretary of the Interior's Standards and Portland Conservation District guidance."
+    },
+    {
+      "id": "A25",
+      "claim_short": "Massing/materials must match Craftsman",
+      "claim_full": "The new porch portion's massing, materials, columns, railings, and roofline must match the original Craftsman vocabulary.",
+      "topic": "definitions",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Consistent with Ladd's Addition Design Guidelines compatibility requirements; not independently verified in flags."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Restoration framing lands better than addition",
+      "claim_full": "Framing the project as restoration with compatible expansion generally lands better in review than framing it as a pure addition.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.5,
+      "actionability": 0.7,
+      "correctness": "correct-judg",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "This is a judgment call based on guideline preference for restoration over replacement; not independently verified."
+    }
+  ]
+}

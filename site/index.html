@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portland Code &amp; Regulation AI Evaluation</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    background: #0f1117;
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+
+  header {
+    padding: 20px 28px 16px;
+    border-bottom: 1px solid #1e2535;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  header h1 { font-size: 15px; font-weight: 600; color: #f1f5f9; letter-spacing: 0.02em; }
+  header p  { font-size: 12px; color: #64748b; }
+
+  #map {
+    width: 100%;
+    height: 320px;
+    border-bottom: 1px solid #1e2535;
+  }
+
+  /* ── Matrix ── */
+  .matrix-wrap {
+    padding: 24px 28px;
+    overflow-x: auto;
+  }
+
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: 185px repeat(11, minmax(130px, 1fr));
+    gap: 5px;
+    min-width: max-content;
+  }
+
+  .corner-cell { /* empty top-left */ }
+
+  .addr-header {
+    background: #0c1020;
+    border: 1px solid #1e2535;
+    border-radius: 5px;
+    padding: 8px 10px;
+  }
+  .addr-header-num {
+    font-size: 8px;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 3px;
+  }
+  .addr-header-street {
+    font-size: 10px;
+    color: #7dd3fc;
+    line-height: 1.3;
+    margin-bottom: 2px;
+  }
+  .addr-header-hood {
+    font-size: 9px;
+    color: #475569;
+    line-height: 1.3;
+  }
+  .addr-header-note {
+    font-size: 8px;
+    color: #f59e0b;
+    line-height: 1.3;
+    margin-top: 4px;
+    opacity: 0.8;
+  }
+
+  .scenario-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+  }
+  .pin-badge {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .scenario-label-text { font-size: 11px; color: #94a3b8; line-height: 1.4; }
+  .scenario-label-text strong { display: block; color: #e2e8f0; font-size: 12px; }
+
+  .cell {
+    background: #141820;
+    border: 1px solid #1e2535;
+    border-radius: 5px;
+    padding: 9px 11px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .cell:hover { border-color: #334155; background: #181e2a; }
+
+  .tool-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .tool-pill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #1e2535;
+    color: #2d3748;
+    letter-spacing: 0.02em;
+  }
+  .tool-pill.done   { border-color: #166534; color: #4ade80; background: #052e16; }
+  .tool-pill.scored { border-color: #1e3a5f; color: #7dd3fc; background: #0c1929; }
+  .pill-scores {
+    font-weight: 700;
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+  .pill-sep { opacity: 0.4; margin: 0 1px; }
+  .s0 { color: #ef4444; }
+  .s1 { color: #f97316; }
+  .s2 { color: #eab308; }
+  .s3 { color: #22c55e; }
+
+  /* ── Modal ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 32px 24px;
+  }
+  .modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+
+  .modal {
+    background: #141820;
+    border: 1px solid #1e2535;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 860px;
+    padding: 28px;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: none; border: none;
+    color: #475569; font-size: 18px;
+    cursor: pointer; padding: 4px;
+  }
+  .modal-close:hover { color: #94a3b8; }
+
+  .modal-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .modal-title { font-size: 14px; font-weight: 600; color: #f1f5f9; }
+  .modal-subtitle { font-size: 11px; color: #7dd3fc; margin-top: 3px; }
+
+  .query-block {
+    background: #0f1117;
+    border: 1px solid #1e2535;
+    border-radius: 5px;
+    padding: 14px 16px;
+    margin-bottom: 24px;
+  }
+  .query-block-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .query-block-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: #475569; }
+  .copy-query-btn { background: none; border: none; cursor: pointer; padding: 0; line-height: 1; color: #475569; transition: color 0.15s; }
+  .copy-query-btn:hover { color: #94a3b8; }
+  .copy-query-btn svg { display: block; }
+  .query-block p { font-size: 12px; color: #cbd5e1; line-height: 1.6; }
+
+  .tools-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #475569;
+    margin-bottom: 12px;
+  }
+
+  .tool-tabs { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tool-tab {
+    padding: 5px 12px;
+    font-size: 11px;
+    font-family: inherit;
+    border-radius: 4px;
+    border: 1px solid #1e2535;
+    background: #0f1117;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  .tool-tab:hover { border-color: #334155; color: #94a3b8; }
+  .tool-tab.active { background: #1e2535; border-color: #334155; color: #e2e8f0; }
+
+  .tool-panel { display: none; }
+  .tool-panel.active { display: block; }
+
+  .response-textarea {
+    width: 100%;
+    min-height: 160px;
+    background: #0f1117;
+    border: 1px solid #1e2535;
+    border-radius: 5px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .response-textarea:focus { border-color: #334155; }
+  .response-textarea::placeholder { color: #334155; font-style: italic; }
+
+  .scoring-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .score-block {
+    background: #0f1117;
+    border: 1px solid #1e2535;
+    border-radius: 5px;
+    padding: 12px 14px;
+  }
+  .score-block-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; margin-bottom: 8px; }
+
+  .usefulness-scale { display: flex; gap: 6px; }
+  .u-option {
+    flex: 1;
+    text-align: center;
+    padding: 6px 4px;
+    border: 1px solid #1e2535;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  .u-option:hover { border-color: #334155; color: #94a3b8; }
+  .u-option.selected { border-color: #7dd3fc; color: #7dd3fc; background: #0c1929; }
+  .u-option .u-num { font-size: 14px; font-weight: 700; display: block; margin-bottom: 2px; }
+  .u-option .u-label { font-size: 8px; }
+
+  .citation-scale { display: flex; gap: 6px; }
+  .c-option {
+    flex: 1;
+    text-align: center;
+    padding: 6px 4px;
+    border: 1px solid #1e2535;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  .c-option:hover { border-color: #334155; color: #94a3b8; }
+  .c-option.selected { border-color: #a78bfa; color: #a78bfa; background: #1a103a; }
+  .c-option .c-num { font-size: 14px; font-weight: 700; display: block; margin-bottom: 2px; }
+  .c-option .c-label { font-size: 8px; }
+
+  .flags-textarea {
+    width: 100%;
+    min-height: 80px;
+    background: #0f1117;
+    border: 1px solid #1e2535;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 11px;
+    color: #94a3b8;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+    margin-top: 4px;
+  }
+  .flags-textarea:focus { border-color: #334155; }
+  .flags-textarea::placeholder { color: #334155; font-style: italic; }
+
+  .eval-btn {
+    font-family: inherit; font-size: 11px;
+    padding: 6px 14px; border-radius: 4px;
+    border: 1px solid #334155; background: #1e2535;
+    color: #7dd3fc; cursor: pointer;
+    margin-bottom: 12px; transition: all 0.1s;
+    display: inline-block;
+  }
+  .eval-btn:hover { border-color: #4a90d9; background: #1e3a5f; }
+  .eval-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .rationale-text { font-size: 10px; color: #64748b; font-style: italic; margin-top: 6px; min-height: 14px; }
+  .eval-error { font-size: 10px; color: #f87171; margin-top: 4px; margin-bottom: 8px; white-space: pre-wrap; display: none; }
+
+  .compare-section { border-top: 1px solid #1e2535; margin-top: 28px; padding-top: 20px; }
+  .compare-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .compare-btn { font-family: inherit; font-size: 11px; padding: 7px 16px; border-radius: 4px; border: 1px solid #4a5568; background: #1a1f2e; color: #a78bfa; cursor: pointer; transition: all 0.1s; }
+  .compare-btn:hover:not(:disabled) { border-color: #a78bfa; background: #2d1f4f; }
+  .compare-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .compare-status { font-size: 10px; color: #475569; }
+  .compare-error { font-size: 10px; color: #f87171; margin-bottom: 8px; display: none; white-space: pre-wrap; }
+  .compare-report { margin-top: 16px; background: #0a0e18; border: 1px solid #1e2535; border-radius: 6px; padding: 20px 24px; display: none; }
+  .compare-report h2 { font-size: 13px; font-weight: 600; color: #e2e8f0; margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 1px solid #1e2535; }
+  .compare-report h2:first-child { margin-top: 0; }
+  .compare-report h3 { font-size: 11px; color: #94a3b8; margin: 12px 0 5px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .compare-report p { font-size: 12px; color: #94a3b8; line-height: 1.7; margin: 5px 0; }
+  .compare-report ul { margin: 6px 0 6px 18px; padding: 0; }
+  .compare-report li { font-size: 12px; color: #94a3b8; line-height: 1.6; margin: 3px 0; }
+  .compare-report strong { color: #cbd5e1; }
+  .compare-report em { color: #7dd3fc; font-style: normal; }
+  .compare-report table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 12px; }
+  .compare-report th { text-align: left; padding: 5px 10px; color: #64748b; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #1e2535; }
+  .compare-report td { padding: 6px 10px; color: #94a3b8; border-bottom: 1px solid #111827; }
+  .compare-report tr:last-child td { border-bottom: none; }
+  .compare-report hr { border: none; border-top: 1px solid #1e2535; margin: 14px 0; }
+  .compare-report code { background: #1e2535; padding: 1px 5px; border-radius: 3px; font-size: 11px; }
+
+  .meta-bar { display: grid; grid-template-columns: 180px 1fr; gap: 8px; margin-bottom: 10px; }
+  .meta-field { display: flex; flex-direction: column; gap: 3px; }
+  .meta-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; }
+  .meta-input {
+    font-family: inherit; font-size: 11px;
+    background: #0f1117; border: 1px solid #1e2535;
+    border-radius: 4px; padding: 5px 8px;
+    color: #94a3b8; outline: none;
+    transition: border-color 0.15s;
+  }
+  .meta-input:focus { border-color: #334155; }
+  .meta-input::placeholder { color: #334155; }
+
+  .tab-wrapper { position: relative; display: inline-block; }
+  .tab-info-dot {
+    display: inline-block; width: 5px; height: 5px;
+    border-radius: 50%; background: #7dd3fc;
+    margin-left: 5px; vertical-align: middle;
+    opacity: 0; transition: opacity 0.15s;
+  }
+  .tab-info-dot.visible { opacity: 1; }
+  .tab-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px); left: 0;
+    background: #1e2535;
+    border: 1px solid #334155;
+    border-radius: 5px;
+    padding: 10px 12px;
+    min-width: 280px;
+    z-index: 2000;
+    pointer-events: none;
+  }
+  .tab-wrapper:hover .tab-tooltip { display: block; }
+  .tooltip-row { display: flex; gap: 8px; margin-bottom: 4px; align-items: baseline; }
+  .tooltip-row:last-child { margin-bottom: 0; }
+  .tooltip-key { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; flex-shrink: 0; width: 80px; }
+  .tooltip-val { font-size: 11px; color: #cbd5e1; word-break: break-all; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Portland Code &amp; Regulation AI Evaluation</h1>
+  <p>7 scenarios &times; 11 addresses &times; 4 AI tools &mdash; hackathon: City Code &amp; Regulation Search Assistant</p>
+</header>
+
+<div id="map"></div>
+
+<div class="matrix-wrap">
+  <div class="matrix-grid" id="matrix-grid"></div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const TOOLS = [
+  { id: 'chatgpt', label: 'ChatGPT (5.5)',     defaultModel: 'gpt-4.5' },
+  { id: 'claude',  label: 'Claude (Opus 4.7)', defaultModel: 'claude-opus-4-7' },
+  { id: 'grok',    label: 'Grok',              defaultModel: 'grok-3' },
+  { id: 'gemini',  label: 'Gemini',            defaultModel: 'gemini-2.0-flash' },
+];
+
+const ADDRESSES = [
+  { id: 'a01', num: 1,  short: '2815 NE Klickitat St',   neighborhood: 'Irvington',         note: 'Historic Conservation District',               address: '2815 NE Klickitat St, Portland (Irvington)',            lat: 45.5441, lng: -122.6405 },
+  { id: 'a02', num: 2,  short: '4521 SE Belmont St',       neighborhood: 'Sunnyside',         note: 'CM2 commercial/mixed-use corridor',             address: '4521 SE Belmont St, Portland (Sunnyside)',             lat: 45.5143, lng: -122.6148 },
+  { id: 'a03', num: 3,  short: '16535 NE Everett Ct',      neighborhood: 'Glenfair',          note: 'Outer East — R7, limited urban services',      address: '16535 NE Everett Ct, Portland (Glenfair)',             lat: 45.5249, lng: -122.4986 },
+  { id: 'a04', num: 4,  short: '5955 SE Milwaukie Ave',   neighborhood: 'Sellwood-Moreland', note: 'Mixed-use commercial corridor',                 address: '5955 SE Milwaukie Ave, Portland (Sellwood-Moreland)',  lat: 45.4788, lng: -122.6568 },
+  { id: 'a05', num: 5,  short: '837 SE Mill St',          neighborhood: 'Hosford-Abernethy', note: 'Industrial Sanctuary zone (CS)',                address: '837 SE Mill St, Portland (Hosford-Abernethy)',          lat: 45.5124, lng: -122.6553 },
+  { id: 'a06', num: 6,  short: '3524 SE Ladd Ave',        neighborhood: "Ladd's Addition",   note: "Historic Landmark District — strict design guidelines", address: "3524 SE Ladd Ave, Portland (Ladd's Addition)",    lat: 45.5076, lng: -122.6498 },
+  { id: 'a07', num: 7,  short: '7523 SE 84th Ave',        neighborhood: 'Lents',             note: 'FEMA Special Flood Hazard Area (Johnson Creek)', address: '7523 SE 84th Ave, Portland (Lents)',                  lat: 45.4715, lng: -122.5759 },
+  { id: 'a08', num: 8,  short: '2311 SW Fairmount Blvd',  neighborhood: 'West Hills',        note: 'Steep slope (>25%) + Environmental Zone',       address: '2311 SW Fairmount Blvd, Portland (West Hills)',        lat: 45.5062, lng: -122.7074 },
+  { id: 'a09', num: 9,  short: '3821 NE 148th Ave',       neighborhood: 'Parkrose',          note: 'PDX airport noise contour (65 dB DNL)',         address: '3821 NE 148th Ave, Portland (Parkrose)',               lat: 45.5567, lng: -122.4914 },
+  { id: 'a10', num: 10, short: '9803 N Columbia Blvd',    neighborhood: 'St. Johns',         note: 'Columbia Slough Env. Overlay + flood zone',    address: '9803 N Columbia Blvd, Portland (St. Johns)',           lat: 45.5942, lng: -122.6905 },
+  { id: 'a11', num: 11, short: '831 SE 174th Ave',        neighborhood: 'Centennial',        note: 'Outer SE — R10 zoning, county-transition area', address: '831 SE 174th Ave, Portland (Centennial)',              lat: 45.5128, lng: -122.4860 },
+];
+
+const SCENARIOS = [
+  {
+    id: 'tiny-house',
+    num: 1,
+    color: '#3b82f6',
+    label: 'Tiny House',
+    sub: 'Residential structure on lot',
+    addressQuery: (a) => `Can I build a tiny house on my lot at ${a.address}? What are the zoning requirements, minimum size, setbacks, utility connections, and permit requirements for this specific property?`,
+  },
+  {
+    id: 'fence-height',
+    num: 2,
+    color: '#10b981',
+    label: 'Fence Height',
+    sub: 'Front, back, and side yard limits',
+    addressQuery: (a) => `What is the maximum fence height allowed at ${a.address} for the front yard, back yard, and side yard? Does my zoning or any overlay affect these limits?`,
+  },
+  {
+    id: 'tree-removal',
+    num: 3,
+    color: '#f59e0b',
+    label: 'Tree Removal',
+    sub: 'Front yard tree, Title 11',
+    addressQuery: (a) => `Can I remove a tree in the front yard at ${a.address}? Are there any heritage tree designations, permit requirements, or replacement obligations for this specific property under Title 11?`,
+  },
+  {
+    id: 'adu-setbacks',
+    num: 4,
+    color: '#a855f7',
+    label: 'ADU / Setbacks',
+    sub: 'Accessory dwelling unit',
+    addressQuery: (a) => `Can I add an ADU to my property at ${a.address}? What are the setback requirements, size limits, and permit process for this specific address and zoning?`,
+  },
+  {
+    id: 'roof-permit',
+    num: 5,
+    color: '#ef4444',
+    label: 'Roof Replacement Permit',
+    sub: 'Title 24 building regulations',
+    addressQuery: (a) => `Do I need a permit to replace the roof at ${a.address}? Are there any special requirements for this property based on its zoning, age, or overlay districts?`,
+  },
+  {
+    id: 'lot-division',
+    num: 6,
+    color: '#0ea5e9',
+    label: 'Lot Division / Condos',
+    sub: 'Title 33 Zoning Code',
+    addressQuery: (a) => `Can the lot at ${a.address} be divided and developed into condos? What does the current zoning allow, and what is the process for lot division or condo conversion under Title 33?`,
+  },
+  {
+    id: 'business-sign',
+    num: 7,
+    color: '#f97316',
+    label: 'Business A-Board Sign',
+    sub: 'Title 32 Signs',
+    addressQuery: (a) => `Can I put an A-board sign outside my business at ${a.address}? What are the size limits, sidewalk clearance requirements, and permit requirements for this location under Title 32?`,
+  },
+];
+
+// ── State ─────────────────────────────────────────────────────────────────────
+function emptyResults() {
+  const r = {};
+  TOOLS.forEach(t => {
+    r[t.id] = { response: '', usefulness: null, citationQuality: null, accuracyFlags: '', rationale: '', model: '', systemPrompt: '' };
+  });
+  return r;
+}
+
+const STATE_KEY = 'pdx-codes-eval-v2';
+let state = {};
+
+function initState() {
+  SCENARIOS.forEach(s => {
+    ADDRESSES.forEach(a => {
+      state[s.id + '-' + a.id] = emptyResults();
+    });
+  });
+  try {
+    const saved = localStorage.getItem(STATE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      Object.keys(parsed).forEach(k => {
+        if (state[k]) {
+          const merged = { ...emptyResults(), ...parsed[k] };
+          TOOLS.forEach(t => {
+            if (parsed[k][t.id]) {
+              merged[t.id] = { ...emptyResults()[t.id], ...parsed[k][t.id] };
+            }
+          });
+          state[k] = merged;
+        }
+      });
+    }
+  } catch(e) {}
+  Object.keys(state).forEach(k => {
+    TOOLS.forEach(t => {
+      if (!state[k][t.id].model) state[k][t.id].model = t.defaultModel;
+    });
+  });
+}
+
+function mergeServerState(serverData) {
+  Object.keys(serverData).forEach(k => {
+    if (state[k]) {
+      const merged = { ...emptyResults(), ...serverData[k] };
+      TOOLS.forEach(t => {
+        if (serverData[k][t.id]) merged[t.id] = { ...emptyResults()[t.id], ...serverData[k][t.id] };
+      });
+      Object.keys(serverData[k]).forEach(key => {
+        if (!TOOLS.find(t => t.id === key)) merged[key] = serverData[k][key];
+      });
+      state[k] = merged;
+    }
+  });
+}
+
+function persistState() {
+  try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch(e) {}
+  fetch('/api/state', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(state),
+  }).catch(() => {});
+}
+
+initState();
+
+fetch('/api/state')
+  .then(r => r.json())
+  .then(serverData => {
+    if (serverData && typeof serverData === 'object' && !serverData.error) {
+      mergeServerState(serverData);
+      renderMatrix();
+    }
+  })
+  .catch(() => {});
+
+// ── Map ───────────────────────────────────────────────────────────────────────
+const map = L.map('map').setView([45.522, -122.648], 12);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors',
+  maxZoom: 19,
+}).addTo(map);
+
+function makeAddrIcon(num) {
+  const fontSize = num > 9 ? '9' : '11';
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <circle cx="15" cy="15" r="13" fill="#1e3a5f" stroke="#7dd3fc" stroke-width="1.5"/>
+    <text x="15" y="19" text-anchor="middle" font-family="monospace" font-size="${fontSize}" font-weight="bold" fill="#7dd3fc">${num}</text>
+  </svg>`;
+  return L.divIcon({ html: svg, iconSize: [30, 30], iconAnchor: [15, 15], popupAnchor: [0, -15], className: '' });
+}
+
+ADDRESSES.forEach(a => {
+  L.marker([a.lat, a.lng], { icon: makeAddrIcon(a.num) })
+    .addTo(map)
+    .bindPopup(`<b style="font-family:monospace;font-size:11px">${a.num}. ${a.short}</b><br><span style="font-family:monospace;font-size:10px;color:#555">${a.neighborhood}</span>`);
+});
+
+// ── Matrix ────────────────────────────────────────────────────────────────────
+function scoreSpan(n) {
+  return n !== null ? `<span class="s${n}">${n}</span>` : '<span style="opacity:0.3">·</span>';
+}
+
+function toolStatusPills(results) {
+  return TOOLS.map(t => {
+    const r = results[t.id];
+    const cls = r.response ? (r.usefulness !== null && r.citationQuality !== null ? 'scored' : 'done') : '';
+    const scores = (r.usefulness !== null || r.citationQuality !== null)
+      ? `<span class="pill-scores">${scoreSpan(r.usefulness)}<span class="pill-sep">/</span>${scoreSpan(r.citationQuality)}</span>`
+      : '';
+    return `<span class="tool-pill ${cls}">${t.label.split(' ')[0]}${scores}</span>`;
+  }).join('');
+}
+
+function cellFraction(results) { return ''; }
+
+function renderMatrix() {
+  const container = document.getElementById('matrix-grid');
+  let html = '';
+
+  html += '<div class="corner-cell"></div>';
+
+  ADDRESSES.forEach(a => {
+    html += `<div class="addr-header">
+      <div class="addr-header-num">${a.num}</div>
+      <div class="addr-header-street">${escHtml(a.short)}</div>
+      <div class="addr-header-hood">${escHtml(a.neighborhood)}</div>
+      ${a.note ? `<div class="addr-header-note">${escHtml(a.note)}</div>` : ''}
+    </div>`;
+  });
+
+  SCENARIOS.forEach(s => {
+    html += `<div class="scenario-label">
+      <div class="pin-badge" style="background:${s.color}">${s.num}</div>
+      <div class="scenario-label-text">
+        <strong>${s.label}</strong>
+        ${s.sub}
+      </div>
+    </div>`;
+    ADDRESSES.forEach(a => {
+      const results = state[s.id + '-' + a.id];
+      html += `<div class="cell" onclick="openModal('${s.id}','${a.id}')">
+        ${cellFraction(results)}
+        <div class="tool-pills">${toolStatusPills(results)}</div>
+      </div>`;
+    });
+  });
+
+  container.innerHTML = html;
+}
+
+// ── Modal ─────────────────────────────────────────────────────────────────────
+let activeScenario  = null;
+let activeAddressId = null;
+let activeTool      = TOOLS[0].id;
+
+function openModal(scenarioId, addressId) {
+  activeScenario  = scenarioId;
+  activeAddressId = addressId;
+  activeTool      = TOOLS[0].id;
+  renderModal();
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal() {
+  flushActive();
+  document.getElementById('modal-overlay').classList.remove('open');
+  renderMatrix();
+  activeScenario  = null;
+  activeAddressId = null;
+}
+
+function flushActive() {
+  if (!activeScenario || !activeAddressId) return;
+  const cellKey = activeScenario + '-' + activeAddressId;
+  TOOLS.forEach(t => {
+    const rta = document.getElementById('response-' + t.id);
+    const fta = document.getElementById('flags-' + t.id);
+    if (rta) state[cellKey][t.id].response = rta.value;
+    if (fta) state[cellKey][t.id].accuracyFlags = fta.value;
+  });
+  persistState();
+  TOOLS.forEach(t => updateTabTooltip(t.id));
+}
+
+function selectTool(toolId) {
+  flushActive();
+  activeTool = toolId;
+  TOOLS.forEach(t => {
+    const panel = document.getElementById('panel-' + t.id);
+    const tab   = document.getElementById('tab-'   + t.id);
+    if (panel) panel.classList.toggle('active', t.id === toolId);
+    if (tab)   tab.classList.toggle('active',   t.id === toolId);
+  });
+}
+
+function setScore(toolId, n) {
+  const cellKey = activeScenario + '-' + activeAddressId;
+  state[cellKey][toolId].usefulness = n;
+  persistState();
+  [0,1,2,3].forEach(i => {
+    const el = document.getElementById('u-' + toolId + '-' + i);
+    if (el) el.classList.toggle('selected', i === n);
+  });
+  updateCompareBtn();
+}
+
+function setCitationScore(toolId, n) {
+  const cellKey = activeScenario + '-' + activeAddressId;
+  state[cellKey][toolId].citationQuality = n;
+  persistState();
+  [0,1,2,3].forEach(i => {
+    const el = document.getElementById('c-' + toolId + '-' + i);
+    if (el) el.classList.toggle('selected', i === n);
+  });
+}
+
+function saveResponse(toolId) {
+  const cellKey = activeScenario + '-' + activeAddressId;
+  const el = document.getElementById('response-' + toolId);
+  if (el) { state[cellKey][toolId].response = el.value; persistState(); }
+}
+
+function saveFlags(toolId) {
+  const cellKey = activeScenario + '-' + activeAddressId;
+  const el = document.getElementById('flags-' + toolId);
+  if (el) { state[cellKey][toolId].accuracyFlags = el.value; persistState(); }
+}
+
+function saveMeta(toolId) {
+  const cellKey = activeScenario + '-' + activeAddressId;
+  const m = document.getElementById('model-'     + toolId);
+  const s = document.getElementById('sysprompt-' + toolId);
+  if (m) state[cellKey][toolId].model        = m.value;
+  if (s) state[cellKey][toolId].systemPrompt = s.value;
+  persistState();
+  updateTabTooltip(toolId);
+}
+
+function updateTabTooltip(toolId) {
+  const cellKey = activeScenario + '-' + activeAddressId;
+  if (!cellKey || !state[cellKey]) return;
+  const r = state[cellKey][toolId];
+  const modelVal = r.model || '—';
+  const spVal = r.systemPrompt ? (r.systemPrompt.length > 80 ? r.systemPrompt.slice(0,80)+'…' : r.systemPrompt) : '—';
+  const ttModel = document.getElementById('tt-model-'     + toolId);
+  const ttSp    = document.getElementById('tt-sysprompt-' + toolId);
+  const dot     = document.getElementById('dot-'          + toolId);
+  if (ttModel) ttModel.textContent = modelVal;
+  if (ttSp)    ttSp.textContent    = spVal;
+  if (dot)     dot.classList.toggle('visible', !!(r.model || r.systemPrompt));
+}
+
+function runEval(toolId) {
+  if (!activeScenario || !activeAddressId) return;
+  const s = SCENARIOS.find(x => x.id === activeScenario);
+  const a = ADDRESSES.find(x => x.id === activeAddressId);
+  const query = s.addressQuery(a);
+
+  const rta = document.getElementById('response-' + toolId);
+  const response = rta ? rta.value.trim() : '';
+  if (!response) { alert('Paste a response first.'); return; }
+
+  const btn    = document.getElementById('eval-btn-'   + toolId);
+  const errDiv = document.getElementById('eval-error-' + toolId);
+  if (btn)    { btn.textContent = 'Evaluating…'; btn.disabled = true; }
+  if (errDiv) { errDiv.textContent = ''; errDiv.style.display = 'none'; }
+
+  fetch('/api/evaluate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, response }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) throw new Error(data.error);
+    setScore(toolId, data.usefulness);
+    setCitationScore(toolId, data.citation_quality);
+    let flagsText = (data.accuracy_flags || []).join('\n');
+    if (data.data_quality_notes) {
+      flagsText += (flagsText ? '\n\n' : '') + '[Data quality] ' + data.data_quality_notes;
+    }
+    const fta = document.getElementById('flags-' + toolId);
+    if (fta) { fta.value = flagsText; }
+    saveFlags(toolId);
+    const cellKey = activeScenario + '-' + activeAddressId;
+    state[cellKey][toolId].rationale = data.rationale || '';
+    persistState();
+    const ratDiv = document.getElementById('rationale-' + toolId);
+    if (ratDiv) ratDiv.textContent = data.rationale || '';
+    if (btn) { btn.textContent = 'Re-evaluate'; btn.disabled = false; }
+  })
+  .catch(err => {
+    if (btn)    { btn.textContent = 'Error — retry'; btn.disabled = false; }
+    if (errDiv) { errDiv.textContent = err.message || String(err); errDiv.style.display = 'block'; }
+  });
+}
+
+function renderModal() {
+  const s = SCENARIOS.find(x => x.id === activeScenario);
+  const a = ADDRESSES.find(x => x.id === activeAddressId);
+  const query   = s.addressQuery(a);
+  const results = state[s.id + '-' + a.id];
+  const usefulnessLabels = ['Unactionable', 'Vague', 'Actionable', 'Fully useful'];
+  const citationLabels   = ['None', 'Vague', 'Named Title', 'Specific §'];
+
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-meta">
+      <div class="pin-badge" style="background:${s.color}">${s.num}</div>
+      <div>
+        <div class="modal-title">${s.label}</div>
+        <div class="modal-subtitle">${escHtml(a.address)}</div>
+      </div>
+    </div>
+
+    <div class="query-block">
+      <div class="query-block-header">
+        <div class="query-block-label">Query</div>
+        <button class="copy-query-btn" title="Copy query" onclick="copyQuery(this, ${escAttr(JSON.stringify(query))})">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M4 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2V9h1v5a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3h5v1H4Zm6-1h4a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/></svg>
+        </button>
+      </div>
+      <p>${escHtml(query)}</p>
+    </div>
+
+    <div class="tools-label">AI Tool Responses</div>
+    <div class="tool-tabs">
+      ${TOOLS.map(t =>
+        `<div class="tab-wrapper">
+          <button class="tool-tab${activeTool === t.id ? ' active' : ''}" id="tab-${t.id}" onclick="selectTool('${t.id}')">${t.label}<span class="tab-info-dot" id="dot-${t.id}"></span></button>
+          <div class="tab-tooltip" id="tooltip-${t.id}">
+            <div class="tooltip-row"><span class="tooltip-key">Model</span><span class="tooltip-val" id="tt-model-${t.id}">—</span></div>
+            <div class="tooltip-row"><span class="tooltip-key">System prompt</span><span class="tooltip-val" id="tt-sysprompt-${t.id}">—</span></div>
+          </div>
+        </div>`
+      ).join('')}
+    </div>
+
+    ${TOOLS.map(t => {
+      const r = results[t.id];
+      return `<div class="tool-panel${activeTool === t.id ? ' active' : ''}" id="panel-${t.id}">
+        <div class="meta-bar">
+          <div class="meta-field">
+            <label class="meta-label">Model</label>
+            <input class="meta-input" id="model-${t.id}" type="text"
+                   placeholder="e.g. gpt-4.5"
+                   oninput="saveMeta('${t.id}')">
+          </div>
+          <div class="meta-field">
+            <label class="meta-label">System prompt</label>
+            <input class="meta-input" id="sysprompt-${t.id}" type="text"
+                   placeholder="default — or paste first line"
+                   oninput="saveMeta('${t.id}')">
+          </div>
+        </div>
+        <textarea
+          class="response-textarea"
+          id="response-${t.id}"
+          placeholder="Paste the ${t.label} response here…"
+          oninput="saveResponse('${t.id}')"
+        ></textarea>
+        <button class="eval-btn" id="eval-btn-${t.id}" onclick="runEval('${t.id}')">Evaluate</button>
+        <div class="eval-error" id="eval-error-${t.id}"></div>
+        <div class="scoring-grid">
+          <div class="score-block">
+            <div class="score-block-label">Usefulness Score (0–3)</div>
+            <div class="usefulness-scale">
+              ${[0,1,2,3].map(n => `
+                <div class="u-option${r.usefulness === n ? ' selected' : ''}" id="u-${t.id}-${n}" onclick="setScore('${t.id}',${n})">
+                  <span class="u-num">${n}</span>
+                  <span class="u-label">${usefulnessLabels[n]}</span>
+                </div>`).join('')}
+            </div>
+            <div class="rationale-text" id="rationale-${t.id}"></div>
+          </div>
+          <div class="score-block">
+            <div class="score-block-label">Citation Quality (0–3)</div>
+            <div class="citation-scale">
+              ${[0,1,2,3].map(n => `
+                <div class="c-option${r.citationQuality === n ? ' selected' : ''}" id="c-${t.id}-${n}" onclick="setCitationScore('${t.id}',${n})">
+                  <span class="c-num">${n}</span>
+                  <span class="c-label">${citationLabels[n]}</span>
+                </div>`).join('')}
+            </div>
+          </div>
+        </div>
+        <div class="score-block" style="margin-bottom:12px">
+          <div class="score-block-label">Accuracy Flags &mdash; one per line (city to verify)</div>
+          <textarea
+            class="flags-textarea"
+            id="flags-${t.id}"
+            placeholder="Specific factual claims the city should verify, one per line…"
+            oninput="saveFlags('${t.id}')"
+          ></textarea>
+        </div>
+      </div>`;
+    }).join('')}
+
+    <div class="compare-section">
+      <div class="compare-bar">
+        <button class="compare-btn" id="compare-btn" onclick="runCompare()" disabled>Evaluate &amp; Compare All</button>
+        <span class="compare-status" id="compare-status"></span>
+      </div>
+      <div class="compare-error" id="compare-error"></div>
+      <div class="compare-report" id="compare-report"></div>
+    </div>
+  `;
+
+  TOOLS.forEach(t => {
+    const r = results[t.id];
+    const rta    = document.getElementById('response-'  + t.id);
+    const fta    = document.getElementById('flags-'     + t.id);
+    const ratDiv = document.getElementById('rationale-' + t.id);
+    const mi     = document.getElementById('model-'     + t.id);
+    const si     = document.getElementById('sysprompt-' + t.id);
+    if (rta)    rta.value           = r.response     || '';
+    if (fta)    fta.value           = r.accuracyFlags|| '';
+    if (ratDiv) ratDiv.textContent  = r.rationale    || '';
+    if (mi)     mi.value            = r.model        || '';
+    if (si)     si.value            = r.systemPrompt || '';
+  });
+  TOOLS.forEach(t => updateTabTooltip(t.id));
+
+  updateCompareBtn();
+  const cellKey = activeScenario + '-' + activeAddressId;
+  const savedReport = (state[cellKey] || {})._compareReport;
+  if (savedReport) {
+    const reportEl = document.getElementById('compare-report');
+    const btn      = document.getElementById('compare-btn');
+    if (reportEl) { reportEl.innerHTML = mdToHtml(savedReport); reportEl.style.display = 'block'; }
+    if (btn) btn.textContent = 'Re-compare';
+  }
+}
+
+function allEvaluated() {
+  if (!activeScenario || !activeAddressId) return false;
+  const results = state[activeScenario + '-' + activeAddressId];
+  return TOOLS.every(t => results[t.id].usefulness !== null);
+}
+
+function updateCompareBtn() {
+  const btn      = document.getElementById('compare-btn');
+  const statusEl = document.getElementById('compare-status');
+  if (!btn || !activeScenario || !activeAddressId) return;
+  const results = state[activeScenario + '-' + activeAddressId];
+  const done  = TOOLS.filter(t => results[t.id].usefulness !== null).length;
+  const total = TOOLS.length;
+  btn.disabled = done < total;
+  if (statusEl) statusEl.textContent = done < total ? `${done} / ${total} evaluated` : '';
+}
+
+function runCompare() {
+  const s = SCENARIOS.find(x => x.id === activeScenario);
+  const a = ADDRESSES.find(x => x.id === activeAddressId);
+  const query   = s.addressQuery(a);
+  const results = state[s.id + '-' + a.id];
+
+  const tools = TOOLS.map(t => {
+    const r = results[t.id];
+    return {
+      id: t.id,
+      label: t.label,
+      model: r.model || t.defaultModel,
+      response: r.response || '',
+      usefulness: r.usefulness,
+      citation_quality: r.citationQuality,
+      rationale: r.rationale || '',
+      accuracy_flags: (r.accuracyFlags || '').split('\n').filter(x => x.trim()),
+      data_quality_notes: '',
+    };
+  });
+
+  const btn      = document.getElementById('compare-btn');
+  const errEl    = document.getElementById('compare-error');
+  const reportEl = document.getElementById('compare-report');
+  if (btn)      { btn.textContent = 'Comparing…'; btn.disabled = true; }
+  if (errEl)    { errEl.textContent = ''; errEl.style.display = 'none'; }
+  if (reportEl) { reportEl.innerHTML = ''; reportEl.style.display = 'none'; }
+
+  fetch('/api/compare', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, tools }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) throw new Error(data.error);
+    const cellKey = activeScenario + '-' + activeAddressId;
+    state[cellKey]._compareReport = data.report;
+    persistState();
+    if (btn)      { btn.textContent = 'Re-compare'; btn.disabled = false; }
+    if (reportEl) { reportEl.innerHTML = mdToHtml(data.report); reportEl.style.display = 'block'; }
+  })
+  .catch(err => {
+    if (btn)   { btn.textContent = 'Evaluate & Compare All'; btn.disabled = !allEvaluated(); }
+    if (errEl) { errEl.textContent = err.message || String(err); errEl.style.display = 'block'; }
+  });
+}
+
+function copyQuery(btn, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    btn.style.color = '#22c55e';
+    setTimeout(() => { btn.style.color = ''; }, 1200);
+  });
+}
+
+function escHtml(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function escAttr(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+}
+
+function mdToHtml(md) {
+  const lines = md.split('\n');
+  const out = [];
+  let inList = false, inTable = false;
+  function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function fmt(s) {
+    return s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g,'<em>$1</em>')
+            .replace(/`(.+?)`/g,'<code>$1</code>');
+  }
+  function closeList()  { if (inList)  { out.push('</ul>'); inList = false; } }
+  function closeTable() { if (inTable) { out.push('</tbody></table>'); inTable = false; } }
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (t.startsWith('### ')) { closeList(); closeTable(); out.push(`<h3>${fmt(esc(t.slice(4)))}</h3>`); continue; }
+    if (t.startsWith('## '))  { closeList(); closeTable(); out.push(`<h2>${fmt(esc(t.slice(3)))}</h2>`); continue; }
+    if (t.startsWith('# '))   { closeList(); closeTable(); out.push(`<h1>${fmt(esc(t.slice(2)))}</h1>`); continue; }
+    if (/^[-*]{3,}$/.test(t)) { closeList(); closeTable(); out.push('<hr>'); continue; }
+    if (t.startsWith('|')) {
+      closeList();
+      const cells = t.split('|').slice(1,-1).map(c => c.trim());
+      const nxt = (lines[i+1]||'').trim();
+      if (!inTable && /^\|[-| :]+\|$/.test(nxt)) {
+        out.push('<table><thead><tr>' + cells.map(c=>`<th>${fmt(esc(c))}</th>`).join('') + '</tr></thead><tbody>');
+        inTable = true; i++; continue;
+      }
+      if (inTable) { out.push('<tr>' + cells.map(c=>`<td>${fmt(esc(c))}</td>`).join('') + '</tr>'); continue; }
+    }
+    if (inTable && !t.startsWith('|')) closeTable();
+    if (t.startsWith('- ') || t.startsWith('* ')) {
+      if (!inList) { closeTable(); out.push('<ul>'); inList = true; }
+      out.push(`<li>${fmt(esc(t.slice(2)))}</li>`); continue;
+    }
+    if (/^\d+\. /.test(t)) {
+      if (!inList) { closeTable(); out.push('<ul>'); inList = true; }
+      out.push(`<li>${fmt(esc(t.replace(/^\d+\. /,'')))}</li>`); continue;
+    }
+    if (t === '') { closeList(); closeTable(); continue; }
+    closeList(); closeTable();
+    out.push(`<p>${fmt(esc(t))}</p>`);
+  }
+  closeList(); closeTable();
+  return out.join('');
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+renderMatrix();
+</script>
+</body>
+</html>

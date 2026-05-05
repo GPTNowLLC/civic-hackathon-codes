@@ -1,0 +1,159 @@
+{
+  "_comment": "Single source of truth for scenario metadata. Used by mockup-hybrid.html for the detail page header. three-column.html still inlines its own copy; keep them in sync until the older page is migrated.",
+  "scenarios": [
+    {
+      "id": "tiny-house",
+      "num": 1,
+      "color": "#3b82f6",
+      "label": "Tiny house",
+      "template": "Can I build a tiny house on my lot. My property address is (x). What are the requirements?",
+      "titles": ["Title 33 Zoning", "Title 24 Building"],
+      "address": "831 SE 174th Ave, Portland, OR 97233",
+      "neighborhood": "Hazelwood / Centennial",
+      "must_cover": ["zoning", "size", "setbacks", "permits", "costs", "sequence"]
+    },
+    {
+      "id": "adu-setbacks",
+      "num": 2,
+      "color": "#a855f7",
+      "label": "ADU setbacks",
+      "template": "What about an ADU? What are the setback requirements?",
+      "titles": ["Title 33 Zoning"],
+      "address": "5112 SE Belmont St, Portland, OR 97215",
+      "neighborhood": "Sunnyside",
+      "must_cover": ["zoning", "setbacks", "size", "permits"]
+    },
+    {
+      "id": "fence-height",
+      "num": 3,
+      "color": "#10b981",
+      "label": "Fence height",
+      "template": "What is the maximum fence height allowed on my property, for the front, back and side yard. Is there a setback requirement?",
+      "titles": ["Title 33 Zoning"],
+      "address": "3220 NE 33rd Ave, Portland, OR 97212",
+      "neighborhood": "Alameda",
+      "must_cover": ["zoning", "size", "setbacks", "permits"]
+    },
+    {
+      "id": "building-records",
+      "num": 4,
+      "color": "#06b6d4",
+      "label": "Building records",
+      "template": "How do I request building records for a property?",
+      "titles": ["Admin / Records", "Title 24 Building"],
+      "address": "1719 SE Ladd Ave, Portland, OR 97214",
+      "neighborhood": "Ladd's Addition",
+      "must_cover": ["process", "fees", "sequence"]
+    },
+    {
+      "id": "pergola",
+      "num": 5,
+      "color": "#84cc16",
+      "label": "Pergola",
+      "template": "Can I put up a pergola? What are the requirements?",
+      "titles": ["Title 24 Building", "Title 33 Zoning"],
+      "address": "4773 SE 52nd Ave, Portland, OR 97206",
+      "neighborhood": "Foster-Powell",
+      "must_cover": ["zoning", "size", "setbacks", "permits", "structural"]
+    },
+    {
+      "id": "front-porch",
+      "num": 6,
+      "color": "#f59e0b",
+      "label": "Front porch extension",
+      "template": "Can I extend my front porch?",
+      "titles": ["Title 33 Zoning", "Title 24 Building"],
+      "address": "2145 SE Ladd Ave, Portland, OR 97214",
+      "neighborhood": "Ladd's Addition",
+      "must_cover": ["zoning", "setbacks", "permits", "structural", "process"]
+    },
+    {
+      "id": "pole-barn",
+      "num": 7,
+      "color": "#eab308",
+      "label": "Workshop / pole barn",
+      "template": "I want to build a workshop/small pole barn on my property in city limits. With a 40' span what is the maximum spacing between trusses?",
+      "titles": ["Title 24 Building"],
+      "address": "450 NE 103rd Ave, Portland, OR 97220",
+      "neighborhood": "Hazelwood",
+      "must_cover": ["structural", "size", "permits", "zoning"]
+    },
+    {
+      "id": "lot-division",
+      "num": 8,
+      "color": "#0ea5e9",
+      "label": "Lot division / condos",
+      "template": "Can my lot be divided and developed into condos?",
+      "titles": ["Title 33 Zoning"],
+      "address": "4435 SE Belmont St, Portland, OR 97215",
+      "neighborhood": "Sunnyside",
+      "must_cover": ["zoning", "process", "sequence", "fees", "permits"]
+    },
+    {
+      "id": "cesspool-sewer",
+      "num": 9,
+      "color": "#14b8a6",
+      "label": "Cesspool / sewer",
+      "template": "If my cesspool fails, do I need to be connected to City sewer?",
+      "titles": ["Sewer/Stormwater", "Title 25 Plumbing"],
+      "address": "6624 N Missouri Ave, Portland, OR 97217",
+      "neighborhood": "Arbor Lodge",
+      "must_cover": ["sewer", "plumbing", "permits", "sequence", "costs"]
+    },
+    {
+      "id": "second-driveway",
+      "num": 10,
+      "color": "#8b5cf6",
+      "label": "Second driveway",
+      "template": "Can I add a second driveway to my property?",
+      "titles": ["Title 17 Public Improvements", "Title 33 Zoning"],
+      "address": "4043 NE 33rd Ave, Portland, OR 97212",
+      "neighborhood": "Alameda",
+      "must_cover": ["zoning", "permits", "process", "sequence"]
+    },
+    {
+      "id": "roof-permit",
+      "num": 11,
+      "color": "#ef4444",
+      "label": "Roof replacement permit",
+      "template": "Do I need a permit to replace the roof at my property?",
+      "titles": ["Title 24 Building"],
+      "address": "5500 SE Belmont St, Portland, OR 97215",
+      "neighborhood": "Sunnyside",
+      "must_cover": ["permits", "structural", "sequence", "process"]
+    },
+    {
+      "id": "finish-basement",
+      "num": 12,
+      "color": "#ec4899",
+      "label": "Finish basement",
+      "template": "What are the permit requirements for finishing my basement?",
+      "titles": ["Title 24 Building", "Title 26 Electrical", "Title 27 HVAC"],
+      "address": "1860 SE Ladd Ave, Portland, OR 97214",
+      "neighborhood": "Ladd's Addition",
+      "must_cover": ["permits", "electrical", "plumbing", "hvac", "structural", "sequence"]
+    },
+    {
+      "id": "a-board-sign",
+      "num": 13,
+      "color": "#f97316",
+      "label": "A-board sign",
+      "template": "Can I put an \"A\" board outside of my business?",
+      "titles": ["Title 32 Signs"],
+      "address": "1022 SW Morrison St, Portland, OR 97205",
+      "neighborhood": "Downtown",
+      "must_cover": ["signs", "zoning", "permits", "size"]
+    },
+    {
+      "id": "tree-removal",
+      "num": 14,
+      "color": "#22c55e",
+      "label": "Tree removal (front yard)",
+      "template": "Can I remove a tree in my front yard?",
+      "titles": ["Title 11 Trees"],
+      "address": "3413 NE 33rd Ave, Portland, OR 97212",
+      "neighborhood": "Alameda",
+      "must_cover": ["trees", "permits", "process", "fees"]
+    }
+  ]
+}

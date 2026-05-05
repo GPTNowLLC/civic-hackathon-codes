@@ -1,0 +1,148 @@
+You are extracting atomized claims from a Portland city-code AI evaluation.
+
+Three AI configurations answered the same resident question:
+  - oob       = Out-of-the-box (no MCP tools, no enriched prompt)
+  - mcp       = With PortlandMaps MCP access (live city data)
+  - enhanced  = MCP + enriched prompt (better-framed question)
+
+Your job: turn the three verbatim responses into a flat list of atomic claims.
+Each atom is ONE specific assertion the AI made, suitable for plotting in a Venn
+diagram of which configurations said which thing.
+
+═══════════════════════════════════════════════════════════════════════════════
+SCENARIO META
+═══════════════════════════════════════════════════════════════════════════════
+Scenario id:     {scenario_id}
+Label:           {label}
+Resident asked:  {resident_question}
+Address:         {address}
+Neighborhood:    {neighborhood}
+
+═══════════════════════════════════════════════════════════════════════════════
+VARIANT 1 — OOB (no MCP, bare prompt)
+═══════════════════════════════════════════════════════════════════════════════
+Tool:  {oob_tool}
+Scores: usefulness={oob_u}, citationQuality={oob_c}, audienceAppropriateness={oob_aa}
+
+Rationale (from human evaluator):
+{oob_rationale}
+
+Accuracy flags (from human evaluator — these describe what is or isn't correct
+in this response, often paraphrasing the truth):
+{oob_flags}
+
+Data-quality notes:
+{oob_dq}
+
+Verbatim response:
+\"\"\"
+{oob_response}
+\"\"\"
+
+═══════════════════════════════════════════════════════════════════════════════
+VARIANT 2 — MCP (PortlandMaps tools, bare prompt)
+═══════════════════════════════════════════════════════════════════════════════
+Tool:  {mcp_tool}
+Scores: usefulness={mcp_u}, citationQuality={mcp_c}, audienceAppropriateness={mcp_aa}
+
+Rationale:
+{mcp_rationale}
+
+Accuracy flags:
+{mcp_flags}
+
+Data-quality notes:
+{mcp_dq}
+
+Verbatim response:
+\"\"\"
+{mcp_response}
+\"\"\"
+
+═══════════════════════════════════════════════════════════════════════════════
+VARIANT 3 — ENHANCED (MCP + enriched prompt)
+═══════════════════════════════════════════════════════════════════════════════
+Tool:  {enh_tool}
+Scores: usefulness={enh_u}, citationQuality={enh_c}, audienceAppropriateness={enh_aa}
+
+Enriched-question prompt the AI saw:
+\"\"\"
+{enriched_question}
+\"\"\"
+
+Rationale:
+{enh_rationale}
+
+Accuracy flags:
+{enh_flags}
+
+Data-quality notes:
+{enh_dq}
+
+Verbatim response:
+\"\"\"
+{enh_response}
+\"\"\"
+
+═══════════════════════════════════════════════════════════════════════════════
+EXTRACTION TASK
+═══════════════════════════════════════════════════════════════════════════════
+
+Produce a JSON object with one field: "atoms" — an array of atomic-claim
+objects. Aim for 15–30 atoms total across all three responses.
+
+For each atomic claim that appears in ANY response, emit ONE atom. If two
+responses make the same claim (in any wording), emit a single atom whose
+"variants" array lists every variant that made that claim. Do not duplicate.
+
+Each atom MUST have these fields:
+
+  id            — sequential string starting "A1", "A2", "A3", ...
+  claim_short   — ≤7 words, headline form (e.g., "Max ADU 800 sf or 75% of main")
+  claim_full    — one sentence, factual statement of the claim as the AI made it
+  topic         — one of: definitions | size | setbacks | permits | sequence
+                  | address | zoning | costs | citations | safety | trees
+                  | signs | sewer | electrical | plumbing | hvac | structural
+                  | process | fees | other
+  variants      — array of "oob" / "mcp" / "enhanced" listing which responses
+                  made this claim (at least one entry, usually 1–3)
+  specificity   — 0.0–1.0 float. 0=fully vague ("contact the city"); 1=cites a
+                  specific number, code section, or address-bound fact.
+  actionability — 0.0–1.0 float. 0=resident can't do anything with this; 1=tells
+                  the resident a concrete next step or answer they can act on.
+  correctness   — one of:
+                    "correct"           = factually right, well-supported
+                    "correct-vague"     = right but lacks specifics
+                    "correct-action"    = right and actionable
+                    "correct-judg"      = correct judgment call
+                    "correct-range"     = correct numerical range
+                    "vague-correct"     = directionally correct but vague
+                    "vague-action"      = vague but pointed at right action
+                    "hedge-correct"     = correctly hedged ("may be required")
+                    "PARTIAL-WRONG"     = mix of right and wrong elements
+                    "WRONG"             = factually incorrect
+                    "admitted-gap"      = AI admitted it didn't know
+                  Base correctness on the accuracy flags + rationale provided.
+                  If the flags contradict a claim → WRONG / PARTIAL-WRONG.
+                  If the flags confirm or describe the same fact → correct.
+  importance    — integer 1–5. How material is this claim to the resident's
+                  ability to make a decision? 5 = decision-changing; 1 = minor.
+  citation      — string OR null. If the AI literally cited a code section
+                  (e.g., "PCC 33.205.040", "Title 33", "PortlandMaps"), put
+                  the citation string. Otherwise null.
+  verified_truth — one to two sentences explaining what is actually correct,
+                   drawn from the accuracy flags and rationale. If the claim is
+                   correct, restate the supporting fact. If wrong, state the
+                   correct version. NEVER fabricate facts not present in the
+                   accuracy flags or rationale.
+
+CRITICAL RULES
+  1. Do not invent claims that are not in the verbatim responses.
+  2. Do not invent verified_truth content beyond what the accuracy flags and
+     rationale support. If you can't ground it, say "Not verified in this
+     evaluation; consult Portland code directly."
+  3. The variants array reflects which responses actually made the claim —
+     not which responses got the score right.
+  4. Order atoms roughly by the order they appear in the enhanced response,
+     so the diagram reads naturally.
+  5. Output ONLY the JSON object. No prose, no markdown fences.

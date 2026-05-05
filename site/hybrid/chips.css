@@ -1,0 +1,208 @@
+/* chips.css — W4 styling.
+   Selector prefix: .chip-  /  .chips-
+   All chips render inside the lobes SVG. The HTML tooltip lives on
+   document.body and is positioned absolutely.
+*/
+
+#chips-layer {
+  pointer-events: auto;
+}
+
+/* Base chip group --------------------------------------------------------- */
+.chip {
+  transition:
+    opacity 220ms ease,
+    filter 180ms ease;
+  /* transform is set inline by the JS for layout + ghost scaling, so we
+     don't transition it here (keeps drag-scrub smooth). */
+}
+
+.chip:hover .chip-rect,
+.chip.chip-hover .chip-rect {
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.18));
+}
+
+/* Slight visual lift on hover — applied via a CSS-only filter; no transform
+   changes so the click target stays where the cursor is. */
+.chip.chip-hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16));
+}
+
+.chip-rect {
+  transition: stroke-width 160ms ease, fill 200ms ease;
+}
+
+.chip.chip-hover .chip-rect {
+  stroke-width: 1.8;
+}
+
+/* Ghosted vs. active states (driven by chip-active / chip-ghost classes).
+   Most of the look comes from inline opacity/scale; CSS adds desaturation. */
+.chip.chip-ghost {
+  filter: saturate(0.55);
+}
+
+.chip.chip-active {
+  filter: saturate(1);
+}
+
+/* Region highlighting ----------------------------------------------------- */
+.chip.chip-dimmed {
+  opacity: 0.18 !important;
+  filter: saturate(0.4) blur(0.3px);
+}
+
+.chip.chip-lit .chip-rect {
+  stroke-width: 2;
+}
+.chip.chip-lit {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+/* Chip face text ---------------------------------------------------------- */
+.chip-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Citation badge ---------------------------------------------------------- */
+.chip-badge {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  pointer-events: none;
+  user-select: none;
+}
+.chip-badge-bg {
+  pointer-events: none;
+}
+
+/* Correctness overlays ---------------------------------------------------- */
+.chip-overlay-hatch {
+  /* fill is set inline to url(#chip-hatch-red) */
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.chip-strike {
+  pointer-events: none;
+}
+
+.chip-dotted-bottom {
+  pointer-events: none;
+}
+
+/* Admitted-gap chip: italic text + dashed border (border set inline). */
+.chip.chip-correct-admitted-gap .chip-text {
+  font-style: italic;
+}
+
+/* WRONG: extra red tint on the rect. */
+.chip.chip-correct-WRONG .chip-rect {
+  stroke: #a23028;
+}
+
+/* PARTIAL-WRONG: warm red stroke too, slightly less aggressive. */
+.chip.chip-correct-PARTIAL-WRONG .chip-rect {
+  stroke: #b54036;
+}
+
+/* Tooltip (HTML, on document.body) --------------------------------------- */
+.chip-tooltip {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #2c241b;
+  background: #fbf6ec;
+  border: 1px solid #d6c9b3;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(40, 28, 14, 0.18);
+  padding: 10px 12px;
+  max-width: 320px;
+  z-index: 9999;
+  transition: opacity 140ms ease;
+}
+
+.chip-tooltip-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.chip-tooltip-correctness {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  background: #ece1cb;
+  color: #4a3b29;
+}
+
+.chip-tooltip-correctness-WRONG,
+.chip-tooltip-correctness-PARTIAL-WRONG {
+  background: #f3d4cf;
+  color: #7d211a;
+}
+
+.chip-tooltip-correctness-correct,
+.chip-tooltip-correctness-correct-action,
+.chip-tooltip-correctness-correct-range,
+.chip-tooltip-correctness-correct-judg,
+.chip-tooltip-correctness-correct-vague {
+  background: #d8e6cf;
+  color: #345428;
+}
+
+.chip-tooltip-correctness-vague-correct,
+.chip-tooltip-correctness-vague-action,
+.chip-tooltip-correctness-hedge-correct {
+  background: #ecddb8;
+  color: #6b4d18;
+}
+
+.chip-tooltip-correctness-admitted-gap {
+  background: #e7dccd;
+  color: #5a4a36;
+  font-style: italic;
+}
+
+.chip-tooltip-cite {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  color: #5a4a36;
+  letter-spacing: 0;
+}
+.chip-tooltip-cite-none {
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.chip-tooltip-claim {
+  font-family: 'Fraunces', 'Newsreader', Georgia, serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #2c241b;
+}
+
+.chip-tooltip-truth {
+  font-size: 12px;
+  color: #4a3b29;
+  border-top: 1px solid #ece1cb;
+  padding-top: 6px;
+}
+
+.chip-tooltip-label {
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #7a6647;
+  margin-right: 4px;
+}
