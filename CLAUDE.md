@@ -49,42 +49,40 @@ This ship builds the benchmark: can ChatGPT, Claude, Grok, Gemini, and Perplexit
 
 ## The benchmark
 
-Three scoring dimensions (codes & regs requires citation quality — this is the key difference from the permits ship):
+Four scoring dimensions, all 0–3, derived from atomized claims rather than a single end-of-response score (full definitions and aggregation formulas in `benchmarks/rubric.md`):
 
-**Usefulness (0–3):** Does the response help the person actually decide what to do?
-- 0: Accurate but unactionable
-- 1: Directionally helpful but vague
-- 2: Actionable — specific requirements, next steps
-- 3: Fully useful — covers the scenario holistically with concrete guidance
+1. **Accuracy** — are the specific factual claims actually correct?
+2. **Completeness** — did the response cover the things a resident needs to act?
+3. **Authoritative Citations** — sources from `portland.gov` / Portland Titles, vs. blogs / nothing?
+4. **Consumability** — would an average Portland resident or business owner understand and act on this?
 
-**Citation quality (0–3):** Did the AI cite authoritative sources? (Hackathon constraint: "Ensure authoritative sources are cited. Clear attribution to official documents.")
-- 0: No citations
-- 1: Vague reference ("check Portland's zoning code")
-- 2: Named the right Title or administrative rule ("Title 33 Zoning Code", "Title 11")
-- 3: Specific section citation ("Title 33.110.220", "PCC 28.01.030") with correct attribution
+Adversarial protocol: the model that *generates* a response must not be the model that *evaluates* it. The evaluator atomizes the response, verifies each atom, and the four dimension scores are computed deterministically from the atoms.
 
-**Accuracy flags:** Specific factual claims a Portland code official should verify.
+## Query corpus (14 scenarios)
 
-**Address-specific cap:** Same as permits ship — if AI admits it cannot retrieve address-specific data, max usefulness = 2.
-
-## Query corpus (7 scenarios × 2 query types = 14 cells)
-
-From the hackathon's sample questions:
+Single source of truth: `data/scenarios.json`. The original hackathon brief listed 7 sample questions; the corpus was expanded to 14 to cover more of Portland's code surface (sewer, signage, accessory structures, historic-district edge cases) and to spread across neighborhoods.
 
 | # | Scenario | Address |
 |---|---|---|
-| 1 | Tiny house on my lot | 4521 SE Belmont St (Sunnyside) |
-| 2 | Fence height (front/back/side yard) | 2847 NE 33rd Ave (Alameda) |
-| 3 | Tree removal (front yard) | 2108 SW Park Ave (Goose Hollow) |
-| 4 | ADU / setback requirements | 6234 N Missouri Ave (Arbor Lodge) |
-| 5 | Roof replacement permit | 3421 SE 52nd Ave (Foster-Powell) |
-| 6 | Lot division / condos | 1923 NW Hoyt St (Pearl District) |
-| 7 | Business A-board sign | 939 SW Morrison St (Downtown) |
+| 1 | Tiny house | 831 SE 174th Ave (Hazelwood / Centennial) |
+| 2 | ADU setbacks | 5112 SE Belmont St |
+| 3 | Fence height | 3220 NE 33rd Ave |
+| 4 | Building records | 1719 SE Ladd Ave |
+| 5 | Pergola | 4773 SE 52nd Ave |
+| 6 | Front porch extension | 2145 SE Ladd Ave |
+| 7 | Workshop / pole barn | 450 NE 103rd Ave |
+| 8 | Lot division / condos | 4435 SE Belmont St |
+| 9 | Cesspool / sewer | 6624 N Missouri Ave |
+| 10 | Second driveway | 4043 NE 33rd Ave |
+| 11 | Roof replacement permit | 5500 SE Belmont St |
+| 12 | Finish basement | 1860 SE Ladd Ave |
+| 13 | A-board sign | 1022 SW Morrison St |
+| 14 | Tree removal (front yard) | 3413 NE 33rd Ave |
 
 ## Deliverables
 
-- `benchmarks/rubric.md` — three-axis rubric (usefulness + citation quality + accuracy flags)
-- `examples/` — 7×2 matrix of scored AI evaluations
+- `benchmarks/rubric.md` — four-dimension rubric (Accuracy + Completeness + Authoritative Citations + Consumability)
+- `examples/` — scored AI evaluations, one directory per scenario
 - `deliverables/presentation/` — consulting pitch to city
 - `deliverables/recommendations.md` — data improvement recommendations
 

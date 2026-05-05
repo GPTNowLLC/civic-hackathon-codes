@@ -955,7 +955,7 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
   <div class="eyebrow">City of Portland · AI Code Search Hackathon · Track 1 evaluation</div>
   <h1>{headline}</h1>
   <p class="deck">Two AI answers to the same question. Same address, same homeowner. The only difference: tooling and prompt. Read both to see what changes when an AI can reach the city's data and is briefed on who is asking.</p>
-  <div class="crumbs"><a href="/three-column.html">← back to dashboard</a></div>
+  <div class="crumbs"><a href="/">← back to dashboard</a></div>
 </div>
 
 <section class="scenario">
@@ -1159,8 +1159,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.wfile.write(body_b)
                 return
 
-        if path == '' or path == '/' or path == '/three-column':
-            path = '/three-column.html'
+        if path == '' or path == '/' or path == '/three-column' or path == '/three-column.html':
+            path = '/index.html'
 
         # Resolve file
         rel = path.lstrip('/')

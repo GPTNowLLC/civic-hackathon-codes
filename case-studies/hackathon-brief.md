@@ -16,7 +16,7 @@ Authoritative sources must be cited. The challenge explicitly requires "clear at
 
 ## Sample questions (from hackathon brief)
 
-These are the scenario seeds used in this ship's 7-scenario evaluation corpus:
+The hackathon brief listed 7 sample homeowner questions. This benchmark expanded the corpus to 14 scenarios (see `data/scenarios.json` for the canonical list) to cover more of Portland's code surface — sewer, signage, accessory structures, historic-district edge cases — and to spread across neighborhoods. The original 7 brief seeds:
 
 1. Can I build a tiny house on my lot?
 2. How high can my fence be?
@@ -56,17 +56,18 @@ Additional sources:
 
 ## Evaluation approach
 
-This ship evaluates five AI tools (ChatGPT 4.5, Claude Opus 4.7, Grok, Gemini, Perplexity) against a three-axis rubric:
+This ship evaluates general-purpose AI tools (ChatGPT, Claude, Grok, Gemini, Perplexity) against a four-dimension rubric, all 0–3, derived from atomized claims rather than a single end-of-response score:
 
-1. **Usefulness (0–3):** Does the response help the person understand and act on the applicable rules?
-2. **Citation quality (0–3):** Does the response cite authoritative Portland code sources with enough specificity to verify?
-3. **Accuracy flags:** Specific factual claims a Portland code official should verify.
+1. **Accuracy** — are the specific factual claims actually correct?
+2. **Completeness** — did the response cover the things a resident needs to act?
+3. **Authoritative Citations** — sources from `portland.gov` / Portland Titles, vs. blogs / nothing?
+4. **Consumability** — would an average Portland resident or business owner understand and act on this?
 
-Each of the 7 scenarios is tested twice: once with a generic question (no address) and once with an address-specific question. The address-specific test checks whether AI tools can retrieve property-specific constraints from PortlandMaps or equivalent sources.
+The corpus is **14 address-specific scenarios** (see `data/scenarios.json`), expanded from the brief's 7 sample questions. Each scenario is queried with the homeowner's actual address, since the address-specific test is what surfaces whether a tool can reach property-level constraints (zoning overlays, historic-district rules, easements) at all.
 
 ## Key hypothesis
 
-Current AI tools can tell people what rules exist (usefulness 1–2) but cannot reliably cite the authoritative source documents (citation quality 0–1). The data gap is primarily a structured-access problem: Portland's code is publicly available but not in a form that AI tools can reliably attribute at the section level. The hackathon solution needs to close that gap.
+Current AI tools can tell people what rules exist (modest Accuracy and Completeness) but cannot reliably cite the authoritative source documents (Authoritative Citations near zero), and they generally can't retrieve property-specific data. The data gap is primarily a structured-access problem: Portland's code is publicly available but not in a form that AI tools can reliably attribute at the section level. The hackathon solution needs to close that gap.
 
 ## Stakeholders
 

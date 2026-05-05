@@ -4,13 +4,13 @@
 OPERATIONAL — evaluation site live at http://localhost:8092/
 
 ## Mission summary
-AI tool evaluation for Portland hackathon: "City Code & Regulation Search Assistant." Three-axis rubric: usefulness (0–3) + citation quality (0–3) + accuracy flags. 7 scenarios × 2 query types = 14-cell evaluation matrix. Challenge from the Bureau of Planning & Sustainability (Code Alignment program), presented at the OSU AI Incubation Lab kickoff: https://events.oregonstate.edu/event/incubation-lab-kick-off
+AI tool evaluation for Portland hackathon: "City Code & Regulation Search Assistant." Four-dimension rubric (Accuracy, Completeness, Authoritative Citations, Consumability — all 0–3, derived from atomized claims). 14-scenario corpus, address-specific. Challenge from the Bureau of Planning & Sustainability (Code Alignment program), presented at the OSU AI Incubation Lab kickoff: https://events.oregonstate.edu/event/incubation-lab-kick-off
 
 ## Active threads
 
-- Benchmarks rubric (`benchmarks/rubric.md`): COMPLETE — 3D (usefulness + citation quality + audience-appropriateness)
-- Site (`site/index.html`): COMPLETE — old 7×11 matrix, intact, unmodified
-- Site (`site/three-column.html`): COMPLETE — three-column dashboard live at http://localhost:8092/three-column.html
+- Benchmarks rubric (`benchmarks/rubric.md`): COMPLETE — 4D (Accuracy + Completeness + Authoritative Citations + Consumability)
+- Site (`site/index.html`): COMPLETE — three-column comparison dashboard (promoted from former `three-column.html`)
+- Site (`site/legacy-matrix.html`): ARCHIVED — original 7×11 evaluation matrix, kept for reference
 - server.py: COMPLETE — all endpoints live: /api/evaluate (3D), /api/enrich (new), /api/three-column-state (new), /api/compare, /api/state, /api/responses
 - Query corpus (`examples/`): STUBS COMPLETE (14 original) + THREE-COLUMN STUBS (3 rows: tiny-house, lot-division, adu-setbacks)
 - Three-column examples: BLOCKED ON CHRIS — Col 1/2/3 responses need real AI tool runs (no fabrication)
@@ -39,18 +39,27 @@ Infrastructure complete. Three example row files structured and ready for real A
 
 ## Scenarios
 
-| # | Scenario | Address | Neighborhood |
-|---|---|---|---|
-| 1 | Tiny house | 4521 SE Belmont St | Sunnyside |
-| 2 | Fence height | 2847 NE 33rd Ave | Alameda |
-| 3 | Tree removal | 2108 SW Park Ave | Goose Hollow |
-| 4 | ADU / setbacks | 6234 N Missouri Ave | Arbor Lodge |
-| 5 | Roof permit | 3421 SE 52nd Ave | Foster-Powell |
-| 6 | Lot division | 1923 NW Hoyt St | Pearl District |
-| 7 | Business A-board | 939 SW Morrison St | Downtown |
+Single source of truth: `data/scenarios.json` (14 scenarios). Summary:
+
+| # | Scenario | Address |
+|---|---|---|
+| 1 | Tiny house | 831 SE 174th Ave |
+| 2 | ADU setbacks | 5112 SE Belmont St |
+| 3 | Fence height | 3220 NE 33rd Ave |
+| 4 | Building records | 1719 SE Ladd Ave |
+| 5 | Pergola | 4773 SE 52nd Ave |
+| 6 | Front porch extension | 2145 SE Ladd Ave |
+| 7 | Workshop / pole barn | 450 NE 103rd Ave |
+| 8 | Lot division / condos | 4435 SE Belmont St |
+| 9 | Cesspool / sewer | 6624 N Missouri Ave |
+| 10 | Second driveway | 4043 NE 33rd Ave |
+| 11 | Roof replacement permit | 5500 SE Belmont St |
+| 12 | Finish basement | 1860 SE Ladd Ave |
+| 13 | A-board sign | 1022 SW Morrison St |
+| 14 | Tree removal (front yard) | 3413 NE 33rd Ave |
 
 ## Key difference from permits ship
-Citation quality is a third scoring axis. The hackathon explicitly requires "authoritative sources cited" and "clear attribution to official documents." Score 0–3: no citation → vague reference → named Title → specific section. Evaluator prompt and site UI both reflect this.
+Authoritative Citations is a first-class scoring dimension (the hackathon brief explicitly requires "clear attribution to official documents"). The full four-dimension rubric is also broader than the permits ship's: it adds Completeness and Consumability so a response that's accurate but incomplete or accurate but unreadable is scored honestly.
 
 ## Server
 - PID file: /tmp/civic-hackathon-codes-site.pid

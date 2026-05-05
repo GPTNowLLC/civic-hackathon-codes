@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for scenario metadata. Used by mockup-hybrid.html for the detail page header. three-column.html still inlines its own copy; keep them in sync until the older page is migrated.",
+  "_comment": "Single source of truth for scenario metadata. Used by mockup-hybrid.html for the detail page header. site/index.html (the comparison dashboard, formerly three-column.html) still inlines its own copy; keep them in sync until that page is migrated.",
   "scenarios": [
     {
       "id": "tiny-house",
