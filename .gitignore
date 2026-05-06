@@ -59,3 +59,6 @@ htmlcov/
 # Local-only working files
 /tmp/
 /scratch/
+
+# Static export — built by build_static.py (deployed via Pages workflow)
+/site-static/
