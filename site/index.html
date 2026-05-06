@@ -92,87 +92,11 @@
       radial-gradient(ellipse 600px 200px at 20% 0%, rgba(56, 189, 248, 0.08), transparent),
       radial-gradient(ellipse 500px 200px at 80% 100%, rgba(34, 197, 94, 0.05), transparent);
   }
-  .hero-eyebrow {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--accent);
-    margin-bottom: 12px;
-    font-weight: 600;
-  }
-  .hero-headline {
-    font-size: 26px;
-    font-weight: 600;
-    color: #f8fafc;
-    line-height: 1.3;
-    margin-bottom: 22px;
-    letter-spacing: -0.015em;
-    max-width: 1000px;
-  }
-  .hero-headline em {
-    font-style: normal;
-    color: var(--accent);
-  }
-
-  /* aggregate stat strip */
-  .stat-strip {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    max-width: 920px;
-  }
-  .stat-card {
-    background: var(--bg-panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-    position: relative;
-    overflow: hidden;
-  }
-  .stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 2px;
-    background: var(--accent-bar, var(--accent));
-    opacity: 0.7;
-  }
-  .stat-card.s-c1 { --accent-bar: var(--c1); }
-  .stat-card.s-c2 { --accent-bar: var(--c2); }
-  .stat-card.s-c3 { --accent-bar: var(--c3); }
-  .stat-label {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
-  .stat-value {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-size: 28px;
-    font-weight: 600;
-    color: #f8fafc;
-    line-height: 1;
-    letter-spacing: -0.02em;
-  }
-  .stat-value .stat-unit {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 400;
-    margin-left: 4px;
-  }
-  .stat-sub {
-    font-size: 12px;
-    margin-top: 8px;
-    color: var(--text-muted);
-  }
-
-  /* per-criterion average matrix (3 conditions × 4 criteria) */
+  /* summary matrix (3 conditions × 4 criteria + total /12) */
   .crit-matrix {
     display: grid;
-    grid-template-columns: 1.7fr repeat(4, 1fr);
-    max-width: 920px;
-    margin-bottom: 18px;
+    grid-template-columns: 1.7fr repeat(4, 1fr) 1.1fr;
+    max-width: 1080px;
     background: var(--bg-panel);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -180,7 +104,7 @@
   }
   .crit-matrix-title {
     grid-column: 1 / -1;
-    padding: 10px 16px;
+    padding: 12px 16px;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.14em;
@@ -188,6 +112,36 @@
     font-weight: 600;
     background: #0c1119;
     border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .crit-matrix-title .matrix-evaluated {
+    color: #cbd5e1;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+  .crit-matrix-title .matrix-evaluated strong {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    color: #f8fafc;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .crit-cell.crit-total {
+    border-left: 1px solid var(--border);
+    background: #0a0f17;
+  }
+  .crit-cell.crit-head.crit-total {
+    background: #0c1119;
+  }
+  .crit-row-count {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-left: 6px;
+    letter-spacing: 0;
   }
   .crit-cell {
     padding: 10px 14px;
@@ -732,12 +686,7 @@
 </header>
 
 <div class="hero">
-  <div class="hero-eyebrow">North-star finding</div>
-  <div class="hero-headline">
-    Portland zoning data is stuck behind APIs that <em>public AI tools cannot reach</em>.
-  </div>
   <div class="crit-matrix" id="crit-matrix"></div>
-  <div class="stat-strip" id="stat-strip"></div>
 </div>
 
 <div class="col-legend">
@@ -1109,39 +1058,55 @@ function renderAllRows() {
   container.innerHTML = SCENARIOS_3COL.map(s => renderScenarioRow(s)).join('');
   attachRowListeners();
   renderCritMatrix();
-  renderStatStrip();
 }
 
-// Per-criterion average matrix: 3 conditions × 4 criteria, each cell avg /3.
+// Combined summary: per-criterion averages (3 conditions × 4 criteria) plus
+// a Total /12 column and an evaluated-scenarios count in the title bar.
 function renderCritMatrix() {
   const el = document.getElementById('crit-matrix');
   if (!el) return;
 
   const buckets = {
-    col1: { acc: [], comp: [], cit: [], cons: [] },
-    col2: { acc: [], comp: [], cit: [], cons: [] },
-    col3: { acc: [], comp: [], cit: [], cons: [] },
+    col1: { acc: [], comp: [], cit: [], cons: [], total: [] },
+    col2: { acc: [], comp: [], cit: [], cons: [], total: [] },
+    col3: { acc: [], comp: [], cit: [], cons: [], total: [] },
   };
+  let evaluated = 0;
   SCENARIOS_3COL.forEach(s => {
     const ss = slot(s.id);
+    let any = false;
     ['col1','col2','col3'].forEach(ck => {
       const c = ss[ck];
       if (!hasAnyScore(c)) return;
+      any = true;
       if (c.accuracy != null) buckets[ck].acc.push(c.accuracy);
       if (c.completeness != null) buckets[ck].comp.push(c.completeness);
       if (c.authoritativeCitations != null) buckets[ck].cit.push(c.authoritativeCitations);
       if (c.consumability != null) buckets[ck].cons.push(c.consumability);
+      const acc  = c.accuracy ?? 0;
+      const comp = c.completeness ?? 0;
+      const cit  = c.authoritativeCitations ?? 0;
+      const cons = c.consumability ?? 0;
+      buckets[ck].total.push(acc + comp + cit + cons);
     });
+    if (any) evaluated++;
   });
 
   const avg = arr => arr.length ? (arr.reduce((a,b) => a+b, 0) / arr.length) : null;
-  const cellHtml = (val, last) => {
-    const lastCls = last ? ' last-col' : '';
+  const cellHtml = (val) => {
     if (val === null) {
-      return `<div class="crit-cell${lastCls}"><span class="crit-num empty">–</span></div>`;
+      return `<div class="crit-cell"><span class="crit-num empty">–</span></div>`;
     }
     const bucket = Math.max(0, Math.min(3, Math.round(val)));
-    return `<div class="crit-cell${lastCls}"><span class="crit-num s-${bucket}">${val.toFixed(1)}<span class="crit-unit">/ 3</span></span></div>`;
+    return `<div class="crit-cell"><span class="crit-num s-${bucket}">${val.toFixed(1)}<span class="crit-unit">/ 3</span></span></div>`;
+  };
+  const totalCellHtml = (val) => {
+    if (val === null) {
+      return `<div class="crit-cell crit-total last-col"><span class="crit-num empty">–</span></div>`;
+    }
+    // Bucket the /12 total into the same 0–3 color scale (val/4).
+    const bucket = Math.max(0, Math.min(3, Math.round(val / 4)));
+    return `<div class="crit-cell crit-total last-col"><span class="crit-num s-${bucket}">${val.toFixed(1)}<span class="crit-unit">/ 12</span></span></div>`;
   };
 
   const rows = [
@@ -1150,84 +1115,34 @@ function renderCritMatrix() {
     { key: 'col3', label: '+MCP +Enrichment', cls: 'c3' },
   ];
 
+  const totalScenarios = SCENARIOS_3COL.length;
   let html = `
-    <div class="crit-matrix-title">Average score by criterion (0–3 per dimension)</div>
+    <div class="crit-matrix-title">
+      <span>Summary · average score by criterion</span>
+      <span class="matrix-evaluated"><strong>${evaluated}</strong> of ${totalScenarios} scenarios evaluated</span>
+    </div>
     <div class="crit-cell crit-head">Condition</div>
     <div class="crit-cell crit-head">Accurate</div>
     <div class="crit-cell crit-head">Complete</div>
     <div class="crit-cell crit-head">Cited</div>
-    <div class="crit-cell crit-head last-col">Useful</div>
+    <div class="crit-cell crit-head">Useful</div>
+    <div class="crit-cell crit-head crit-total last-col">Total</div>
   `;
-  rows.forEach((r, i) => {
+  rows.forEach(r => {
     const b = buckets[r.key];
-    html += `<div class="crit-cell"><span class="crit-row-label ${r.cls}">${r.label}</span></div>`;
-    html += cellHtml(avg(b.acc),  false);
-    html += cellHtml(avg(b.comp), false);
-    html += cellHtml(avg(b.cit),  false);
-    html += cellHtml(avg(b.cons), true);
+    const n = b.total.length;
+    const countTag = n
+      ? `<span class="crit-row-count">${n} scen</span>`
+      : `<span class="crit-row-count">no data</span>`;
+    html += `<div class="crit-cell"><span class="crit-row-label ${r.cls}">${r.label}</span>${countTag}</div>`;
+    html += cellHtml(avg(b.acc));
+    html += cellHtml(avg(b.comp));
+    html += cellHtml(avg(b.cit));
+    html += cellHtml(avg(b.cons));
+    html += totalCellHtml(avg(b.total));
   });
 
   el.innerHTML = html;
-}
-
-// Aggregate stats: scenarios evaluated and avg total score (out of 9) per column.
-function renderStatStrip() {
-  const strip = document.getElementById('stat-strip');
-  if (!strip) return;
-
-  // Sum the four dimensions per evaluated column instance, then avg.
-  const colTotals = { col1: [], col2: [], col3: [] };
-  let evaluated = 0;
-  SCENARIOS_3COL.forEach(s => {
-    const ss = slot(s.id);
-    let any = false;
-    ['col1','col2','col3'].forEach(ck => {
-      const c = ss[ck];
-      if (hasAnyScore(c)) {
-        any = true;
-        const acc  = c.accuracy ?? 0;
-        const comp = c.completeness ?? 0;
-        const cit  = c.authoritativeCitations ?? 0;
-        const cons = c.consumability ?? 0;
-        colTotals[ck].push(acc + comp + cit + cons);
-      }
-    });
-    if (any) evaluated++;
-  });
-
-  const avg = arr => arr.length ? (arr.reduce((a,b) => a+b, 0) / arr.length) : null;
-  const fmt = v => v === null ? '–' : v.toFixed(1);
-
-  const c1Total = avg(colTotals.col1);
-  const c2Total = avg(colTotals.col2);
-  const c3Total = avg(colTotals.col3);
-
-  const subFor = (arr) => arr.length === 0
-    ? '<span style="opacity:0.6">no data yet</span>'
-    : `${arr.length} scenario${arr.length === 1 ? '' : 's'}`;
-
-  strip.innerHTML = `
-    <div class="stat-card">
-      <div class="stat-label">Scenarios evaluated</div>
-      <div class="stat-value">${evaluated}<span class="stat-unit">/ ${SCENARIOS_3COL.length}</span></div>
-      <div class="stat-sub">${SCENARIOS_3COL.length - evaluated} remaining</div>
-    </div>
-    <div class="stat-card s-c1">
-      <div class="stat-label">Out-of-box · avg score</div>
-      <div class="stat-value">${fmt(c1Total)}<span class="stat-unit">/ 12</span></div>
-      <div class="stat-sub">${subFor(colTotals.col1)}</div>
-    </div>
-    <div class="stat-card s-c2">
-      <div class="stat-label">+MCP · avg score</div>
-      <div class="stat-value">${fmt(c2Total)}<span class="stat-unit">/ 12</span></div>
-      <div class="stat-sub">${subFor(colTotals.col2)}</div>
-    </div>
-    <div class="stat-card s-c3">
-      <div class="stat-label">+MCP +Enrichment · avg score</div>
-      <div class="stat-value">${fmt(c3Total)}<span class="stat-unit">/ 12</span></div>
-      <div class="stat-sub">${subFor(colTotals.col3)}</div>
-    </div>
-  `;
 }
 
 function renderScenarioRow(s) {
