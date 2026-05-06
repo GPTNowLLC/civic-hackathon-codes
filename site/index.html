@@ -167,6 +167,69 @@
     color: var(--text-muted);
   }
 
+  /* per-criterion average matrix (3 conditions × 4 criteria) */
+  .crit-matrix {
+    display: grid;
+    grid-template-columns: 1.7fr repeat(4, 1fr);
+    max-width: 920px;
+    margin-bottom: 18px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .crit-matrix-title {
+    grid-column: 1 / -1;
+    padding: 10px 16px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    font-weight: 600;
+    background: #0c1119;
+    border-bottom: 1px solid var(--border);
+  }
+  .crit-cell {
+    padding: 10px 14px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+  .crit-cell.last-col { border-right: none; }
+  .crit-cell.last-row { border-bottom: none; }
+  .crit-head {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-weight: 600;
+    background: #0c1119;
+  }
+  .crit-row-label { font-weight: 600; }
+  .crit-row-label.c1 { color: var(--c1); }
+  .crit-row-label.c2 { color: var(--c2); }
+  .crit-row-label.c3 { color: var(--c3); }
+  .crit-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f8fafc;
+    letter-spacing: -0.01em;
+  }
+  .crit-num.empty { color: var(--text-muted); font-weight: 400; }
+  .crit-num .crit-unit {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-left: 3px;
+  }
+  .crit-num.s-0 { color: var(--s0); }
+  .crit-num.s-1 { color: var(--s1); }
+  .crit-num.s-2 { color: var(--s2); }
+  .crit-num.s-3 { color: var(--s3); }
+
   /* ── Column legend ── */
   .col-legend {
     display: grid;
@@ -672,6 +735,7 @@
   <div class="hero-headline">
     Portland zoning data is stuck behind APIs that <em>public AI tools cannot reach</em>.
   </div>
+  <div class="crit-matrix" id="crit-matrix"></div>
   <div class="stat-strip" id="stat-strip"></div>
 </div>
 
@@ -1043,7 +1107,66 @@ function renderAllRows() {
   const container = document.getElementById('scenarios');
   container.innerHTML = SCENARIOS_3COL.map(s => renderScenarioRow(s)).join('');
   attachRowListeners();
+  renderCritMatrix();
   renderStatStrip();
+}
+
+// Per-criterion average matrix: 3 conditions × 4 criteria, each cell avg /3.
+function renderCritMatrix() {
+  const el = document.getElementById('crit-matrix');
+  if (!el) return;
+
+  const buckets = {
+    col1: { acc: [], comp: [], cit: [], cons: [] },
+    col2: { acc: [], comp: [], cit: [], cons: [] },
+    col3: { acc: [], comp: [], cit: [], cons: [] },
+  };
+  SCENARIOS_3COL.forEach(s => {
+    const ss = slot(s.id);
+    ['col1','col2','col3'].forEach(ck => {
+      const c = ss[ck];
+      if (!hasAnyScore(c)) return;
+      if (c.accuracy != null) buckets[ck].acc.push(c.accuracy);
+      if (c.completeness != null) buckets[ck].comp.push(c.completeness);
+      if (c.authoritativeCitations != null) buckets[ck].cit.push(c.authoritativeCitations);
+      if (c.consumability != null) buckets[ck].cons.push(c.consumability);
+    });
+  });
+
+  const avg = arr => arr.length ? (arr.reduce((a,b) => a+b, 0) / arr.length) : null;
+  const cellHtml = (val, last) => {
+    const lastCls = last ? ' last-col' : '';
+    if (val === null) {
+      return `<div class="crit-cell${lastCls}"><span class="crit-num empty">–</span></div>`;
+    }
+    const bucket = Math.max(0, Math.min(3, Math.round(val)));
+    return `<div class="crit-cell${lastCls}"><span class="crit-num s-${bucket}">${val.toFixed(1)}<span class="crit-unit">/ 3</span></span></div>`;
+  };
+
+  const rows = [
+    { key: 'col1', label: 'Out-of-box',       cls: 'c1' },
+    { key: 'col2', label: '+MCP',             cls: 'c2' },
+    { key: 'col3', label: '+MCP +Enrichment', cls: 'c3' },
+  ];
+
+  let html = `
+    <div class="crit-matrix-title">Average score by criterion (0–3 per dimension)</div>
+    <div class="crit-cell crit-head">Condition</div>
+    <div class="crit-cell crit-head">Accuracy</div>
+    <div class="crit-cell crit-head">Completeness</div>
+    <div class="crit-cell crit-head">Citations</div>
+    <div class="crit-cell crit-head last-col">Consumability</div>
+  `;
+  rows.forEach((r, i) => {
+    const b = buckets[r.key];
+    html += `<div class="crit-cell"><span class="crit-row-label ${r.cls}">${r.label}</span></div>`;
+    html += cellHtml(avg(b.acc),  false);
+    html += cellHtml(avg(b.comp), false);
+    html += cellHtml(avg(b.cit),  false);
+    html += cellHtml(avg(b.cons), true);
+  });
+
+  el.innerHTML = html;
 }
 
 // Aggregate stats: scenarios evaluated and avg total score (out of 9) per column.
