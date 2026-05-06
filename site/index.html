@@ -418,12 +418,13 @@
     border-color: var(--border);
   }
   .score-tile-label {
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     color: var(--text-muted);
     margin-bottom: 6px;
     font-weight: 600;
+    white-space: nowrap;
   }
   .score-tile-value {
     font-family: 'JetBrains Mono', ui-monospace, monospace;
@@ -1082,10 +1083,10 @@ function scoreGridHtml(colData) {
   const cit  = colData ? colData.authoritativeCitations : null;
   const cons = colData ? colData.consumability : null;
   return `<div class="score-grid">
-    ${scoreTileHtml('Accur', acc)}
-    ${scoreTileHtml('Compl', comp)}
-    ${scoreTileHtml('Cite',  cit)}
-    ${scoreTileHtml('Cons',  cons)}
+    ${scoreTileHtml('Accurate', acc)}
+    ${scoreTileHtml('Complete', comp)}
+    ${scoreTileHtml('Cited',    cit)}
+    ${scoreTileHtml('Useful',   cons)}
   </div>`;
 }
 
@@ -1152,10 +1153,10 @@ function renderCritMatrix() {
   let html = `
     <div class="crit-matrix-title">Average score by criterion (0–3 per dimension)</div>
     <div class="crit-cell crit-head">Condition</div>
-    <div class="crit-cell crit-head">Accuracy</div>
-    <div class="crit-cell crit-head">Completeness</div>
-    <div class="crit-cell crit-head">Citations</div>
-    <div class="crit-cell crit-head last-col">Consumability</div>
+    <div class="crit-cell crit-head">Accurate</div>
+    <div class="crit-cell crit-head">Complete</div>
+    <div class="crit-cell crit-head">Cited</div>
+    <div class="crit-cell crit-head last-col">Useful</div>
   `;
   rows.forEach((r, i) => {
     const b = buckets[r.key];
@@ -1323,10 +1324,10 @@ function renderDetailCol(s, col, colKey, colorCls, colName, scenarioId) {
       ${col.tool ? `<span style="font-size:8px;color:#94a3b8">${esc(col.tool)}</span>` : ''}
     </div>
     <div class="detail-scores-row" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
-      ${scoreItem('Accuracy',     'acc',  acc)}
-      ${scoreItem('Completeness', 'comp', comp)}
-      ${scoreItem('Citations',    'cit',  cit)}
-      ${scoreItem('Consumability','cons', cons)}
+      ${scoreItem('Accurate', 'acc',  acc)}
+      ${scoreItem('Complete', 'comp', comp)}
+      ${scoreItem('Cited',    'cit',  cit)}
+      ${scoreItem('Useful',   'cons', cons)}
     </div>
     ${col.rationale ? `<div class="detail-rationale">${esc(col.rationale)}</div>` : ''}
     <div class="detail-version-stamp" style="font-size:10px;color:#475569;margin:4px 0 8px;font-family:'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace" title="Versioning: when the response was saved into the dashboard, and when /api/evaluate last produced scores. Pacific Time.">

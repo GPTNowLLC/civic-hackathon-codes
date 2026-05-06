@@ -10,10 +10,10 @@ The hackathon challenge (from the Bureau of Planning & Sustainability, Code Alig
 
 | # | Dimension | What it measures | Range |
 |---|---|---|---|
-| 1 | **Accuracy** | Are the specific factual claims actually correct? | 0–3 |
-| 2 | **Completeness** | Did the response cover the things a resident needs to act? | 0–3 |
-| 3 | **Authoritative Citations** | Are sources from portland.gov / Portland Titles, or from Redfin / blogs / nothing? | 0–3 |
-| 4 | **Consumability** | Would an average Portland resident or business owner understand and act on this? | 0–3 |
+| 1 | **Accurate** | Are the specific factual claims actually correct? | 0–3 |
+| 2 | **Complete** | Did the response cover the things a resident needs to act? | 0–3 |
+| 3 | **Cited** | Are sources from portland.gov / Portland Titles, or from Redfin / blogs / nothing? | 0–3 |
+| 4 | **Useful** | Would an average Portland resident or business owner understand and act on this? | 0–3 |
 
 A response can score independently on each: high accuracy + low completeness is a real outcome (the AI was right about the things it said but missed half the topic), as is high accuracy + low authoritativeness (the AI was right but cited nothing the resident can verify), and so on. The four dimensions are intentionally not collapsed into a composite.
 
@@ -36,7 +36,7 @@ The evaluator model is **configurable**. For the hackathon: default evaluator is
 
 ---
 
-## Dimension 1: Accuracy (0–3)
+## Dimension 1: Accurate (0–3)
 
 **Question:** of the specific factual claims this response made, how many were actually correct?
 
@@ -66,7 +66,7 @@ score = floor(raw × 3 + 0.5)              # 0..3, with 0.83+ → 3
 
 ---
 
-## Dimension 2: Completeness (0–3)
+## Dimension 2: Complete (0–3)
 
 **Question:** did this response cover the topics a resident actually needs to act on?
 
@@ -90,7 +90,7 @@ score = round(3 × |covered| / |must_cover|)
 
 ---
 
-## Dimension 3: Authoritative Citations (0–3)
+## Dimension 3: Cited (0–3)
 
 **Question:** are the cited sources actually authoritative for Portland code?
 
@@ -122,7 +122,7 @@ score = floor(raw × 3 + 0.5)
 
 ---
 
-## Dimension 4: Consumability (0–3)
+## Dimension 4: Useful (0–3)
 
 **Question:** would an average Portland resident or business owner — someone who lives or works in the city, with no permitting expertise — understand this response and feel equipped to act on it?
 

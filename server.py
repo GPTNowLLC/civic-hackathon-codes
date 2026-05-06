@@ -721,10 +721,10 @@ def _render_column(*, num: int, label: str, tool: str, model: str,
         chips = '<span class="chip chip-none">no citations</span>'
     rubric_rows = []
     for label_text, key in [
-        ('Accuracy',                'accuracy'),
-        ('Completeness',            'completeness'),
-        ('Authoritative citations', 'authoritative_citations'),
-        ('Consumability',           'consumability'),
+        ('Accurate', 'accuracy'),
+        ('Complete', 'completeness'),
+        ('Cited',    'authoritative_citations'),
+        ('Useful',   'consumability'),
     ]:
         s = int(scores.get(key, 0))
         rubric_rows.append(
@@ -987,10 +987,10 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
 
   <h3>How to read the rubric</h3>
   <ul>
-    <li><strong>Accuracy</strong> — does the response get the rules right?</li>
-    <li><strong>Completeness</strong> — did it cover the topics this scenario calls for?</li>
-    <li><strong>Authoritative citations</strong> — does it point to portland.gov / Portland Titles rather than third-party sources?</li>
-    <li><strong>Consumability</strong> — would an average Portland resident understand and act on this?</li>
+    <li><strong>Accurate</strong> — does the response get the rules right?</li>
+    <li><strong>Complete</strong> — did it cover the topics this scenario calls for?</li>
+    <li><strong>Cited</strong> — does it point to portland.gov / Portland Titles rather than third-party sources?</li>
+    <li><strong>Useful</strong> — would an average Portland resident understand and act on this?</li>
   </ul>
   <p style="opacity:0.7; margin-top:8px;">Scores are sourced from the dashboard evaluation; refresh after re-running on the dashboard.</p>
 </aside>
