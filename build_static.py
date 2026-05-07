@@ -60,10 +60,9 @@ STATIC_MODE_CSS = """
   .detail-enrich-btn,
   .detail-clear-all-btn,
   .enriched-q-block:not(.has-content) { display: none !important; }
-  .row-detail-link.variant-b { display: none !important; }
-  /* With variant-b hidden, the link container is empty in the static
-     export — collapse it so it doesn't add a 12px gap. */
-  .row-detail-links { display: none !important; }
+  /* Venn-detail target (mockup-hybrid.html) isn't in the static export;
+     hide its drawer button so it doesn't 404. */
+  .detail-actions-link.variant-b { display: none !important; }
 """
 
 
