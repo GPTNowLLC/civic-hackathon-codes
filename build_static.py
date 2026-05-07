@@ -118,6 +118,11 @@ def patch_index_html(state):
         'href="comparison/${encodeURIComponent(s.id)}.html"',
     )
 
+    # 5b) Absolute → relative for sibling pages, so links work under a project
+    #     subpath like https://<user>.github.io/civic-hackathon-codes/.
+    html = html.replace('href="/rubric.html"', 'href="rubric.html"')
+    html = html.replace('href="/" class="active"', 'href="index.html" class="active"')
+
     # 6) Inject static-mode CSS and a banner so the audience knows what they're
     #    looking at.
     html = html.replace('</style>', STATIC_MODE_CSS + '\n</style>', 1)
@@ -144,6 +149,16 @@ def patch_comparison_html(html: str) -> str:
     return html
 
 
+# ── Rubric page rewrite ───────────────────────────────────────────────────
+
+def patch_rubric_html(html: str) -> str:
+    """Rewrite absolute sibling-page links so the page works under a project
+    subpath on GitHub Pages."""
+    html = html.replace('href="/rubric.html"', 'href="rubric.html"')
+    html = html.replace('href="/"', 'href="index.html"')
+    return html
+
+
 # ── Build ──────────────────────────────────────────────────────────────────
 
 def build():
@@ -162,6 +177,14 @@ def build():
     # Index
     index_html = patch_index_html(state)
     write_text(os.path.join(OUT_DIR, 'index.html'), index_html)
+
+    # Rubric (sibling page reachable from the nav bar)
+    rubric_src = os.path.join(SITE_DIR, 'rubric.html')
+    if os.path.isfile(rubric_src):
+        with open(rubric_src, 'r') as f:
+            rubric_html = f.read()
+        rubric_html = patch_rubric_html(rubric_html)
+        write_text(os.path.join(OUT_DIR, 'rubric.html'), rubric_html)
 
     # Pre-render comparison pages. Only emit pages for scenarios with atoms —
     # the live page also degrades when atoms are missing, but for the city
