@@ -590,12 +590,28 @@
   .ccm-card-gauge-num.c2 { color: var(--c2); }
   .ccm-card-gauge-num.c3 { color: var(--c3); }
   .ccm-card-gauge-unit {
-    font-size: 11px;
-    color: var(--text-muted);
     font-family: 'JetBrains Mono', ui-monospace, monospace;
-    margin-top: 5px;
-    letter-spacing: 0.05em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
   }
+  /* When the "unit" is the % suffix, render it inline with the number,
+     same color, two-thirds the size — readable from across the room. */
+  .ccm-card-gauge-num + .ccm-card-gauge-unit.is-pct {
+    color: inherit;
+    font-size: 20px;
+    margin-top: 0;
+    margin-left: 2px;
+    align-self: baseline;
+  }
+  .ccm-card-gauge-center:has(.is-pct) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .ccm-card-gauge-center:has(.is-pct) .ccm-card-gauge-num.c1 ~ .is-pct,
+  .ccm-card-gauge-center .is-pct.c1 { color: var(--c1); }
+  .ccm-card-gauge-center .is-pct.c2 { color: var(--c2); }
+  .ccm-card-gauge-center .is-pct.c3 { color: var(--c3); }
   .ccm-card-bars {
     display: flex;
     flex-direction: column;
@@ -1975,7 +1991,7 @@ function renderCardsChart(ctx) {
             ${gauge}
             <div class="ccm-card-gauge-center">
               <span class="ccm-card-gauge-num ${cd.cls}">${centerNum}</span>
-              <span class="ccm-card-gauge-unit">${centerUnit}</span>
+              <span class="ccm-card-gauge-unit ${centerUnit === '%' ? 'is-pct ' + cd.cls : ''}">${centerUnit}</span>
             </div>
           </div>
         </div>
