@@ -1010,6 +1010,28 @@
   }
   .scenario-row.expanded .row-detail { display: block; }
 
+  .detail-actions {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+  }
+  .detail-actions-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    background: var(--row-link-bg);
+    transition: all 0.15s;
+  }
+  .detail-actions-link:hover {
+    border-color: var(--accent);
+    background: var(--row-link-hover);
+    text-decoration: none;
+  }
   .detail-grid {
     display: grid;
     grid-template-columns: 280px repeat(3, 1fr);
@@ -2129,7 +2151,6 @@ function renderScenarioRow(s) {
       ? `<div class="cell-pending">No response yet</div>` : '';
     return `<div class="row-cell">
       ${scoreGridHtml(col)}
-      ${col.tool ? `<div class="cell-tool">${esc(col.tool)}</div>` : ''}
       ${pending}
     </div>`;
   };
@@ -2142,10 +2163,6 @@ function renderScenarioRow(s) {
           <div class="row-label-name">${esc(s.label)}</div>
           <div class="row-label-addr">${esc(s.address)}</div>
           <div class="row-detail-links">
-            <a class="row-detail-link"
-               href="/comparison/${encodeURIComponent(s.id)}"
-               onclick="event.stopPropagation()"
-               title="Side-by-side comparison: out-of-the-box vs MCP+enriched, with 4-dim rubric">Side-by-side &rarr;</a>
             <a class="row-detail-link variant-b"
                href="/mockup-hybrid.html?scenario=${encodeURIComponent(s.id)}"
                onclick="event.stopPropagation()"
@@ -2168,7 +2185,12 @@ function renderDetailPanel(s, ss) {
   const c1 = ss.col1, c2 = ss.col2, c3 = ss.col3;
   const enriched = ss.enrichedQuestion || '';
 
-  return `<div class="detail-grid">
+  return `<div class="detail-actions">
+    <a class="detail-actions-link"
+       href="/comparison/${encodeURIComponent(s.id)}"
+       title="Side-by-side comparison: out-of-the-box vs MCP+enriched, with 4-dim rubric">Open side-by-side comparison &rarr;</a>
+  </div>
+  <div class="detail-grid">
     <div class="detail-label-col">
       <div class="detail-label-section">Scenario</div>
       <div class="detail-query">${esc(composedQuestion(s))}</div>
