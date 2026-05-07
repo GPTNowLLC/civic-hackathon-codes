@@ -641,6 +641,12 @@
     color: #f8fafc;
     text-align: right;
   }
+  .ccm-card-bar-denom {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.85em;
+    margin-left: 1px;
+  }
 
   /* shared mini-legend (used inside slope/uplift) */
   .ccm-mini-legend {
@@ -1961,7 +1967,7 @@ function renderCardsChart(ctx) {
       return `<div class="ccm-card-bar-row">
         <span class="ccm-card-bar-label">${cr.label}</span>
         <div class="ccm-card-bar-track"><div class="ccm-card-bar-fill ${valCls}" style="width:${pct.toFixed(2)}%"></div></div>
-        <span class="ccm-card-bar-val">${v.toFixed(1)}</span>
+        <span class="ccm-card-bar-val">${v.toFixed(1)}<span class="ccm-card-bar-denom">/3</span></span>
       </div>`;
     }).join('');
 
