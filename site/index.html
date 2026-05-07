@@ -573,7 +573,14 @@
   }
   .ccm-card-gauge-fill.c1 { stroke: var(--c1); }
   .ccm-card-gauge-fill.c2 { stroke: var(--c2); }
-  .ccm-card-gauge-fill.c3 { stroke: var(--c3); filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4)); }
+  .ccm-card-gauge-fill.c3 { stroke: var(--c3); }
+  /* Grade-tier overrides — these win because they appear after the
+     column-tier rules and have equal specificity. */
+  .ccm-card-gauge-fill.grade-a { stroke: var(--c3); filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4)); }
+  .ccm-card-gauge-fill.grade-b { stroke: #a3e635; }
+  .ccm-card-gauge-fill.grade-c { stroke: var(--c2); }
+  .ccm-card-gauge-fill.grade-d { stroke: var(--c1); }
+  .ccm-card-gauge-fill.grade-f { stroke: var(--c1); }
   .ccm-card-gauge-center {
     position: absolute; inset: 0;
     display: flex; flex-direction: column;
@@ -589,6 +596,11 @@
   .ccm-card-gauge-num.c1 { color: var(--c1); }
   .ccm-card-gauge-num.c2 { color: var(--c2); }
   .ccm-card-gauge-num.c3 { color: var(--c3); }
+  .ccm-card-gauge-num.grade-a { color: var(--c3); }
+  .ccm-card-gauge-num.grade-b { color: #a3e635; }
+  .ccm-card-gauge-num.grade-c { color: var(--c2); }
+  .ccm-card-gauge-num.grade-d { color: var(--c1); }
+  .ccm-card-gauge-num.grade-f { color: var(--c1); }
   .ccm-card-gauge-unit {
     font-size: 11px;
     color: var(--text-muted);
@@ -1944,10 +1956,13 @@ function renderCardsChart(ctx) {
     const r = 56, C = 2 * Math.PI * r;
     const fillFrac = total != null ? Math.max(0, Math.min(1, total / 12)) : 0;
     const dashOffset = C * (1 - fillFrac);
+    const _pctForGrade = total != null ? (total / 12) * 100 : null;
+    const _gradeTier = _pctForGrade != null ? letterGrade(_pctForGrade).tier : null;
+    const gradeCls = _gradeTier ? `grade-${_gradeTier}` : cd.cls;
 
     const gauge = `<svg viewBox="0 0 132 132" width="132" height="132">
       <circle cx="66" cy="66" r="${r}" class="ccm-card-gauge-track"/>
-      <circle cx="66" cy="66" r="${r}" class="ccm-card-gauge-fill ${cd.cls}"
+      <circle cx="66" cy="66" r="${r}" class="ccm-card-gauge-fill ${gradeCls}"
               transform="rotate(-90 66 66)"
               stroke-dasharray="${C.toFixed(2)}"
               stroke-dashoffset="${dashOffset.toFixed(2)}"/>
@@ -1989,7 +2004,7 @@ function renderCardsChart(ctx) {
           <div class="ccm-card-gauge">
             ${gauge}
             <div class="ccm-card-gauge-center">
-              <span class="ccm-card-gauge-num ${cd.cls}">${centerNum}</span>
+              <span class="ccm-card-gauge-num ${gradeCls}">${centerNum}</span>
             </div>
           </div>
         </div>
