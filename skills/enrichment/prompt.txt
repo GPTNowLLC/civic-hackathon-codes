@@ -30,7 +30,11 @@ The enriched question should:
    - **A plain-English answer first.** The first paragraph should answer the resident's actual question in everyday language with no citations or jargon.
    - **A numbered 'what to do next' list, in the order the resident should do it.** Each step should name who to call or what website to visit, what to bring, what it costs, and roughly how long it takes. Mark which steps are free.
    - **A 'what to ask the city' script** the resident can read aloud or paste into an email when they contact the bureau — not just "call BDS" but the actual question to ask.
-   - **Specific code section numbers** (Title 33, Title 11, Title 24, etc.) for every rule cited — but as parenthetical citations after the plain-English explanation, not as the lead. Example: "The new building has to sit at least 5 feet from the side property line (PCC 33.110.220)."
+   - **Full inline citations for every factual claim, written out in the body of the answer itself — not just a "Sources" list at the end, and never as abstract references like "Portland City Code" or "BDS website" with no specifics.** Every rule, number, fee, timeline, or contact must be followed in the same sentence by:
+     - the exact code section (e.g., `PCC 33.110.220.B.2`, not just "Title 33"), AND
+     - a direct, working URL to the authoritative source (portland.gov, the specific Title chapter on portland.gov/code, the specific Administrative Rule PDF, the PortlandMaps page, etc.) — full `https://...` URLs, not link text like "[here]" or "the city's website".
+     Format example: "The new building has to sit at least 5 feet from the side property line (PCC 33.110.220.B, https://www.portland.gov/code/33/110/220)."
+     This is critical: the resident will COPY THE ENTIRE ANSWER and paste it elsewhere, so every citation must survive the copy-paste as plain text. Do not put citations only in footnotes, hover tooltips, reference numbers like "[1]", or a separate sources block — they must appear inline next to the claim they support. If a claim cannot be cited to a specific section + URL, say so explicitly ("I could not find a specific code section for this — verify with BDS at 503-823-7300") rather than citing vaguely.
    - **A short 'what you might get wrong' or 'common gotchas' section** in plain language, naming the specific mistakes Portland residents make on this kind of project.
    - **Accuracy caveats the resident should be aware of** ("zoning for your specific address may vary; verify on PortlandMaps before spending money on plans"), framed as friendly warnings rather than legal disclaimers.
    - **A glossary** at the end of any acronym or technical term used more than once, in case the reader skipped to a section.
@@ -40,5 +44,7 @@ The enriched question should:
    - Do not stack code section numbers without an explanation in plain English right next to them.
    - Do not assume the reader knows the difference between BDS, BES, PBOT, PP&D, Urban Forestry, or PF&R — name what each one does the first time it appears.
    - Do not use words like "shall", "promulgated", "thereunder", or other legal-register language. Write the way a friendly city employee would explain it over coffee.
+   - Do not use vague or abstract citations like "Portland City Code", "Title 33", "the BDS website", "city regulations", "[1]", "see source above", or footnote-only references. Every citation must be a specific section number AND a full URL, inline with the claim, in the same sentence. Assume the resident will copy the whole answer to a clipboard and paste it into a doc — anything that doesn't survive plain-text copy-paste is a failure.
+   - Do not put all citations in a "Sources" or "References" list at the end and leave the body uncited. Inline citations are required even if a sources list also appears.
 
 Return ONLY the enriched question text — no preamble, no explanation, no metadata. The enriched question will be pasted directly into a city code AI tool. Write it as a single coherent prompt the resident is "sending" to the AI on their own behalf, in first person ("I want to know…"), so the AI naturally answers back to a resident.

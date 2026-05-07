@@ -127,9 +127,21 @@ Each atom MUST have these fields:
                   If the flags confirm or describe the same fact → correct.
   importance    — integer 1–5. How material is this claim to the resident's
                   ability to make a decision? 5 = decision-changing; 1 = minor.
-  citation      — string OR null. If the AI literally cited a code section
-                  (e.g., "PCC 33.205.040", "Title 33", "PortlandMaps"), put
-                  the citation string. Otherwise null.
+  citation      — string OR null. The most-specific authoritative citation
+                  any of the variants produced for THIS claim (used for
+                  display). Examples: "PCC 33.205.040", "Title 33",
+                  "PortlandMaps". Null if no variant cited a source for this
+                  claim.
+  citation_by_variant — object with one key per variant in `variants`:
+                  {oob: string|null, mcp: string|null, enhanced: string|null}
+                  For each variant, capture the citation that THAT variant's
+                  response gave for THIS specific claim — read from the
+                  variant's verbatim response text. Null if that variant made
+                  the claim without citing a source. Do NOT borrow citations
+                  from a different variant's response. A variant not listed
+                  in `variants` should be omitted from this object (not set to
+                  null). This per-variant breakdown drives the Cited score
+                  per column; the legacy `citation` field is for display only.
   verified_truth — one to two sentences explaining what is actually correct,
                    drawn from the accuracy flags and rationale. If the claim is
                    correct, restate the supporting fact. If wrong, state the
@@ -142,7 +154,9 @@ CRITICAL RULES
      rationale support. If you can't ground it, say "Not verified in this
      evaluation; consult Portland code directly."
   3. The variants array reflects which responses actually made the claim —
-     not which responses got the score right.
+     not which responses got the score right. The citation_by_variant object
+     reflects which responses literally cited a source for that claim —
+     NOT inherited from another variant.
   4. Order atoms roughly by the order they appear in the enhanced response,
      so the diagram reads naturally.
   5. Output ONLY the JSON object. No prose, no markdown fences.

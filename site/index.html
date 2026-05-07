@@ -92,97 +92,552 @@
       radial-gradient(ellipse 600px 200px at 20% 0%, rgba(56, 189, 248, 0.08), transparent),
       radial-gradient(ellipse 500px 200px at 80% 100%, rgba(34, 197, 94, 0.05), transparent);
   }
-  /* summary matrix (3 conditions × 4 criteria + total /12) */
+  /* summary chart card with carousel of 4 chart variants */
   .crit-matrix {
-    display: grid;
-    grid-template-columns: 1.7fr repeat(4, 1fr) 1.1fr;
     max-width: 1080px;
-    background: var(--bg-panel);
+    background:
+      radial-gradient(ellipse 700px 260px at 50% 0%, rgba(125, 211, 252, 0.04), transparent 70%),
+      var(--bg-panel);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.03) inset, 0 12px 28px -16px rgba(0,0,0,0.6);
   }
-  .crit-matrix-title {
-    grid-column: 1 / -1;
-    padding: 12px 16px;
+  .ccm-header {
+    padding: 16px 22px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .ccm-header-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .ccm-header-title strong {
+    color: #f8fafc;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .ccm-rubric-link {
+    margin-left: 12px;
+    color: var(--accent);
+    text-decoration: none;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--text-muted);
     font-weight: 600;
-    background: #0c1119;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    transition: all 0.15s;
   }
-  .crit-matrix-title .matrix-evaluated {
-    color: #cbd5e1;
+  .ccm-rubric-link:hover {
+    background: rgba(125, 211, 252, 0.1);
+    text-decoration: none;
+  }
+  .ccm-evaluated {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
     font-weight: 500;
-    letter-spacing: 0.08em;
   }
-  .crit-matrix-title .matrix-evaluated strong {
+  .ccm-evaluated strong {
     font-family: 'JetBrains Mono', ui-monospace, monospace;
     color: #f8fafc;
     font-weight: 700;
     letter-spacing: 0;
-  }
-  .crit-cell.crit-total {
-    border-left: 1px solid var(--border);
-    background: #0a0f17;
-  }
-  .crit-cell.crit-head.crit-total {
-    background: #0c1119;
-  }
-  .crit-row-count {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-size: 10px;
-    color: var(--text-muted);
-    font-weight: 400;
-    margin-left: 6px;
-    letter-spacing: 0;
-  }
-  .crit-cell {
-    padding: 10px 14px;
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
     font-size: 13px;
+    margin-right: 2px;
+  }
+
+  /* carousel shell */
+  .ccm-carousel { padding: 0; outline: none; }
+  .ccm-carousel-controls {
+    display: grid;
+    grid-template-columns: 36px 1fr 36px;
+    align-items: center;
+    padding: 12px 18px 10px;
+    gap: 14px;
+    border-bottom: 1px solid rgba(31, 41, 55, 0.5);
+  }
+  .ccm-carousel-btn {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: rgba(148, 163, 184, 0.06);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
+    transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.08s;
+    font-family: 'Inter', system-ui, sans-serif;
+    padding: 0;
+    user-select: none;
   }
-  .crit-cell.last-col { border-right: none; }
-  .crit-cell.last-row { border-bottom: none; }
-  .crit-head {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    font-weight: 600;
-    background: #0c1119;
+  .ccm-carousel-btn:hover {
+    background: rgba(125, 211, 252, 0.10);
+    border-color: rgba(125, 211, 252, 0.4);
+    color: var(--accent);
   }
-  .crit-row-label { font-weight: 600; }
-  .crit-row-label.c1 { color: var(--c1); }
-  .crit-row-label.c2 { color: var(--c2); }
-  .crit-row-label.c3 { color: var(--c3); }
-  .crit-num {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-size: 18px;
-    font-weight: 600;
+  .ccm-carousel-btn:active { transform: scale(0.94); }
+  .ccm-carousel-status {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.25;
+    min-width: 0;
+  }
+  .ccm-variant-name {
+    font-size: 14px;
+    font-weight: 700;
     color: #f8fafc;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
   }
-  .crit-num.empty { color: var(--text-muted); font-weight: 400; }
-  .crit-num .crit-unit {
+  .ccm-variant-caption {
     font-size: 11px;
     color: var(--text-muted);
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .ccm-dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding: 12px 0 14px;
+    border-top: 1px solid rgba(31, 41, 55, 0.4);
+  }
+  .ccm-dot-btn {
+    width: 22px; height: 5px;
+    border-radius: 3px;
+    background: rgba(148, 163, 184, 0.18);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, width 0.2s;
+    padding: 0;
+  }
+  .ccm-dot-btn:hover { background: rgba(148, 163, 184, 0.36); }
+  .ccm-dot-btn.is-active {
+    background: var(--accent);
+    width: 36px;
+  }
+
+  .ccm-stage {
+    padding: 24px 24px 14px;
+    min-height: 380px;
+    position: relative;
+  }
+  .ccm-slide { display: none; }
+  .ccm-slide.is-active {
+    display: block;
+    animation: ccm-fade-in 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @keyframes ccm-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* shared svg */
+  .ccm-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow: visible;
+  }
+
+  /* ────────────────────────────────────────────
+     Variant 1 — Slope chart (parallel coordinates)
+     ──────────────────────────────────────────── */
+  .ccm-slope-axis-line { stroke: rgba(148, 163, 184, 0.18); stroke-width: 1; }
+  .ccm-slope-tick { stroke: rgba(148, 163, 184, 0.30); stroke-width: 1; }
+  .ccm-slope-mid { stroke: rgba(148, 163, 184, 0.10); stroke-width: 1; stroke-dasharray: 3 5; }
+  .ccm-slope-axis-label {
+    font-size: 12.5px; fill: #f8fafc; font-weight: 600; letter-spacing: 0.02em;
+  }
+  .ccm-slope-axis-sub {
+    font-size: 10px; fill: var(--text-muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: 0.04em;
+  }
+  .ccm-slope-tick-label {
+    font-size: 10px; fill: var(--text-muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  .ccm-slope-line {
+    fill: none;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-width 0.18s, opacity 0.18s;
+  }
+  .ccm-slope-line.c1 { stroke: var(--c1); }
+  .ccm-slope-line.c2 { stroke: var(--c2); }
+  .ccm-slope-line.c3 { stroke: var(--c3); filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.35)); }
+  .ccm-slope-line:hover { stroke-width: 3.8; }
+  .ccm-slope-dot { stroke: var(--bg-panel); stroke-width: 2; }
+  .ccm-slope-dot.c1 { fill: var(--c1); }
+  .ccm-slope-dot.c2 { fill: var(--c2); }
+  .ccm-slope-dot.c3 { fill: var(--c3); }
+  .ccm-slope-end {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+  .ccm-slope-end.c1 { fill: var(--c1); }
+  .ccm-slope-end.c2 { fill: var(--c2); }
+  .ccm-slope-end.c3 { fill: var(--c3); }
+  .ccm-slope-end-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .ccm-slope-start-val {
+    font-size: 10px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+  }
+  .ccm-slope-start-val.c1 { fill: var(--c1); }
+  .ccm-slope-start-val.c2 { fill: var(--c2); }
+  .ccm-slope-start-val.c3 { fill: var(--c3); }
+
+  /* ────────────────────────────────────────────
+     Variant 2 — Uplift trajectory
+     ──────────────────────────────────────────── */
+  .ccm-uplift-track { stroke: rgba(148, 163, 184, 0.16); stroke-width: 1; }
+  .ccm-uplift-tick { stroke: rgba(148, 163, 184, 0.10); stroke-width: 1; stroke-dasharray: 2 4; }
+  .ccm-uplift-tick-label {
+    font-size: 9.5px; fill: var(--text-muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: 0.04em;
+  }
+  .ccm-uplift-crit-label {
+    font-size: 13px; fill: #f8fafc; font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+  .ccm-uplift-crit-sub {
+    font-size: 10px; fill: var(--text-muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: 0.04em;
+  }
+  .ccm-uplift-net.up   { fill: #86efac; }
+  .ccm-uplift-net.down { fill: #fca5a5; }
+  .ccm-uplift-net.flat { fill: var(--text-muted); }
+  .ccm-uplift-dot { stroke: var(--bg-panel); stroke-width: 2; }
+  .ccm-uplift-dot.c1 { fill: var(--c1); }
+  .ccm-uplift-dot.c2 { fill: var(--c2); }
+  .ccm-uplift-dot.c3 { fill: var(--c3); filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.45)); }
+  .ccm-uplift-arrow { stroke-width: 1.6; fill: none; stroke-linecap: round; }
+  .ccm-uplift-arrow.up   { stroke: rgba(34, 197, 94, 0.7); }
+  .ccm-uplift-arrow.down { stroke: rgba(239, 68, 68, 0.7); }
+  .ccm-uplift-arrow.flat { stroke: rgba(148, 163, 184, 0.45); stroke-dasharray: 3 3; }
+  .ccm-uplift-delta {
+    font-size: 10.5px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+  }
+  .ccm-uplift-delta.up   { fill: #86efac; }
+  .ccm-uplift-delta.down { fill: #fca5a5; }
+  .ccm-uplift-delta.flat { fill: var(--text-muted); }
+  .ccm-uplift-val {
+    font-size: 10px; font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700; fill: #f8fafc;
+  }
+
+  /* ────────────────────────────────────────────
+     Variant 3 — Score composition (stacked bars)
+     ──────────────────────────────────────────── */
+  .ccm-comp { display: flex; flex-direction: column; gap: 4px; }
+  .ccm-comp-legend {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    margin-bottom: 14px; font-size: 11.5px;
+    color: var(--text-dim);
+  }
+  .ccm-comp-legend-item {
+    display: inline-flex; align-items: center;
+    gap: 7px; font-weight: 500;
+  }
+  .ccm-comp-swatch {
+    width: 11px; height: 11px; border-radius: 2px;
+    display: inline-block;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+  }
+  .ccm-comp-rows { display: flex; flex-direction: column; gap: 14px; }
+  .ccm-comp-row {
+    display: grid;
+    grid-template-columns: 180px 1fr 100px;
+    align-items: center;
+    gap: 16px;
+  }
+  .ccm-comp-cond { display: flex; flex-direction: column; gap: 2px; }
+  .ccm-comp-cond-label { font-size: 14px; font-weight: 600; letter-spacing: -0.005em; }
+  .ccm-comp-cond-label.c1 { color: var(--c1); }
+  .ccm-comp-cond-label.c2 { color: var(--c2); }
+  .ccm-comp-cond-label.c3 { color: var(--c3); }
+  .ccm-comp-cond-meta {
+    font-size: 10px; color: var(--text-muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .ccm-comp-track-wrap {
+    position: relative;
+  }
+  .ccm-comp-track {
+    height: 40px;
+    background: rgba(148, 163, 184, 0.04);
+    border-radius: 6px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .ccm-comp-seg {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9px;
+    color: rgba(15, 23, 42, 0.92);
+    font-weight: 700;
+    font-size: 11px;
+    transition: filter 0.15s;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: inset -1.5px 0 0 rgba(15, 23, 42, 0.45);
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.15s;
+  }
+  .ccm-comp-seg:last-child { box-shadow: none; }
+  .ccm-comp-seg:hover { filter: brightness(1.15); }
+  .ccm-comp-seg-name {
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ccm-comp-seg-val {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 800;
+    font-size: 12px;
+    margin-left: 6px;
+  }
+  .ccm-comp-total {
+    text-align: right;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .ccm-comp-total.c1 { color: var(--c1); }
+  .ccm-comp-total.c2 { color: var(--c2); }
+  .ccm-comp-total.c3 { color: var(--c3); }
+  .ccm-comp-total-unit {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
     margin-left: 3px;
   }
-  .crit-num.s-0 { color: var(--s0); }
-  .crit-num.s-1 { color: var(--s1); }
-  .crit-num.s-2 { color: var(--s2); }
-  .crit-num.s-3 { color: var(--s3); }
+  .ccm-comp-scale {
+    display: grid;
+    grid-template-columns: 180px 1fr 100px;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .ccm-comp-scale-track {
+    grid-column: 2;
+    position: relative;
+    height: 20px;
+    border-top: 1px dashed rgba(148, 163, 184, 0.18);
+  }
+  .ccm-comp-scale-tick {
+    position: absolute;
+    top: 4px;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* ────────────────────────────────────────────
+     Variant 4 — Stat cards
+     ──────────────────────────────────────────── */
+  .ccm-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .ccm-card {
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(148, 163, 184, 0.10);
+    border-radius: 10px;
+    padding: 18px 18px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s, border-color 0.18s, background 0.18s;
+  }
+  .ccm-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: var(--card-accent, transparent);
+  }
+  .ccm-card.c1 { --card-accent: var(--c1); }
+  .ccm-card.c2 { --card-accent: var(--c2); }
+  .ccm-card.c3 { --card-accent: var(--c3); }
+  .ccm-card:hover {
+    transform: translateY(-1px);
+    border-color: rgba(148, 163, 184, 0.22);
+  }
+  .ccm-card.is-best {
+    border-color: rgba(34, 197, 94, 0.4);
+    background:
+      radial-gradient(ellipse 200px 90px at 50% 0%, rgba(34, 197, 94, 0.10), transparent 70%),
+      rgba(15, 23, 42, 0.55);
+  }
+  .ccm-card-best-tag {
+    position: absolute;
+    top: 12px; right: 14px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c3);
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 4px;
+    padding: 3px 8px;
+  }
+  .ccm-card-name {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 2px;
+  }
+  .ccm-card-name.c1 { color: var(--c1); }
+  .ccm-card-name.c2 { color: var(--c2); }
+  .ccm-card-name.c3 { color: var(--c3); }
+  .ccm-card-meta {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .ccm-card-gauge-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0 16px;
+  }
+  .ccm-card-gauge {
+    position: relative;
+    width: 132px; height: 132px;
+  }
+  .ccm-card-gauge svg { display: block; }
+  .ccm-card-gauge-track { stroke: rgba(148, 163, 184, 0.12); fill: none; stroke-width: 9; }
+  .ccm-card-gauge-fill {
+    fill: none; stroke-width: 9;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .ccm-card-gauge-fill.c1 { stroke: var(--c1); }
+  .ccm-card-gauge-fill.c2 { stroke: var(--c2); }
+  .ccm-card-gauge-fill.c3 { stroke: var(--c3); filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4)); }
+  .ccm-card-gauge-center {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+  }
+  .ccm-card-gauge-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .ccm-card-gauge-num.c1 { color: var(--c1); }
+  .ccm-card-gauge-num.c2 { color: var(--c2); }
+  .ccm-card-gauge-num.c3 { color: var(--c3); }
+  .ccm-card-gauge-unit {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    margin-top: 5px;
+    letter-spacing: 0.05em;
+  }
+  .ccm-card-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .ccm-card-bar-row {
+    display: grid;
+    grid-template-columns: 70px 1fr 30px;
+    align-items: center;
+    gap: 10px;
+  }
+  .ccm-card-bar-label {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .ccm-card-bar-track {
+    height: 5px;
+    background: rgba(148, 163, 184, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .ccm-card-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .ccm-card-bar-fill.c1 { background: linear-gradient(90deg, rgba(239, 68, 68, 0.5), var(--c1)); }
+  .ccm-card-bar-fill.c2 { background: linear-gradient(90deg, rgba(245, 158, 11, 0.5), var(--c2)); }
+  .ccm-card-bar-fill.c3 { background: linear-gradient(90deg, rgba(34, 197, 94, 0.5), var(--c3)); }
+  .ccm-card-bar-val {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #f8fafc;
+    text-align: right;
+  }
+
+  /* shared mini-legend (used inside slope/uplift) */
+  .ccm-mini-legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    font-size: 11px;
+    color: var(--text-dim);
+    justify-content: center;
+  }
+  .ccm-mini-legend-item { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+  .ccm-mini-legend-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .ccm-mini-legend-dot.c1 { background: var(--c1); }
+  .ccm-mini-legend-dot.c2 { background: var(--c2); }
+  .ccm-mini-legend-dot.c3 { background: var(--c3); }
+
+  @media (max-width: 760px) {
+    .ccm-cards { grid-template-columns: 1fr; }
+    .ccm-comp-row { grid-template-columns: 120px 1fr 80px; gap: 10px; }
+    .ccm-comp-scale { grid-template-columns: 120px 1fr 80px; gap: 10px; }
+    .ccm-comp-row { grid-template-columns: 110px 1fr 78px; }
+  }
 
   /* ── Column legend ── */
   .col-legend {
@@ -683,6 +1138,10 @@
     <h1>Civic Tech + AI Incubation Lab</h1>
     <span class="brand-sub">City Code &amp; Regulation Search Assistant</span>
   </div>
+  <div class="nav-links">
+    <a href="/" class="active">Dashboard</a>
+    <a href="/rubric.html">Rubric</a>
+  </div>
 </header>
 
 <div class="hero">
@@ -773,6 +1232,14 @@ const SCENARIOS_3COL = [
     address: '2145 SE Ladd Ave, Portland, OR 97214',
   },
   {
+    id: 'cesspool-sewer',
+    num: 9, color: '#14b8a6',
+    label: 'Cesspool / sewer',
+    template: 'If my cesspool fails, do I need to be connected to City sewer?',
+    titles: ['Sewer/Stormwater', 'Title 25 Plumbing'],
+    address: '6624 N Missouri Ave, Portland, OR 97217',
+  },
+  {
     id: 'pole-barn',
     num: 7, color: '#eab308',
     label: 'Workshop / pole barn',
@@ -787,14 +1254,6 @@ const SCENARIOS_3COL = [
     template: 'Can my lot be divided and developed into condos?',
     titles: ['Title 33 Zoning'],
     address: '4435 SE Belmont St, Portland, OR 97215',
-  },
-  {
-    id: 'cesspool-sewer',
-    num: 9, color: '#14b8a6',
-    label: 'Cesspool / sewer',
-    template: 'If my cesspool fails, do I need to be connected to City sewer?',
-    titles: ['Sewer/Stormwater', 'Title 25 Plumbing'],
-    address: '6624 N Missouri Ave, Portland, OR 97217',
   },
   {
     id: 'second-driveway',
@@ -1093,56 +1552,396 @@ function renderCritMatrix() {
   });
 
   const avg = arr => arr.length ? (arr.reduce((a,b) => a+b, 0) / arr.length) : null;
-  const cellHtml = (val) => {
-    if (val === null) {
-      return `<div class="crit-cell"><span class="crit-num empty">–</span></div>`;
-    }
-    const bucket = Math.max(0, Math.min(3, Math.round(val)));
-    return `<div class="crit-cell"><span class="crit-num s-${bucket}">${val.toFixed(1)}<span class="crit-unit">/ 3</span></span></div>`;
-  };
-  const totalCellHtml = (val) => {
-    if (val === null) {
-      return `<div class="crit-cell crit-total last-col"><span class="crit-num empty">–</span></div>`;
-    }
-    // Bucket the /12 total into the same 0–3 color scale (val/4).
-    const bucket = Math.max(0, Math.min(3, Math.round(val / 4)));
-    return `<div class="crit-cell crit-total last-col"><span class="crit-num s-${bucket}">${val.toFixed(1)}<span class="crit-unit">/ 12</span></span></div>`;
-  };
-
-  const rows = [
+  const conditions = [
     { key: 'col1', label: 'Out-of-box',       cls: 'c1' },
     { key: 'col2', label: '+MCP',             cls: 'c2' },
     { key: 'col3', label: '+MCP +Enrichment', cls: 'c3' },
   ];
+  const criteria = [
+    { key: 'acc',  label: 'Accurate' },
+    { key: 'comp', label: 'Complete' },
+    { key: 'cit',  label: 'Cited' },
+    { key: 'cons', label: 'Useful' },
+  ];
+  const ctx = { buckets, conditions, criteria, avg, totalScenarios: SCENARIOS_3COL.length };
+
+  const variants = [
+    { key: 'slope',       name: 'Slope chart',        caption: 'Each condition’s trajectory across the four criteria' },
+    { key: 'uplift',      name: 'Uplift trajectory',  caption: 'Where MCP and Enrichment lift or drag scores per criterion' },
+    { key: 'composition', name: 'Score composition',  caption: 'How each composite total is built from the four criteria' },
+    { key: 'cards',       name: 'Condition cards',    caption: 'Each condition at a glance: composite plus criterion bars' },
+  ];
+  const renderers = {
+    slope:       () => renderSlopeChart(ctx),
+    uplift:      () => renderUpliftChart(ctx),
+    composition: () => renderCompositionChart(ctx),
+    cards:       () => renderCardsChart(ctx),
+  };
 
   const totalScenarios = SCENARIOS_3COL.length;
-  let html = `
-    <div class="crit-matrix-title">
-      <span>Summary · average score by criterion</span>
-      <span class="matrix-evaluated"><strong>${evaluated}</strong> of ${totalScenarios} scenarios evaluated</span>
+  el.innerHTML = `
+    <div class="ccm-header">
+      <div class="ccm-header-title"><strong>Score profile</strong>average across all evaluated scenarios <a href="/rubric.html" class="ccm-rubric-link" title="View the scoring rubric">how are these scored? &rarr;</a></div>
+      <div class="ccm-evaluated"><strong>${evaluated}</strong> of ${totalScenarios} scenarios evaluated</div>
     </div>
-    <div class="crit-cell crit-head">Condition</div>
-    <div class="crit-cell crit-head">Accurate</div>
-    <div class="crit-cell crit-head">Complete</div>
-    <div class="crit-cell crit-head">Cited</div>
-    <div class="crit-cell crit-head">Useful</div>
-    <div class="crit-cell crit-head crit-total last-col">Total</div>
+    <div class="ccm-carousel" tabindex="0" role="region" aria-label="Score chart carousel">
+      <div class="ccm-carousel-controls">
+        <button class="ccm-carousel-btn ccm-prev" aria-label="Previous chart">&lsaquo;</button>
+        <div class="ccm-carousel-status">
+          <span class="ccm-variant-name"></span>
+          <span class="ccm-variant-caption"></span>
+        </div>
+        <button class="ccm-carousel-btn ccm-next" aria-label="Next chart">&rsaquo;</button>
+      </div>
+      <div class="ccm-stage">
+        ${variants.map(v => `<div class="ccm-slide" data-variant="${v.key}">${renderers[v.key]()}</div>`).join('')}
+      </div>
+      <div class="ccm-dots">
+        ${variants.map((v,i) => `<button class="ccm-dot-btn" data-i="${i}" aria-label="Show ${v.name}"></button>`).join('')}
+      </div>
+    </div>
   `;
-  rows.forEach(r => {
-    const b = buckets[r.key];
-    const n = b.total.length;
-    const countTag = n
-      ? `<span class="crit-row-count">${n} scen</span>`
-      : `<span class="crit-row-count">no data</span>`;
-    html += `<div class="crit-cell"><span class="crit-row-label ${r.cls}">${r.label}</span>${countTag}</div>`;
-    html += cellHtml(avg(b.acc));
-    html += cellHtml(avg(b.comp));
-    html += cellHtml(avg(b.cit));
-    html += cellHtml(avg(b.cons));
-    html += totalCellHtml(avg(b.total));
+  setupChartCarousel(el, variants);
+}
+
+function setupChartCarousel(root, variants) {
+  const slides = [...root.querySelectorAll('.ccm-slide')];
+  const dots = [...root.querySelectorAll('.ccm-dot-btn')];
+  const STORAGE = 'pdx-codes-summary-variant-v2';
+  let i = parseInt(localStorage.getItem(STORAGE) || '0', 10);
+  if (!Number.isFinite(i) || i < 0 || i >= slides.length) i = 0;
+
+  const nameEl = root.querySelector('.ccm-variant-name');
+  const captionEl = root.querySelector('.ccm-variant-caption');
+
+  function show(idx) {
+    i = ((idx % slides.length) + slides.length) % slides.length;
+    slides.forEach((s, j) => s.classList.toggle('is-active', j === i));
+    dots.forEach((d, j) => d.classList.toggle('is-active', j === i));
+    if (nameEl) nameEl.textContent = variants[i].name;
+    if (captionEl) captionEl.textContent = variants[i].caption;
+    try { localStorage.setItem(STORAGE, String(i)); } catch (e) {}
+  }
+
+  root.querySelector('.ccm-prev').addEventListener('click', () => show(i - 1));
+  root.querySelector('.ccm-next').addEventListener('click', () => show(i + 1));
+  dots.forEach((d, j) => d.addEventListener('click', () => show(j)));
+
+  const carousel = root.querySelector('.ccm-carousel');
+  carousel.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  { show(i - 1); e.preventDefault(); }
+    else if (e.key === 'ArrowRight') { show(i + 1); e.preventDefault(); }
   });
 
-  el.innerHTML = html;
+  show(i);
+}
+
+// ── Variant 1: Slope chart (parallel coordinates) ────────────────────────────
+function renderSlopeChart(ctx) {
+  const { buckets, conditions, criteria, avg } = ctx;
+  const W = 760, H = 260;
+  const PAD_L = 56, PAD_R = 210, PAD_T = 50, PAD_B = 24;
+  const innerW = W - PAD_L - PAD_R;
+  const innerH = H - PAD_T - PAD_B;
+  const xOf = i => PAD_L + (criteria.length === 1 ? 0 : i / (criteria.length - 1) * innerW);
+  const yOf = v => PAD_T + (1 - v / 3) * innerH;
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" class="ccm-svg" role="img" aria-label="Slope chart of scores across criteria">`;
+
+  // background gridlines at v=1, v=2 (subtle midbands)
+  [1, 2].forEach(v => {
+    svg += `<line x1="${PAD_L - 18}" x2="${W - PAD_R + 14}" y1="${yOf(v)}" y2="${yOf(v)}" class="ccm-slope-mid"/>`;
+  });
+
+  // axes (vertical lines per criterion) + tick marks
+  criteria.forEach((cr, i) => {
+    const x = xOf(i);
+    svg += `<line x1="${x}" x2="${x}" y1="${PAD_T - 4}" y2="${H - PAD_B + 4}" class="ccm-slope-axis-line"/>`;
+    [0, 1, 2, 3].forEach(v => {
+      svg += `<line x1="${x - 3}" x2="${x + 3}" y1="${yOf(v)}" y2="${yOf(v)}" class="ccm-slope-tick"/>`;
+    });
+    svg += `<text x="${x}" y="${PAD_T - 26}" class="ccm-slope-axis-label" text-anchor="middle">${cr.label}</text>`;
+    const allVals = conditions.map(cd => avg(buckets[cd.key][cr.key])).filter(v => v != null);
+    const meanAcross = allVals.length ? allVals.reduce((a,b)=>a+b,0)/allVals.length : null;
+    if (meanAcross != null) {
+      svg += `<text x="${x}" y="${PAD_T - 12}" class="ccm-slope-axis-sub" text-anchor="middle">avg ${meanAcross.toFixed(2)}</text>`;
+    }
+  });
+
+  // y-axis tick labels at left edge
+  for (let v = 0; v <= 3; v++) {
+    svg += `<text x="${PAD_L - 12}" y="${yOf(v) + 4}" class="ccm-slope-tick-label" text-anchor="end">${v}</text>`;
+  }
+
+  // value labels on the LEFT axis (start)
+  conditions.forEach(cd => {
+    const v = avg(buckets[cd.key][criteria[0].key]);
+    if (v == null) return;
+    svg += `<text x="${xOf(0) - 18}" y="${yOf(v) - 8}" class="ccm-slope-start-val ${cd.cls}" text-anchor="end">${v.toFixed(1)}</text>`;
+  });
+
+  // condition lines + dots; draw c3 last so it lands on top with glow
+  const order = ['c1', 'c2', 'c3'];
+  order.forEach(cls => {
+    const cd = conditions.find(c => c.cls === cls);
+    if (!cd) return;
+    const points = criteria.map((cr, i) => {
+      const v = avg(buckets[cd.key][cr.key]);
+      return v == null ? null : { v, x: xOf(i), y: yOf(v), label: cr.label };
+    });
+    if (points.some(p => p == null)) return;
+    const path = points.map((p, i) => (i === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1)).join(' ');
+    svg += `<path d="${path}" class="ccm-slope-line ${cd.cls}"><title>${cd.label}: ${points.map(p => `${p.label} ${p.v.toFixed(1)}`).join(' · ')}</title></path>`;
+    points.forEach(p => {
+      svg += `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="5" class="ccm-slope-dot ${cd.cls}"><title>${cd.label} · ${p.label}: ${p.v.toFixed(2)}</title></circle>`;
+    });
+  });
+
+  // right-side endpoint labels with final value, vertically de-overlapped
+  const right = conditions.map(cd => {
+    const v = avg(buckets[cd.key][criteria[criteria.length - 1].key]);
+    if (v == null) return null;
+    return { cd, v, y: yOf(v) };
+  }).filter(Boolean).sort((a,b) => a.y - b.y);
+  for (let k = 1; k < right.length; k++) {
+    if (right[k].y - right[k-1].y < 18) right[k].y = right[k-1].y + 18;
+  }
+  right.forEach(lab => {
+    const x = xOf(criteria.length - 1) + 14;
+    svg += `<text x="${x}" y="${lab.y + 4}" class="ccm-slope-end ${lab.cd.cls}"><tspan class="ccm-slope-end-num">${lab.v.toFixed(1)}</tspan>  ${lab.cd.label}</text>`;
+  });
+
+  svg += '</svg>';
+  return svg;
+}
+
+// ── Variant 2: Uplift trajectory ─────────────────────────────────────────────
+function renderUpliftChart(ctx) {
+  const { buckets, conditions, criteria, avg } = ctx;
+  const W = 760, H = 300;
+  const PAD_L = 130, PAD_R = 70, PAD_T = 22;
+  const trackW = W - PAD_L - PAD_R;
+  const ROW_H = (H - PAD_T - 14) / criteria.length;
+  const APEX = 16; // arrow arc height above/below the row line
+  const xOf = v => PAD_L + (v / 3) * trackW;
+
+  const legend = `
+    <div class="ccm-mini-legend">
+      <span class="ccm-mini-legend-item"><span class="ccm-mini-legend-dot c1"></span>Out-of-box</span>
+      <span class="ccm-mini-legend-item"><span class="ccm-mini-legend-dot c2"></span>+MCP</span>
+      <span class="ccm-mini-legend-item"><span class="ccm-mini-legend-dot c3"></span>+MCP +Enrichment</span>
+    </div>`;
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" class="ccm-svg" role="img" aria-label="Per-criterion uplift trajectory">`;
+
+  // arrowhead markers (one per direction class)
+  svg += `<defs>
+    <marker id="ccm-up-up"   viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="rgba(34, 197, 94, 0.8)"/></marker>
+    <marker id="ccm-up-down" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="rgba(239, 68, 68, 0.8)"/></marker>
+    <marker id="ccm-up-flat" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="rgba(148, 163, 184, 0.55)"/></marker>
+  </defs>`;
+
+  // top scale labels (0-3)
+  [0, 1, 2, 3].forEach(v => {
+    svg += `<text x="${xOf(v)}" y="${PAD_T - 8}" class="ccm-uplift-tick-label" text-anchor="middle">${v}</text>`;
+  });
+
+  criteria.forEach((cr, ri) => {
+    const yMid = PAD_T + 8 + ri * ROW_H + ROW_H / 2;
+    const v1 = avg(buckets.col1[cr.key]);
+    const v2 = avg(buckets.col2[cr.key]);
+    const v3 = avg(buckets.col3[cr.key]);
+
+    // criterion label + net delta (c3 - c1)
+    svg += `<text x="${PAD_L - 18}" y="${yMid - 2}" class="ccm-uplift-crit-label" text-anchor="end">${cr.label}</text>`;
+    if (v1 != null && v3 != null) {
+      const net = v3 - v1;
+      const cls = Math.abs(net) < 0.05 ? 'flat' : (net > 0 ? 'up' : 'down');
+      const sign = net > 0 ? '+' : (net < 0 ? '−' : '±');
+      svg += `<text x="${PAD_L - 18}" y="${yMid + 14}" class="ccm-uplift-crit-sub ccm-uplift-net ${cls}" text-anchor="end">net ${sign}${Math.abs(net).toFixed(1)}</text>`;
+    }
+
+    // baseline track + ticks
+    svg += `<line x1="${PAD_L}" x2="${PAD_L + trackW}" y1="${yMid}" y2="${yMid}" class="ccm-uplift-track"/>`;
+    [0, 1, 2, 3].forEach(v => {
+      svg += `<line x1="${xOf(v)}" x2="${xOf(v)}" y1="${yMid - 22}" y2="${yMid + 22}" class="ccm-uplift-tick"/>`;
+    });
+
+    const arrowOf = (a, b) => {
+      if (a == null || b == null) return null;
+      const d = b - a;
+      const cls = Math.abs(d) < 0.05 ? 'flat' : (d > 0 ? 'up' : 'down');
+      return { d, cls };
+    };
+
+    // arc arrows: c1 → c2 above, c2 → c3 below
+    [
+      { from: v1, to: v2, info: arrowOf(v1, v2), side: -1 },
+      { from: v2, to: v3, info: arrowOf(v2, v3), side:  1 },
+    ].forEach(a => {
+      if (!a.info || a.from == null || a.to == null) return;
+      const x1 = xOf(a.from), x2 = xOf(a.to);
+      const yArc = yMid + a.side * APEX;
+      const startY = yMid + a.side * 3.5;
+      const endY = yMid + a.side * 3.5;
+      const path = `M${x1.toFixed(1)},${startY.toFixed(1)} Q${((x1 + x2) / 2).toFixed(1)},${yArc.toFixed(1)} ${x2.toFixed(1)},${endY.toFixed(1)}`;
+      svg += `<path d="${path}" class="ccm-uplift-arrow ${a.info.cls}" marker-end="url(#ccm-up-${a.info.cls})"/>`;
+      const sign = a.info.d > 0 ? '+' : (a.info.d < 0 ? '−' : '±');
+      const dx = (x1 + x2) / 2;
+      const dy = a.side === -1 ? yArc - 4 : yArc + 11;
+      svg += `<text x="${dx.toFixed(1)}" y="${dy.toFixed(1)}" class="ccm-uplift-delta ${a.info.cls}" text-anchor="middle">${sign}${Math.abs(a.info.d).toFixed(1)}</text>`;
+    });
+
+    // dots (drawn after arrows so they sit on top); add slight x-jitter when adjacent dots share a value
+    const dotPts = [
+      { val: v1, cls: 'c1', label: 'Out-of-box' },
+      { val: v2, cls: 'c2', label: '+MCP' },
+      { val: v3, cls: 'c3', label: '+Enriched' },
+    ].filter(p => p.val != null);
+    dotPts.forEach(p => {
+      svg += `<circle cx="${xOf(p.val).toFixed(1)}" cy="${yMid}" r="6" class="ccm-uplift-dot ${p.cls}"><title>${p.label}: ${p.val.toFixed(2)}</title></circle>`;
+    });
+
+    // best-score numeric label to the right of the rightmost dot
+    if (v3 != null) {
+      const x = xOf(3) + 14;
+      svg += `<text x="${x}" y="${yMid + 4}" class="ccm-uplift-val ccm-uplift-net" style="fill:var(--c3)" text-anchor="start">${v3.toFixed(1)}</text>`;
+    }
+  });
+
+  svg += '</svg>';
+  return legend + svg;
+}
+
+// ── Variant 3: Score composition (stacked horizontal bars) ───────────────────
+function renderCompositionChart(ctx) {
+  const { buckets, conditions, criteria, avg } = ctx;
+  const critColors = {
+    acc:  '#22d3ee',
+    comp: '#60a5fa',
+    cit:  '#a78bfa',
+    cons: '#f472b6',
+  };
+
+  let html = `<div class="ccm-comp">`;
+
+  html += `<div class="ccm-comp-legend">`;
+  criteria.forEach(cr => {
+    html += `<span class="ccm-comp-legend-item"><span class="ccm-comp-swatch" style="background:${critColors[cr.key]}"></span>${cr.label}</span>`;
+  });
+  html += `</div>`;
+
+  html += `<div class="ccm-comp-rows">`;
+  conditions.forEach(cd => {
+    const vals = criteria.map(cr => avg(buckets[cd.key][cr.key]));
+    const n = buckets[cd.key].total.length;
+    if (vals.some(v => v == null)) {
+      html += `
+        <div class="ccm-comp-row">
+          <div class="ccm-comp-cond">
+            <div class="ccm-comp-cond-label ${cd.cls}">${cd.label}</div>
+            <div class="ccm-comp-cond-meta">no data</div>
+          </div>
+          <div class="ccm-comp-track-wrap"><div class="ccm-comp-track"></div></div>
+          <div class="ccm-comp-total ${cd.cls}">–</div>
+        </div>`;
+      return;
+    }
+    const total = vals.reduce((a,b)=>a+b,0);
+    const segs = vals.map((v, i) => {
+      const widthPct = (v / 12) * 100;
+      const bg = critColors[criteria[i].key];
+      return `<div class="ccm-comp-seg" style="width:${widthPct.toFixed(2)}%; background:${bg}" title="${criteria[i].label}: ${v.toFixed(2)} / 3">
+        <span class="ccm-comp-seg-name">${criteria[i].label}</span>
+        <span class="ccm-comp-seg-val">${v.toFixed(1)}</span>
+      </div>`;
+    }).join('');
+    html += `
+      <div class="ccm-comp-row">
+        <div class="ccm-comp-cond">
+          <div class="ccm-comp-cond-label ${cd.cls}">${cd.label}</div>
+          <div class="ccm-comp-cond-meta">${n} scen · sum = ${total.toFixed(1)}</div>
+        </div>
+        <div class="ccm-comp-track-wrap"><div class="ccm-comp-track">${segs}</div></div>
+        <div class="ccm-comp-total ${cd.cls}">${total.toFixed(1)}<span class="ccm-comp-total-unit">/12</span></div>
+      </div>`;
+  });
+  html += `</div>`;
+
+  // 0-12 scale axis below
+  const ticks = [0, 3, 6, 9, 12];
+  const tickHtml = ticks.map(t => `<span class="ccm-comp-scale-tick" style="left:${(t/12*100).toFixed(2)}%">${t}</span>`).join('');
+  html += `
+    <div class="ccm-comp-scale">
+      <div class="ccm-comp-scale-track">${tickHtml}</div>
+    </div>
+  </div>`;
+
+  return html;
+}
+
+// ── Variant 4: Stat cards ────────────────────────────────────────────────────
+function renderCardsChart(ctx) {
+  const { buckets, conditions, criteria, avg, totalScenarios } = ctx;
+  const totals = conditions.map(cd => avg(buckets[cd.key].total));
+  let bestIdx = -1, bestVal = -Infinity;
+  totals.forEach((v, i) => { if (v != null && v > bestVal) { bestVal = v; bestIdx = i; } });
+
+  let html = `<div class="ccm-cards">`;
+  conditions.forEach((cd, i) => {
+    const total = avg(buckets[cd.key].total);
+    const n = buckets[cd.key].total.length;
+    const isBest = i === bestIdx && total != null;
+
+    const r = 56, C = 2 * Math.PI * r;
+    const fillFrac = total != null ? Math.max(0, Math.min(1, total / 12)) : 0;
+    const dashOffset = C * (1 - fillFrac);
+
+    const gauge = `<svg viewBox="0 0 132 132" width="132" height="132">
+      <circle cx="66" cy="66" r="${r}" class="ccm-card-gauge-track"/>
+      <circle cx="66" cy="66" r="${r}" class="ccm-card-gauge-fill ${cd.cls}"
+              transform="rotate(-90 66 66)"
+              stroke-dasharray="${C.toFixed(2)}"
+              stroke-dashoffset="${dashOffset.toFixed(2)}"/>
+    </svg>`;
+
+    const bars = criteria.map(cr => {
+      const v = avg(buckets[cd.key][cr.key]);
+      if (v == null) {
+        return `<div class="ccm-card-bar-row">
+          <span class="ccm-card-bar-label">${cr.label}</span>
+          <div class="ccm-card-bar-track"></div>
+          <span class="ccm-card-bar-val" style="opacity:0.4">–</span>
+        </div>`;
+      }
+      const pct = (v / 3) * 100;
+      const valCls = v < 1.875 ? 'c1' : v < 2.625 ? 'c2' : 'c3';
+      return `<div class="ccm-card-bar-row">
+        <span class="ccm-card-bar-label">${cr.label}</span>
+        <div class="ccm-card-bar-track"><div class="ccm-card-bar-fill ${valCls}" style="width:${pct.toFixed(2)}%"></div></div>
+        <span class="ccm-card-bar-val">${v.toFixed(1)}</span>
+      </div>`;
+    }).join('');
+
+    html += `
+      <div class="ccm-card ${cd.cls}${isBest ? ' is-best' : ''}">
+        ${isBest ? '<span class="ccm-card-best-tag">Top</span>' : ''}
+        <div class="ccm-card-name ${cd.cls}">${cd.label}</div>
+        <div class="ccm-card-meta">${n}/${totalScenarios} scenarios scored</div>
+        <div class="ccm-card-gauge-wrap">
+          <div class="ccm-card-gauge">
+            ${gauge}
+            <div class="ccm-card-gauge-center">
+              <span class="ccm-card-gauge-num ${cd.cls}">${total != null ? total.toFixed(1) : '–'}</span>
+              <span class="ccm-card-gauge-unit">of 12</span>
+            </div>
+          </div>
+        </div>
+        <div class="ccm-card-bars">${bars}</div>
+      </div>`;
+  });
+  html += `</div>`;
+  return html;
 }
 
 function renderScenarioRow(s) {
@@ -1265,7 +2064,9 @@ function renderDetailCol(s, col, colKey, colorCls, colName, scenarioId) {
                placeholder="Tool name (e.g. ChatGPT 5.5, Claude Opus 4.7)"
                value="${esc(col.tool || '')}">
         <button class="detail-save-btn" onclick="saveColResponse('${scenarioId}','${colKey}')">Save</button>
-        <button class="detail-eval-btn" id="eval-${scenarioId}-${colKey}" onclick="evalCol('${scenarioId}','${colKey}')">Evaluate</button>
+        <button class="detail-eval-btn" id="eval-${scenarioId}-${colKey}"
+                onclick="evalCol('${scenarioId}','${colKey}')"
+                ${isEvalInFlight(scenarioId, colKey) ? 'disabled' : ''}>${isEvalInFlight(scenarioId, colKey) ? 'Evaluating…' : 'Evaluate'}</button>
         <button class="detail-clear-btn" onclick="clearCol('${scenarioId}','${colKey}')" title="Clear this column's response and scores">Clear</button>
       </div>
     </div>
@@ -1293,6 +2094,15 @@ function attachRowListeners() {
   });
 }
 
+// In-flight eval tracker. Runtime-only (never persisted) — keyed by
+// `${scenarioId}-${colKey}`. Each entry holds { requestId, forResponse }.
+// requestId lets a returning fetch detect that its result is stale (e.g. the
+// user re-evaluated, or saved a different response, while it was running).
+const inflightEvals = {};
+const inflightKey = (sid, ck) => `${sid}-${ck}`;
+function isEvalInFlight(sid, ck) { return !!inflightEvals[inflightKey(sid, ck)]; }
+function invalidateInflight(sid, ck) { delete inflightEvals[inflightKey(sid, ck)]; }
+
 function saveColResponse(scenarioId, colKey) {
   const textarea = document.getElementById(`input-${scenarioId}-${colKey}`);
   const toolInput = document.getElementById(`tool-${scenarioId}-${colKey}`);
@@ -1304,6 +2114,12 @@ function saveColResponse(scenarioId, colKey) {
   if (newResponse) col.savedAt = new Date().toISOString();
   col.response = newResponse;
   col.tool = toolInput ? toolInput.value.trim() : '';
+  // If an eval is in flight against a different response, invalidate it so
+  // its scores don't get attached to the new response when it returns.
+  const inflight = inflightEvals[inflightKey(scenarioId, colKey)];
+  if (inflight && inflight.forResponse !== newResponse) {
+    invalidateInflight(scenarioId, colKey);
+  }
   persistState3col();
   // refresh just this row
   refreshRow(scenarioId);
@@ -1314,6 +2130,7 @@ function clearCol(scenarioId, colKey) {
   const colName = { col1: 'Out-of-box', col2: '+MCP', col3: '+MCP +Enrichment' }[colKey] || colKey;
   if (!confirm(`Clear the ${colName} response and scores for "${scenario.label}" (${scenario.address})? This cannot be undone.`)) return;
   slot(scenarioId)[colKey] = emptyColData();
+  invalidateInflight(scenarioId, colKey);
   persistState3col();
   refreshRow(scenarioId);
 }
@@ -1323,6 +2140,7 @@ function clearScenario(scenarioId) {
   const label = scenario ? scenario.label : scenarioId;
   if (!confirm(`Clear ALL responses, scores, and the enriched question for "${label}" (${scenario.address})? This cannot be undone.`)) return;
   ensureBucket(scenario.address)[scenarioId] = emptyScenarioState();
+  ['col1','col2','col3'].forEach(ck => invalidateInflight(scenarioId, ck));
   persistState3col();
   refreshRow(scenarioId);
 }
@@ -1349,8 +2167,18 @@ function evalCol(scenarioId, colKey) {
   colBefore.response = response;
   if (toolInput) colBefore.tool = toolInput.value.trim();
 
-  const btn = document.getElementById(`eval-${scenarioId}-${colKey}`);
-  if (btn) { btn.textContent = 'Evaluating…'; btn.disabled = true; }
+  // Mint a unique requestId. The .then() handler below checks that the
+  // tracker still holds this same id before applying scores — otherwise
+  // the user has either re-evaluated or saved a different response and
+  // the result we just got back is stale.
+  const requestId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  inflightEvals[inflightKey(scenarioId, colKey)] = { requestId, forResponse: response };
+
+  // Persist the saved response/tool so it survives a refresh even if the
+  // eval is still running. Scores stay null until the eval returns.
+  persistState3col();
+  // Re-render so the button shows "Evaluating…" (driven by inflightEvals).
+  refreshRow(scenarioId);
 
   fetch('/api/evaluate', {
     method: 'POST',
@@ -1364,6 +2192,11 @@ function evalCol(scenarioId, colKey) {
   .then(r => r.json())
   .then(data => {
     if (data.error) throw new Error(data.error);
+    // Stale-result guard: only apply scores if this is still the live eval
+    // for this cell. Otherwise the user has moved on and these scores
+    // would attach to a different response.
+    const current = inflightEvals[inflightKey(scenarioId, colKey)];
+    if (!current || current.requestId !== requestId) return;
     const col = slot(scenarioId)[colKey];
     col.accuracy               = data.accuracy ?? null;
     col.completeness           = data.completeness ?? null;
@@ -1373,12 +2206,19 @@ function evalCol(scenarioId, colKey) {
     col.accuracyFlags          = data.accuracy_flags || [];
     col.dataQualityNotes       = data.data_quality_notes || '';
     col.evaluatedAt            = new Date().toISOString();
+    invalidateInflight(scenarioId, colKey);
     persistState3col();
     refreshRow(scenarioId);
   })
   .catch(err => {
-    alert('Evaluation error: ' + (err.message || String(err)));
-    if (btn) { btn.textContent = 'Evaluate'; btn.disabled = false; }
+    const current = inflightEvals[inflightKey(scenarioId, colKey)];
+    if (current && current.requestId === requestId) {
+      invalidateInflight(scenarioId, colKey);
+      refreshRow(scenarioId);
+      alert('Evaluation error: ' + (err.message || String(err)));
+    }
+    // If the request was already invalidated, swallow the error silently —
+    // the user has moved on and doesn't need a stale alert.
   });
 }
 
@@ -1423,7 +2263,7 @@ function refreshRow(scenarioId) {
   if (wasExpanded) newRow.classList.add('expanded');
   if (row) row.replaceWith(newRow);
   attachRowListeners();
-  renderStatStrip();
+  renderCritMatrix();
 }
 
 // ── Server-side three-column state endpoints ──────────────────────────────────

@@ -590,7 +590,11 @@ def _unique_citations_for(atoms: list[dict], variant: str) -> list[str]:
     for a in atoms:
         if variant not in (a.get('variants') or []):
             continue
-        c = a.get('citation')
+        cbv = a.get('citation_by_variant')
+        if isinstance(cbv, dict) and variant in cbv:
+            c = cbv.get(variant)
+        else:
+            c = a.get('citation')
         if c and c not in seen:
             seen.append(c)
     return seen
@@ -638,8 +642,13 @@ def _derive_scores_from_atoms(atoms: list[dict], variant: str) -> dict:
     own_topics = {a.get('topic') for a in own if a.get('topic')}
     completeness = (len(own_topics) / len(universe_topics)) if universe_topics else 0.0
 
-    cited_imp = sum(_imp(a) for a in own if a.get('citation'))
-    auth_imp  = sum(_imp(a) for a in own if _is_authoritative_citation(a.get('citation') or ''))
+    def _cite_for(a):
+        cbv = a.get('citation_by_variant')
+        if isinstance(cbv, dict) and variant in cbv:
+            return cbv.get(variant)
+        return a.get('citation')
+    cited_imp = sum(_imp(a) for a in own if _cite_for(a))
+    auth_imp  = sum(_imp(a) for a in own if _is_authoritative_citation(_cite_for(a) or ''))
     if cited_imp == 0:
         auth_share = 0.0
     else:
@@ -659,15 +668,181 @@ def _derive_scores_from_atoms(atoms: list[dict], variant: str) -> dict:
     }
 
 
+# ── Coverage matrix: topic × variant status grid ──────────────────────────
+# Drives the at-a-glance "what each column missed" header on the comparison
+# page. Status per (topic, variant) is derived from the atoms tagged with that
+# variant, prioritising flaws (a single WRONG drags the cell red) so the row
+# tells the reader where score deltas come from.
+
+_TOPIC_LABELS = {
+    'zoning':     'Zoning / overlays',
+    'setbacks':   'Setbacks',
+    'size':       'Size / height limits',
+    'address':    'Address-specific facts',
+    'sequence':   'Next steps / sequence',
+    'process':    'Permit process',
+    'fees':       'Permit fees',
+    'costs':      'Construction cost',
+    'sewer':      'Sewer / stormwater',
+    'trees':      'Tree code',
+    'safety':     'Safety / hazards',
+}
+
+
+def _topic_status_for_variant(atoms: list[dict], topic: str, variant: str) -> str:
+    """Returns 'covered' | 'weak' | 'wrong' | 'missing' for one cell."""
+    own = [
+        a for a in atoms
+        if a.get('topic') == topic and variant in (a.get('variants') or [])
+    ]
+    if not own:
+        return 'missing'
+    cs = [a.get('correctness') or '' for a in own]
+    if any(c in ('WRONG', 'PARTIAL-WRONG') for c in cs):
+        return 'wrong'
+    if any(c in ('correct', 'correct-action', 'correct-judg', 'correct-range')
+           for c in cs):
+        return 'covered'
+    return 'weak'
+
+
+_STATUS_GLYPH = {
+    'covered': '✓',
+    'weak':    '~',
+    'wrong':   '✗',
+    'missing': '—',
+}
+_STATUS_LABEL = {
+    'covered': 'covered',
+    'weak':    'hedged',
+    'wrong':   'wrong',
+    'missing': 'not covered',
+}
+
+
+def _topic_universe_sorted(atoms: list[dict],
+                           variants: list[str]) -> list[str]:
+    """Topics ordered: most differentiating between variants first, then by
+    total importance, then alphabetical. Differentiating means the variants
+    disagree on coverage status — exactly the rows the audience cares about.
+    """
+    topics = sorted({a.get('topic') for a in atoms if a.get('topic')})
+    importance = {t: 0 for t in topics}
+    for a in atoms:
+        t = a.get('topic')
+        if not t:
+            continue
+        importance[t] += int(a.get('importance') or 1)
+
+    def key(t):
+        statuses = {_topic_status_for_variant(atoms, t, v) for v in variants}
+        diff = len(statuses)
+        return (-diff, -importance[t], t)
+
+    return sorted(topics, key=key)
+
+
+def _render_coverage_matrix(atoms: list[dict],
+                            variant_columns: list[tuple[str, str, str]]) -> str:
+    """Topic × column grid. variant_columns is [(variant_key, label, color_class), ...].
+    Returns full <section> HTML or '' when there are no atoms.
+    """
+    if not atoms:
+        return ''
+
+    variant_keys = [v for v, _, _ in variant_columns]
+    topics = _topic_universe_sorted(atoms, variant_keys)
+    if not topics:
+        return ''
+
+    # Header row
+    head_cells = ['<div class="cm-corner">Topic</div>']
+    for _, label, color_class in variant_columns:
+        head_cells.append(
+            f'<div class="cm-head {color_class}">{_html.escape(label)}</div>'
+        )
+
+    # Body rows
+    body_rows: list[str] = []
+    for topic in topics:
+        label = _TOPIC_LABELS.get(topic, topic.replace('_', ' ').title())
+        cells = [f'<div class="cm-topic">{_html.escape(label)}</div>']
+        for variant_key, _, _ in variant_columns:
+            status = _topic_status_for_variant(atoms, topic, variant_key)
+            glyph = _STATUS_GLYPH[status]
+            tip   = f'{label}: {_STATUS_LABEL[status]}'
+            cells.append(
+                f'<div class="cm-cell cm-{status}" title="{_html.escape(tip)}">'
+                f'<span class="cm-glyph">{glyph}</span></div>'
+            )
+        body_rows.append(''.join(cells))
+
+    # Auto-takeaway: which topics each variant uniquely missed vs. enhanced.
+    takeaway_html = _render_coverage_takeaway(atoms, variant_columns, topics)
+
+    grid_cols_css = '220px ' + ' '.join('1fr' for _ in variant_columns)
+    return f'''
+<section class="coverage-matrix">
+  <div class="cm-header">
+    <span class="cm-eyebrow">At a glance</span>
+    <h2>Why the scores differ</h2>
+  </div>
+  <div class="cm-legend">
+    <span><span class="cm-chip cm-covered">✓</span>covered with a verifiable claim</span>
+    <span><span class="cm-chip cm-weak">~</span>hedged or vague</span>
+    <span><span class="cm-chip cm-wrong">✗</span>wrong claim</span>
+    <span><span class="cm-chip cm-missing">—</span>topic not addressed</span>
+  </div>
+  {takeaway_html}
+  <div class="cm-grid" style="grid-template-columns: {grid_cols_css};">
+    {''.join(head_cells)}
+    {''.join(body_rows)}
+  </div>
+</section>
+'''
+
+
+def _render_coverage_takeaway(atoms: list[dict],
+                              variant_columns: list[tuple[str, str, str]],
+                              topics: list[str]) -> str:
+    """One sentence per column summarising what it missed vs. the union of
+    topics covered by any column. Highlights the gap story."""
+    items = []
+    for variant_key, label, color_class in variant_columns:
+        missed = []
+        for topic in topics:
+            status = _topic_status_for_variant(atoms, topic, variant_key)
+            if status == 'missing':
+                missed.append(_TOPIC_LABELS.get(topic, topic).lower())
+            elif status == 'wrong':
+                missed.append(_TOPIC_LABELS.get(topic, topic).lower() + ' (wrong)')
+        if missed:
+            gaps = ', '.join(missed)
+            items.append(
+                f'<li class="cm-takeaway-item {color_class}">'
+                f'<span class="cm-takeaway-label">{_html.escape(label)}</span>'
+                f'<span class="cm-takeaway-gaps">missed: {_html.escape(gaps)}</span>'
+                f'</li>'
+            )
+        else:
+            items.append(
+                f'<li class="cm-takeaway-item {color_class}">'
+                f'<span class="cm-takeaway-label">{_html.escape(label)}</span>'
+                f'<span class="cm-takeaway-gaps cm-takeaway-clean">covered every topic above</span>'
+                f'</li>'
+            )
+    return f'<ul class="cm-takeaway">{"".join(items)}</ul>'
+
+
 _COL_TO_VARIANT = {'col1': 'oob', 'col2': 'mcp', 'col3': 'enhanced'}
 
 
 def _overlay_atom_scores(state: dict) -> dict:
-    """Replace col1/col2/col3 rubric scores in three-column-state with values
-    derived from site/data/atoms/<scenario>.json. Atoms is the canonical source;
-    a manual /api/evaluate run on the dashboard must not diverge from the
-    comparison page. Only the four rubric fields are overridden — tool, model,
-    response, and rationale stay intact.
+    """Backfill col1/col2/col3 rubric scores from site/data/atoms/<scenario>.json
+    when (and only when) the cell has no manual scores yet. Manual /api/evaluate
+    results are authoritative and must never be overwritten — atomization is a
+    separate, slower workflow and its scores can lag behind the latest response.
+    Empty cells (no response) are zeroed so the Clear buttons work.
     """
     if not isinstance(state, dict):
         return state
@@ -694,6 +869,28 @@ def _overlay_atom_scores(state: dict) -> dict:
             for col_key, variant in _COL_TO_VARIANT.items():
                 col = slot.get(col_key)
                 if not isinstance(col, dict):
+                    continue
+                # Honor explicit clears: if the saved cell has no response,
+                # actively null out any stored scores so prior contamination
+                # (older builds wrote overlaid scores into the saved state)
+                # doesn't keep resurrecting on refresh.
+                if not (col.get('response') or '').strip():
+                    col['accuracy']               = None
+                    col['completeness']           = None
+                    col['authoritativeCitations'] = None
+                    col['consumability']          = None
+                    continue
+                # Backfill only — never overwrite a manual evaluation. If any
+                # rubric score is already set, the user has evaluated this cell
+                # and atoms (which are produced by a separate, slower workflow)
+                # may be stale.
+                already_scored = (
+                    col.get('accuracy') is not None
+                    or col.get('completeness') is not None
+                    or col.get('authoritativeCitations') is not None
+                    or col.get('consumability') is not None
+                )
+                if already_scored:
                     continue
                 if not any(variant in (a.get('variants') or []) for a in atoms):
                     continue
@@ -763,6 +960,9 @@ def _render_column(*, num: int, label: str, tool: str, model: str,
         <div class="col-title"><span class="num">{num}</span>{_html.escape(label)}</div>
         <div class="col-tool">{tool_line}</div>
       </header>
+      <div class="rubric">
+        {''.join(rubric_rows)}
+      </div>
       <div class="response">
         {body_html}
         {missing_html}
@@ -770,9 +970,6 @@ def _render_column(*, num: int, label: str, tool: str, model: str,
       <div class="citations">
         <span class="label">Sources cited</span>
         {chips}
-      </div>
-      <div class="rubric">
-        {''.join(rubric_rows)}
       </div>
     </article>'''
 
@@ -782,7 +979,7 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} — Out-of-the-box vs Enhanced</title>
+<title>{title} — Three-column AI comparison</title>
 <style>
   *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
@@ -790,7 +987,7 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
     background: #f5f4ef; color: #1f2933; line-height: 1.5;
     padding: 32px 40px 80px;
   }}
-  .page-header {{ max-width: 1280px; margin: 0 auto 28px; }}
+  .page-header {{ max-width: 1600px; margin: 0 auto 28px; }}
   .eyebrow {{
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em;
     color: #6b7280; font-weight: 600; margin-bottom: 6px;
@@ -805,7 +1002,7 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
   .crumbs a:hover {{ text-decoration: underline; }}
 
   .scenario {{
-    max-width: 1280px; margin: 0 auto 24px;
+    max-width: 1600px; margin: 0 auto 24px;
     background: #fff; border: 1px solid #d6d3c7; border-left: 4px solid #1d4ed8;
     padding: 18px 22px; border-radius: 4px;
     display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
@@ -822,8 +1019,8 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
   .scenario-meta strong {{ color: #111827; }}
 
   .grid {{
-    max-width: 1280px; margin: 0 auto;
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+    max-width: 1600px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
   }}
   .col {{
     background: #fff; border: 1px solid #d6d3c7; border-radius: 4px;
@@ -834,6 +1031,7 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
   }}
   .col-1 .col-header {{ background: #fef2f2; border-bottom-color: #fecaca; }}
+  .col-2 .col-header {{ background: #fef3c7; border-bottom-color: #fcd34d; }}
   .col-3 .col-header {{ background: #f0fdf4; border-bottom-color: #bbf7d0; }}
   .col-title {{ font-size: 13px; font-weight: 700; color: #111827; letter-spacing: -0.01em; }}
   .col-title .num {{
@@ -842,6 +1040,7 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
     color: #fff; font-weight: 700;
   }}
   .col-1 .num {{ background: #dc2626; }}
+  .col-2 .num {{ background: #d97706; }}
   .col-3 .num {{ background: #16a34a; }}
   .col-tool {{
     font-size: 10px; color: #6b7280; text-transform: uppercase;
@@ -906,7 +1105,7 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
   .chip-bad  {{ background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }}
   .chip-none {{ background: #f3f4f6; color: #6b7280; border: 1px dashed #d1d5db; font-style: italic; }}
 
-  .rubric {{ padding: 14px 18px; border-top: 2px solid #e5e7eb; background: #fff; }}
+  .rubric {{ padding: 14px 18px; border-bottom: 2px solid #e5e7eb; background: #fff; }}
   .rubric-row {{
     display: grid; grid-template-columns: 170px 1fr 40px;
     align-items: center; gap: 10px; margin-bottom: 8px; font-size: 11px;
@@ -930,14 +1129,110 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
   .rubric-score .denom {{ color: #9ca3af; font-weight: 400; font-size: 11px; }}
 
   .verifier-badge {{
-    max-width: 1280px; margin: 24px auto 0;
+    max-width: 1600px; margin: 24px auto 0;
     padding: 12px 18px; background: #eef2ff; border: 1px solid #c7d2fe;
     border-radius: 4px; font-size: 12px; color: #3730a3;
   }}
   .verifier-badge strong {{ color: #1e1b4b; font-family: "SF Mono", Menlo, monospace; }}
 
+  /* ── Coverage matrix ── */
+  .coverage-matrix {{
+    max-width: 1600px; margin: 0 auto 24px;
+    background: #fff; border: 1px solid #d6d3c7; border-radius: 4px;
+    padding: 20px 24px;
+  }}
+  .cm-header {{ margin-bottom: 16px; }}
+  .cm-eyebrow {{
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: #6b7280; font-weight: 700;
+  }}
+  .cm-header h2 {{
+    font-size: 18px; font-weight: 700; color: #111827;
+    margin: 4px 0 6px; letter-spacing: -0.01em;
+  }}
+  .cm-deck {{ font-size: 12px; color: #4b5563; max-width: 880px; }}
+
+  .cm-grid {{
+    display: grid;
+    border: 1px solid #e5e7eb; border-radius: 4px; overflow: hidden;
+    font-size: 12px;
+  }}
+  .cm-corner, .cm-head {{
+    padding: 10px 14px; font-weight: 700; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    background: #fafaf7; border-bottom: 1px solid #e5e7eb;
+    color: #111827;
+  }}
+  .cm-head.col-1 {{ background: #fef2f2; color: #991b1b; }}
+  .cm-head.col-2 {{ background: #fef3c7; color: #854d0e; }}
+  .cm-head.col-3 {{ background: #f0fdf4; color: #166534; }}
+  .cm-corner {{ color: #6b7280; }}
+
+  .cm-topic {{
+    padding: 10px 14px; font-weight: 600; color: #1f2933;
+    background: #fafaf7; border-bottom: 1px solid #f1efe8;
+    border-right: 1px solid #e5e7eb;
+  }}
+  .cm-cell {{
+    padding: 10px 12px; text-align: center;
+    border-bottom: 1px solid #f1efe8;
+    border-right: 1px solid #f1efe8;
+    display: flex; align-items: center; justify-content: center;
+  }}
+  .cm-cell:last-child {{ border-right: none; }}
+  .cm-grid > .cm-topic:last-of-type,
+  .cm-grid > .cm-topic:last-of-type ~ .cm-cell {{ border-bottom: none; }}
+
+  .cm-glyph {{
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 50%;
+    font-size: 14px; font-weight: 700; line-height: 1;
+  }}
+  .cm-covered {{ background: #ecfdf5; }}
+  .cm-covered .cm-glyph {{ background: #16a34a; color: #fff; }}
+  .cm-weak    {{ background: #fffbeb; }}
+  .cm-weak    .cm-glyph {{ background: #ca8a04; color: #fff; }}
+  .cm-wrong   {{ background: #fef2f2; }}
+  .cm-wrong   .cm-glyph {{ background: #dc2626; color: #fff; }}
+  .cm-missing {{ background: #fafaf7; }}
+  .cm-missing .cm-glyph {{ background: #d1d5db; color: #6b7280; }}
+
+  .cm-legend {{
+    margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 18px;
+    font-size: 11px; color: #4b5563;
+  }}
+  .cm-legend > span {{ display: inline-flex; align-items: center; gap: 6px; }}
+  .cm-chip {{
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 18px; height: 18px; border-radius: 50%;
+    font-size: 11px; font-weight: 700; color: #fff;
+  }}
+  .cm-chip.cm-covered {{ background: #16a34a; }}
+  .cm-chip.cm-weak    {{ background: #ca8a04; }}
+  .cm-chip.cm-wrong   {{ background: #dc2626; }}
+  .cm-chip.cm-missing {{ background: #d1d5db; color: #6b7280; }}
+
+  .cm-takeaway {{
+    list-style: none; margin-bottom: 18px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  }}
+  .cm-takeaway-item {{
+    padding: 10px 12px; border-radius: 4px;
+    font-size: 12px; line-height: 1.45;
+    border-left: 3px solid #d1d5db; background: #fafaf7;
+  }}
+  .cm-takeaway-item.col-1 {{ border-left-color: #dc2626; background: #fef2f2; }}
+  .cm-takeaway-item.col-2 {{ border-left-color: #d97706; background: #fffbeb; }}
+  .cm-takeaway-item.col-3 {{ border-left-color: #16a34a; background: #f0fdf4; }}
+  .cm-takeaway-label {{
+    display: block; font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.08em; font-weight: 700; color: #111827; margin-bottom: 4px;
+  }}
+  .cm-takeaway-gaps {{ color: #4b5563; }}
+  .cm-takeaway-clean {{ color: #166534; font-weight: 600; }}
+
   .legend {{
-    max-width: 1280px; margin: 24px auto 0;
+    max-width: 1600px; margin: 24px auto 0;
     padding: 18px 22px; background: #fff; border: 1px solid #d6d3c7; border-radius: 4px;
     font-size: 12px; color: #4b5563;
   }}
@@ -954,7 +1249,6 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
 <div class="page-header">
   <div class="eyebrow">City of Portland · AI Code Search Hackathon · Track 1 evaluation</div>
   <h1>{headline}</h1>
-  <p class="deck">Two AI answers to the same question. Same address, same homeowner. The only difference: tooling and prompt. Read both to see what changes when an AI can reach the city's data and is briefed on who is asking.</p>
   <div class="crumbs"><a href="/">← back to dashboard</a></div>
 </div>
 
@@ -970,8 +1264,11 @@ _COMPARISON_PAGE = '''<!DOCTYPE html>
   </div>
 </section>
 
+{coverage_matrix}
+
 <div class="grid">
 {col_oob}
+{col_mcp}
 {col_enhanced}
 </div>
 
@@ -1050,6 +1347,7 @@ def render_comparison_html(scenario_id: str) -> tuple[str, int]:
                 slot = v[scenario_id]; break
     slot = slot or {}
     col1 = slot.get('col1') or {}
+    col2 = slot.get('col2') or {}
     col3 = slot.get('col3') or {}
 
     # Question text — replace (x) placeholder with address
@@ -1064,6 +1362,7 @@ def render_comparison_html(scenario_id: str) -> tuple[str, int]:
     atoms, atom_responses = _load_atoms(scenario_id)
 
     oob_text = (atom_responses.get('oob') or {}).get('text') or col1.get('response') or ''
+    mcp_text = (atom_responses.get('mcp') or {}).get('text') or col2.get('response') or ''
     enh_text = (atom_responses.get('enhanced') or {}).get('text') or col3.get('response') or ''
 
     col_oob = _render_column(
@@ -1075,14 +1374,32 @@ def render_comparison_html(scenario_id: str) -> tuple[str, int]:
         scores=_scores_from_col(col1), color_class='col-1',
         atoms=atoms, variant='oob',
     )
+    col_mcp = _render_column(
+        num=2, label='AI + city data',
+        tool=col2.get('tool') or 'MCP',
+        model=col2.get('model', ''),
+        response_text=mcp_text,
+        citations=_extract_citations_from_text(mcp_text),
+        scores=_scores_from_col(col2), color_class='col-2',
+        atoms=atoms, variant='mcp',
+    )
     col_enh = _render_column(
-        num=2, label='AI + data + better question',
+        num=3, label='AI + data + better question',
         tool=col3.get('tool') or 'MCP + enriched',
         model=col3.get('model', ''),
         response_text=enh_text,
         citations=_extract_citations_from_text(enh_text),
         scores=_scores_from_col(col3), color_class='col-3',
         atoms=atoms, variant='enhanced',
+    )
+
+    coverage_matrix = _render_coverage_matrix(
+        atoms,
+        variant_columns=[
+            ('oob',      'Out-of-the-box AI',          'col-1'),
+            ('mcp',      'AI + city data',             'col-2'),
+            ('enhanced', 'AI + data + better question', 'col-3'),
+        ],
     )
 
     body = _COMPARISON_PAGE.format(
@@ -1092,7 +1409,9 @@ def render_comparison_html(scenario_id: str) -> tuple[str, int]:
         address=_html.escape(meta.get('address', '')),
         neighborhood=_html.escape(meta.get('neighborhood', '')),
         num=meta.get('num', '?'),
+        coverage_matrix=coverage_matrix,
         col_oob=col_oob,
+        col_mcp=col_mcp,
         col_enhanced=col_enh,
     )
     return body, 200
@@ -1134,7 +1453,7 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         if path == '/api/three-column-state':
-            self._send_json(load_threecol_state())
+            self._send_json(_overlay_atom_scores(load_threecol_state()))
             return
 
         if path == '/api/responses':

@@ -104,6 +104,20 @@ def citation_credit(value: Any) -> float:
     return 0.0
 
 
+def atom_citation_for(atom: dict, variant: str) -> Any:
+    """Per-variant citation lookup with legacy fallback.
+
+    New atoms files carry `citation_by_variant: {oob, mcp, enhanced}` so each
+    variant is credited only for what THAT variant actually cited. Older atoms
+    files have only a single `citation` field that was the merged best-citation
+    across variants — we fall back to it for backwards compatibility.
+    """
+    cbv = atom.get('citation_by_variant')
+    if isinstance(cbv, dict) and variant in cbv:
+        return cbv.get(variant)
+    return atom.get('citation')
+
+
 # ── consumability helpers ──────────────────────────────────────────────────
 JARGON_TOKENS = {
     'ADU', 'FAR', 'SDC', 'SDCs', 'DAR', 'BDS', 'PCC', 'ORS',
@@ -187,7 +201,7 @@ def score_completeness(atoms_v: list[dict], must_cover: list[str]) -> tuple[int,
 NON_CITABLE_TOPICS = {'sequence', 'process', 'address'}
 
 
-def score_citations(atoms_v: list[dict]) -> tuple[int, dict]:
+def score_citations(atoms_v: list[dict], variant: str) -> tuple[int, dict]:
     # Only count atoms that (a) carry a verifiable factual claim and (b) are
     # on a topic where a code citation is reasonable to expect. "Call BDS"
     # and "I couldn't look up the parcel" don't need PCC citations.
@@ -198,11 +212,11 @@ def score_citations(atoms_v: list[dict]) -> tuple[int, dict]:
     ]
     if not factual:
         return 0, {'raw': 0.0, 'note': 'no citable factual atoms'}
-    total = sum(citation_credit(a.get('citation')) for a in factual)
+    total = sum(citation_credit(atom_citation_for(a, variant)) for a in factual)
     raw = total / len(factual)
     bucket_counts = {'authoritative': 0, 'third_party': 0, 'none_or_other': 0}
     for a in factual:
-        c = citation_credit(a.get('citation'))
+        c = citation_credit(atom_citation_for(a, variant))
         if   c >= 1.0: bucket_counts['authoritative']  += 1
         elif c > 0.0:  bucket_counts['third_party']    += 1
         else:          bucket_counts['none_or_other']  += 1
@@ -240,7 +254,7 @@ def compute_scores(atoms_payload: dict, must_cover: list[str]) -> dict:
         text    = (responses.get(v) or {}).get('text', '')
         acc_score, acc_d   = score_accuracy(atoms_v)
         comp_score, comp_d = score_completeness(atoms_v, must_cover)
-        cit_score, cit_d   = score_citations(atoms_v)
+        cit_score, cit_d   = score_citations(atoms_v, v)
         con_score, con_d   = score_consumability(atoms_v, text)
         out[v] = {
             'accuracy':                acc_score,

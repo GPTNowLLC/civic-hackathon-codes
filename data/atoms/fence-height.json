@@ -33,7 +33,12 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm base zone R5 for 3220 NE 33rd Ave; OOB explicitly inferred this without retrieval, MCP and enhanced retrieved it via PortlandMaps."
+      "verified_truth": "Accuracy flags confirm base zone R5 for 3220 NE 33rd Ave; OOB explicitly inferred this without retrieval, MCP and enhanced retrieved it via PortlandMaps.",
+      "citation_by_variant": {
+        "oob": "PortlandMaps",
+        "mcp": null,
+        "enhanced": "PortlandMaps"
+      }
     },
     {
       "id": "A2",
@@ -48,7 +53,10 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm R5 with 'h' (Aircraft Landing) overlay per MCP retrieval; enhanced reported plain R5 with no overlays."
+      "verified_truth": "Accuracy flags confirm R5 with 'h' (Aircraft Landing) overlay per MCP retrieval; enhanced reported plain R5 with no overlays.",
+      "citation_by_variant": {
+        "mcp": null
+      }
     },
     {
       "id": "A3",
@@ -64,7 +72,11 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm property is in Beaumont-Wilshire, not Alameda/Grant Park."
+      "verified_truth": "Accuracy flags confirm property is in Beaumont-Wilshire, not Alameda/Grant Park.",
+      "citation_by_variant": {
+        "oob": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      }
     },
     {
       "id": "A4",
@@ -81,7 +93,12 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.110.275",
-      "verified_truth": "Accuracy flags confirm 33.110.275 is the correct fence regulation section; enhanced correctly notes pre-2021 number was 33.110.255."
+      "verified_truth": "Accuracy flags confirm 33.110.275 is the correct fence regulation section; enhanced correctly notes pre-2021 number was 33.110.255.",
+      "citation_by_variant": {
+        "oob": "PCC 33.110.275",
+        "mcp": "PCC 33.110.275",
+        "enhanced": "PCC 33.110.275"
+      }
     },
     {
       "id": "A5",
@@ -98,7 +115,12 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "PCC 33.110.275",
-      "verified_truth": "Accuracy flags confirm 3.5 ft (3 ft 6 in) maximum for fences within the front building setback in R5."
+      "verified_truth": "Accuracy flags confirm 3.5 ft (3 ft 6 in) maximum for fences within the front building setback in R5.",
+      "citation_by_variant": {
+        "oob": "PCC 33.110.275",
+        "mcp": "PCC 33.110.275",
+        "enhanced": "PCC 33.110.275"
+      }
     },
     {
       "id": "A6",
@@ -115,7 +137,12 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "PCC 33.110.275",
-      "verified_truth": "Accuracy flags confirm side/rear yard fence max of 8 feet within building setbacks."
+      "verified_truth": "Accuracy flags confirm side/rear yard fence max of 8 feet within building setbacks.",
+      "citation_by_variant": {
+        "oob": "PCC 33.110.275",
+        "mcp": "PCC 33.110.275",
+        "enhanced": "PCC 33.110.275"
+      }
     },
     {
       "id": "A7",
@@ -132,7 +159,12 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 33.110.220 Table 110-4",
-      "verified_truth": "Accuracy flags confirm 10 ft front building setback in R5."
+      "verified_truth": "Accuracy flags confirm 10 ft front building setback in R5.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.110.220 Table 110-4"
+      }
     },
     {
       "id": "A8",
@@ -148,7 +180,11 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 33.110.220 Table 110-4",
-      "verified_truth": "Accuracy flags confirm 5 ft side and rear building setbacks in R5."
+      "verified_truth": "Accuracy flags confirm 5 ft side and rear building setbacks in R5.",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 33.110.220 Table 110-4"
+      }
     },
     {
       "id": "A9",
@@ -165,7 +201,12 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "Brochure 3 / PCC 24.10.072.B",
-      "verified_truth": "Accuracy flags confirm fences over 8 ft require Oregon-licensed engineer and permit."
+      "verified_truth": "Accuracy flags confirm fences over 8 ft require Oregon-licensed engineer and permit.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "Brochure 3 / PCC 24.10.072.B"
+      }
     },
     {
       "id": "A10",
@@ -182,7 +223,12 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "PCC 24.10.072.B",
-      "verified_truth": "Accuracy flags confirm 7 ft wood fence permit exemption threshold."
+      "verified_truth": "Accuracy flags confirm 7 ft wood fence permit exemption threshold.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 24.10.072.B"
+      }
     },
     {
       "id": "A11",
@@ -199,7 +245,12 @@
       "correctness": "correct-action",
       "importance": 4,
       "citation": "PCC 24.10.072.B",
-      "verified_truth": "Accuracy flags confirm masonry/concrete fence permit threshold over 4 feet."
+      "verified_truth": "Accuracy flags confirm masonry/concrete fence permit threshold over 4 feet.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 24.10.072.B"
+      }
     },
     {
       "id": "A12",
@@ -216,7 +267,12 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 24.10.072.B",
-      "verified_truth": "Accuracy flags confirm chain link/woven wire permit threshold over 8 feet."
+      "verified_truth": "Accuracy flags confirm chain link/woven wire permit threshold over 8 feet.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 24.10.072.B"
+      }
     },
     {
       "id": "A13",
@@ -233,7 +289,12 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "Brochure 3",
-      "verified_truth": "Per Brochure 3 (cited in responses), fences may sit on the property line with footings inside; not contradicted by accuracy flags."
+      "verified_truth": "Per Brochure 3 (cited in responses), fences may sit on the property line with footings inside; not contradicted by accuracy flags.",
+      "citation_by_variant": {
+        "oob": "Brochure 3",
+        "mcp": "Brochure 3",
+        "enhanced": "Brochure 3"
+      }
     },
     {
       "id": "A14",
@@ -249,7 +310,11 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 24.10.072.B.1, ORSC Appendix G",
-      "verified_truth": "Accuracy flags confirm pool/spa/hot tub barriers always require permit per 24.10.072.B.1 and ORSC Appendix G."
+      "verified_truth": "Accuracy flags confirm pool/spa/hot tub barriers always require permit per 24.10.072.B.1 and ORSC Appendix G.",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 24.10.072.B.1, ORSC Appendix G"
+      }
     },
     {
       "id": "A15",
@@ -266,7 +331,12 @@
       "correctness": "correct-action",
       "importance": 4,
       "citation": "PCC 33.110.275 / Brochure 3",
-      "verified_truth": "Per Brochure 3 (cited in responses), height includes all top elements such as lattice, post caps, and trellises."
+      "verified_truth": "Per Brochure 3 (cited in responses), height includes all top elements such as lattice, post caps, and trellises.",
+      "citation_by_variant": {
+        "oob": "PCC 33.110.275 / Brochure 3",
+        "mcp": "PCC 33.110.275 / Brochure 3",
+        "enhanced": "PCC 33.110.275 / Brochure 3"
+      }
     },
     {
       "id": "A16",
@@ -283,7 +353,12 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "Brochure 3",
-      "verified_truth": "Accuracy flag confirms height measured from higher side of retaining wall, including in the OOB response."
+      "verified_truth": "Accuracy flag confirms height measured from higher side of retaining wall, including in the OOB response.",
+      "citation_by_variant": {
+        "oob": "Brochure 3",
+        "mcp": "Brochure 3",
+        "enhanced": "Brochure 3"
+      }
     },
     {
       "id": "A17",
@@ -299,7 +374,11 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "Brochure 3",
-      "verified_truth": "Accuracy flags confirm posts \u22646 ft apart with 18\" diameter, 3 ft deep footings spec for 7-8 ft fences."
+      "verified_truth": "Accuracy flags confirm posts \u22646 ft apart with 18\" diameter, 3 ft deep footings spec for 7-8 ft fences.",
+      "citation_by_variant": {
+        "mcp": "Brochure 3",
+        "enhanced": "Brochure 3"
+      }
     },
     {
       "id": "A18",
@@ -314,7 +393,10 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 24.10.072.B.2",
-      "verified_truth": "Accuracy flags confirm retaining wall permit threshold over 4 ft from footing to top, or 3:1 ascending slope."
+      "verified_truth": "Accuracy flags confirm retaining wall permit threshold over 4 ft from footing to top, or 3:1 ascending slope.",
+      "citation_by_variant": {
+        "enhanced": "PCC 24.10.072.B.2"
+      }
     },
     {
       "id": "A19",
@@ -331,7 +413,12 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "Title 17",
-      "verified_truth": "Accuracy flag (OOB) confirms PBOT right-of-way on arterials extends 5\u201310 ft behind sidewalk; consistent across all three responses."
+      "verified_truth": "Accuracy flag (OOB) confirms PBOT right-of-way on arterials extends 5\u201310 ft behind sidewalk; consistent across all three responses.",
+      "citation_by_variant": {
+        "oob": "Title 17",
+        "mcp": null,
+        "enhanced": "Title 17"
+      }
     },
     {
       "id": "A20",
@@ -347,7 +434,11 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "Title 17 / PCC 16.20.130 / TRN-10.40",
-      "verified_truth": "Accuracy flags reference PCC 16.20.130 (parking sight lines) and PBOT TRN-10.40 (driveway placement); vision clearance applies as described."
+      "verified_truth": "Accuracy flags reference PCC 16.20.130 (parking sight lines) and PBOT TRN-10.40 (driveway placement); vision clearance applies as described.",
+      "citation_by_variant": {
+        "oob": "Title 17 / PCC 16.20.130 / TRN-10.40",
+        "enhanced": "Title 17 / PCC 16.20.130 / TRN-10.40"
+      }
     },
     {
       "id": "A21",
@@ -362,7 +453,10 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 11.40, 11.60.030",
-      "verified_truth": "Accuracy flags confirm RPZ is 1 ft radius per inch of trunk diameter per 11.60.030."
+      "verified_truth": "Accuracy flags confirm RPZ is 1 ft radius per inch of trunk diameter per 11.60.030.",
+      "citation_by_variant": {
+        "enhanced": "PCC 11.40, 11.60.030"
+      }
     },
     {
       "id": "A22",
@@ -377,7 +471,10 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PCC 11.50.060.B.7",
-      "verified_truth": "Accuracy flags confirm PCC 11.50.060.B.7 exempts repair/replacement of existing fences with no footprint change."
+      "verified_truth": "Accuracy flags confirm PCC 11.50.060.B.7 exempts repair/replacement of existing fences with no footprint change.",
+      "citation_by_variant": {
+        "enhanced": "PCC 11.50.060.B.7"
+      }
     },
     {
       "id": "A23",
@@ -393,7 +490,11 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "Brochure 3",
-      "verified_truth": "Accuracy flag (OOB) confirms wood within 6\" of ground must be pressure-treated or rot-resistant."
+      "verified_truth": "Accuracy flag (OOB) confirms wood within 6\" of ground must be pressure-treated or rot-resistant.",
+      "citation_by_variant": {
+        "oob": "Brochure 3",
+        "enhanced": "Brochure 3"
+      }
     },
     {
       "id": "A24",
@@ -409,7 +510,8 @@
       "correctness": "correct-range",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flag (OOB) confirms licensed Oregon surveyor cost $500\u2013$1,500."
+      "verified_truth": "Accuracy flag (OOB) confirms licensed Oregon surveyor cost $500\u2013$1,500.",
+      "citation_by_variant": null
     },
     {
       "id": "A25",
@@ -424,7 +526,8 @@
       "correctness": "correct",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Accuracy flag confirms BDS was renamed to Portland Permitting & Development (PP&D) in 2024."
+      "verified_truth": "Accuracy flag confirms BDS was renamed to Portland Permitting & Development (PP&D) in 2024.",
+      "citation_by_variant": null
     },
     {
       "id": "A26",
@@ -441,7 +544,8 @@
       "correctness": "correct-action",
       "importance": 4,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm BDS/PP&D phone 503-823-7300."
+      "verified_truth": "Accuracy flags confirm BDS/PP&D phone 503-823-7300.",
+      "citation_by_variant": null
     },
     {
       "id": "A27",
@@ -458,7 +562,8 @@
       "correctness": "correct-action",
       "importance": 4,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm PBOT phone 503-823-7002 for right-of-way location."
+      "verified_truth": "Accuracy flags confirm PBOT phone 503-823-7002 for right-of-way location.",
+      "citation_by_variant": null
     },
     {
       "id": "A28",
@@ -473,7 +578,8 @@
       "correctness": "correct-action",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flag confirms Urban Forestry phone 503-823-8733."
+      "verified_truth": "Accuracy flag confirms Urban Forestry phone 503-823-8733.",
+      "citation_by_variant": null
     },
     {
       "id": "A29",
@@ -489,7 +595,8 @@
       "correctness": "correct-action",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm BDS/PP&D in-person consultation at 1900 SW 4th, Tues/Thurs 8 am-4 pm."
+      "verified_truth": "Accuracy flags confirm BDS/PP&D in-person consultation at 1900 SW 4th, Tues/Thurs 8 am-4 pm.",
+      "citation_by_variant": null
     },
     {
       "id": "A30",
@@ -504,7 +611,8 @@
       "correctness": "correct-action",
       "importance": 4,
       "citation": null,
-      "verified_truth": "Standard Oregon law requirement; not contradicted by accuracy flags."
+      "verified_truth": "Standard Oregon law requirement; not contradicted by accuracy flags.",
+      "citation_by_variant": null
     },
     {
       "id": "A31",
@@ -519,7 +627,10 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "ORS Chapter 96",
-      "verified_truth": "Accuracy flag confirms ORS Chapter 96 governs partition fences in Oregon."
+      "verified_truth": "Accuracy flag confirms ORS Chapter 96 governs partition fences in Oregon.",
+      "citation_by_variant": {
+        "enhanced": null
+      }
     },
     {
       "id": "A32",
@@ -534,7 +645,8 @@
       "correctness": "admitted-gap",
       "importance": 4,
       "citation": null,
-      "verified_truth": "OOB response and rationale both confirm AI could not pull exact zoning and inferred R5; this triggered the address-specific usefulness cap."
+      "verified_truth": "OOB response and rationale both confirm AI could not pull exact zoning and inferred R5; this triggered the address-specific usefulness cap.",
+      "citation_by_variant": null
     },
     {
       "id": "A33",
@@ -550,7 +662,11 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag (OOB) confirms lot size 4,356 sq ft and build year 1928."
+      "verified_truth": "Accuracy flag (OOB) confirms lot size 4,356 sq ft and build year 1928.",
+      "citation_by_variant": {
+        "oob": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      }
     },
     {
       "id": "A34",
@@ -565,7 +681,8 @@
       "correctness": "correct",
       "importance": 1,
       "citation": null,
-      "verified_truth": "Accuracy flag confirms the listed Title 33 update packet numbers and dates."
+      "verified_truth": "Accuracy flag confirms the listed Title 33 update packet numbers and dates.",
+      "citation_by_variant": null
     },
     {
       "id": "A35",
@@ -580,7 +697,10 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 33.930 / Brochure 3",
-      "verified_truth": "Per Brochure 3 / PCC 33.930 (cited in enhanced response); not verified or contradicted in accuracy flags."
+      "verified_truth": "Per Brochure 3 / PCC 33.930 (cited in enhanced response); not verified or contradicted in accuracy flags.",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.930 / Brochure 3"
+      }
     }
   ]
 }

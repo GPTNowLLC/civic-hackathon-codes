@@ -33,7 +33,12 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.110",
-      "verified_truth": "Accuracy flags for MCP and enhanced confirm R5 zoning retrieved from PortlandMaps; OOB inferred R5 from web sources without retrieval."
+      "verified_truth": "Accuracy flags for MCP and enhanced confirm R5 zoning retrieved from PortlandMaps; OOB inferred R5 from web sources without retrieval.",
+      "citation_by_variant": {
+        "oob": "PCC 33.110",
+        "mcp": "PCC 33.110",
+        "enhanced": "PCC 33.110"
+      }
     },
     {
       "id": "A2",
@@ -49,7 +54,11 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PortlandMaps",
-      "verified_truth": "Both MCP and enhanced flags confirm no overlays returned from PortlandMaps lookup."
+      "verified_truth": "Both MCP and enhanced flags confirm no overlays returned from PortlandMaps lookup.",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      }
     },
     {
       "id": "A3",
@@ -65,7 +74,11 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "BCG 19-12; OSSC 1808.7",
-      "verified_truth": "Accuracy flags confirm the steep_slope_area: true flag; enhanced cites BCG 19-12 and 2H:1V trigger threshold."
+      "verified_truth": "Accuracy flags confirm the steep_slope_area: true flag; enhanced cites BCG 19-12 and 2H:1V trigger threshold.",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "BCG 19-12; OSSC 1808.7"
+      }
     },
     {
       "id": "A4",
@@ -81,7 +94,11 @@
       "correctness": "hedge-correct",
       "importance": 3,
       "citation": "PortlandMaps geometry",
-      "verified_truth": "Both flags note dimensions are inferred/approximate from geometry rings and recommend a survey to confirm."
+      "verified_truth": "Both flags note dimensions are inferred/approximate from geometry rings and recommend a survey to confirm.",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps geometry",
+        "enhanced": "PortlandMaps geometry"
+      }
     },
     {
       "id": "A5",
@@ -97,7 +114,11 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PortlandMaps assessor",
-      "verified_truth": "Accuracy flags for both MCP and enhanced confirm 2,156 sf, built 1957."
+      "verified_truth": "Accuracy flags for both MCP and enhanced confirm 2,156 sf, built 1957.",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps assessor",
+        "enhanced": "PortlandMaps assessor"
+      }
     },
     {
       "id": "A6",
@@ -114,7 +135,12 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.205.040.C",
-      "verified_truth": "All three responses are confirmed by accuracy flags; the 800 sf cap binds since 75% of 2,156 = 1,617 sf."
+      "verified_truth": "All three responses are confirmed by accuracy flags; the 800 sf cap binds since 75% of 2,156 = 1,617 sf.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PCC 33.205.040.C",
+        "enhanced": "PCC 33.205.040.C"
+      }
     },
     {
       "id": "A7",
@@ -131,7 +157,12 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 33.205.040.G; 33.110.245.C.4",
-      "verified_truth": "All three flags confirm 20 ft outside / 15 ft inside setback height limits."
+      "verified_truth": "All three flags confirm 20 ft outside / 15 ft inside setback height limits.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PCC 33.205.040.G; 33.110.245.C.4",
+        "enhanced": "PCC 33.205.040.G; 33.110.245.C.4"
+      }
     },
     {
       "id": "A8",
@@ -148,7 +179,12 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.110.220, Table 110-4",
-      "verified_truth": "All three flag sets confirm 10/5/5 setbacks for R5 from Table 110-4."
+      "verified_truth": "All three flag sets confirm 10/5/5 setbacks for R5 from Table 110-4.",
+      "citation_by_variant": {
+        "oob": "PCC 33.110.220, Table 110-4",
+        "mcp": null,
+        "enhanced": "PCC 33.110.220, Table 110-4"
+      }
     },
     {
       "id": "A9",
@@ -165,7 +201,12 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.205.040.E (enhanced); 33.205.040.C.2 (mcp)",
-      "verified_truth": "All three flag sets confirm the 40 ft / behind rear wall siting rule for detached ADUs."
+      "verified_truth": "All three flag sets confirm the 40 ft / behind rear wall siting rule for detached ADUs.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PCC 33.205.040.E (enhanced); 33.205.040.C.2 (mcp)",
+        "enhanced": "PCC 33.205.040.E (enhanced); 33.205.040.C.2 (mcp)"
+      }
     },
     {
       "id": "A10",
@@ -181,7 +222,11 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 33.110.245.C.2.b",
-      "verified_truth": "Accuracy flags for both MCP and enhanced confirm the 24x24/15 ft/10 ft wall exception standards including screening."
+      "verified_truth": "Accuracy flags for both MCP and enhanced confirm the 24x24/15 ft/10 ft wall exception standards including screening.",
+      "citation_by_variant": {
+        "mcp": "PCC 33.110.245.C.2.b",
+        "enhanced": "PCC 33.110.245.C.2.b"
+      }
     },
     {
       "id": "A11",
@@ -197,7 +242,11 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 33.205.040.F; 33.110.245.D",
-      "verified_truth": "Accuracy flags confirm the 20% combined cap and ADU-footprint-\u2264-primary rule."
+      "verified_truth": "Accuracy flags confirm the 20% combined cap and ADU-footprint-\u2264-primary rule.",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "PCC 33.205.040.F; 33.110.245.D"
+      }
     },
     {
       "id": "A12",
@@ -214,7 +263,12 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.205.040.C.1",
-      "verified_truth": "All three flag sets confirm the 5+ year basement ADU exemption from the size cap."
+      "verified_truth": "All three flag sets confirm the 5+ year basement ADU exemption from the size cap.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PCC 33.205.040.C.1",
+        "enhanced": "PCC 33.205.040.C.1"
+      }
     },
     {
       "id": "A13",
@@ -230,7 +284,11 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 33.110.245.C.2.c (enhanced)",
-      "verified_truth": "OOB and enhanced flag sets confirm garage conversion grandfather; enhanced specifies pre-2005 cutoff."
+      "verified_truth": "OOB and enhanced flag sets confirm garage conversion grandfather; enhanced specifies pre-2005 cutoff.",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "PCC 33.110.245.C.2.c (enhanced)"
+      }
     },
     {
       "id": "A14",
@@ -246,7 +304,11 @@
       "correctness": "PARTIAL-WRONG",
       "importance": 4,
       "citation": "PCC 33.205, Table 205-2",
-      "verified_truth": "The two responses cite the same table but give different minimum lot sizes (3,000 vs 6,000 sq ft); accuracy flags repeat each variant's claim verbatim and do not adjudicate. Resident must verify against current Table 205-2."
+      "verified_truth": "The two responses cite the same table but give different minimum lot sizes (3,000 vs 6,000 sq ft); accuracy flags repeat each variant's claim verbatim and do not adjudicate. Resident must verify against current Table 205-2.",
+      "citation_by_variant": {
+        "mcp": "PCC 33.205, Table 205-2",
+        "enhanced": "PCC 33.205, Table 205-2"
+      }
     },
     {
       "id": "A15",
@@ -261,7 +323,10 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PCC 33.205.040.C.4",
-      "verified_truth": "MCP accuracy flags confirm the >3 ft rise visitability exemption."
+      "verified_truth": "MCP accuracy flags confirm the >3 ft rise visitability exemption.",
+      "citation_by_variant": {
+        "mcp": "PCC 33.205.040.C.4"
+      }
     },
     {
       "id": "A16",
@@ -276,7 +341,10 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 11.50.040.B.2",
-      "verified_truth": "Enhanced accuracy flags confirm the 5,000 sf exemption threshold and the retention rules for trees \u226512, 20, and 36 inch DBH."
+      "verified_truth": "Enhanced accuracy flags confirm the 5,000 sf exemption threshold and the retention rules for trees \u226512, 20, and 36 inch DBH.",
+      "citation_by_variant": {
+        "enhanced": "PCC 11.50.040.B.2"
+      }
     },
     {
       "id": "A17",
@@ -291,7 +359,10 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "2025 SWMM; PCC 17.38",
-      "verified_truth": "Enhanced accuracy flags confirm the 2025 SWMM effective date and 1,000 sf threshold."
+      "verified_truth": "Enhanced accuracy flags confirm the 2025 SWMM effective date and 1,000 sf threshold.",
+      "citation_by_variant": {
+        "enhanced": "2025 SWMM; PCC 17.38"
+      }
     },
     {
       "id": "A18",
@@ -306,7 +377,10 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 17.14.070.D",
-      "verified_truth": "Enhanced accuracy flags confirm the 10-year covenant and 150% violation penalty under PCC 17.14.070.D."
+      "verified_truth": "Enhanced accuracy flags confirm the 10-year covenant and 150% violation penalty under PCC 17.14.070.D.",
+      "citation_by_variant": {
+        "enhanced": "PCC 17.14.070.D"
+      }
     },
     {
       "id": "A19",
@@ -321,7 +395,10 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 17.14.070.J",
-      "verified_truth": "Enhanced accuracy flags confirm the ordinance number, date range, and ADU exclusion."
+      "verified_truth": "Enhanced accuracy flags confirm the ordinance number, date range, and ADU exclusion.",
+      "citation_by_variant": {
+        "enhanced": "PCC 17.14.070.J"
+      }
     },
     {
       "id": "A20",
@@ -336,7 +413,10 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PCC (since Aug 1, 2016)",
-      "verified_truth": "Enhanced accuracy flags confirm the 1% excise tax on permit valuations \u2265$100,000."
+      "verified_truth": "Enhanced accuracy flags confirm the 1% excise tax on permit valuations \u2265$100,000.",
+      "citation_by_variant": {
+        "enhanced": null
+      }
     },
     {
       "id": "A21",
@@ -351,7 +431,8 @@
       "correctness": "correct-range",
       "importance": 4,
       "citation": null,
-      "verified_truth": "Enhanced accuracy flags confirm permit fees $5K-$15K, SDCs $10K-$15K, construction $200K-$350K+ at ~$350-$450/sf."
+      "verified_truth": "Enhanced accuracy flags confirm permit fees $5K-$15K, SDCs $10K-$15K, construction $200K-$350K+ at ~$350-$450/sf.",
+      "citation_by_variant": null
     },
     {
       "id": "A22",
@@ -367,7 +448,11 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "portland.gov/ppd/early-assistance",
-      "verified_truth": "OOB and enhanced flags confirm the 503-823-7300 number for Early Assistance appointments."
+      "verified_truth": "OOB and enhanced flags confirm the 503-823-7300 number for Early Assistance appointments.",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/early-assistance",
+        "enhanced": "portland.gov/ppd/early-assistance"
+      }
     },
     {
       "id": "A23",
@@ -382,7 +467,8 @@
       "correctness": "admitted-gap",
       "importance": 4,
       "citation": null,
-      "verified_truth": "OOB rationale and data-quality notes confirm the AI admitted the API was unreachable and inferred zoning from web sources, triggering the address-specific cap."
+      "verified_truth": "OOB rationale and data-quality notes confirm the AI admitted the API was unreachable and inferred zoning from web sources, triggering the address-specific cap.",
+      "citation_by_variant": null
     },
     {
       "id": "A24",
@@ -397,7 +483,10 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PortlandMaps permits",
-      "verified_truth": "Enhanced accuracy flags confirm the four-permit history retrieved from PortlandMaps."
+      "verified_truth": "Enhanced accuracy flags confirm the four-permit history retrieved from PortlandMaps.",
+      "citation_by_variant": {
+        "enhanced": "PortlandMaps permits"
+      }
     },
     {
       "id": "A25",
@@ -412,7 +501,10 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PortlandMaps assessor",
-      "verified_truth": "Enhanced accuracy flags confirm property ID, state ID, and legal description."
+      "verified_truth": "Enhanced accuracy flags confirm property ID, state ID, and legal description.",
+      "citation_by_variant": {
+        "enhanced": "PortlandMaps assessor"
+      }
     },
     {
       "id": "A26",
@@ -427,7 +519,10 @@
       "correctness": "correct-range",
       "importance": 2,
       "citation": "PCC 33.805",
-      "verified_truth": "Enhanced accuracy flags confirm the ~$1,922 fee and 8-10 week timeline for Adjustment review."
+      "verified_truth": "Enhanced accuracy flags confirm the ~$1,922 fee and 8-10 week timeline for Adjustment review.",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.805"
+      }
     },
     {
       "id": "A27",
@@ -444,7 +539,12 @@
       "correctness": "correct-action",
       "importance": 3,
       "citation": "portland.gov ADU Permits page",
-      "verified_truth": "All three responses reference Portland's pre-approved ADU plans program; OOB and enhanced flags confirm the offering."
+      "verified_truth": "All three responses reference Portland's pre-approved ADU plans program; OOB and enhanced flags confirm the offering.",
+      "citation_by_variant": {
+        "oob": "portland.gov ADU Permits page",
+        "mcp": null,
+        "enhanced": "portland.gov ADU Permits page"
+      }
     },
     {
       "id": "A28",
@@ -459,7 +559,10 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 33.110.225, Table 110-5",
-      "verified_truth": "Enhanced accuracy flags confirm the 2,250 + 15% formula for R5 building coverage."
+      "verified_truth": "Enhanced accuracy flags confirm the 2,250 + 15% formula for R5 building coverage.",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.225, Table 110-5"
+      }
     },
     {
       "id": "A29",
@@ -475,7 +578,11 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 33.205.040.H",
-      "verified_truth": "MCP and enhanced both state zero parking required; consistent with current Portland ADU code."
+      "verified_truth": "MCP and enhanced both state zero parking required; consistent with current Portland ADU code.",
+      "citation_by_variant": {
+        "mcp": "PCC 33.205.040.H",
+        "enhanced": "PCC 33.205.040.H"
+      }
     },
     {
       "id": "A30",
@@ -490,7 +597,10 @@
       "correctness": "correct",
       "importance": 2,
       "citation": "PCC Title 11",
-      "verified_truth": "Enhanced accuracy flags confirm the November 2024 Council action removing the sunset on the large tree amendment."
+      "verified_truth": "Enhanced accuracy flags confirm the November 2024 Council action removing the sunset on the large tree amendment.",
+      "citation_by_variant": {
+        "enhanced": "PCC Title 11"
+      }
     }
   ]
 }

@@ -33,7 +33,12 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "PortlandMaps.com",
-      "verified_truth": "PortlandMaps is the city's authoritative public-facing portal and the recommended first step before a formal records request."
+      "verified_truth": "PortlandMaps is the city's authoritative public-facing portal and the recommended first step before a formal records request.",
+      "citation_by_variant": {
+        "oob": "PortlandMaps.com",
+        "mcp": "PortlandMaps.com",
+        "enhanced": "PortlandMaps.com"
+      }
     },
     {
       "id": "A2",
@@ -50,7 +55,12 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PortlandMaps",
-      "verified_truth": "Confirmed by accuracy flags: plans/applications for permits issued June 1, 2012 through December 2023 are free on PortlandMaps."
+      "verified_truth": "Confirmed by accuracy flags: plans/applications for permits issued June 1, 2012 through December 2023 are free on PortlandMaps.",
+      "citation_by_variant": {
+        "oob": "PortlandMaps",
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      }
     },
     {
       "id": "A3",
@@ -66,7 +76,11 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "PortlandMaps",
-      "verified_truth": "Confirmed by accuracy flags in both MCP and enhanced responses."
+      "verified_truth": "Confirmed by accuracy flags in both MCP and enhanced responses.",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      }
     },
     {
       "id": "A4",
@@ -82,7 +96,11 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PortlandMaps Permits",
-      "verified_truth": "Confirmed by accuracy flags: six specific permits listed with IVR numbers, dates, scope, and statuses."
+      "verified_truth": "Confirmed by accuracy flags: six specific permits listed with IVR numbers, dates, scope, and statuses.",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps Permits",
+        "enhanced": "PortlandMaps Permits"
+      }
     },
     {
       "id": "A5",
@@ -98,7 +116,8 @@
       "correctness": "correct-judg",
       "importance": 5,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm the two VOID permits exist; flagging them as a diligence concern is a correct judgment call for a homeowner."
+      "verified_truth": "Accuracy flags confirm the two VOID permits exist; flagging them as a diligence concern is a correct judgment call for a homeowner.",
+      "citation_by_variant": null
     },
     {
       "id": "A6",
@@ -114,7 +133,11 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "PortlandMaps Assessor",
-      "verified_truth": "Confirmed by accuracy flags: built 1911, Ladd's Addition Block 12 Lot 22."
+      "verified_truth": "Confirmed by accuracy flags: built 1911, Ladd's Addition Block 12 Lot 22.",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps Assessor",
+        "enhanced": "PortlandMaps Assessor"
+      }
     },
     {
       "id": "A7",
@@ -131,7 +154,12 @@
       "correctness": "correct-action",
       "importance": 5,
       "citation": "portland.gov/ppd/public-records",
-      "verified_truth": "Confirmed by accuracy flags: official Records Request Center pathway under Community and Economic Development \u2192 Permitting and Development."
+      "verified_truth": "Confirmed by accuracy flags: official Records Request Center pathway under Community and Economic Development \u2192 Permitting and Development.",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/public-records",
+        "mcp": "portland.gov/ppd/public-records",
+        "enhanced": "portland.gov/ppd/public-records"
+      }
     },
     {
       "id": "A8",
@@ -147,7 +175,11 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "ARA-8.03",
-      "verified_truth": "Accuracy flags confirm 5 business days to acknowledge / 15 business days to respond framework attributed to ARA-8.03."
+      "verified_truth": "Accuracy flags confirm 5 business days to acknowledge / 15 business days to respond framework attributed to ARA-8.03.",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "ARA-8.03"
+      }
     },
     {
       "id": "A9",
@@ -163,7 +195,8 @@
       "correctness": "correct",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm a two-week-or-more fulfillment timeline for building permit records."
+      "verified_truth": "Accuracy flags confirm a two-week-or-more fulfillment timeline for building permit records.",
+      "citation_by_variant": null
     },
     {
       "id": "A10",
@@ -179,7 +212,8 @@
       "correctness": "correct",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Confirmed by accuracy flags in both MCP and enhanced responses."
+      "verified_truth": "Confirmed by accuracy flags in both MCP and enhanced responses.",
+      "citation_by_variant": null
     },
     {
       "id": "A11",
@@ -194,7 +228,8 @@
       "correctness": "correct",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Phone number is confirmed in accuracy flags."
+      "verified_truth": "Phone number is confirmed in accuracy flags.",
+      "citation_by_variant": null
     },
     {
       "id": "A12",
@@ -209,7 +244,8 @@
       "correctness": "correct",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm PP&D phone 503-823-7300 and 1900 SW 4th Ave Suite 5000."
+      "verified_truth": "Accuracy flags confirm PP&D phone 503-823-7300 and 1900 SW 4th Ave Suite 5000.",
+      "citation_by_variant": null
     },
     {
       "id": "A13",
@@ -224,7 +260,8 @@
       "correctness": "correct",
       "importance": 4,
       "citation": null,
-      "verified_truth": "Confirmed by accuracy flags: bureau reorganization to PP&D in 2024\u20132025."
+      "verified_truth": "Confirmed by accuracy flags: bureau reorganization to PP&D in 2024\u20132025.",
+      "citation_by_variant": null
     },
     {
       "id": "A14",
@@ -239,7 +276,10 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "portlandoregon.gov/bds/plumbing_permits",
-      "verified_truth": "Accuracy flags confirm the plumbing-permits database covers code appeals heard prior to September 2003."
+      "verified_truth": "Accuracy flags confirm the plumbing-permits database covers code appeals heard prior to September 2003.",
+      "citation_by_variant": {
+        "enhanced": "portlandoregon.gov/bds/plumbing_permits"
+      }
     },
     {
       "id": "A15",
@@ -254,7 +294,10 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "ARA-8.03",
-      "verified_truth": "Accuracy flags confirm: per ARA-8.03 the City will not accept records requests via phone or email."
+      "verified_truth": "Accuracy flags confirm: per ARA-8.03 the City will not accept records requests via phone or email.",
+      "citation_by_variant": {
+        "enhanced": "ARA-8.03"
+      }
     },
     {
       "id": "A16",
@@ -269,7 +312,8 @@
       "correctness": "correct",
       "importance": 4,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm two forms are required: Uniform Public Records Request form plus copyright indemnification form."
+      "verified_truth": "Accuracy flags confirm two forms are required: Uniform Public Records Request form plus copyright indemnification form.",
+      "citation_by_variant": null
     },
     {
       "id": "A17",
@@ -284,7 +328,10 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "ARA-8.03",
-      "verified_truth": "Accuracy flags confirm: free if under one hour of staff time; $25 estimate threshold requires 50% deposit."
+      "verified_truth": "Accuracy flags confirm: free if under one hour of staff time; $25 estimate threshold requires 50% deposit.",
+      "citation_by_variant": {
+        "enhanced": "ARA-8.03"
+      }
     },
     {
       "id": "A18",
@@ -301,7 +348,12 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "NRIS #88001310",
-      "verified_truth": "Accuracy flags confirm National Register listing 1988 and local designation 1977 as Portland's first residential historic district."
+      "verified_truth": "Accuracy flags confirm National Register listing 1988 and local designation 1977 as Portland's first residential historic district.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "NRIS #88001310"
+      }
     },
     {
       "id": "A19",
@@ -316,7 +368,8 @@
       "correctness": "correct",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm the district boundary description."
+      "verified_truth": "Accuracy flags confirm the district boundary description.",
+      "citation_by_variant": null
     },
     {
       "id": "A20",
@@ -333,7 +386,12 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "Title 33.445",
-      "verified_truth": "Accuracy flags confirm exterior changes visible from the street trigger Conservation District review and that 150 sq ft is the threshold for Type II/III historic review."
+      "verified_truth": "Accuracy flags confirm exterior changes visible from the street trigger Conservation District review and that 150 sq ft is the threshold for Type II/III historic review.",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "Title 33.445"
+      }
     },
     {
       "id": "A21",
@@ -348,7 +406,10 @@
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.445 / 33.730 / 33.846",
-      "verified_truth": "Accuracy flags confirm Title 33.445 is the Historic Resource Overlay Zone, 33.846 governs historic resource and demolition reviews, and 33.730 governs Type II/III procedures."
+      "verified_truth": "Accuracy flags confirm Title 33.445 is the Historic Resource Overlay Zone, 33.846 governs historic resource and demolition reviews, and 33.730 governs Type II/III procedures.",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.445 / 33.730 / 33.846"
+      }
     },
     {
       "id": "A22",
@@ -363,7 +424,10 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "ORS 192.311\u2013192.478",
-      "verified_truth": "Accuracy flags confirm escalation under ORS 192 and that ARA-8.03 implements the state statute."
+      "verified_truth": "Accuracy flags confirm escalation under ORS 192 and that ARA-8.03 implements the state statute.",
+      "citation_by_variant": {
+        "enhanced": "ORS 192.311\u2013192.478"
+      }
     },
     {
       "id": "A23",
@@ -378,7 +442,10 @@
       "correctness": "correct",
       "importance": 3,
       "citation": "Titles 24, 25, 26, 27",
-      "verified_truth": "These Title assignments match the hackathon brief's data sources."
+      "verified_truth": "These Title assignments match the hackathon brief's data sources.",
+      "citation_by_variant": {
+        "enhanced": null
+      }
     },
     {
       "id": "A24",
@@ -393,7 +460,8 @@
       "correctness": "correct",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm PRRHelp@portlandoregon.gov / 503-823-6040 as records portal help."
+      "verified_truth": "Accuracy flags confirm PRRHelp@portlandoregon.gov / 503-823-6040 as records portal help.",
+      "citation_by_variant": null
     },
     {
       "id": "A25",
@@ -408,7 +476,8 @@
       "correctness": "correct",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Confirmed by accuracy flags."
+      "verified_truth": "Confirmed by accuracy flags.",
+      "citation_by_variant": null
     },
     {
       "id": "A26",
@@ -423,7 +492,10 @@
       "correctness": "correct",
       "importance": 4,
       "citation": "Title 33.846",
-      "verified_truth": "Accuracy flags confirm a 150 sq ft threshold for exterior alteration triggering Type II/III historic review."
+      "verified_truth": "Accuracy flags confirm a 150 sq ft threshold for exterior alteration triggering Type II/III historic review.",
+      "citation_by_variant": {
+        "enhanced": "Title 33.846"
+      }
     },
     {
       "id": "A27",
@@ -439,7 +511,8 @@
       "correctness": "correct",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm the claim that no land use cases are on file for the address."
+      "verified_truth": "Accuracy flags confirm the claim that no land use cases are on file for the address.",
+      "citation_by_variant": null
     },
     {
       "id": "A28",
@@ -455,7 +528,8 @@
       "correctness": "correct",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm Sanborn sheets 701\u2013799 cover East Portland and Ladd's Addition."
+      "verified_truth": "Accuracy flags confirm Sanborn sheets 701\u2013799 cover East Portland and Ladd's Addition.",
+      "citation_by_variant": null
     },
     {
       "id": "A29",
@@ -470,7 +544,8 @@
       "correctness": "correct",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Accuracy flags confirm Multnomah County Assessment & Taxation address: 501 SE Hawthorne Blvd, Suite 175."
+      "verified_truth": "Accuracy flags confirm Multnomah County Assessment & Taxation address: 501 SE Hawthorne Blvd, Suite 175.",
+      "citation_by_variant": null
     },
     {
       "id": "A30",
@@ -485,7 +560,8 @@
       "correctness": "correct",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Consistent with the National Register listing for Ladd's Addition (NRIS #88001310, 1988) confirmed in accuracy flags."
+      "verified_truth": "Consistent with the National Register listing for Ladd's Addition (NRIS #88001310, 1988) confirmed in accuracy flags.",
+      "citation_by_variant": null
     },
     {
       "id": "A31",
@@ -500,7 +576,8 @@
       "correctness": "admitted-gap",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Data-quality notes confirm the AI flagged what it did NOT pull rather than fabricating."
+      "verified_truth": "Data-quality notes confirm the AI flagged what it did NOT pull rather than fabricating.",
+      "citation_by_variant": null
     }
   ]
 }

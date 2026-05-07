@@ -72,6 +72,15 @@ ATOM_SCHEMA = {
                     "correctness":    {"type": "string"},
                     "importance":     {"type": "integer", "minimum": 1, "maximum": 5},
                     "citation":       {"type": ["string", "null"]},
+                    "citation_by_variant": {
+                        "type": ["object", "null"],
+                        "properties": {
+                            "oob":      {"type": ["string", "null"]},
+                            "mcp":      {"type": ["string", "null"]},
+                            "enhanced": {"type": ["string", "null"]},
+                        },
+                        "additionalProperties": False,
+                    },
                     "verified_truth": {"type": "string"},
                 },
                 "required": [

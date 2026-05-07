@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scoring rubric — Portland Code AI</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0e16;
+    --bg-panel: #131825;
+    --bg-elev: #1a2030;
+    --bg-hover: #161c2a;
+    --border: #1f2937;
+    --border-strong: #2d3748;
+    --text: #f1f5f9;
+    --text-dim: #e2e8f0;
+    --text-muted: #cbd5e1;
+    --text-faint: #94a3b8;
+    --accent: #7dd3fc;
+    --c1: #ef4444;
+    --c2: #f59e0b;
+    --c3: #22c55e;
+    --s0: #ef4444;
+    --s1: #f97316;
+    --s2: #eab308;
+    --s3: #22c55e;
+    --d-acc:  #7dd3fc;
+    --d-comp: #a78bfa;
+    --d-cit:  #f59e0b;
+    --d-use:  #22c55e;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace; }
+
+  /* ── Header ── */
+  header {
+    padding: 20px 32px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(180deg, #0d121d 0%, var(--bg) 100%);
+  }
+  header .brand { display: flex; align-items: baseline; gap: 12px; }
+  header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f8fafc;
+    letter-spacing: -0.01em;
+  }
+  header .brand-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+  header .nav-links {
+    display: flex;
+    gap: 4px;
+    margin-left: 24px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 3px;
+  }
+  header .nav-links a {
+    font-size: 13px;
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    transition: all 0.15s;
+  }
+  header .nav-links a:hover { color: var(--text); background: var(--bg-elev); }
+  header .nav-links a.active { color: var(--accent); background: rgba(56, 189, 248, 0.1); }
+
+  /* ── Page shell ── */
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 32px 80px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-faint);
+    margin-bottom: 14px;
+  }
+  .breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  .page h1.title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #f8fafc;
+    margin-bottom: 12px;
+  }
+  .page .lede {
+    font-size: 15px;
+    color: var(--text-muted);
+    max-width: 820px;
+    margin-bottom: 36px;
+  }
+  .page .lede a { color: var(--accent); }
+
+  h2.section {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-faint);
+    font-weight: 600;
+    margin: 40px 0 14px;
+  }
+
+  /* ── Summary table at top ── */
+  .summary {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .summary-row {
+    display: grid;
+    grid-template-columns: 56px 180px 1fr 80px;
+    gap: 16px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+  }
+  .summary-row:last-child { border-bottom: none; }
+  .summary-row.head {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-faint);
+    font-weight: 600;
+    background: var(--bg-elev);
+  }
+  .sum-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    color: var(--text-faint);
+    font-size: 12px;
+  }
+  .sum-name {
+    font-weight: 700;
+    color: #f8fafc;
+    font-size: 15px;
+  }
+  .sum-name .dim-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .sum-desc { color: var(--text-muted); font-size: 13px; }
+  .sum-range {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    text-align: right;
+  }
+
+  /* ── Protocol callout ── */
+  .protocol {
+    background: linear-gradient(180deg, rgba(125, 211, 252, 0.04), transparent),
+                var(--bg-panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 24px 0 8px;
+  }
+  .protocol .proto-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .protocol p { color: var(--text-dim); margin-bottom: 10px; }
+  .protocol p:last-child { margin-bottom: 0; }
+  .protocol ol { margin: 8px 0 6px 22px; color: var(--text-dim); }
+  .protocol ol li { margin-bottom: 4px; }
+  .protocol code, .summary code, .dim code {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    background: var(--bg-elev);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+
+  /* ── Per-dimension cards ── */
+  .dim {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .dim::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    border-radius: 12px 0 0 12px;
+    background: var(--dim-color, var(--accent));
+  }
+  .dim[data-dim="acc"]  { --dim-color: var(--d-acc); }
+  .dim[data-dim="comp"] { --dim-color: var(--d-comp); }
+  .dim[data-dim="cit"]  { --dim-color: var(--d-cit); }
+  .dim[data-dim="use"]  { --dim-color: var(--d-use); }
+
+  .dim-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 4px;
+  }
+  .dim-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    color: var(--text-faint);
+    font-size: 12px;
+  }
+  .dim-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: -0.01em;
+  }
+  .dim-name .dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--dim-color, var(--accent));
+    margin-right: 9px;
+    vertical-align: middle;
+  }
+  .dim-range {
+    margin-left: auto;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .dim-question {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .dim-question strong { color: var(--text-dim); }
+  .dim-body p { color: var(--text-muted); margin-bottom: 10px; }
+  .dim-body p:last-child { margin-bottom: 0; }
+  .dim-body em { color: var(--text-dim); font-style: italic; }
+
+  .dim-formula-label,
+  .dim-bucket-label,
+  .dim-scale-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-faint);
+    font-weight: 600;
+    margin: 18px 0 8px;
+  }
+
+  pre.formula {
+    background: #0d121d;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    overflow-x: auto;
+    line-height: 1.55;
+  }
+  pre.formula .c { color: var(--text-faint); }
+
+  /* score scale */
+  .scale {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+  .scale .row {
+    display: contents;
+  }
+  .scale .cell {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+  .scale .row:last-child .cell { border-bottom: none; }
+  .scale .cell.score {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    text-align: center;
+    background: var(--bg-elev);
+    border-right: 1px solid var(--border);
+  }
+  .scale .row[data-score="0"] .cell.score { color: var(--s0); }
+  .scale .row[data-score="1"] .cell.score { color: var(--s1); }
+  .scale .row[data-score="2"] .cell.score { color: var(--s2); }
+  .scale .row[data-score="3"] .cell.score { color: var(--s3); }
+
+  /* citation buckets */
+  .buckets {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .bucket-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 70px;
+    gap: 14px;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    font-size: 13px;
+  }
+  .bucket-row:last-child { border-bottom: none; }
+  .bucket-row.head {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-faint);
+    font-weight: 600;
+    background: var(--bg-elev);
+  }
+  .bucket-name { font-weight: 700; color: #f8fafc; font-size: 13px; }
+  .bucket-name.authoritative      { color: var(--s3); }
+  .bucket-name.plausible          { color: var(--s2); }
+  .bucket-name.non-authoritative  { color: var(--s1); }
+  .bucket-name.none-              { color: var(--s0); }
+  .bucket-examples { color: var(--text-muted); font-size: 12.5px; }
+  .bucket-credit {
+    text-align: right;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    color: var(--text-dim);
+  }
+
+  .footnote {
+    color: var(--text-faint);
+    font-size: 12.5px;
+    margin-top: 14px;
+    padding-left: 12px;
+    border-left: 2px solid var(--border-strong);
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    padding: 10px 16px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.15s;
+  }
+  .back-link:hover { background: var(--bg-elev); border-color: var(--border-strong); }
+
+  @media (max-width: 720px) {
+    .summary-row { grid-template-columns: 40px 1fr 70px; }
+    .summary-row .sum-desc { display: none; }
+    .bucket-row { grid-template-columns: 1fr 70px; }
+    .bucket-row .bucket-examples { display: none; }
+    .scale { grid-template-columns: 44px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <h1>Civic Tech + AI Incubation Lab</h1>
+    <span class="brand-sub">City Code &amp; Regulation Search Assistant</span>
+  </div>
+  <div class="nav-links">
+    <a href="/">Dashboard</a>
+    <a href="/rubric.html" class="active">Rubric</a>
+  </div>
+</header>
+
+<div class="page">
+
+  <div class="breadcrumb"><a href="/">Dashboard</a> &nbsp;/&nbsp; Scoring rubric</div>
+
+  <h1 class="title">How responses are scored</h1>
+  <p class="lede">
+    Every AI response is scored on <strong>four dimensions</strong>, each on a 0–3 scale.
+    Scores are <em>derived from atomized claims</em>, not from a single end-of-response scoring pass.
+    A response can score independently on each dimension — high accuracy + low completeness is a real outcome,
+    as is high accuracy + low citation authority. The four dimensions are intentionally not collapsed into a composite.
+  </p>
+
+  <h2 class="section">The four dimensions</h2>
+  <div class="summary">
+    <div class="summary-row head">
+      <div>#</div><div>Dimension</div><div>What it measures</div><div style="text-align:right;">Range</div>
+    </div>
+    <div class="summary-row">
+      <div class="sum-num">1</div>
+      <div class="sum-name"><span class="dim-dot" style="background:var(--d-acc);"></span>Accurate</div>
+      <div class="sum-desc">Are the specific factual claims actually correct?</div>
+      <div class="sum-range">0–3</div>
+    </div>
+    <div class="summary-row">
+      <div class="sum-num">2</div>
+      <div class="sum-name"><span class="dim-dot" style="background:var(--d-comp);"></span>Complete</div>
+      <div class="sum-desc">Did the response cover the things a resident needs to act?</div>
+      <div class="sum-range">0–3</div>
+    </div>
+    <div class="summary-row">
+      <div class="sum-num">3</div>
+      <div class="sum-name"><span class="dim-dot" style="background:var(--d-cit);"></span>Cited</div>
+      <div class="sum-desc">Are sources from portland.gov / Portland Titles, or from Redfin / blogs / nothing?</div>
+      <div class="sum-range">0–3</div>
+    </div>
+    <div class="summary-row">
+      <div class="sum-num">4</div>
+      <div class="sum-name"><span class="dim-dot" style="background:var(--d-use);"></span>Useful</div>
+      <div class="sum-desc">Would an average Portland resident or business owner understand and act on this?</div>
+      <div class="sum-range">0–3</div>
+    </div>
+  </div>
+
+  <h2 class="section">Adversarial protocol — how scores are produced</h2>
+  <div class="protocol">
+    <div class="proto-title">Generator ≠ Evaluator</div>
+    <p>
+      The model that <em>generates</em> a response must not be the model that <em>evaluates</em> it.
+      Self-evaluation is too generous: the same model that wrote a confident-sounding answer is
+      unlikely to flag its own confident-sounding errors.
+    </p>
+    <ol>
+      <li><strong>Generate.</strong> A "user-where-they-are" model (e.g. consumer ChatGPT for Column 1) produces a response to the resident's question.</li>
+      <li><strong>Atomize / verify.</strong> A <em>different</em> model — the evaluator — receives the verbatim response and breaks it into atomic claims. For each atom it produces a <code>correctness</code> tag, a <code>verified_truth</code> grounded in its own lookup, plus <code>citation</code>, <code>topic</code>, <code>specificity</code>, <code>actionability</code>, and <code>importance</code>.</li>
+      <li><strong>Aggregate.</strong> The four 0–3 dimension scores are computed deterministically from the atoms (formulas below).</li>
+    </ol>
+    <p>
+      The evaluator model is configurable — default is Claude (best agentic lookup), but the cross-evaluation matrix
+      (Claude judging GPT, GPT judging Claude) can be demonstrated on demand. The evaluator-model used is recorded
+      in each atoms file so the detail page can show "verified by: &lt;model&gt;".
+    </p>
+  </div>
+
+  <h2 class="section">Per-dimension detail</h2>
+
+  <!-- Dimension 1 -->
+  <div class="dim" data-dim="acc">
+    <div class="dim-head">
+      <div class="dim-num">Dimension 1</div>
+      <div class="dim-name"><span class="dot"></span>Accurate</div>
+      <div class="dim-range">0 – 3</div>
+    </div>
+    <div class="dim-question"><strong>Question:</strong> of the specific factual claims this response made, how many were actually correct?</div>
+
+    <div class="dim-formula-label">Aggregation</div>
+<pre class="formula">let A = atoms attributed to this variant
+let weight(atom) = atom.importance         <span class="c">// 1–5</span>
+let credit(atom) =
+    1.0  if correctness ∈ {correct, correct-vague, correct-action,
+                            correct-judg, correct-range, hedge-correct}
+    0.6  if correctness ∈ {vague-correct, vague-action}
+    0.0  if correctness ∈ {WRONG, PARTIAL-WRONG}
+    skip if correctness == admitted-gap    <span class="c">// admitted gaps don't penalize accuracy</span>
+let raw = sum(weight·credit) / sum(weight)
+score = floor(raw × 3 + 0.5)               <span class="c">// 0..3, with 0.83+ → 3</span></pre>
+
+    <div class="dim-scale-label">Score scale</div>
+    <div class="scale">
+      <div class="row" data-score="0"><div class="cell score">0</div><div class="cell">Mostly wrong on the specifics that matter.</div></div>
+      <div class="row" data-score="1"><div class="cell score">1</div><div class="cell">Mix of right and wrong; the resident can't trust unverified claims.</div></div>
+      <div class="row" data-score="2"><div class="cell score">2</div><div class="cell">Right on most specifics but with at least one material error.</div></div>
+      <div class="row" data-score="3"><div class="cell score">3</div><div class="cell">All material specifics check out under independent verification.</div></div>
+    </div>
+
+    <div class="footnote">
+      <code>admitted-gap</code> atoms (where the AI honestly said "I don't know") do not penalize accuracy.
+      They penalize completeness instead.
+    </div>
+  </div>
+
+  <!-- Dimension 2 -->
+  <div class="dim" data-dim="comp">
+    <div class="dim-head">
+      <div class="dim-num">Dimension 2</div>
+      <div class="dim-name"><span class="dot"></span>Complete</div>
+      <div class="dim-range">0 – 3</div>
+    </div>
+    <div class="dim-question"><strong>Question:</strong> did this response cover the topics a resident actually needs to act on?</div>
+
+    <div class="dim-body">
+      <p>
+        Each scenario in <code>data/scenarios.json</code> carries a <code>must_cover</code> array — the topics
+        a complete answer must hit (e.g. for tiny-house: <code>["zoning", "size", "setbacks", "permits", "costs", "sequence"]</code>).
+        Topics use the same vocabulary as atom <code>topic</code> fields.
+      </p>
+    </div>
+
+    <div class="dim-formula-label">Aggregation</div>
+<pre class="formula">let covered = distinct topics across this variant's atoms ∩ must_cover
+score = round(3 × |covered| / |must_cover|)</pre>
+
+    <div class="dim-scale-label">Score scale</div>
+    <div class="scale">
+      <div class="row" data-score="0"><div class="cell score">0</div><div class="cell">Missed almost everything material.</div></div>
+      <div class="row" data-score="1"><div class="cell score">1</div><div class="cell">Hit a few topics, missed most.</div></div>
+      <div class="row" data-score="2"><div class="cell score">2</div><div class="cell">Covered most topics; one or two material gaps.</div></div>
+      <div class="row" data-score="3"><div class="cell score">3</div><div class="cell">Covered every topic on the must-cover list.</div></div>
+    </div>
+
+    <div class="footnote">
+      <strong>Address-specific cap:</strong> if any atom for this variant has <code>correctness == admitted-gap</code>
+      on a topic in <code>{address, zoning}</code>, completeness is capped at 2. Admitting the AI couldn't reach
+      property data is honesty about <em>the data gap</em> — but it still means the resident didn't get
+      parcel-specific guidance.
+    </div>
+  </div>
+
+  <!-- Dimension 3 -->
+  <div class="dim" data-dim="cit">
+    <div class="dim-head">
+      <div class="dim-num">Dimension 3</div>
+      <div class="dim-name"><span class="dot"></span>Cited</div>
+      <div class="dim-range">0 – 3</div>
+    </div>
+    <div class="dim-question"><strong>Question:</strong> are the cited sources actually authoritative for Portland code?</div>
+
+    <div class="dim-body">
+      <p>
+        This is <em>not</em> the same as "is the citation specific?" A vague reference to <code>portland.gov</code>
+        is more authoritative than a precise-looking citation to a Redfin listing or a third-party blog.
+        The hackathon brief said <em>authoritative</em>, not <em>specific</em>; this dimension reflects that.
+      </p>
+    </div>
+
+    <div class="dim-bucket-label">Source-authority buckets</div>
+    <div class="buckets">
+      <div class="bucket-row head">
+        <div>Bucket</div><div>Examples</div><div style="text-align:right;">Credit</div>
+      </div>
+      <div class="bucket-row">
+        <div class="bucket-name authoritative">authoritative</div>
+        <div class="bucket-examples"><code>PCC 33.205.040</code>, <code>Title 11</code>, <code>portland.gov/...</code>, PortlandMaps, BDS Code Guide, Oregon Revised Statutes</div>
+        <div class="bucket-credit">1.0</div>
+      </div>
+      <div class="bucket-row">
+        <div class="bucket-name plausible">plausible-third-party</div>
+        <div class="bucket-examples">Redfin, Zillow, Wikipedia, real-estate blog</div>
+        <div class="bucket-credit">0.3</div>
+      </div>
+      <div class="bucket-row">
+        <div class="bucket-name non-authoritative">non-authoritative</div>
+        <div class="bucket-examples">random forum, unattributed</div>
+        <div class="bucket-credit">0.0</div>
+      </div>
+      <div class="bucket-row">
+        <div class="bucket-name none-">none</div>
+        <div class="bucket-examples"><code>null</code></div>
+        <div class="bucket-credit">0.0</div>
+      </div>
+    </div>
+
+    <div class="dim-formula-label">Aggregation</div>
+<pre class="formula">let A = atoms attributed to this variant where atom carries any factual claim
+let raw = sum(credit(atom.citation)) / |A|
+score = floor(raw × 3 + 0.5)</pre>
+
+    <div class="dim-scale-label">Score scale</div>
+    <div class="scale">
+      <div class="row" data-score="0"><div class="cell score">0</div><div class="cell">No authoritative sources at all.</div></div>
+      <div class="row" data-score="1"><div class="cell score">1</div><div class="cell">Mostly uncited or third-party-cited.</div></div>
+      <div class="row" data-score="2"><div class="cell score">2</div><div class="cell">Mix — some Portland sources, some non-authoritative.</div></div>
+      <div class="row" data-score="3"><div class="cell score">3</div><div class="cell">Cited claims overwhelmingly resolve to portland.gov / Portland Titles / authoritative state sources.</div></div>
+    </div>
+  </div>
+
+  <!-- Dimension 4 -->
+  <div class="dim" data-dim="use">
+    <div class="dim-head">
+      <div class="dim-num">Dimension 4</div>
+      <div class="dim-name"><span class="dot"></span>Useful</div>
+      <div class="dim-range">0 – 3</div>
+    </div>
+    <div class="dim-question"><strong>Question:</strong> would an average Portland resident or business owner — with no permitting expertise — understand this response and feel equipped to act on it?</div>
+
+    <div class="dim-body">
+      <p>
+        This is the city's stated audience: <em>"People who live and work in the city of Portland have questions
+        about what they can do on their property."</em> It is not a contractor, not a planner, not a code-fluent reader.
+      </p>
+    </div>
+
+    <div class="dim-formula-label">Aggregation</div>
+<pre class="formula">let A = atoms attributed to this variant
+let raw = mean(actionability(atom)) for atom ∈ A
+let jargon_penalty = 0.10 × (count of unexplained jargon tokens / 100 words)   <span class="c">// cap at 0.30</span>
+score = floor((raw − jargon_penalty) × 3 + 0.5)</pre>
+
+    <div class="dim-body" style="margin-top:10px;">
+      <p>
+        Unexplained-jargon detection looks for un-glossed acronyms (ADU, FAR, SDC, DAR, BDS) and code-citation
+        shorthand without a plain-language gloss. The penalty is bounded to keep the dimension stable.
+      </p>
+    </div>
+
+    <div class="dim-scale-label">Score scale</div>
+    <div class="scale">
+      <div class="row" data-score="0"><div class="cell score">0</div><div class="cell">Inaccessible. Jargon-dense, no scaffolding.</div></div>
+      <div class="row" data-score="1"><div class="cell score">1</div><div class="cell">Partially accessible. Mostly readable but unexplained terms.</div></div>
+      <div class="row" data-score="2"><div class="cell score">2</div><div class="cell">Accessible. Key terms defined, concrete next steps stated.</div></div>
+      <div class="row" data-score="3"><div class="cell score">3</div><div class="cell">Resident-ready. Plainly written, anticipates resident-level confusion, scaffolds next steps.</div></div>
+    </div>
+  </div>
+
+  <a class="back-link" href="/">&larr; Back to dashboard</a>
+
+</div>
+
+</body>
+</html>
