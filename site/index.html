@@ -519,6 +519,24 @@
     border-radius: 4px;
     padding: 3px 8px;
   }
+  .ccm-card-grade {
+    position: absolute;
+    top: 10px; right: 14px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    padding: 6px 10px 5px;
+    border-radius: 8px;
+    border: 1px solid currentColor;
+    background: rgba(15, 23, 42, 0.45);
+  }
+  .ccm-card-grade.tier-a { color: var(--c3); background: rgba(34, 197, 94, 0.12); }
+  .ccm-card-grade.tier-b { color: var(--c3); background: rgba(34, 197, 94, 0.06); }
+  .ccm-card-grade.tier-c { color: var(--c2); background: rgba(245, 158, 11, 0.10); }
+  .ccm-card-grade.tier-d { color: var(--c1); background: rgba(239, 68, 68, 0.08); }
+  .ccm-card-grade.tier-f { color: var(--c1); background: rgba(239, 68, 68, 0.14); }
   .ccm-card-name {
     font-size: 16px;
     font-weight: 700;
@@ -1881,6 +1899,22 @@ function renderCompositionChart(ctx) {
 }
 
 // ── Variant 4: Stat cards ────────────────────────────────────────────────────
+function letterGrade(pct) {
+  // pct is 0..100. Standard +/- scale; F < 60.
+  if (pct >= 97) return { label: 'A+', tier: 'a' };
+  if (pct >= 93) return { label: 'A',  tier: 'a' };
+  if (pct >= 90) return { label: 'A-', tier: 'a' };
+  if (pct >= 87) return { label: 'B+', tier: 'b' };
+  if (pct >= 83) return { label: 'B',  tier: 'b' };
+  if (pct >= 80) return { label: 'B-', tier: 'b' };
+  if (pct >= 77) return { label: 'C+', tier: 'c' };
+  if (pct >= 73) return { label: 'C',  tier: 'c' };
+  if (pct >= 70) return { label: 'C-', tier: 'c' };
+  if (pct >= 67) return { label: 'D+', tier: 'd' };
+  if (pct >= 63) return { label: 'D',  tier: 'd' };
+  if (pct >= 60) return { label: 'D-', tier: 'd' };
+  return                 { label: 'F',  tier: 'f' };
+}
 function renderCardsChart(ctx) {
   const { buckets, conditions, criteria, avg, totalScenarios } = ctx;
   const totals = conditions.map(cd => avg(buckets[cd.key].total));
@@ -1923,17 +1957,25 @@ function renderCardsChart(ctx) {
       </div>`;
     }).join('');
 
+    const pct = total != null ? (total / 12) * 100 : null;
+    const grade = pct != null ? letterGrade(pct) : null;
+    const gradeBadge = grade
+      ? `<span class="ccm-card-grade tier-${grade.tier}" title="${pct.toFixed(1)}% — ${total.toFixed(1)} of 12">${grade.label}</span>`
+      : '';
+    const centerNum = pct != null ? `${Math.round(pct)}` : '–';
+    const centerUnit = pct != null ? '%' : '';
+
     html += `
       <div class="ccm-card ${cd.cls}${isBest ? ' is-best' : ''}">
-        ${isBest ? '<span class="ccm-card-best-tag">Top</span>' : ''}
+        ${gradeBadge}
         <div class="ccm-card-name ${cd.cls}">${cd.label}</div>
         <div class="ccm-card-meta">${n}/${totalScenarios} scenarios scored</div>
         <div class="ccm-card-gauge-wrap">
           <div class="ccm-card-gauge">
             ${gauge}
             <div class="ccm-card-gauge-center">
-              <span class="ccm-card-gauge-num ${cd.cls}">${total != null ? total.toFixed(1) : '–'}</span>
-              <span class="ccm-card-gauge-unit">of 12</span>
+              <span class="ccm-card-gauge-num ${cd.cls}">${centerNum}</span>
+              <span class="ccm-card-gauge-unit">${centerUnit}</span>
             </div>
           </div>
         </div>
