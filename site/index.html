@@ -1537,8 +1537,8 @@ function scoreGridHtml(colData) {
   return `<div class="score-grid">
     ${scoreTileHtml('Accurate', acc)}
     ${scoreTileHtml('Complete', comp)}
-    ${scoreTileHtml('Cited',    cit)}
-    ${scoreTileHtml('Useful',   cons)}
+    ${scoreTileHtml('Verifiable',    cit)}
+    ${scoreTileHtml('Bridge the Gap',   cons)}
   </div>`;
 }
 
@@ -1604,8 +1604,8 @@ function renderCritMatrix() {
   const criteria = [
     { key: 'acc',  label: 'Accurate' },
     { key: 'comp', label: 'Complete' },
-    { key: 'cit',  label: 'Cited' },
-    { key: 'cons', label: 'Useful' },
+    { key: 'cit',  label: 'Verifiable' },
+    { key: 'cons', label: 'Bridge the Gap' },
   ];
   const ctx = { buckets, conditions, criteria, avg, totalScenarios: SCENARIOS_3COL.length };
 
@@ -2111,8 +2111,8 @@ function renderDetailCol(s, col, colKey, colorCls, colName, scenarioId) {
     <div class="detail-scores-row" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
       ${scoreItem('Accurate', 'acc',  acc)}
       ${scoreItem('Complete', 'comp', comp)}
-      ${scoreItem('Cited',    'cit',  cit)}
-      ${scoreItem('Useful',   'cons', cons)}
+      ${scoreItem('Verifiable',    'cit',  cit)}
+      ${scoreItem('Bridge the Gap',   'cons', cons)}
     </div>
     ${col.rationale ? `<div class="detail-rationale">${esc(col.rationale)}</div>` : ''}
     <div class="detail-version-stamp" style="font-size:10px;color:#475569;margin:4px 0 8px;font-family:'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace" title="Versioning: when the response was saved into the dashboard, and when /api/evaluate last produced scores. Pacific Time.">
