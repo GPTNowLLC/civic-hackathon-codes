@@ -3,6 +3,7 @@
   "scenario_label": "Fence height",
   "address": "3220 NE 33rd Ave, Portland, OR 97212",
   "neighborhood": "Alameda",
+  "evaluator_model": "claude",
   "responses": {
     "oob": {
       "tool": "Opus 4.7 Adaptive",
@@ -10,19 +11,257 @@
     },
     "mcp": {
       "tool": "Opus 4.7 Adaptive",
-      "text": "Let me get the actual fence regulations from the official Portland code.Let me fetch the official Portland brochure for fences and the actual code section.Let me confirm the actual zoning for this specific property, since the rules can vary slightly by overlay.I have what I need. Your property's zoning came back clean, so the standard Title 33 single-dwelling rules apply. Let me put together the answer with a quick visual since fence rules are inherently spatial (different limits in different parts of the lot).Confirmed your property's zoning before answering: **R5** (Single-Dwelling Residential 5,000) with an \"h\" overlay (Aircraft Landing; height-notification only, no fence implications). No plan district, no historic district, no conservation district apply, so the standard Title 33.110 single-dwelling fence rules govern.\n\n**Maximum fence heights** (Portland Title 33.110.275 + PP&D Brochure 3):\n\n- Front yard, within the front building setback (10 ft from the front lot line in R5): **3.5 ft**\n- Side yards, within the 5 ft side building setback: **8 ft**\n- Rear yard, within the 5 ft rear building setback: **8 ft**\n- Anywhere outside all setbacks (the interior of the lot): taller than 8 ft is allowed, but anything over 8 ft requires a building permit and an engineer's design\n\n**Setback for the fence itself:** none. The fence can sit right on your property line; there's no required setback from a neighboring lot. The whole fence (including footings) must stay within your property. No barbed wire.\n\n**When you don't need a permit:**\n\n- Wood or similar, \u2264 7 ft\n- Masonry or concrete, \u2264 4 ft\n- Chain link or woven wire, \u2264 8 ft\n- Anything around a swimming pool always needs a permit, regardless of height\n\nFor wood/metal/wire fences over 7 ft up to 8 ft, posts must be \u2264 6 ft apart with footings \u2265 18\" in diameter and 3 ft deep, otherwise an engineer has to design it. Over 8 ft is engineer-only.\n\n**Two specifics worth flagging for your address (the \"above and beyond\"):**\n\n1. **NE 33rd Ave is a major street with a wide public right-of-way.** The ROW typically extends several feet behind the back of the sidewalk into what looks like front yard. Your fence cannot sit in the ROW, even if it's still in your \"yard.\" Before placing anything in the front, call PBOT at 503-823-7002 with your address; they'll tell you the ROW width and where your actual front lot line is. For an arterial like 33rd, it's not unusual for the property line to be ~5 to 10 ft inside the back-of-sidewalk. (You may want a survey if you're putting in something permanent.)\n\n2. **Height is measured from grade directly under the fence,** including lattice, post caps, and any decorative top. Build on top of a retaining wall and the measurement starts from the higher side: a 6 ft fence on a 2 ft retaining wall counts as 8 ft total. Easy way to accidentally land in permit-and-engineer territory.\n\n**To verify before building:**\n\n- PP&D General Inquiries: 503-823-7300\n- Free 15-minute zoning consult: portland.gov/ppd/early-assistance/15-minute-question-appointments\n- The Brochure 3 PDF (with figures) is the simplest reference: portland.gov/ppd/residential-permitting/b3-residential-fences-decks-outdoor-projects"
+      "text": "I'll look this up properly for you. Portland's fence rules depend on your specific zoning, so let me check your property first rather than giving you generic info.Got the property details. It's zoned **R5 (Residential 5,000)** in Beaumont-Wilshire, with one overlay \"h\" (Aircraft Landing \u2014 affects building heights but not fences). No historic district, no conservation overlay. Now let me verify the current fence rules from Portland's actual code.Let me fetch the actual fence regulation text.Let me also fetch Portland's official fence brochure to verify the R5 setback numbers and confirm everything.I have everything I need. Both sources are official City of Portland documents (Title 33.110.275 and Brochure 3), so I'm confident in these numbers. Let me build you a quick visual since the rules depend on which part of your lot we're talking about, then give you the answer in plain English.## The answer for your property\n\nYour lot at 3220 NE 33rd Ave is zoned **R5 (Single-Dwelling 5,000)**. It's a mid-block lot, no historic district, no plan district. There's an \"h\" (Aircraft Landing) overlay on the property, but it only restricts tall buildings near flight paths; it has no effect on residential fences.\n\nMaximum fence heights without a permit:\n\n- **Front yard (along NE 33rd Ave): 3.5 ft** within the front building setback, which is the first 10 ft from your front lot line\n- **Side yards: 8 ft** within the 5-ft side setbacks (one on the north lot line, one on the south)\n- **Back yard: 8 ft** within the 5-ft rear setback\n- **Outside any setback** (the buildable middle): can go taller, but anything over 7 ft requires a building permit, and over 8 ft requires engineering\n\nSetback summary for R5: **10 ft front, 5 ft side, 5 ft rear** (per Title 33.110.220).\n\n## A few things worth knowing before you build\n\n**The 3.5 ft front limit only applies inside the 10 ft setback.** Beyond that 10 ft strip, even in your front yard, you can go to 8 ft. So if you want privacy in the front but kept it back from the sidewalk, you have options.\n\n**Height is measured from the lower grade**, including any lattice, post caps, or trellis on top. If you put a fence on a retaining wall, measurement starts at the higher side; that retaining wall counts.\n\n**Permit thresholds** (from Brochure 3): wood fences \u2264 7 ft and chain link \u2264 8 ft need no permit. Masonry over 4 ft does. Pool enclosures always require a permit regardless of height.\n\n**Locating your property line matters.** The footings have to sit entirely inside your lot. PBOT (503-823-7002) can tell you the public right-of-way width along 33rd, since there's often a planting strip between the sidewalk and your actual front lot line that is *not* yours; building on it is a code violation. Worth a 5-minute call before you start.\n\n**The neighborly move**: when you build a shared fence, the finished side conventionally faces the neighbor. Not legally required in Portland, but it's the norm and avoids friction.\n\nSources I used: Portland Zoning Code [Title 33.110.275 (Fences)](https://www.portland.gov/code/33/100s/110) and the city's [Brochure 3: Fences, Decks and Outdoor Residential Projects](https://www.portland.gov/ppd/residential-permitting/b3-residential-fences-decks-outdoor-projects). For anything weird (corner lot question, retaining wall + fence combo, fence over 7 ft), call PP&D General Inquiries at 503-823-7300; they'll confirm before you spend money on materials."
     },
     "enhanced": {
       "tool": "Opus 4.7 Adaptive",
-      "text": "I'll get you a thorough, verifiable answer. Let me start by pulling actual property data for your address and then cross-referencing the city code citations.I have the assessor data. Now let me get zoning and overlay information.Now let me verify the current Portland code citations with web search.Let me fetch the actual code text directly to get exact rules.Now let me get the vision clearance code section and verify Title 24.10.072.B.Let me check on historic districts and street trees.I pulled live data from PortlandMaps for your address, then cross-referenced it against the actual Portland City Code (current as of the October 2025 update packet). Three quick corrections before I dive in: (1) PortlandMaps shows your address sits in **Beaumont-Wilshire**, not Grant Park/Alameda (they're adjacent neighborhoods, separated by NE Fremont); (2) the fence section is **33.110.275**, not 255 (it was 255 in the pre-2021 code, which is probably what you saw cited); and (3) the bureau formerly known as BDS is now **Portland Permitting & Development (PP&D)** as of the 2024 reorganization.\n\nI'll also flag upfront: I'm working off cached web sources and the code does change. Verify the address-specific zoning at PortlandMaps and call PP&D before signing any contract.\n\n---\n\n## 1. Property and zoning summary (with caveats)\n\nFrom PortlandMaps live data:\n\n- **Address:** 3220 NE 33rd Ave, Portland, OR 97212\n- **Property ID:** R213930 (state ID 1N1E25AB 8500)\n- **Legal description:** Maryland Heights, Block 2, Lot 13\n- **Neighborhood:** Beaumont-Wilshire\n- **Council District:** 2\n- **Year built:** 1928\n- **Base zone:** **R5 (Residential 5,000)**\n- **Overlay zones:** None reported in the PortlandMaps summary\n- **Heritage tree on file:** None\n\n**Verify yourself:** Open https://www.portlandmaps.com/detail/property/3220-NE-33RD-AVE/R213930_did/ and click the \"Zoning\" and \"Permits & Zoning\" tabs. Look for any lowercase suffix on the zone code (for example, R5d, R5h, R5s); a lowercase letter signals an overlay (design, historic, scenic resource, etc.). The summary I pulled returned plain \"R5\" with no suffix, but a visual check on the official map will confirm.\n\n**Historic district check:** Beaumont-Wilshire is **not** a designated City of Portland historic or conservation district. The well-known PDX historic districts in this part of town are Irvington, Laurelhurst, and Ladd's Addition (none of which apply here). The \"Alameda Ridge\" name refers to a geographic feature (a glacial gravel bar), not a regulatory overlay. Individual landmarks exist in the area (the Barnes Mansion on NE Klickitat is on the National Register), but landmark status is property-by-property, and your property does not appear to carry one. **No Historic Resource Review (33.846) appears triggered for a fence here**; verify on PortlandMaps under the \"Historic\" layer.\n\n**Recent code activity:** Title 33 has had heavy churn. Update packets #211 (Oct 2024), #212 (Jan 2025), #213 (Mar 2025), and #215 (Oct 24, 2025) all touched the single-dwelling chapter. None that I can see changed the fence section materially, but it's worth one more sanity check with PP&D when you're ready to build.\n\n---\n\n## 2. Fence height rules by yard type (R5)\n\nThe governing section is **PCC 33.110.275 Fences** (https://www.portland.gov/code/33/100s/110, see the current PDF \"110-sd-zone_3.pdf\"). The plain-language rules from PP&D's own Brochure 3 (https://www.portland.gov/ppd/residential-permitting/b3-residential-fences-decks-outdoor-projects) are:\n\n| Yard zone | Maximum fence height (no permit) | Code basis |\n|---|---|---|\n| Front building setback (10 ft deep in R5, per Table 110-4) | **3 ft 6 in (3.5 ft)** | 33.110.275; Brochure 3 |\n| Side building setback (5 ft deep in R5) | **8 ft** | 33.110.275; Brochure 3 |\n| Rear building setback (5 ft deep in R5) | **8 ft** | 33.110.275; Brochure 3 |\n| \"Buildable area\" (outside all setbacks) | Up to the zone's maximum building height (30 ft in R5), although you also have to clear the permit threshold above 7 ft wood or 8 ft chain link | 33.110.275; 33.110.215 |\n\nA few critical mechanics to internalize:\n\n- **How height is measured (33.110.275 + Brochure 3):** From the immediate grade level under the fence to the top of any element (post caps, lattice, finials, trellis at top of fence). Lattice on a 6-ft fence is part of the height.\n- **Retaining wall + fence stacking (Brochure 3):** Height is measured from the **higher** side of the retaining wall, not the lower. This is the single most common gotcha in Portland for sloped lots; a 4 ft retaining wall with a 6 ft fence on top reads as a 10 ft fence to PP&D. Treat the combined assembly as one structure for height purposes.\n- **\"Front\" definition for your lot (Brochure 3 + 33.930 Measurements):** The front lot line is the side that borders a street. On a corner lot, it's the **shortest** street-facing side; if frontages are equal, you choose. On a through lot (street on front and back), both sides are \"front.\" Your lot at 3220 NE 33rd appears to be a standard interior lot fronting NE 33rd, so the front is your NE 33rd frontage; **verify with a survey or PortlandMaps parcel viewer**.\n\n**Address-specific verification needed:** Whether your lot is interior, corner, or through changes the rules dramatically. PortlandMaps assessor data didn't return parcel geometry for me. Confirm before you build.\n\n---\n\n## 3. Setbacks (for the fence itself) and vision clearance\n\n### 3a. Where fences can sit on the lot\n\n**The fence itself has essentially no required setback from the property line.** Brochure 3 says explicitly: \"All parts of the fence, including the footings, must remain inside your property lines.\" So you can build right up to (but not over) the line. The setback table you sometimes see (10 ft front, 5 ft side/rear in R5) is for the **building** itself (33.110.220, Table 110-4) and only matters because it defines the **areas where the fence height limits change** (3.5 ft inside the front building setback, 8 ft inside side/rear setbacks).\n\nThere is one separate setback table that does apply to fences directly: **fences taller than 8 ft** (which already require a building permit) must be set back from lot lines. In R5, that's 10 ft from the front lot line and 5 ft from side/rear lot lines (Brochure 3 / Fence Permits page table). This is rarely an issue for a residential homeowner since 8 ft is already very tall.\n\n### 3b. Vision clearance at corners and driveways\n\nPortland's \"vision clearance\" rules are scattered across three places, which is part of why this question is confusing:\n\n1. **PCC 33.110.275 itself** says corner lots with the front entrance facing the side street have alternate fence-height options; this is mostly an allowance, not a restriction (Brochure 3).\n2. **PBOT Administrative Rule TRN-10.40** (\"Driveways: Operation and Location,\" authority under PCC 17.28.110) requires a \"clear sight triangle\" at driveway/street intersections and prohibits driveway placement within 25 ft of a corner where two streets intersect (https://www.portland.gov/council-clerk/documents/trn-1040-driveways-operation-and-location/download). The rule applies to driveways but cross-references obstructions in the sight triangle.\n3. **PCC 16.20.130** prohibits parking vehicles over 6 ft tall within 50 ft of an intersection. This is a parking rule, not a fence rule, but the underlying logic (don't block the cross-traffic sight line) is the same one PBOT uses when reviewing fence permits in front yards.\n\n**Plain-language meaning for you:** If you're on an interior lot (likely), vision clearance is mostly handled by the 3.5 ft front-setback fence height limit; if you're at or near a corner, or have a driveway exiting onto NE 33rd, you should call **PBOT Engineering at 503-823-7002** before designing a tall front-yard fence. They'll tell you whether your specific corner has a sight-triangle constraint that's stricter than the base zoning rule. The user's preferences source (Pacific Fence guide) noted Portland places \"extra emphasis\" on corner sight lines, which matches the PBOT internal practice.\n\n**Driveway sight clearance specifically:** Even on an interior lot, if you have a driveway, the 3.5 ft front-setback fence height already ensures a sight line for backing out. Don't put posts, trellises, or shrubs above 3.5 ft within roughly 10 ft of either side of the driveway curb cut without checking with PBOT.\n\n---\n\n## 4. Permits: when one is required\n\nGoverning section: **PCC 24.10.072.B** \"Other Structures and Construction Activities\" (https://www.portland.gov/code/24/10/072). This is the building-code exemption list.\n\nA fence is **exempt from a building permit** if any of the following is true:\n\n| Material | Maximum height without permit |\n|---|---|\n| Wood and similar materials | **7 ft** |\n| Masonry, concrete, and similar | **4 ft** |\n| Field fencing (woven wire or chain link) | **8 ft** |\n\nAbove those thresholds, you need a **building permit**. **One absolute exception:** any barrier around a swimming pool, hot tub, or spa requires a permit regardless of height, per 24.10.072.B.1 and Oregon Residential Specialty Code Appendix G.\n\nOther related triggers:\n\n- **Retaining walls (24.10.072.B.2):** Permit required if over 4 ft measured from bottom of footing to top of wall, **or** if the wall supports an ascending slope steeper than 3:1, **or** if it carries a non-soil \"surcharge\" load (like a building or a fence acting as a sail in wind). The 3:1 slope rule is the one most homeowners miss; a wall holding a steep yard can require a permit even if it's only 3 ft tall.\n- **Combined retaining wall + fence:** The retaining wall and the fence are evaluated separately for permit purposes, but the fence's height is measured from the higher side of the wall (Brochure 3). So a 3 ft retaining wall with a 7 ft fence on top is a 10 ft fence, which exceeds the 7 ft wood exemption and triggers a building permit even though neither piece individually would.\n- **Fences over 7 ft (wood/metal/wire) and up to 8 ft:** Posts no farther apart than 6 ft, footings at least 18 inches in diameter and at least 3 ft deep, OR engineered design (Brochure 3).\n- **Fences over 8 ft of any material:** Must be designed by an Oregon-licensed structural engineer (Brochure 3).\n\n**Permit fee and timeline (PP&D Fee Schedule, https://www.portland.gov/ppd/current-fee-schedules):** Fence permits are reviewed quickly relative to other building permits; PP&D's own page says \"We review and issue most fence permits quickly.\" Typical residential fence permit fees are in the low hundreds of dollars depending on valuation. **Verify the current fee on the linked schedule**; fees change every fiscal year (FY26 schedule is what's in effect now).\n\n**Even when no permit is required, zoning still applies.** Brochure 3 is emphatic: \"All structures must comply with zoning requirements, whether or not a permit is required.\"\n\n---\n\n## 5. Trees (Title 11) and right-of-way (Title 17)\n\n### 5a. Title 11 Trees\n\nPCC Chapter 11 governs all tree work in Portland. The key sections for fence work:\n\n- **PCC 11.40 Tree Permit Requirements** \u2014 A tree permit from Urban Forestry is required to **cut roots over 1/4 inch in diameter** of any City tree or street tree, or to do \"any other type of activity the City Administrator determines has the potential to harm a City or street tree\" (11.40 review standards). **This explicitly includes digging post holes within the root protection zone of a street tree**.\n- **PCC 11.60.030 Tree Protection Specifications** \u2014 Establishes the **Root Protection Zone (RPZ) at a minimum of 1 ft of radius per inch of trunk diameter**. So a 24-inch-DBH street tree has a 24-foot RPZ around it. New encroachments into the RPZ are restricted.\n- **PCC 11.50.060.B.7 (helpful exemption):** Repair and replacement of existing fences \"that are not changing in footprint or length when no trees are to be removed as a part of the project\" are exempt from on-site tree density and preservation rules. **This is a real money-saver if you're replacing an existing fence on the same line.** It does not exempt you from the root-cutting permit if you'll be digging new post holes that hit street tree roots, but it does exempt you from the broader tree-density math.\n\n**Plain-language answer for you:** If your new fence runs along the street frontage and there's a street tree (even a small one) within about 1 foot of trunk-diameter-in-inches of where you'll dig, **call Urban Forestry first at 503-823-TREE (8733)**. If you're hand-augering small post holes well outside the RPZ of any private tree 12 inches DBH or larger, you're generally fine.\n\n### 5b. Title 17 Public Improvements (the right-of-way question)\n\nPortland's right-of-way (ROW) almost always extends behind the sidewalk into what looks like your front yard; this is the famous \"planter strip\" plus often a few extra feet on top. Building any portion of a fence (including footings) in the ROW is a violation; PP&D and PBOT will require removal.\n\n**Governing chapters:** PCC Title 17 generally; PCC 17.28.110 for driveways; PCC 17.42 for sidewalks. None of these directly authorize private fences in the ROW; PBOT generally doesn't permit them.\n\n**To find your real property line:** PortlandMaps shows an approximate parcel boundary, but it's not survey-accurate. Brochure 3 and PP&D both recommend two paths: (1) **call PBOT Engineering at 503-823-7002**, who can tell you the width of the ROW and where the City-maintained area ends, **for free**; and (2) for a precise legal property line, hire a licensed surveyor (typical cost in Portland is $700-$1,500 for a residential lot stake-out). For a fence project, the PBOT call is usually enough; for anything close to the line or where the line is in dispute with a neighbor, get a survey.\n\n---\n\n## 6. Materials and design restrictions\n\n**PCC 33.110.275 + Brochure 3 + 24.10.072.B:**\n\n- **Barbed wire, razor wire, electric fence:** Title 33 doesn't categorically ban these in residential zones (industrial/commercial zones have specific allowances), but the practical answer is they aren't typical or appropriate for R5 and would draw scrutiny; Title 29 (Property Maintenance) and nuisance rules can apply. **Confirm with PP&D before using any of these on a residential lot.**\n- **Opacity / see-through requirements in front yards:** Portland's R-zone fence code does **not** mandate a specific opacity (open vs. solid) for front-yard fences, unlike some cities. The 3.5 ft height limit in the front building setback is the practical visibility safeguard. (Industry guides like Pacific Fence's blog have suggested otherwise, but I couldn't find this in the actual code; treat third-party blogs as informational, not authoritative.)\n- **All fence types (open, solid, wood, metal, wire, masonry, \"screens\"):** Subject to the same standards (Brochure 3 explicit statement).\n- **Wood-to-ground contact:** Pressure-treated stamped for ground contact, or naturally rot-resistant species (cedar, redwood). Anything within 6 inches of grade or touching concrete needs this treatment (Brochure 3).\n- **Footings:** Must be entirely inside your property line.\n\n---\n\n## 7. Neighbor / shared fence considerations\n\nPortland City Code does **not** add a city-specific rule on top of state law for shared fences. The relevant authority is **Oregon Revised Statutes Chapter 96** (the \"partition fence\" statute), which addresses cost-sharing between neighboring landowners on rural fences and is mostly relevant to livestock; the general urban \"good neighbor\" custom of splitting cost on a shared fence is a private-party convention, not a city ordinance. There is no Portland city-code requirement that you notify your neighbor in writing before building, although it's strongly recommended (and helps if a property-line dispute later arises).\n\n**Practical note:** Because all fence parts (including footings) must be inside your property line per Brochure 3, a \"shared\" fence in Portland is technically built entirely on one party's land, with the other party often paying half by agreement. If you and your neighbor are both contributing, get the split in writing before construction.\n\n---\n\n## 8. Common Portland fence gotchas (most-frequent errors)\n\nIn rough order of how often I saw these flagged in PP&D / contractor sources:\n\n1. **Building too tall in the front building setback (the 3.5 ft trap).** Homeowners assume the 7 ft wood exemption applies everywhere. It doesn't; in the front setback (10 ft deep in R5), the limit is 3.5 ft regardless of permit status.\n2. **The retaining wall stacking rule.** Building a 6 ft fence on top of a 4 ft retaining wall and discovering it counts as a 10 ft fence requiring a permit and engineering.\n3. **Building over the property line into the ROW.** Especially common when there's no curb; the property line is often well behind where the lawn appears to start.\n4. **Ignoring street-tree root protection.** Digging post holes near a street tree without calling Urban Forestry. Penalties under 11.70 can include fines and replacement requirements.\n5. **Corner lot front confusion.** On a corner lot, the front is the **shortest** street frontage, and the 3.5 ft limit applies along that whole frontage's setback. People often assume only the side they enter from is the \"front.\"\n6. **Lattice and trellis on top counts.** A 6 ft fence with a 1 ft lattice topper is a 7 ft fence for measurement purposes; right at the wood-without-permit ceiling. Add 1 more inch and you need a permit.\n7. **Pool barriers without a permit.** A \"fence\" enclosing a pool/hot tub/spa is a barrier and always needs a permit and inspection (24.10.072.B.1 exception; ORSC Appendix G).\n8. **Assuming \"no permit needed\" means \"no rules.\"** Zoning, ROW, and tree rules apply regardless of building-permit status (Brochure 3 explicit warning).\n\n---\n\n## 9. Bureau contacts\n\nSave these. I confirmed all of them on official Portland.gov pages today.\n\n| Need | Bureau | Phone | Notes |\n|---|---|---|---|\n| Zoning / planning, permit, fence rules, free 15-min planner appointment | **Portland Permitting & Development (PP&D, formerly BDS)** | **503-823-7300** | M-F 8 am-5 pm; voicemail outside hours |\n| In-person help (Development Services Center) | PP&D | 1900 SW 4th Ave | **Tuesdays and Thursdays only, 8 am-4 pm**; appointments recommended; many services online 24/7 |\n| Schedule free 15-min planner / building reviewer / permit tech appointment | PP&D | https://www.portland.gov/bds/early-assistance/15-minute-appointments | Yes, this is the free zoning consult you asked about |\n| Right-of-way location, property line at street, sidewalk width | **Portland Bureau of Transportation (PBOT) Engineering** | **503-823-7002** | Use this *first* for any front-yard fence question |\n| Street tree, private tree work, root protection | **Urban Forestry (Portland Parks & Rec)** | **503-823-TREE (503-823-8733)** | Tree hotline; mention if you're digging within an RPZ |\n| Underground utility location (free) | Oregon Utility Notification Center | **811** or 503-246-6699 | Always call before digging post holes |\n| 24-hour automated inspection scheduling (only after you have a permit) | PP&D | 503-823-7000 | Needs IVR or permit number |\n| Code violation reporting | PP&D | https://www.portland.gov/bds/code-enforcement/code-enforcement-phone-numbers | If a neighbor builds non-compliantly |\n| General city info / 311 | City of Portland | 311 (or 503-823-4000 outside Multnomah) | |\n| Oregon Relay Service | State of Oregon | 711 | TTY/accessibility |\n\n---\n\n## 10. Sequenced next-steps checklist\n\nIn strict order:\n\n1. **Verify zoning and overlays at the parcel.** Open https://www.portlandmaps.com/detail/property/3220-NE-33RD-AVE/R213930_did/, check the Zoning, Permits & Zoning, and Historic layers. Look for any lowercase suffix on \"R5\" and any historic resource flag. (My data showed plain R5; reconfirm.)\n2. **Determine your lot type.** Interior, corner, or through? PortlandMaps has the parcel polygon. This determines which sides count as \"front.\"\n3. **Call PBOT Engineering at 503-823-7002** and ask: \"I'm at 3220 NE 33rd Ave; can you tell me where the public right-of-way ends along my NE 33rd frontage and how far back from the curb my actual property line sits?\" Free. They'll usually give you a width on the spot.\n4. **Walk your property line and identify trees.** Note any City-owned street trees in the planter strip and any private trees 12 inches DBH or larger near the proposed fence line. Measure rough trunk diameter; calculate RPZ as 1 ft per inch of diameter.\n5. **Decide your fence dimensions.** Pick (a) front-yard fence height (3.5 ft or under to stay no-permit), (b) side/rear height (8 ft or under to stay no-permit), and (c) material (wood, metal, masonry, etc.). Keep the assembly under the 24.10.072.B threshold to avoid a permit.\n6. **If building near a street tree or a private tree 12+ inches DBH:** Call Urban Forestry at 503-823-TREE and describe your post-hole locations. Get either a \"you're fine\" or a tree permit before digging.\n7. **If you're going taller than the exempt thresholds (over 7 ft wood, 4 ft masonry, 8 ft chain link, or any pool barrier):** Apply for a building permit through Development Hub PDX at https://devhub.portlandoregon.gov/. Brochure 3 lists the required submittals (site plan, structural plan, footing details).\n8. **Schedule a free 15-min planner appointment** if anything in steps 1-7 was ambiguous. This is genuinely useful and free.\n9. **Notify your neighbor(s).** Even though Portland doesn't require it, a written agreement on shared fence cost and the exact line location (with a sketch) prevents 90 percent of disputes.\n10. **Call 811 (or 503-246-6699)** at least two business days before digging. Free, mandatory under Oregon law.\n11. **Build the fence inside your property line, with footings inside the line.** Take dated photos of the post holes before backfill (good for any later dispute).\n12. **If you got a permit:** Schedule the inspection at 503-823-7000 (IVR/permit number required).\n\n---\n\n## 11. Things I'm not sure about; call PP&D directly on these\n\nI've been precise where I'm confident and conservative where I'm not. Don't take my word for these without confirmation:\n\n- **Whether your specific NE 33rd frontage has any plan-district or design overlay I missed.** PortlandMaps' summary said no; the visual zoning map could show otherwise.\n- **The current (FY26) fee for a residential fence permit.** Fees change yearly; pull the current schedule before budgeting.\n- **Whether NE 33rd at your block is classified as a \"high-crash\" or \"neighborhood greenway\" street that triggers extra PBOT scrutiny on front-yard fence height.** Worth a 2-minute call to PBOT.\n- **Whether Title 33 update packets effective Jan 2025 (#212), Mar 2025 (#213), or Oct 2025 (#215) changed any specific fence sub-section number.** I checked the structure and 33.110.275 still exists; I did not read each packet's diff in full.\n- **Anything involving electric, barbed, or razor wire on a residential lot.** Don't trust general guidance; call.\n- **Anything involving a pool, spa, or hot tub barrier.** Different code (Oregon Residential Specialty Code Appendix G) plus permit requirement. Specialist consultation required.\n\nFor each of the above, **the PP&D 15-minute free planner appointment is the right tool**, not a Google search and not me. Schedule at https://www.portland.gov/bds/early-assistance/15-minute-appointments.\n\n---\n\nIf it'd be useful, I can put this same content into a single markdown file you can drop into Obsidian for reference; just say the word."
+      "text": "I'll start by pulling up the actual zoning and overlay data for your address, then research the current fence rules. Let me load the Portland Maps tools first.Got the address-specific data. One important correction up front: the property is actually in **Beaumont-Wilshire**, not Alameda. Now let me look up the current Portland fence code to make sure I cite the right rules.I have the chapter structure. Now I need to get the actual fence section (33.110.275). Let me fetch the next portion.Let me also verify the sight-distance and vision clearance rules, plus check whether there's an alley behind this lot.Let me check whether there's an alley behind the property and what streets bound it.I have everything I need. Here's your answer.\n\n---\n\n# Fence rules for 3220 NE 33rd Ave\n\n## Confirmation: yes, I looked up your specific address\n\nI pulled the actual zoning record for **3220 NE 33rd Ave** from PortlandMaps. One small surprise up front: your property is in the **Beaumont-Wilshire** neighborhood, not Alameda. Alameda is a few blocks west; the official neighborhood line runs roughly along NE 33rd Ave in places, so it's a very common mix-up. The zoning rules are the same either way (your zone is **R5**, the most common single-family zone in Portland), but I wanted to flag it so you don't get bounced if you ever say \"I live in Alameda\" to the city.\n\nYou can verify any of this yourself in about three minutes at **portlandmaps.com**: type your address into the search bar, click your house, and look at the \"Zoning\" panel on the right. You should see \"R5\" and one overlay code, \"h\" (more on that below; it doesn't affect fences).\n\nTwo other quick corrections before we get into it:\n\n- The fence section of the zoning code you mentioned, **33.110.255**, was renumbered in 2020. The current section is **33.110.275**. (33.110.255 is now about flag lots, which doesn't apply to you.)\n- The bureau you'll deal with used to be called **Bureau of Development Services (BDS)**. As of 2023 it was renamed to **Portland Permitting & Development (PP&D)**. A lot of older websites and brochures still say BDS; it's the same office, same phone number.\n\n---\n\n## 1. The short version (read just this if you're in a hurry)\n\nIn your **back yard and side yards**, you can build a fence up to **7 feet tall** with no permit needed; you can go up to **8 feet** with no permit if it's chain-link or woven wire, but anything taller than 7 feet in wood or solid material needs a building permit. In your **front yard** (the strip between your house and NE 33rd Ave, which is roughly the first 10 feet in from the sidewalk), the fence can only be **3 feet 6 inches tall**, no matter what it's made of. Fences must sit **entirely inside your property line**; they can't go on the strip of city-owned land between the sidewalk and the street. **Replacing a fence in the same spot at the same height doesn't need a permit**, and a typical 6-foot wood fence on the side and back of your lot is permit-free. Your property has no historic, conservation, or design overlay, so the standard rules apply cleanly.\n\n---\n\n## 2. The details, broken out by location\n\n### Front yard (the part facing NE 33rd Ave)\n\nYour \"front yard\" for fence purposes is the area between your front property line (which is roughly at the back edge of the sidewalk; more on that below) and an imaginary line **10 feet inside your property** running parallel to the street. That 10-foot strip is called the **front building setback**, the area where the city requires open space in front of your house.\n\nInside that front strip, **the fence can be at most 3 feet 6 inches tall (3 ft 6 in)**, period (PCC 33.110.275). That's a low picket fence, basically. The material doesn't matter; solid cedar, chain link, decorative iron, lattice, all are capped at 3'6\". And remember, the **3'6\" includes any topper**: a 3-foot picket fence with a 1-foot lattice on top counts as 4 feet, which is over the limit.\n\nIf you go past that 10-foot line and onto the part of the side or back of your yard that's actually behind the front of your house, you can go up to 7 or 8 feet (see below).\n\n**Sight visibility at your driveway**: Even though the city doesn't have a hard sight-triangle rule for mid-block driveways like yours, you're still responsible for not blocking driver visibility (PCC 33.266.130). The practical rule of thumb is: if you're putting a 3'6\" solid fence next to your driveway entrance, set it back a few feet from the curb cut so you can see oncoming bikes and pedestrians. NE 33rd Ave is a busy collector street, so this matters more on your block than on a quiet side street.\n\n**Where the fence can sit in relation to the sidewalk**: Your fence has to be **entirely inside your property line, including the post footings**. The edge of the sidewalk is *not* your property line. There's almost always a strip of city-owned land between the sidewalk and your actual front yard (the **planting strip** or **right-of-way**); see the section near the bottom on this. You cannot build any fence in that strip without a special permit from PBOT, which is rarely granted for fences.\n\n**Hedges count as fences when they're tall.** A solid hedge in your front yard taller than 3'6\" is technically a code violation under the same fence rule, though enforcement is usually complaint-driven. Trees and shrubs that are clearly individual plantings, not a continuous wall, are governed by the tree code (Title 11), not the fence code.\n\n**Retaining walls change the math.** If you build a fence on top of a retaining wall, the city measures fence height **from the higher side of the wall**, not the lower side. So a 2-foot retaining wall with a 4-foot fence on top counts as a 4-foot fence on the high side, but the wall itself plus the fence may total 6 feet on the low side, which can affect both the permit and what the neighbors see.\n\n### Side yards (between your house and the neighbors on either side)\n\nIn R5, the **side building setback is 5 feet**, meaning the city requires a 5-foot strip of open space along each side of your house.\n\nThe fence rule splits the side yard into two parts:\n\n- The part of the side yard that's **forward of the front of your house** (in line with the front of your house, between your house and the street): this is treated as part of the front setback, so the **3'6\" cap** applies there.\n- The part of the side yard that's **alongside or behind the front wall of your house**: you can go up to **7 feet (wood/solid) or 8 feet (chain-link or woven wire)** with no permit. Material matters here only for what triggers a permit, not for the height limit itself; a wood fence at 7'6\" is allowed but needs a permit, while a chain-link fence at 7'6\" is allowed without a permit (PCC 24.10.072.B).\n\nPractical translation: if your house sits 15 feet back from the front property line, the first ~15 feet of fence on each side of your house can only be 3'6\" tall. From there back to your rear property line, you can have your full 6- or 7-foot privacy fence.\n\n### Back yard\n\nYour back fence can be up to **7 feet tall** (wood or any solid material) with **no permit required**, or up to **8 feet** if it's chain-link or woven wire. Going taller than 7 feet in wood requires a building permit. Going taller than 8 feet in any material requires a permit *and* an engineer's design (PCC 24.10.072.B and Brochure 3).\n\n**Alley question**: Many Beaumont-Wilshire blocks have alleys, but I couldn't confirm from the city's data whether your specific block does. Verify on PortlandMaps; if there's a thin gray strip behind your lot on the basemap, that's an alley. **If your back lot line abuts an alley, the rear setback for your house drops to zero** (PCC 33.110.220.D.9), and a fence can sit right on the lot line. You still can't build a fence *in* the alley itself; the alley is public right-of-way managed by PBOT. Watch for sight visibility at the alley exit; same logic as a driveway.\n\n**Material differences again**: solid wood, vinyl, or concrete fences all share the 7-foot no-permit limit. Chain-link and woven wire get an extra foot (8 feet no-permit) because they're see-through. Lattice toppers count toward total height; if you want a 6-foot solid fence with a 1-foot lattice topper, that's a 7-foot fence, which is right at the no-permit limit. A 6-foot fence with a 2-foot lattice topper is an 8-foot fence and needs a permit.\n\n### Quick comparison\n\nHere's the same information in one table, since you're comparing three locations on the same set of dimensions. **In plain words: your front yard is locked at 3'6\", and side and back can go to 7 or 8 feet depending on material, with retaining walls measured from the high side.**\n\n| Location | Max height (no permit) | Max height (with permit) | Where the fence can sit |\n|---|---|---|---|\n| Front yard (within 10 ft of front property line) | 3 ft 6 in, any material | 3 ft 6 in is also the cap with a permit; you can't exceed it | Inside your property line, behind the planting strip |\n| Side yard, forward of front of house | 3 ft 6 in (treated as front) | Same; can't exceed 3'6\" | Inside your property line |\n| Side yard, alongside or behind house | 7 ft (wood/solid), 8 ft (chain-link/wire) | Up to height of base zone, with engineering | Inside your property line, may sit on lot line |\n| Back yard | 7 ft (wood/solid), 8 ft (chain-link/wire) | Up to 30 ft (zone max), with engineering and permits | Inside your property line; may sit on lot line; 0 ft setback if alley behind |\n\n---\n\n## 3. Zoning and overlays for your address\n\nYour property is **R5 (Residential 5,000)**, which is Portland's standard single-family residential zone, named for the historical 5,000-square-foot minimum lot size. This is by far the most common zone in close-in northeast Portland and applies to most of Beaumont-Wilshire.\n\nYou have **one overlay**: the **\"h\" Aircraft Landing overlay** (your full zone code reads \"R5h\"). This is a height-restriction overlay tied to flight paths around PDX. It limits how tall buildings and structures can be to keep airspace clear. **It has zero practical effect on a residential fence**; the height ceiling under \"h\" is in the hundreds of feet here. I'm only mentioning it because you'll see it on PortlandMaps and it sounds dramatic.\n\nYou have **none** of the things that would change your fence rules:\n\n- No **historic district** (no Alameda Park or Irvington-style historic protection)\n- No **conservation district**\n- No **design overlay**\n- No **environmental overlay**\n- No **plan district**\n- No **National Register district**\n\nSo the standard R5 fence rules apply cleanly.\n\n**How to verify yourself, in under 5 minutes**: Go to **portlandmaps.com**, type **\"3220 NE 33rd Ave\"** in the search bar, click your property on the map, and on the right side click \"Zoning.\" You should see \"R5\" as the base, \"h\" as the overlay, and empty rows for historic, conservation, plan district, and design. If anything in those rows is filled in, the rules in section 4 still apply but additional rules may stack on top.\n\n---\n\n## 4. Which Portland City Code Titles govern this\n\n**Title 33 \u2014 Planning and Zoning** is the main rulebook for fence height, where it can sit, and what counts as \"fence\" (lattice toppers, hedges that act as fences, etc.). The specific section for fences in single-family zones is **PCC 33.110.275**. The setback rules for buildings (which define the \"front building setback\" the fence rules reference) are at **PCC 33.110.220**.\n\n**Title 24 \u2014 Building Regulations** is the rulebook for whether a fence needs an actual building permit, separate from zoning. The exemptions from needing a permit (for fences 7 feet and under in wood, 4 feet and under in masonry, or 8 feet and under in chain-link) are at **PCC 24.10.072.B**.\n\n**Title 11 \u2014 Trees** is the rulebook that kicks in if a tree (yours or a city-owned street tree) is in the way of where you want to dig post holes. Most front-yard trees in Portland between the sidewalk and the street are city-owned street trees and protected by **PCC 11.50** and **11.60**. Damaging roots without an Urban Forestry permit can mean fines.\n\nIf you ever go above 8 feet of fence (or build a retaining wall over 4 feet with a fence on top), you also pull in the **Oregon Residential Specialty Code**, which is the state-level structural code Portland enforces.\n\n---\n\n## 5. Do you need a permit? Plain-language thresholds\n\nThree different answers depending on what you're building:\n\n**No permit needed if all of these are true:**\n\n- The fence is 7 feet tall or less and made of wood, vinyl, or similar material; OR\n- The fence is 8 feet tall or less and made of chain-link or woven wire; OR\n- The fence is 4 feet tall or less and made of masonry or concrete\n\n\u2026AND it sits entirely on your property, AND it's not in your front building setback above 3'6\", AND it doesn't enclose a swimming pool. This covers ~95% of residential fence projects in Portland, including a standard 6-foot cedar privacy fence.\n\n**Building permit required if any of these are true (PCC 24.10.072.B):**\n\n- The fence is taller than 7 feet in wood or solid material\n- The fence is taller than 8 feet in any material (also requires an engineer's design)\n- The fence is taller than 4 feet in masonry or concrete\n- The fence encloses a swimming pool, hot tub, or spa (regardless of height)\n- The fence sits on top of a retaining wall over 4 feet tall (the wall itself triggers a permit)\n- The fence is electric or has barbed wire (these are heavily restricted in residential zones; barbed wire is essentially banned in single-dwelling zones except for agricultural use, and electric fences are not allowed for residential perimeter fencing)\n\n**A privacy fence with a lattice topper**: lattice counts toward total height. A 6-foot fence + 1-foot lattice = 7 feet, no permit. A 6-foot fence + 2-foot lattice = 8 feet, permit needed.\n\n**Replacing an existing fence in the same spot, same height, same material**: no permit needed, treated as maintenance. If you're going taller, moving the line, or changing the structure, the new fence has to meet current code.\n\n**A fence over a retaining wall**: the city measures from the high side of the wall. A 6-foot fence on a 3-foot retaining wall is a 9-foot structure as the neighbors see it from the low side, but for code purposes it's a 6-foot fence (no permit) plus a 3-foot retaining wall (no permit, since under 4 feet). If the retaining wall is over 4 feet, it needs its own building permit.\n\n---\n\n## 6. What to do next, in order\n\n**Step 1. Verify your zoning and property lines yourself (free, 5 minutes).**\nGo to **portlandmaps.com**, search your address, click \"Zoning,\" and confirm \"R5\" base + \"h\" overlay + no other overlays. While you're there, click \"Property\" and look at the lot lines on the basemap. **Have ready**: just your address. **Cost**: free. **Time**: 5 minutes.\n\n**Step 2. Locate your actual property line, especially in front (free or paid, depending on how confident you want to be).**\nThe sidewalk is NOT your property line. PBOT can tell you for free where the **right-of-way line** is, which gives you a pretty good estimate of your property line in front (about a 5-minute call). **Contact**: Portland Bureau of Transportation (PBOT), 503-823-7002. **Have ready**: your address. **Cost**: free.\nFor a precise legal property line on all sides, hire a licensed surveyor. **Cost**: roughly $700\u2013$1,200, about the cost of a decent appliance. **Time**: 1\u20133 weeks for the survey to get scheduled and completed. **This step is optional but cheap insurance** if your fence will sit close to a neighbor's line.\n\n**Step 3. Schedule a free 15-minute appointment with a city planner (free, recommended).**\nThis is the single best thing you can do, and most homeowners don't know about it. A real planner will look up your property and answer specific questions before you spend a dollar on materials. **Contact**: Portland Permitting & Development (PP&D), book at portland.gov/ppd/early-assistance/15-minute-question-appointments, or call 503-823-7300. **Have ready**: your address, a rough sketch of where you want the fence and how tall, the fence material. **Cost**: free. **Time**: 15-minute call, scheduled within 1\u20132 weeks.\n\n**Step 4. (Only if your fence triggers a permit.) Apply online for the building permit.**\n**Contact**: PP&D online permitting, portland.gov/ppd. **Have ready**: a site plan (a sketch of your lot showing where the fence goes, distances to property lines, and existing structures), a fence elevation drawing showing height, materials, post spacing, and footing depth. For a fence over 7 feet, you'll need a stamped engineer's drawing. **Cost**: typically $200\u2013$400 for a residential fence permit, about the cost of a nice dinner out for two. **Time**: about 2\u20134 weeks for issuance for a simple fence.\n\n**Step 5. Call before you dig (free, required by Oregon law).**\nBefore any post hole gets dug, you must call **Oregon 811** (\"Call Before You Dig\") at **811** or **503-246-6699**, or request online at digsafelyoregon.com. They'll mark underground gas, water, electrical, and cable lines for free within 2 business days. Skipping this and hitting a gas line is a serious problem; it's also free, so just do it. **Cost**: free. **Time**: one call (10 minutes), then 2 business days for marking.\n\n**Step 6. (If digging near a street tree.) Clear it with Urban Forestry (free).**\nStreet trees in Portland are city-owned and root protection is real. If your fence post holes will be within about 10 feet of a street tree, call the **Tree Hotline** at **503-823-8733** before you dig. **Cost**: free. **Time**: one call.\n\n**Step 7. Build the fence.** A pro contractor for a typical 6-foot, 100-foot-long cedar fence is roughly $4,000\u2013$8,000 in Portland depending on grade, installed; that's about the cost of a solid used car. DIY the materials run $1,500\u2013$3,000 plus a couple of weekends of labor; roughly two summer weekends for a fit and patient builder, three or four if you're learning as you go. Fence pros are heavily booked May through August in Portland; expect a 4\u20138 week wait for a contractor in summer, versus 2\u20133 weeks in late fall or winter.\n\n**Step 8. Schedule the inspection (only if you pulled a permit).**\n**Contact**: PP&D 24-hour inspection line, **503-823-7000**. You'll need your IVR/permit number. **Cost**: included in permit fee. **Time**: inspectors usually come within 1\u20133 business days of request.\n\n---\n\n## 7. Script for calling the city\n\nHere's the actual sentence to read or paste in. Use this on the phone to PP&D General Inquiries (**503-823-7300**) or in your 15-minute appointment:\n\n> \"Hi, I own a home at **3220 NE 33rd Ave, 97212**, in the Beaumont-Wilshire neighborhood. PortlandMaps shows my zoning as R5 with the 'h' overlay. I'd like to build a **[6-foot cedar]** fence in my **[back and side yards]** and a **[3-foot picket]** fence in the **[front]**. Can you confirm: (1) the fence can sit on or just inside my property line on the side and back, (2) the front fence is capped at 3 feet 6 inches in the front 10 feet, (3) I don't need a building permit at these heights with these materials, and (4) there are no special overlay or plan district rules I'm missing? Also, can you tell me the width of the public right-of-way along NE 33rd Ave so I know where my front property line actually is?\"\n\nThat covers it in one shot and prevents you from getting bounced between PP&D and PBOT. **If they say the right-of-way question is for PBOT, that's correct**; call **PBOT at 503-823-7002** for the right-of-way width specifically.\n\n---\n\n## 8. Common gotchas (the mistakes that actually cost Portland homeowners money)\n\n**The sidewalk is not your property line.** This is the single biggest mistake. The city right-of-way usually extends from the curb back about 6 to 12 feet, which often means the sidewalk *and* a strip of grass on the house side of the sidewalk are public land. If you build right up to the back edge of the sidewalk, you may be 5+ feet inside the city's right-of-way, and PBOT can require you to tear it out. Always confirm with PBOT before building anywhere within ~12 feet of the curb.\n\n**Hedges count as fences when they form a wall.** A solid laurel hedge in your front yard at 6 feet tall is a code violation, even though you didn't \"build\" anything. The city rarely enforces this proactively but a complaining neighbor can trigger a notice.\n\n**Removing a \"tree on your property\" without checking who owns it.** Almost every tree between the sidewalk and the street is a **street tree**, owned by the city, and removing it without an Urban Forestry permit is a $1,000+ fine plus replanting cost. Even on the house side of the sidewalk, large trees may be regulated by Title 11.\n\n**Damaging tree roots when digging post holes.** Hand-digging within the root zone of a street tree (roughly 10 feet from the trunk) requires Urban Forestry sign-off. Power-augering through tree roots can kill a 60-year-old tree, and you may be on the hook for a multi-thousand-dollar replacement.\n\n**Assuming your neighbor has to chip in for a shared fence.** Portland is clear on this: shared fences are a private matter between neighbors. Your neighbor is not legally required to pay half, allow you onto their side to install, or even agree to the project. If your existing fence sits on the property line, you both technically share it; if you tear it down without their consent and they liked it, that's a civil dispute the city will not get involved in. Talk to them in writing before you do anything.\n\n**Building tall fences too close to a driveway and creating a sight-line problem.** A 6-foot solid fence right at the curb cut on a busy street like NE 33rd makes it impossible to see oncoming bikes when you back out. The city's vision-clearance rules technically only kick in at street intersections, but you can get sued in a private case if a fence you built blocks a driver's view of a pedestrian. A common-sense practice: step the front fence section down to 3'6\" for the last 5\u201310 feet before your driveway exit.\n\n**Pouring footings that extend into the right-of-way or onto the neighbor's lot.** The footing is part of the fence; if your post is right on the line, the concrete blob below ground may extend across it. Set posts at least 6 inches inside the line.\n\n**Forgetting that NE 33rd Ave is a major street.** Some city setback and visibility rules are stricter on collector and arterial streets than on quiet residential streets. NE 33rd is a \"Neighborhood Collector\" by classification. None of this changes the basic 3'6\" front-fence rule, but it's worth mentioning to PP&D when you call.\n\n**Building in summer permit-rush.** PP&D plan-review wait times stretch out from May through August. A simple fence permit that takes 2 weeks in February can take 4\u20136 weeks in July. If you don't need the permit (most fences don't), this isn't an issue; if you do, plan ahead.\n\n---\n\n## 9. Friendly accuracy caveats\n\nA few things worth double-checking before you spend money:\n\n- **Verify the zoning yourself on PortlandMaps before you commit.** I pulled it from the same database the city uses, and as of today your zone is R5 with the \"h\" overlay and nothing else, but zoning can change with code updates and you want to confirm on the day you start your project. Type your address into portlandmaps.com.\n- **Don't trust me on the alley question.** I couldn't confirm whether your specific block has an alley behind it from the data I had. If your back yard backs onto another house's back yard, no alley; if there's a 12\u201316 foot strip of pavement behind the lot, that's an alley. PortlandMaps' aerial view will show this clearly.\n- **Property lines are legal facts that only a survey can establish.** PBOT can give you the right-of-way width, which gets you a good estimate, but a property survey is the only way to know for sure where your line actually is. If your fence will sit within 12 inches of where you think the line is, get the survey.\n- **Code numbers and fees change.** I cited the current section numbers as of today. The rules described here are stable (the current fence section was renumbered in 2020 but the underlying limits have been the same for years), but always confirm with PP&D before pulling a permit.\n- **The 15-minute appointment is the safest answer to all of this.** A planner looking at your specific address will catch anything I missed.\n\n---\n\n## A note on the planting strip and the city's land in front of your house\n\nThe strip of land between the sidewalk and the street (or, on streets without curbs, the unimproved area between the sidewalk and your property line) is called the **planting strip** or **furnishing zone**, and the legal designation is **public right-of-way (ROW)**. It's owned by the city and managed by **PBOT (Portland Bureau of Transportation)**. You generally can't build any fence, wall, or permanent structure there without a special permit from PBOT, which is rarely issued for residential fences.\n\nWhat you *can* do in the planting strip without a permit: maintain landscaping, plant approved street trees (with Urban Forestry permission), and do basic upkeep. What you *can't* do: build a fence, install permanent posts, pour concrete, or otherwise treat it like your yard.\n\nTo find out exactly how wide your right-of-way is along NE 33rd Ave, **call PBOT at 503-823-7002**. They'll look up your block and tell you the answer in about five minutes. This is free.\n\n---\n\n## A note on trees and Urban Forestry\n\nIf a tree is anywhere near your fence line, **Urban Forestry** is the part of Portland Parks & Recreation that has jurisdiction. The hotline is **503-823-8733**.\n\nYou'll want to call them if:\n\n- You'd be digging within roughly 10 feet of any tree larger than ~6 inches in diameter, especially street trees\n- You think the tree is in the way of your fence and might need to be pruned or removed\n- You're not sure if a tree on your property is regulated under the city's tree code\n\nSpring and early summer (April\u2013June) is when Urban Forestry is busiest, with a ~2-week response window for non-emergency calls. Late fall is faster.\n\nThe general rule of thumb: never cut a root larger than 2 inches in diameter on a street tree without Urban Forestry's sign-off. Hand-dig (don't auger) within 5 feet of a street tree trunk.\n\n---\n\n## A note on shared fences with neighbors\n\nPortland's position is that **the city does not get involved in shared-fence disputes**. The city enforces zoning (height, location, setback) and building code (structural safety); everything else is between you and your neighbor.\n\nThat means:\n\n- Neither of you is legally obligated to share the cost of building or replacing a fence on your property line\n- Neither of you can force the other to allow access to their side for installation or maintenance\n- If a fence sits exactly on the property line, both households share ownership and either can act on it (which can get messy)\n- Encroachment (a fence that's a few inches over the line) is a civil property issue, not a city issue\n\nThe friendly route: a written agreement before you build, even a one-page email confirming who pays what and where the fence sits.\n\n---\n\n## What a typical 6-foot back/side fence costs and takes in Portland\n\nFor a roughly **100 linear feet** (the side and back of a typical 5,000-square-foot lot like yours) **6-foot cedar privacy fence**:\n\n- **Contractor-installed**: $4,000\u2013$8,000 total, depending on whether you're getting basic or premium grade. That's about the cost of a decent used car. For just side and back of your lot (call it 100\u2013120 feet), $5,000\u2013$6,500 is a fair midrange Portland quote in 2026; significantly higher than that and you're paying for premium materials or an expensive contractor.\n- **DIY materials only**: $1,500\u2013$3,000. About 2\u20134 weekends of evenings and Saturdays for someone who's reasonably handy and patient. First-time fence builders should plan for 4 weekends.\n- **Timeline if hiring**: book in late winter (February\u2013March) for a spring install; expect 4\u20138 weeks of contractor wait time in May\u2013August, 2\u20133 weeks November\u2013February.\n- **Cheapest month to build**: November through February, after the rainy ground softens for digging but before the spring rush. Wood prices also tend to be lower late-fall.\n- **Most expensive month**: June\u2013July, peak demand, contractors at capacity.\n\n---\n\n## 10. Glossary\n\n**BDS / PP&D** \u2014 Bureau of Development Services, renamed in 2023 to Portland Permitting & Development. Same office, handles building permits and zoning questions. Phone: 503-823-7300.\n\n**PBOT** \u2014 Portland Bureau of Transportation. Owns and manages streets, sidewalks, and the right-of-way (the city-owned strip between the sidewalk and the street). Phone for right-of-way questions: 503-823-7002.\n\n**Urban Forestry** \u2014 A division of Portland Parks & Recreation that regulates trees on public property and on private property over a certain size. Phone: 503-823-8733.\n\n**PCC** \u2014 Portland City Code. The city's complete rulebook, organized by Title (broad subject) and section (specific rule). \"PCC 33.110.275\" means Title 33, Chapter 110, Section 275.\n\n**Setback** \u2014 How far inside your property line a structure has to sit. The \"front building setback\" is the strip of yard between your front property line and where your house can legally start; in R5 zones, it's 10 feet.\n\n**Right-of-way (ROW)** \u2014 The strip of land owned by the city for streets, sidewalks, and utilities. It usually includes the sidewalk and a planting strip on the house side. You can't build permanent structures here without special permission.\n\n**Planting strip** \u2014 Common name for the part of the right-of-way between the sidewalk and the street (or sometimes between the sidewalk and your front property line). City-owned; you maintain it but can't build on it.\n\n**Lot line / property line** \u2014 The legal boundary of your property. Almost never the same as the edge of the sidewalk.\n\n**Zoning overlay** \u2014 An extra layer of rules added on top of your base zone (in your case, R5). Your one overlay is \"h\" (Aircraft Landing), which has no effect on residential fences.\n\n**Base zone** \u2014 Your primary zone designation, which determines most of the rules for what can be built. Yours is R5, single-family residential.\n\n**Plan district / historic district / conservation district** \u2014 Special districts that overlay extra design rules on top of base zoning. Your property has none of these, which is why standard R5 rules apply cleanly.\n\n**Vision clearance** \u2014 City rules requiring sight visibility at intersections and driveways. The hard rules apply at street corners; common-sense visibility applies at private driveways.\n\n**Engineering / engineered design** \u2014 A drawing stamped by a structural engineer licensed in Oregon. Required for any fence taller than 8 feet and for some unusual designs (heavy masonry, fences on retaining walls). Adds $300\u2013$800 to a project.\n\n---\n\nIf you want me to draft your site plan sketch (the simple diagram PP&D wants if you do end up needing a permit), I can walk you through that next; it's basically a top-down drawing of your lot with the fence line, distances to property lines, and the house labeled."
     }
   },
   "atoms": [
     {
       "id": "A1",
       "claim_short": "Base zone is R5",
-      "claim_full": "The property's base zone is R5 (Residential 5,000), the standard single-dwelling residential zone.",
+      "claim_full": "The property's base zone is R5 (Residential 5,000), Portland's standard single-dwelling residential zone.",
       "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      },
+      "verified_truth": "R5 zoning verified against PortlandMaps assessor data in the MCP and enhanced runs; OOB inferred R5 without a successful lookup but landed on the correct zone."
+    },
+    {
+      "id": "A2",
+      "claim_short": "'h' Aircraft Landing overlay",
+      "claim_full": "The parcel carries the 'h' Aircraft Landing overlay, which restricts building heights near flight paths but does not affect residential fences.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      },
+      "verified_truth": "The 'h' Aircraft Landing overlay on this parcel was verified via PortlandMaps and is unrelated to fence height limits."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Neighborhood is Beaumont-Wilshire",
+      "claim_full": "The property is located in the Beaumont-Wilshire neighborhood.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.2,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      },
+      "verified_truth": "The Enhanced evaluator verified Beaumont-Wilshire as correct against assessor data; the official neighborhood line runs roughly along NE 33rd Ave in this area."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Front fence max 3.5 ft",
+      "claim_full": "Within the front building setback, fence height is capped at 3 feet 6 inches regardless of material.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.275",
+      "citation_by_variant": {
+        "oob": "Title 33.110.275 + BDS Brochure 3",
+        "mcp": "PCC 33.110.275",
+        "enhanced": "PCC 33.110.275"
+      },
+      "verified_truth": "The 3'6\" cap on fences within the front building setback in single-dwelling zones is consistent with Portland's fence code and Brochure 3."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Side/rear fence to 8 ft",
+      "claim_full": "Fences in side and rear yards may go up to 8 feet tall, with a 7-foot threshold for solid materials before a permit is required.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.275",
+      "citation_by_variant": {
+        "oob": "Title 33.110.275 + BDS Brochure 3",
+        "mcp": "PCC 33.110.275",
+        "enhanced": "PCC 33.110.275"
+      },
+      "verified_truth": "Side/rear fence heights up to 8 ft are allowed in single-dwelling zones; the 7-ft solid / 8-ft chain-link split reflects the standard ORSC permit-exemption threshold."
+    },
+    {
+      "id": "A6",
+      "claim_short": "R5 setbacks 10/5/5",
+      "claim_full": "R5 building setbacks are 10 feet front, 5 feet side, and 5 feet rear.",
+      "topic": "setbacks",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.110.220",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PCC 33.110.220",
+        "enhanced": "PCC 33.110.220"
+      },
+      "verified_truth": "R5 setbacks of 10 ft front and 5 ft side/rear align with Portland's zoning code per the MCP and enhanced evaluations; OOB hedged the 10 ft front figure as 'typical'."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Wood \u22647 ft permit-exempt",
+      "claim_full": "A wood fence at 7 feet or under is exempt from a building permit.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "BDS Brochure 3",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "Brochure 3",
+        "enhanced": "PCC 24.10.072.B / Brochure 3"
+      },
+      "verified_truth": "Wood fences at 7 ft or under are exempt from a building permit under the standard Oregon Residential Specialty Code threshold reflected in Brochure 3."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Chain-link \u22648 ft permit-exempt",
+      "claim_full": "Chain-link or woven-wire fences up to 8 feet tall do not require a building permit.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "BDS Brochure 3",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "Brochure 3",
+        "enhanced": "PCC 24.10.072.B"
+      },
+      "verified_truth": "Chain-link/woven-wire fences up to 8 ft are commonly described as permit-exempt in Brochure 3; the standard ORSC exemption is 7 ft regardless of material, so the extra foot for chain-link should be confirmed against current code."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Masonry >4 ft needs permit",
+      "claim_full": "Masonry or concrete fences taller than 4 feet require a building permit.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "BDS Brochure 3",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "Brochure 3",
+        "enhanced": "PCC 24.10.072.B"
+      },
+      "verified_truth": "Masonry/concrete fences over 4 ft requiring a permit aligns with Portland's published fence permit thresholds."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Pool enclosures always permitted",
+      "claim_full": "Fences enclosing swimming pools, hot tubs, or spas always require a building permit regardless of height.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "BDS Brochure 3",
+      "citation_by_variant": {
+        "mcp": "Brochure 3",
+        "enhanced": "PCC 24.10.072.B"
+      },
+      "verified_truth": "Pool/spa barrier fences always require a permit per Brochure 3, independent of the standard fence-height permit thresholds."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Height includes lattice/caps",
+      "claim_full": "Fence height is measured to include lattice, trellises, post caps, and any topper.",
+      "topic": "definitions",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.110.275",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PCC 33.110.275",
+        "enhanced": "PCC 33.110.275"
+      },
+      "verified_truth": "Lattice, post caps, and similar additions count toward measured fence height under the city's fence rules."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Retaining wall measured from high side",
+      "claim_full": "When a fence sits on a retaining wall, fence height is measured from the higher side of the wall.",
+      "topic": "definitions",
       "variants": [
         "oob",
         "mcp",
@@ -31,57 +270,41 @@
       "specificity": 0.9,
       "actionability": 0.7,
       "correctness": "correct",
-      "importance": 5,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm base zone R5 for 3220 NE 33rd Ave; OOB explicitly inferred this without retrieval, MCP and enhanced retrieved it via PortlandMaps.",
+      "importance": 3,
+      "citation": "PCC 33.110.275",
       "citation_by_variant": {
-        "oob": "PortlandMaps",
-        "mcp": null,
-        "enhanced": "PortlandMaps"
-      }
+        "oob": null,
+        "mcp": "PCC 33.110.275",
+        "enhanced": "PCC 33.110.275"
+      },
+      "verified_truth": "Measuring fence-on-retaining-wall height from the higher grade is the standard convention in Portland's fence rules."
     },
     {
-      "id": "A2",
-      "claim_short": "Has 'h' aircraft landing overlay",
-      "claim_full": "The property carries an 'h' (Aircraft Landing) overlay with no fence implications, while no historic/conservation overlays apply.",
-      "topic": "zoning",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm R5 with 'h' (Aircraft Landing) overlay per MCP retrieval; enhanced reported plain R5 with no overlays.",
-      "citation_by_variant": {
-        "mcp": null
-      }
-    },
-    {
-      "id": "A3",
-      "claim_short": "Neighborhood is Beaumont-Wilshire",
-      "claim_full": "The property is located in the Beaumont-Wilshire neighborhood, not Alameda or Grant Park.",
-      "topic": "address",
+      "id": "A13",
+      "claim_short": "Engineering required >8 ft",
+      "claim_full": "A fence taller than 8 feet must be designed by a licensed Oregon engineer and permitted.",
+      "topic": "structural",
       "variants": [
         "oob",
+        "mcp",
         "enhanced"
       ],
-      "specificity": 1.0,
-      "actionability": 0.3,
+      "specificity": 0.9,
+      "actionability": 0.8,
       "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm property is in Beaumont-Wilshire, not Alameda/Grant Park.",
+      "importance": 3,
+      "citation": "BDS Brochure 3",
       "citation_by_variant": {
-        "oob": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
+        "oob": null,
+        "mcp": "Brochure 3",
+        "enhanced": "PCC 24.10.072.B / Brochure 3"
+      },
+      "verified_truth": "Fences over 8 ft tall trigger an engineered design requirement under the building code, consistent with Brochure 3 guidance."
     },
     {
-      "id": "A4",
-      "claim_short": "Fence section is 33.110.275",
-      "claim_full": "The governing Portland code section for residential fences is Title 33.110.275 (renumbered from the pre-2021 33.110.255).",
+      "id": "A14",
+      "claim_short": "Cite PCC 33.110.275",
+      "claim_full": "Portland's fence rules in single-dwelling zones are codified at PCC 33.110.275.",
       "topic": "citations",
       "variants": [
         "oob",
@@ -89,417 +312,311 @@
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 33.110.275",
-      "verified_truth": "Accuracy flags confirm 33.110.275 is the correct fence regulation section; enhanced correctly notes pre-2021 number was 33.110.255.",
-      "citation_by_variant": {
-        "oob": "PCC 33.110.275",
-        "mcp": "PCC 33.110.275",
-        "enhanced": "PCC 33.110.275"
-      }
-    },
-    {
-      "id": "A5",
-      "claim_short": "Front yard fence max 3.5 ft",
-      "claim_full": "The maximum fence height in the front building setback is 3 ft 6 in (3.5 ft).",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "PCC 33.110.275",
-      "verified_truth": "Accuracy flags confirm 3.5 ft (3 ft 6 in) maximum for fences within the front building setback in R5.",
-      "citation_by_variant": {
-        "oob": "PCC 33.110.275",
-        "mcp": "PCC 33.110.275",
-        "enhanced": "PCC 33.110.275"
-      }
-    },
-    {
-      "id": "A6",
-      "claim_short": "Side/rear fence max 8 ft",
-      "claim_full": "The maximum fence height in the side and rear building setbacks is 8 feet.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "PCC 33.110.275",
-      "verified_truth": "Accuracy flags confirm side/rear yard fence max of 8 feet within building setbacks.",
-      "citation_by_variant": {
-        "oob": "PCC 33.110.275",
-        "mcp": "PCC 33.110.275",
-        "enhanced": "PCC 33.110.275"
-      }
-    },
-    {
-      "id": "A7",
-      "claim_short": "R5 front building setback 10 ft",
-      "claim_full": "The front building setback in R5 is 10 feet (per Table 110-4).",
-      "topic": "setbacks",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 33.110.220 Table 110-4",
-      "verified_truth": "Accuracy flags confirm 10 ft front building setback in R5.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 33.110.220 Table 110-4"
-      }
-    },
-    {
-      "id": "A8",
-      "claim_short": "R5 side/rear setback 5 ft",
-      "claim_full": "The side and rear building setbacks in R5 are 5 feet.",
-      "topic": "setbacks",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 33.110.220 Table 110-4",
-      "verified_truth": "Accuracy flags confirm 5 ft side and rear building setbacks in R5.",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PCC 33.110.220 Table 110-4"
-      }
-    },
-    {
-      "id": "A9",
-      "claim_short": "Fences over 8 ft need engineer",
-      "claim_full": "Fences taller than 8 feet must be designed by an Oregon-licensed structural engineer and require a permit.",
-      "topic": "permits",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "Brochure 3 / PCC 24.10.072.B",
-      "verified_truth": "Accuracy flags confirm fences over 8 ft require Oregon-licensed engineer and permit.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "Brochure 3 / PCC 24.10.072.B"
-      }
-    },
-    {
-      "id": "A10",
-      "claim_short": "Wood fence permit threshold 7 ft",
-      "claim_full": "Wood fences 7 feet or shorter are exempt from a building permit; over 7 ft requires a permit.",
-      "topic": "permits",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "PCC 24.10.072.B",
-      "verified_truth": "Accuracy flags confirm 7 ft wood fence permit exemption threshold.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 24.10.072.B"
-      }
-    },
-    {
-      "id": "A11",
-      "claim_short": "Masonry permit threshold 4 ft",
-      "claim_full": "Masonry or concrete fences over 4 feet require a building permit.",
-      "topic": "permits",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": "PCC 24.10.072.B",
-      "verified_truth": "Accuracy flags confirm masonry/concrete fence permit threshold over 4 feet.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 24.10.072.B"
-      }
-    },
-    {
-      "id": "A12",
-      "claim_short": "Chain link permit threshold 8 ft",
-      "claim_full": "Chain link or woven wire fences over 8 feet require a building permit.",
-      "topic": "permits",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
+      "actionability": 0.4,
+      "correctness": "PARTIAL-WRONG",
       "importance": 3,
-      "citation": "PCC 24.10.072.B",
-      "verified_truth": "Accuracy flags confirm chain link/woven wire permit threshold over 8 feet.",
+      "citation": "PCC 33.110.275",
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 24.10.072.B"
-      }
-    },
-    {
-      "id": "A13",
-      "claim_short": "No fence-to-line setback required",
-      "claim_full": "There is no required setback for the fence itself from the property line; the entire fence including footings must stay within the property.",
-      "topic": "setbacks",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "Brochure 3",
-      "verified_truth": "Per Brochure 3 (cited in responses), fences may sit on the property line with footings inside; not contradicted by accuracy flags.",
-      "citation_by_variant": {
-        "oob": "Brochure 3",
-        "mcp": "Brochure 3",
-        "enhanced": "Brochure 3"
-      }
-    },
-    {
-      "id": "A14",
-      "claim_short": "Pool barriers always need permit",
-      "claim_full": "Any barrier around a swimming pool, hot tub, or spa requires a permit regardless of height.",
-      "topic": "permits",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 24.10.072.B.1, ORSC Appendix G",
-      "verified_truth": "Accuracy flags confirm pool/spa/hot tub barriers always require permit per 24.10.072.B.1 and ORSC Appendix G.",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PCC 24.10.072.B.1, ORSC Appendix G"
-      }
+        "oob": "33.110.275",
+        "mcp": "PCC 33.110.275",
+        "enhanced": "PCC 33.110.275"
+      },
+      "verified_truth": "The MCP evaluator flagged 33.110.275 as a real, correct fence section, but the Enhanced evaluator flagged that the residential fence section is widely cited as 33.110.255 \u2014 the section number used here should be confirmed against the current Title 33."
     },
     {
       "id": "A15",
-      "claim_short": "Height includes lattice and toppers",
-      "claim_full": "Fence height is measured from grade to the top of any element including lattice, post caps, trellises, and finials.",
-      "topic": "definitions",
+      "claim_short": "33.110.255 renumbered to .275 in 2020",
+      "claim_full": "PCC 33.110.255 was renumbered to PCC 33.110.275 in 2020, and 33.110.255 is now the flag-lot section.",
+      "topic": "citations",
       "variants": [
-        "oob",
-        "mcp",
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "correct-action",
+      "specificity": 1.0,
+      "actionability": 0.2,
+      "correctness": "WRONG",
       "importance": 4,
-      "citation": "PCC 33.110.275 / Brochure 3",
-      "verified_truth": "Per Brochure 3 (cited in responses), height includes all top elements such as lattice, post caps, and trellises.",
+      "citation": "PCC 33.110.275",
       "citation_by_variant": {
-        "oob": "PCC 33.110.275 / Brochure 3",
-        "mcp": "PCC 33.110.275 / Brochure 3",
-        "enhanced": "PCC 33.110.275 / Brochure 3"
-      }
+        "enhanced": "PCC 33.110.275"
+      },
+      "verified_truth": "The accuracy flags identify this confidently asserted 'renumbering' as likely fabricated \u2014 the residential fence section is widely cited as 33.110.255, and no such 2020 renumbering is verified."
     },
     {
       "id": "A16",
-      "claim_short": "Retaining wall stacks fence height",
-      "claim_full": "Fence height on top of a retaining wall is measured from the higher side of the wall, so the fence and wall stack for height purposes.",
-      "topic": "definitions",
+      "claim_short": "BDS renamed to PP&D in 2023",
+      "claim_full": "The Bureau of Development Services was renamed to Portland Permitting & Development in 2023.",
+      "topic": "process",
       "variants": [
-        "oob",
-        "mcp",
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "Brochure 3",
-      "verified_truth": "Accuracy flag confirms height measured from higher side of retaining wall, including in the OOB response.",
+      "specificity": 1.0,
+      "actionability": 0.3,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 2,
+      "citation": null,
       "citation_by_variant": {
-        "oob": "Brochure 3",
-        "mcp": "Brochure 3",
-        "enhanced": "Brochure 3"
-      }
+        "enhanced": null
+      },
+      "verified_truth": "The consolidation/rename to PP&D took effect later than 2023 (the 2024\u20132025 reorganization), per the accuracy flags."
     },
     {
       "id": "A17",
-      "claim_short": "Posts \u22646 ft, footings 18\"\u00d73 ft",
-      "claim_full": "For wood/metal/wire fences over 7 ft up to 8 ft, posts must be no more than 6 ft apart with footings at least 18 inches in diameter and 3 ft deep, or engineered design.",
-      "topic": "structural",
+      "claim_short": "24.10.072.B fence exemptions",
+      "claim_full": "PCC 24.10.072.B is the Title 24 citation for residential fence permit exemptions.",
+      "topic": "citations",
       "variants": [
-        "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
+      "actionability": 0.3,
+      "correctness": "PARTIAL-WRONG",
       "importance": 3,
-      "citation": "Brochure 3",
-      "verified_truth": "Accuracy flags confirm posts \u22646 ft apart with 18\" diameter, 3 ft deep footings spec for 7-8 ft fences.",
+      "citation": "PCC 24.10.072.B",
       "citation_by_variant": {
-        "mcp": "Brochure 3",
-        "enhanced": "Brochure 3"
-      }
+        "enhanced": "PCC 24.10.072.B"
+      },
+      "verified_truth": "The specific subsection is unverified; permit exemption for residential fences is largely driven by Oregon Residential Specialty Code R105.2 rather than this exact PCC subsection."
     },
     {
       "id": "A18",
-      "claim_short": "Retaining walls over 4 ft need permit",
-      "claim_full": "Retaining walls over 4 feet (bottom of footing to top), supporting a 3:1 ascending slope, or carrying a surcharge load require a building permit.",
-      "topic": "permits",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 24.10.072.B.2",
-      "verified_truth": "Accuracy flags confirm retaining wall permit threshold over 4 ft from footing to top, or 3:1 ascending slope.",
-      "citation_by_variant": {
-        "enhanced": "PCC 24.10.072.B.2"
-      }
-    },
-    {
-      "id": "A19",
-      "claim_short": "NE 33rd ROW extends behind sidewalk",
-      "claim_full": "NE 33rd Ave is a major arterial whose public right-of-way typically extends 5\u201310 feet behind the back of the sidewalk, and a fence cannot sit in that ROW.",
-      "topic": "address",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "Title 17",
-      "verified_truth": "Accuracy flag (OOB) confirms PBOT right-of-way on arterials extends 5\u201310 ft behind sidewalk; consistent across all three responses.",
-      "citation_by_variant": {
-        "oob": "Title 17",
-        "mcp": null,
-        "enhanced": "Title 17"
-      }
-    },
-    {
-      "id": "A20",
-      "claim_short": "Vision clearance triangles at corners",
-      "claim_full": "Vision clearance triangles at intersections, driveways, and alleys (Title 17 / 33.266 / TRN-10.40) limit fence height to preserve sight lines and may be stricter than base zoning rules.",
+      "claim_short": "Vision clearance at intersections",
+      "claim_full": "Vision-clearance triangles apply at intersections (and driveways) and limit fence heights below the standard caps.",
       "topic": "safety",
       "variants": [
         "oob",
         "enhanced"
       ],
+      "specificity": 0.7,
+      "actionability": 0.7,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": "PCC 33.266.130",
+      "citation_by_variant": {
+        "oob": "Title 17",
+        "enhanced": "PCC 33.266.130"
+      },
+      "verified_truth": "Fence-related vision clearance is governed by Title 33 (the OOB Title 17 attribution is wrong). The Enhanced citation 33.266.130 is also questionable \u2014 Title 33.266 is Parking & Loading; the actual vision-clearance rule typically lives elsewhere in Title 33."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Sidewalk isn't property line",
+      "claim_full": "The edge of the sidewalk is not the front property line; the city right-of-way often extends 5\u201312 feet behind the sidewalk.",
+      "topic": "definitions",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
       "specificity": 0.8,
-      "actionability": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PBOT",
+      "citation_by_variant": {
+        "oob": "PBOT",
+        "enhanced": "PBOT"
+      },
+      "verified_truth": "The public right-of-way commonly extends behind the sidewalk into what looks like a homeowner's front yard \u2014 confirming the actual front property line with PBOT or a survey before building is sound advice."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Cannot build in ROW/planting strip",
+      "claim_full": "A homeowner generally cannot build a fence in the planting strip or public right-of-way without a special PBOT permit.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
       "correctness": "correct",
       "importance": 4,
-      "citation": "Title 17 / PCC 16.20.130 / TRN-10.40",
-      "verified_truth": "Accuracy flags reference PCC 16.20.130 (parking sight lines) and PBOT TRN-10.40 (driveway placement); vision clearance applies as described.",
+      "citation": "PBOT",
       "citation_by_variant": {
-        "oob": "Title 17 / PCC 16.20.130 / TRN-10.40",
-        "enhanced": "Title 17 / PCC 16.20.130 / TRN-10.40"
-      }
+        "oob": "PBOT",
+        "enhanced": "PBOT"
+      },
+      "verified_truth": "Permanent structures including fences in the public right-of-way require PBOT authorization, which is rarely granted for residential fences."
     },
     {
       "id": "A21",
-      "claim_short": "Tree root cuts need permit",
-      "claim_full": "Cutting tree roots over 1/4 inch in diameter of any City or street tree requires a Title 11 tree permit from Urban Forestry; the Root Protection Zone is 1 ft of radius per inch of trunk diameter.",
+      "claim_short": "NE 33rd is major street",
+      "claim_full": "NE 33rd Ave is a major arterial / neighborhood collector that affects right-of-way width and visibility considerations along the property.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": null
+      },
+      "verified_truth": "NE 33rd's exact TSP classification (Major City Traffic Street vs. Neighborhood Collector vs. arterial) is unverified in this evaluation; OOB and Enhanced gave different classifications."
+    },
+    {
+      "id": "A22",
+      "claim_short": "BDS / PP&D phone 503-823-7300",
+      "claim_full": "The bureau handling building permits and zoning questions can be reached at 503-823-7300.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "503-823-7300 is the longstanding BDS / PP&D General Inquiries number; the Enhanced flags note this number is unverified for current PP&D and worth confirming."
+    },
+    {
+      "id": "A23",
+      "claim_short": "PBOT phone 503-823-7002",
+      "claim_full": "PBOT can be contacted at 503-823-7002 for right-of-way questions.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "PBOT's main line is typically 503-823-5185; 503-823-7002 is unverified per the Enhanced accuracy flags."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Free 15-minute planner appointment",
+      "claim_full": "Portland offers a free 15-minute planner consultation that gives definitive answers for a specific address.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portland.gov",
+      "citation_by_variant": {
+        "oob": "portland.gov",
+        "enhanced": "portland.gov/ppd/early-assistance/15-minute-question-appointments"
+      },
+      "verified_truth": "PP&D offers a free 15-minute appointment; the Enhanced URL slug is unverified but the program itself is real."
+    },
+    {
+      "id": "A25",
+      "claim_short": "No historic/conservation overlays",
+      "claim_full": "The property has no historic district, conservation district, design overlay, or plan district affecting fence rules.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps"
+      },
+      "verified_truth": "PortlandMaps confirmed no historic, conservation, design, or plan district overlays on the parcel, so standard R5 fence rules apply cleanly."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Replacing fence in same spot OK",
+      "claim_full": "Replacing an existing fence in the same location at the same height and material does not require a permit.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 1.0,
+      "correctness": "vague-correct",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "enhanced": null
+      },
+      "verified_truth": "Like-for-like fence replacement is generally treated as maintenance under Portland's permit rules; not specifically verified in the accuracy flags but consistent with city practice."
+    },
+    {
+      "id": "A27",
+      "claim_short": "Hedges count as fences",
+      "claim_full": "A solid hedge taller than 3'6\" in the front yard is treated as a fence-code violation.",
+      "topic": "trees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 2,
+      "citation": "PCC 33.110.275",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.275"
+      },
+      "verified_truth": "Per the accuracy flags, this is questionable \u2014 Portland's fence code typically applies to constructed fences, not vegetation, though enforcement edge cases exist."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Call 811 before digging",
+      "claim_full": "Oregon law requires calling 811 before digging post holes so utilities are marked.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "Oregon 811",
+      "citation_by_variant": {
+        "enhanced": "digsafelyoregon.com / Oregon 811"
+      },
+      "verified_truth": "Oregon law requires utility-locate notification (Oregon 811) before excavation; this is a free and standard pre-dig step."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Urban Forestry 503-823-8733",
+      "claim_full": "Urban Forestry's tree hotline is 503-823-8733 for sign-off on digging near street trees.",
       "topic": "trees",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
       "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 11.40, 11.60.030",
-      "verified_truth": "Accuracy flags confirm RPZ is 1 ft radius per inch of trunk diameter per 11.60.030.",
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "Urban Forestry",
       "citation_by_variant": {
-        "enhanced": "PCC 11.40, 11.60.030"
-      }
+        "enhanced": "Urban Forestry"
+      },
+      "verified_truth": "Urban Forestry oversees street trees and protected trees on private property under Title 11; the tree hotline is the right contact for root-zone work."
     },
     {
-      "id": "A22",
-      "claim_short": "Existing fence repair tree-rule exempt",
-      "claim_full": "Repair or replacement of existing fences with no footprint or length change is exempt from on-site tree density and preservation rules under PCC 11.50.060.B.7.",
-      "topic": "trees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PCC 11.50.060.B.7",
-      "verified_truth": "Accuracy flags confirm PCC 11.50.060.B.7 exempts repair/replacement of existing fences with no footprint change.",
-      "citation_by_variant": {
-        "enhanced": "PCC 11.50.060.B.7"
-      }
-    },
-    {
-      "id": "A23",
-      "claim_short": "Wood near ground must be rot-resistant",
-      "claim_full": "Wood within 6 inches of grade or in contact with concrete must be pressure-treated or naturally rot-resistant species like cedar or redwood.",
-      "topic": "structural",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "Brochure 3",
-      "verified_truth": "Accuracy flag (OOB) confirms wood within 6\" of ground must be pressure-treated or rot-resistant.",
-      "citation_by_variant": {
-        "oob": "Brochure 3",
-        "enhanced": "Brochure 3"
-      }
-    },
-    {
-      "id": "A24",
-      "claim_short": "Surveyor cost $500\u2013$1,500",
-      "claim_full": "A licensed Oregon surveyor to mark the property line typically costs $500\u2013$1,500 (enhanced says $700\u2013$1,500).",
+      "id": "A30",
+      "claim_short": "Survey costs $500\u2013$1,500",
+      "claim_full": "A licensed Oregon surveyor to mark the actual property line costs roughly $500\u2013$1,500 (or $700\u2013$1,200).",
       "topic": "costs",
       "variants": [
         "oob",
@@ -510,197 +627,67 @@
       "correctness": "correct-range",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flag (OOB) confirms licensed Oregon surveyor cost $500\u2013$1,500.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A25",
-      "claim_short": "BDS renamed to PP&D in 2024",
-      "claim_full": "The Bureau of Development Services was renamed Portland Permitting & Development (PP&D) as part of the 2024 reorganization.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Accuracy flag confirms BDS was renamed to Portland Permitting & Development (PP&D) in 2024.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A26",
-      "claim_short": "PP&D phone 503-823-7300",
-      "claim_full": "Portland Permitting & Development (formerly BDS) general inquiry phone is 503-823-7300.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "Accuracy flags confirm BDS/PP&D phone 503-823-7300.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A27",
-      "claim_short": "PBOT phone 503-823-7002",
-      "claim_full": "PBOT Engineering's phone for right-of-way location and front property line questions is 503-823-7002.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "Accuracy flags confirm PBOT phone 503-823-7002 for right-of-way location.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A28",
-      "claim_short": "Urban Forestry 503-823-8733",
-      "claim_full": "Urban Forestry's tree hotline is 503-823-TREE (503-823-8733), the contact for street tree and root protection questions.",
-      "topic": "trees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Accuracy flag confirms Urban Forestry phone 503-823-8733.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A29",
-      "claim_short": "DSC at 1900 SW 4th Tues/Thurs",
-      "claim_full": "Portland's in-person Development Services Center is at 1900 SW 4th Ave, open Tuesdays and Thursdays 8 am-4 pm for free 15-minute planner consultations.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Accuracy flags confirm BDS/PP&D in-person consultation at 1900 SW 4th, Tues/Thurs 8 am-4 pm.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A30",
-      "claim_short": "Call 811 before digging",
-      "claim_full": "Call 811 (Oregon Utility Notification Center) at least two business days before digging post holes to locate underground utilities.",
-      "topic": "sequence",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "Standard Oregon law requirement; not contradicted by accuracy flags.",
-      "citation_by_variant": null
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": null
+      },
+      "verified_truth": "Residential property survey costs in Portland fall in this general range; specific pricing varies by lot and surveyor."
     },
     {
       "id": "A31",
-      "claim_short": "ORS Chapter 96 governs partition fences",
-      "claim_full": "Oregon Revised Statutes Chapter 96 (partition fence statute) governs cost-sharing between neighboring landowners; Portland adds no city-specific shared-fence rule.",
-      "topic": "citations",
+      "claim_short": "Permit fee $200\u2013$400",
+      "claim_full": "A residential fence building permit costs about $200\u2013$400.",
+      "topic": "fees",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.5,
-      "correctness": "correct",
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "PARTIAL-WRONG",
       "importance": 2,
-      "citation": "ORS Chapter 96",
-      "verified_truth": "Accuracy flag confirms ORS Chapter 96 governs partition fences in Oregon.",
+      "citation": null,
       "citation_by_variant": {
         "enhanced": null
-      }
+      },
+      "verified_truth": "The 2026 PP&D fee schedule for residential fence permits is unverified in this evaluation."
     },
     {
       "id": "A32",
-      "claim_short": "Could not retrieve exact zoning",
-      "claim_full": "The AI explicitly admitted PortlandMaps proxy access blocked programmatic lookup, so the R5 zoning was inferred from neighborhood context rather than retrieved.",
+      "claim_short": "OOB couldn't load PortlandMaps",
+      "claim_full": "The OOB response admitted it could not retrieve PortlandMaps data and was inferring zoning, overlays, and neighborhood from the address alone.",
       "topic": "address",
       "variants": [
         "oob"
       ],
       "specificity": 0.8,
-      "actionability": 0.5,
+      "actionability": 0.7,
       "correctness": "admitted-gap",
       "importance": 4,
       "citation": null,
-      "verified_truth": "OOB response and rationale both confirm AI could not pull exact zoning and inferred R5; this triggered the address-specific usefulness cap.",
-      "citation_by_variant": null
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "OOB explicitly stated 'the proxy blocks it' and inferred property data, which led to the (incorrect-by-OOB-flag, correct-by-Enhanced-flag) Beaumont-Wilshire neighborhood guess."
     },
     {
       "id": "A33",
-      "claim_short": "Lot is 4,356 sq ft, built 1928",
-      "claim_full": "The lot at 3220 NE 33rd Ave is approximately 4,356 sq ft and the house was built in 1928.",
-      "topic": "address",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag (OOB) confirms lot size 4,356 sq ft and build year 1928.",
-      "citation_by_variant": {
-        "oob": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A34",
-      "claim_short": "Title 33 update packets recent",
-      "claim_full": "Title 33 update packets #211 (Oct 2024), #212 (Jan 2025), #213 (Mar 2025), and #215 (Oct 24 2025) recently touched the single-dwelling chapter.",
+      "claim_short": "Title 33 governs fence zoning",
+      "claim_full": "Title 33 (Planning and Zoning) is the governing rulebook for fence height, location, and setbacks.",
       "topic": "citations",
       "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 1,
-      "citation": null,
-      "verified_truth": "Accuracy flag confirms the listed Title 33 update packet numbers and dates.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A35",
-      "claim_short": "Corner lot 'front' is shortest frontage",
-      "claim_full": "On a corner lot, the front lot line is the shortest street-facing side, which determines where the 3.5 ft front-setback fence height limit applies.",
-      "topic": "definitions",
-      "variants": [
+        "mcp",
         "enhanced"
       ],
       "specificity": 0.8,
-      "actionability": 0.7,
+      "actionability": 0.4,
       "correctness": "correct",
       "importance": 3,
-      "citation": "PCC 33.930 / Brochure 3",
-      "verified_truth": "Per Brochure 3 / PCC 33.930 (cited in enhanced response); not verified or contradicted in accuracy flags.",
+      "citation": "Title 33",
       "citation_by_variant": {
-        "enhanced": "PCC 33.930 / Brochure 3"
-      }
+        "mcp": "Title 33",
+        "enhanced": "Title 33"
+      },
+      "verified_truth": "Title 33 of the Portland City Code governs zoning rules including residential fence height and placement."
     }
   ]
 }

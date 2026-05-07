@@ -1,0 +1,681 @@
+{
+  "scenario": "a-board-sign",
+  "scenario_label": "A-board sign",
+  "address": "1022 SW Morrison St, Portland, OR 97205",
+  "neighborhood": "Downtown",
+  "evaluator_model": "claude",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this for you. Portland has specific rules for sandwich boards (A-frame signs), and the answer depends on both your zoning and the sidewalk situation. Let me check the actual rules and your specific location.Now let me get the full official rules and check the specific zoning at your address.Let me verify your specific zoning since the rules require a Commercial zone, and check sidewalk width.# Short answer: yes, but you have to register it first.\n\nYour address sits in downtown Portland's CX (Central Commercial) zone, which is one of the zones where permanent portable signs are allowed. (You'll want to confirm CX on [PortlandMaps](https://www.portlandmaps.com); I'm inferring from the address since I can't pull the parcel directly, but downtown inside the 405 loop is CX with very few exceptions.)\n\n## What you actually have to do\n\nRegister the sign with Portland Permitting & Development. Registration runs $114 for 1 year, $203 for 2 years, or $364 for 4 years (fees valid July 1, 2025 to July 1, 2026). The form is a PDF you mail in with a check made out to City of Portland; address is 1900 SW 4th Ave, Ste 5000, Portland OR 97201, Attn: A-Board Sign Permits. No design review needed.\n\nForm: [Portable (A-Board) Sign Registration Form](https://www.portland.gov/ppd/documents/portable-board-sign-registration-form/download)\n\n## The placement rules people get wrong\n\nThe single most important thing (and the one most businesses screw up): in the sidewalk area, the sign must be within 6 inches of the curb, not against the building. Counterintuitive but firm; it keeps the pedestrian path clear.\n\nOther constraints that matter for SW Morrison specifically:\n\n- Sidewalk must be at least 8 feet wide; you must leave a clear 6-foot pedestrian path. Downtown sidewalks are usually 12 to 15 feet, so you're almost certainly fine, but measure to be safe.\n- Max 8 sq ft per face, max 4 ft tall, max 30 inches wide when in the right-of-way (12 sq ft is only allowed if you're entirely on private property).\n- One sign per public entrance; if you share an entrance with other tenants, only one sign total for the whole entrance.\n- Not allowed at street corners, near transit stops, at ADA curb ramps, or at building exits/fire escapes. Worth flagging: your block has Portland Streetcar stops at 10th & Alder and 11th & Taylor, so the corners are extra constrained.\n- Cannot be attached to anything (poles, meters, trees, the sidewalk itself); no lights, no electrical, no digital displays.\n\n## Things worth knowing that the city page doesn't lead with\n\n**Wind.** SW Morrison gets gusty, especially in winter. The standard hinged A-frame will eat it; either go with a wind-resistant suspended-panel design (frame stays put, the inner panel swings) or weight the base. Plan to bring it in nightly anyway since it must come in after business hours.\n\n**Enforcement is real.** Inspections are random or complaint-based, and three citations on the same sign means it can be impounded, your registration revoked, and future registration prohibited. Getting registered first is much cheaper than fighting an impound.\n\n**Free help before you commit.** PPD offers a [free 15-minute appointment](https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments) with a Residential & Signs permitting tech; they'll confirm your zone, sidewalk situation, and entrance count before you spend the $114. Phone: 503-823-7300.\n\n**Downtown Clean & Safe** is the enhanced services district covering your block; they don't have separate sign authority but their ambassadors do report violations, so a registered sign is good citizenship as much as compliance.\n\n**Design that actually pays back the $114:** keep the message to one offer or one idea, use one heavyweight sans-serif at the largest size you can fit, high contrast (black on white or yellow), and put the call-to-action below eye level since people scan downward when walking. The classic mistake is treating the A-board like a full menu; treat it like a billboard with five seconds of attention.\n\n## The one thing to do this week\n\nPull up [PortlandMaps](https://www.portlandmaps.com), search 1022 SW Morrison, and confirm the base zone shows CX with no overlay weirdness (historic district could add wrinkles, though the sign code itself doesn't restrict A-boards on that basis). Then book the free 15-minute appointment to confirm the entrance count for your specific tenancy, and mail in the form. You can be legally up by next week."
+    },
+    "mcp": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this carefully. A-frame signs in Portland have specific rules, and downtown locations like yours have extra considerations on top of the citywide code. Let me check both the rules and what's specific to your address.Let me check the specific details for 1022 SW Morrison St \u2014 zoning and any plan/historic overlays matter for sign rules.Let me check overlays and the specific zone allowances for portable signs:Let me get the canonical Portland page to confirm fee details and the placement rules in the right-of-way:Short answer: **yes, you can.** Your property at 1022 SW Morrison is zoned CX (Central Commercial), which is one of the zones where permanent A-boards are allowed. But there's a crucial location-specific catch I want you to see before you order one.\n\n## The catch worth knowing\n\nThe MAX Blue and Red Lines stop at **Galleria/SW 10th Ave**, which sits right at the corner of your block (eastbound side of Morrison at 10th). City rules prohibit A-boards \"near transit stops\" and \"at street corners,\" so the east end of your frontage is effectively off-limits. You'll want to plan your placement toward the western end of the property frontage (toward 11th).\n\n## The rules in plain terms\n\nFor an A-board on the public sidewalk in front of your building, you must:\n\n- **Register it.** $114 for 1 year, $203 for 2 years, or **$364 for 4 years** (the 4-year is the best deal \u2014 works out to ~$91/yr vs $114/yr). Mail the form + check to Portland Permitting & Development, 1900 SW 4th Ave Ste 5000.\n- **Stay within size limits.** On the sidewalk: max **8 sq ft per face, 48\" tall, 30\" wide**. (On private property the limit is 12 sq ft, but you're almost certainly placing it on the sidewalk.)\n- **Place it within 6\" of the curb**, leaving a **6-foot clear pedestrian path**. SW Morrison's sidewalks downtown are wide enough for this \u2014 the rule requires the sidewalk be at least 8 ft wide, which yours is.\n- **One sign per public entrance.** If your business shares an entrance with another tenant, only one sign total is allowed for the entrance.\n- **Bring it in at night / off-hours.** It can't be attached to the ground, trees, poles, parking meters, or street furniture, so it has to be moveable in/out.\n- **No lights, no electrical, no digital/changing displays.**\n\nAvoid placing it: at the corner, near the MAX stop, at ADA curb ramps, at building exits or fire escapes, on bike lanes, or in the parking lane.\n\n## A few things you'd otherwise find out the hard way\n\n1. **The property owner is MUCCA LLC.** If you're a tenant rather than the owner, the registration form requires property owner coordination, and the city explicitly notes \"tenants and property owners must coordinate registration and display.\" Get the landlord's sign-off in writing before you submit.\n2. **You don't need Design Review** for an A-board, even though downtown has design overlays. That's a meaningful time/cost savings \u2014 Design Review for other sign types can take weeks.\n3. **Three citations and the sign gets impounded** (and your registration can be revoked, plus you can be barred from future registrations). The most common citation triggers are placement violations, so it's worth measuring the 6-foot pedestrian clearance with a tape the first time you set it out.\n4. **Free 15-minute consultation.** PP&D offers a [15-minute appointment with a Residential & Signs Permitting Technician](https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs) \u2014 worth booking before you submit if anything about your specific frontage is ambiguous (e.g., where exactly the transit-stop exclusion zone ends). Phone: 503-823-7300.\n5. **Wind matters more than you'd think on Morrison.** The block gets channeled wind and the rules require the sign not be anchored to the ground. If you go cheap on the A-board itself and it blows over, that's a liability issue, not just an inconvenience. Sign companies sell weighted/wind-resistant designs with a swinging center panel \u2014 worth the upgrade for downtown placement.\n\nThe registration form is here: [Portable (A-Board) Sign Registration Form](https://www.portland.gov/ppd/documents/portable-board-sign-registration-form/download), and the canonical rules page is [portland.gov/ppd/sign-permits/portable-signs-boards](https://www.portland.gov/ppd/sign-permits/portable-signs-boards).\n\nWant me to mock up a placement diagram showing the allowed zone along your frontage relative to the MAX stop, so you can hand it to whoever sets the sign out each day?"
+    },
+    "enhanced": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this carefully \u2014 your address is in downtown Portland, which has extra layers of rules (transit mall, possible historic district), so I want to verify the specifics before recommending anything. Let me check the property and the current city rules.Excellent \u2014 I now have a clear property picture. Let me look up the actual current rules and fees for A-board signs in Portland.Let me verify the code section directly and also check whether the transit mall (SW Morrison MAX corridor) has special rules.Let me also check Title 32's plan district / Central City overlays and historic provisions to make sure I'm not missing anything specific to this address.I have everything I need. Let me also verify there are no Clean & Safe District rules or other downtown-specific extras that might surprise you, since this address sits inside that business improvement district.I have everything I need. Here's a complete answer you can copy and paste; every rule, fee, and contact has its specific code section and full URL right next to the claim. After the text, I'll add a visual placement diagram for your block as a bonus.\n\n---\n\n## 1. Plain-English answer first\n\n**Yes \u2014 you can legally put an A-board (a portable two-sided sandwich-board sign) on the sidewalk in front of 1022 SW Morrison St.** Your property is in the **Central Commercial (CX) zone** inside the **Central City plan district / West End sub-district**, and A-boards are explicitly allowed in CX zones. The building is a designated historic landmark (the **Arminius Hotel**, built 1904) and sits inside a Design Overlay zone, but A-boards are exempt from both Design Review and Historic Resource Review, so neither of those will hold you up.\n\nYou don't need a permit from the streets bureau. You only need to **register the sign** with **Portland Permitting & Development (PP&D, the city department that handles building, sign, and trade permits, formerly known as BDS \u2014 Bureau of Development Services)**. It is a one-page mail-in form with a check. **First-year cost is $114** (roughly the price of a nice dinner out for two), with longer terms cheaper per year. There is no insurance requirement and no zoning hearing.\n\nThe catch: there are strict placement rules (size, sidewalk clearance, no street corners, no transit stops, no attaching to anything) and your block has a **MAX light-rail stop at SW 10th & Morrison** that creates a real \"no-sign zone\" at the east end of your building's frontage. Read the gotchas section before you put anything out.\n\n---\n\n## 2. What to do next, in order\n\nThese are listed in the order I'd actually do them. Marked **(free)** where it costs nothing.\n\n**Step 1. Verify the zoning and overlays for your address. (free, 5 minutes)**\nGo to **https://www.portlandmaps.com/** and search \"1022 SW Morrison St\". Confirm what I found: base zone CX (Central Commercial), Central City plan district / West End, Design (\"d\") overlay, individually designated Historic Landmark (the Arminius Hotel), no historic district, no conservation district. Property ID is P652977 if you need it. Direct property page: https://www.portlandmaps.com/detail/property/1022-SW-MORRISON-ST/P652977_did/\n\n**Step 2. Read the official A-board page, top to bottom. (free, 10 minutes)**\nThe single most authoritative page is the city's portable signs page: https://www.portland.gov/ppd/sign-permits/portable-signs-boards. Everything below comes from it or from the underlying code section it points to (Portland City Code 32.32.030, https://www.portland.gov/code/32/32/030).\n\n**Step 3. Measure your sidewalk. (free, 5 minutes with a tape measure)**\nStand at your storefront and measure the sidewalk from the building wall to the curb edge. **The sidewalk must be at least 8 feet wide for an A-board to be allowed in the right-of-way at all** (Portland City Code 32.32.030 C.3.i.(3) for temporary, and the official guidance \"Not allowed on sidewalks less than 8 feet wide\" at https://www.portland.gov/ppd/sign-permits/portable-signs-boards). Most of SW Morrison's downtown sidewalks are around 12 to 15 feet, so you should be fine, but check yours specifically.\n\n**Step 4. If you're a tenant, get the property owner's written OK. (free, 1 day)**\nCity rule says \"Tenants and property owners must coordinate registration and display\" (https://www.portland.gov/ppd/sign-permits/portable-signs-boards). The county lists the owner as MUCCA LLC. Get their permission in writing (an email is fine) before you spend money on the form or the sign itself, because if there's any conflict the registration can be revoked.\n\n**Step 5. Buy or build a compliant sign. ($50 to $250 depending on style, 1 to 7 days)**\nRequired dimensions for placement in the public sidewalk: **maximum 8 square feet per face, maximum 4 feet (48 inches) tall, maximum 2.5 feet (30 inches) wide** (Portland City Code 32.32.030 C.3.b, https://www.portland.gov/code/32/32/030). No lights, no electrical components, no digital or changing displays (Portland City Code 32.32.030 G.4, https://www.portland.gov/code/32/32/030).\n\n**Step 6. (Optional but recommended) Book a free 15-minute virtual appointment with a Sign Permitting Technician. (free, 15 minutes, slot usually available within a week)**\nThis is the \"show your work to a human before you mail it\" step. Schedule at https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs. They'll confirm placement, exact location, and answer any oddities about your block (the MAX stop, the historic landmark, etc.). Free and worth doing.\n\n**Step 7. Fill out and mail the registration form with a check. ($114 for 1 year, about a week to process by mail)**\nForm (PDF): https://www.portland.gov/ppd/documents/portable-board-sign-registration-form/download.\n\nFees, valid July 1, 2025 through July 1, 2026 (current published fee schedule at https://www.portland.gov/ppd/current-fee-schedules):\n- 1 year: **$114**\n- 2 years: **$203** (about $101 per year)\n- 4 years: **$364** (about $91 per year)\n\nSource for fees: https://www.portland.gov/ppd/sign-permits/portable-signs-boards.\n\nMail to:\n> Portland Permitting & Development\n> Attn: A-Board Sign Permits\n> 1900 SW 4th Ave, Ste 5000\n> Portland, OR 97201\n\nMake checks payable to **City of Portland** (https://www.portland.gov/ppd/sign-permits/portable-signs-boards).\n\n**Step 8. Place the sign correctly the first day you use it.**\nWithin **6 inches of the curb**, leaving at least **6 feet of clear pedestrian path**, only **adjacent to your own property**, **not at street corners**, **not at the MAX stop area**, and **not attached to anything** (poles, meters, trees, street furniture). Citations for each rule are in the \"Common gotchas\" section below.\n\n**Step 9. Bring it in if rules require, and keep your registration paperwork on-site.**\nInspections are random or complaint-based (https://www.portland.gov/ppd/sign-permits/portable-signs-boards). Citations can stack: three citations on the same sign and the city can impound it and revoke your registration (Portland City Code 32.32.030 and the city's enforcement language at https://www.portland.gov/ppd/sign-permits/portable-signs-boards).\n\n---\n\n## 3. What to ask the city \u2014 script\n\nCall **503-823-7300** Monday through Friday, 8 a.m. to 5 p.m. (Portland Permitting & Development general line, https://www.portland.gov/ppd/sign-permits/portable-signs-boards), or schedule a 15-minute appointment with a Residential & Signs Permitting Technician at https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs.\n\nRead or paste this:\n\n> \"Hi, my name is [your name] and I run a small business at 1022 SW Morrison Street, Portland, 97205. The Multnomah County property ID is P652977. I'd like to register a portable A-board sign for the sidewalk in front of the business. I have a few questions before I mail in the form.\n>\n> First, can you confirm my zoning is CX with the 'd' Design overlay, and that A-boards are allowed in the public right-of-way at this address?\n>\n> Second, the building is a designated Historic Landmark (the Arminius Hotel). I read that A-boards are exempt from Historic Resource Review under Code 32.34.020 C.1.a. Can you confirm that's correct?\n>\n> Third, my address is between SW 10th and SW 11th. There is a MAX light-rail platform right at SW 10th & Morrison. How far from that platform do I need to keep the sign? Where exactly does the 'no signs near transit stops' zone end?\n>\n> Fourth, I'd like to confirm the current fee, $114 for one year, is correct as of today.\n>\n> Fifth, is there anything specific to the Central City plan district, the West End sub-district, the Design overlay, or the Clean & Safe enhanced service district that I should know about before I mail the form?\n>\n> Sixth, once I mail the form and check, how long until I'm registered and can put the sign out?\"\n\nThose six questions cover almost every place a confused city worker could trip you up.\n\n---\n\n## 4. Common gotchas \u2014 the things that actually get small businesses cited\n\n**Gotcha 1: Placing the sign too close to the MAX stop at SW 10th & Morrison.** A-board signs cannot block \"pedestrian and wheelchair access from the sidewalk to transit stop areas\" (Portland City Code 32.32.030 C.3.g.(1), https://www.portland.gov/code/32/32/030). The TriMet Galleria/SW 10th Ave station is on Morrison at the SW 10th corner, immediately east of your building. Place the sign on the western half of your frontage (toward SW 11th), not the eastern half.\n\n**Gotcha 2: Putting it at the corner.** Signs are flat-out prohibited \"at street corners\" \u2014 specifically the area between the curb and the lines extending the property line to the curb face (Portland City Code 32.32.030 C.3.c, https://www.portland.gov/code/32/32/030). Your storefront is mid-block so this is mostly fine, but if you have any tenants near the SW 10th or SW 11th corners, this matters.\n\n**Gotcha 3: Blocking the ADA accessible path.** You must leave a **continuous through pedestrian zone of at least 6 feet** so wheelchairs and people with mobility devices can pass (Portland City Code 32.32.030 C.3.f, https://www.portland.gov/code/32/32/030). And because you're inside the **Downtown High Pedestrian Traffic Area** (Portland City Code 14A.50.030 F.1, https://www.portland.gov/code/14/a50/030), the practical \"pedestrian use zone\" downtown is **8 feet on sidewalks more than 10 feet wide** between 7 a.m. and 9 p.m. (Portland City Code 14A.50.030 A.3, https://www.portland.gov/code/14/a50/030). Plan for 8 feet of clear space, not 6.\n\n**Gotcha 4: Not within 6 inches of the curb.** The sign must be **within 6 inches of the curb** (Portland City Code 32.32.030 C.3.e, https://www.portland.gov/code/32/32/030). Leaning it against the building wall is a violation, even though that's the instinctive thing to do.\n\n**Gotcha 5: Attaching the sign to anything.** No chains to street trees, no zip-ties to parking meters, no bungee cords to light poles, no bolts to the sidewalk. The sign must \"remain portable\" (Portland City Code 32.32.030 C.3.h, https://www.portland.gov/code/32/32/030). If the wind keeps blowing it over, the answer is a heavier base, not a tether.\n\n**Gotcha 6: Lights or a digital screen.** Even battery-powered LED edge lighting makes the sign noncompliant. \"Electrical signs and changing image sign features are prohibited\" for portable signs (Portland City Code 32.32.030 G.4, https://www.portland.gov/code/32/32/030).\n\n**Gotcha 7: Going bigger than 8 square feet in the right-of-way.** The \"12 square feet\" allowance you may see online is only for portable signs **kept entirely on private property** (Portland City Code 32.32.030 G.3, https://www.portland.gov/code/32/32/030). On the sidewalk it's **8 square feet maximum per face, 2.5 feet wide, 4 feet tall** (Portland City Code 32.32.030 C.3.b, https://www.portland.gov/code/32/32/030). Adjustments and modifications to these limits are explicitly prohibited (Portland City Code 32.32.030 G.1, https://www.portland.gov/code/32/32/030); no variance, no appeal, no \"but my designer made it 9 square feet.\"\n\n**Gotcha 8: Putting one out without registering.** Inspections are random or complaint-based, but downtown \u2014 especially in the Clean & Safe district where ambassadors walk the same blocks daily \u2014 complaints are realistic. Citations can lead to impoundment and revocation if you collect three on the same sign (https://www.portland.gov/ppd/sign-permits/portable-signs-boards).\n\n**Gotcha 9: Forgetting that A-boards in the right-of-way must be next to your own property.** \"Signs may only be placed adjacent to the property where they are registered. They may not be placed across the street or on neighboring property\" (https://www.portland.gov/ppd/sign-permits/portable-signs-boards). If the sidewalk in front of your suite is awkward, you can't move the sign to the better-flowing sidewalk across the street.\n\n**Gotcha 10: One sign per public entrance.** If your space shares an entrance with another tenant, you and the neighbor get **one sign total**, not one each (Portland City Code 32.32.030 G.2.a, https://www.portland.gov/code/32/32/030). Coordinate before you both mail forms.\n\n---\n\n## 5. Friendly accuracy caveats\n\nThese are not legal disclaimers; these are \"ask before you spend money\" warnings.\n\nThe MAX platform location and the exact \"no-sign zone\" radius around it are not spelled out as a number in the code. Confirm the boundary with PP&D using the script above before you set the sign down for the first time. **I could not find a specific code section setting the radius around a transit stop; the rule (Portland City Code 32.32.030 C.3.g.(1), https://www.portland.gov/code/32/32/030) says the sign must not \"obstruct\" access, which is judgment-based.** PP&D or PBOT (Portland Bureau of Transportation, the city department in charge of streets, sidewalks, and the right-of-way) can tell you in concrete feet on the phone.\n\nSidewalk width on SW Morrison between 10th and 11th is most likely well over the 8-foot minimum, but I did not measure it. Measure yours before you commit; the rule (https://www.portland.gov/ppd/sign-permits/portable-signs-boards) is hard.\n\nThe Clean & Safe District is a business improvement district that pays for extra cleaning and ambassadors in your 273-block area (https://downtownportland.org/). They do not write sign rules; the city does. But they are the eyes most likely to flag a noncompliant sign to PP&D, so a clean placement matters more here than in a quieter part of town.\n\nThe fees I quoted ($114 / $203 / $364) are the current published rates, valid July 1, 2025 to July 1, 2026 (https://www.portland.gov/ppd/sign-permits/portable-signs-boards). Portland updates its fee schedule every July 1; if you're reading this after that date, double-check the current schedule at https://www.portland.gov/ppd/current-fee-schedules.\n\nI did not find any insurance or liability bond requirement for portable A-board signs anywhere in the sign code or on the PP&D page. Some cities require an encroachment-permit insurance rider for anything in the right-of-way; **Portland does not for A-boards specifically**, because the city wraps A-board placement into Title 32 (the sign code) rather than Title 17 (public improvements / right-of-way). That said, if you call PP&D, ask them to confirm \u2014 better to be told no than guess yes.\n\n---\n\n## 6. Glossary\n\n**A-board / sandwich board / portable sign / sidewalk sign:** A movable two-sided fold-out sign, hinged at the top, that stands on the sidewalk like an \"A\" when open. Portland's official term is \"portable sign.\"\n\n**ADA:** Americans with Disabilities Act, the federal law that requires sidewalks to have a clear, navigable path for people using wheelchairs, walkers, canes, or guide animals.\n\n**BDS (Bureau of Development Services):** The old name for the city department that handled building, sign, and development permits. Now called **PP&D**.\n\n**Central City:** The city's plan district covering downtown Portland and the central east side. Your address is in this plan district, in the \"West End\" sub-district.\n\n**Clean & Safe District:** A 273-block downtown business improvement district that funds extra street cleaning, ambassadors, and security in the area. It does not write sign rules but it does report violations.\n\n**CX (Central Commercial):** Your base zoning. The most permissive commercial zone for signs.\n\n**Design Overlay (the \"d\" zone):** A zoning layer that normally requires a Design Review for new signs and buildings. Portable signs are explicitly **exempt** (Portland City Code 32.34.020 B.1.a, https://www.portland.gov/code/32/34).\n\n**Encroachment:** The legal term for putting something private into public space (the sidewalk, the parking strip). A-boards on the sidewalk are technically encroachments but are pre-authorized by Title 32 if they meet the rules.\n\n**Historic Landmark:** A specific designated property that the city has identified for historic preservation. Your building (the Arminius Hotel) is one. Most sign and exterior changes need Historic Resource Review, but **portable signs are exempt** (Portland City Code 32.34.020 C.1.a, https://www.portland.gov/code/32/34).\n\n**MAX:** Metropolitan Area Express, TriMet's light-rail system. The Blue and Red lines run westbound on SW Morrison; the Galleria/SW 10th Ave platform sits at SW 10th & Morrison, immediately east of your building.\n\n**PBOT (Portland Bureau of Transportation):** The city department in charge of streets, sidewalks, and the right-of-way. For most things in the public sidewalk, you'd talk to PBOT \u2014 but for A-boards specifically, you don't, because A-boards are governed by the sign code under PP&D.\n\n**PCC:** Portland City Code. So \"PCC 32.32.030\" means Title 32, Chapter 32, Section 030 of the Portland City Code.\n\n**PP&D (Portland Permitting & Development):** The bureau that handles building, sign, trade, and most permit work; the renamed Bureau of Development Services. Your A-board registration goes here. 503-823-7300, 1900 SW 4th Ave Ste 5000, Portland OR 97201.\n\n**Right-of-way (ROW):** The public-controlled strip that includes the street, the parking strip, the curb, and the sidewalk. The city owns it; abutting property owners have to maintain the sidewalk portion (Portland City Code 17.28, https://www.portland.gov/code/17/28).\n\n**Title 17:** The chapter of city code covering public improvements (streets, sidewalks, ROW). Generally relevant for sidewalk repairs, caf\u00e9 seating, sidewalk encroachment permits \u2014 but **not** for A-boards, which are pulled out and handled under Title 32.\n\n**Title 32 (the Sign Code):** The chapter that governs every sign in Portland, including A-boards. Your specific section is 32.32.030, subsections C and G.\n\n**Transit mall:** Strictly speaking, this is the SW 5th Avenue / SW 6th Avenue bus and MAX corridor, not your block. SW Morrison/Yamhill is the original east-west MAX corridor, which has stops but is not the \"transit mall\" proper. Either way, the relevant rule is \"no signs blocking access to transit stops.\"\n\n**West End:** The sub-district inside the Central City plan district that covers your address.\n\n---\n\nNow for the surprise \u2014 let me give you a visual you can keep next to your sign so the rules are obvious at a glance.The visualizer didn't respond, so let me give you something more practical instead \u2014 a one-page printable markdown cheat sheet you can pin behind the counter or fold into the sign itself. I'll save it to a file so you can download it.A few last things worth flagging that came out of the research and that a knowledgeable friend would mention:\n\n**The MAX stop is the single biggest landmine on your block.** The Galleria/SW 10th Ave westbound MAX platform sits on Morrison at the SW 10th corner, immediately east of your storefront. The \"no signs blocking transit access\" rule (Portland City Code 32.32.030 C.3.g, https://www.portland.gov/code/32/32/030) is judgment-based, not a measured radius, so when you call PP&D ask them to put the answer in concrete feet. Place the sign on the western half of your frontage (toward SW 11th) to be safe.\n\n**The fact that your building is a Historic Landmark is unusual but doesn't trigger anything extra here.** It's worth mentioning on the call so the city employee doesn't get confused and route you toward Historic Resource Review (which would not apply); the A-board exemption from historic review is in Portland City Code 32.34.020 C.1.a (https://www.portland.gov/code/32/34).\n\n**You don't need a PBOT (right-of-way) permit at all.** This is the most common point of confusion. People assume any sign on the sidewalk goes through PBOT, but Portland intentionally pulls A-boards out of the right-of-way permit system and handles them through Title 32 / PP&D instead (https://www.portland.gov/ppd/sign-permits \u2014 see the line \"For signs in the street right-of-way (except A-boards) and signs on utility poles, contact Transportation\"). One bureau, one form, one fee.\n\n**Title 17 (Public Improvements) does apply to your sidewalk in one indirect way:** Portland City Code 17.28 (https://www.portland.gov/code/17/28) makes the property owner responsible for keeping the sidewalk in good repair and creates liability for injuries from a defective sidewalk. If your A-board causes someone to fall because the sign was misplaced, the property owner (MUCCA LLC) and you both face exposure. That's the reason for the 6-foot clearance rule and the reason to take placement seriously, even though no insurance bond is required by the city.\n\nIf anything I said conflicts with what PP&D tells you on the phone, **trust PP&D** \u2014 they read the code every day and I'm reading it from outside."
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Yes, A-boards allowed at this address",
+      "claim_full": "An A-board sign is permitted on the sidewalk at 1022 SW Morrison St subject to registration and placement rules.",
+      "topic": "signs",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Confirmed by accuracy flags: portable A-boards are allowed in CX zones with registration; verified against the official portland.gov portable-signs page."
+    },
+    {
+      "id": "A2",
+      "claim_short": "Zoned CX (Central Commercial)",
+      "claim_full": "The property at 1022 SW Morrison St is in the CX (Central Commercial) zone, which permits permanent portable signs.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": "portlandmaps.com (hedged inference)",
+        "mcp": null,
+        "enhanced": "portlandmaps.com/detail/property/1022-SW-MORRISON-ST/P652977_did/"
+      },
+      "verified_truth": "Enhanced response confirmed CX with 'd' overlay via PortlandMaps lookup; OOB explicitly hedged the classification; MCP asserted CX without showing the lookup."
+    },
+    {
+      "id": "A3",
+      "claim_short": "In Central City / West End sub-district",
+      "claim_full": "The address sits inside the Central City plan district, West End sub-district.",
+      "topic": "zoning",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "portlandmaps.com/detail/property/1022-SW-MORRISON-ST/P652977_did/"
+      },
+      "verified_truth": "Accuracy flag confirms Central City / West End sub-district designation at 1022 SW Morrison."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Building is Arminius Hotel landmark",
+      "claim_full": "The building at 1022 SW Morrison is the Arminius Hotel (1904), a designated Historic Landmark.",
+      "topic": "zoning",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "portlandmaps.com"
+      },
+      "verified_truth": "Accuracy flag confirms the building is the Arminius Hotel (1904) with Historic Landmark designation."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Property owner is MUCCA LLC",
+      "claim_full": "The property is owned by MUCCA LLC, so tenants must coordinate with the owner before registering a sign.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "portlandmaps.com"
+      },
+      "verified_truth": "Accuracy flag lists owner as MUCCA LLC; MCP asserted without citation, enhanced sourced from PortlandMaps."
+    },
+    {
+      "id": "A6",
+      "claim_short": "A-boards exempt from Design Review",
+      "claim_full": "Portable A-boards are exempt from Design Review even in the Design overlay zone.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 32.34.020 B.1.a",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 32.34.020 B.1.a, https://www.portland.gov/code/32/34"
+      },
+      "verified_truth": "Enhanced cites PCC 32.34.020 B.1.a; accuracy flag confirms portable signs are exempt from Design Review."
+    },
+    {
+      "id": "A7",
+      "claim_short": "A-boards exempt from Historic Review",
+      "claim_full": "Portable A-boards are exempt from Historic Resource Review even on a designated Historic Landmark.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 32.34.020 C.1.a",
+      "citation_by_variant": {
+        "enhanced": "PCC 32.34.020 C.1.a, https://www.portland.gov/code/32/34"
+      },
+      "verified_truth": "Accuracy flag confirms PCC 32.34.020 C.1.a exempts portable signs from Historic Resource Review."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Register sign with PP&D",
+      "claim_full": "Registration of the portable A-board is done through Portland Permitting & Development (PP&D), not PBOT or BDS.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Confirmed by accuracy flags: registration goes through PP&D via mail-in form."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Fees: $114 / $203 / $364",
+      "claim_full": "Registration fees are $114 for 1 year, $203 for 2 years, and $364 for 4 years (valid 7/1/2025\u20137/1/2026).",
+      "topic": "fees",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules; https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "All three fees verified against portland.gov fee schedule for 7/1/2025\u20137/1/2026."
+    },
+    {
+      "id": "A10",
+      "claim_short": "PP&D mail-in address",
+      "claim_full": "Mail the registration form and check to Portland Permitting & Development, Attn: A-Board Sign Permits, 1900 SW 4th Ave, Ste 5000, Portland OR 97201.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Mailing address verified against accuracy flags."
+    },
+    {
+      "id": "A11",
+      "claim_short": "PP&D phone 503-823-7300",
+      "claim_full": "PP&D's general line for sign questions is 503-823-7300.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov/ppd",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Phone number 503-823-7300 confirmed by accuracy flags as PP&D general line."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Max 8 sq ft per face in ROW",
+      "claim_full": "In the public right-of-way, an A-board may be at most 8 square feet per face.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 32.32.030 C.3.b",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.b, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "8 sq ft per face confirmed by accuracy flags; enhanced provides specific PCC subsection."
+    },
+    {
+      "id": "A13",
+      "claim_short": "Max 4 ft tall, 30 in wide",
+      "claim_full": "The sign may be at most 4 feet (48 inches) tall and 30 inches (2.5 ft) wide in the public right-of-way.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 32.32.030 C.3.b",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.b, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "Dimensions verified by accuracy flags."
+    },
+    {
+      "id": "A14",
+      "claim_short": "12 sq ft only on private property",
+      "claim_full": "A 12-square-foot portable sign is permitted only when kept entirely on private property, not in the right-of-way.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 32.32.030 G.3",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 G.3, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "12 sq ft on private property only is verified by accuracy flags."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Place within 6 inches of curb",
+      "claim_full": "The A-board must be placed within 6 inches of the curb, not against the building.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "PCC 32.32.030 C.3.e",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.e, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "6-inch curb placement rule confirmed by accuracy flags."
+    },
+    {
+      "id": "A16",
+      "claim_short": "6-foot clear pedestrian path",
+      "claim_full": "At least 6 feet of clear pedestrian path must remain on the sidewalk past the sign.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 32.32.030 C.3.f",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.f, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "6-foot pedestrian clearance verified by accuracy flags."
+    },
+    {
+      "id": "A17",
+      "claim_short": "Sidewalk must be \u22658 ft wide",
+      "claim_full": "A-boards are not allowed on sidewalks less than 8 feet wide.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 32.32.030 C.3.i.(3)",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.i.(3), https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "8-foot minimum sidewalk width verified by accuracy flags."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Downtown 8-ft pedestrian zone 7am-9pm",
+      "claim_full": "In the Downtown High Pedestrian Traffic Area, the pedestrian use zone is 8 feet on sidewalks more than 10 feet wide between 7 a.m. and 9 p.m.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 14A.50.030 A.3 / F.1",
+      "citation_by_variant": {
+        "enhanced": "PCC 14A.50.030 A.3, https://www.portland.gov/code/14/a50/030; PCC 14A.50.030 F.1"
+      },
+      "verified_truth": "PCC 14A.50.030 Downtown High Pedestrian Traffic Area rule verified by accuracy flags."
+    },
+    {
+      "id": "A19",
+      "claim_short": "One sign per public entrance",
+      "claim_full": "Only one A-board is allowed per public entrance; shared entrances get one sign total for all tenants.",
+      "topic": "signs",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 32.32.030 G.2.a",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 G.2.a, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "One-sign-per-entrance rule verified by accuracy flags."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Prohibited at corners, transit, ramps",
+      "claim_full": "A-boards are prohibited at street corners, near transit stops, at ADA curb ramps, and at building exits/fire escapes.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 32.32.030 C.3.c / C.3.g",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.c & C.3.g.(1), https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "Prohibited locations verified by accuracy flags; enhanced cites specific subsections."
+    },
+    {
+      "id": "A21",
+      "claim_short": "MAX stop at 10th & Morrison",
+      "claim_full": "The Galleria/SW 10th Ave MAX Blue/Red Line platform sits adjacent to the property's east end, creating a no-sign zone there.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Accuracy flag confirms Galleria/SW 10th Ave MAX platform location east of building; transit-stop exclusion is judgment-based per code."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Streetcar stops on the corridor",
+      "claim_full": "The Portland Streetcar NS line stops at 10th & Alder and 11th & Taylor, adding constraints near the corners.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct-judg",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Plausible per accuracy notes; streetcar NS line runs the corridor."
+    },
+    {
+      "id": "A23",
+      "claim_short": "No attaching to anything",
+      "claim_full": "The sign cannot be attached to poles, meters, trees, street furniture, or the sidewalk; it must remain portable.",
+      "topic": "signs",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 32.32.030 C.3.h",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.h, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "No-attachment rule verified by accuracy flags."
+    },
+    {
+      "id": "A24",
+      "claim_short": "No lights, electrical, or digital",
+      "claim_full": "Lights, electrical components, and digital/changing displays are prohibited on portable signs.",
+      "topic": "signs",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 32.32.030 G.4",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 G.4, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "Electrical/digital prohibition verified by accuracy flags."
+    },
+    {
+      "id": "A25",
+      "claim_short": "Signs only adjacent to own property",
+      "claim_full": "A-boards may only be placed adjacent to the property where they are registered, not across the street or on neighboring property.",
+      "topic": "signs",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Adjacent-property rule cited from official portland.gov page."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Three citations \u2192 impound + revocation",
+      "claim_full": "Three citations on the same sign result in impoundment, registration revocation, and a future-registration ban.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Three-citation enforcement consequence verified by accuracy flags."
+    },
+    {
+      "id": "A27",
+      "claim_short": "Free 15-minute appointment available",
+      "claim_full": "PP&D offers a free 15-minute virtual appointment with a Residential & Signs Permitting Technician to confirm specifics before submission.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "portland.gov/ppd/early-assistance/15-minute-question-appointments",
+      "citation_by_variant": {
+        "oob": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments",
+        "mcp": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs",
+        "enhanced": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs"
+      },
+      "verified_truth": "15-minute appointment program verified on portland.gov."
+    },
+    {
+      "id": "A28",
+      "claim_short": "No PBOT right-of-way permit needed",
+      "claim_full": "A-boards do not require a separate PBOT right-of-way permit; Portland intentionally handles them under Title 32 via PP&D.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd/sign-permits",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/sign-permits"
+      },
+      "verified_truth": "Enhanced response correctly distinguishes PP&D vs. PBOT jurisdiction for A-boards, per accuracy notes."
+    },
+    {
+      "id": "A29",
+      "claim_short": "No insurance bond required",
+      "claim_full": "Portland does not require an encroachment insurance bond or rider for A-board signs.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.8,
+      "correctness": "correct-judg",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "enhanced": null
+      },
+      "verified_truth": "Not contradicted by accuracy flags; Portland treats A-boards under Title 32 rather than as Title 17 encroachments."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Tenants must coordinate with owner",
+      "claim_full": "Tenants and property owners must coordinate registration and display of the sign.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Coordination requirement is on the official portable-signs page; consistent with accuracy flags."
+    },
+    {
+      "id": "A31",
+      "claim_short": "Verify zone on PortlandMaps",
+      "claim_full": "Confirm the base zone and overlays for 1022 SW Morrison via portlandmaps.com before spending money on a sign.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "portlandmaps.com",
+      "citation_by_variant": {
+        "oob": "https://www.portlandmaps.com",
+        "enhanced": "https://www.portlandmaps.com/"
+      },
+      "verified_truth": "Standard verification step; PortlandMaps is the city's authoritative property lookup."
+    },
+    {
+      "id": "A32",
+      "claim_short": "OOB couldn't pull parcel data",
+      "claim_full": "The OOB response explicitly admitted it could not directly pull parcel/zoning data and was inferring CX from the address.",
+      "topic": "other",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "admitted-gap",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "OOB honestly hedged \u2014 appropriate transparency given lack of MCP access."
+    }
+  ]
+}

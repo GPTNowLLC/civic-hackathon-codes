@@ -15,13 +15,13 @@
     },
     "enhanced": {
       "tool": "Opus 4.7 Adaptive",
-      "text": "I'm going to give this the depth it deserves. Before drafting anything, I want to pull the actual data on your specific lot rather than give you generic Portland advice \u2014 that way the answer is anchored to your property, not a hypothetical one. Let me load the Portland Maps tools and look up your address.I pulled the actual data on your specific lot before answering, so the rules below are anchored to what's recorded for 831 SE 174th Ave (Property ID R337949) rather than generic Portland advice. A few things to flag up front:\n\n**Property snapshot (from PortlandMaps and city assessor records)**\n\n- **Base zone:** R7 (\"Residential 7,000\"); Comp Plan designation also R7.\n- **Overlay:** \"h\" Aircraft Landing Overlay only.\n- **No plan district, no historic/conservation district, no environmental overlay (c or p), no design overlay.**\n- **Lot:** 0.19 acres (~8,276 sqft); existing house 960 sqft, built 1947.\n- **Watershed/sewer basin:** Johnson Creek (North Powell Butte subwatershed). Property is connected to City sanitary sewer (8\" PVC main in SE 174th Ave; your 6\" lateral connects ~11 ft south of a manhole at ~6 ft depth, per BES records). Storm drainage uses sumps in your area.\n- **Hazards:** NOT in FEMA flood, NOT in mapped landslide hazard, NOT in liquefaction zone, ~2% slope, soil hydrologic group B (well-drained).\n- **Special:** Eligible for the East 205 Urban Renewal Area; flagged as a \"Low/Moderate Income Neighborhood\" (matters for some grant programs); NOT eligible for the Holte property tax exemption.\n- **Public records note:** the assessor lists ownership as \"KARAM, CHAFEK & JANOURA, ANESA\" with a 2020-04-09 sale date. If you've purchased it more recently than that, county records may simply not have caught up yet, but worth a sanity check before you spend money on plans.\n\nNow to your questions, with code citations and plain-English translation. I will mark anywhere I am unsure, because Title 33 gets amended at least twice a year and I want you to verify the live text before relying on any number.\n\n---\n\n## 1. What kind of \"tiny house\" are you actually allowed to build?\n\nPortland recognizes three legally distinct things. They are not interchangeable.\n\n**A. Accessory Dwelling Unit (ADU) on a permanent foundation** \u2014 *Title 33, Chapter 33.205*\n\nThis is what most people picture when they say \"backyard tiny house.\" It is a real dwelling with a foundation, full Oregon Residential Specialty Code (ORSC) construction, and a Certificate of Occupancy. ADUs are allowed in R7 by right (one ADU on a lot with a single primary dwelling; recent code consolidations in 33.205 also opened a path to two ADUs in some configurations, see 33.205.040.C).\n\n- **Size cap:** 800 sqft of living area, OR 75% of the primary dwelling's living area, whichever is less (33.205.040.C). **For your lot this matters: with a 960 sqft existing house, your ADU is capped at 720 sqft, not 800.** Garages and storage don't count.\n- **Height:** 20 ft outside required setbacks; 15 ft inside setbacks (33.205.040.C and 33.110.245).\n- **Use:** Can be your primary residence, family member's home, or a long-term rental. Type A and Type B short-term rentals (Airbnb-style) are technically allowed under 33.207 and 33.815.040.B.1, BUT if you take the SDC waiver (see Section 5), you sign a 10-year covenant prohibiting STR use of any structure on the lot.\n\n**B. Tiny house on wheels (THOW) / RV-classed** \u2014 *Title 33, Chapter 33.260 (definitions) and Section 33.266.150 (parking)*\n\nPortland is unusually permissive here. Since the August 2021 \"Shelter to Housing Continuum\" code update, one occupied RV or THOW is allowed as long-term housing on a developed residential lot that already has a primary dwelling.\n\n- **Treated as an \"occupied recreational vehicle,\" not a dwelling.** No building permit for the unit itself; ORSC does not apply because it's a vehicle (Oregon DMV registers it as a camper, travel trailer, or park-model RV).\n- **The wheels must stay on.** Removing them converts it into an unpermitted structure.\n- **Placement:** behind the front-facing facade of the primary house; cannot be in a front yard; minimum 5 ft from primary dwelling per the city's published rules.\n- **Hookups:** you DO need permits for the utility connections (campground-style RV power pedestal, water connection, sewer dump similar to a cleanout). Those are Title 25 (plumbing), Title 26 (electrical), and BES sewer.\n- **Use:** Long-term occupancy and long-term rental are allowed. **Short-term rental is prohibited** under this provision.\n- **Cannot be on a vacant lot.** You must already have a permitted house.\n\n**C. \"Tiny home\" as a primary dwelling on a foundation**\n\nPortland doesn't have a \"tiny home\" zoning category. If it's a permanent dwelling on a foundation, it's regulated as a single-family house under Title 33.110 and Title 24 building code, regardless of size. It must meet ORSC, including ORSC Appendix Q (the tiny home appendix, allowing dwellings \u2264400 sqft of floor area to use ladder/loft accommodations and reduced ceiling heights). On your lot you cannot replace your existing house with a tiny home under R7 minimum-density rules without careful planning, but you could build one as the primary on a vacant lot or via a middle-housing land division (33.644).\n\n**Quick comparison for your specific situation:**\n\n| Option | On-foundation? | Building permit? | Max size | STR allowed? | Long-term rental? |\n|---|---|---|---|---|---|\n| ADU (33.205) | Yes | Full set | 720 sqft (you) | Yes if no SDC waiver; No for 10 yrs if waiver | Yes |\n| THOW (33.260/.266) | No | Hookups only | DMV/RV size limits (8.5 ft wide) | No | Yes |\n| Detached primary house | Yes | Full set | Subject to FAR/coverage | N/A | Yes |\n\n---\n\n## 2. Zoning of 831 SE 174th Ave and what it allows\n\n**Base zone: R7 (Single-Dwelling 7,000)** under Chapter 33.110. The R7 standards are in Table 110-3 (lots), Table 110-4 (development standards), and Table 110-5 (building coverage). I'm citing the framework here; verify the live numbers because 33.110 has been amended multiple times since 2021 (Residential Infill Project, Shelter to Housing Continuum, ezone corrections). Typical R7 standards as of the last published code packet:\n\n- **Minimum lot area:** 7,000 sqft (your lot is ~8,276 sqft, so you clear this).\n- **Minimum lot width and depth:** see Table 110-3.\n- **Maximum height:** 35 ft (base R7); your \"h\" overlay does NOT further restrict this for residential zones (per 33.400.020.B, in R, C, IR, and CI1 zones the base zone height applies, NOT the overlay's airspace surface). So the aircraft overlay is essentially a non-issue for your build.\n- **FAR (floor area ratio):** Table 110-4. R7 has a base FAR around 0.4 with a \"preserving existing dwelling\" bonus available if your existing 1947 house was last finaled at least 5 years ago AND you alter \u226425% of its street-facing facade.\n- **Building coverage:** Table 110-5 (typically 50% for R7 lots in this size range; verify).\n- **Setbacks:** Table 110-4. For R7 generally: 10 ft front, 5 ft side, 10 ft rear. Confirm; setback rules also have garage-entrance and street-side variants.\n- **Minimum density:** 33.110.210. R7 has a minimum dwelling unit density on certain new-development sites (since the Residential Infill Project), but this generally applies when you're proposing brand-new development without preserving an existing primary dwelling. Adding an ADU to your existing house does not trigger it.\n\n**Overlay: \"h\" Aircraft Landing** (Chapter 33.400). For your residential use, this is informational only; height is governed by R7's 35 ft limit. No special review.\n\n**No plan district.** This is a clean lot from a regulatory complexity standpoint, which is good news.\n\n**More than one dwelling unit allowed?** Yes. Under the **Residential Infill Project** (effective Aug 1, 2021), R7 (along with R5 and R2.5) now allows **up to 4 units per lot by right** (duplex, triplex, fourplex), and **up to 6 units** if at least 50% are affordable at 60% MFI (33.110.240, \"Density\"; also Table 110-2 for housing types). Standards differ from a house+ADU combo (FAR is calculated for the whole site; there are massing and design standards specific to multi-unit configurations). **This is the surprising one for you:** if your goal is a \"tiny house\" purely as backyard rental income, an ADU is the simple path; but if you're open to a duplex or triplex, the temporary SDC exemption (Section 5 below) currently makes a multi-unit build cheaper to permit than it has been in a long time.\n\n---\n\n## 3. Permits and the typical sequence\n\nPlain-English order of operations for an ADU on your lot:\n\n1. **Property research & free planner appointment** (no permit, but essential). PortlandMaps for zoning; 15-minute free city planner appointment via 503-823-7300. This is where you'd confirm setbacks, FAR, and ask about RIP options.\n2. **Optional: Pre-Permit Zoning Plan Check or Early Assistance** (Land Use Services, ~$300-1,500). Gives you a written zoning summary tied to a draft site plan before you spend money on full architectural drawings. *Strongly recommend this for you* given you have no construction background.\n3. **Building permit application** (Title 24 \u2014 Bureau of Development Services, now part of Portland Permitting & Development / PP&D). For an ADU this is filed online via DevHub PDX. Includes site plan, floor plans, structural, energy, mechanical compliance.\n4. **Trade permits** (file with the building permit OR later):\n   - **Plumbing** \u2014 Title 25, PP&D\n   - **Electrical** \u2014 Title 26, PP&D\n   - **Mechanical/HVAC** \u2014 Title 27, PP&D\n5. **Sewer connection / capacity review** \u2014 Bureau of Environmental Services (BES). On your lot, your 6\" PVC lateral is already to the city main. An ADU may share or get its own connection; BES will tell you whether your existing lateral has capacity or needs upsizing.\n6. **Stormwater** \u2014 BES Site Development. Your area uses sumps and your lot has small impervious area; you'll likely qualify for **Simplified Approach** in the BES Stormwater Management Manual (the simpler path), but confirm.\n7. **Water service** \u2014 Portland Water Bureau. Determine separate vs. shared meter.\n8. **Driveway / curb cut** \u2014 PBOT, only if you're adding a new curb cut. For most backyard ADUs you reuse the existing.\n9. **Tree review** \u2014 Title 11 (Urban Forestry, Parks). Triggered if any regulated tree (generally \u22656\" DBH on private property; \u226512\" for some species; AND any street tree of any size) is within the construction impact zone. You will need a Title 11 permit to remove or significantly impact any regulated tree.\n10. **Fire** \u2014 Title 31. Fire access is usually only an issue if your ADU is on a flag lot or >150 ft from a public street; otherwise standard residential rules apply.\n11. **Inspections during construction**, then **final inspection / Certificate of Occupancy**.\n\n**Land use review tier \u2014 could you trigger Type II or III?** For a standard ADU meeting all 33.205 standards on your R7 lot, NO; it's permit-only (Type I-equivalent zoning check folded into the building permit). You'd trigger:\n- **Adjustment Review (Type II under 33.805)** if you can't meet a development standard and need to reduce a setback, exceed coverage, etc. ~8-10 weeks of review.\n- **Environmental Review (Type II/III under 33.430)** \u2014 NOT applicable on your lot (no \"p\" or \"c\" overlay).\n- **Historic Resource Review** \u2014 NOT applicable (no historic district).\n- **Land Division / Middle Housing Land Division (33.671)** \u2014 only if you're splitting the lot.\n\nA pre-application conference is REQUIRED for Type III/IV reviews; it's optional but recommended for Type I or II. For your project it shouldn't be required.\n\n---\n\n## 4. Site-specific gotchas (anchored to your actual lot data)\n\n- **Trees (Title 11):** I cannot tell remotely whether you have regulated trees in the build zone. Walk the lot and identify every tree \u22656\" DBH; any that are within ~10 ft of where you'd build need a tree-impact assessment. Street trees in the SE 174th right-of-way are fully protected. Permit a tree removal/preservation review through Urban Forestry early; it can take several weeks and you can't pull a building permit until the tree disposition is settled.\n- **Stormwater:** Good news. Your soil group is B, slope is ~2%, and your area drains via city sumps (not a creek). You'll almost certainly qualify for the **Simplified Approach** in the BES Stormwater Management Manual. A small ADU adds little impervious area, so onsite infiltration (a drywell or planter) should be straightforward.\n- **Sewer:** You're on city sewer. The 8\" PVC main runs in SE 174th and your 6\" lateral exists. **System Development Charges (SDCs)** still apply unless waived/exempted (see Section 5). The BES sanitary SDC and the stormwater SDC are separate line items.\n- **Floodplain / landslide / environmental zones:** None of these apply to your lot. Despite being in the Johnson Creek watershed, your specific parcel is not in any FEMA flood zone, landslide hazard, environmental conservation/protection overlay, or PIR Plan District. This removes about 80% of the gotchas that catch east-Portland builders by surprise.\n- **Setback from existing house to ADU:** 6 ft separation is the typical minimum between primary dwelling and detached accessory (33.110.250 \u2014 verify; this has been adjusted recently). For a THOW it's 5 ft.\n- **Parking:** Portland has eliminated the off-street parking requirement for ADUs across the board (33.266 amendments and Oregon HB 2001 / 2003). You do not need to add a parking space for an ADU at this address.\n- **Utilities:** Your ADU may share or have separate water/sewer/electric. Separate is more flexible if you ever rent it out. **A new address will be assigned** by BDS once the permit is issued; ask early so you can give it to utility companies.\n- **Foundation requirement:** Yes, an ADU REQUIRES a permanent foundation to count as a dwelling under the building code. A non-foundation tiny home becomes a THOW under 33.260 and is a different legal animal entirely.\n\n---\n\n## 5. Cost and timeline reality check\n\n**System Development Charges (SDCs)** are the big budget line. For a typical Portland ADU built around 2024-2025, total SDCs (Water + BES Sanitary + BES Stormwater + Parks + Transportation) ran roughly $12,000 to $19,000 depending on size and impact. **Two important programs may apply to you right now:**\n\n1. **ADU SDC Waiver** (Title 17.13/17.14, administered by Revenue Division). Active and indefinite. You sign a 10-year covenant: no STR use of any structure on the property. Waives nearly all SDCs. Penalty for violation: 150% of current SDCs at the time of violation. Email aducovenant@portlandoregon.gov.\n2. **Temporary SDC Exemption Program** (Portland City Code 17.14.070 Section J, ordinance 192082, July 2025). Covers permits issued **Aug 15, 2025 through Sept 30, 2028**. Exempts new dwelling units from SDCs. **Important caveat: this exemption explicitly EXCLUDES ADUs and caretaker quarters.** It applies to *new dwelling units* (think: duplex, triplex, fourplex via RIP, or a new primary dwelling). So if you go the ADU route, you use the older ADU SDC Waiver. If you go the duplex/triplex route via RIP, the temporary exemption applies and there's no STR covenant attached.\n\n**Permit fees** for an ADU (separate from SDCs) typically run $6,000-$10,000 across building, plumbing, electrical, mechanical. Fee schedule: portland.gov/ppd/current-fee-schedules.\n\n**Timelines** (typical, not guaranteed):\n- Pre-permit early assistance: 3 weeks for written response after intake\n- Plan review: 4-8 weeks for over-the-counter or simple ADU; 8-20 weeks for new detached ADU including any correction cycles\n- Construction: 4-8 months for a detached ADU with a competent contractor\n- Total project: realistically plan on **9-18 months from \"I'm starting\" to occupancy**\n\n**Common reasons projects stall in plan review:**\n1. Tree review not started early enough (single biggest scheduler)\n2. Setback or FAR miscalculations on the site plan\n3. Missing structural details (foundation, lateral load path) for new construction\n4. BES stormwater path picked wrong (Simplified vs. Performance)\n5. Energy code (Oregon Energy Efficiency Specialty Code) compliance documentation\n\n---\n\n## 6. Who to call, in order\n\n1. **Portland Permitting & Development (PP&D), Development Services Center** \u2014 main number **503-823-7300** (Mon-Fri 8 AM-5 PM). 1900 SW 4th Ave, Suite 5000, Portland OR 97201. In-person Tuesdays 8-4 and Thursdays 8-noon, by appointment. **Free 15-minute zoning appointment** is your no-cost first step.\n2. **Land Use Services intake** for early assistance / pre-app: **landuseintake@portlandoregon.gov**\n3. **Bureau of Environmental Services (BES) Site Development & Stormwater** \u2014 through PP&D's main line, or at portland.gov/bes. They handle sewer connection, stormwater management plan review, and System Development Charge calculations for sanitary/stormwater.\n4. **Portland Water Bureau** \u2014 503-823-7770. Water service, meter sizing, water SDC.\n5. **Urban Forestry (Portland Parks & Recreation, Title 11 administration)** \u2014 503-823-TREE (8733). Tree permits and street-tree impact reviews. Required if any tree \u22656\" DBH is in your build zone or on the SE 174th right-of-way.\n6. **PBOT (Portland Bureau of Transportation)** \u2014 503-823-5185, only if you're adding/altering a curb cut.\n7. **Portland Fire & Rescue (Title 31)** \u2014 through PP&D fire reviewer; typically only contacted directly for >150 ft setback or unusual access situations.\n8. **ADU SDC Waiver questions** \u2014 aducovenant@portlandoregon.gov (Revenue Division)\n\n**Yes, request the free pre-permit zoning appointment first.** Even if you ultimately need a paid Pre-Permit Zoning Plan Check ($300-1,500), the free 15-minute slot is enough to confirm your basic concept is allowed before you hire an architect or designer.\n\n---\n\n## 7. Plain-language next-steps checklist\n\n1. **Pull up your property on PortlandMaps** (portlandmaps.com \u2192 search 831 SE 174th Ave). Click the Zoning, Environmental, and Permits tabs. Verify what I've summarized; if anything has changed since today (May 4, 2026), trust the live record.\n2. **Confirm you actually own the property as currently recorded.** The county assessor still lists Karam/Janoura. If you've purchased or are about to, tie that down before paying the city for anything.\n3. **Walk the lot and inventory trees.** Note every tree \u22656\" diameter at breast height (4.5 ft up the trunk). Photograph street trees in the SE 174th right-of-way too. This is your single highest-leverage early action.\n4. **Decide your goal: ADU vs. THOW vs. duplex/triplex (RIP).** If you want a backyard rental for income or a family member, ADU is simplest. If you want low cost / fast move-in for yourself or a tenant, THOW is dramatically faster and cheaper. If you want maximum value creation and the temporary SDC exemption window, RIP duplex/triplex is the play.\n5. **Schedule the free 15-min city planner appointment** (call 503-823-7300). Bring your address, a rough site sketch, and your top option from step 4. Ask: \"What setbacks, FAR, and coverage apply on R7h? Are there any minimum-density triggers I'd hit? Is the SDC exemption available for a new dwelling unit on this lot?\"\n6. **Request Early Assistance / Pre-Permit Zoning Plan Check** (email landuseintake@portlandoregon.gov) once your concept is sharper. ~3-week turnaround. This catches problems before drawings.\n7. **Get a survey** if your lot lines aren't already documented from a recent transaction. Setbacks measure from property lines, and a 6\" error on a 5 ft side setback costs you the build.\n8. **Hire a designer or architect familiar with Portland ADU permitting.** Even simple ADU projects benefit from someone who has been through DevHub PDX recently. Portland publishes free **pre-approved ADU plan sets** worth considering (portland.gov/ppd; search \"pre-approved ADU plans\").\n9. **Apply for a Tree Permit (Title 11)** as soon as you know which trees you need to impact. Don't wait until building permit submittal.\n10. **If pursuing the ADU SDC Waiver:** download the application/covenant PDF from portland.gov/ppd/residential-permitting/adu-sdc-waiver, sign it early, and submit to the Revenue Division while plan review is happening. (Or, if pursuing a duplex/triplex, submit the Temporary SDC Exemption form per portland.gov/ppd/current-fee-schedules/housing-sdc-exemption.)\n11. **Submit building permit + trade permits via DevHub PDX.** Pay fees at issuance.\n12. **Schedule inspections in sequence:** foundation/concrete, framing, plumbing rough-in, electrical rough-in, mechanical rough-in, insulation, drywall, final.\n13. **Schedule the final inspection.** Get the Certificate of Occupancy. Update your address records, set up utility accounts, and (if renting) document move-in condition.\n\n---\n\n## 8. Accuracy caveats \u2014 what I cannot verify remotely and what to confirm\n\nI want to be straight with you about what this answer rests on, because Title 33 changes often.\n\n- **Anchored to the live PortlandMaps record (verified today, May 4, 2026):** zoning (R7 base + \"h\" overlay), absence of plan district / historic district / environmental overlay / flood / landslide / liquefaction zones, sewer connection status, lot dimensions, year built, stormwater basin, soil group, and slope.\n- **Anchored to Portland.gov pages I just checked** (not training data): the existence and structure of the ADU SDC Waiver Program; the temporary SDC exemption window of Aug 15, 2025 through Sept 30, 2028 (under PCC 17.14.070 Section J / ordinance 192082); the THOW rules (33.260, 33.266.150) being live; the basic ADU framework (33.205) including the 800 sqft / 75% rule; the PP&D phone number and address.\n- **Cited from Title 33 / Title 24 / 25 / 26 / 27 / Title 11 framework but not freshly read line-by-line:** the exact numerical setbacks, FAR, and lot coverage tables in 33.110 (Tables 110-3, 110-4, 110-5). The R7 numbers I gave (35 ft height, 10/5/10 setbacks, ~50% coverage) are typical and broadly correct, but the precise live numbers change with each code update packet. **Read the live PDF at portland.gov/code/33/100s/110 before designing to a specific dimension.**\n- **Anything about RIP unit counts, minimum density, and the Shelter to Housing Continuum tweaks** \u2014 the broad strokes are correct (up to 4 units in R7 by right; 6 with 50% affordable; THOWs allowed since Aug 2021) but specific thresholds for minimum density, design standards for fourplexes, and the \"constrained sites\" overlay carve-outs all need a planner check on your specific lot.\n- **Things I did NOT verify and that you should confirm:**\n  1. Whether any street tree on SE 174th Ave's right-of-way frontage of your lot is currently regulated (Urban Forestry).\n  2. Whether your existing 1947 house has any open code violations or unpermitted alterations on file (PP&D research). The 2009 nuisance complaint shows as Closed, so that's clear.\n  3. Whether the existing 6\" sewer lateral has documented capacity for an additional dwelling unit.\n  4. Whether there are any recorded easements affecting the buildable area of your lot beyond the standard frontage utility easements (a title report will show this).\n  5. Whether ownership records correctly reflect the current legal owner.\n\nMy honest recommendation: take this answer to the free 15-minute city planner appointment. Have them confirm the live numbers and flag anything I've gotten stale. That conversation costs nothing and is the single best dollar (well, no dollars) you can spend before paying anyone to draw plans.\n\nIf you'd like, I can save this as a markdown file you can drop into your Obsidian vault under `project-docs/` and update as you collect verified numbers from the city. Just say the word."
+      "text": "# Can I build a tiny house at 831 SE 174th Ave, Portland, OR 97233?\n\n*A plain-English walkthrough for a regular Portland homeowner. Last researched May 2026.*\n\n---\n\n## The short version (read this first)\n\n**Yes, you can almost certainly add a small second home in your backyard.** Your lot is zoned **R7 (Residential 7,000)**, which is a single-family zone, and R7 lots are allowed one accessory dwelling unit \u2014 that's the official term for a small second home on the same lot, abbreviated **ADU** (your lot can actually fit two of them, since it's larger than the 4,200-sq-ft minimum for two ADUs).\n\nA traditional \"tiny house\" built on a permanent foundation is just a small ADU under Portland rules; you treat it like any small house. A **THOW** (Tiny House on Wheels) is treated very differently \u2014 Portland classifies it as a parked recreational vehicle, not a real home, so it can't be your only home there. Expect the whole process to take **roughly 6\u201312 months** from \"I want to do this\" to \"I can move in,\" and to cost **roughly $40,000\u2013$60,000 in soft costs (permits, plans, hookups, fees) plus the actual construction**, with one-time city impact fees (called **System Development Charges, or SDCs**) waivable if you sign a 10-year promise not to short-term-rent the place.\n\nYour specific lot has no flood, environmental, or historic overlays to worry about, but it does sit under the **Aircraft Landing overlay (the \"h\" on the zoning map)**, which is a Troutdale-airport-area height-limit overlay. The good news: in residential zones the overlay defers to your base-zone height limit, so it does **not** restrict your ADU. Read on for the details.\n\n---\n\n## Your specific property snapshot\n\nLooking up your address on Portland's official maps gave me this. **Always verify on PortlandMaps yourself before spending money** \u2014 I pulled this on May 6, 2026, and it can change.\n\n- **Address:** 831 SE 174TH AVE, Portland, OR 97233\n- **Property ID:** R337949 (this is the city's internal ID; useful when you call)\n- **Neighborhood:** Centennial (you said Hazelwood/Centennial; the city has it as Centennial)\n- **Lot size:** 0.19 acres, about 8,276 square feet\n- **Existing house:** 960 sq ft, built 1947\n- **Base zone:** R7 (Single-Dwelling 7,000) \u2014 verified at https://www.portlandmaps.com/detail/property/831-SE-174TH-AVE/R337949_did/\n- **Overlay:** \"h\" (Aircraft Landing) \u2014 the only one\n- **Flood, environmental, historic, design overlays:** None\n- **Sewer:** Connected (sanitary sewer main runs in SE 174th Ave; the existing house was connected as part of the 1990s Mid-County Sewer Project)\n- **Watershed:** Johnson Creek (stormwater here mostly goes to underground drywells called \"sumps,\" not the sewer)\n- **Inside the East 205 Urban Renewal Area** (this is just a tax/funding district, not a development restriction)\n\n> **Friendly heads-up:** The county's owner-of-record for this property doesn't match what I'd expect for someone named Chris. If you don't already own this property (or aren't yet on the title), pause here \u2014 only the property owner can apply for these permits, or someone with the owner's written authorization. Worth checking before you spend hours planning. You can verify ownership at https://www.portlandmaps.com/.\n\n---\n\n## Your three real options, side by side\n\nThe one-sentence summary: **a permanent ADU is your best bet for a real second home; a THOW is OK as a backyard \"guest cabin on wheels\" but can't be sold or used as your primary home; replacing the existing house with a new tiny house is allowed but rarely makes financial sense.**\n\n| Option | Permanent foundation ADU (incl. \"tiny house\" style) | Tiny House on Wheels (THOW) | New primary tiny house (replace existing house) |\n|---|---|---|---|\n| **What it legally is** | A second dwelling unit, like a small house | A parked occupied recreational vehicle | A primary single-family residence |\n| **Allowed on this lot?** | Yes, by right (PCC 33.205, https://www.portland.gov/code/33/200s/205) | Yes, one allowed alongside your existing house (PCC 33.260, https://www.portland.gov/sites/default/files/code/260-occupied-rvs.pdf) | Yes, but only if you have a primary home on the lot, or you're rebuilding |\n| **Max size** | 720 sq ft for your lot (75% of your 960 sq ft house) \u2014 see PCC 33.205.040.C.5, https://www.portland.gov/code/33/200s/205 | No size cap from the city, but Oregon DMV registration limits apply | Up to your full coverage budget (~2,741 sq ft for this lot per Table 110-5, https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/base-zones) |\n| **Max height** | 20 ft outside setbacks, 15 ft inside setbacks (PCC 33.205.040.C.5 / 33.110.245, https://www.portland.gov/code/33/100s/110) | N/A (it's a vehicle) | 30 ft (PCC 33.110, Table 110-4, https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/base-zones) |\n| **Setbacks (how far from property lines)** | Same as house: 15 ft front, 5 ft side, 5 ft rear (Table 110-4, https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/base-zones); narrower options exist if you stay short and small | At least 5 ft from the primary house (Oregon building code via https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/occupied-rvs-and-tiny-houses-wheels); cannot be in front of the street-facing wall of the house | Same as the existing house: 15 ft front, 5 ft side, 5 ft rear (PCC 33.110.220, https://www.portland.gov/code/33/100s/110) |\n| **Permanent home?** | Yes \u2014 full legal residence | **No** \u2014 wheels must stay on; if you're renting it, the renter has very few protections (PCC 33.260, https://www.portland.gov/sites/default/files/code/260-occupied-rvs.pdf) | Yes |\n| **Building permit?** | Yes (Title 24) | No building permit (it's a vehicle), but **electrical and plumbing permits required** if connected | Yes (full home permit) |\n| **Counts as housing for resale?** | Yes \u2014 adds value to the property | No \u2014 it goes with you when you leave | Yes |\n| **Typical permit + soft costs** | $25,000\u2013$50,000 (plans, permits, hookups, fees before construction) | $1,500\u2013$5,000 (electrical + plumbing connection permits + hookup work) | $40,000\u2013$70,000 (similar to ADU but more sewer/water work if rebuilding) |\n| **Build cost** | $150,000\u2013$300,000+ | $40,000\u2013$120,000 (the trailer itself; cheaper if DIY) | $200,000\u2013$400,000+ |\n| **Time start to move-in** | 6\u201312 months typical | A few weeks once you have the THOW, just for hookups | 9\u201318 months |\n| **Best for** | Real second home, rental income, family member, long-term property value | A relative or guest needing temporary space; a backyard office | You want to start fresh with a small permanent home |\n\n---\n\n## What \"R7\" actually means for your lot\n\n**R7 stands for \"Residential, 7,000 square foot minimum lot\"** (PCC 33.110, https://www.portland.gov/code/33/100s/110). It's one of Portland's six single-dwelling zones and exists in much of outer East Portland, including your part of the Centennial neighborhood. R7 lots are mostly used for single-family houses and ADUs.\n\n**Your lot at 8,276 sq ft is comfortably above the 7,000 sq ft minimum**, so it's a \"conforming\" R7 lot, which is a good thing \u2014 it means you're not stuck with any nonconforming-use headaches.\n\nIn R7, the one-page summary of what you can do is in **Table 110-4** (https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/base-zones). For your purposes:\n\n- **Front yard setback** (how far the building has to sit back from the front property line, called a *setback*): **15 feet** (PCC 33.110.220, Table 110-4, https://www.portland.gov/code/33/100s/110)\n- **Side yard setback:** **5 feet** (same source)\n- **Rear yard setback:** **5 feet** (same source)\n- **Garage entrance setback:** 18 feet from the property line (so the car has somewhere to park between sidewalk and garage door)\n- **Maximum height of main house:** 30 feet (PCC 33.110.215, Table 110-4)\n- **Required outdoor area:** at least 250 sq ft, with at least one 12 ft \u00d7 12 ft area (PCC 33.110.240, https://www.portland.gov/code/33/100s/110) \u2014 basically, you have to keep some real backyard\n\nFor an **ADU specifically**, additional rules from PCC 33.205 apply on top of the R7 zone rules.\n\n### How big can your ADU be on this specific lot?\n\nTwo limits stack on top of each other; you take the smaller one.\n\n1. **ADU size cap** \u2014 The maximum ADU size is **75% of the main house's living area, OR 800 sq ft, whichever is smaller** (PCC 33.205.040.C.5, https://www.portland.gov/code/33/200s/205). Your house is 960 sq ft, so 75% is **720 sq ft**. That's your real ADU size cap.\n\n2. **Lot coverage cap** \u2014 All your detached accessory structures combined can't cover more than **20% of the lot** (PCC 33.110.245.C.2, https://www.portland.gov/code/33/100s/110). For an 8,276 sq ft lot, that's **1,655 sq ft** total of detached buildings (sheds, garages, ADU). Total building coverage on the whole lot \u2014 house + ADU + everything else \u2014 can't exceed **about 2,741 sq ft** under Table 110-5 (https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/base-zones). With your 960 sq ft house, you've got headroom.\n\n**Bottom line for size: ~720 sq ft is your practical ADU ceiling.** That's plenty for a real one-bedroom plus loft.\n\n### How tall and where can the ADU sit?\n\n- **Height:** up to 20 feet if outside the 5-ft side/rear setbacks; up to 15 feet if inside them (PCC 33.205 / 33.110.245.C.4, https://www.portland.gov/code/33/100s/110)\n- **Front-yard placement:** the ADU has to either sit **at least 40 feet back from the front property line** OR **behind the rear wall of the main house** (PCC 33.205.040.C.5, https://www.portland.gov/code/33/200s/205). Practically, this means a backyard ADU.\n- **Distance from the existing house:** at least 5 feet (this is a building code / fire separation rule, not a zoning rule)\n- **Two ADUs allowed:** because your lot exceeds the 4,200 sq ft minimum for two ADUs in R7, you can technically build two (Table 205-2, https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/adu-zoning) \u2014 only one can be attached to the house, and the lot must front a city-maintained street (SE 174th Ave qualifies)\n\n### What about that \"h\" overlay on the zoning map?\n\nYou'll see your lot tagged as **\"R7h\"**. The **\"h\" stands for the Aircraft Landing Overlay Zone**, and it covers a wide area around Portland-area airports (PDX and Troutdale) to protect flight paths. It sounds scary, but here's the actual rule: in residential and commercial zones, the **base zone height limit applies, not the overlay** (PCC 33.400.030, https://www.portland.gov/sites/default/files/code/33.400-aircraft-landing-zone.pdf). So the \"h\" overlay does **not** lower your 30-ft house height limit or your 20-ft ADU height limit. It only limits things like radio towers and very tall trees. **For your tiny house plans, ignore the h overlay** \u2014 but mention it to your designer so nobody panics.\n\n---\n\n## What about a tiny house on wheels (THOW)?\n\nPortland treats a THOW the same as any other camper or RV. The official rules are at https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/occupied-rvs-and-tiny-houses-wheels and the underlying code is **PCC 33.260** (https://www.portland.gov/sites/default/files/code/260-occupied-rvs.pdf) and **PCC 33.266.150** for parking placement (https://www.portland.gov/sites/default/files/code/266-parking_1.pdf).\n\nThe headlines:\n\n- You can park **one** occupied THOW on a residential lot, but **only if there's already a primary house, attached house, or manufactured home on the lot** \u2014 you can't have a THOW as your only dwelling on the property\n- The wheels must stay attached. The moment you take the wheels off and put it on a foundation, it becomes a real building and has to meet ADU rules and the full Oregon Residential Specialty Code\n- It must be parked at least 5 feet from the primary house and **cannot sit in front of the street-facing wall** of the house (so backyard or side yard, behind the front of the house)\n- Electrical hookup is required: at least a **20-amp dedicated GFCI outlet** on the house or a service pedestal, with a single proper extension cord rated for the load. **Electrical permit needed** unless the outlet already exists (per the same Portland.gov page above)\n- If the THOW has plumbing inside, you must connect to **potable water** and the **sanitary sewer** \u2014 and a **plumbing permit is required** for the sewer connection\n- A THOW **cannot be used as a short-term rental** (so no Airbnb)\n- A THOW does **not** count toward residential density on your lot, which is why you can have one in addition to (not instead of) the main house and any ADUs\n\nIf you're looking for a real second home, build an ADU. If you want a lower-commitment guest space or a place for a family member that you might tow somewhere else later, a THOW makes sense.\n\n---\n\n## What permits will you need, and in what order?\n\nFor a permanent ADU (the most common path), you'll typically need this stack of permits, all reviewed by **Portland Permitting & Development (PP&D)** \u2014 formerly the Bureau of Development Services or **BDS** (the city department that issues building permits and does inspections). Phone: **503-823-7300** (https://www.portland.gov/ppd/contact).\n\n1. **Zoning review** \u2014 done as part of the building permit application; checks PCC 33.205 / 33.110 compliance (https://www.portland.gov/code/33/200s/205)\n2. **Building permit** under **Title 24** (Building Regulations, https://www.portland.gov/code/24) \u2014 covers the structural and life-safety work\n3. **Plumbing permit** under **Title 25** (Plumbing Regulations, https://www.portland.gov/code/25) \u2014 for the new water and sewer lines\n4. **Electrical permit** under **Title 26** (Electrical Regulations, https://www.portland.gov/code/26) \u2014 for the new electrical service\n5. **Heating/Mechanical permit** under **Title 27** (Heating & Ventilating, https://www.portland.gov/code/27) \u2014 for the heat pump, ductwork, water heater venting, etc.\n6. **Sewer connection permit** from the **Bureau of Environmental Services (BES)**, the city department that handles sewer and stormwater (503-823-7740, https://www.portland.gov/bes) \u2014 they verify there's enough sewer capacity for the second unit and issue a connection permit\n7. **Water service permit** from the **Portland Water Bureau** (503-823-7770, https://www.portland.gov/water) \u2014 typically a separate water meter for the ADU, though a shared meter can sometimes work\n8. **Driveway / curb cut permit** from the **Portland Bureau of Transportation (PBOT)**, the city department that handles streets, sidewalks, and driveways (503-823-5185, https://www.portland.gov/transportation) \u2014 only if you're adding or modifying a driveway. Most ADUs don't need new parking (PCC 33.205 says no extra parking required), so this often isn't needed.\n\nFor a THOW (vehicle path), you skip the building permit entirely and only get **electrical** and (if plumbed) **plumbing** permits.\n\nThe good news: **you submit most of these together as a single building-permit package online**, not seven separate trips. Portland calls this the residential permit application, and it routes through every relevant bureau in one go. Apply at https://www.portland.gov/ppd/residential-permitting.\n\n---\n\n## What's it going to cost?\n\nTake everything below as a 2026 rough estimate. **Get exact numbers from the permit center; this is to help you plan, not to bind anyone.**\n\n### One-time costs you pay the city (\"soft costs\")\n\n- **Building permit fees + plan review:** typically **$3,000\u2013$8,000** for an ADU, depending on size and complexity. The exact fee schedule is at https://www.portland.gov/ppd/current-fee-schedules.\n\n- **System Development Charges (SDCs)** \u2014 these are one-time fees the city charges new dwelling units to pay for their share of water, sewer, parks, and transportation impact. Without any waiver, **expect roughly $20,000\u2013$30,000** for a full ADU. The pieces (rates effective July 1, 2025 \u2013 June 30, 2026):\n   - **Transportation SDC** \u2014 ADUs under 1,200 sq ft pay 50% of the full single-family rate (https://www.portland.gov/transportation/permitting/tsdc); roughly $5,000\u2013$8,000\n   - **Water SDC** \u2014 paid to the Water Bureau when water service is set up (https://www.portland.gov/ppd/current-fee-schedules/system-development-charges)\n   - **Sewer SDC** (BES) \u2014 based on plumbing fixtures\n   - **Stormwater SDC** (BES) \u2014 based on impervious surface added\n   - **Parks SDC**\n\n- **Big-deal SDC waiver:** **You can waive ALL of those SDCs** by enrolling in Portland's **ADU SDC Waiver Program**. The catch: you sign a covenant promising no short-term rentals (no Airbnb, etc.) on the entire property \u2014 main house and ADU \u2014 for 10 years (https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver). Apply through the **Revenue Division** at aducovenant@portlandoregon.gov. Violating the covenant means paying back **150% of current SDC rates**, so don't do it casually. **Heads-up:** Portland's broader **temporary residential SDC exemption** that's running Aug 15, 2025 \u2013 Sept 30, 2028 (ordinance 192082) **explicitly excludes ADUs** \u2014 ADUs use the older 10-year-covenant program (https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption).\n\n- **Sewer connection** (line work): a few thousand dollars if there's already a stub; could be $10,000\u2013$20,000+ if a brand-new lateral is needed. Your existing house is already connected to the sanitary sewer in SE 174th Ave (verified via Portland Maps), so you've already cleared the hardest part.\n\n- **Water meter / connection:** ~$1,500\u2013$5,000 for a separate ADU meter; less if sharing.\n\n- **Architect / designer plans:** $5,000\u2013$15,000 for stock plans modified for your site; $15,000\u2013$30,000+ for fully custom. A few prefab ADU companies sell pre-permitted plans that drop a few thousand off this.\n\n- **Survey** (recommended, sometimes required): $1,000\u2013$2,500 for a residential lot.\n\n### Construction itself\n\n- **DIY-built tiny house ADU:** $50,000\u2013$120,000 in materials (lots of sweat equity)\n- **Hired-out small ADU (~400 sq ft):** $150,000\u2013$220,000\n- **Hired-out larger ADU (~720 sq ft, your max):** $200,000\u2013$320,000\n\n### Realistic total\n\nFor a typical hired-out 600\u2013720 sq ft ADU on this lot, in 2026 dollars: **about $250,000\u2013$400,000 all in**, with maybe $40,000\u2013$60,000 of that being soft costs (permits, fees, plans, hookups, SDCs if you don't waive them) before you swing a single hammer.\n\nFor comparison, the total all-in cost of an ADU is **roughly the cost of a modest condo in Portland**, with the difference that you keep your land and rent the ADU out for $1,500\u2013$2,500/month (typical for SE Portland in 2026).\n\n### How long will it take?\n\n- **Plans + early decisions:** 1\u20133 months\n- **Permit review:** **Roughly 8\u201314 weeks** for a standard ADU permit at PP&D (faster if you use a pre-approved plan; longer if your design needs an Adjustment Review for setbacks, which adds 8\u201310 weeks per https://www.portland.gov/ppd/zoning-land-use/land-use-review-fees-and-types/adjustment-reviews)\n- **Construction:** 4\u20138 months for a typical ADU build\n- **Inspections, certificate of occupancy:** a few weeks at the end\n\n**Total: roughly 8\u201314 months from \"let's do this\" to \"I can sleep there.\"** Think \"one full year, give or take a season.\"\n\n---\n\n## What to do next, in order\n\nThis is the actual order I'd follow. Doing some of these out of order will cost you weeks or money.\n\n### Step 1 \u2014 Verify everything I said about your property (15 minutes, FREE)\n\nGo to **https://www.portlandmaps.com/** and search for **831 SE 174th Ave**. Click into \"Zoning & Districts\" and confirm the base zone is **R7** and the only overlay is **h**. Save or screenshot the zoning result. *Why first? Because if anything I told you doesn't match the live site, your design will be based on wrong info.*\n\n### Step 2 \u2014 Book a free 15-minute appointment with a city planner (15 min appointment, FREE)\n\nThis is genuinely the best free resource the city offers. You ask the live planner your specific questions about *your specific lot*, and they answer in plain English. Book at **https://www.portland.gov/ppd/early-assistance/15-minute-appointments**. Bring your address, the type of project (ADU? THOW?), and any rough sketches you have. *Why early? Because they'll catch any property-specific gotcha before you spend money on plans.*\n\n### Step 3 \u2014 Decide: ADU on foundation, or THOW? (a few days of family talking, FREE)\n\nUse the table earlier in this document. The right answer depends on whether you want a real second home that adds long-term property value (ADU) or a flexible, removable, lower-commitment space (THOW).\n\n### Step 4 \u2014 If ADU: get a survey and an idea of where it'll sit (1\u20133 weeks, $1,000\u2013$2,500)\n\nA licensed surveyor pins your property lines so the designer knows exactly where the 5-ft side and rear setbacks fall. Find one via the **Professional Land Surveyors of Oregon** at https://www.plso.org/. *Why now? Because a wrong-by-2-feet site plan can sink a permit and force a redesign.*\n\n### Step 5 \u2014 If you might want to skip the impact fees, prep the SDC waiver paperwork early ($0, but locks in a 10-year no-short-term-rental covenant)\n\nGet the covenant application from https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver and email questions to **aducovenant@portlandoregon.gov**. Filing this *with* the building permit (not later) avoids delays. *Why early? Because the covenant has to be reviewed and recorded against your property, and timing matters for the permit to issue.*\n\n### Step 6 \u2014 Hire a designer or pick a pre-approved plan (1\u20133 months, $5,000\u2013$30,000)\n\nPre-approved ADU plans are at https://www.portland.gov/ppd/residential-permitting/home-projects/accessory-dwelling-units. They're Portland-vetted and can shave weeks off review. Custom designers find at https://www.aiaoregon.org/. *Why now and not earlier? Because the survey and city conversation in Steps 2\u20134 inform the design.*\n\n### Step 7 \u2014 Submit a single residential building permit application online (4 hours of paperwork, fees due at submission)\n\nPortland's online permit portal at **https://www.portland.gov/ppd/residential-permitting** routes a single application through PP&D, BES, Water, and PBOT. You'll upload plans, the survey, and the SDC waiver application if you're using it. *Why this order? Because the application triggers reviews from all the bureaus in parallel \u2014 there's no separate \"first BES, then BDS\" sequence anymore.*\n\n### Step 8 \u2014 Respond to review comments (2\u20134 cycles, ~8\u201314 weeks total)\n\nCity reviewers will email back with corrections. Each response cycle takes a couple weeks. **Be responsive** \u2014 slow replies stretch the timeline more than the actual review.\n\n### Step 9 \u2014 Get the permit, build, and inspect (4\u20138 months)\n\nOnce the permit is issued, you have 180 days to start work. Schedule inspections at https://www.portland.gov/ppd/inspections. Standard inspections for an ADU: foundation, framing, mechanical/electrical/plumbing rough-in, insulation, drywall, and final.\n\n### Step 10 \u2014 Final inspection, certificate of occupancy, move in\n\nFinal inspection signs everything off. The 10-year SDC waiver covenant clock (if you used it) starts on this date.\n\n---\n\n## What to ask the city \u2014 actual scripts\n\nWhen you call **PP&D General Inquiries at 503-823-7300**, here's exactly what to say:\n\n> *\"Hi, I'm a homeowner at 831 SE 174th Avenue, property ID R337949. I want to build a detached accessory dwelling unit in my backyard. My lot is zoned R7 with the h overlay. Can you confirm: (1) am I allowed one or two ADUs given my 8,276-square-foot lot, (2) does the Aircraft Landing overlay add any height or other restrictions for an ADU here, and (3) can you walk me through which permits I'll need and what the next step is?\"*\n\nTo book the **free 15-minute planner appointment**, go to https://www.portland.gov/ppd/early-assistance/15-minute-appointments. When you meet:\n\n> *\"I want to add a small ADU \u2014 about 600 to 720 square feet \u2014 to my backyard at 831 SE 174th. Can we go over: setbacks, the maximum building footprint I can add given my existing 960-sq-ft house, whether the Aircraft Landing overlay affects anything in R7, and any sequencing things I should know before I hire a designer?\"*\n\nWhen you call **BES** (sewer) at **503-823-7740**:\n\n> *\"I'm planning to add an ADU at 831 SE 174th Avenue, property ID R337949. The existing house is connected to the sanitary sewer in SE 174th. Can you tell me whether I need a separate sewer lateral for the ADU, what the connection permit fee is in 2026, and whether I'll need a sewer capacity confirmation letter before I submit my building permit?\"*\n\nWhen you call **PBOT** at **503-823-5185** (only if your design needs a new driveway):\n\n> *\"I want to add an ADU at 831 SE 174th Avenue and the design includes a new driveway curb cut. What's the process and fee for a driveway permit, and do I need to apply before I submit my building permit?\"*\n\nWhen you email the **ADU SDC Waiver team** at **aducovenant@portlandoregon.gov**:\n\n> *\"Subject: ADU SDC Waiver \u2014 831 SE 174th Ave, R337949. Hi, I'm planning to apply for the ADU SDC waiver covenant program when I submit my building permit. Can you confirm the current covenant document, the application timing relative to building permit submittal, and whether I should sign and email the covenant before or after the permit application is in review?\"*\n\n---\n\n## What you might get wrong (the gotchas)\n\nThese are the mistakes Portland homeowners actually make on tiny house projects. Most cost weeks; a few cost serious money.\n\n- **Assuming a THOW can be your only home on the lot.** It cannot. PCC 33.260 only allows an occupied RV (including a THOW) **alongside** a primary house, attached house, or manufactured home (https://www.portland.gov/sites/default/files/code/260-occupied-rvs.pdf). Lots of people read tiny-house influencer content and assume the THOW *is* the home \u2014 in Portland, it isn't.\n\n- **Skipping the SDC math.** People budget for construction and forget that **System Development Charges can add $20,000\u2013$30,000** in one-time fees if they don't apply for the waiver. The covenant is essentially free if you weren't planning to short-term-rent anyway (https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver).\n\n- **Forgetting the 10-year STR covenant is a property covenant, not a personal one.** It runs with the land. If you sell the property within 10 years, the next owner is also bound. Check https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver before signing.\n\n- **Putting the ADU in the wrong place.** It must be **at least 40 ft from the front lot line OR behind the rear wall of the existing house** (PCC 33.205, https://www.portland.gov/code/33/200s/205). People sketch a side-yard ADU and don't realize that it has to be behind the front of the existing house unless it's deep into the lot.\n\n- **Missing the \"ADU can't exceed 75% of main house living area\" limit.** Your 960-sq-ft house caps your ADU at **720 sq ft**, not 800. Many people anchor on the 800-sq-ft figure they read online and design too big.\n\n- **Designing an ADU over 15 ft tall and not realizing the matching-exterior rules kick in.** Above 15 ft, the ADU must visually match the existing house \u2014 siding, roof pitch, trim, window orientation \u2014 OR meet a defined alternative (PCC 33.110.245.C.4, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf). Stay at 15 ft or under and that whole rulebook drops away.\n\n- **Forgetting the existing house has to remain compliant.** If you build the ADU but its placement makes the existing house's required outdoor area (250 sq ft minimum) disappear, the project gets flagged. Both buildings need to coexist legally.\n\n- **Assuming \"R7\" means you can subdivide.** R7 minimum lot size is 7,000 sq ft. Your lot at 8,276 sq ft can't be split into two R7 lots without a land-use review and density work. An ADU is a much simpler path than trying to subdivide.\n\n- **Thinking the Aircraft Landing overlay limits your ADU height.** It doesn't, in residential zones. But mention it to your designer anyway so they can put the right note on the plans.\n\n- **Starting work before the permit is fully issued.** Pre-permit work can void your SDC waiver and trigger penalties. Wait for the permit to be in \"Issued\" status, not \"Approved to Issue.\"\n\n- **Not budgeting time to respond to plan-review corrections.** This is where most projects bleed weeks. Set a calendar reminder to check your permit status every Friday.\n\n- **Hiring a designer who doesn't know Portland.** ADU rules in Portland change often (the 2025 update consolidated the two-ADU rules, for example, per https://www.portland.gov/code/33/200s/205). A general residential designer from outside the city will miss things like the 40-ft front setback or the Adjustment Review process.\n\n- **Forgetting Title 11 tree protection.** Existing trees on your lot can constrain where the ADU goes. Check Title 11.50 at https://www.portland.gov/code/11. Removing a tree without a permit can carry fines.\n\n- **Missing the state-level building code.** Oregon's residential building rules \u2014 the **Oregon Residential Specialty Code (ORSC)** \u2014 apply on top of Portland's zoning rules. The 2023 ORSC (based on IRC 2021) is the one in effect right now (https://www.oregon.gov/bcd/codes-stand/pages/orsc-adoption.aspx). Note: Oregon's old **Small Home Specialty Code** for homes under 400 sq ft (HB 2423, 2019) **sunsetted on January 2, 2026**. The state is in transition on small-home standards, with a new 2026 ORSC anticipated October 2026. **For now, build to the standard 2023 ORSC.** If you're determined to build under 400 sq ft, ask the city planner specifically about current small-home provisions, because this area is changing.\n\n---\n\n## Quick reference: who does what\n\n| Bureau | What they handle | Phone | Website |\n|---|---|---|---|\n| **PP&D** (Portland Permitting & Development; this absorbed BDS, the old Bureau of Development Services) | Building permits, zoning review, plan review, inspections | 503-823-7300 | https://www.portland.gov/ppd |\n| **BES** (Bureau of Environmental Services) | Sewer connection permits, stormwater, sewer SDCs | 503-823-7740 | https://www.portland.gov/bes |\n| **Water Bureau** | Water service connection, water meters, water SDCs | 503-823-7770 | https://www.portland.gov/water |\n| **PBOT** (Portland Bureau of Transportation) | Driveways, curb cuts, sidewalks, transportation SDCs | 503-823-5185 | https://www.portland.gov/transportation |\n| **Revenue Division** (handles the ADU SDC waiver covenant) | ADU SDC waiver covenants | aducovenant@portlandoregon.gov | https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver |\n| **Urban Forestry** (under PP&D) | Tree permits and protection (Title 11) | 503-823-8733 | https://www.portland.gov/trees |\n| **PF&R** (Portland Fire & Rescue) | Fire safety review (only for larger projects, not typical for ADUs) | 503-823-3700 | https://www.portland.gov/fire |\n| **Oregon BCD** (Building Codes Division \u2014 state level, not city) | Oregon Residential Specialty Code, Small Home Specialty Code transition | 503-378-4133 | https://www.oregon.gov/bcd |\n\n---\n\n## Friendly accuracy caveats from someone who isn't actually a planner\n\nA few honest acknowledgments before you act on any of this:\n\n- **Zoning data online lags reality.** I pulled your zoning from PortlandMaps on May 6, 2026, and the 15-minute planner appointment is the only way to get an authoritative read on your specific lot. Zoning rules also get amended (the ADU code at PCC 33.205 was updated in 2025 \u2014 see https://www.portland.gov/code/33/200s/205 for the current version).\n\n- **Code citations move sometimes.** I gave you exact PCC sections and current URLs, but Portland reorganizes its code occasionally. If a link 404s, go to the parent page (e.g., https://www.portland.gov/code/33) and navigate down.\n\n- **\"Roughly $X\" numbers are stale within months.** SDCs adjust every July 1; permit fees adjust periodically. Treat all dollar figures here as planning estimates, then call the bureaus for the actual current number when you're ready.\n\n- **I am not your lawyer or building official.** If your project is unusual (a corner lot, a flag lot, an existing nonconforming setback, an easement crossing your backyard), that changes things in ways a general guide can't capture. Use the 15-minute planner consult.\n\n- **Permit timelines are typical, not guaranteed.** Expect surprises. Keep a buffer of a couple of months in your planning.\n\n---\n\n## Glossary \u2014 every acronym and technical term used here\n\n- **ADU (Accessory Dwelling Unit)** \u2014 a smaller second home on the same lot as a main house. Has its own kitchen, bathroom, sleeping area, and entrance. Can be attached to the main house or detached.\n\n- **BCD (Building Codes Division)** \u2014 the State of Oregon agency that writes the building, plumbing, electrical, and mechanical codes used statewide. It writes the **ORSC** (see below).\n\n- **BDS (Bureau of Development Services)** \u2014 the old name of Portland's permit and inspection bureau. It was renamed **PP&D** in 2025.\n\n- **BES (Bureau of Environmental Services)** \u2014 Portland's sewer and stormwater bureau.\n\n- **Building coverage** \u2014 the amount of your lot covered by buildings, measured by their footprints. Different from \"lot coverage\" which sometimes includes pavement.\n\n- **Covenant** \u2014 a legal promise recorded against your property's title that runs with the land (so future owners are also bound).\n\n- **FAR (Floor Area Ratio)** \u2014 the total floor area of all buildings on a lot, divided by the lot size. A 1,000-sq-ft house on a 5,000-sq-ft lot is FAR 0.2:1.\n\n- **FEMA SFHA (Special Flood Hazard Area)** \u2014 federally designated flood-prone areas. Your lot is **not** in one, per Portland Maps.\n\n- **Footprint** \u2014 the outline of a building as seen from above, measured in square feet.\n\n- **Lot coverage** \u2014 see \"building coverage.\" Sometimes used to also include patios and pavement.\n\n- **Overlay zone** \u2014 extra rules layered on top of the base zone (e.g., \"R7h\" means R7 base zone with the \"h\" Aircraft Landing overlay).\n\n- **PCC (Portland City Code)** \u2014 Portland's official municipal code. Section numbers like \"PCC 33.205.040\" mean Title 33, Chapter 205, Subsection 040.\n\n- **PBOT (Portland Bureau of Transportation)** \u2014 Portland's streets, sidewalks, and driveways bureau.\n\n- **PF&R (Portland Fire & Rescue)** \u2014 Portland's fire bureau.\n\n- **PHB (Portland Housing Bureau)** \u2014 runs separate affordable-housing programs, including a different SDC exemption for affordable units.\n\n- **PP&D (Portland Permitting & Development)** \u2014 the city's permitting and inspection bureau. Replaces the old **BDS**.\n\n- **R7 (Residential 7,000)** \u2014 a single-family zoning category requiring a minimum 7,000 sq ft lot.\n\n- **ORSC (Oregon Residential Specialty Code)** \u2014 the state's residential building code. Current version is the 2023 ORSC (based on the 2021 IRC).\n\n- **ROW (Right-of-way)** \u2014 the public strip including the street, sidewalk, and the area between them. PBOT controls this.\n\n- **SDC (System Development Charge)** \u2014 one-time city impact fees on new dwellings, used to pay for water, sewer, parks, and transportation infrastructure.\n\n- **Setback** \u2014 the required minimum distance from a property line to a building. R7 front: 15 ft, side and rear: 5 ft.\n\n- **THOW (Tiny House on Wheels)** \u2014 a tiny dwelling built on a trailer with wheels, treated by Portland as an occupied recreational vehicle (PCC 33.260), not as a house.\n\n- **Title 24 / 25 / 26 / 27** \u2014 chapters of Portland City Code covering building, plumbing, electrical, and heating/ventilating regulations respectively.\n\n---\n\n*Sources verified May 6, 2026. Property data via PortlandMaps API for property R337949. Zoning per PCC Title 33 as published at https://www.portland.gov/code/33. Always confirm with PP&D before relying on this document for permit decisions.*"
     }
   },
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "Lot zoned R7",
+      "claim_short": "Property zoned R7",
       "claim_full": "The property at 831 SE 174th Ave is zoned R7 (Residential 7,000).",
       "topic": "zoning",
       "variants": [
@@ -29,328 +29,186 @@
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.6,
+      "specificity": 1.0,
+      "actionability": 0.7,
       "correctness": "correct",
       "importance": 5,
-      "citation": "Title 33, Chapter 33.110",
-      "verified_truth": "MCP and enhanced variants retrieved R7 from PortlandMaps; OOB inferred R7 from neighboring lots without verification.",
+      "citation": "PortlandMaps",
       "citation_by_variant": {
-        "oob": "Title 33, Chapter 33.110",
-        "mcp": null,
-        "enhanced": "Title 33, Chapter 33.110"
-      }
+        "oob": "portlandmaps.com (told user to verify)",
+        "mcp": "PortlandMaps lookup",
+        "enhanced": "https://www.portlandmaps.com/detail/property/831-SE-174TH-AVE/R337949_did/"
+      },
+      "verified_truth": "R7 zoning at 831 SE 174th Ave is verified correct via PortlandMaps."
     },
     {
       "id": "A2",
-      "claim_short": "Aircraft Landing 'h' overlay applies",
-      "claim_full": "The lot carries an 'h' Aircraft Landing overlay related to Troutdale Airport flight paths.",
-      "topic": "zoning",
+      "claim_short": "Lot ~8,276 sq ft",
+      "claim_full": "The lot is approximately 0.19 acres / 8,276 square feet.",
+      "topic": "address",
       "variants": [
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.4,
+      "specificity": 1.0,
+      "actionability": 0.5,
       "correctness": "correct",
       "importance": 3,
-      "citation": "Chapter 33.400",
-      "verified_truth": "Accuracy flags confirm 'h' overlay is present; per 33.400.020.B it does not restrict residential height.",
+      "citation": "PortlandMaps",
       "citation_by_variant": {
         "mcp": null,
-        "enhanced": "Chapter 33.400"
-      }
+        "enhanced": "PortlandMaps API"
+      },
+      "verified_truth": "Lot size is consistent with PortlandMaps property data retrieved by MCP-enabled variants."
     },
     {
       "id": "A3",
-      "claim_short": "Lot ~8,276 sqft, house 960 sqft, built 1947",
-      "claim_full": "The parcel is roughly 0.19 acres / 8,276 sqft with a 960 sqft single-family house built in 1947.",
+      "claim_short": "Existing house 960 sf, 1947",
+      "claim_full": "The existing house is 960 sq ft and was built in 1947.",
       "topic": "address",
-      "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 4,
       "variants": [
         "oob",
         "mcp",
-        "enhanced"
-      ],
-      "citation": "PortlandMaps / assessor",
-      "verified_truth": "All three responses cite consistent parcel data; MCP and enhanced retrieved it from PortlandMaps directly.",
-      "citation_by_variant": {
-        "oob": "PortlandMaps / assessor",
-        "mcp": null,
-        "enhanced": "PortlandMaps / assessor"
-      }
-    },
-    {
-      "id": "A4",
-      "claim_short": "No flood/landslide/environmental overlays",
-      "claim_full": "The lot is not in FEMA flood, landslide hazard, liquefaction, or environmental conservation/protection overlays.",
-      "topic": "zoning",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm no flood/landslide/liquefaction zone and no environmental overlay at this address.",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A5",
-      "claim_short": "Three legal tiny-house paths",
-      "claim_full": "Portland recognizes three legally distinct tiny-house options: ADU on foundation, tiny house on wheels (THOW), and a primary tiny dwelling on a foundation.",
-      "topic": "definitions",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "Title 33",
-      "verified_truth": "All three correctly distinguish ADU, THOW, and primary dwelling categories under Portland code.",
-      "citation_by_variant": {
-        "oob": "Title 33",
-        "mcp": null,
-        "enhanced": "Title 33"
-      }
-    },
-    {
-      "id": "A6",
-      "claim_short": "ADUs governed by Chapter 33.205",
-      "claim_full": "Accessory Dwelling Units are governed by Title 33 Chapter 33.205.",
-      "topic": "citations",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 33.205",
-      "verified_truth": "33.205 is the correct ADU chapter in Title 33.",
-      "citation_by_variant": {
-        "oob": "PCC 33.205",
-        "enhanced": "PCC 33.205"
-      }
-    },
-    {
-      "id": "A7",
-      "claim_short": "ADU cap 800 sf or 75% of primary",
-      "claim_full": "An ADU's living area is capped at the lesser of 800 sqft or 75% of the primary dwelling's living area.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "hedge-correct",
-      "importance": 5,
-      "citation": "33.205.040.C",
-      "verified_truth": "Accuracy flags note the 75% rule and 800 sf cap need verification against current code; AI itself flagged it for verification.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "33.205.040.C"
-      }
-    },
-    {
-      "id": "A8",
-      "claim_short": "This lot's ADU cap = 720 sqft",
-      "claim_full": "Because the existing house is 960 sqft, the ADU is capped at 720 sqft (75% of 960).",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "hedge-correct",
-      "importance": 5,
-      "citation": "33.205.040.C",
-      "verified_truth": "Derivation depends on the 75% rule still being in force; flagged as needing verification.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "33.205.040.C"
-      }
-    },
-    {
-      "id": "A9",
-      "claim_short": "ADU height 20 ft outside / 15 ft inside setbacks",
-      "claim_full": "Detached ADUs may reach 20 ft outside required setbacks and 15 ft within setbacks, with a 10 ft maximum wall height inside setbacks.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "hedge-correct",
-      "importance": 4,
-      "citation": "33.205.040.C, 33.110.245",
-      "verified_truth": "Accuracy flags note these height numbers should be verified against current Title 33; broadly correct framework.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "33.205.040.C, 33.110.245"
-      }
-    },
-    {
-      "id": "A10",
-      "claim_short": "Detached ADU 40 ft from front lot line",
-      "claim_full": "A detached ADU must sit at least 40 ft from the front lot line, or behind the rear wall of the primary house.",
-      "topic": "setbacks",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "hedge-correct",
-      "importance": 4,
-      "citation": "33.205",
-      "verified_truth": "Repeated by both OOB and MCP variants; not independently verified in evaluation flags.",
-      "citation_by_variant": {
-        "oob": "33.205",
-        "mcp": null
-      }
-    },
-    {
-      "id": "A11",
-      "claim_short": "R7 setbacks 10/5/10",
-      "claim_full": "R7 setbacks are roughly 10 ft front, 5 ft side, and 10 ft rear.",
-      "topic": "setbacks",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.6,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 4,
-      "citation": "Table 110-4",
-      "verified_truth": "Accuracy flags warn that RIP and subsequent amendments altered R-zone setbacks, particularly the rear; numbers need verification.",
-      "citation_by_variant": {
-        "enhanced": "Table 110-4"
-      }
-    },
-    {
-      "id": "A12",
-      "claim_short": "R7 max height 35 ft",
-      "claim_full": "Base R7 zone allows a maximum building height of 35 ft.",
-      "topic": "size",
-      "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
       "actionability": 0.4,
-      "correctness": "hedge-correct",
-      "importance": 2,
-      "citation": "33.110",
-      "verified_truth": "AI flagged this as needing verification; broadly consistent with R7 standards.",
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
       "citation_by_variant": {
-        "enhanced": "33.110"
-      }
+        "oob": "Redfin listing",
+        "mcp": null,
+        "enhanced": "PortlandMaps API"
+      },
+      "verified_truth": "House size and year-built confirmed by property data lookups."
     },
     {
-      "id": "A13",
-      "claim_short": "R7 lot \u22655,000 sqft can have two ADUs",
-      "claim_full": "Since the 2021 Residential Infill Project, R7 lots \u22655,000 sqft may have two ADUs alongside the primary house, with one meeting visitability standards.",
-      "topic": "size",
+      "id": "A4",
+      "claim_short": "Property ID R337949",
+      "claim_full": "The Multnomah County property ID is R337949.",
+      "topic": "address",
       "variants": [
-        "oob",
-        "mcp"
+        "mcp",
+        "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "hedge-correct",
-      "importance": 4,
-      "citation": "33.205.040.C",
-      "verified_truth": "Accuracy flags note both responses claim this; specifics warrant a planner check.",
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps",
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null
-      }
+        "mcp": null,
+        "enhanced": "PortlandMaps"
+      },
+      "verified_truth": "Property ID R337949 is reported by both MCP-enabled variants from PortlandMaps lookup."
     },
     {
-      "id": "A14",
-      "claim_short": "R7 allows up to 4 units by right",
-      "claim_full": "Under the Residential Infill Project, R7 lots may have up to 4 units by right, or 6 if at least 50% are affordable at 60% MFI.",
+      "id": "A5",
+      "claim_short": "Aircraft Landing 'h' overlay applies",
+      "claim_full": "The lot carries an Aircraft Landing 'h' overlay (only overlay present).",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.3,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.470 / 33.400.030",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 33.400.030, https://www.portland.gov/sites/default/files/code/33.400-aircraft-landing-zone.pdf"
+      },
+      "verified_truth": "The 'h' Aircraft Landing overlay is reported on this lot; airport attribution and exact height ceiling should be verified with a planner."
+    },
+    {
+      "id": "A6",
+      "claim_short": "'h' overlay does not bind ADU height",
+      "claim_full": "In residential zones the Aircraft Landing 'h' overlay defers to the base zone height limit and does not lower ADU height.",
       "topic": "zoning",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.7,
+      "actionability": 0.6,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "33.110.240, Table 110-2",
-      "verified_truth": "RIP rules permit up to 4 units in R7 by right with affordability bonus to 6, per Title 33.",
+      "importance": 3,
+      "citation": "PCC 33.400.030",
       "citation_by_variant": {
-        "enhanced": "33.110.240, Table 110-2"
-      }
+        "enhanced": "PCC 33.400.030, https://www.portland.gov/sites/default/files/code/33.400-aircraft-landing-zone.pdf"
+      },
+      "verified_truth": "Per PCC 33.400.030 the 'h' overlay defers to base-zone height in residential zones."
     },
     {
-      "id": "A15",
-      "claim_short": "THOW allowed as occupied RV",
-      "claim_full": "Portland treats tiny houses on wheels as occupied recreational vehicles, allowing one on a developed residential lot already containing a primary dwelling.",
-      "topic": "definitions",
+      "id": "A7",
+      "claim_short": "No flood/environmental/historic overlays",
+      "claim_full": "The lot has no flood, landslide, wildfire, environmental, or historic overlays.",
+      "topic": "zoning",
       "variants": [
-        "oob",
         "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "33.260, 33.266.150",
-      "verified_truth": "Accuracy flags confirm THOWs are governed under 33.260 / 33.266.150 since the Aug 2021 Shelter to Housing Continuum update.",
-      "citation_by_variant": {
-        "oob": "33.260, 33.266.150",
-        "mcp": null,
-        "enhanced": "33.260, 33.266.150"
-      }
-    },
-    {
-      "id": "A16",
-      "claim_short": "THOW chapter is 33.260",
-      "claim_full": "THOWs/occupied RVs are governed by Chapter 33.260 of the Portland Zoning Code.",
-      "topic": "citations",
-      "variants": [
-        "oob",
         "enhanced"
       ],
       "specificity": 0.9,
       "actionability": 0.4,
       "correctness": "correct",
       "importance": 3,
-      "citation": "33.260",
-      "verified_truth": "OOB flagged this citation as suspect; enhanced anchored it with 33.266.150 \u2014 33.260 (definitions) and 33.266.150 (parking) are the correct pair.",
+      "citation": "PortlandMaps",
       "citation_by_variant": {
-        "oob": "33.260",
-        "enhanced": "33.260"
-      }
+        "mcp": null,
+        "enhanced": "PortlandMaps"
+      },
+      "verified_truth": "PortlandMaps data confirms no flood, environmental, or historic overlays on this lot."
     },
     {
-      "id": "A17",
-      "claim_short": "THOW needs 5 ft separation + 20A GFCI",
-      "claim_full": "A THOW must be parked \u22655 ft from the primary house with a dedicated 20-amp GFCI electrical hookup.",
+      "id": "A8",
+      "claim_short": "THOW treated as occupied RV",
+      "claim_full": "Portland regulates tiny houses on wheels as occupied recreational vehicles, not buildings, under PCC 33.260.",
+      "topic": "definitions",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.260",
+      "citation_by_variant": {
+        "oob": "PCC Chapter 33.260",
+        "mcp": "PCC 33.260",
+        "enhanced": "PCC 33.260, https://www.portland.gov/sites/default/files/code/260-occupied-rvs.pdf"
+      },
+      "verified_truth": "THOWs are treated as occupied recreational vehicles under Portland's tiny-house-on-wheels policy (PCC 33.260)."
+    },
+    {
+      "id": "A9",
+      "claim_short": "THOW only allowed alongside primary home",
+      "claim_full": "One occupied THOW is allowed on a residential lot only if a primary house, attached house, or manufactured home is already present.",
+      "topic": "definitions",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.260",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PCC 33.260",
+        "enhanced": "PCC 33.260"
+      },
+      "verified_truth": "THOWs may be parked on a lot that already has a primary dwelling; they cannot be the only home on the property."
+    },
+    {
+      "id": "A10",
+      "claim_short": "THOW needs 20-amp GFCI hookup",
+      "claim_full": "A THOW requires a dedicated 20-amp GFCI electrical hookup with an electrical permit.",
       "topic": "electrical",
       "variants": [
         "oob",
@@ -359,453 +217,581 @@
       ],
       "specificity": 1.0,
       "actionability": 0.9,
-      "correctness": "hedge-correct",
-      "importance": 3,
-      "citation": "Title 25/26",
-      "verified_truth": "Accuracy flags note these specifics are repeated across variants but are not independently verified.",
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov occupied RVs page",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "Title 25/26"
-      }
+        "enhanced": "https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/occupied-rvs-and-tiny-houses-wheels"
+      },
+      "verified_truth": "Portland's THOW guidance requires a dedicated 20-amp GFCI circuit/pedestal connection."
+    },
+    {
+      "id": "A11",
+      "claim_short": "THOW must be \u22655 ft from house",
+      "claim_full": "A THOW must sit at least 5 feet from the primary house.",
+      "topic": "setbacks",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Oregon building code / PCC 33.260",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/occupied-rvs-and-tiny-houses-wheels"
+      },
+      "verified_truth": "Portland requires THOW separation of at least 5 ft from the primary house per the occupied-RVs guidance."
+    },
+    {
+      "id": "A12",
+      "claim_short": "THOW cannot be short-term rental",
+      "claim_full": "A THOW cannot be used as a short-term rental (no Airbnb/VRBO).",
+      "topic": "definitions",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.260",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 33.260"
+      },
+      "verified_truth": "Portland's THOW rules disallow short-term rental use of the unit."
+    },
+    {
+      "id": "A13",
+      "claim_short": "ADU max 75% of house OR 800 sf",
+      "claim_full": "Maximum ADU size is the lesser of 75% of the main house's living area or 800 sq ft, yielding ~720 sq ft on this lot.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 5,
+      "citation": "PCC 33.205.040.C.5",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.205.040.C.5, https://www.portland.gov/code/33/200s/205"
+      },
+      "verified_truth": "Current PCC 33.205.040 generally allows the GREATER of 75% or 800 sq ft, so the binding cap is likely 800 sq ft (not 720). Verify against current code."
+    },
+    {
+      "id": "A14",
+      "claim_short": "ADU height 20 ft / 15 ft inside setbacks",
+      "claim_full": "Detached ADU max height is 20 ft outside setbacks and 15 ft within setbacks (10 ft max wall height).",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": "PCC 33.205 / 33.110.245",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.205 / 33.110.245.C.4, https://www.portland.gov/code/33/100s/110"
+      },
+      "verified_truth": "Recent Portland ADU code updates may allow detached ADUs up to ~25 ft; the cited 20/15 ft figures should be reverified against current PCC 33.205.040.E."
+    },
+    {
+      "id": "A15",
+      "claim_short": "ADU sited \u226540 ft from front or behind house",
+      "claim_full": "A detached ADU must sit at least 40 ft from the front lot line OR behind the rear wall of the main house.",
+      "topic": "setbacks",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.205.040.C.5",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "PCC 33.205, https://www.portland.gov/code/33/200s/205"
+      },
+      "verified_truth": "Portland's ADU siting rule requires either \u226540 ft from the front lot line or placement behind the rear wall of the main house; verify subsection numbering against current code."
+    },
+    {
+      "id": "A16",
+      "claim_short": "R7 setbacks 15/5/5",
+      "claim_full": "R7 zoning requires 15 ft front, 5 ft side, and 5 ft rear setbacks.",
+      "topic": "setbacks",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": "PCC 33.110 Table 110-4",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.220, Table 110-4, https://www.portland.gov/code/33/100s/110"
+      },
+      "verified_truth": "R7 side/rear setbacks may differ (often 5 ft side, 10 ft rear depending on lot). Verify against current Table 110-4."
+    },
+    {
+      "id": "A17",
+      "claim_short": "R7 max house height 30 ft",
+      "claim_full": "Maximum primary house height in R7 is 30 feet.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PCC 33.110 Table 110-4",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.215, Table 110-4"
+      },
+      "verified_truth": "Not specifically verified in this evaluation; consult Portland code directly."
     },
     {
       "id": "A18",
-      "claim_short": "THOW cannot be used as STR",
-      "claim_full": "A THOW cannot be used as a short-term rental.",
+      "claim_short": "No off-street parking required for ADU",
+      "claim_full": "No additional off-street parking is required for an ADU.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.205",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.205"
+      },
+      "verified_truth": "Portland's ADU rules do not require additional off-street parking."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Up to two ADUs allowed",
+      "claim_full": "R7 lots above the size threshold may have up to two ADUs alongside the primary house.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": "PCC 33.205 Table 205-2",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "Table 205-2, https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/adu-zoning"
+      },
+      "verified_truth": "Two-ADU thresholds and street-frontage requirements vary across variants (5,000 sq ft vs 4,200 sq ft cited); verify exact threshold against current PCC 33.110/33.205."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Detached accessory cap (lot coverage)",
+      "claim_full": "Detached accessory structures are capped at a percentage of lot area (15% per OOB/MCP, 20% per enhanced).",
+      "topic": "size",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": "PCC 33.110.245",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 33.110.245.C.2, https://www.portland.gov/code/33/100s/110"
+      },
+      "verified_truth": "Variants disagree (15% vs 20%) on detached-accessory lot-coverage cap; verify the current PCC 33.110.245 figure."
+    },
+    {
+      "id": "A21",
+      "claim_short": "SDC waiver requires 10-yr no-STR covenant",
+      "claim_full": "Portland's ADU SDC Waiver requires a 10-year covenant prohibiting short-term rental use to waive system development charges.",
+      "topic": "costs",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "portland.gov ADU SDC Waiver",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver"
+      },
+      "verified_truth": "Portland's ADU SDC Waiver Program requires a 10-year covenant against short-term rentals."
+    },
+    {
+      "id": "A22",
+      "claim_short": "SDC covenant penalty 150% of rates",
+      "claim_full": "Violating the SDC waiver covenant requires repayment of 150% of current SDC rates.",
+      "topic": "costs",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov ADU SDC Waiver",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver"
+      },
+      "verified_truth": "Not specifically verified in this evaluation beyond the rationale's accuracy flag listing the 150% figure for review."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Temporary citywide SDC exemption excludes ADUs",
+      "claim_full": "Ordinance 192082 (July 2025) created a citywide residential SDC exemption from Aug 15, 2025 through Sept 30, 2028 that explicitly excludes ADUs.",
+      "topic": "costs",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": "Ordinance 192082",
+      "citation_by_variant": {
+        "mcp": "Ordinance 192082",
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption"
+      },
+      "verified_truth": "MCP variant claims this temporary exemption applies to ADUs; enhanced variant says it excludes ADUs. Verify ordinance scope and dates against the city's published rule."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Transportation SDC discount for small ADUs",
+      "claim_full": "ADUs under 1,200 sq ft pay 50% of the single-family Transportation SDC rate.",
+      "topic": "costs",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PBOT TSDC",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/transportation/permitting/tsdc"
+      },
+      "verified_truth": "Not specifically verified in this evaluation beyond the listed accuracy flag; verify with PBOT's current TSDC schedule."
+    },
+    {
+      "id": "A25",
+      "claim_short": "Free 15-min planner appointment",
+      "claim_full": "Portland offers a free 15-minute planner consultation that homeowners can book online.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portland.gov 15-minute appointments",
+      "citation_by_variant": {
+        "oob": "portland.gov",
+        "mcp": "503-823-7300",
+        "enhanced": "https://www.portland.gov/ppd/early-assistance/15-minute-appointments"
+      },
+      "verified_truth": "Portland city planners offer a free 15-minute consultation that residents can book on portland.gov."
+    },
+    {
+      "id": "A26",
+      "claim_short": "PP&D phone 503-823-7300",
+      "claim_full": "Portland Permitting & Development can be reached at 503-823-7300 for permitting inquiries.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "portland.gov PP&D",
+      "citation_by_variant": {
+        "mcp": "503-823-7300",
+        "enhanced": "https://www.portland.gov/ppd/contact"
+      },
+      "verified_truth": "503-823-7300 is cited as the PP&D number; verify current contact info on portland.gov."
+    },
+    {
+      "id": "A27",
+      "claim_short": "BDS renamed PP&D in 2025",
+      "claim_full": "The Bureau of Development Services (BDS) was renamed Portland Permitting & Development (PP&D) in 2025.",
       "topic": "definitions",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "portland.gov PP&D",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd"
+      },
+      "verified_truth": "BDS was renamed to Portland Permitting & Development in 2025."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Permits required across Titles 24/25/26/27",
+      "claim_full": "An ADU requires building (Title 24), plumbing (Title 25), electrical (Title 26), and mechanical (Title 27) permits.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC Titles 24-27",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/code/24, /25, /26, /27"
+      },
+      "verified_truth": "Standard Portland ADU permitting spans Titles 24 (Building), 25 (Plumbing), 26 (Electrical), and 27 (Heating/Ventilating)."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Sewer connection permit from BES",
+      "claim_full": "A sewer connection permit must come from the Bureau of Environmental Services (BES) at 503-823-7740.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portland.gov BES",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/bes"
+      },
+      "verified_truth": "BES handles sewer connection permits; phone number cited for verification."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Permit review 8\u201314 weeks",
+      "claim_full": "Standard ADU permit review at PP&D typically takes 8\u201314 weeks.",
+      "topic": "sequence",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": "portland.gov PP&D",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/zoning-land-use/land-use-review-fees-and-types/adjustment-reviews"
+      },
+      "verified_truth": "8\u201314 weeks is cited as a typical ADU review timeline; verify current cycle times with PP&D."
+    },
+    {
+      "id": "A31",
+      "claim_short": "Total timeline 6\u201314 months",
+      "claim_full": "From decision to move-in, the ADU process typically takes roughly 6\u201314 months.",
+      "topic": "sequence",
       "variants": [
         "enhanced"
       ],
       "specificity": 0.8,
       "actionability": 0.7,
-      "correctness": "correct",
+      "correctness": "correct-range",
       "importance": 3,
-      "citation": "33.266.150",
-      "verified_truth": "Long-term occupancy and long-term rental allowed; STR prohibited under the Shelter to Housing Continuum provisions.",
+      "citation": null,
       "citation_by_variant": {
-        "enhanced": "33.266.150"
-      }
+        "enhanced": null
+      },
+      "verified_truth": "Not specifically verified in this evaluation; consult Portland code/PP&D directly."
     },
     {
-      "id": "A19",
-      "claim_short": "No off-street parking required for ADU",
-      "claim_full": "No off-street parking is required for an ADU in R7.",
-      "topic": "zoning",
+      "id": "A32",
+      "claim_short": "All-in cost $250\u2013400k",
+      "claim_full": "A typical hired-out 600\u2013720 sq ft ADU costs about $250,000\u2013$400,000 all-in, with $40,000\u2013$60,000 in soft costs.",
+      "topic": "costs",
       "variants": [
-        "oob",
-        "mcp",
         "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "33.266",
-      "verified_truth": "Portland eliminated off-street parking requirements for ADUs per 33.266 amendments and HB 2001/2003.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "33.266"
-      }
-    },
-    {
-      "id": "A20",
-      "claim_short": "15% accessory footprint cap",
-      "claim_full": "Combined accessory structure footprint is capped at roughly 15% of lot area (~1,240 sqft on this lot).",
-      "topic": "size",
-      "variants": [
-        "mcp"
       ],
       "specificity": 1.0,
       "actionability": 0.6,
-      "correctness": "hedge-correct",
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "enhanced": null
+      },
+      "verified_truth": "Not specifically verified in this evaluation; cost ranges are planning estimates."
+    },
+    {
+      "id": "A33",
+      "claim_short": "Sewer upgrade may cost $5\u201315k",
+      "claim_full": "A sewer line upgrade for an additional unit may cost $5,000\u2013$15,000.",
+      "topic": "sewer",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.6,
+      "correctness": "correct-range",
       "importance": 2,
-      "citation": "Title 33",
-      "verified_truth": "Accuracy flags note this specific cap is plausible but not independently verified.",
+      "citation": null,
       "citation_by_variant": {
-        "mcp": null
-      }
+        "oob": null
+      },
+      "verified_truth": "Sewer upgrade cost range cited as a planning estimate; not verified."
     },
     {
-      "id": "A21",
-      "claim_short": "ADU SDC Waiver = 10-yr no-STR covenant",
-      "claim_full": "Portland's ADU SDC Waiver requires recording a 10-year covenant prohibiting short-term rental use, with a 150% penalty for violation.",
-      "topic": "costs",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 17.13/17.14",
-      "verified_truth": "All three describe the long-running ADU SDC Waiver with 10-year STR covenant; enhanced adds the 150% penalty figure.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 17.13/17.14"
-      }
-    },
-    {
-      "id": "A22",
-      "claim_short": "Temporary SDC exemption 2025-2028",
-      "claim_full": "Ordinance 192082 (July 2025) created a temporary SDC exemption for new dwelling units permitted Aug 15, 2025 \u2013 Sept 30, 2028.",
-      "topic": "costs",
+      "id": "A34",
+      "claim_short": "Existing house already sewer-connected",
+      "claim_full": "The existing house is already connected to the sanitary sewer in SE 174th Ave (Mid-County Sewer Project).",
+      "topic": "sewer",
       "variants": [
         "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 17.14.070 \u00a7J / Ord. 192082",
-      "verified_truth": "Accuracy flags confirm the ordinance number and window; enhanced adds the key caveat that ADUs are excluded.",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PCC 17.14.070 \u00a7J / Ord. 192082"
-      }
-    },
-    {
-      "id": "A23",
-      "claim_short": "Temporary SDC exemption excludes ADUs",
-      "claim_full": "The 2025\u20132028 temporary SDC exemption explicitly excludes ADUs and caretaker quarters, applying only to new dwelling units like duplex/triplex/fourplex.",
-      "topic": "costs",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "hedge-correct",
-      "importance": 5,
-      "citation": "PCC 17.14.070 \u00a7J",
-      "verified_truth": "Accuracy flags note this exclusion claim is specific to the enhanced response and warrants verification, but is plausible.",
-      "citation_by_variant": {
-        "enhanced": "PCC 17.14.070 \u00a7J"
-      }
-    },
-    {
-      "id": "A24",
-      "claim_short": "Free 15-min planner consultation",
-      "claim_full": "Portland Permitting & Development offers a free 15-minute planner consultation, reachable at 503-823-7300.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PP&D",
-      "verified_truth": "All three variants surface this free consultation as the cheapest first step; phone number 503-823-7300 confirmed in flags.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PP&D"
-      }
-    },
-    {
-      "id": "A25",
-      "claim_short": "PP&D address 1900 SW 4th Ave Suite 5000",
-      "claim_full": "Portland Permitting & Development is located at 1900 SW 4th Ave, Suite 5000, Portland OR 97201.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
+      "actionability": 0.7,
       "correctness": "correct",
       "importance": 3,
-      "citation": "PP&D",
-      "verified_truth": "Accuracy flags confirm PP&D address and phone in the enhanced response.",
+      "citation": "PortlandMaps/BES",
       "citation_by_variant": {
-        "enhanced": "PP&D"
-      }
+        "mcp": null,
+        "enhanced": "PortlandMaps"
+      },
+      "verified_truth": "Property data shows existing sewer connection; both MCP variants retrieved this from PortlandMaps."
     },
     {
-      "id": "A26",
-      "claim_short": "Pull permit history on PortlandMaps",
-      "claim_full": "Pull the existing house's permit history on PortlandMaps because unpermitted prior work must be permitted as part of a new ADU project.",
-      "topic": "process",
+      "id": "A35",
+      "claim_short": "Oregon Small Home Code sunset Jan 2 2026",
+      "claim_full": "Oregon's Small Home Specialty Code (HB 2423) sunsetted on January 2, 2026, leaving the 2023 ORSC as the applicable residential code.",
+      "topic": "definitions",
       "variants": [
-        "oob",
         "enhanced"
       ],
-      "specificity": 0.7,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": "PortlandMaps",
-      "verified_truth": "Standard Portland practice: outstanding unpermitted work must be resolved before new ADU permitting.",
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Oregon BCD",
       "citation_by_variant": {
-        "oob": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
+        "enhanced": "https://www.oregon.gov/bcd/codes-stand/pages/orsc-adoption.aspx"
+      },
+      "verified_truth": "Oregon Small Home Specialty Code (HB 2423) sunsetted January 2, 2026 per the accuracy flag."
     },
     {
-      "id": "A27",
-      "claim_short": "Title 11 tree review may apply",
-      "claim_full": "Tree removal or significant impact to a regulated tree triggers Title 11 review through Urban Forestry, with thresholds around 6 inches DBH on private property and any street tree.",
+      "id": "A36",
+      "claim_short": "Title 11 tree protection applies",
+      "claim_full": "Existing trees on the lot are governed by Title 11 and may constrain ADU placement.",
       "topic": "trees",
       "variants": [
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 4,
-      "citation": "Title 11",
-      "verified_truth": "Accuracy flags note the 6\" DBH threshold is likely off \u2014 Urban Forestry's actual private-property removal threshold is typically higher and the development-impact threshold differs.",
-      "citation_by_variant": {
-        "enhanced": "Title 11"
-      }
-    },
-    {
-      "id": "A28",
-      "claim_short": "Sewer connection through BES",
-      "claim_full": "Sewer/stormwater connection and capacity review go through the Bureau of Environmental Services, with potential SDC charges and possible lateral upsizing.",
-      "topic": "sewer",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "Title 17, BES",
-      "verified_truth": "Enhanced retrieved sewer-specific data (8\" PVC main, 6\" lateral) from MCP; BES owns sewer/stormwater review.",
-      "citation_by_variant": {
-        "enhanced": "Title 17, BES"
-      }
-    },
-    {
-      "id": "A29",
-      "claim_short": "Stormwater Simplified Approach likely qualifies",
-      "claim_full": "With soil group B, ~2% slope, and city-sump drainage, the lot will likely qualify for the BES Stormwater Manual's Simplified Approach.",
-      "topic": "sewer",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
       "actionability": 0.8,
-      "correctness": "correct-judg",
-      "importance": 3,
-      "citation": "BES Stormwater Management Manual",
-      "verified_truth": "Soil group B and 2% slope confirmed in accuracy flags; Simplified Approach is the appropriate path under those conditions.",
-      "citation_by_variant": {
-        "enhanced": "BES Stormwater Management Manual"
-      }
-    },
-    {
-      "id": "A30",
-      "claim_short": "Rockwood PUD serves water (not Portland)",
-      "claim_full": "Water service for this address is provided by Rockwood Water PUD, not the Portland Water Bureau.",
-      "topic": "address",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm Rockwood Water PUD serves this address.",
+      "importance": 3,
+      "citation": "PCC Title 11",
       "citation_by_variant": {
-        "mcp": null
-      }
+        "enhanced": "https://www.portland.gov/code/11"
+      },
+      "verified_truth": "Portland's Title 11 governs tree protection and can affect siting; standard Portland code reference."
     },
     {
-      "id": "A31",
+      "id": "A37",
       "claim_short": "Homeowner cannot DIY ADU electrical",
-      "claim_full": "A homeowner cannot perform their own electrical work on an ADU; a licensed electrical contractor is required.",
+      "claim_full": "Homeowners cannot perform their own electrical work on an ADU; a licensed electrical contractor is required.",
       "topic": "electrical",
       "variants": [
         "mcp"
       ],
       "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct",
+      "actionability": 0.7,
+      "correctness": "PARTIAL-WRONG",
       "importance": 3,
-      "citation": "Title 26",
-      "verified_truth": "Accuracy flags confirm electrical on a new ADU requires a licensed contractor under Portland rules.",
+      "citation": null,
       "citation_by_variant": {
         "mcp": null
-      }
-    },
-    {
-      "id": "A32",
-      "claim_short": "ADU permit fees $6k\u2013$10k",
-      "claim_full": "Permit fees for an ADU typically run $6,000\u2013$10,000 across building, plumbing, electrical, and mechanical.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": "PP&D fee schedule",
-      "verified_truth": "Accuracy flags note these ranges are presented as typical; verify against current PP&D fee schedules.",
-      "citation_by_variant": {
-        "enhanced": null
-      }
-    },
-    {
-      "id": "A33",
-      "claim_short": "Total SDCs $12k\u2013$19k",
-      "claim_full": "Combined SDCs (Water, BES sanitary and stormwater, Parks, Transportation) typically total $12,000\u2013$19,000 for an ADU.",
-      "topic": "costs",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": "Title 17",
-      "verified_truth": "Enhanced presents typical SDC range; flagged as plausible and consistent with recent Portland practice.",
-      "citation_by_variant": {
-        "enhanced": "Title 17"
-      }
-    },
-    {
-      "id": "A34",
-      "claim_short": "Project timeline 9\u201318 months",
-      "claim_full": "Realistic timeline from start to occupancy is 9\u201318 months including design, plan review, and construction.",
-      "topic": "sequence",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.8,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "Range is consistent with typical Portland ADU build timelines; not specifically verified in flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A35",
-      "claim_short": "OOB admitted zoning unverified",
-      "claim_full": "OOB explicitly admitted it could not verify the lot's zoning and told the resident to verify on PortlandMaps before spending money.",
-      "topic": "address",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.8,
-      "correctness": "admitted-gap",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "OOB inferred R7 from neighboring lots and Redfin data; this is the address-specific data gap that caps OOB usefulness at 2.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A36",
-      "claim_short": "ORSC Appendix Q for tiny dwellings \u2264400 sqft",
-      "claim_full": "Oregon Residential Specialty Code Appendix Q applies to dwellings \u2264400 sqft, allowing ladder/loft accommodations and reduced ceiling heights.",
-      "topic": "structural",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "ORSC Appendix Q",
-      "verified_truth": "Accuracy flags confirm ORSC Appendix Q applies to dwellings \u2264400 sqft.",
-      "citation_by_variant": {
-        "enhanced": "ORSC Appendix Q"
-      }
-    },
-    {
-      "id": "A37",
-      "claim_short": "Pre-application conference required for Type III/IV",
-      "claim_full": "A pre-application conference is required for Type III/IV land use reviews under 33.730/33.740 but not for a standard ADU.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "33.730/33.740",
-      "verified_truth": "Pre-app conferences are mandatory for higher-tier reviews per the cited chapters; ADUs typically don't trigger this.",
-      "citation_by_variant": {
-        "enhanced": null
-      }
+      },
+      "verified_truth": "Portland's Owner Doing Work / homeowner electrical permits do allow some homeowner-performed scope; the blanket claim is overstated."
     },
     {
       "id": "A38",
-      "claim_short": "Property owner is Karam/Janoura per assessor",
-      "claim_full": "County assessor records list ownership as Karam/Janoura with a 2020-04-09 sale date, which the resident should sanity-check before spending money.",
-      "topic": "address",
+      "claim_short": "Water service via Rockwood PUD",
+      "claim_full": "Water service to the property comes from Rockwood Water PUD rather than the Portland Water Bureau.",
+      "topic": "plumbing",
       "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "Multnomah County assessor",
-      "verified_truth": "Accuracy flags confirm ownership data was retrieved from the assessor; arguably scope-creep but factually grounded.",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": null
-      }
-    },
-    {
-      "id": "A39",
-      "claim_short": "Property IDs R337949 / 1S3E06AB 8800",
-      "claim_full": "The Multnomah County property ID is R337949 and state ID is 1S3E06AB 8800.",
-      "topic": "address",
-      "variants": [
-        "mcp",
-        "enhanced"
+        "mcp"
       ],
       "specificity": 1.0,
       "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "verified_truth": "Property and state IDs confirmed via PortlandMaps lookup in accuracy flags.",
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": null,
       "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PortlandMaps"
-      }
+        "mcp": null
+      },
+      "verified_truth": "Service-area boundary at this address should be verified; Rockwood Water PUD attribution is flagged for verification."
+    },
+    {
+      "id": "A39",
+      "claim_short": "Cottage cluster up to 16 units",
+      "claim_full": "A cottage cluster on this R7 lot could include up to 16 detached units.",
+      "topic": "size",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.3,
+      "correctness": "WRONG",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "The 16-unit cottage-cluster figure is inflated for an ~8,276 sq ft R7 lot; verify density caps under PCC 33.110."
     },
     {
       "id": "A40",
-      "claim_short": "DevHub PDX is the permit submission portal",
-      "claim_full": "Building and trade permits are submitted online through Development Hub PDX (DevHub PDX).",
-      "topic": "permits",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PP&D",
-      "verified_truth": "DevHub PDX is the standard online permit portal for Portland.",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PP&D"
-      }
-    },
-    {
-      "id": "A41",
-      "claim_short": "Cottage cluster needs \u22657,000 sqft",
-      "claim_full": "Cottage cluster development requires at least 7,000 sqft in R7, allowing up to 16 detached units but no ADUs.",
-      "topic": "zoning",
+      "claim_short": "Visitability standard for second ADU",
+      "claim_full": "On two-ADU lots in R7 one unit must meet a visitability standard (no-step entry, accessible bathroom, \u2265200 sq ft accessible area).",
+      "topic": "size",
       "variants": [
         "mcp"
       ],
@@ -813,11 +799,85 @@
       "actionability": 0.5,
       "correctness": "hedge-correct",
       "importance": 2,
-      "citation": "Title 33",
-      "verified_truth": "Accuracy flags note this claim is plausible but not independently verified.",
+      "citation": null,
       "citation_by_variant": {
         "mcp": null
-      }
+      },
+      "verified_truth": "Visitability standard for two-ADU R7 lots is flagged for verification in PCC 33.205."
+    },
+    {
+      "id": "A41",
+      "claim_short": "Required outdoor area 250 sf",
+      "claim_full": "R7 requires at least 250 sq ft of outdoor area with one 12 ft \u00d7 12 ft area.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PCC 33.110.240",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.240, https://www.portland.gov/code/33/100s/110"
+      },
+      "verified_truth": "Not specifically verified in this evaluation; consult PCC 33.110.240 directly."
+    },
+    {
+      "id": "A42",
+      "claim_short": "Glossary defines acronyms (ADU/THOW/SDC/etc.)",
+      "claim_full": "The response defines key acronyms (ADU, THOW, SDC, BDS, BES, PBOT, PP&D, PCC, ORSC, ROW, FAR, R7) for a non-expert reader.",
+      "topic": "definitions",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "enhanced": null
+      },
+      "verified_truth": "The enhanced response includes a comprehensive glossary supporting plain-English audience appropriateness."
+    },
+    {
+      "id": "A43",
+      "claim_short": "Owner-of-record sanity check",
+      "claim_full": "County records show the property owned by Karam & Janoura with a 2020 sale price of $240K, prompting the AI to flag a potential ownership mismatch.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Multnomah County / PortlandMaps",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/"
+      },
+      "verified_truth": "Owner-of-record information is consistent with retrieved property data; flagged as a sanity check for the user."
+    },
+    {
+      "id": "A44",
+      "claim_short": "OOB did not retrieve property data",
+      "claim_full": "The OOB response inferred zoning from neighboring listings rather than retrieving the property's specific data.",
+      "topic": "citations",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.3,
+      "correctness": "admitted-gap",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": "Redfin listings"
+      },
+      "verified_truth": "OOB explicitly told the user to verify zoning at portlandmaps.com and inferred R7 from neighbor listings instead of retrieving property-specific data."
     }
   ]
 }

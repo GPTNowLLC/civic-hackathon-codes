@@ -1,0 +1,703 @@
+{
+  "scenario": "lot-division",
+  "scenario_label": "Lot division / condos",
+  "address": "4435 SE Belmont St, Portland, OR 97215",
+  "neighborhood": "Sunnyside",
+  "evaluator_model": "claude",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this for you. This needs real property data, not vibes \u2014 let me pull what's actually on the books for this lot.Let me pull up the property data directly from PortlandMaps.Big find: this isn't a single-family lot \u2014 it's already a **12-unit multifamily building** built in 1911 on a 6,000 sqft lot. That changes your question significantly. Let me get the actual zoning and dig into what's possible.Let me verify the specific zoning at 4435 SE Belmont via PortlandMaps directly.Let me now check the actual zoning on PortlandMaps and Portland's specific rules for condo conversion of existing apartments.Let me verify the specific zoning at this address one more time, and check Portland's design overlay status.I've got enough to give you a real answer. Let me lay it out.\n\n## Reality check first\n\nThat address isn't a single-family or duplex lot you'd carve up; **4435 SE Belmont is already a 12-unit multifamily building** (built 1911, 8,952 SF on a ~6,000 SF corner lot at SE 44th & Belmont, 6 parking spaces, separate gas/electric per unit). It's currently listed for sale at around $1.65M, down from $1.749M, with the broker pitching \"repositioning strategies\"; that's industry shorthand for either rent value-add or condo conversion.\n\nSo when you say \"divide the lot and develop condos,\" there are actually three different things you might mean, and only one of them is realistic on this site.\n\n## The three paths\n\n| Path | What it means | Feasibility here |\n|---|---|---|\n| **Condo conversion** | Same building, but each of the 12 units becomes a separately-deeded condo | **Realistic.** This is almost certainly what makes economic sense |\n| **Lot subdivision** | Physically split the parcel into separate tax lots | Not viable while the existing building stands; it covers most of the 6,000 SF |\n| **Teardown + redevelop** | Demolish, build a new 4-5 story mixed-use condo project | Zoning allows it; economics are brutal (more below) |\n\n## Why condo conversion is the real play\n\nBelmont in this stretch is zoned **CM2 (Commercial Mixed-Use 2) with a Design overlay (d)**, which permits residential, mixed-use, up to 4 stories (5 with bonuses). That's permissive, but the existing 1911 building plus a 6,000 SF lot doesn't leave room to subdivide land without taking it down. Three structural advantages this property already has for condoizing:\n\n1. **Separate gas and electric meters per unit** (per the listing) \u2014 that's the most expensive part of conversion already done\n2. **Corner lot with dedicated parking** \u2014 6 spaces for 12 units, which clears a common conversion hurdle\n3. **Each unit has its own bath and kitchen** already (it's already organized as discrete dwelling units)\n\n## The Oregon condo conversion process (ORS Chapter 100)\n\nThis is the part most people underestimate. To convert, you become \"the declarant\" and have to:\n\nGive each tenant a Notice of Conversion at least 30 days before presenting an offer to sell, and at least 120 days before recording the condominium declaration. The notice must include a good-faith price estimate, monthly common-element/HOA estimate, info about financial assistance, and the tenant's rights. A copy of the notice also has to go to the Mayor of Portland.\n\nExisting tenants get a **right of first refusal**: before you can sell a unit to anyone else, you have to offer it to the sitting tenant on the same terms; the offer terminates 60 days after the tenant receives it, and you can't sell to a third party at a more favorable price for 60 days after that.\n\nCrucially: a notice of conversion does NOT constitute a notice to terminate tenancy. You can convert and keep tenants as renters of the now-condo units.\n\nYou also have to file declaration documents with the Oregon Real Estate Agency (ORS 100 governs the entire packet: declaration, plat, bylaws, disclosure statement, reserve study, etc.).\n\n## The Portland tenant-relocation gotcha\n\nThis is where novice investors get burned. If during conversion you trigger any **no-cause termination** or **rent increase of 10% or more**, Portland's relocation ordinance kicks in: $2,900 (studio), $3,300 (1BR), $4,200 (2BR), or $4,500 (3BR+) per displaced tenant. With 12 units, a clumsy conversion could cost you $35K-$55K in relocation fees on top of the conversion work itself. The clean path is to convert without disturbing tenancies and let units turn over naturally.\n\n## The numbers to model\n\nQuick back-of-envelope (you'd want a real broker pricing):\n\n- **Acquisition**: ~$1.65M\n- **Conversion soft costs**: $50K-$150K (legal, plat survey, Oregon Real Estate Agency filings, reserve study, HOA formation, declaration drafting)\n- **Conversion hard costs**: variable, potentially significant for a 1911 building (fire separations between units, possibly sprinklers, lead paint disclosures, energy code touchpoints, accessibility where triggered)\n- **Per-unit retail**: small 1BR condos in inner SE Portland have been trading roughly in the $200K-$325K range depending on size/condition; the 838 SE 38th Ave Belmont/Hawthorne corridor 2BR/2BA listing is a useful comp to chase\n- **Gross at exit**: 12 \u00d7 ~$225K-$275K = $2.7M-$3.3M\n\nThe lending question matters: a 12-unit condo association is on the small side for Fannie/Freddie warrantability, which can crimp your buyer pool to cash and portfolio lenders unless you structure the HOA carefully.\n\n## What I'd verify before going further\n\nPer your \"don't trust online\" instinct, none of this is gospel until you confirm with the city. Concrete next steps:\n\n1. **Pull the actual zoning** at portlandmaps.com (search the address; the property detail page shows base zone, overlays, comp plan designation, and any plan-district flags I haven't been able to confirm; the Sunnyside Conservation District boundary may or may not touch this parcel and would change design-review requirements)\n2. **Free 15-minute call with a Portland city planner** at 503-823-7300, M-F 8-5, ask specifically about (a) condo conversion path on a 1911 multifamily building in CM2(d), (b) whether the Sunnyside Conservation District applies, (c) any plan district overlays\n3. **Talk to a condo conversion attorney** in Portland (Harker | Lepore is one firm that publishes on this; there are others). Ask for a fixed-fee scope for declaration + plat + filings\n4. **Get a code/feasibility review from an architect** familiar with 1911 multifamily; you need to know whether existing wall/floor assemblies meet current condo conveyance code or what bring-up costs look like\n5. **Verify the lot size discrepancy** (Redfin says 6,000 SF; the MLS says 0.2 acres \u2248 8,712 SF; Multnomah County's record is the source of truth)\n\n## One thing that might actually delight you\n\nIf the value-add math is what's pulling you here, there's a less obvious play worth modeling alongside the condo conversion: **CM2 + corner lot + Belmont retail demand** means a teardown-and-redevelop scenario could yield ~25-40 mixed-use units (4 stories, ground-floor retail) on the same parcel. The 5-story 45-unit project at 3150 SE Belmont a few blocks away is the analog. That's a much bigger capital stack and a 3-5 year timeline, but on a per-unit basis the development math can beat conversion if the retail rent supports it. Worth at least a one-page pro forma comparison before you commit to the conversion path; the answer probably depends on whether you can stomach a development project vs. a value-add hold.\n\nWant me to dig into the conversion-vs-redevelop pro forma side-by-side, or pull recent inner-SE small-condo comps to sharpen the exit pricing assumption?"
+    },
+    "mcp": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this using Portland's official property data rather than guessing \u2014 let me pull the actual records.Let me check for any current news or development plans on this specific address, plus get a visual.# 4435 SE Belmont \u2014 Development Analysis\n\n**Quick answer: Yes, but the more interesting story is what's already in motion on this lot, and the listing context.**\n\nA heads-up before I dig in: I pulled this from the Multnomah County / Portland Maps records, and the owner of record is **Monterey Cypress LLC** (120 SE 28th Ave), not Yex Labs. The property is also currently listed for sale through Apex Real Estate Partners at around **$1.65\u20131.78M, 100% leased, 6.0% in-place CAP rate** (MLS# 520360821, listed 10/20/2025). I'm assuming you're evaluating this as an acquisition / development play; if it's a different scenario, the analysis still holds, just say the word.\n\n## What's actually on the lot today\n\n| Item | Value |\n|---|---|\n| Lot size | 8,763 sq ft (0.20 acres); legal: PARADISE SPR TR Block 4, Lots 3 & 4 |\n| Existing structure | 12-unit walk-up apartment, 8,952 sq ft, built **1911** |\n| Zoning | **CM2** (Commercial Mixed Use 2) + **\"d\" Design overlay** |\n| Comp plan | Mixed Use - Urban Center |\n| Last sale | Oct 2020, $1,585,100 |\n| Ownership | Monterey Cypress LLC |\n\nNo historic district, no conservation district, no plan district, no environmental overlays. Walkable, transit-rich location in Sunnyside.\n\n## What the current owner has *already* done (this is the buried lead)\n\nTwo recent land use cases are recorded on this property \u2014 this matters a lot for any buyer:\n\n1. **PR 2023-050963 \u2014 Property Line Adjustment**: Status \"Decision Rendered\" as of **April 15, 2025**. Someone already pushed a property-line adjustment through to a final decision.\n2. **LU 2023-113827 \u2014 Type 2 Adjustment**: Status \"Recorded\" as of **April 17, 2024**. A zoning Adjustment (likely a setback, step-down height, or coverage modification under PCC 33.805) has been approved and recorded against the title.\n\nTranslation: the seller has been pre-positioning this for redevelopment or splitting. The specific case files (available at the BDS Records Office or via a public records request to Portland Permitting & Development) are worth pulling before you make an offer; whatever was approved either runs with the land or has a sunset clause.\n\n## Can the lot be divided?\n\n**Yes, in principle.** Per Chapter 33.130 / 33.613, \"There is no required minimum lot size for development of land in commercial/mixed use zones,\" and the lot dimension standards for CM2 require only a 10-foot minimum front lot line. Your existing parcel is about 44 feet wide along Belmont and roughly 200 feet deep, so a partition into two lots (front-to-back or side-by-side) is geometrically plausible. The April 2025 PR decision suggests this work is partly done already.\n\n**But:** the existing 12-unit building covers most of the lot, so you'd either need to (a) work around the existing footprint, or (b) demolish and rebuild. Either path triggers Design Review under the \"d\" overlay.\n\n## Can it be developed into condos?\n\nThree distinct paths, only one of which is really a zoning question:\n\n**Path A \u2014 Condo-convert the existing 12 units (no construction).**\nThis is a *legal* exercise under ORS Chapter 100 (Oregon Condominium Act), not a land-use one. You record a Declaration, plat, and bylaws; the city doesn't approve or deny. The friction is tenant law: Portland's mandatory tenant relocation assistance ordinance and Oregon's just-cause statutes apply if you displace anyone, and Oregon condo conversion law gives existing tenants 120-day notice and right of first refusal. With a 100%-leased building, this gets expensive fast (roughly $2,900\u2013$4,500/unit in relocation, plus 90+ days of carrying cost per holdout).\n\n**Path B \u2014 Tear down and build new condos.**\nZoning ceiling at this lot:\n- Max FAR 2.5:1 \u2192 about **21,900 sq ft** of building (4:1 with bonuses \u2192 ~35,000 sq ft, but bonuses require things like affordable housing or plaza dedication)\n- Minimum density: 1 unit per 1,450 sq ft of site area \u2192 **at least 6 units required**, supporting up to ~30 small units realistically\n- Base height 45 ft (4 stories), with step-down rules near adjacent residential zones\n- **Design Review mandatory** because of the \"d\" overlay (Type 2 procedure, ~6 months, ~$15\u201325K in city fees plus architect)\n\n**Path C \u2014 Hybrid (split the lot, keep building on one parcel, develop the other).**\nMost surgical option, and it lines up with the property line adjustment that already cleared. You'd preserve income from the existing building while developing infill behind or beside it. Possibly what the current owner was setting up.\n\n## The risks I'd actually worry about\n\n1. **Underground Storage Tanks.** The Portland Maps records show **four UST records at this address** (likely historic heating oil tanks, common for 1911 buildings). This is the single biggest hidden cost on a redevelopment scenario; budget a Phase I ESA before earnest money, and a Phase II if the Phase I flags anything. DEQ remediation can run $20\u201380K+ per tank.\n2. **Tenant displacement liability.** A 100%-leased 12-unit building means meaningful relocation costs and timeline if you're going condo-conversion or demolition.\n3. **The 1911 building.** Not currently listed historic, but it's eligible for evaluation. If a future Historic Resource Inventory captures it before you pull a demo permit, the calculus changes. Conversely, preserving and converting could unlock federal historic tax credits (20% of qualifying rehab costs).\n4. **MULTE / HOLTE eligibility.** The property *is* in the eligibility area for both programs. If you go heavy on affordable units, there's real tax abatement upside worth modeling.\n\n## What I'd do next if I were you\n\n1. **Pull the actual LU 23-113827 and PR 23-050963 case files.** They're public; what was approved transfers with the property and could be either a gift or a constraint.\n2. **Schedule a free 15-minute Early Assistance with Portland Permitting & Development** (formerly BDS) before you go under contract. A planner will tell you exactly what the d-overlay Design Review looks like for your concept.\n3. **Order a Phase I ESA** for the USTs. Non-negotiable on this property.\n4. **Talk to a Portland land-use attorney** (someone like Carrie Richter at Bateman Seidel, or Jennifer Bragar at Tomasi Bragar) for an hour on the condo-conversion vs. partition question; the cost-benefit math is very tenant-law-driven.\n\nWant me to dig deeper on any of these? The two land use cases are the highest-value next step; I can try pulling more detail on what specifically was approved if you want.\n\n*Standard disclaimer: I'm an AI looking at public records, not your attorney or development consultant. Treat this as a starting map, not the territory.*"
+    },
+    "enhanced": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "# Splitting and developing 4435 SE Belmont St into condos: a plain-English feasibility look\n\n*Prepared as a knowledgeable-friend explainer, not legal advice. Verify everything before spending money. Confirm zoning on PortlandMaps (https://www.portlandmaps.com/) before paying for a survey or plans.*\n\n---\n\n## The short answer (please read this first)\n\n**Two big surprises up front, before anything else:**\n\n**Surprise #1: Your lot is not residential.** The zoning at 4435 SE Belmont St is **CM2 (Commercial Mixed Use 2)** with a **\"d\" Design Overlay**, combined as `CM2d(MU-U)`. That's confirmed on PortlandMaps (https://www.portlandmaps.com/detail/property/4435-SE-BELMONT-ST/R233406_did/). This matters a lot, because everything in your question (RIP, R2.5, R5, \"middle housing,\" ADU rules, single-dwelling minimum lot sizes) belongs to the **residential** code. Your property is governed by the **commercial mixed-use** code instead, which is a totally different chapter (PCC 33.130, https://www.portland.gov/code/33/100s/130). The good news: CM2 is *more* permissive for housing than residential zones, not less. You can build apartments or condos by right, you don't need to split the lot to add units, and the height/density limits are higher.\n\n**Surprise #2: The owner of record is \"MONTEREY CYPRESS LLC,\"** with a mailing address at 120 SE 28th Ave, Portland (also confirmed on PortlandMaps for property R233406). If you own the LLC, ignore this. If you don't, you may want to double-check what you actually own before spending money on a feasibility study.\n\n**Now to your actual question.** Realistically: yes, multi-unit residential, including condos, is allowed by right on this lot under the commercial mixed-use rules in PCC 33.130 (https://www.portland.gov/code/33/100s/130). You can probably support roughly **3 to 5+ residential units** depending on whether you keep retail on the ground floor, what configuration you build, and how many parking and design choices you make. You probably do **not** need to physically split the lot at all to do condos; condos are a form of *ownership* that sits on top of one piece of land, not a way of cutting it up (ORS 100.022, https://oregon.public.law/statutes/ors_100.022). If you wanted *separate fee-simple lots* (one lot per townhouse, the way many recent Portland row-house projects work), that's a separate land-division process under PCC 33.662 (https://www.portland.gov/code/33/600s/662), and it's harder, slower, and more expensive.\n\n**Rough order of magnitude.** Soft costs alone (early assistance, land-use review if needed, design, surveys, condo declaration, attorney) run roughly **$30,000 to $80,000+** before you've turned a shovel. Construction of a small new infill building runs **$300/sq ft to $500+/sq ft** in Portland right now, so a 4-unit, 4,000 sq ft new building lands at **roughly $1.2M to $2M+** in hard costs alone. Timeline from \"I'd like to do this\" to keys in hand is **18 to 36 months** for a small project, and longer if you trigger Design Review. Plan around two summers of weekends doing paperwork and roughly 4 to 9 months of city review for the major approvals.\n\n**One huge financial wrinkle in your favor right now:** Portland has a temporary citywide waiver of System Development Charges (those big city impact fees for new buildings) for permits issued **August 15, 2025 through September 30, 2028** for newly created housing units (https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption). For a small condo project, that can mean **$15,000 to $40,000+ saved per new unit**. This window is the single most important reason to move quickly if you're going to do this.\n\nThe rest of this document walks through the details with citations. Skip to section 6 if you want the action list first.\n\n---\n\n## 1. What is your lot, today?\n\n**Zone: CM2 (Commercial Mixed Use 2)** with a **Design (\"d\") overlay**, comprehensive plan designation **MU-U (Mixed Use - Urban Center)**. The CM2 base zone rules are in PCC 33.130 (https://www.portland.gov/code/33/100s/130). The Design overlay rules are in PCC 33.420 (https://www.portland.gov/code/33/400s/420).\n\n**What CM2 actually means in plain English.** CM2 is meant for **walkable neighborhood main streets** \u2014 buildings up to about 45 feet tall (roughly 4 stories), commercial on the ground floor allowed but not required, and apartments or condos allowed above or instead, as described in the purpose statement of PCC 33.130 (https://www.portland.gov/code/33/100s/130). Belmont was deliberately rezoned this way during Portland's 2018 Better Housing by Design / Mixed Use Zones project to encourage exactly this kind of mid-rise infill housing on commercial corridors.\n\n**What the \"d\" Design overlay actually means in plain English.** When you build something new (or do a substantial remodel), the city reviews how the building looks from the street: window placement, ground-floor entrances, materials, articulation, and similar things, under PCC 33.420 (https://www.portland.gov/code/33/400s/420). For most small projects in CM2, you have **two paths**: meet the objective **Design Standards** (a checklist you can pass without a hearing) under PCC 33.420.045 and 33.420.055 (https://www.portland.gov/code/33/400s/420), or go through the discretionary **Design Review** process under PCC 33.825 (https://www.portland.gov/code/33/800s/825). The standards path is faster and cheaper. The discretionary path is slower (often 6+ months) but lets you ask for flexibility on the standards.\n\n**Lot size and shape.** Per the Multnomah County assessor record on PortlandMaps (property ID R233406, state ID 1S2E06BB 7900), this is an **L-shaped corner-ish lot** with frontage on SE Belmont. From the parcel geometry returned by PortlandMaps, the bounding-box footprint is roughly **100 feet wide by 110 feet deep**, and the actual L-shape works out to **roughly 8,000 to 8,500 square feet**. Important: get an actual survey. The PortlandMaps geometry is not survey-grade and the L-shape is unusual. The site address on file is \"**4435-4437 SE Belmont St**\" \u2014 that hyphenated address strongly suggests there are already **two units** (a duplex or storefront-with-apartment configuration) on the property, which is consistent with a 1911-vintage Belmont commercial building.\n\n**No extra overlays beyond Design.** PortlandMaps shows: no historic district, no national-register district, no conservation district, no plan district, no environmental overlay, no Centers Main Street overlay (PCC 33.415, https://www.portland.gov/code/33/400s/415, which would have added more main-street rules but doesn't apply here). No mapped landslide hazard, no FEMA flood hazard, no steep slope, no liquefaction zone. No heritage trees on the parcel. The property *is* in the **Sunnyside neighborhood** and falls within the **Belmont Area Business Association** (http://belmontdistrict.org/), but neither of those is a regulatory overlay; they are just neighborhood boundaries.\n\n**Past land-use cases on file.** PortlandMaps shows two prior cases at this property: **PR 23-050963 PLA** (a Property Line Adjustment from 2023) and **LU 23-113827 AD** (an Adjustment from 2023). A Property Line Adjustment is processed under PCC 33.677 (https://www.portland.gov/code/33/600s/677) and means somebody recently moved a property line here. An Adjustment is processed under PCC 33.805 (https://www.portland.gov/code/33/800s/805) and is a request for relief from a specific zoning standard. **Pull these case files** before you do anything else; they will tell you about any conditions of approval that still apply to the property.\n\n---\n\n## 2. Can the lot be divided?\n\n**Bottom line: probably yes, but you almost certainly don't need to.** For your *condo* question, splitting the lot is the wrong tool. Condos sit on top of one piece of land. You'd only physically split the lot if you wanted **separate fee-simple lots** (one deed per unit, like row houses on individual skinny lots).\n\n**The plain-English vocabulary:**\n\n| Action | Plain English | Lots after | Code | Typical timeline |\n|---|---|---|---|---|\n| **Property Line Adjustment (PLA)** | Move an existing line between two lots that already exist. Cheapest, fastest. | Same number, different shape | PCC 33.677 (https://www.portland.gov/code/33/600s/677) | 4\u20138 weeks |\n| **Partition** | Split one lot into 2 or 3 lots. | 2 or 3 | PCC 33.662 for commercial zones (https://www.portland.gov/code/33/600s/662) | 6\u201312 months |\n| **Subdivision** | Split one lot into 4 or more lots. | 4+ | PCC 33.662 (https://www.portland.gov/code/33/600s/662) | 9\u201318 months |\n| **Replat** | Reshape lots within an existing recorded subdivision plat. | Same or different number | PCC 33.675 (https://www.portland.gov/code/33/600s/675) | 6\u201312 months |\n\nThe one-sentence summary: **for a condo project, you do not need any of these.** For a fee-simple townhouse-on-its-own-lot project, you'd need a partition or subdivision under PCC 33.662 (https://www.portland.gov/code/33/600s/662).\n\n**Important: Chapter 33.660 does NOT apply to your lot.** PCC 33.660 (https://www.portland.gov/code/33/600s/660) is the land-division chapter for **residential zones only**. Because you're in CM2, your land-division chapter is **PCC 33.662** (https://www.portland.gov/code/33/600s/662), titled \"Review in CI, Commercial/Mixed Use, Employment, & Industrial Zones.\" This is one of the most common mix-ups for homeowners on commercial corridors.\n\n**Minimum lot dimensions in CM2.** The lot-dimension rules for commercial zones are in PCC 33.613 (https://www.portland.gov/code/33/600s/613) and the underlying base-zone tables in PCC 33.130 Table 130-1 and Table 130-2 (https://www.portland.gov/code/33/100s/130). For most CM2 splits, the practical floor on lot size is roughly **1,500 to 2,500 square feet per unit** depending on whether you have ground-floor retail, with no fixed minimum lot square footage like in residential zones. The frontage and width minimums are also more flexible than residential.\n\n**RIP / \"middle housing\" rules don't apply to your lot.** The **Residential Infill Project (RIP)** and Oregon's HB 2001 \"middle housing\" framework (duplex/triplex/fourplex/cottage cluster) only apply in **residential** zones (R2.5, R5, R7, R10, R20). They are codified in PCC 33.110 (https://www.portland.gov/code/33/100s/110) for residential, and in the middle-housing land-division chapter PCC 33.671 (https://www.portland.gov/code/33/600s/671). None of those apply on a CM2 lot. **The reason you can already build multiple units here is that CM2 allows multifamily by right** under the use tables in PCC 33.130.100 (https://www.portland.gov/code/33/100s/130), independent of RIP or HB 2001.\n\n**Flag lots, skinny lots, and alley access.** These geometries are residential-zone concepts (PCC 33.110, https://www.portland.gov/code/33/100s/110, and PCC 33.611, https://www.portland.gov/code/33/600s/611) and don't really translate to CM2. Your L-shape is unusual and may simply reflect that the original 1911 platting wrapped around an existing building. The L is workable; it's just something a surveyor and architect will need to design around.\n\n**Trees.** Tree rules live in **Title 11 (Trees)** at https://www.portland.gov/code/11. The chapter that applies to development is **PCC 11.50, Trees in Development Situations** (https://www.portland.gov/code/11/50). The on-site tree density requirements in PCC 11.50.050 (https://www.portland.gov/code/11/50/050) require a certain amount of tree canopy after development, calculated based on lot size. **Important nuance:** under PCC 11.50.040 (https://www.portland.gov/code/11/50), trees that are 20 inches in diameter or larger must generally be preserved or you have to pay a per-inch mitigation fee into the city's Tree Fund. Walk your lot before you fall in love with a building footprint; one mature tree in the wrong place can rewrite your design.\n\n**Stormwater (BES rules).** The **Bureau of Environmental Services (BES)** is the city bureau that runs sewer and stormwater (https://www.portland.gov/bes). Any new development that adds impervious surface (roof, driveway, patio) over a city threshold must manage stormwater on-site according to the **BES Stormwater Management Manual** (https://www.portland.gov/bes/stormwater/swmm). The Sunnyside-area sewer is part of Portland's older **combined sewer** system, which means the city is especially picky about not adding more flow during big storms. Realistically, expect to need a **drywell, a rain garden, or another on-site infiltration system**. Your lot doesn't show any mapped landslide or flood hazard per PortlandMaps, which makes this easier than it would be on a hillside lot.\n\n---\n\n## 3. Can you do condos specifically?\n\n**Yes. And the city's zoning rules don't actually care.** That's the most counter-intuitive thing about condos in Oregon: under **ORS 100.022** (https://oregon.public.law/statutes/ors_100.022), called \"Planning and property law do not affect condominium form of ownership,\" cities are explicitly forbidden from regulating *whether* a building is owned as condos versus apartments. From the city's zoning perspective, \"1 building with 4 dwelling units\" is the same project either way. The city cares about the *building*. The state cares about the *ownership structure*.\n\n**What condos actually are, in plain English.** A condominium is a legal way of slicing up ownership of a single building so that each unit owner owns the inside of their unit and a fractional share of everything else \u2014 the roof, the walls, the land, the hallway. The legal framework is the **Oregon Condominium Act** in **ORS Chapter 100** (https://oregon.public.law/statutes/ors_chapter_100). To create condos in Oregon, you record:\n\n- A **declaration** that legally submits the property to condo ownership, with required contents listed in **ORS 100.105** (https://oregon.public.law/statutes/ors_100.105)\n- A **condominium plat** showing the unit boundaries, drawn by a licensed surveyor, recorded under **ORS 100.115** (https://oregon.public.law/statutes/ors_100.115)\n- **Bylaws** for the unit-owner association\n- Approval from the **Oregon Real Estate Agency / Real Estate Commissioner** under **ORS 100.110** (https://oregon.public.law/statutes/ors_100.110) and **ORS 100.015** (https://oregon.public.law/statutes/ors_100.015)\n- For projects sold to the public, a **disclosure statement** (called a \"Public Report\") under **ORS 100.655** (https://oregon.public.law/statutes/ors_100.655)\n\n**Three common ownership structures, compared.** Plain-English: same building shape, three completely different legal outcomes for who owns what.\n\n| Structure | Who owns the land | Who owns the building | Annual overhead | Best for |\n|---|---|---|---|---|\n| **Condominiums** (ORS Chapter 100, https://oregon.public.law/statutes/ors_chapter_100) | All owners as common element | Each unit individually + shared common elements; HOA manages all | HOA, master insurance, reserves, annual filings (ORS 100.480, https://oregon.public.law/statutes/ors_100.480) | Selling individual units; buyers want their own deed |\n| **Townhouses on their own lots** (PCC 33.662, https://www.portland.gov/code/33/600s/662) | Each owner owns their land + house | No shared elements; no HOA needed | None required, sometimes a small association for shared driveway | Townhouse-style new construction; simpler than condo legally |\n| **Apartments** (one owner, multiple rentals) | You / your LLC | You / your LLC; tenants rent | You manage, you pay all maintenance | Hold for cash flow; sell whole building later |\n\n**What's realistically allowed and easy on this CM2 lot:**\n\n- **Apartments** \u2014 easiest. By right under PCC 33.130 (https://www.portland.gov/code/33/100s/130). No land-division review. Just a building permit (Title 24, https://www.portland.gov/code/24).\n- **Condominiums** \u2014 same building permit path as apartments, plus the ORS 100 condo paperwork. The extra cost is mostly legal and surveyor work (typically **$8,000 to $25,000+** for a small project), plus ongoing HOA setup and annual filings.\n- **Townhouses on their own fee-simple lots** \u2014 hardest. Triggers a partition or subdivision under PCC 33.662 (https://www.portland.gov/code/33/600s/662), which is a 6-to-18-month land-use review process. Almost no one does this on CM2 corridor lots; the easier and more common pattern is condos.\n\n**Practical recommendation if condos are your goal:** build the multi-unit building under a single building permit, then convert ownership to condos at the end with a condo declaration and plat. You don't have to \"decide\" early whether it's apartments or condos for purposes of the city. You do have to decide for purposes of financing (some lenders treat condos differently), and you need to plan the building so each unit can be legally separated (independent utility metering, fire-rated party walls, etc.).\n\n---\n\n## 4. Permits and approvals you'll likely need, in order\n\n**Important name change.** What used to be called **BDS (Bureau of Development Services)** is now **PP&D (Portland Permitting & Development)**. The city moved permit processing under this consolidated umbrella in 2024. Same staff, mostly same building (1900 SW 4th Ave), new URL: https://www.portland.gov/ppd. Old `portland.gov/bds` links may redirect.\n\n**Step-by-step, in the order things actually happen:**\n\n**(a) Free 15-minute phone consultation with a city planner.** Plain-English step: call the planner first, before doing anything else. Free. Run by **PP&D Land Use Services**, 503-823-7300 (https://www.portland.gov/ppd/early-assistance). Confirms zoning, overlays, and what reviews you'll need. Takes 1\u20132 business days to get the callback.\n\n**(b) Public Works Inquiry (PWI), if you're doing 1\u20132 housing units only.** Plain-English: PP&D and PBOT look at whether the street, sewer, and water in front of your property can support what you want to build. Free for the basic inquiry. Run by PP&D and **PBOT (Portland Bureau of Transportation, https://www.portland.gov/transportation)**. Code reference: this is administrative, not a separate code chapter. For projects of 3+ units, you'll go straight to Early Assistance instead. (https://www.portland.gov/ppd/early-assistance)\n\n**(c) Early Assistance with PP&D Land Use Services.** Plain-English: a paid one-hour appointment where city planners look at your specific proposal and tell you everything you'll trip over. Strongly recommended. Costs roughly **$1,400 to $3,500** for the meeting type that suits a CM2 project (https://www.portland.gov/ppd/zoning-land-use/early-assistance/early-assistance-review). Takes about 4\u20138 weeks to schedule and complete. Submit by emailing **landuseintake@portlandoregon.gov**. Code: this is described in PP&D's procedures rather than a specific Title 33 chapter.\n\n**(d) Land Use Review (LU), only if needed.** For a *condo or apartment* project that meets the Design Standards in PCC 33.420.055 (https://www.portland.gov/code/33/400s/420), you usually do **not** need a separate land-use review. You go straight to building permit. If you trigger discretionary **Design Review**, that's a Type II or Type III process under PCC 33.825 (https://www.portland.gov/code/33/800s/825), filed with PP&D, costing roughly **$8,000 to $25,000+** in city fees alone, and adding **4\u20139 months** to your timeline. If you also trigger an Adjustment (asking for relief from a specific code standard) under PCC 33.805 (https://www.portland.gov/code/33/800s/805), add another **$5,000 to $10,000+** and another **3\u20134 months**.\n\n**(e) Building permit (Title 24).** Plain-English: the permit that lets you actually build the building. Run by PP&D under PCC Title 24, Buildings (https://www.portland.gov/code/24). City fees scale with project valuation, typically **$8,000 to $30,000+** for a small new multifamily building, plus the State Building Code surcharge. Plan review takes **3\u20136 months** for a new building of this size; PP&D's published goal is faster but reality is slower.\n\n**(f) Trade permits: plumbing, electrical, mechanical.** Plain-English: separate permits for each system, usually pulled by the contractors. Plumbing under PCC Title 25 (https://www.portland.gov/code/25). Electrical under PCC Title 26 (https://www.portland.gov/code/26). Mechanical under PCC Title 27 (https://www.portland.gov/code/27). Costs are part of the construction bid; you don't pay these directly in most cases.\n\n**(g) BES sewer/stormwater review.** Plain-English: BES checks that the sewer in the street can handle your new units, and that you're managing rainwater on-site. Run by **BES (Bureau of Environmental Services, https://www.portland.gov/bes)**, 503-823-7740. This happens as part of building permit review. Stormwater design must comply with the **Stormwater Management Manual** (https://www.portland.gov/bes/stormwater/swmm). On the older Sunnyside combined sewer mains, expect requirements to upgrade your sewer lateral and add on-site stormwater management.\n\n**(h) PBOT transportation review.** Plain-English: PBOT checks driveway approaches, sidewalks, curb cuts, and street frontage improvements. Run by **PBOT, 503-823-5185, https://www.portland.gov/transportation**. The frontage of SE Belmont here is already developed urban streetfront, so significant street improvements are unlikely; expect mostly sidewalk/curb spot repairs and possibly a tree well requirement. If you remove or relocate a curb cut, that's a separate **right-of-way (ROW)** permit.\n\n**(i) Urban Forestry tree review.** Plain-English: the city forester reviews any tree work involved in your project. Run by **Urban Forestry**, part of Portland Parks & Recreation, 503-823-8733 (https://www.portland.gov/trees). Code reference: PCC Title 11 (https://www.portland.gov/code/11), specifically PCC 11.50 (https://www.portland.gov/code/11/50). Required if your project value is $25,000 or greater, or if any street tree might be impacted (https://www.portland.gov/ppd/trees-development/tree-plan-requirements-development-permits). A tree plan is part of your building-permit submittal.\n\n**(j) System Development Charges (SDCs).** Plain-English: one-time city fees for new buildings that account for the new demand on water, sewer, parks, and streets. Charged by **four different bureaus**: Water Bureau, BES (sewer + stormwater), PP&R (parks), and PBOT (transportation). Full info at https://www.portland.gov/ppd/current-fee-schedules/system-development-charges. **Per-unit SDCs in Portland have historically run roughly $20,000 to $40,000+ per new dwelling unit**, depending on bedroom count and location. **HOWEVER** \u2014 and this is the key point \u2014 under the temporary SDC waiver in effect August 15, 2025 through September 30, 2028, **most new housing units may be exempt** (https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption). Confirm exemption applicability with PP&D before you budget; the rules have specific conditions.\n\n**(k) Final plat recording with Multnomah County.** Plain-English: only relevant if you did a partition, subdivision, replat, or PLA. After the city approves the final plat, you record it with the county to make it official. Done at the **Multnomah County Surveyor's Office** (https://multco.us/surveyor) and **Multnomah County Recorder/Clerk** (https://multco.us/dart). County recording fees are nominal (typically a few hundred dollars).\n\n**(l) Condo declaration filing with the Oregon Real Estate Agency.** Plain-English: only relevant if you're going the condo ownership route. Your attorney prepares a declaration, plat, and bylaws under ORS 100.105 (https://oregon.public.law/statutes/ors_100.105) and ORS 100.115 (https://oregon.public.law/statutes/ors_100.115), gets county surveyor approval, and submits the package to the **Oregon Real Estate Agency** (https://www.oregon.gov/rea/Pages/index.aspx) for the Real Estate Commissioner's approval under ORS 100.110 (https://oregon.public.law/statutes/ors_100.110). Filing fees are several hundred dollars. Attorney fees for the declaration package typically run **$8,000 to $25,000** for a small project.\n\n---\n\n## 5. Sequencing and gotchas\n\n**The single most important rule: confirm feasibility before paying anyone for design work.** The most common expensive mistake Portland homeowners make is hiring an architect first and a planner never. Architects are great at designing buildings; they are not always great at predicting which Title 33 standard will get you stuck. Always do the free planner call (step 6.1 below) before paying for anything.\n\n**Common Sunnyside-area gotchas, specific to this kind of corner-corridor lot:**\n\n- **Combined sewer. Older mains.** Sunnyside-area sewers are mostly the older combined system. BES (https://www.portland.gov/bes) will likely require on-site stormwater management plus possibly a sewer lateral upgrade. Get a sewer videoscope inspection before you commit to a footprint.\n- **Existing building on a 1911 structure.** Demolition of a 1911 building isn't subject to historic-resource review here (no historic district), but Title 33 has separate **demolition delay** rules for older single-dwelling residences in PCC 33.785 (https://www.portland.gov/code/33/700s/785). For a CM2 commercial structure, those mostly don't apply, but ask early.\n- **Design Overlay triggering Design Review.** If your project triggers discretionary Design Review (rather than the objective Design Standards path) under PCC 33.420 (https://www.portland.gov/code/33/400s/420), you've just added 6+ months and tens of thousands of dollars. The threshold is in PCC 33.420.041 (https://www.portland.gov/code/33/400s/420). Know which path you're on before you draw anything.\n- **The 2023 PLA and Adjustment on file (PR 23-050963 PLA and LU 23-113827 AD).** Pull these case files from PortlandMaps before doing anything. They may carry conditions of approval that bind you.\n- **The L-shaped lot.** Get a real survey, not a tax map measurement. The L makes setbacks and building geometry tricky. Setback rules for CM2 are in PCC 33.130.215 (https://www.portland.gov/code/33/100s/130).\n- **HOA = forever.** A condo HOA has annual filings (ORS 100.480, https://oregon.public.law/statutes/ors_100.480), insurance, reserve studies, and in Oregon must register with the Oregon Real Estate Agency. The setup cost is one thing; the ongoing administrative cost ($1,500 to $5,000/year for a small HOA, plus master insurance) is forever.\n- **Mixing up RIP with CM2.** Many people read \"fourplex by right\" headlines and assume it applies everywhere. RIP is for residential zones only (PCC 33.110, https://www.portland.gov/code/33/100s/110). On CM2, the equivalent rule is just \"multifamily is a permitted use\" (PCC 33.130, https://www.portland.gov/code/33/100s/130) \u2014 different mechanism, different standards, but more flexible overall.\n- **Off-street parking.** Surprisingly, most of CM2 in Portland has **no minimum parking requirement** for residential under PCC 33.266 (https://www.portland.gov/code/33/200s/266), thanks to a 2022 city code update. Confirm. This is the kind of thing where the rule has changed recently and out-of-date advice is common.\n- **Construction-cost-vs-rent reality check.** At $400/sq ft hard cost, a 4-unit building cost-loaded with land, soft costs, and SDCs (or post-waiver) needs roughly $3,000+/month rent per unit to pencil at typical financing. Run the basic math before committing.\n- **Tracking PP&D's name.** As above: BDS is now PP&D. URLs at /bds may not resolve forever.\n\n---\n\n## 6. What to do next, in order\n\nEach step lists who to contact, what to bring, what it costs, and how long it takes.\n\n**6.1. Confirm the zoning yourself on PortlandMaps. (Free. 15 minutes.)** Go to https://www.portlandmaps.com/, enter \"4435 SE Belmont St,\" and click into the **Zoning** tab. Confirm CM2, \"d\" overlay, MU-U comp plan. Take a screenshot for your file. While you're there, click **Land Use Cases** and download the PR 23-050963 and LU 23-113827 case files for your records.\n\n**6.2. If you're not the deeded owner, get clear on ownership. (Free if you do it yourself.)** Pull the deed from the **Multnomah County Recorder** (https://multco.us/dart) using state ID 1S2E06BB 7900 or property ID R233406. If you're a member or manager of Monterey Cypress LLC, this is just paperwork. If you're not, stop and figure out the ownership picture before spending anything else.\n\n**6.3. Free 15-minute phone consultation with a PP&D planner. (Free. 1\u20132 weeks to schedule.)** Call **503-823-7300** (https://www.portland.gov/ppd/early-assistance) and ask for the 15-minute Land Use Services consultation. Have ready: address, property ID R233406, and a one-paragraph description of what you want to do (e.g., \"I want to know what I'd need to do to build a 4-unit condo project here\"). The planner will tell you which reviews you need and steer you toward the next step.\n\n**6.4. Pull the prior land-use case files. (Free. 2\u20134 weeks for full records.)** Submit a public records request through PP&D's records portal (https://www.portland.gov/ppd/records). Ask for the complete file for both **PR 23-050963 PLA** and **LU 23-113827 AD**. Read the conditions of approval carefully.\n\n**6.5. Get a sewer videoscope inspection on the existing building. (Roughly $300\u2013$700. 1 week.)** Hire a private sewer inspector (any licensed Oregon plumber with a camera). Sunnyside's older mains and laterals are a major source of unexpected costs.\n\n**6.6. Walk the property with a tree assessor. (Free or roughly $300 for a quick consult.)** Identify trees 12+ inches in diameter on-site or in the public right-of-way (street trees). If any are 20+ inches, expect mitigation requirements under PCC 11.50.040 (https://www.portland.gov/code/11/50). Contact Urban Forestry at trees@portlandoregon.gov, 503-823-8733.\n\n**6.7. Order a survey. (Roughly $2,500\u2013$5,500. 4\u20138 weeks.)** Hire an Oregon-licensed surveyor to produce a current ALTA or boundary survey. Required input for any architect, civil engineer, or partition/subdivision application. Important because of the L-shape and the recent 2023 PLA.\n\n**6.8. Submit an Early Assistance request to PP&D. (Roughly $1,400\u2013$3,500. 4\u20138 weeks.)** Email **landuseintake@portlandoregon.gov** with the Early Assistance Application (https://www.portland.gov/ppd/zoning-land-use/early-assistance/early-assistance-review). Bring: site plan sketch (your survey + a hand drawing is fine), a one-page description of the proposed project, and your specific questions. This is the meeting where the city tells you whether your project triggers Design Review, an Adjustment, a partition, or any other land-use review.\n\n**6.9. Hire an architect and civil engineer. (Roughly $40,000\u2013$120,000+ for design + engineering.)** Only after Early Assistance. Look for someone who has done a recent CM2 project in Portland; the firm's familiarity with the design overlay path saves real money.\n\n**6.10. Apply for building permit + trade permits + run BES/PBOT/Urban Forestry reviews concurrently. (City fees roughly $20,000\u2013$50,000 for a small new multifamily; plan review 3\u20136 months.)** Submit through PP&D's online permitting portal at https://www.portland.gov/ppd. SDCs assessed at this stage; check waiver eligibility under https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption.\n\n**6.11. Build. (Construction roughly 12\u201318 months for a small new multifamily.)** Standard construction phase. Final inspections under PCC Title 24 (https://www.portland.gov/code/24).\n\n**6.12. If you're going condo: hire an Oregon condo attorney and prepare the declaration package. (Roughly $8,000\u2013$25,000. 2\u20134 months, can run in parallel with construction.)** Attorney prepares declaration (ORS 100.105, https://oregon.public.law/statutes/ors_100.105), bylaws, and disclosure statement. Surveyor prepares the condo plat (ORS 100.115, https://oregon.public.law/statutes/ors_100.115). Submit to the **Oregon Real Estate Agency** (https://www.oregon.gov/rea/Pages/index.aspx) for the Real Estate Commissioner's approval under ORS 100.110 (https://oregon.public.law/statutes/ors_100.110). Then record at Multnomah County (https://multco.us/dart).\n\n---\n\n## 7. What to ask the city: a script you can copy and paste\n\n**To the PP&D Land Use Services planner (call 503-823-7300, or email landuseintake@portlandoregon.gov):**\n\n> Hi, I'm researching feasibility for a property at **4435 SE Belmont St, Portland OR 97215**, property ID **R233406**, state ID **1S2E06BB 7900**. PortlandMaps shows it as **CM2 with a Design (\"d\") overlay**, comp plan **MU-U**.\n>\n> I'm interested in building a small multi-unit residential project (3 to 5 units), and I'm considering condo ownership rather than apartments. I'd like to confirm a few things before I spend any money on design:\n>\n> 1. Can you confirm the current base zone, overlays, and any conditions that may apply to this site, especially carryovers from **PR 23-050963 PLA** and **LU 23-113827 AD**?\n> 2. For a 3- to 5-unit residential project on this lot, would it most likely use the **objective Design Standards** path under 33.420.055, or trigger discretionary **Design Review** under 33.825? What threshold am I looking at?\n> 3. Are there any **off-street parking** requirements that would apply to a small residential project here?\n> 4. Are there any **right-of-way improvements** along Belmont I should plan for?\n> 5. For **System Development Charges**, can you confirm whether the temporary 2025\u20132028 housing-unit waiver would apply to a project of this type, and what conditions I need to meet?\n> 6. Is there anything specific to **BES sewer/stormwater** I should expect on this corridor (combined sewer, lateral upgrades)?\n> 7. Can you point me to the most useful **Early Assistance** category for a project at this scale?\n>\n> Thank you. I'm happy to schedule a paid Early Assistance meeting after this initial conversation.\n\n**To BES (call 503-823-7740, or BESDevelopmentReview@portlandoregon.gov):**\n\n> Hi, I'm investigating a small multi-unit residential project at **4435 SE Belmont St, Portland OR 97215** (property ID R233406, state ID 1S2E06BB 7900). The site is zoned CM2.\n>\n> Could you tell me what I should expect from BES for a 3- to 5-unit project here? Specifically:\n> 1. What is the sewer type serving this address (combined or separated)?\n> 2. Are there capacity or condition issues with the main on this stretch of SE Belmont I should know about?\n> 3. What stormwater management approach is typical here, and are there site constraints I should plan around?\n> 4. Are there any sewer SDCs or BES fees I should budget for, separate from PP&D's permit fees?\n>\n> Thank you.\n\n**To PBOT (call 503-823-5185, or PBOTSDC@portlandoregon.gov):**\n\n> Hi, I'm investigating a small residential development at **4435 SE Belmont St, Portland OR 97215** (property ID R233406). The site is zoned CM2.\n>\n> Could you tell me:\n> 1. What right-of-way improvements would typically be required for a small new multifamily project on this stretch of SE Belmont?\n> 2. Are there driveway or curb-cut restrictions on Belmont here?\n> 3. What transportation SDCs would apply for new dwelling units, and how does the 2025\u20132028 housing SDC waiver affect this project type?\n>\n> Thank you.\n\n---\n\n## 8. Friendly accuracy caveats\n\n- Zoning, overlays, and codes for your specific address can change. Always confirm on **PortlandMaps** (https://www.portlandmaps.com/) before paying for a survey or plans.\n- Fee numbers update yearly, usually on July 1. Always check the **current PP&D fee schedule** at https://www.portland.gov/ppd/current-fee-schedules and the **current SDC schedule** at https://www.portland.gov/ppd/current-fee-schedules/system-development-charges before budgeting.\n- Construction costs in Portland are volatile right now (tariffs, labor, materials). The $/sq ft figures here are mid-2025 ballpark; ask 2 to 3 contractors for written estimates against your specific design.\n- The 2025\u20132028 SDC waiver has specific conditions and can be modified or ended early by City Council. Confirm eligibility at https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption when you actually file.\n- I have flagged where I am inferring or estimating (lot area from PortlandMaps geometry, soft-cost estimates, trade-permit costs paid through contractors, etc.). For anything financial, double-check with the relevant bureau or with an architect who has filed a recent CM2 project.\n- Condo ownership has tax and insurance implications I haven't covered. Talk to an Oregon real estate attorney and a CPA before committing.\n- The city consolidated **BDS** into **Portland Permitting & Development (PP&D)** in 2024. Most of the city's web pages are now at /ppd, not /bds. If a /bds link 404s, try /ppd.\n- Anything I cite from ORS Chapter 100 reflects the law as of the 2023 ORS edition with 2024 and 2025 legislative session updates; double-check the current version at https://oregon.public.law/statutes/ors_chapter_100 before relying on a specific section.\n\n---\n\n## 9. Glossary\n\n- **ADU (Accessory Dwelling Unit)** \u2014 a small second housing unit on a single-family residential property. *Doesn't apply to your CM2 lot directly; mentioned for completeness.*\n- **BDS (Bureau of Development Services)** \u2014 old name for the city bureau that handled permits. Now folded into **PP&D**.\n- **BES (Bureau of Environmental Services)** \u2014 the city bureau that handles sewer, stormwater, and related water-quality work (https://www.portland.gov/bes). Phone: 503-823-7740.\n- **CC&Rs (Covenants, Conditions & Restrictions)** \u2014 the rules in a condo or HOA that bind every owner; recorded with the county.\n- **CM2 (Commercial Mixed Use 2)** \u2014 the medium-density commercial mixed-use zone; the zone that applies to your property. Code chapter PCC 33.130.\n- **Comp Plan / MU-U** \u2014 Comprehensive Plan designation. MU-U = \"Mixed Use - Urban Center\"; this is the long-range plan label that drives the zoning.\n- **Design Overlay (\"d\")** \u2014 extra rules about what new buildings look like in certain areas. Code chapter PCC 33.420.\n- **Design Review** \u2014 discretionary review of how a building looks. Code chapter PCC 33.825.\n- **FAR (Floor Area Ratio)** \u2014 the ratio of total floor space to lot size. A FAR of 2:1 means the building's total floor area is twice the lot area.\n- **HOA (Homeowner Association)** \u2014 the legal entity that runs a condo or planned development; required for condos under ORS 100.\n- **LU (Land Use Review)** \u2014 a city review of a project to make sure it meets discretionary criteria. Type I, II, or III depending on complexity.\n- **ORS (Oregon Revised Statutes)** \u2014 Oregon's codified state law.\n- **ORSC (Oregon Residential Specialty Code)** \u2014 the state's residential building code, applicable to single- and two-family dwellings. *Mostly not your code; multifamily uses the Oregon Structural Specialty Code instead.*\n- **PBOT (Portland Bureau of Transportation)** \u2014 the city bureau that handles streets, sidewalks, and curb cuts (https://www.portland.gov/transportation). Phone: 503-823-5185.\n- **PCC (Portland City Code)** \u2014 the City of Portland's collected ordinances. Title 33 is the zoning code.\n- **PLA (Property Line Adjustment)** \u2014 a small lot-line move; cheaper and faster than a full partition. Code chapter PCC 33.677.\n- **PP&D (Portland Permitting & Development)** \u2014 the new umbrella name for the city's permitting and development services bureau, replacing BDS as of 2024 (https://www.portland.gov/ppd). Phone: 503-823-7300.\n- **PP&R (Portland Parks & Recreation)** \u2014 the city bureau that runs parks and Urban Forestry; phone 503-823-7529.\n- **PWI (Public Works Inquiry)** \u2014 early-stage review of street/sewer/water capacity for small projects.\n- **RIP (Residential Infill Project)** \u2014 Portland's residential-zone reform that allows up to 4 units on most residential lots. *Doesn't apply to your CM2 lot.*\n- **ROW (Right-of-Way)** \u2014 public street area, including sidewalks, parking strips, and roadway. PBOT regulates work in the ROW.\n- **SDC (System Development Charge)** \u2014 one-time city fees on new buildings to pay for the infrastructure burden they create. Charged separately by Water, BES, Parks, and PBOT.\n- **TSDC (Transportation SDC)** \u2014 the PBOT portion of SDCs.\n- **Type I / Type II / Type III review** \u2014 Portland's three procedure types for land use review. Type I is fastest (administrative). Type III is slowest (public hearing).\n\n---\n\n## 10. Direct links you'll use most\n\n- PortlandMaps property record for 4435 SE Belmont: https://www.portlandmaps.com/detail/property/4435-SE-BELMONT-ST/R233406_did/\n- Title 33 Planning and Zoning, top page: https://www.portland.gov/code/33\n- CM2 Commercial Mixed Use Zones (PCC 33.130): https://www.portland.gov/code/33/100s/130\n- Design Overlay (PCC 33.420): https://www.portland.gov/code/33/400s/420\n- Land Divisions in Commercial/Mixed Use Zones (PCC 33.662): https://www.portland.gov/code/33/600s/662\n- Property Line Adjustment (PCC 33.677): https://www.portland.gov/code/33/600s/677\n- Tree Code Title 11: https://www.portland.gov/code/11\n- Trees in Development (PCC 11.50): https://www.portland.gov/code/11/50\n- Building Code (Title 24): https://www.portland.gov/code/24\n- Plumbing (Title 25): https://www.portland.gov/code/25\n- Electrical (Title 26): https://www.portland.gov/code/26\n- Mechanical (Title 27): https://www.portland.gov/code/27\n- PP&D main page: https://www.portland.gov/ppd\n- Early Assistance: https://www.portland.gov/ppd/early-assistance\n- SDC info: https://www.portland.gov/ppd/current-fee-schedules/system-development-charges\n- 2025\u20132028 SDC housing waiver: https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption\n- BES: https://www.portland.gov/bes\n- BES Stormwater Manual: https://www.portland.gov/bes/stormwater/swmm\n- PBOT: https://www.portland.gov/transportation\n- Portland Water Bureau: https://www.portland.gov/water\n- Urban Forestry: https://www.portland.gov/trees\n- Multnomah County Recorder/Clerk: https://multco.us/dart\n- Multnomah County Surveyor: https://multco.us/surveyor\n- Oregon Condominium Act (ORS Chapter 100): https://oregon.public.law/statutes/ors_chapter_100\n- Oregon Real Estate Agency: https://www.oregon.gov/rea/Pages/index.aspx\n\n---\n\n*This is a feasibility orientation, not a substitute for an Early Assistance meeting with PP&D, an Oregon real estate attorney, an architect, and a civil engineer. Every project is different. Verify every figure and citation before relying on it.*"
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Property is CM2 with d Design overlay",
+      "claim_full": "4435 SE Belmont St is zoned CM2 (Commercial Mixed Use 2) with a 'd' Design overlay.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.130",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "PCC 33.130",
+        "enhanced": "PCC 33.130 (https://www.portland.gov/code/33/100s/130)"
+      },
+      "verified_truth": "All three responses correctly identify the property as CM2 with a Design overlay; flagged as correct in accuracy notes."
+    },
+    {
+      "id": "A2",
+      "claim_short": "Comp plan designation MU-U",
+      "claim_full": "The comprehensive plan designation for the property is Mixed Use - Urban Center (MU-U).",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps",
+        "enhanced": "https://www.portlandmaps.com/"
+      },
+      "verified_truth": "Both MCP and enhanced responses identified MU-U comp plan; consistent with PortlandMaps record."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Existing 12-unit building built 1911",
+      "claim_full": "The lot already contains a 12-unit multifamily building built in 1911.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": "Redfin/MLS listing",
+        "mcp": "PortlandMaps / Multnomah County"
+      },
+      "verified_truth": "Confirmed by accuracy flags: 12-unit walk-up apartment, 8,952 sq ft, built 1911."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Lot size approximately 6,000\u20138,952 sq ft",
+      "claim_full": "The lot is approximately 8,000\u20138,952 square feet (with disagreement between Redfin's 6,000 SF and MLS/county records).",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": "Multnomah County assessor",
+      "citation_by_variant": {
+        "oob": "Redfin/MLS",
+        "mcp": "PortlandMaps (8,763 sq ft)",
+        "enhanced": "PortlandMaps geometry (~8,000\u20138,500 sq ft, inferred)"
+      },
+      "verified_truth": "Actual assessor record shows 8,952 sq ft; MCP cited 8,763 sq ft, enhanced inferred 8,000\u20138,500 from geometry, OOB flagged a discrepancy."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Owner is Monterey Cypress LLC",
+      "claim_full": "The owner of record is Monterey Cypress LLC, mailing address 120 SE 28th Ave Portland.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps / Multnomah County",
+        "enhanced": "PortlandMaps property R233406"
+      },
+      "verified_truth": "Accuracy flags confirm owner Monterey Cypress LLC at 120 SE 28th Ave."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Last sale Oct 2020 at $1,585,100",
+      "claim_full": "The property last sold in October 2020 for $1,585,100.",
+      "topic": "address",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.3,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps"
+      },
+      "verified_truth": "Accuracy flag confirms last sale Oct 2020 at $1,585,100."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Currently listed for sale ~$1.65M",
+      "claim_full": "The property is currently listed for sale at approximately $1.65\u20131.78M with a 6.0% CAP rate.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "MLS #520360821",
+      "citation_by_variant": {
+        "oob": "Redfin/MLS",
+        "mcp": "MLS# 520360821"
+      },
+      "verified_truth": "OOB and MCP both report active listing; accuracy flags confirm MLS listing."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Prior land-use case PR 2023-050963 PLA",
+      "claim_full": "There is a prior Property Line Adjustment case PR 2023-050963 with decision rendered April 2025 attached to the property.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.677",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps land use cases",
+        "enhanced": "PCC 33.677 (https://www.portland.gov/code/33/600s/677)"
+      },
+      "verified_truth": "Accuracy flags confirm case PR 2023-050963 PLA with Decision Rendered 2025-04-15."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Prior land-use case LU 2023-113827 Adjustment",
+      "claim_full": "There is a prior Type 2 Adjustment case LU 2023-113827 recorded April 2024 attached to the property.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.805",
+      "citation_by_variant": {
+        "mcp": "PCC 33.805",
+        "enhanced": "PCC 33.805 (https://www.portland.gov/code/33/800s/805)"
+      },
+      "verified_truth": "Accuracy flags confirm LU 2023-113827 Type 2 Adjustment Recorded 2024-04-17."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Condos don't require lot division",
+      "claim_full": "Condominium ownership sits on top of one parcel and does not require physically dividing the lot.",
+      "topic": "definitions",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "ORS 100.022",
+      "citation_by_variant": {
+        "oob": "ORS Chapter 100",
+        "mcp": "ORS 100",
+        "enhanced": "ORS 100.022 (https://oregon.public.law/statutes/ors_100.022)"
+      },
+      "verified_truth": "All three correctly explain condos are an ownership form, not a land division; enhanced cites ORS 100.022 specifically."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Three ownership paths: condo, townhouse, apartment",
+      "claim_full": "The resident has three distinct paths: condo conversion, townhouses on individual fee-simple lots, or apartment ownership.",
+      "topic": "definitions",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "ORS Chapter 100; PCC 33.662",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "ORS Chapter 100",
+        "enhanced": "ORS Chapter 100; PCC 33.662"
+      },
+      "verified_truth": "All three lay out the same three options for the resident."
+    },
+    {
+      "id": "A12",
+      "claim_short": "CM2 max height ~45 ft / 4 stories",
+      "claim_full": "The CM2 base zone allows building heights up to about 45 feet (roughly 4 stories), with bonuses possible.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.130",
+      "citation_by_variant": {
+        "oob": "Title 33",
+        "mcp": "PCC 33.130",
+        "enhanced": "PCC 33.130"
+      },
+      "verified_truth": "Accuracy flag confirms CM2 base height 45 ft (4 stories)."
+    },
+    {
+      "id": "A13",
+      "claim_short": "CM2 max FAR 2.5:1 base, up to 4:1 bonus",
+      "claim_full": "CM2 maximum floor-area-ratio is 2.5:1 base, up to 4:1 with affordable housing or other bonuses.",
+      "topic": "size",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.130",
+      "citation_by_variant": {
+        "mcp": "PCC 33.130"
+      },
+      "verified_truth": "Accuracy flag confirms CM2 max FAR 2.5:1 base, up to 4:1 with bonuses."
+    },
+    {
+      "id": "A14",
+      "claim_short": "No minimum lot size in CM2",
+      "claim_full": "There is no required minimum lot size for development of land in commercial/mixed use zones.",
+      "topic": "size",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.130 / 33.613",
+      "citation_by_variant": {
+        "mcp": "Chapter 33.130 / 33.613",
+        "enhanced": "PCC 33.613 / 33.130 Tables 130-1 & 130-2"
+      },
+      "verified_truth": "Accuracy flag confirms claim is attributed to Chapter 33.130/33.613 in MCP; enhanced echoes the same idea."
+    },
+    {
+      "id": "A15",
+      "claim_short": "RIP / middle housing doesn't apply to CM2",
+      "claim_full": "Residential Infill Project rules and HB 2001 middle-housing rules apply only in residential zones, not CM2.",
+      "topic": "definitions",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110; PCC 33.671",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110 (https://www.portland.gov/code/33/100s/110); PCC 33.671 (https://www.portland.gov/code/33/600s/671)"
+      },
+      "verified_truth": "Accuracy notes confirm enhanced response correctly identifies RIP/HB 2001 as residential-only and correctly directs the user to CM2 use tables instead."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Land division in CM2 uses PCC 33.662",
+      "claim_full": "Land divisions in commercial/mixed use zones are processed under PCC 33.662, not the residential land-division chapter 33.660.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.662",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.662 (https://www.portland.gov/code/33/600s/662)"
+      },
+      "verified_truth": "Accuracy notes list PCC 33.662 as the correct commercial land-division chapter."
+    },
+    {
+      "id": "A17",
+      "claim_short": "Design overlay triggers Design Review or Standards",
+      "claim_full": "The 'd' overlay requires either passing the objective Design Standards (faster) or going through discretionary Design Review.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.420 / 33.825",
+      "citation_by_variant": {
+        "oob": "Title 33",
+        "mcp": "Type 2, ~6 months, $15\u201325K",
+        "enhanced": "PCC 33.420.041; 33.420.055; 33.825"
+      },
+      "verified_truth": "Accuracy flag confirms enhanced cites PCC 33.420.041 threshold and 33.420.045/.055 standards path; design review process correctly described."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Oregon condo conversion notice rules",
+      "claim_full": "Oregon law requires 30-day notice before offer and 120-day notice before recording the condo declaration, plus right of first refusal for tenants.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "ORS Chapter 100",
+      "citation_by_variant": {
+        "oob": "ORS Chapter 100",
+        "mcp": "ORS 100"
+      },
+      "verified_truth": "Accuracy flags confirm 30-day before offer, 120-day before recording, and 60-day tenant right of first refusal."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Notice of conversion copied to Mayor",
+      "claim_full": "A copy of the conversion notice must go to the Mayor of Portland.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "ORS 100",
+      "citation_by_variant": {
+        "oob": "ORS 100"
+      },
+      "verified_truth": "Accuracy flag confirms notice of conversion must be copied to the Mayor of Portland."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Portland tenant relocation $2,900\u2013$4,500",
+      "claim_full": "Portland's mandatory relocation assistance ranges from $2,900 (studio) to $4,500 (3BR+) per displaced tenant.",
+      "topic": "costs",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 30.01.085",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Accuracy flags confirm relocation amounts; OOB notes PCC 30.01.085 as the uncited governing section."
+    },
+    {
+      "id": "A21",
+      "claim_short": "10% rent hike or no-cause triggers relocation",
+      "claim_full": "Triggering a 10%+ rent increase or a no-cause termination during conversion activates Portland's mandatory relocation ordinance.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Accuracy flag confirms 10% rent increase or no-cause termination triggers relocation ordinance."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Four UST records on parcel",
+      "claim_full": "The property has four Underground Storage Tank records flagged on PortlandMaps, requiring Phase I ESA before purchase.",
+      "topic": "safety",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps"
+      },
+      "verified_truth": "Accuracy flag confirms four UST records on the parcel."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Property in MULTE/HOLTE eligibility area",
+      "claim_full": "The property falls within the eligibility areas for the MULTE and HOLTE tax-abatement programs.",
+      "topic": "costs",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps"
+      },
+      "verified_truth": "Accuracy flag confirms the property is in MULTE and HOLTE eligibility areas."
+    },
+    {
+      "id": "A24",
+      "claim_short": "SDC waiver Aug 2025 \u2013 Sep 2028",
+      "claim_full": "Portland is temporarily waiving System Development Charges for new housing units permitted between August 15, 2025 and September 30, 2028, saving roughly $20K\u2013$40K per unit.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "portland.gov/ppd/current-fee-schedules/housing-sdc-exemption",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption"
+      },
+      "verified_truth": "Accuracy flag confirms SDC housing-unit waiver window August 15, 2025 through September 30, 2028 and per-unit SDC magnitude $20,000\u2013$40,000+."
+    },
+    {
+      "id": "A25",
+      "claim_short": "BDS consolidated into PP&D in 2024",
+      "claim_full": "The Bureau of Development Services (BDS) was consolidated into Portland Permitting & Development (PP&D) in 2024.",
+      "topic": "definitions",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov/ppd",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd"
+      },
+      "verified_truth": "Accuracy flag confirms BDS was consolidated into PP&D in 2024."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Tree rules Title 11 / PCC 11.50",
+      "claim_full": "Tree preservation and mitigation rules in development apply under Title 11, with 20-inch trees triggering preservation/mitigation under PCC 11.50.040 and on-site tree density under 11.50.050.",
+      "topic": "trees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 11.50.040 / 11.50.050",
+      "citation_by_variant": {
+        "enhanced": "PCC 11.50.040 (https://www.portland.gov/code/11/50); PCC 11.50.050"
+      },
+      "verified_truth": "Accuracy flag confirms PCC 11.50.040 cited as 20-inch threshold and 11.50.050 as on-site tree density rule."
+    },
+    {
+      "id": "A27",
+      "claim_short": "BES handles sewer/stormwater review",
+      "claim_full": "The Bureau of Environmental Services (BES) reviews sewer and stormwater under the Stormwater Management Manual; older Sunnyside combined-sewer mains commonly require on-site stormwater management.",
+      "topic": "sewer",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/bes/stormwater/swmm",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/bes/stormwater/swmm; 503-823-7740"
+      },
+      "verified_truth": "Enhanced response correctly directs to BES contact 503-823-7740 and Stormwater Management Manual; consistent with city practice."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Most CM2 has no minimum residential parking",
+      "claim_full": "After Portland's 2022 code update, most CM2 has no minimum off-street parking requirement for residential under PCC 33.266.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.266",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.266 (https://www.portland.gov/code/33/200s/266)"
+      },
+      "verified_truth": "Accuracy flag confirms claim that most CM2 has no minimum residential parking under PCC 33.266 after 2022 update."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Early Assistance fee $1,400\u2013$3,500",
+      "claim_full": "A paid Early Assistance meeting with PP&D Land Use Services costs roughly $1,400\u2013$3,500.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-range",
+      "importance": 4,
+      "citation": "portland.gov/ppd/early-assistance",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/early-assistance"
+      },
+      "verified_truth": "Accuracy flag confirms Early Assistance meeting fee $1,400\u2013$3,500."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Free 15-min planner call at 503-823-7300",
+      "claim_full": "PP&D offers a free 15-minute Land Use Services consultation at 503-823-7300 as the recommended free first step.",
+      "topic": "sequence",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "portland.gov/ppd/early-assistance",
+      "citation_by_variant": {
+        "oob": "503-823-7300",
+        "mcp": "503-823-7300",
+        "enhanced": "503-823-7300 (https://www.portland.gov/ppd/early-assistance)"
+      },
+      "verified_truth": "All three responses surface the BDS/PP&D 503-823-7300 line; accuracy notes confirm the number is plausible and current."
+    },
+    {
+      "id": "A31",
+      "claim_short": "ORS 100 declaration & plat requirements",
+      "claim_full": "Creating condos requires recording a declaration (ORS 100.105), a condo plat by a licensed surveyor (ORS 100.115), bylaws, and Real Estate Commissioner approval (ORS 100.110).",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "ORS 100.105 / 100.110 / 100.115",
+      "citation_by_variant": {
+        "enhanced": "ORS 100.105; 100.110; 100.115 (oregon.public.law/statutes/ors_chapter_100)"
+      },
+      "verified_truth": "Accuracy flag confirms ORS 100.105 declaration, 100.115 plat, 100.110 Real Estate Commissioner approval."
+    },
+    {
+      "id": "A32",
+      "claim_short": "L-shaped lot needs survey",
+      "claim_full": "The property is L-shaped (roughly 100x110 ft bounding box) and requires a survey-grade boundary survey before design.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-judg",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "PortlandMaps property R233406"
+      },
+      "verified_truth": "Enhanced response correctly notes the unusual L-shape and need for a survey; accuracy notes confirm lot area was inferred from geometry."
+    },
+    {
+      "id": "A33",
+      "claim_short": "Demolition delay PCC 33.785",
+      "claim_full": "Portland's demolition-delay rules in PCC 33.785 mostly target single-dwelling residences and may not apply to a CM2 commercial structure here.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "hedge-correct",
+      "importance": 3,
+      "citation": "PCC 33.785",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.785 (https://www.portland.gov/code/33/700s/785)"
+      },
+      "verified_truth": "Accuracy flag confirms PCC 33.785 cited as demolition delay chapter."
+    },
+    {
+      "id": "A34",
+      "claim_short": "No historic/conservation/plan-district overlay",
+      "claim_full": "PortlandMaps shows no historic district, conservation district, plan district, or environmental overlay touching this parcel.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps",
+        "enhanced": "https://www.portlandmaps.com/"
+      },
+      "verified_truth": "MCP and enhanced both confirm no historic/conservation/plan-district overlays; OOB hedged on Sunnyside Conservation District. Accuracy notes list this as correct in MCP/enhanced."
+    },
+    {
+      "id": "A35",
+      "claim_short": "Condo HOA has ongoing annual filings",
+      "claim_full": "A condo HOA must register with the Oregon Real Estate Agency and submit annual filings under ORS 100.480.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "ORS 100.480",
+      "citation_by_variant": {
+        "enhanced": "ORS 100.480 (https://oregon.public.law/statutes/ors_100.480)"
+      },
+      "verified_truth": "Accuracy flag confirms ORS 100.480 cited for annual filings."
+    }
+  ]
+}

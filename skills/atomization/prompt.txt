@@ -133,7 +133,7 @@ Each atom MUST have these fields:
                   "PortlandMaps". Null if no variant cited a source for this
                   claim.
   citation_by_variant — object with one key per variant in `variants`:
-                  {oob: string|null, mcp: string|null, enhanced: string|null}
+                  {{oob: string|null, mcp: string|null, enhanced: string|null}}
                   For each variant, capture the citation that THAT variant's
                   response gave for THIS specific claim — read from the
                   variant's verbatim response text. Null if that variant made

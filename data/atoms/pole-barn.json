@@ -6,23 +6,23 @@
   "evaluator_model": "claude",
   "responses": {
     "oob": {
-      "tool": "ChatGPT 5.5 Thinking",
-      "text": "For a **40-foot clear span in Portland**, there is **no universal \u201cmaximum truss spacing\u201d** you can use from code alone. The allowable spacing is whatever is shown on the **engineered truss drawings and building plans approved for your permit**.\n\nFor a small workshop/pole barn, the practical answer is:\n\n**Typical conventional roof framing:** **24 inches on center**\n**Post-frame / pole-barn construction:** often **4, 8, 10, or sometimes 12 feet on center**, but only when the trusses, purlins, posts, connections, bracing, and diaphragm/shear system are engineered as a package.\n\nFor your Portland address, the design will need to account for Portland/Oregon site loads. Portland says residential projects may use the prescriptive ORSC path only where it fits; otherwise they need engineering by an Oregon-licensed design professional. Portland also notes the minimum residential roof snow design value is **20 psf plus a 5 psf rain-on-snow surcharge where applicable**, and calculations are required for any beam over **10 feet** or supporting a point load. A 40-foot truss/post-frame building will almost certainly be outside simple prescriptive framing. ([Portland.gov][1])\n\nPortland directs designers to the **Oregon Design Criteria Hub** for site-specific snow, wind, seismic, frost, and related criteria; the state confirms that the hub provides ground snow load, basic wind speed, seismic design category, frost depth, etc. for ORSC/OSSC projects. ([Oregon][2]) Portland\u2019s commercial structural page also lists city wind speeds by risk category, with **Risk Category II at 98 mph Vult**, and says wind exposure is site-dependent and must be determined by the engineer of record. ([Portland.gov][3])\n\nSo, for permitting, I would not design around \u201cmaximum spacing.\u201d I would start by asking a post-frame supplier or truss manufacturer for a package designed for:\n\n**40-foot span, Portland OR, accessory workshop/pole barn, chosen roof pitch, roofing material, ceiling or no ceiling, insulation/solar loads if any, desired bay spacing, and Oregon permit submittal truss drawings.**\n\nMy planning recommendation: use **8-foot truss spacing** as an initial pole-barn layout assumption unless an engineer/truss supplier gives you a stamped design for wider spacing. Wider than 8 feet may be possible, but it makes the purlins, bracing, diaphragm, truss reactions, post footings, and uplift connections more critical.\n\nAlso note that Portland requires a building permit for a detached accessory structure over **200 square feet** or taller than **15 feet**, and detached covered accessory structures are generally limited to **20 feet high** under the city worksheet. ([Portland.gov][4])\n\n[1]: https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures \"Structural Design Requirements for One and Two-Family Residential Structures | Portland.gov\"\n[2]: https://www.oregon.gov/bcd/codes-stand/pages/design-criteria.aspx \"\n\tBuilding Codes Division : Oregon Design Criteria Hub : Codes and standards : State of Oregon\n\"\n[3]: https://www.portland.gov/ppd/structural-engineering/commercial-structures \"Structural Design Requirements for Commercial Structures | Portland.gov\"\n[4]: https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures \"Garages, sheds, and accessory structures | Portland.gov\""
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this properly. There's actually a lot more going on with a 40' pole barn in Portland city limits than just truss spacing, so let me check your specific property situation and the code requirements before recommending anything.Let me search for Portland-specific zoning and code info, and verify the truss spacing question carefully.Now I have crucial context. Your property is **0.18 acres** (~7,840 sq ft) with an existing 1,082 sq ft home. That's a tight lot. A 40' span pole barn is going to be a much bigger deal here than it would be on rural acreage. Let me check Portland's accessory structure rules and then circle back to the truss question.Let me verify Portland's design loads and the actual truss spacing standards before I synthesize.Let me quickly verify the zoning of this specific lot and Portland's snow load.I have enough now. Let me put together a visualization showing the actual lot/code constraint, which is the key issue here.Visualization timed out, so I'll deliver this in prose. Here's what I found, both for your direct question and for the bigger issue lurking behind it.\n\n## Direct answer: max truss spacing for a 40' span\n\nFor a 40' clear-span pole barn, the practical maximums are:\n\n- **8' on center**: most common with single trusses; engineered prefab trusses for post-frame are typically rated up to 9' OC max as single members\n- **12' on center**: doable with **double (two-ply) trusses** sitting on each post, with 2x6 or 2x8 purlins on edge between trusses (joist-hung)\n- **14' on center**: top end you'll see with metal/steel trusses\n- **Beyond that**: requires custom engineering and beefier secondary framing\n\nThe \"max\" is performance-based, not prescriptive. A 40' span is engineered territory; the answer depends on your snow load (25 psf roof design in Portland; 20 psf + 5 psf rain-on-snow), wind pressure (18 psf design ASD), seismic category (Portland is **SDC D**, which does matter for tall, lightly-framed pole structures), and what's hanging off the bottom chord (open ceiling vs. drywall vs. storage loft).\n\nIf you want to put a loft in the bottom chord or hang drywall, that drives spacing tighter (often back to 4' OC for drywall without strapping).\n\n## The bigger problem your question is sitting on top of\n\nYour property is **0.18 acres** (~7,840 sq ft) with an existing 1,082 sq ft house, on a lot that's almost certainly zoned **R5** (5,000 sq ft min lot). Portland's accessory structure rules in **PCC 33.110.245** are going to be the binding constraint long before truss engineering becomes the issue:\n\n**Hard limits you'll run into:**\n\n1. **20% lot coverage cap for all detached accessory structures combined.** On your lot, that's a maximum of about **1,568 sq ft total**. A 40' x 40' pole barn = 1,600 sq ft, which is already over. A 40' x 30' = 1,200 sq ft, which fits but eats nearly your entire accessory-structure budget (no future shed, ADU, or garage).\n\n2. **20-foot height max** outside setbacks (15' inside setbacks, with 10' max wall height inside setbacks). A 40' span with a 4/12 pitch and 10' walls puts you at ~16.7' to ridge (works). A 6/12 pitch with 10' walls hits 20' exactly (no margin for a cupola, vent, or measurement variance). Steeper pitches that shed Pacific Northwest rain better will not fit.\n\n3. **Setbacks** in R5: typically 5' side and 5' rear (and the structure must be behind the rear wall of your house, or at least 40' from the front lot line). If your lot is roughly 50' wide (typical for 0.18 ac in this area), a 40' wide pole barn leaves you exactly 5' on each side; one survey-pin surprise and you're filing an Adjustment.\n\n4. **Permit required.** Anything over 200 sq ft non-habitable needs a building permit, and at a 40' clear span you're firmly in **engineered design** territory (you can't use the ORSC prescriptive path). Plan on stamped drawings from an Oregon-licensed engineer; truss manufacturer drawings alone are not \"engineered building plans.\"\n\n5. **Use matters.** \"Workshop\" as a hobby/storage space is fine as accessory use. If any of your Yex Labs work, hardware tinkering for sale, or anything with customers happens in there, that crosses into **Home Occupation Permit** territory (PCC 33.203) with its own rules about square footage devoted to the business, customer visits, signage, and so on.\n\n## What I'd actually recommend you do, in order\n\n1. **Pull your exact zoning and lot dimensions on PortlandMaps before sketching anything.** Search your address, click into the Zoning section, and screenshot the base zone, any overlays (this neighborhood has had stormwater and tree canopy overlays in places), and the exact lot dimensions. The 20% rule and setbacks key off those numbers.\n\n2. **Re-think the footprint, not the trusses.** A 40' x 30' (1,200 sq ft) at 8' OC truss spacing with a 4/12 pitch is the largest building that comfortably works under R5 accessory rules and gives you a real workshop. If you want more usable space, going **taller within the 20' envelope** (full 10' walls + an attic-truss design for storage) buys you more functional area than going wider. If you do not actually need a 40' clear span, dropping to a 30' or 32' span opens up the height/pitch budget and shrinks footprint pressure.\n\n3. **Schedule a free 15-minute Portland city planner appointment** (503-823-7300) before paying anyone for plans. They will tell you exactly what you can and can't do on this specific lot in about 10 minutes, including any overlays I can't see from here. This is the single highest-leverage hour you can spend.\n\n4. **For the engineering, get a kit quote from MWBSC out of Canby** (mentioned in one of my sources as serving Oregon, with in-house engineering) or **Hansen Pole Buildings** for an apples-to-apples bid; both will produce stamped, Oregon-specific plans that handle your seismic + snow + wind combo without you having to herd an engineer separately.\n\n5. **Sanity-check with neighbors / aerial.** Open Google Maps satellite view on your block; if you don't see other detached structures of comparable size on similar lots, that's a signal that the code constraints I described above are the reason.\n\n## Honest caveat\n\nI cross-referenced PCC 33.110, the ADU/accessory worksheet from the Bureau of Development Services, and the Oregon Residential and Structural Specialty Codes, but I'm working from a desk and have not seen your lot in person, your survey, or any overlays specific to your address. Treat this as a strong starting framework, not a permit-ready answer; the planner appointment will replace my best-guess on lot width and overlays with real numbers.\n\nIf you want, I can sketch out the height/footprint envelope as a quick scale diagram once we have your actual lot dimensions, or draft the email to PBOT/BDS to schedule that planner appointment."
     },
     "mcp": {
-      "tool": "ChatGPT 5.5 Thinking",
-      "text": "For a 40-foot clear span, there is **no single \u201cmaximum spacing\u201d you can use just from the span and address**. In Portland city limits, the allowed truss spacing is whatever the **engineered truss design package** says, based on roof load, wind exposure, seismic design, building use, roof pitch, roofing material, purlin layout, bracing, and connections.\n\nFor practical planning:\n\n| Building type                          |                               Common truss spacing | Notes                                                                                                           |\n| -------------------------------------- | -------------------------------------------------: | --------------------------------------------------------------------------------------------------------------- |\n| Conventional residential-style framing |                            **24 inches on center** | Common when sheathing bears directly on trusses.                                                                |\n| Pole-barn / post-frame with purlins    | **4 ft, 8 ft, sometimes 10 ft or 12 ft on center** | Only acceptable when the trusses, purlins, posts, headers, bracing, and connections are engineered as a system. |\n| 40 ft span shop/barn in Portland       | **Engineer/manufacturer-stamped spacing controls** | Do not assume 8 ft or 10 ft is allowed without stamped truss drawings.                                          |\n\nFor your property specifically, I found it as **450 NE 103RD AVE, Portland**, property ID **R319825**, zoned **R2.5 Residential 2,500**, in the **Hazelwood** neighborhood. The Portland Maps record shows no obvious flood/landslide hazard flags, but the zoning and building permit review still matter.\n\nMy best direct answer: **plan on 24 inches on center unless you are buying an engineered post-frame truss package; with engineered pole-barn trusses, 8 feet on center is common for a 40-foot span, and 10\u201312 feet may be possible only if the truss supplier stamps it for Portland\u2019s required loads.** The city will generally want the truss calcs/drawings, not a rule-of-thumb spacing.\n\nFor permitting, I would ask the truss supplier or post-frame designer for a stamped package showing:\n\n\u201c40-foot span roof trusses at ___ feet on center, designed for City of Portland, Oregon site loads, with purlin, bracing, post, footing, and connection details.\u201d\n\nThat blank is the real maximum spacing."
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this properly. The \"max truss spacing\" question is the easy part \u2014 but for a 40' span workshop on a specific Portland lot, the bigger questions are: can you legally build it there, and what does Portland actually require to permit it? Let me check both.Got the basics. Now let me pull the full property detail \u2014 zoning, setbacks, overlays.Now let me check Portland's current rules for accessory structures and recent permit history nearby (good signal for what's actually getting approved).Let me check one more thing \u2014 the actual setbacks for R2.5 and quickly look at recent permits nearby to see what's been getting approved.I have what I need. Let me check one more thing \u2014 see if there are any recent permits on or near this property that could give Chris a real-world reference.Now I have enough to give a properly useful answer. Let me build a quick site diagram showing the actual constraints.Visualizer timed out, so I'll give you this without the diagram. The short answer to your stated question is buried under a much bigger one, so I want to surface it.\n\n## The truss spacing answer\n\nFor a 40' clearspan post-frame building, **8' on-center is the industry default and 12' OC is the practical maximum** for a single-truss design. Beyond 12' you start needing double trusses (paired together at each post) with 2x6 or 2x8 purlins on edge between them; 14-16' bay spacing is doable that way. Stick-frame standard is 24\" OC, but pole barns aren't governed by that prescriptive rule.\n\nImportant caveat: a 40' span is not in IRC's prescriptive tables. Post-frame falls under performance-based code (ANSI/ASABE EP 484.3 / ICC AC322), so **whatever spacing you pick has to come back from a truss manufacturer with sealed engineered drawings** for your specific snow, wind, and seismic loads. Portland is light on snow (~25 psf ground) but the building also has to cover the Cascadia + Portland Hills Fault seismic risk that shows up on this exact parcel as \"Very Strong\" expected shaking. The truss designer takes care of that math; you just need to give them the right inputs.\n\nIf your goal is the cheapest path: 8' OC, single trusses, 2x4 purlins flat. If your goal is open interior with fewer obstructions: 12' OC, single trusses, 2x6 purlins on edge in joist hangers. Above 12' OC the cost savings on trusses get eaten by heavier purlins and column hardware, so most builders top out there.\n\n## The bigger question you didn't ask\n\nI pulled the parcel data for 450 NE 103rd. **Your lot is 0.18 acres (about 79' \u00d7 102'), zoned R2.5, with a 1,082 sq ft house from 1951 already on it.** That changes the conversation, because Portland rewrote the accessory structure rules in 2021 and they're tight inside city limits. Specifically:\n\n**Height ceiling: 20 feet total.** Detached accessory structures (workshops included) max out at 20' to peak; this dropped from the old 30-35' limit. On a 40' span at usable eave heights (12-14'), you're forced into a low-pitch roof: roughly 4/12 if you want a 12' eave, or 3/12 for a 14' eave. Anything steeper and you blow through 20'.\n\n**Compatibility design standards kick in at 15'.** Once you're over 15' tall, siding has to be in a shingle pattern, or horizontal clapboard/shiplap with boards 6\" or less wide. So no big plain metal panels on a 16'-tall workshop; you'd need real residential-style cladding.\n\n**20% lot coverage cap on detached accessory structures.** 20% \u00d7 7,840 sq ft = **1,568 sq ft maximum footprint** for the workshop. Some quick math:\n- 40' \u00d7 40' = 1,600 sq ft \u2192 over the limit\n- 40' \u00d7 39' = 1,560 sq ft \u2192 just fits\n- 40' \u00d7 30' = 1,200 sq ft \u2192 comfortable\n\n**Setbacks (R2.5, accessory structure outside setbacks):** 10' front, 5' side, 5' rear. The structure also has to sit behind the rear wall of the house OR at least 40' from the front lot line, whichever applies. With the house likely eating ~36-40' of depth from the front, your buildable zone for the workshop is roughly the back 50-55' of the lot. A 40' span building with its long axis running east-west fits, but barely.\n\n## What I'd actually do next\n\nThe best $0-spent move here is the **free 15-minute appointment with a Portland city planner** (503-823-7300). Bring your sketched footprint and confirm the building coverage math, the specific Table 110-4 setbacks for your exact configuration, whether the over-15' design standards exempt non-habitable workshops, and whether your existing house's footprint affects \"established building lines\" for your accessory.\n\nTwo sanity checks worth running before you commit to 40' span:\n\n1. **Do you actually need 40'?** A 30' span (very common for shops) drops your truss cost meaningfully, opens up the height envelope for a steeper pitch within the 20' limit, and gives you a building that's far easier to fit on this lot. A 30' x 40' shop with 12' OC trusses on a 5/12 pitch and 12' eave comes in around 17' total height and 1,200 sq ft. That clears every constraint with room to spare.\n\n2. **Get the truss quote first, plans second.** Call MWBSC in Canby (the Oregon post-frame outfit mentioned in builder forums) or Hansen Pole Buildings; both will sell engineered packages that include sealed truss drawings sized for Portland's load conditions. The price delta between 8' and 12' OC is usually under 15% of the truss line item, so it's not the cost lever people think it is.\n\nOne thing to flag on the source quality: forum posts and pole barn vendor blogs converge cleanly on the 8-12' OC range, which is reassuring, but they're not authoritative for code compliance. The Portland zoning numbers above come from Title 33 directly (portland.gov/code/33), and the 20-ft / 15-ft / 20% figures are from the city's own Detached Covered Accessory Structures worksheet. Anything you build needs the city's permit reviewer signing off, not a forum.\n\nIf you want, I can pull the exact R2.5 setback table and the current Oregon design wind speed / seismic site class so you can hand a clean spec sheet to whoever quotes the trusses."
     },
     "enhanced": {
-      "tool": "ChatGPT 5.5 Thinking",
-      "text": "## 1. Plain-English answer first\n\nFor a **40-foot clear span**, Portland code does **not** give one magic maximum truss spacing number like \u201c4 feet\u201d or \u201c8 feet.\u201d For a pole barn or workshop that spans 40 feet, the spacing is whatever an **engineered truss design** says is safe for your exact roof, snow load, wind load, posts, purlins, sheathing, and connections. In ordinary house framing, 24 inches on center is common, but pole barns often use wider truss spacing such as 4, 8, 10, or 12 feet only when the whole roof system is engineered for it. For your project, do **not** buy trusses first; have the pole-barn supplier or an Oregon-licensed engineer design the truss package and roof framing together.\n\n## 2. What this project actually involves\n\nYour address, **450 NE 103rd Ave**, shows up as a single-family residential property in **R2.5 \u2014 Residential 2,500** zoning in the PortlandMaps property record I was able to pull. The lot is about **0.18 acres**, or roughly **7,800 square feet**, in Hazelwood. I did **not** see flood, landslide, steep slope, wildfire, or Heritage Tree flags in the PortlandMaps record I pulled, but you should verify this before spending money because the official zoning maps control overlays and special districts (PCC 33.110.030).\n\nPlain-English implication: **you can probably build a detached accessory workshop**, but a 40-foot-wide building is not a tiny shed. The big limits are likely **height**, **distance from property lines**, **total building coverage**, **accessory-structure size**, **trees**, and **stormwater**, not the truss span by itself. In R2.5, a detached covered accessory structure is capped at **20 feet high**, the combined footprint of all detached/connected covered accessory structures cannot exceed **20% of the site**, and each detached covered accessory structure cannot be larger than the building coverage of the smallest primary structure or **900 square feet**, whichever is larger (PCC 33.110.245.C).\n\nFor your roughly 7,800-square-foot lot, **20% is about 1,560 square feet**. But the **per-building** cap may be lower or higher depending on the actual measured footprint of your house, not just the assessor\u2019s living-area number. A **40 \u00d7 24 shop = 960 square feet** might be realistic. A **40 \u00d7 30 shop = 1,200 square feet** needs a careful coverage check. A **40 \u00d7 40 shop = 1,600 square feet** is probably too large for the accessory-structure coverage limit unless something unusual applies (PCC 33.110.225; PCC 33.110.245.C).\n\nPermits are basically the city\u2019s way of checking that the work is safe before you build it. For this project, the main city office is **BDS**, now called **Portland Permitting & Development**, or **PP&D** \u2014 the people who issue building permits and inspect the work. The other likely players are **BES**, the Bureau of Environmental Services, for sewer and stormwater; **PBOT**, the Portland Bureau of Transportation, for driveways and work in the street area; **Urban Forestry**, the tree people; and **PF&R**, Portland Fire & Rescue, if fire access, fire separation, or fire code issues come up.\n\n## 3. What to do next \u2014 in order\n\n1. **Check the property record and make a one-page sketch.**\n   Go to **PortlandMaps**, search **450 NE 103rd Ave**, and print or save the property summary. Bring the property ID if shown; I found **R319825**. Sketch the lot, house, driveway, trees, fences, and where the shop might go. This is **free** and takes about **one evening**. Portland\u2019s zoning code says overlay zones, plan districts, and historic designations can add rules beyond the base zone, so check those before design work (PCC 33.110.030).\n\n2. **Call or book a free 15-minute appointment with PP&D zoning staff.**\n   Ask whether your exact proposed size is allowed as a detached accessory structure in **R2.5**. Bring the address, rough building size, height, intended use, and sketch. This is **free**. The city offers free 15-minute appointments for zoning, building code, permit process, water, stormwater, fire, and tree questions, and tells you to bring design ideas and property research. ([Portland.gov][1])\n\n3. **Pick a realistic first size before paying for engineering.**\n   For this lot, start by studying **40 \u00d7 24**, **40 \u00d7 28**, and **40 \u00d7 30**. A 40-foot clear span with a short length may fit the zoning box better than a square 40 \u00d7 40 shop. This is **free**, unless you pay a designer. Expect **a weekend of measuring and sketching**.\n\n4. **Check the required distance from property lines.**\n   The required distance is called a **setback** \u2014 it means how far the building has to sit from the property line. In R2.5, the base table shows **10 feet front**, **5 feet side**, **5 feet rear**, and **18 feet for a garage entrance**. A large 40-foot-wide workshop probably cannot use the small-accessory-structure setback exception, because that exception is limited to structures no larger than **24 by 24 feet** and no more than **15 feet high** (PCC 33.110.220; PCC 33.110.245.C.2).\n\n5. **Ask a pole-barn company or Oregon-licensed engineer for a preliminary structural concept.**\n   Tell them: 40-foot clear span, Portland, R2.5 residential lot, roof covering, roof pitch, whether you want storage, solar, ceiling, insulation, heat, or a vehicle lift. For a pole building, Portland says plans and calculations must be prepared and stamped by a licensed design professional. This is usually **paid**. A practical planning allowance is **a few thousand dollars** for engineering and permit-ready structural drawings, but the number depends heavily on the supplier and design. ([Portland.gov][2])\n\n6. **Prepare the permit package before buying trusses.**\n   You will need a site plan, architectural drawings, structural plans, and calculations. The site plan needs property lines, distances to property lines and buildings, existing and proposed building areas, paving, sewer/water/stormwater information, driveway, trees, and easements. This is where many homeowners get delayed. PP&D lists those site-plan and structural-plan items for accessory structures. ([Portland.gov][2])\n\n7. **Decide whether you are adding electrical, plumbing, or heat.**\n   Electrical lights/outlets need an **electrical permit**. A sink or toilet needs a **plumbing permit** and may trigger sewer/water review. Heat, gas piping, or HVAC needs a **mechanical permit**. PP&D says electrical, plumbing, and mechanical work can be included in a residential combination permit or pulled separately (PCC Title 26 for electrical; PCC Title 27 for mechanical; PCC Title 25 for plumbing). ([Portland.gov][2])\n\n8. **Check stormwater before finalizing the roof size.**\n   Roofs, paving, and concrete count as **impervious surface**, meaning rain can\u2019t soak into the ground there. PP&D says if you add more than **1,000 square feet** of impervious area for an accessory structure project, you need a stormwater plan on the site plan. BES runs Portland\u2019s stormwater rules, and the 2025 Stormwater Management Manual applies to development and improvements on private property (PCC Title 17; SWMM Section 2.3). ([Portland.gov][2])\n\n9. **Check trees before you place the building.**\n   Your lot is over **5,000 square feet**, so tree preservation rules can come into play during development. A tree plan may be required with the building permit, and Urban Forestry will care about private trees, street trees, and root protection areas. Street trees are in the public right-of-way, and tree permits changed in July 2025 so some tree permit fees are now reduced or removed, but the permit requirement can still exist (PCC Title 11). ([Portland.gov][2])\n\n10. **Submit through Development Hub PDX and expect checksheets.**\n    A **checksheet** is the city\u2019s list of corrections or questions. PP&D describes permit review as intake, technical review, and pre-issuance. Their stated goal for first review is about **15 business days for residential new construction**, but that is only the first review and workload can change. A realistic homeowner planning number for an engineered shop is **1 to 3 months for plan review**, longer if there are tree, stormwater, driveway, zoning, or engineering corrections. ([Portland.gov][3])\n\n11. **Budget for permits, reviews, and possible fees the city charges for new buildings.**\n    These city charges are called **System Development Charges**, or **SDCs**. For a plain non-habitable residential workshop with no plumbing, no new dwelling, no business use, no water meter upsizing, and no new driveway demand, SDCs may be **low or possibly exempt**, especially transportation SDCs for accessory buildings that do not add a dwelling or new demand. But stormwater, parks, transportation, school, or water charges can apply depending on size and use. Use PP&D\u2019s online permit fee estimator before submitting. ([Portland.gov][4])\n\nA planning budget I would carry is **$3,000\u2013$8,000** for a simple permitted, engineered, unheated workshop with electrical and no major site complications. That is \u201colder used car\u201d money. If you add plumbing, heat, a large paved driveway, stormwater facilities, water-meter changes, or SDCs, budget **$8,000\u2013$25,000+** for city fees, design corrections, permit review, and related soft costs before construction. If it becomes an accessory dwelling unit, commercial shop, or business with customers/employees, the cost and review path can jump a lot.\n\n## 4. What to ask the city script\n\nUse this by phone or email:\n\nHello,\n\nI\u2019m planning a detached workshop or small pole-barn-style building at **450 NE 103rd Ave, Portland, OR 97220**. The property ID I found is **R319825**, and PortlandMaps shows the base zone as **R2.5**.\n\nThe early concept is a non-habitable detached accessory workshop behind the house, with a **40-foot clear-span engineered truss roof**. I am still deciding the length, height, roof material, electrical work, plumbing, and heating. It would not be an accessory dwelling unit, and it would not be open to customers.\n\nCan you help me confirm:\n\n1. Whether this can be reviewed as a **detached accessory structure** in the R2.5 zone.\n2. The maximum allowed building footprint for this lot, including the accessory-structure coverage limits.\n3. The required front, side, and rear setbacks for a building wider than 24 feet.\n4. Whether any overlays, plan districts, historic/design rules, flood rules, or environmental rules apply to this specific property.\n5. Whether a land use review is needed before a building permit, or whether this can go straight to building permit review.\n6. Whether a pole building with a 40-foot clear span must have stamped engineering.\n7. Whether the added roof area will trigger stormwater review or a stormwater facility.\n8. Whether Urban Forestry needs a tree plan or tree protection plan.\n9. Which trade permits I need if I add electrical, plumbing, heat, or gas.\n10. Which SDC form I should submit, and whether SDCs are likely for a non-habitable residential workshop.\n\nI can send a rough site sketch showing the house, property lines, driveway, trees, and proposed workshop location.\n\nThank you.\n\n## 5. Truss spacing and structural details\n\nThe practical answer is: **there is no universal Portland maximum truss spacing for a 40-foot clear span.** The city will look for a complete structural design showing that the roof, trusses, purlins or sheathing, posts, bracing, foundations, and connections work together. Portland\u2019s residential structural guidance says one- and two-family residential work may follow the Oregon Residential Specialty Code, called **ORSC**, if it fits the prescriptive rules, but work outside that path must be engineered under the Oregon Structural Specialty Code, called **OSSC** (PCC Title 24; ORSC; OSSC). ([Portland.gov][5])\n\nA 40-foot pole-barn roof is very likely an **engineered design**, not a \u201clook it up in a simple rafter table\u201d design. PP&D specifically says **pole buildings or pre-engineered metal buildings must have plans and calculations prepared and stamped by a licensed design professional**. The structural drawings must show gravity loads, lateral loads, roof framing member size, spacing, span, supporting walls/posts, foundations, and calculations (PCC Title 24; ORSC R106; OSSC Chapter 16). ([Portland.gov][2])\n\nFor Portland residential structural design, the city\u2019s published minimum roof snow load is **20 pounds per square foot**, plus a **5 pounds per square foot rain-on-snow surcharge where applicable**. That load affects truss spacing directly: wider truss spacing means each truss carries more roof area and more weight. Wind and earthquake bracing also matter, not just vertical weight (ORSC R301; OSSC Chapter 16). ([Portland.gov][6])\n\nFor a metal-roof pole barn, the trusses might be spaced farther apart only if the **purlins** \u2014 the horizontal roof members running between trusses \u2014 are sized and spaced to carry the roof load. For a roof with plywood or OSB sheathing and asphalt shingles, the sheathing span rating and rafter/truss spacing usually push the design toward closer spacing. For standing-seam metal, corrugated metal, shingles, solar panels, storage loads, ceiling drywall, insulation, or a future hoist, the required truss design can change.\n\nA good contractor-level rule is: **do not ask \u201cwhat truss spacing is allowed?\u201d in isolation. Ask \u201cwhat complete roof system is engineered and approved?\u201d** For a 40-foot span, the approved spacing is the spacing shown on the stamped truss drawings and structural plans. Common post-frame layouts may use **4-foot, 8-foot, 10-foot, or 12-foot truss spacing**, but those are product/design choices, not automatic Portland code allowances.\n\nThe roof truss package should show at least: truss span, spacing, roof pitch, design loads, bearing points, uplift connections, required bracing, truss-to-post connections, and any limits on hanging loads. Do not cut, notch, drill, or alter trusses in the field unless the truss engineer approves it. That includes adding a heater, hoist, storage platform, or big ceiling fan after the fact.\n\n## 6. What you might get wrong / common gotchas\n\n**Buying trusses before zoning review.** The city may say the building is too big, too tall, too close to a line, or needs a different location. Get the zoning box first.\n\n**Assuming a pole barn is exempt from permits.** In Portland, a non-habitable accessory structure needs a building permit if it is over **200 square feet** or taller than **15 feet**. A 40-foot-span workshop is almost certainly over that threshold (PCC Title 24). ([Portland.gov][2])\n\n**Using the small-shed setback exception for a large shop.** The R2.5 side/rear setback exception is for detached covered accessory structures no larger than **24 by 24 feet**, no more than **15 feet high**, and meeting several other rules. A 40-foot-wide shop does not fit that exception, so plan on normal building setbacks (PCC 33.110.245.C.2).\n\n**Forgetting the 20-foot accessory height cap.** R2.5 allows a primary building up to 35 feet, but detached covered accessory structures are capped at **20 feet**. If the accessory structure is more than **15 feet high**, design rules for siding, roof pitch, trim, and eaves can kick in (PCC 33.110.245.C).\n\n**Designing a building that is too large for the lot.** For your roughly 7,800-square-foot lot, total accessory coverage is likely capped around **1,560 square feet**, and the per-accessory-building cap may be closer to your house\u2019s actual footprint or **900 square feet**, whichever is greater. Verify the house footprint, not just living area (PCC 33.110.225; PCC 33.110.245.C).\n\n**Calling it a \u201cworkshop\u201d but using it like a business.** In R2.5, office uses are not allowed as a primary use, and most manufacturing/warehouse uses are prohibited. A private hobby shop is one thing; a commercial shop with employees, customers, deliveries, noise, or production is another (PCC 33.110.100; PCC 33.110.110).\n\n**Adding more roof and pavement than you planned.** A 40 \u00d7 30 roof alone is **1,200 square feet** before driveway or apron paving. That can trigger stormwater planning and possibly BES review.\n\n**Ignoring trees until the end.** Tree root protection can move the building, driveway, trenching, and utility route. Street trees and large private trees can slow a project if they are not shown early.\n\n**Putting it too close to the neighbor.** Even if zoning allows a location, building code fire protection may require fire-rated walls or limited openings near property lines. PP&D flags the \u201cthree-foot rule\u201d for accessory structures near shared property lines (PCC Title 24; ORSC exterior wall/fire separation rules). ([Portland.gov][2])\n\n**Forgetting driveway rules.** If it functions as a garage, the city expects driveway access. Work in the public street area or sidewalk strip may require PBOT review and a separate transportation permit (PCC Title 17; PCC Title 24.45.020). ([Portland.gov][2])\n\n**Assuming the first review equals permit approval.** The city\u2019s target for first residential review is about 15 business days for new construction, but a checksheet can add rounds. A realistic planning window is **one to three months**, not \u201ctwo weeks and done.\u201d ([Portland.gov][3])\n\n## 7. Accuracy caveats\n\nI was able to pull the PortlandMaps record for this address and it showed **R2.5** zoning, single-family residential use, and no obvious flood/landslide/steep-slope/wildfire flags in the property detail I saw. Treat that as a strong starting point, not a substitute for the city\u2019s official zoning map check.\n\nThe biggest number I would verify before paying anyone is the **actual building coverage of the existing house**. The assessor\u2019s living-area number is not always the same as the zoning \u201cbuilding coverage\u201d footprint.\n\nThe truss-spacing answer depends on engineering. A supplier can sell a \u201c40-foot truss,\u201d but Portland will care about the whole load path: roof covering, purlins, bracing, posts, uplift connections, foundation, and stormwater.\n\nAlso, **BDS is now PP&D**, but many Portlanders still say BDS. If you call 503-823-7300 and say \u201cBDS,\u201d they will know what you mean.\n\n## 8. Glossary\n\n**Accessory structure** \u2014 A smaller, stand-alone building that serves the main house, such as a garage, shed, greenhouse, or workshop.\n\n**ADU** \u2014 Accessory Dwelling Unit. A small second dwelling unit with living facilities. A workshop is not an ADU unless it becomes living space.\n\n**BDS / PP&D** \u2014 Bureau of Development Services, now Portland Permitting & Development. This is the city office that handles building permits, plan review, and inspections.\n\n**BES** \u2014 Bureau of Environmental Services. The city bureau that handles sewer and stormwater review.\n\n**Building coverage** \u2014 The footprint of covered buildings on the lot.\n\n**Checksheet** \u2014 The city\u2019s list of plan corrections or missing information during permit review.\n\n**Clear span** \u2014 The open distance a truss or beam crosses without an interior support.\n\n**FAR** \u2014 Floor Area Ratio. A zoning limit comparing building floor area to lot area.\n\n**Impervious surface** \u2014 Roofs, paving, concrete, and other surfaces where rain does not naturally soak into soil.\n\n**ORSC** \u2014 Oregon Residential Specialty Code. Oregon\u2019s residential building code for one- and two-family homes when the work fits that code path.\n\n**OSSC** \u2014 Oregon Structural Specialty Code. Oregon\u2019s structural code used for engineered designs and many non-prescriptive buildings.\n\n**PBOT** \u2014 Portland Bureau of Transportation. The bureau that reviews driveways, sidewalks, curbs, and work in the public street area.\n\n**PCC** \u2014 Portland City Code.\n\n**PF&R** \u2014 Portland Fire & Rescue. The fire bureau; it can be involved in fire access, fire protection, hazardous uses, and fire-code questions.\n\n**Pole barn / post-frame building** \u2014 A building where posts carry roof and wall loads to the ground, often with widely spaced trusses and purlins.\n\n**Purlin** \u2014 A horizontal roof member that spans between trusses and supports the roof covering.\n\n**ROW** \u2014 Right-of-way. The public street area, often including sidewalk strips and planting strips, not just the paved road.\n\n**SDC** \u2014 System Development Charge. A fee the city may charge for new development impacts on parks, transportation, sewer, stormwater, or water systems.\n\n**Setback** \u2014 How far a building has to sit from the property line.\n\n**Stamped drawings** \u2014 Plans signed and sealed by an Oregon-licensed engineer or architect.\n\n**SWMM** \u2014 Stormwater Management Manual. Portland\u2019s stormwater design rulebook.\n\n**Title 10** \u2014 Portland\u2019s erosion and sediment control rules.\n\n**Title 11** \u2014 Portland\u2019s tree code.\n\n**Title 24** \u2014 Portland\u2019s building regulations; this is where the city adopts and administers building-code requirements.\n\n**Title 25** \u2014 Portland\u2019s plumbing regulations.\n\n**Title 26** \u2014 Portland\u2019s electrical regulations.\n\n**Title 27** \u2014 Portland\u2019s heating and mechanical regulations.\n\n**Title 31** \u2014 Portland\u2019s fire regulations.\n\n**Title 33** \u2014 Portland\u2019s zoning code; it controls use, size, height, setbacks, and where buildings can go.\n\n**Truss** \u2014 A factory-built or engineered roof frame made of connected members, often used to span wider distances than rafters.\n\n[1]: https://www.portland.gov/trees/treepermits/15-min-appts \"https://www.portland.gov/trees/treepermits/15-min-appts\"\n[2]: https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures \"https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures\"\n[3]: https://www.portland.gov/bds/article/758932 \"https://www.portland.gov/bds/article/758932\"\n[4]: https://www.portland.gov/bds/estimate-cost-your-building-permit \"https://www.portland.gov/bds/estimate-cost-your-building-permit\"\n[5]: https://www.portland.gov/code/24/all \"https://www.portland.gov/code/24/all\"\n[6]: https://www.portland.gov/bds/residential-permits-and-structural-requirements \"https://www.portland.gov/bds/residential-permits-and-structural-requirements\""
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll do this properly. Let me load the Portland Maps tools for the address-specific zoning lookup, then research the building code and permitting specifics in parallel.Now I have the property data. Critical finding: the lot is only **0.18 acres (~7,840 sq ft)** in zone **R2.5** with an existing 1,082 sq ft house \u2014 that's a tight lot for a 1,200 sq ft workshop. Let me research the technical and code-specific pieces in parallel now.Now let me research the technical structural piece \u2014 the truss spacing question and the relevant Oregon code.I have enough now. Let me write this as one comprehensive markdown response with everything inline. I'm going to walk through the structure you asked for, with the truss answer first, then the practical lot-size constraint I uncovered (which is the single most important thing nobody told you yet), then permits, scripts, details, gotchas, caveats, and glossary.\n\n---\n\n# Building a workshop at 450 NE 103rd Ave, Portland, OR 97220\n\n## 1. Plain-English answer to the truss question\n\nThere is no \"Portland says X feet\" number for truss spacing. Portland follows Oregon's residential building code, which simply says trusses have to be engineered to carry the snow and wind loads, and the **truss maker's engineer** is the one who picks the spacing. For a 40-foot clear span workshop in Portland, the standard answer is **4 feet on center** because that's what almost every truss company defaults to and it sails through inspection; 8 feet on center is real, common in true pole barns, and totally legal in Portland, but it requires beefier trusses plus a layer of 2x4 or 2x6 purlins running the long way across the top to hold up your roofing; 10 feet on center is at the edge of what's reasonable for a hobby shop and you'd want to be sure your truss engineer is comfortable with it. So tell your truss supplier \"40-foot span, 25 pounds per square foot snow load, Portland wind, what's the cheapest way to do this\" and let them come back with stamped drawings; whatever spacing those stamped drawings specify is the spacing Portland will approve.\n\n**One thing nobody told you yet, and this is important:** your lot at 450 NE 103rd is small (about 0.18 acres, so roughly 7,840 square feet) with an existing 1,082 square foot house, and Portland's zoning code caps a single detached accessory building at the size of your primary house's footprint, so a **1,200 square foot workshop is not allowed on this lot**. You're capped at roughly **1,082 square feet**, which means a 40 by 27 foot building works, but a 40 by 30 doesn't. Details and the code citation are in Section 4 below.\n\n## 2. What to do next, in order\n\nEach step lists who to talk to, what to bring, rough cost, rough time, and whether it's free.\n\n**Step 1 \u2014 Confirm zoning yourself, then with a real human at the city. (FREE)**\nPull up your property at https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/ and skim the \"Permits & Zoning\" section to confirm what I'm telling you below: base zone **R2.5**, plan district **East Corridor**, no overlays, no flood plain, no landslide hazard. Then book a **free 15-minute zoning question appointment** with a city planner at https://www.portland.gov/ppd/zoning-land-use/free-15-min-appointments and confirm the workshop sizing limits in person. Bring a rough site sketch (just hand-drawn) showing the existing house, the lot lines with rough dimensions, and where you want to put the workshop. **Cost: $0. Time: 15-minute appointment, usually bookable within a week or two.**\n\n**Step 2 \u2014 Get a property survey or pull your plat. (Sometimes free, sometimes $500-$1,500)**\nBefore you spend money on a stamped truss design, you need to know exactly where your property lines are. Pull the plat for free from PortlandMaps property detail or the Multnomah County Surveyor's office at https://multco.us/dart/county-surveyor. If the plat is unclear or the lot has been adjusted at any point, hire a licensed surveyor to set or confirm corner pins. **Cost: $0 if the plat is clear; $500-$1,500 for a corner survey, roughly the cost of a decent set of tires. Time: 1-3 weeks for a surveyor.**\n\n**Step 3 \u2014 Decide on building size and structural approach.**\nBased on Step 1, plan for a workshop of **no more than ~1,080 square feet**, which gives you 40 by 27 feet, or you could do 36 by 30, or any combination under that footprint cap. Decide whether you want stock trusses (cheaper, faster) or stamped engineered post-frame plans (better for non-standard wide spacing). **Cost: $0 to plan; truss quotes are free. Time: 1-2 weeks of phone calls.**\n\n**Step 4 \u2014 Get truss/structural plans. ($800-$3,500)**\nEither order pre-engineered trusses from a local truss plant (they ship with stamped drawings included), or hire a post-frame package supplier (Mule-Hide, Lester Buildings, MQS, or a local Oregon supplier) for a stamped pole-barn package, or hire an Oregon-licensed structural engineer to stamp a custom design. **Cost: stamped trusses are usually included free with the truss order; a full stamped post-frame package adds $1,500-$3,500 to the materials cost (about the price of a used motorcycle); a custom engineer-stamped design from scratch runs $1,500-$5,000. Time: 2-6 weeks.**\n\n**Step 5 \u2014 Apply for the building permit through Portland's online system. ($1,500-$3,500 in fees)**\nGo to https://www.portland.gov/ppd and apply through Portland Permitting & Development's online portal. You'll submit a site plan, foundation plan, framing plan, stamped truss drawings, and an erosion control plan. **Cost: rough estimate $1,500-$3,500 in city fees for a ~1,000 square foot workshop with no plumbing (about the cost of a high-end laptop, less than a used car). Time: 4-8 weeks of plan review for a residential accessory; can be faster on a simple application.**\n\n**Step 6 \u2014 Pull electrical permit separately. ($150-$400)**\nElectrical permits in Oregon are pulled separately from the structural permit, by a licensed electrician (or by you if you sign as the homeowner-occupant). **Cost: $150-$400 for a workshop sub-panel; about a tank of gas plus a nice dinner. Time: same-day issuance if filed online.**\n\n**Step 7 \u2014 Build, with required inspections.**\nRequired inspections typically include footing/foundation, framing, electrical rough-in, electrical final, and final building. Schedule each one through the IVR system or the online portal. **Cost: included in your permit fee. Time: 4-12 weeks of construction, depending on whether you DIY or hire it out.**\n\n## 3. Scripts you can read out loud\n\nThese are the actual sentences. Copy and paste; the parts in brackets are the only things you change.\n\n**Script A \u2014 call to BDS / Portland Permitting & Development zoning line, 503-823-7300, https://www.portland.gov/ppd/contact**\n\n> \"Hi, my name is Chris and I own 450 NE 103rd Avenue, 97220. The property ID is R319825. I want to build a detached workshop on the lot, no plumbing, no kitchen, no bedroom; just a hobby shop with electricity. The lot is zoned R2.5 with no overlays per PortlandMaps. Two questions. First, can you confirm in writing that under PCC 33.110.245.C.3.b the maximum footprint for my single detached accessory structure is the building coverage of my existing house, which is about 1,082 square feet according to the assessor? Second, can you confirm the required setbacks under Table 110-4 for R2.5 are 10 feet front, 5 feet sides, and 5 feet rear, and that the maximum accessory structure height is 20 feet under 33.110.245.C.1? I'd like to schedule a free 15-minute appointment with a planner if it'd help nail this down.\"\n\n**Script B \u2014 call to BDS structural / building inspection line, 503-823-7300, https://www.portland.gov/ppd**\n\n> \"Hi, I'm planning a roughly 40-by-27-foot detached workshop on a residential lot in the R2.5 zone. Single story, non-habitable, no kitchen, no bedroom, just heated space and outlets. I'm looking at a post-frame / pole-barn style with engineered roof trusses spanning the full 40 feet. Two questions. First, will the project be reviewed under the Oregon Residential Specialty Code R105.2 or under the structural code? Second, for a 40-foot truss span, do you need the truss spacing to be at any particular default like 24 inches, or is it whatever the manufacturer's stamped truss drawings specify? I want to make sure my plans match what your structural reviewer expects to see.\"\n\n**Script C \u2014 call to the Bureau of Environmental Services stormwater line, 503-823-7761, https://www.portland.gov/bes**\n\n> \"Hi, I'm planning a roughly 1,000 to 1,080 square foot detached workshop on a residential lot at 450 NE 103rd Avenue. The lot is in the Inverness combined sewer basin per PortlandMaps. New roof area will be the only new impervious surface. Will I trigger the Stormwater Management Manual based on the 1,000 square foot impervious threshold, and if so what are the simplest on-site management options for a single-family residential lot, like a drywell, soakage trench, or downspout disconnection?\"\n\n**Script D \u2014 call to BDS to ask about permit fees, 503-823-7300**\n\n> \"I'm planning a roughly 1,000 square foot detached residential workshop, post-frame construction, no plumbing, electrical only. I'd like a fee estimate. Can you walk me through what to expect for the building permit fee, plan review fee, the residential development services fee, the 12 percent state surcharge, the erosion control fee, and the stormwater plan review fee? And can you confirm whether Parks, Transportation, BES, and Water System Development Charges apply to a non-habitable accessory structure with no new dwelling unit?\"\n\n## 4. The detailed answer, by topic\n\n### 4.1 Zoning at 450 NE 103rd Ave (this is the part that limits your size)\n\nYour property at 450 NE 103rd Ave is in the **R2.5** base zone, also called **Residential 2,500**, which is Portland's smallest single-dwelling lot zone (PCC 33.110.020, https://www.portland.gov/code/33/110/020 and confirmed at https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/). It sits in the **East Corridor (EC) plan district**, which is a non-restrictive overlay focused on transit corridors and doesn't add hard rules for backyard workshops (https://www.portlandmaps.com/bps/zoning/#/zones/plandistrict/EC). There are **no environmental overlay zones**, **no historic district**, **no conservation district**, **no special flood hazard area**, and **no mapped landslide or potential landslide hazard area** on your property (https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/). That's actually good news; it means you can skip a lot of the Portland-specific complexity that hits properties in the West Hills or near streams. The lot is **0.18 acres or roughly 7,840 square feet**, and your existing house has a footprint of about **1,082 square feet** built in 1951.\n\nA workshop is a **detached accessory structure** under Portland's zoning code (PCC 33.110.245, https://www.portland.gov/code/33/110/245), and detached accessory structures are allowed by right in the R2.5 zone as long as you stay within the rules. The four rules that bite on a small lot like yours, in plain English:\n\nThe **maximum height** for any detached accessory building is **20 feet** measured from the lowest grade within 5 feet of the building to the midpoint of a sloped roof (PCC 33.110.245.C.1, https://www.portland.gov/code/33/110/245).\n\nThe **building has to sit at least 10 feet back from the front property line** (the side facing NE 103rd Ave), at least **5 feet from each side property line**, and at least **5 feet from the rear property line**, per Table 110-4 in the R2.5 column (PCC 33.110.220.B and Table 110-4, https://www.portland.gov/code/33/110/220).\n\nThe **combined building coverage of all detached accessory structures** on the lot can't exceed **20 percent of the lot area**, which on your 7,840 square foot lot is about **1,568 square feet** (PCC 33.110.245.C.3.a, https://www.portland.gov/code/33/110/245).\n\nThe single most important rule, and the one that limits you to about 1,080 square feet: **each individual detached accessory structure can't have a footprint bigger than the building coverage of your smallest primary structure on the lot, OR 900 square feet, whichever is greater** (PCC 33.110.245.C.3.b, https://www.portland.gov/code/33/110/245). Your house is 1,082 square feet, so your single workshop maximum footprint is **1,082 square feet**. A 40 by 27 = 1,080 sf works; a 40 by 30 = 1,200 sf is over the cap and would need an Adjustment, which is a discretionary review costing time and money you don't want to spend.\n\nThere's also a **lot-wide building coverage cap** (all buildings on the lot, including the house) of about **2,676 square feet** for your 7,840 sq ft lot, calculated as 2,250 + 15% of lot area over 5,000 sq ft (PCC 33.110.225 Table 110-5, https://www.portland.gov/code/33/110/225); 1,082 + 1,080 = 2,162 sf, so you've got room under that cap.\n\nThere's a **side-and-rear-setback exception** in 33.110.245.C.2.b (https://www.portland.gov/code/33/110/245) that lets you build closer to the side or rear property lines, but only if the structure is no more than 24 feet by 24 feet (576 sf), no more than 15 feet tall with walls under 10 feet, and at least 40 feet from the front line. That's a \"small shed\" exception, not useful for a 40-foot wide workshop.\n\n### 4.2 The truss / structure question, in detail\n\nYour workshop, as a **non-habitable detached accessory building** to a one- or two-family dwelling, is reviewed under the **Oregon Residential Specialty Code (ORSC)**, the residential building code Oregon adopts and Portland enforces (https://www.oregon.gov/bcd/codes-stand/pages/residential-structures.aspx). Portland references this through Title 24 of the City Code (PCC 24.10, https://www.portland.gov/code/24).\n\nORSC **Section R802.10** says wood roof trusses \"shall be designed, manufactured, and installed to comply with approved standards\" and that **truss design drawings prepared by the manufacturer must be supplied to the building official and approved prior to installation** (ORSC R802.10, https://up.codes/viewer/oregon/irc-2021/chapter/8/roof-ceiling-construction). The drawings have to show slope, span, **spacing**, design loads, lumber grades, and connections. So the **spacing comes from the truss manufacturer's stamped drawings**, not from a single number in the code. The prescriptive (no-engineer-needed) tables in ORSC R802 only cover **rafters and ceiling joists at 12, 16, 19.2, and 24 inches on center**, and they top out at much shorter spans than 40 feet, so for a 40-foot clear span you must use engineered trusses; there is no \"rafter\" path that gets you to 40 feet without a beam-and-post system.\n\nFor Portland's design loads: the **minimum design roof snow load is 25 pounds per square foot**, made up of 20 psf base snow plus a 5 psf rain-on-snow surcharge (Oregon Structural Specialty Code 1608.1, summarized at https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures and confirmed by SEAO at http://snowload.seao.org/). The **prescriptive design wind pressure is 18 psf allowable stress, corresponding to roughly a 95-100 mph 3-second-gust basic design wind speed** (https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures). Portland is **Seismic Design Category D1** for most residential parcels, including yours; you can verify yours at the **Oregon Design Criteria Hub** at https://www.oregon.gov/bcd/codes-stand/pages/design-criteria.aspx.\n\nSo the practical answer for your 40-foot span: tell the truss supplier \"40-foot clear span, 25 psf design roof snow load, 95 mph 3-second-gust wind, Exposure B, single-story unheated to lightly heated workshop, no ceiling load below,\" and ask for quotes at **4 feet, 8 feet, and (just for comparison) 10 feet on center**. You'll get back stamped drawings showing what each option costs and what truss depth is required. **4-foot spacing** is the universal default; standard plywood/OSB sheathing with 2x6 nailers spans 4 feet just fine, and the trusses can be relatively light. **8-foot spacing** is the classic pole-barn approach and is fully Portland-legal, but requires 2x4 or 2x6 **purlins** running on edge across the top of the trusses to support metal roofing; the trusses themselves get heavier (2x6 or 2x8 chords instead of 2x4). **10-foot spacing** pushes truss chords into 2x8 or 2x10 territory and the purlins into doubled or 2x6-on-edge; it's not common for residential workshops and your truss salesperson will probably steer you back to 8.\n\nFor the **walls and posts** of a true post-frame building, ORSC doesn't have prescriptive tables for embedded-post construction; the post sizes, embedment depths, and bracing all come from **stamped engineering**, which is part of the post-frame package you'll buy or have designed (ORSC R301.1.3, https://up.codes/viewer/oregon/irc-2021/chapter/3/building-planning, allows alternative designs by a registered design professional). The **foundation** can be one of three types: a continuous concrete footing with stem wall (most house-like, most expensive), concrete piers with embedded posts (the classic pole barn), or a reinforced concrete slab-on-grade with post anchors set into it (cleanest, easiest to insulate). All three are accepted in Portland; the choice is structural and cost, not regulatory.\n\nA **concrete floor is not required** by code for a non-habitable workshop; you can have a gravel floor. But if you want to run electrical floor outlets, mount fixed equipment, or ever heat the space, a slab is worth it.\n\nYou will need **stamped engineering** for the trusses (always, for a 40-foot clear span; ORSC R802.10) and for any post-frame foundation system (ORSC R301.1.3). You can avoid stamped engineering for the rest of the building by using ORSC's prescriptive provisions for the walls and braced wall lines, which is the cheapest path; or you can have the whole thing engineered, which is what most pre-fab pole-barn packages from companies like MQS, Lester, or Mule-Hide already include.\n\n### 4.3 Permits, by trigger\n\nThe **building permit is required** because your structure is over 200 square feet (ORSC R105.2 Item 1; Portland's worksheet at https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures). Below 200 square feet and 15 feet tall and non-habitable, you'd be permit-exempt for the structure itself; you're well above that.\n\nThe **zoning permit** is folded into the building permit application; a separate zoning-only permit isn't needed unless you go below the 200 sf structural threshold (https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures).\n\nThe **electrical permit** is required for any new wiring, separately filed, by a licensed electrician or by you as the owner-occupant per **OAR 918-309** (https://www.oregon.gov/bcd/codes-stand/Pages/electrical.aspx).\n\nThe **plumbing permit** does not apply because you're not adding water, sewer, or gas.\n\nThe **mechanical permit** applies only if you install fuel-burning heat, ducted HVAC, or a permanent ventilation system; a portable space heater or a 240V mini-split installed by your electrician (since mini-splits are electrical work) typically don't require a separate mechanical permit, but call BDS to confirm because mini-split rules have shifted recently.\n\nThe **stormwater management permit** is rolled into the building permit but can add real cost. Portland triggers stormwater management for projects creating **1,000 square feet or more of new impervious area**, which a 1,000+ sf roof does (https://www.portland.gov/bes/stormwater/swmm-and-right-way-projects/determine-requirements). For a backyard workshop, the simplest compliance options are a **drywell**, **soakage trench**, or **downspout disconnection** to a vegetated swale; the city's **Stormwater Management Manual** at https://www.portland.gov/bes/stormwater-manual covers sizing. Your soils are **Hydrologic Soil Group B** (well-drained), so infiltration approaches should work (per your environmental report at https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/).\n\nThe **erosion control plan** is required for any project that disturbs ground; it's a one-page form for small projects, included in your building permit application (PCC Title 10, https://www.portland.gov/code/10, with Erosion Control Manual at https://www.portland.gov/bes/development/erosion-control-manual).\n\nThe **driveway / curb cut permit (PBOT)** applies only if you're creating a new vehicle entrance from NE 103rd Ave; if you're using your existing driveway, no curb-cut permit (https://www.portland.gov/transportation/permits/driveway).\n\nThe **tree permit / tree review** is potentially required because your lot is **larger than 5,000 square feet**, which means you do NOT qualify for the small-lot exemption in Title 11 (PCC 11.50.040.B.2, https://www.portland.gov/code/11/50/040). If your construction involves any ground disturbance within the **root protection zone** of a private tree 12 inches or larger in diameter, or any street tree 3 inches or larger, you'll need a **Tree Plan** (PCC 11.50.030, https://www.portland.gov/code/11/50/030). If you don't have any trees that big where you want to build, you're fine; if you do, you'll need to retain at least 1/3 of non-exempt trees 12 inches or bigger, or pay mitigation fees.\n\n### 4.4 Which Portland City Code titles actually apply\n\n**Title 24 \u2014 Building Regulations** applies because you're building a structure (https://www.portland.gov/code/24); this is where Portland adopts the ORSC and OSSC.\n\n**Title 33 \u2014 Planning and Zoning** applies through Chapter 33.110 Single-Dwelling Zones (https://www.portland.gov/code/33/110), specifically 33.110.220 (setbacks), 33.110.225 (lot coverage), and 33.110.245 (accessory structures).\n\n**Title 26 \u2014 Electrical Regulations** applies for the wiring (https://www.portland.gov/code/26).\n\n**Title 25 \u2014 Plumbing Regulations** does NOT apply because you're not plumbing it (https://www.portland.gov/code/25).\n\n**Title 27 \u2014 Heating, Ventilation, and Refrigeration** applies only if you install fixed mechanical equipment beyond a portable heater (https://www.portland.gov/code/27).\n\n**Title 10 \u2014 Erosion and Sediment Control** applies because you're disturbing ground (https://www.portland.gov/code/10).\n\n**Title 11 \u2014 Trees** applies because your lot is over 5,000 square feet, in particular Chapter 11.50 (https://www.portland.gov/code/11/50).\n\n**Title 17 \u2014 Public Improvements**, specifically Chapter 17.38 \u2014 Drainage and Water Quality (https://www.portland.gov/code/17/38), is what gets you into the Stormwater Management Manual.\n\n### 4.5 Process, sequencing, and where to apply\n\nApply online through Portland's permitting portal at https://www.portland.gov/ppd, or in person at the Development Services Center at **1900 SW 4th Avenue, Portland, OR 97201**, open Tuesdays and Thursdays 8 a.m. to 4 p.m. for walk-ins (https://www.portland.gov/ppd/development-services-center). Most residential accessory structure permits go fully online now; you upload a site plan, foundation plan, framing plan, stamped truss drawings, an erosion control plan, and a stormwater plan, then pay fees and wait for plan review comments.\n\nPlan review for a residential accessory typically takes **4-8 weeks** in Portland in 2026, sometimes faster for clean applications, sometimes longer if reviewers come back with corrections. Add 1-3 weeks if BES wants stormwater clarifications. Add another 1-3 weeks if Urban Forestry wants a tree plan. After permit issuance, your construction is on your schedule with required inspections at footing, framing, electrical rough-in, electrical final, and final building.\n\nA **pre-application meeting (Early Assistance)** is available but probably overkill for a workshop on a clean lot; it's more useful for new houses, ADUs, and complicated subdivisions (https://www.portland.gov/ppd/zoning-land-use/early-assistance-program). The **free 15-minute zoning appointment** is more useful and is what I recommend for you (https://www.portland.gov/ppd/zoning-land-use/free-15-min-appointments).\n\n### 4.6 Who handles what (the bureau cheat sheet)\n\n**Portland Permitting & Development (PP&D)**, formerly **Bureau of Development Services (BDS)** until mid-2025, handles building permits, zoning review, plan review, and inspections; this is your primary contact (503-823-7300, https://www.portland.gov/ppd). **They are who you call first.**\n\n**Bureau of Environmental Services (BES)** handles sewer, stormwater, and watershed protection (503-823-7761, https://www.portland.gov/bes). Your property is in the Inverness combined sewer basin per https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/.\n\n**Portland Bureau of Transportation (PBOT)** handles streets, curb cuts, sidewalks, driveways, and right-of-way work (503-823-5185 for driveway/curb cut questions, https://www.portland.gov/transportation).\n\n**Urban Forestry**, which is a division of **Portland Parks & Recreation (PP&R)**, handles street trees and tree code reviews (503-823-4489, https://www.portland.gov/trees).\n\n**Portland Fire & Rescue (PF&R)** sets your fire-code requirements; for a residential accessory you generally don't talk to them directly because BDS handles the fire review for residential, but they show up if you have a structure within 3 feet of a property line (which triggers fire-rated wall assemblies under ORSC R302.1) (https://www.portland.gov/fire).\n\n**Portland Water Bureau** handles your domestic water service; not relevant unless you tap a new water line for the workshop (503-823-7404, https://www.portland.gov/water).\n\n**Multnomah County Surveyor** is who has your plat on file (https://multco.us/dart/county-surveyor); the lot is in Multnomah County.\n\n### 4.7 Cost and timeline, in human terms\n\nFor a roughly 1,000 square foot non-habitable detached workshop with no plumbing, expect city fees in the range of **$1,500 to $3,500**, roughly the cost of a high-end laptop or a couple of monthly mortgage payments. The breakdown: structural building permit fee based on the **ICC Building Valuation table** (about $30-$45 per square foot for a Group U \"utility\" occupancy in 2026 dollars, so a roughly $30,000-$45,000 valuation for a 1,000 sf shop), plan review fee at 65% of the permit fee, a **12% Oregon state surcharge** on both, a **Development Services Fee** (residential, valuation-based, see Page 3 of the Land Use Services Fee Schedule at https://www.portland.gov/ppd/current-fee-schedules), an **erosion control fee** (around $200), and a **stormwater plan review fee** (varies by complexity). These fees update every July 1; the current schedule is at https://www.portland.gov/ppd/current-fee-schedules.\n\n**System Development Charges (SDCs)** are one-time fees the city collects for new buildings to pay for sewers, parks, water, and roads. Good news: for a **non-habitable accessory structure with no new dwelling unit**, the residential SDCs typically do NOT apply because there's no new household, no new water meter, and no new traffic trips (https://www.portland.gov/ppd/sdc-fees). Confirm this with BDS during fee estimation; it's the biggest cost variable on this project.\n\nThe **Construction Excise Tax (CET)**, 1% of permit valuation, only kicks in at $100,000 valuation or higher, so you're under it (https://www.portland.gov/phb/cet).\n\n**Electrical permit** for a sub-panel and shop wiring runs roughly **$150-$400** with the state surcharge.\n\n**Total construction budget**, materials and labor: a 40 by 27 ft pole-barn shop in Portland in 2026, DIY-ish with hired truss/concrete crews, runs roughly **$40,000-$80,000** (about the cost of a new mid-tier pickup); fully contractor-built, $80,000-$150,000.\n\n**Total timeline from \"I want to do this\" to \"I can start framing\"**: about **3 to 6 months**, roughly one summer's worth of weekends to plan plus one summer to build. Two weeks of planner appointments and surveys, 3-6 weeks for stamped trusses or post-frame package, 4-8 weeks of plan review, then construction.\n\n## 5. Common gotchas Portland homeowners actually hit\n\nThe lot-size cap on accessory structures is the #1 gotcha for your address; most people assume \"it's my yard, I can build whatever fits.\" Portland's 33.110.245.C.3.b cap based on the primary house's footprint catches people who didn't realize their existing house is unusually small for the area; you fall in this bucket because your 1,082 sf house caps your single workshop at 1,082 sf when most of your neighbors with bigger houses can build bigger workshops.\n\nBuilding too close to a property line without a real survey. The plat dimensions are sometimes wrong by a foot or two, and a 5-foot side setback that turns out to be 4-foot-7 is a permit-killer; spend the $500-$1,500 on a corner survey before you pour footings.\n\nThe **3-foot fire rule** under ORSC R302.1: any building wall less than 3 feet from a property line has to be a 1-hour fire-rated wall assembly with no openings, which gets expensive fast and limits your windows. Stay 5 feet or more off side and rear lines and you avoid this entirely.\n\nFinishing the inside and accidentally creating \"habitable space.\" If you add a kitchen sink, a toilet, a sleeping area, or insulate-and-drywall the whole thing as a livable hangout, Portland will reclassify the building as habitable, which triggers ADU rules, full code compliance, SDCs, and possibly a different permit pathway (BOD 21-05, https://www.portland.gov/ppd/codes-rules-and-guides/bod-21-05-habitable-vs-non-habitable-accessory-structures). Heat is fine and so is electricity; a kitchen, bedroom, or bathroom is what flips the switch.\n\nRunning power without an electrical permit. Oregon enforces this aggressively; if you DIY the wiring, sign as the homeowner-occupant and pull the permit at https://www.oregon.gov/bcd (cheap, fast, online).\n\nBuilding without realizing the **1,000 square foot stormwater trigger** kicks in. The cheapest way to handle it is to disconnect downspouts to a soakage trench in your back yard; your soils (Hydrologic Soil Group B, well-drained, 6 ft to fragipan per https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/) are favorable for infiltration.\n\nForgetting that the **garage entrance setback is 18 feet from the front lot line** (PCC 33.110.220 Table 110-4, https://www.portland.gov/code/33/110/220). If your shop has a vehicle door facing NE 103rd Ave, that door has to be 18 feet back, not just 10. Easiest fix: orient the shop so its big door faces the side or rear, not the street.\n\nTree code surprises on lots over 5,000 sf. If there's a 12-inch-or-larger tree in the path of your foundation, you'll either need to retain it (and stay outside its root protection zone), pay mitigation, or get an arborist's letter that it's dead/dying/dangerous (PCC 11.50.040, https://www.portland.gov/code/11/50/040). Map your trees before you map your slab.\n\nPulling the building permit but discovering you also needed a **separate sewer cap permit** because you disconnected an old downspout drain that tied into the combined sewer; this is a BES item handled at https://www.portland.gov/bes.\n\n## 6. Friendly accuracy caveats (warnings from a friend, not legal disclaimers)\n\nZoning rules change. Portland updated its accessory-structure rules in 2020 and again in 2023, and the residential code edition in force as of late 2026 is the 2023 ORSC; if this answer is more than 6 months old when you read it, verify the section numbers haven't shifted. The PortlandMaps detail at https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/ is the canonical, real-time source for your specific property's zoning; trust it over any third-party summary including this one.\n\nThe **assessor's reported house footprint of 1,082 square feet** is the number that drives your accessory-structure cap, but the city's planner can use the actual measured footprint at the foundation line, which can vary by 50-100 square feet from the assessor's figure depending on overhangs, decks, and how the assessor measured it. Before you commit to a 1,080 sf workshop, get the planner to confirm the cap number in writing; if your house footprint is actually 1,050 sf, your cap is 1,050 sf.\n\nLot dimensions in PortlandMaps are derived from county GIS, which can be off by a foot or more from the actual surveyed corners, especially on older platted lots from the 1920s-1950s like yours (built 1951). The **plat or a fresh corner survey** is the only thing that tells you for certain where your property lines are.\n\nThe truss spacing answer above assumes a typical pole-barn or post-frame workshop with a metal roof and standard purlins; if you're picturing a heated, insulated, drywalled space with a finished ceiling, the loads change (more dead load, possible snow drift on adjacent roof) and the spacing might tighten. Tell the truss engineer the actual configuration.\n\n**System Development Charges** can be the biggest variable in your budget; the rule of thumb that \"non-habitable accessory structures don't trigger SDCs\" is generally true but BES can charge a stormwater SDC if you create new impervious area without on-site management, and that can run $1,000-$3,000. Confirm with BES (503-823-7761) when you confirm your stormwater approach.\n\nIf at any point a planner or inspector tells you something different from what's in this document, **trust them, not me**; they're looking at your actual file with your actual measurements.\n\n## 7. Glossary\n\n**Accessory structure**: a separate, smaller building on the same lot as a main house, used for storage, parking, hobbies, etc.; a workshop or garage is an accessory structure.\n\n**ADU (Accessory Dwelling Unit)**: a second small dwelling on the same lot as the main house. You're not building one of these; if you accidentally added a kitchen and bed, you would be.\n\n**ASCE 7**: a national engineering standard, \"Minimum Design Loads for Buildings and Other Structures\", that defines snow, wind, and seismic loads.\n\n**BDS (Bureau of Development Services)**: the old name (until mid-2025) for what's now called Portland Permitting & Development; same organization, new name.\n\n**BES (Bureau of Environmental Services)**: handles Portland's sewer, stormwater, and watershed work.\n\n**BOD (Building Official Determination)**: a written interpretation of the building code by Portland's building official; cited like \"BOD 21-05\".\n\n**Building coverage**: the total ground area covered by buildings on a lot, expressed in square feet or as a percentage of lot area.\n\n**CET (Construction Excise Tax)**: a 1% tax on permit valuations over $100,000, going to affordable housing.\n\n**FAR (Floor Area Ratio)**: total floor area of all buildings divided by lot area; not the same as building coverage.\n\n**Header**: a beam over a door or window opening that carries the load above.\n\n**Inline citation**: a code section number and URL placed in the same sentence as the claim being supported.\n\n**IRC (International Residential Code)**: the national model code for one- and two-family dwellings, which Oregon adapts and adopts as the ORSC.\n\n**ORSC (Oregon Residential Specialty Code)**: Oregon's adopted version of the IRC, the residential code Portland enforces.\n\n**OSSC (Oregon Structural Specialty Code)**: Oregon's commercial/structural code, used for buildings that fall outside the residential code.\n\n**Overlay zone**: an extra layer of zoning rules on top of a base zone, like flood plain, environmental conservation, historic, or design overlays. Your lot has none.\n\n**PBOT (Portland Bureau of Transportation)**: handles streets and rights-of-way.\n\n**PCC (Portland City Code)**: the city's code, organized by Title (Title 24, Title 33, etc.).\n\n**PF&R (Portland Fire & Rescue)**: the fire bureau.\n\n**PP&D (Portland Permitting & Development)**: the new (post-2025) name for what used to be BDS.\n\n**PP&R (Portland Parks & Recreation)**: handles parks and Urban Forestry.\n\n**Plan district**: an area-specific overlay defining special rules for a part of town; East Corridor (EC) is the one your lot is in.\n\n**Plat**: the recorded survey map showing your lot and its dimensions.\n\n**Pole barn / post-frame**: a building style where vertical posts (often embedded in the ground or anchored to concrete piers) carry the roof, instead of stick-framed walls on a continuous foundation.\n\n**Purlin**: a horizontal framing member that runs across the top of trusses or rafters to support the roofing material; common in pole barns where trusses are spaced 8 feet apart.\n\n**ROW (right-of-way)**: the public street area, usually owned by the city.\n\n**R2.5**: the zone code for \"Residential 2,500\", Portland's smallest single-dwelling lot zone.\n\n**SDC (System Development Charges)**: one-time fees the city charges new buildings to pay for sewers, water, parks, and roads.\n\n**Setback**: the minimum distance a building has to sit back from each property line.\n\n**Span**: the distance a beam, rafter, or truss covers between supports; your 40-foot clear span means no posts in the middle.\n\n**SWMM (Stormwater Management Manual)**: Portland's rules for handling rainwater on developing sites; triggered by 1,000+ sf of new impervious area.\n\n**Title 33**: Portland's zoning code; Chapter 33.110 specifically governs single-dwelling zones like yours.\n\n**Truss**: a triangulated, factory-built roof framing unit that spans long distances without interior support; an alternative to traditional rafters.\n\n**On-center (o.c.)**: how truss or stud spacing is measured, from the center of one member to the center of the next; \"8 feet on center\" means trusses 8 feet apart, center to center.\n\n---\n\n**One last thing.** The single most valuable next step you can take, before you spend any money, is to book the free 15-minute zoning appointment at https://www.portland.gov/ppd/zoning-land-use/free-15-min-appointments and walk in with a hand-drawn site sketch and the question \"what's the largest single detached accessory structure I can build on this lot under PCC 33.110.245.C.3.b given my existing house footprint?\" Get the planner's answer in writing (an email confirmation works), and that becomes the maximum size you design to. Everything downstream gets cheaper and faster once that number is locked in."
     }
   },
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "No universal max truss spacing",
-      "claim_full": "There is no single maximum truss spacing prescribed by Portland code for a 40-foot span; spacing must come from the engineered truss design package.",
+      "claim_short": "Truss spacing comes from engineered drawings",
+      "claim_full": "Truss spacing for a 40-foot clear span is determined by the truss manufacturer's stamped engineered drawings, not a single prescriptive number in code.",
       "topic": "structural",
       "variants": [
         "oob",
@@ -30,17 +30,39 @@
         "enhanced"
       ],
       "specificity": 0.7,
-      "actionability": 0.7,
-      "correctness": "correct-judg",
+      "actionability": 0.9,
+      "correctness": "correct",
       "importance": 5,
-      "citation": null,
-      "verified_truth": "Correctly hedged. Portland requires engineered/stamped designs for pole buildings rather than a code-prescribed truss-spacing rule, per the rationale and PP&D guidance.",
-      "citation_by_variant": null
+      "citation": "ORSC R802.10",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "ANSI/ASABE EP 484.3 / ICC AC322",
+        "enhanced": "ORSC R802.10, https://up.codes/viewer/oregon/irc-2021/chapter/8/roof-ceiling-construction"
+      },
+      "verified_truth": "ORSC R802.10 requires manufacturer-stamped truss design drawings showing slope, span, spacing, and design loads."
     },
     {
       "id": "A2",
-      "claim_short": "Conventional framing 24 in o.c.",
-      "claim_full": "Conventional residential roof framing typically uses 24 inches on center.",
+      "claim_short": "4 ft OC is standard truss spacing",
+      "claim_full": "4 feet on center is the universal default truss spacing for residential workshops because standard sheathing spans 4 feet easily.",
+      "topic": "structural",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "enhanced": null
+      },
+      "verified_truth": "Not verified in this evaluation; spacing depends on engineered design per ORSC R802.10."
+    },
+    {
+      "id": "A3",
+      "claim_short": "8 ft OC common pole-barn spacing",
+      "claim_full": "8 feet on center is the most common pole-barn spacing for single trusses, requiring 2x6 or 2x8 purlins to support roofing between trusses.",
       "topic": "structural",
       "variants": [
         "oob",
@@ -48,521 +70,576 @@
         "enhanced"
       ],
       "specificity": 0.8,
-      "actionability": 0.5,
+      "actionability": 0.8,
       "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Standard residential framing convention; not contested in the accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A3",
-      "claim_short": "Pole-barn spacing 4/8/10/12 ft",
-      "claim_full": "Post-frame pole-barn construction commonly uses truss spacing of 4, 8, 10, or 12 feet on center, but only when engineered as a system.",
-      "topic": "structural",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.6,
-      "correctness": "correct-judg",
       "importance": 4,
       "citation": null,
-      "verified_truth": "Industry-typical spacing range stated as a planning convention, not a code value; rationale supports the hedged framing.",
-      "citation_by_variant": null
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Not verified in this evaluation; convention from post-frame industry, but final spacing is per stamped drawings."
     },
     {
       "id": "A4",
-      "claim_short": "8 ft o.c. as planning assumption",
-      "claim_full": "For a 40-foot pole-barn, 8 feet on center is a reasonable starting assumption pending engineered drawings.",
+      "claim_short": "12 ft OC max single truss",
+      "claim_full": "12 feet on center is the practical maximum for a single-truss design at a 40-foot span; beyond that requires double trusses.",
       "topic": "structural",
       "variants": [
         "oob",
         "mcp"
       ],
-      "specificity": 0.7,
-      "actionability": 0.6,
-      "correctness": "correct-judg",
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct-range",
       "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flag explicitly identifies this as an inference/planning value, not a code-derived requirement; appropriately hedged.",
-      "citation_by_variant": null
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Not verified in this evaluation; consistent with post-frame industry practice."
     },
     {
       "id": "A5",
-      "claim_short": "Snow load 20 psf + 5 psf ROS",
-      "claim_full": "Portland's minimum residential roof snow design value is 20 psf plus a 5 psf rain-on-snow surcharge where applicable.",
-      "topic": "structural",
+      "claim_short": "Lot is 0.18 acres / ~7,840 sf",
+      "claim_full": "The property at 450 NE 103rd Ave is approximately 0.18 acres or roughly 7,840 square feet.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/"
+      },
+      "verified_truth": "Lot size of 0.18 acres / ~7,840 sf is confirmed by the data-quality notes."
+    },
+    {
+      "id": "A6",
+      "claim_short": "House is 1,082 sf, built 1951",
+      "claim_full": "The existing house on the lot has a footprint of about 1,082 square feet and was built in 1951.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/"
+      },
+      "verified_truth": "House footprint 1,082 sf, built 1951, confirmed by accuracy flags."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Lot is zoned R2.5",
+      "claim_full": "The property is in the R2.5 (Residential 2,500) base zone in the East Corridor plan district with no environmental overlays.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.020",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 33.110.020, https://www.portland.gov/code/33/110/020"
+      },
+      "verified_truth": "Property is R2.5 in East Corridor plan district with no overlays per accuracy flags."
+    },
+    {
+      "id": "A8",
+      "claim_short": "OOB guessed R5 zoning",
+      "claim_full": "Out-of-the-box response inferred the lot was zoned R5 (5,000 sq ft min lot) without retrieving actual zoning data.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.3,
+      "correctness": "WRONG",
+      "importance": 5,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Lot is actually R2.5, not R5; OOB explicitly admitted this was an inference from acreage."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Accessory structures rules at PCC 33.110.245",
+      "claim_full": "Detached accessory structures in single-dwelling zones are governed by Portland City Code Chapter 33.110.245.",
+      "topic": "citations",
       "variants": [
         "oob",
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "portland.gov PP&D residential structural page",
-      "verified_truth": "Confirmed by accuracy flag for the OOB response; cited to portland.gov.",
-      "citation_by_variant": {
-        "oob": "portland.gov PP&D residential structural page",
-        "enhanced": "portland.gov PP&D residential structural page"
-      }
-    },
-    {
-      "id": "A6",
-      "claim_short": "Wind 98 mph Vult Risk Cat II",
-      "claim_full": "Portland's basic wind speed for Risk Category II is 98 mph Vult per the city's commercial structural page.",
-      "topic": "structural",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "portland.gov commercial structural page",
-      "verified_truth": "Accuracy flag confirms this Risk Category II Vult value as cited by the AI.",
-      "citation_by_variant": {
-        "oob": "portland.gov commercial structural page"
-      }
-    },
-    {
-      "id": "A7",
-      "claim_short": "Beam calcs over 10 ft",
-      "claim_full": "Calculations are required for any beam over 10 feet or supporting a point load.",
-      "topic": "structural",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "portland.gov residential structural",
-      "verified_truth": "Confirmed by accuracy flag, cited to Portland residential structural guidance.",
-      "citation_by_variant": {
-        "oob": "portland.gov residential structural"
-      }
-    },
-    {
-      "id": "A8",
-      "claim_short": "Pole buildings need stamped plans",
-      "claim_full": "Pole buildings or pre-engineered metal buildings must have plans and calculations prepared and stamped by a licensed design professional.",
-      "topic": "structural",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PP&D garage/shed/accessory structures page",
-      "verified_truth": "Confirmed by accuracy flag; PP&D requires stamped engineered plans for pole buildings.",
-      "citation_by_variant": {
-        "enhanced": null
-      }
-    },
-    {
-      "id": "A9",
-      "claim_short": "Property R2.5 zoning",
-      "claim_full": "450 NE 103rd Ave is in the R2.5 (Residential 2,500) base zone.",
-      "topic": "zoning",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
       "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag confirms R2.5 zoning at this address per PortlandMaps lookup.",
+      "actionability": 0.6,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": "PCC 33.110.245",
       "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
+        "oob": "PCC 33.110.245",
+        "enhanced": "PCC 33.110.245, https://www.portland.gov/code/33/110/245"
+      },
+      "verified_truth": "OOB evaluator flagged that R-zone accessory structures may instead be at PCC 33.110.250; needs verification against current code."
     },
     {
       "id": "A10",
-      "claim_short": "Property ID R319825",
-      "claim_full": "The PortlandMaps property ID for 450 NE 103rd Ave is R319825.",
-      "topic": "address",
+      "claim_short": "20 ft max accessory height",
+      "claim_full": "Detached accessory structures are limited to 20 feet maximum height, measured to the midpoint of a sloped roof.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.245.C.1",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.110.245.C.1, https://www.portland.gov/code/33/110/245"
+      },
+      "verified_truth": "20 ft max height for detached accessory structures confirmed in accuracy flags."
+    },
+    {
+      "id": "A11",
+      "claim_short": "20% lot coverage cap on accessories",
+      "claim_full": "Combined building coverage of all detached accessory structures cannot exceed 20% of lot area, yielding ~1,568 sf on this 7,840 sf lot.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.95,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.245.C.3.a",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.110.245.C.3.a, https://www.portland.gov/code/33/110/245"
+      },
+      "verified_truth": "20% lot-area cap for combined detached accessory coverage confirmed in accuracy flags."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Single accessory cap = house footprint or 900 sf",
+      "claim_full": "A single detached accessory structure footprint cannot exceed the building coverage of the smallest primary structure or 900 sf, whichever is greater \u2014 capping this lot's workshop at ~1,082 sf.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.245.C.3.b",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.245.C.3.b, https://www.portland.gov/code/33/110/245"
+      },
+      "verified_truth": "PCC 33.110.245.C.3.b cap rule confirmed in accuracy flags; this is the binding constraint for this lot."
+    },
+    {
+      "id": "A13",
+      "claim_short": "R2.5 setbacks: 10/5/5",
+      "claim_full": "R2.5 zone setbacks are 10 feet front, 5 feet side, and 5 feet rear per Table 110-4.",
+      "topic": "setbacks",
       "variants": [
         "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.6,
+      "actionability": 1.0,
       "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag confirms property ID R319825 for the parcel.",
+      "importance": 5,
+      "citation": "PCC 33.110.220 Table 110-4",
       "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A11",
-      "claim_short": "Hazelwood neighborhood",
-      "claim_full": "The property is in the Hazelwood neighborhood.",
-      "topic": "address",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 1,
-      "citation": "PortlandMaps",
-      "verified_truth": "Hazelwood designation confirmed via accuracy flag.",
-      "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A12",
-      "claim_short": "Lot ~7,800 sq ft / 0.18 ac",
-      "claim_full": "The lot is approximately 0.18 acres or about 7,800 square feet.",
-      "topic": "address",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag confirms lot size approximately 0.18 ac / 7,800 sq ft.",
-      "citation_by_variant": {
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A13",
-      "claim_short": "No hazard flags on parcel",
-      "claim_full": "PortlandMaps shows no flood, landslide, steep-slope, wildfire, or Heritage Tree flags at this property.",
-      "topic": "zoning",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.6,
-      "correctness": "hedge-correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag notes the AI's hazard-flag assertion based on PortlandMaps; both responses hedge that the resident should still verify against official maps.",
-      "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
+        "mcp": null,
+        "enhanced": "PCC 33.110.220.B and Table 110-4, https://www.portland.gov/code/33/110/220"
+      },
+      "verified_truth": "R2.5 setbacks 10 ft front, 5 ft sides, 5 ft rear from Table 110-4 confirmed in accuracy flags."
     },
     {
       "id": "A14",
-      "claim_short": "Permit over 200 sf or 15 ft",
-      "claim_full": "A building permit is required for a detached accessory structure over 200 square feet or taller than 15 feet.",
+      "claim_short": "OOB cited 5/5 setbacks for R5",
+      "claim_full": "OOB stated 5 ft side and 5 ft rear setbacks in R5 with structure 40 ft from front lot line or behind rear wall of house.",
+      "topic": "setbacks",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Lot is R2.5 not R5; while 5/5 side/rear values match, the underlying zone identification was wrong."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Garage entrance setback 18 ft",
+      "claim_full": "Vehicle/garage entrances must be set back at least 18 feet from the front lot line.",
+      "topic": "setbacks",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.110.220 Table 110-4",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.220 Table 110-4, https://www.portland.gov/code/33/110/220"
+      },
+      "verified_truth": "18 ft garage entrance setback per Table 110-4 confirmed in accuracy flags."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Side/rear setback small-shed exception",
+      "claim_full": "An exception allows reduced side/rear setbacks but only if the structure is \u226424x24 ft, \u226415 ft tall, with walls under 10 ft, and \u226540 ft from front lot line.",
+      "topic": "setbacks",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PCC 33.110.245.C.2.b",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.245.C.2.b, https://www.portland.gov/code/33/110/245"
+      },
+      "verified_truth": "Side/rear setback exception parameters confirmed in accuracy flags."
+    },
+    {
+      "id": "A17",
+      "claim_short": "Lot building coverage cap ~2,676 sf",
+      "claim_full": "Lot-wide building coverage on a 7,840 sf lot is capped at about 2,676 sf, calculated as 2,250 + 15% of lot area over 5,000 sf.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.110.225 Table 110-5",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.225 Table 110-5, https://www.portland.gov/code/33/110/225"
+      },
+      "verified_truth": "Building coverage formula 2,250 + 15% over 5,000 sf yielding ~2,676 sf confirmed in accuracy flags."
+    },
+    {
+      "id": "A18",
+      "claim_short": "200 sf permit-exempt threshold",
+      "claim_full": "Non-habitable accessory buildings under 200 sq ft (and under 15 ft tall) are exempt from building permit requirements.",
       "topic": "permits",
       "variants": [
         "oob",
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.95,
+      "specificity": 1.0,
+      "actionability": 0.8,
       "correctness": "correct",
-      "importance": 5,
-      "citation": "portland.gov garages/sheds/accessory-structures",
-      "verified_truth": "Accuracy flag confirms the 200 sq ft / 15 ft permit threshold per PP&D's accessory structure page.",
+      "importance": 3,
+      "citation": "ORSC R105.2",
       "citation_by_variant": {
-        "oob": "portland.gov garages/sheds/accessory-structures",
-        "enhanced": "portland.gov garages/sheds/accessory-structures"
-      }
+        "oob": null,
+        "enhanced": "ORSC R105.2"
+      },
+      "verified_truth": "200 sf / 15 ft permit-exempt threshold under ORSC R105.2 confirmed in accuracy flags."
     },
     {
-      "id": "A15",
-      "claim_short": "20 ft accessory height cap",
-      "claim_full": "Detached covered accessory structures are limited to 20 feet in height.",
-      "topic": "size",
+      "id": "A19",
+      "claim_short": "Portland snow load 25 psf",
+      "claim_full": "Portland's minimum design roof snow load is 25 psf (20 psf base plus 5 psf rain-on-snow surcharge).",
+      "topic": "structural",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "OSSC 1608.1",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "Oregon Structural Specialty Code 1608.1, https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures"
+      },
+      "verified_truth": "25 psf design roof snow load (20+5) per OSSC 1608.1 confirmed in accuracy flags."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Portland design wind 18 psf ASD",
+      "claim_full": "Portland's prescriptive design wind pressure is 18 psf ASD, corresponding to roughly 95\u2013100 mph 3-second-gust basic design wind speed.",
+      "topic": "structural",
       "variants": [
         "oob",
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.9,
+      "specificity": 1.0,
+      "actionability": 0.7,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 33.110.245.C",
-      "verified_truth": "Accuracy flag confirms a 20-foot height cap for detached covered accessory structures in R2.5; cited to PCC 33.110.245.C in enhanced response.",
+      "importance": 3,
+      "citation": "Portland PPD residential structural guidance",
       "citation_by_variant": {
         "oob": null,
-        "enhanced": "PCC 33.110.245.C"
-      }
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures"
+      },
+      "verified_truth": "18 psf ASD wind / ~95-100 mph 3-second gust confirmed in accuracy flags."
     },
     {
-      "id": "A16",
-      "claim_short": "Per-building cap 900 sf or main",
-      "claim_full": "Each detached accessory structure cannot exceed the building coverage of the smallest primary structure or 900 sq ft, whichever is larger.",
-      "topic": "size",
+      "id": "A21",
+      "claim_short": "Portland is Seismic Design Category D",
+      "claim_full": "Portland residential parcels are typically Seismic Design Category D (D1 in enhanced response).",
+      "topic": "structural",
       "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.9,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 5,
-      "citation": "PCC 33.110.245.C",
-      "verified_truth": "Rationale flags this 900 sq ft per-building cap as a confidently stated number that mixes code and PP&D guidance and may be off; resident should verify the exact threshold in the current PCC sub-section before relying on it.",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.110.245.C"
-      }
-    },
-    {
-      "id": "A17",
-      "claim_short": "20% site coverage cap accessory",
-      "claim_full": "The combined footprint of all detached/connected covered accessory structures cannot exceed 20% of the site.",
-      "topic": "size",
-      "variants": [
+        "oob",
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 4,
-      "citation": "PCC 33.110.245.C",
-      "verified_truth": "Rationale notes the 20% figure is among the numeric thresholds presented as definitive but mixing sources; the exact cap should be verified in current PCC 33.110.245.C.",
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Oregon Design Criteria Hub",
       "citation_by_variant": {
-        "enhanced": "PCC 33.110.245.C"
-      }
+        "oob": null,
+        "enhanced": "https://www.oregon.gov/bcd/codes-stand/pages/design-criteria.aspx"
+      },
+      "verified_truth": "Portland SDC D (D1) confirmed in accuracy flags."
     },
     {
-      "id": "A18",
-      "claim_short": "R2.5 setbacks 10/5/5/18 ft",
-      "claim_full": "R2.5 base setbacks are 10 ft front, 5 ft side, 5 ft rear, and 18 ft for a garage entrance.",
-      "topic": "setbacks",
+      "id": "A22",
+      "claim_short": "Stormwater triggered at 1,000 sf impervious",
+      "claim_full": "Projects creating 1,000 square feet or more of new impervious area trigger Portland's Stormwater Management Manual requirements.",
+      "topic": "sewer",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
       "actionability": 0.95,
       "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 33.110.220",
-      "verified_truth": "Accuracy flag confirms these setbacks as cited to PCC 33.110.220.",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.110.220"
-      }
-    },
-    {
-      "id": "A19",
-      "claim_short": "24x24/15 ft setback exception",
-      "claim_full": "The small-accessory-structure side/rear setback exception is limited to structures no larger than 24 by 24 feet and no more than 15 feet high.",
-      "topic": "setbacks",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.9,
-      "correctness": "PARTIAL-WRONG",
       "importance": 4,
-      "citation": "PCC 33.110.245.C.2",
-      "verified_truth": "Rationale notes this 24x24/15 ft exception is among the numeric thresholds the AI presents definitively but that mix code and BDS guidance; verify the current sub-section before relying.",
+      "citation": "Portland BES SWMM",
       "citation_by_variant": {
-        "enhanced": "PCC 33.110.245.C.2"
-      }
+        "enhanced": "https://www.portland.gov/bes/stormwater/swmm-and-right-way-projects/determine-requirements"
+      },
+      "verified_truth": "1,000 sf new impervious threshold for SWMM confirmed in accuracy flags."
     },
     {
-      "id": "A20",
-      "claim_short": "1,000 sf impervious triggers stormwater",
-      "claim_full": "Adding more than 1,000 square feet of impervious area triggers a stormwater plan requirement on the site plan.",
-      "topic": "sewer",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.9,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 4,
-      "citation": "PCC Title 17; SWMM 2.3",
-      "verified_truth": "Rationale flags the 1,000 sq ft stormwater threshold as a confidently stated number that may be off; resident should verify against the current Stormwater Management Manual.",
-      "citation_by_variant": {
-        "enhanced": "PCC Title 17; SWMM 2.3"
-      }
-    },
-    {
-      "id": "A21",
-      "claim_short": "Tree rules over 5,000 sf lot",
-      "claim_full": "Lots over 5,000 square feet are subject to tree preservation rules during development under Title 11.",
+      "id": "A23",
+      "claim_short": "Tree small-lot exemption only \u22645,000 sf",
+      "claim_full": "The Title 11 small-lot tree exemption applies only to lots 5,000 square feet or smaller, so this 7,840 sf lot does not qualify.",
       "topic": "trees",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.7,
+      "specificity": 1.0,
+      "actionability": 0.9,
       "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC Title 11",
-      "verified_truth": "Accuracy flag confirms a 5,000 sq ft lot threshold for tree preservation rules under Title 11.",
+      "importance": 4,
+      "citation": "PCC 11.50.040.B.2",
       "citation_by_variant": {
-        "enhanced": "PCC Title 11"
-      }
+        "enhanced": "PCC 11.50.040.B.2, https://www.portland.gov/code/11/50/040"
+      },
+      "verified_truth": "PCC 11.50.040.B.2 small-lot tree exemption limited to lots \u22645,000 sf confirmed in accuracy flags."
     },
     {
-      "id": "A22",
-      "claim_short": "PP&D first review ~15 business days",
-      "claim_full": "Portland Permitting & Development targets first review of residential new construction in roughly 15 business days.",
+      "id": "A24",
+      "claim_short": "3-ft fire-rated wall rule",
+      "claim_full": "Building walls less than 3 feet from a property line require 1-hour fire-rated wall assemblies with no openings.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "ORSC R302.1",
+      "citation_by_variant": {
+        "enhanced": "ORSC R302.1"
+      },
+      "verified_truth": "ORSC R302.1 fire-rated wall requirement for walls <3 ft from property line confirmed in accuracy flags."
+    },
+    {
+      "id": "A25",
+      "claim_short": "12% Oregon state surcharge on fees",
+      "claim_full": "Oregon adds a 12% state surcharge on building permit and plan review fees.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Portland fee schedule",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules"
+      },
+      "verified_truth": "12% Oregon state surcharge confirmed in accuracy flags."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Plan review = 65% of permit fee",
+      "claim_full": "Portland's plan review fee is approximately 65% of the building permit fee.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Portland fee schedule",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules"
+      },
+      "verified_truth": "Plan review = 65% of permit fee confirmed in accuracy flags."
+    },
+    {
+      "id": "A27",
+      "claim_short": "CET 1% only at $100k+",
+      "claim_full": "Portland's Construction Excise Tax of 1% applies only when permit valuation reaches $100,000 or more.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Portland PHB CET",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/phb/cet"
+      },
+      "verified_truth": "CET 1% threshold at $100,000+ valuation confirmed in accuracy flags."
+    },
+    {
+      "id": "A28",
+      "claim_short": "BOD 21-05 habitable vs non-habitable",
+      "claim_full": "Portland's Building Official Determination 21-05 governs the distinction between habitable and non-habitable accessory structures (kitchens/bathrooms/sleeping areas trigger habitable reclassification).",
+      "topic": "definitions",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "BOD 21-05",
+      "citation_by_variant": {
+        "enhanced": "BOD 21-05, https://www.portland.gov/ppd/codes-rules-and-guides/bod-21-05-habitable-vs-non-habitable-accessory-structures"
+      },
+      "verified_truth": "BOD 21-05 cited as the habitable vs non-habitable accessory structures determination per accuracy flags."
+    },
+    {
+      "id": "A29",
+      "claim_short": "BDS renamed to PP&D in mid-2025",
+      "claim_full": "The Bureau of Development Services was renamed Portland Permitting & Development in mid-2025.",
       "topic": "process",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 3,
-      "citation": "portland.gov/bds/article/758932",
-      "verified_truth": "Rationale flags this 15-business-day target as among numeric thresholds that may be outdated; resident should confirm current PP&D review-time targets.",
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
       "citation_by_variant": {
-        "enhanced": "portland.gov/bds/article/758932"
-      }
+        "enhanced": null
+      },
+      "verified_truth": "BDS rename to Portland Permitting & Development in mid-2025 confirmed in accuracy flags."
     },
     {
-      "id": "A23",
-      "claim_short": "BDS now called PP&D",
-      "claim_full": "The Bureau of Development Services has been renamed Portland Permitting & Development (PP&D).",
-      "topic": "definitions",
+      "id": "A30",
+      "claim_short": "Owner-occupant electrical permit pathway",
+      "claim_full": "Homeowner-occupants can sign for and pull their own electrical permits in Oregon under OAR 918-309.",
+      "topic": "electrical",
       "variants": [
         "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.95,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "OAR 918-309",
+      "citation_by_variant": {
+        "enhanced": "OAR 918-309, https://www.oregon.gov/bcd/codes-stand/Pages/electrical.aspx"
+      },
+      "verified_truth": "OAR 918-309 owner-occupant electrical permit pathway confirmed in accuracy flags."
+    },
+    {
+      "id": "A31",
+      "claim_short": "Free 15-minute planner appointment",
+      "claim_full": "Portland offers free 15-minute zoning question appointments with a planner; call 503-823-7300 or book online.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "Portland PP&D",
+      "citation_by_variant": {
+        "oob": "503-823-7300",
+        "mcp": "503-823-7300",
+        "enhanced": "https://www.portland.gov/ppd/zoning-land-use/free-15-min-appointments"
+      },
+      "verified_truth": "Free 15-min appointments are a real Portland program; phone number and URL match the city's published guidance."
+    },
+    {
+      "id": "A32",
+      "claim_short": "Home Occupations at PCC 33.203",
+      "claim_full": "Using the workshop for business activity may trigger Home Occupation Permit rules at PCC 33.203.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
       ],
       "specificity": 0.9,
       "actionability": 0.6,
       "correctness": "correct",
       "importance": 2,
-      "citation": null,
-      "verified_truth": "Naming change is consistent with current Portland bureau structure referenced in PP&D pages cited.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A24",
-      "claim_short": "Free 15-min city appointments",
-      "claim_full": "PP&D offers free 15-minute appointments for zoning, building code, and related questions.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.95,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": "portland.gov/trees/treepermits/15-min-appts",
-      "verified_truth": "Cited to portland.gov; rationale does not flag this as inaccurate.",
+      "citation": "PCC 33.203",
       "citation_by_variant": {
-        "enhanced": "portland.gov/trees/treepermits/15-min-appts"
-      }
-    },
-    {
-      "id": "A25",
-      "claim_short": "Tree permit fees changed July 2025",
-      "claim_full": "Tree permit fees changed in July 2025 so some are reduced or removed, though the permit requirement may remain.",
-      "topic": "trees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PCC Title 11",
-      "verified_truth": "Accuracy flag confirms the July 2025 tree permit fee change.",
-      "citation_by_variant": {
-        "enhanced": "PCC Title 11"
-      }
-    },
-    {
-      "id": "A26",
-      "claim_short": "Budget $3k-$8k workshop permits",
-      "claim_full": "A planning budget of $3,000-$8,000 covers a simple permitted, engineered, unheated workshop with electrical and no major site complications.",
-      "topic": "costs",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.85,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "Stated as a planning estimate; not contradicted by accuracy flags. Resident should verify with PP&D's permit fee estimator.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A27",
-      "claim_short": "Title summary (Titles 11/24/25/26/27/33)",
-      "claim_full": "Title 33 governs zoning, Title 24 building regulations, Title 11 trees, Title 25 plumbing, Title 26 electrical, Title 27 mechanical, Title 17 public improvements/stormwater.",
-      "topic": "citations",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC Titles 11/17/24/25/26/27/33",
-      "verified_truth": "Title summaries match Portland City Code structure; rationale notes citations resolve to portland.gov pages and correct chapters.",
-      "citation_by_variant": {
-        "enhanced": null
-      }
-    },
-    {
-      "id": "A28",
-      "claim_short": "Don't alter trusses in the field",
-      "claim_full": "Do not cut, notch, drill, or alter trusses in the field unless the truss engineer approves it.",
-      "topic": "safety",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.95,
-      "correctness": "correct-action",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Standard truss-engineering safety guidance; not contradicted by accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A29",
-      "claim_short": "R2.5 prohibits commercial shop use",
-      "claim_full": "In R2.5, office uses are not allowed as a primary use and most manufacturing/warehouse uses are prohibited, so a private hobby workshop differs from a commercial shop.",
-      "topic": "zoning",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.110.100; 33.110.110",
-      "verified_truth": "Consistent with R2.5 single-dwelling zone use restrictions referenced in PCC 33.110; not flagged as inaccurate.",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.110.100; 33.110.110"
-      }
-    },
-    {
-      "id": "A30",
-      "claim_short": "OOB lacks address-specific lookup",
-      "claim_full": "OOB never retrieves property-specific zoning, overlays, or hazard data for 450 NE 103rd Ave.",
-      "topic": "other",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.6,
-      "actionability": 0.2,
-      "correctness": "admitted-gap",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Rationale explicitly notes the OOB response gives only generic permit thresholds and does not address parcel-specific zoning.",
-      "citation_by_variant": null
+        "oob": "PCC 33.203"
+      },
+      "verified_truth": "PCC 33.203 cited as Home Occupations section per accuracy flags."
     }
   ]
 }

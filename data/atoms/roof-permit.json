@@ -1,0 +1,669 @@
+{
+  "scenario": "roof-permit",
+  "scenario_label": "Roof replacement permit",
+  "address": "5500 SE Belmont St, Portland, OR 97215",
+  "neighborhood": "Sunnyside",
+  "evaluator_model": "claude",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this for you. Roof permits in Portland have some specifics worth checking, and your property's zoning/historic status could affect things. Let me research.Now I have the general rules. The big questions for this specific property are: is it in a wildfire hazard zone? Is it a townhouse? Is it in a historic district? Let me check the property specifics.Whoa, this isn't a typical residence. This is the \"Pink Temple\" - a 1921 masonry building (former telephone exchange, then Masonic Temple) converted to a triplex+ in 1996. That changes the answer significantly. Let me dig deeper - the zoning, historic status, and wildfire zone all matter here.I see conflicting zoning info (R2 vs RM1) and the listing notes the roof was resurfaced in 2018. Let me check Portland Maps directly and the wildfire hazard zone.Mt. Tabor is not in a wildfire hazard zone. Now let me check the historic designation and confirm the zoning since listings disagree (R2 vs RM1).Let me try to fetch Portland Maps directly for the property's official zoning, historic, and overlay info.Let me verify a couple more things - the current Wildfire Hazard Zone status (Oregon's wildfire mapping has been controversial and updated) and any recent changes to Portland's reroof rules.Let me verify one more critical thing: whether 3+ unit residential buildings in Portland fall under the commercial reroof permit track.I have what I need. Here's the answer:\n\n# Yes, almost certainly you need a permit\n\nThe short version: 5500 SE Belmont (the Pink Temple) is not a typical 1-2 family home, and that's what changes the answer.\n\nPortland's \"no permit needed for like-for-like reroof\" rule applies only to 1- and 2-family dwellings. Your property has three separate residential units (each with its own entrance, kitchen, and laundry), plus an office, in a 1921 brick/masonry building originally built as a telephone exchange and later a Masonic temple. Three or more dwelling units puts you on the **commercial** permitting track in Portland, which means a reroof permit is required regardless of materials.\n\nFor completeness, here are the residential exception triggers I checked, none of which save you (but each is worth knowing why):\n\n- **Wildfire Hazard Zone**: Not in one. Portland's Wildfire Hazard Zone Map (adopted 2002, still in effect under Title 24.51.030) covers Forest Park, parts of the West Hills, Powell Butte, and similar wildland-adjacent areas. Mt. Tabor neighborhood at 5500 SE Belmont is outside it. (Slope is gentle, vegetation is urban; the cumulative hazard score doesn't reach the threshold of 5.)\n- **Townhouse**: Not one. Townhouses get pulled into the permit requirement specifically; this is a stand-alone masonry building.\n- **Solar/BIPV**: Doesn't apply unless you're adding photovoltaic roofing.\n\n## What \"commercial reroof permit\" actually means here\n\nThe commercial reroof process is fairly streamlined; it isn't full plan review. The City has a **Commercial Reroof Permit and Inspection Program** where registered contractors can pre-purchase reroof labels (up to 5 at a time). Your contractor needs to:\n\n1. Be CCB-licensed (any roofing job over $1,000 requires a licensed contractor; verify their license at the Oregon Construction Contractors Board site)\n2. Hold a City of Portland Business License\n3. Be registered with the City for the reroof program (or get standard permits the long way)\n\nInspection is typically a single roofing inspection (code 285) plus final (999). If you're swapping like-for-like sheathing, ~10% replacement is generally acceptable under a reroof permit; more than that, or adding sheathing over existing, requires an engineer's letter or a full commercial building permit.\n\n## Things to verify before you act (because real estate listings lie)\n\nI'm flagging these because the public listings I pulled have inconsistencies. Before you sign anything with a contractor, confirm directly on **PortlandMaps.com** (search by address) and ideally with the City:\n\n- **Unit count of record.** I'm reading \"three separate living spaces\" from the MLS listing, but the City's official dwelling-unit count is what determines permit track. The 1996 conversion from Masonic Temple should have been permitted with a specified unit count; that's what controls. Public listings sometimes label this property \"Single Family\" and sometimes \"Multi-family\" and sometimes \"Specialty / Sorority/Fraternity House\" (CoStar). Don't trust those.\n- **Zoning.** Recent listings show **RM1** (Residential Multi-Dwelling 1), older ones show R2 (which doesn't exist anymore in Portland's current code; that's pre-2020 zoning). RM1 is consistent with 3+ units and is what I'd expect post-Better Housing by Design rezone.\n- **Historic designation.** I couldn't confirm the Pink Temple is on Portland's Historic Resource Inventory or designated as a Historic Landmark. It's *culturally* iconic but that's not a legal designation. **If it turns out to be designated, exterior alterations (including roof material changes) trigger a Historic Resource Review, which is a separate land-use process that takes weeks to months.** PortlandMaps will show this in the property's \"Historical\" or \"Overlay Zones\" section. Worth a 30-second check before you do anything else.\n- **2018 reroof permit.** The 2024 sales listing notes \"Resurfaced roof in 2018.\" If a permit was pulled, you can find it under the property's permit history on PortlandMaps. That gives you: what system was installed, what's still under warranty, and (if no permit shows) a hint that it may have been done outside the rules.\n\n## A few things you'll be glad to know upfront\n\n- **Tear-off is mandatory in Portland.** No overlays. Budget for full disposal.\n- **Asphalt shingle recycling** at certified facilities can earn rebates and avoids landfill. (Less relevant if your existing roof is a low-slope membrane, which is likely on this masonry building given the architecture; it's probably TPO, EPDM, BUR, or modified bitumen rather than shingles. Worth confirming with a contractor before assuming.)\n- **Free 15-minute appointment** with Portland Permitting & Development is genuinely useful for an unusual property like this. They'll tell you the permit track and any overlay/historic gotchas in one call. Book at portland.gov/bds/15-min, or call 503-823-7300.\n- **Multnomah County old building energy code path.** Reroofs on older buildings can sometimes be a trigger point for added insulation under the energy code, particularly if you're replacing sheathing or doing significant structural work. Worth asking the plans examiner about during the 15-min appointment.\n\n## My recommendation, if you want a clean order of operations\n\n1. Pull the property up on PortlandMaps.com \u2192 check Zoning, Overlay Zones, Historical, and Permits tabs (5 minutes)\n2. Note any past reroof permit details from 2018\n3. Book the free 15-min appointment with PP&D and walk them through what you're planning; this confirms the permit track for *your specific scope*\n4. Get 2-3 bids from CCB-licensed commercial roofing contractors who can describe the existing system (low-slope membrane vs something else) and pull permits under the commercial reroof program\n5. If anything turns up a historic designation in step 1, stop and talk to the Historic Resources team at PP&D before going further\n\nIf you want, I can help you draft a concise email to the PP&D 15-min appointment intake describing the property and scope, so the conversation goes faster when you're on the call."
+    },
+    "mcp": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this for you - both the general permit rules and the specifics for your property. Let me pull up Portland's official guidance and then check your property records directly.Good - no historic overlay on this parcel. Now let me check Portland's official roofing permit rules to give you the right answer.# Short answer\n\n**Probably no permit, with important caveats.** For a like-for-like reroof of a single-family home in Portland, no building permit is required. Your property at 5500 SE Belmont St clears the usual exceptions: it's not in a Wildfire Hazard Zone (those are mostly West Hills), not in a historic district overlay (I checked the spatial intersection: no historic, conservation, or plan district hits), and not a townhouse.\n\nThe exceptions where you *would* need a permit, per Portland's official guidance:\n\n- More than 15% of the existing roof sheathing is being removed and replaced (the wood underneath the shingles)\n- New roof material is significantly heavier than the existing one (e.g., asphalt to tile)\n- You're installing solar or building-integrated PV roof coverings\n- The home is in a Wildfire Hazard Zone (not your case)\n- It's a townhouse (not your case)\n\nA licensed Oregon CCB contractor is required for any roofing job over $1,000.\n\n# Property-specific things you should know\n\nA few things jumped out from your records that change the calculus.\n\n**The building's permit classification is ambiguous, and it matters.** The assessor calls 5500 SE Belmont a \"single family residential\" structure, but it's a 10,192 sqft 1921 building zoned RM1 (Residential Multi-Dwelling 1) with a long history of mixed use: it's been an apartment building, had business/office space, and the basement was once a model train club. The most recent permit (Nov 2025 wood stove install) was filed under \"Commercial or Multi-Family Dwelling/Structure,\" not the one or two family residential bucket. **If a permit officer treats this as commercial/multi-family rather than single-family, the residential reroof exemption doesn't apply** and you'd fall under Portland's Commercial Reroof Permit and Inspection Program (which uses pre-purchased \"reroof labels\" with inspection stages 285 and 999). Worth a 5-minute call to BDS at 503-823-7300 to confirm classification before you assume the no-permit path.\n\n**The owner of record is HUDSON VENTURES LLC**, not Yex Labs. The property sold 9/26/2024 for $1.4M (assessed at $1.21M). If you're asking on behalf of someone else, fine. If you're now an owner under a different LLC, also fine. But just flagging in case the records are out of date or this isn't actually your property.\n\n**There's a fresh roof penetration from November 2025.** Permit 2025-082428-MT installed a new wood stove with Class A venting up through the roof. Final inspection passed 11/10/2025. If you're reroofing now, your contractor will need to re-flash around that vent properly, and it's worth pulling that permit's specs to make sure the new roof work doesn't compromise the recent install.\n\n# Above-and-beyond stuff worth knowing\n\n**Tear-off is mandatory in Portland for residential reroofs.** Unlike some jurisdictions, Portland doesn't allow overlay reroofs (putting new shingles over old). Even though no permit is required, the work still has to comply with the Oregon Residential Specialty Code: full tear-off, proper underlayment, drip edge, ventilation ratios, flashing, and disposal. Asphalt shingles can be recycled at certified facilities (Hillsboro Landfill takes them); some recyclers offer rebates.\n\n**Tree code can sting you sideways.** Even though you're not getting a building permit, the Tree Code (Title 11) still applies. There were two private property tree removal permit applications on this parcel that expired (2021 and 2024), so trees have been a topic here. If the reroof requires removing limbs that overhang the roof, large-diameter pruning or removal may need a separate UF permit. 503-823-TREE.\n\n**Verify the contractor with two checks, not one.** Oregon CCB lookup is the obvious one, but also check:\n1. CCB license is current AND has roofing endorsement\n2. They carry workers comp (CCB shows this)\n3. BBB and Google reviews specifically for callouts on cleanup, hidden charges, and warranty followthrough; roofing has a high \"vanish after final payment\" rate\n\n**The 15% sheathing rule is the trap most homeowners miss.** Your contractor doesn't know what they'll find until tear-off begins. On a 1921 building with original or 1990s-era sheathing, hitting >15% replacement is genuinely possible. Get that contingency in the contract upfront: what's the per-sheet price, and does crossing 15% trigger a stop-work-and-pull-permit clause? If they don't address this in the bid, that's a yellow flag.\n\n**Insurance angle.** Your homeowner's insurance probably has a roof age clause. A reroof typically resets the depreciation schedule and may lower premiums or take you off a non-renewal watch list, but you have to actually notify the carrier and provide the contractor's invoice. Easy money left on the table otherwise.\n\n**One last sanity check.** I'd verify property classification directly with Portland Permitting & Development before committing. The cleanest path: call 503-823-7300 with the property ID **R114587** and ask \"for reroof permitting purposes, is this property treated as one or two family, or as commercial/multi-family?\" Get the answer in writing (email follow-up). That single email is your protection if an inspector later disagrees with the contractor's interpretation."
+    },
+    "enhanced": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this carefully, since you want specifics for your actual address with real code citations. Let me start by looking up your property and pulling current Portland rules.Important early finding: this property is more interesting than a typical single-family house. Let me grab a few more pieces and then pull current Portland re-roof permit rules.I've got what I need. One important thing surfaced while I was looking up your address that I want to flag right at the top: the property records show some quirks worth knowing about before you make any calls. I'll walk through everything below.\n\n---\n\n## 1. The plain-English summary (start here)\n\nGood news first: in Portland, if you're doing a normal **like-for-like re-roof** on a one- or two-family home (peeling off old asphalt shingles, putting new asphalt shingles back on, similar weight, no big structural changes), **you do not need a building permit**. That's per the city's Permitting & Development page (Portland City Code Title 24, Chapter 24.10; https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits). You still need the work done correctly, by a properly licensed contractor if you hire one, and any dumpster in the street or tree work crosses into permits from other bureaus.\n\nBut here's the wrinkle for your specific address. **5500 SE Belmont is not a typical single-family house** in the city's records. It's the historic Mt. Tabor Telephone Exchange building (built 1914), zoned **RM1 (Residential Multi-Dwelling 1)**, and past permits have classified it as **R-2 Multi-Family** (3+ units). If that's still the case, your roof falls under the **commercial re-roof program**, not the residential exemption, and a permit IS required. So the very first thing you actually need to do is confirm with the city how your building is currently classified. I'll give you a script for that call.\n\nThe rest of this answer covers both scenarios so you're prepared either way.\n\n---\n\n## 2. Does my specific situation need a permit?\n\n**Two big variables decide this for you:** (a) is your building treated as a 1- or 2-family home, or as a 3+ unit building, and (b) what exactly you're doing to the roof.\n\n### Scenario A: If your building is a 1- or 2-family home (residential rules)\n\nHere's what the city's plain-language page says about reroofing without a permit: \"**Reroofing with a roofing material of similar weight does not need a building permit. This includes the replacement of some or all existing roof sheathing**\" (Portland City Code 24.10.040, https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits and https://www.portland.gov/code/24/all). \"Sheathing\" means the wood panels under the shingles.\n\n| Your situation | Permit needed? | Notes |\n|---|---|---|\n| Asphalt to asphalt, similar weight, no structural changes | **No** | The most common case. |\n| Asphalt to asphalt, plus replacing some or all rotten wood under the shingles | **No (residential)** | The city site explicitly allows this without a permit. |\n| Switching to a much heavier material (asphalt to clay/concrete tile) | **Yes**, almost certainly | Heavier material can overload the framing; structural review is needed. Call before buying material. |\n| Switching to a similar-weight material (asphalt to standing-seam metal, or to architectural composite) | **Often no**, but verify | \"Similar weight\" is the test in PCC 24.10.040 (https://www.portland.gov/code/24/all). Get the city to confirm in writing. |\n| Adding skylights, changing roof pitch, changing the roofline | **Yes** | This is an alteration to the structure, not a re-roof. |\n| Patching a small section after a leak or storm | **No** | Ordinary repair. |\n| Solar panels or solar-integrated roofing | **Yes** | Required for any photovoltaic install (https://www.portland.gov/ppd/solar-development/solar-permits). |\n| Re-roofing in a designated **Wildfire Hazard Zone** | **Yes** | Your property is NOT in one, per PortlandMaps (`wild_lands_fire_hazard_area: false`). So this doesn't apply to you. See https://www.portland.gov/ppd/residential-projects/wildfire-hazard-areas-residential. |\n| Re-roofing a townhouse | **Yes** | Yours isn't classified as a townhouse, so doesn't apply. |\n\nThe plain-English summary above each row: a simple shingle swap is exempt; anything that changes structure, weight, layout, or adds solar pulls you into permit territory.\n\n### Scenario B: If your building is treated as 3+ units / commercial (which past permit records suggest)\n\nFor 3-or-more-unit buildings, Portland uses a separate **Commercial Reroof Permit** program (https://www.portland.gov/ppd/commercial-permitting/commercial-permit-inspections/commercial-reroof). Even a like-for-like re-roof needs a permit. The contractor (who must be registered with the city's Commercial Reroof program) buys a \"reroof label\" tied to your project, schedules an inspection of the wood under the roof, and then a final inspection. Sheathing replacement is limited to roughly 10% before a full commercial building permit may be required (per Program Guide Section V.(A)(2) at https://www.portland.gov/ppd/documents/commercial-reroof-permit-program-guide/download).\n\n**Bottom line for your address: confirm classification first.** I'll give you the exact phone script in section 6.\n\n---\n\n## 3. Which Portland bureau handles this, and which code applies\n\nA heads-up first: **\"BDS\" no longer exists as its own bureau**. As of July 1, 2024, the Bureau of Development Services merged with permitting teams from Urban Forestry, Bureau of Environmental Services, the Bureau of Transportation, and Water into a single bureau called **Portland Permitting & Development (PP&D)** (announced at https://www.koin.com/local/portland-launches-new-bureau-to-streamline-permitting-process-07012024/ and confirmed at https://www.portland.gov/ppd). The merger is supposed to make permits simpler. People (including the city's own pages) still occasionally say \"BDS\"; treat them as the same thing for now.\n\n**Who does what, in plain English:**\n\n- **Portland Permitting & Development (PP&D)** is the agency you call about roofs, building permits, zoning, inspections, and most construction work. Phone **503-823-7300** Monday through Friday, 8 a.m. to 5 p.m. (https://www.portland.gov/ppd). The walk-in office is the **Development Services Center, 1900 SW 4th Ave**, open Tuesdays and Thursdays 8 a.m. to 4 p.m.; appointments are recommended (https://www.portland.gov/service-locations/development-services-center). For inspections, the automated line is **503-823-7000** (you'll need an IVR number, which is your permit's tracking number).\n\n- **Portland Bureau of Transportation (PBOT)** runs the streets and sidewalks, including the public area in front of your house (\"**right-of-way**\" or **ROW**, the strip from your property line to the street, including the sidewalk and parking lane). You only deal with PBOT on a re-roof if you're putting a dumpster, pod, or storage container in the street or parking lane; that needs a **Temporary Street Use Permit** (https://www.portland.gov/transportation/permitting/apply-renew-or-change-temporary-street-use-permit). PBOT general inquiries: **503-823-5185** or 311 (https://www.portland.gov/transportation/permitting).\n\n- **Portland Bureau of Environmental Services (BES)** handles sewers and stormwater. You'd only hear from them if you're changing how rainwater leaves your roof (new downspouts that don't connect properly to the old system, switching to a drywell, or anything that might affect the storm or sanitary sewer). BES contact: **503-823-7740** (https://www.portland.gov/bes).\n\n- **Portland Fire & Rescue (PF&R)** doesn't typically get involved in residential re-roofs unless there's a separate fire safety review (highly unusual). PF&R: **503-823-3700** (https://www.portland.gov/fire). Note: roofing material in **Wildfire Hazard Zones** must meet ignition-resistance standards, but again, your property is not in a Wildfire Hazard Zone.\n\n- **Urban Forestry** (now part of PP&D) handles the tree code, **Portland City Code Title 11** (https://www.portland.gov/code/11/all). If you need to prune or remove a **street tree** (a tree in the planting strip between sidewalk and curb, or in unimproved right-of-way), you need a permit; even pruning branches requires a permit unless certain narrow exemptions apply (https://www.portland.gov/ppd/tree-permits/street-tree-pruning-permits/pruning-street-tree-permits-faqs). For pruning your own trees on private property, no permit is needed unless the tree is a designated Heritage Tree or in certain overlay zones (PCC 11.40, https://www.portland.gov/code/11/all). Urban Forestry phone: **503-823-TREE (8733)**.\n\n**The codes that govern roof work:**\n\n- **Portland City Code (PCC) Title 24, Building Regulations** (https://www.portland.gov/code/24/all) is Portland's building code. Section **24.10.040** lists when permits are required and adopts the Oregon state codes by reference (https://www.portland.gov/code/24/all). Specifically, PCC 24.10.040.A says: \"No person, firm, or corporation may erect, construct, enlarge, alter, repair, move, improve, remove, convert, change occupancy group of, or demolish any building or structure ... without first obtaining the proper permit\" (https://www.portland.gov/code/24/all). The exemptions live within the state codes that Title 24 adopts.\n\n- **Oregon Residential Specialty Code (ORSC)** is the state's residential building code; it applies to **one- and two-family dwellings and townhouses** and is adopted by Portland via PCC 24.10.040 and by reference in OAR 918-480-0005 (https://www.oregon.gov/bcd/codes-stand/Pages/residential-structures.aspx). The ORSC's Section R105.2 lists permit-exempt work; reroofing where the work doesn't exceed 30% of the required live-load design capacity and the roof isn't required to be fire-resistant is on that list (industry summary at https://www.oregonbuildingofficials.com/assets/docs/opta_realtor_presentation.pdf). Portland's residential permitting page restates this in plain English (https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits).\n\n- **Oregon Structural Specialty Code (OSSC)** is the state's commercial code; it applies to buildings with three or more units, businesses, and other commercial structures. Portland adopted the 2022 OSSC by reference via Ordinance 191148 (https://www.portland.gov/council/documents/ordinance/passed/191581) under PCC 24.10.040 (https://www.portland.gov/code/24/all). If your building is treated as R-2 Multi-Family, OSSC governs.\n\n- **Title 33, Zoning** (https://www.portland.gov/code/33) governs land use, zone rules, and overlays. Routine re-roofing doesn't normally trigger Title 33 unless you're in a designated **Historic District** or working on a **Historic Landmark** or **Significant Resource**, which would trigger **Historic Resource Review** under PCC 33.445.100 through 33.445.220 (https://www.portland.gov/code/33). Your building is a \"**Documented Resource**,\" which is the lowest historic tier and is **explicitly not subject to historic preservation land use regulations** (https://www.portland.gov/bps/planning/historic-resources/types). Big relief.\n\n- **Title 11, Trees** (https://www.portland.gov/code/11/all) governs tree pruning and removal, which can come up if branches block roof access.\n\n- **Title 17, Public Improvements** (https://www.portland.gov/code/17) and PBOT administrative rules govern dumpsters and storage in the public street.\n\nIf you can't find a specific code section + URL for a claim, I'll say so out loud rather than make one up.\n\n---\n\n## 4. Your specific property at 5500 SE Belmont St (this is where it gets interesting)\n\nQuick warning before the data: zoning, overlays, and historic status for any address can change. I pulled this from PortlandMaps just now, but you should always **verify yourself before spending money** by going to https://www.portlandmaps.com, typing your address, and reading the \"Zoning\" and \"Permits & Cases\" panels.\n\nHere's what your property looks like in the records right now:\n\n- **Owner of record:** Hudson Ventures LLC (acquired September 26, 2024 for $1.4 million per the assessor; https://www.portlandmaps.com).\n- **Year built:** 1914 per historic records, 1921 per assessor records.\n- **Base zoning:** **RM1, Residential Multi-Dwelling 1** (https://www.portlandmaps.com/bps/zoning/#/zones/base/RM1). In plain English, this zone allows multiple dwelling units on a single lot at low density; small apartment buildings, duplexes, triplexes, and fourplexes are common. Single-family homes are allowed too. Roof rules don't change between RM1 and the single-dwelling zones; what changes is whether the building itself is treated as 1-or-2-family vs. 3+ units, which is a separate occupancy classification, not a zoning issue.\n- **Comprehensive Plan designation:** MD-N (Multi-Dwelling Neighborhood) per PortlandMaps.\n- **Historic status:** **Documented Resource**, listed as \"Mt. Tabor Telephone Exchange\" in the city's Historic Resources Inventory (https://heritagedata.prd.state.or.us/historic/index.cfm?do=v.dsp_siteSummary&resultDisplay=51451). As I noted above, **Documented Resources are not subject to historic preservation land use rules** (https://www.portland.gov/bps/planning/historic-resources/types), so no historic review is required for re-roofing. Cool building, no extra red tape from the historic side.\n- **Overlays:** None per PortlandMaps. No design overlay (`d`), no historic overlay (`h`), no environmental overlay (`c`, `p`, `v`), no plan district. So no Sunnyside-specific design rules. (The property is technically in Mt. Tabor neighborhood, not Sunnyside.)\n- **Wildfire Hazard Zone:** No (`wild_lands_fire_hazard_area: false`). So standard roofing materials are fine.\n- **Steep slope flag:** Yes (`steep_slope_area: true`); this matters for site disturbance and grading, not for re-roofing.\n- **Past permit history flag (this is the important one):** A 2012 permit on this property was filed under permit type \"**Apartments/Condos (3 or more units)**\" with occupancy group \"**R-2 Residential Multi-family**\" and construction type \"III-B\" (PortlandMaps permit application 2012-122232-000-00-CO). A 2001 change-of-occupancy permit converted parts of the building from office use to apartments and primary residence (PortlandMaps permit application 2001-140127-000-00-CO). A recent 2025 permit for a wood stove was filed as \"Commercial or Multi-Family Dwelling/Structure\" (PortlandMaps permit application 2025-082428-000-00-MT). A 2023 radon mitigation permit, however, was filed as \"One or Two Family Dwelling/Structure,\" which is inconsistent. **The records suggest the building is currently a multi-unit R-2, which puts your re-roof under commercial reroof rules.** This is the single biggest thing to confirm before you do anything else.\n\n### How to verify all of this yourself on PortlandMaps\n\n1. Go to **https://www.portlandmaps.com**.\n2. Type **5500 SE Belmont St** in the search box and select your address from the suggestions.\n3. On the property page, scroll through the panels: **Zoning**, **Historic**, **Permits & Cases**, **Property** (for hazards and overlays).\n4. Click the **\"Zoning\"** link at the top to see the base zone, overlays, and any plan districts. The zone code is the key to most of the rules.\n5. Open **\"Permits & Cases\"** to see the full permit history. The \"occupancy group\" and \"type\" columns tell you how the city has been classifying your building.\n6. If anything looks off, write down the specific permit numbers and the building classification, then call PP&D.\n\nA friendly nudge: zoning maps and overlays do change. The Portland Zoning Code can be amended; new overlays can be drawn. **Check PortlandMaps the day you're getting bids.** Don't rely on what I (or anyone) wrote a week or month ago.\n\n---\n\n## 5. What to do next, in order\n\nEach step lists who you contact, what to bring, what it costs, and roughly how long.\n\n1. **Verify your property and zoning on PortlandMaps.** Go to https://www.portlandmaps.com, look up 5500 SE Belmont St. Note your zoning, occupancy classification on past permits, and any flags. **Free. About 15 minutes.**\n\n2. **Book a free 15-minute virtual appointment with PP&D** to confirm whether your roof falls under residential or commercial rules. This is the most important step for your specific building. Schedule at https://www.portland.gov/ppd/15-min. Have ready: your address, the property ID (R114587), past permit numbers (especially 2012-122232-000-00-CO which classified the building as R-2 Multi-family), and a description of the roof work you're planning. **Free. 15 minutes.**\n\n3. **Call the General Inquiries line at PP&D for follow-up questions.** 503-823-7300, Monday-Friday, 8 a.m. to 5 p.m. (https://www.portland.gov/ppd). Use the script in section 6. **Free. About one phone call (15-20 minutes).**\n\n4. **Get bids from licensed roofing contractors and verify their CCB license.** The Construction Contractors Board (CCB) is Oregon's contractor licensing agency. Verify any contractor's license at https://www.oregon.gov/ccb/Pages/index.aspx and search by name or CCB number. Get at least 3 bids; for the size of your building, I'd budget for the bid range to land roughly between **$15,000 and $50,000+** depending on whether you go asphalt vs. metal vs. tile, and how much wood under the shingles needs replacing. **Free to get bids. 1-3 weeks to gather.**\n\n5. **Pull the permit, if needed.** If PP&D says your project needs a permit, the easiest path is to have your contractor pull it through their Commercial Reroof account (for R-2 multi-family) or through the residential application portal (https://www.portland.gov/ppd/permitting). Building permits can be applied for online at https://devhub.portlandoregon.gov. **Permit fees vary; expect roughly $300-$1,000+ for a project at this scale, plus a 12% state surcharge** (per the 2025-2026 fee schedule at https://www.portland.gov/ppd/current-fee-schedules). For commercial reroof labels, see the fee schedule with Ctrl+F \"roof\". **Permit issuance: same day to a week for over-the-counter; longer if plan review is needed.**\n\n6. **Schedule the work and inspections.** Your contractor schedules inspections by calling **503-823-7000** with the IVR (permit tracking) number (https://www.portland.gov/ppd/residential-permitting/residential-inspections). For a commercial reroof, the required inspections are **Code 285 (Roofing Inspection** of the wood and underlying structure**)** and **Code 999 (Final Inspection)** (https://www.portland.gov/ppd/commercial-permitting/commercial-permit-inspections/commercial-reroof). Inspectors usually come within 1-2 business days of request. Don't cover the wood before the 285 inspection; that's a re-do problem if you do.\n\n7. **If a dumpster goes in the street, pull a Temporary Street Use Permit from PBOT** at https://www.portland.gov/transportation/permitting/apply-renew-or-change-temporary-street-use-permit. **Application takes 5-10 minutes; permit typically issued in 5-10 business days. Fees vary by duration and location; budget roughly $100-$400** for a standard residential dumpster permit. If the dumpster sits on your driveway or private property, no PBOT permit is needed.\n\n8. **If trees need pruning to access the roof:** pruning your own private tree branches is fine without a permit unless it's a Heritage Tree or in a `c`, `p`, or `v` overlay zone (https://www.portland.gov/ppd/tree-permits/street-tree-pruning-permits/pruning-street-tree-permits-faqs). For street trees (in the planting strip), you need a Street Tree Pruning Permit; some routine clearance pruning can be self-issued online (https://www.portland.gov/ppd/tree-permits/street-tree-pruning-permits). Heritage Trees always require a permit. Urban Forestry: 503-823-TREE (8733).\n\n9. **Final inspection and permit close-out.** After roofing is done, the inspector signs off and the permit is \"Final Inspection Approved\" in the city's records. **This is critical for resale**; an open permit can stall a sale. Verify it's closed by checking PortlandMaps later (https://www.portlandmaps.com) under \"Permits & Cases.\"\n\n---\n\n## 6. What to ask the city: a script you can use\n\nRead this on the phone or paste it into an email to PP&D (https://www.portland.gov/ppd/contact). Adjust the bracketed bits.\n\n> Hi, my name is **[your name]** and I own the property at **5500 SE Belmont St, Portland, OR 97215**, property ID **R114587**. I'm planning to replace the roof and I want to make sure I'm following the right rules before I hire a contractor.\n>\n> Looking at PortlandMaps, my property is zoned **RM1** and a 2012 permit (application **2012-122232-000-00-CO**) classified the building as **R-2 Residential Multi-Family**. A 2023 permit, though, classified it as a **One or Two Family Dwelling**. I want to confirm: under the current Building Code, is my building treated as **1-or-2-family** or as a **commercial multi-family (3+ units)** for the purposes of a re-roof?\n>\n> Based on that answer:\n>\n> 1. If it's 1-or-2-family, can I do a like-for-like asphalt-to-asphalt re-roof, including replacing rotten sheathing, **without a building permit** under PCC 24.10.040 and the Oregon Residential Specialty Code?\n> 2. If it's a 3+ unit building, do I need to go through the **Commercial Reroof Permit** program, and does it matter whether some or all of the existing wood under the shingles needs to be replaced?\n> 3. The property is a **Documented Resource** in the Historic Resources Inventory (\"Mt. Tabor Telephone Exchange\"). I understand Documented Resources are not subject to historic preservation rules; can you confirm that no Historic Resource Review applies to my re-roof?\n> 4. Are there any other reviews I'm missing: stormwater, fire, anything specific to RM1 or to this address?\n> 5. If I do need a permit, what's the typical fee range for my building's size, and how long does issuance usually take? Do System Development Charges apply to a re-roof?\n>\n> Could you also email me a written confirmation, or give me a permit reference number for this conversation, so I can show it to my contractor? Thanks!\n\nTwo pro moves: (a) ask for written confirmation; (b) book the free 15-minute appointment too (https://www.portland.gov/ppd/15-min) so you have a city expert walk through it with you on screen.\n\n---\n\n## 7. Contractor vs. DIY\n\n**Can you re-roof your own house yourself?** In Oregon, an owner can do construction work on a home they own and occupy without a CCB license (the \"owner-occupant exemption\" under ORS 701.010(7); https://oregon.public.law/statutes/ors_701.010). But there's a catch: if the home is intended for sale, lease, or rent in the near future, the work must be done by a licensed contractor. And for commercial buildings (R-2 included) **on a rental investment property**, the owner-occupant exemption generally doesn't apply; you need a licensed contractor.\n\nFor your address, given the LLC ownership and apparent multi-unit status, you should plan on hiring a licensed contractor.\n\n**If you hire someone, verify these:**\n\n- **CCB license number** (Construction Contractors Board, Oregon's contractor licensing agency). All contractors must be licensed; verify at **https://www.oregon.gov/ccb/Pages/license-search.aspx**. Type in the contractor's name or CCB number; the page shows their license status, bond, insurance, and any complaints. **Do this before signing any contract.** A real contractor will hand you their CCB number without flinching.\n- **Bond.** CCB-licensed residential contractors carry a $20,000-$25,000 bond; commercial contractors $75,000+. Visible on the license search page.\n- **General liability insurance.** Visible on the same page.\n- **Workers' comp insurance** if they have employees. Verify at https://wcd.oregon.gov.\n- **City of Portland Business License Number.** Anyone doing business in Portland needs one. Ask for it.\n- **References from recent local jobs**, ideally on similar buildings (older multi-family, historic).\n\n**Tradeoffs in plain English:**\n\n| Path | Cost | Warranty | Permit responsibility | Liability if inspection fails |\n|---|---|---|---|---|\n| Hire licensed contractor | Higher (labor markup); typically $15K-$50K+ for your size | Manufacturer warranty + contractor warranty (often 5-10 years on workmanship) | Contractor pulls and closes the permit | Contractor is on the hook to fix |\n| DIY (if eligible as owner-occupant of a 1-or-2-family) | Lower direct cost; high time investment; risk of mistakes | Manufacturer warranty only | You pull and close the permit | You are on the hook |\n\nQuick warning above that table: I'd lean strongly toward hiring out for a building this size, age (1914), and likely R-2 classification. A 1900s building's roof framing is rarely standard, and an inspection failure on a multi-unit building can cascade into bigger problems.\n\n---\n\n## 8. Cost and timeline reality check\n\n- **Permit fees for a residential re-roof:** if a permit is required (most likely under the commercial reroof program for your building), expect **roughly $300 to $1,000+** plus a **12% state surcharge** for the typical project, based on the city's Building and Other Permits Fee Schedule effective July 1, 2025 (https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download). Fees update each July. For commercial reroof labels (the cheaper path most contractors use for like-for-like work), the per-label fee is in the same schedule (Ctrl+F \"roof\" in the PDF).\n\n- **System Development Charges (SDCs):** these are one-time fees that fund city infrastructure (sewer, stormwater, transportation, parks, water) when development adds new units or new impact. **SDCs do not apply to a like-for-like re-roof**, since you're not adding units or expanding impact (https://www.portland.gov/ppd/sdcs). You can skip that worry. If your project ever changes scope to add a unit or expand the building's footprint, SDCs come back into play.\n\n- **Permit timeline:** for a like-for-like reroof under the commercial reroof program, your contractor uses pre-purchased \"labels\" and the permit is essentially same-day. For a residential building permit (when needed), expect **same day to about a week** over-the-counter; longer if plan review is needed.\n\n- **Actual roof work:** for a building of this size, expect **roughly 3-7 working days** for a competent crew on standard asphalt; tile or metal can take 1-2 weeks. About the time of a typical work week.\n\n- **Inspection wait times:** typically **1-2 business days** after the contractor calls in. The contractor calls 503-823-7000 with the IVR number and selects an inspection code (https://www.portland.gov/ppd/residential-permitting/residential-inspections).\n\n- **What if you fail an inspection:** the inspector writes corrections, you fix them, and you call back for a re-inspection. Re-inspection fees apply per the fee schedule; budget **about $100-$200 per re-inspection** in worst case. Don't cover work before the 285 (roofing) inspection; that's a do-over.\n\n---\n\n## 9. Common gotchas (the stuff Portland homeowners actually mess up)\n\n- **Starting work before the permit is issued.** Doubles your fees in some Oregon jurisdictions and exposes you to a stop-work order. Always confirm the permit is issued (not just \"applied for\") before tear-off.\n- **Hiring an unlicensed contractor.** Verify the CCB number at https://www.oregon.gov/ccb/Pages/license-search.aspx **before** signing. If they push back on showing it, walk away.\n- **Putting a dumpster in the street without a PBOT Temporary Street Use Permit.** The city will tag it; ROW Compliance is real (https://www.portland.gov/transportation/permitting/row-compliance). Get the permit at https://www.portland.gov/transportation/permitting/apply-renew-or-change-temporary-street-use-permit, or have the dumpster on your driveway.\n- **Discovering rotten wood mid-project.** Under residential rules, you can replace the wood without a new permit; under commercial rules, replacing more than ~10% may push you into a full commercial building permit at the inspector's discretion (https://www.portland.gov/ppd/documents/commercial-reroof-permit-program-guide/download). Brief your contractor about this risk before they start.\n- **Trimming a street tree without an Urban Forestry permit.** Even a few branches can require a Street Tree Pruning Permit (https://www.portland.gov/ppd/tree-permits/street-tree-pruning-permits). Self-issued online for routine clearance pruning; otherwise call 503-823-TREE.\n- **Re-roofing a Historic Landmark or building in a Historic District without Historic Resource Review** (PCC 33.445.100-220, https://www.portland.gov/code/33). **Yours is a Documented Resource, which is exempt** (https://www.portland.gov/bps/planning/historic-resources/types). But if your building's status ever gets upgraded to Significant Resource or Landmark, the rules change dramatically.\n- **Forgetting the final inspection.** A re-roof permit isn't really done until inspection code **999 - Final** is signed off (https://www.portland.gov/ppd/commercial-permitting/commercial-permit-inspections/commercial-reroof). An open permit shows up in title searches at resale and can hold up the closing. Always verify the permit shows \"Final Inspection Approved\" on PortlandMaps after the work.\n- **Stormwater issues.** If you change downspouts, gutter routing, or where rainwater hits the ground, you may need to coordinate with BES on the **Downspout Disconnection Program** or stormwater rules (https://www.portland.gov/bes/stormwater). Most like-for-like re-roofs don't trigger this; ask if you're rerouting.\n- **Assuming \"single family\" because the assessor says so.** Your assessor record says \"Single Family Residential\" but past building permits class it as R-2 Multi-Family. Permits beat assessor records for code purposes. Confirm with PP&D before you start.\n\n---\n\n## 10. Friendly accuracy caveats\n\nA few neighborly heads-ups, not legal disclaimers:\n\n- **Zoning, overlays, and historic status can change.** Always check PortlandMaps the week you're getting bids. https://www.portlandmaps.com.\n- **Fee schedules update each July.** The figures I gave are based on the July 1, 2025 schedule. Call PP&D at 503-823-7300 for current numbers (https://www.portland.gov/ppd/current-fee-schedules).\n- **The biggest wildcard for your address is the building classification** (1-or-2-family vs. R-2 multi-family). Confirm this before anything else; everything downstream depends on it.\n- **If the property is rental or held by an LLC and not owner-occupied, the owner-occupant DIY exemption likely doesn't apply.** Plan for licensed contractor.\n- **City staff are generally helpful**, but their answers are only as good as the question you ask. The script in section 6 is designed to get you a usable answer in one call.\n- **I'm an AI assistant. None of this is legal advice.** It's based on public city sources I read today (May 7, 2026). Any judgment call about your specific building is for the city's plan reviewer to make, not me.\n\n---\n\n## 11. Glossary\n\n- **BDS**: Bureau of Development Services. Portland's old building permits agency. Merged into Portland Permitting & Development on July 1, 2024. People still say \"BDS\"; treat it as the same as PP&D.\n- **BES**: Bureau of Environmental Services. Sewer and stormwater agency. https://www.portland.gov/bes.\n- **CCB**: Construction Contractors Board. Oregon's contractor licensing agency. https://www.oregon.gov/ccb.\n- **Decking** or **sheathing**: The wood (usually plywood or OSB panels) under the shingles, attached to the rafters. The roof's structural skin.\n- **Documented Resource**: The lowest tier of historic recognition in Portland's Historic Resources Inventory. Inventoried but not protected under preservation rules. Yours is one (\"Mt. Tabor Telephone Exchange\").\n- **Drip edge**: A metal strip that runs along the edge of the roof, directing water away from the wood underneath. Required by code on most modern roofs.\n- **Heritage Tree**: A specifically designated tree in Portland; any work on one needs Urban Forestry permission.\n- **Historic District**, **Conservation District**, **Historic Landmark**, **Significant Resource**: Higher-tier historic protections that DO trigger design review for re-roofing. Yours doesn't fall in any of these; don't worry about them.\n- **Ice and water shield**: A peel-and-stick rubber membrane installed at roof edges and valleys for extra waterproofing. Required in some climates; common best practice in Portland.\n- **IVR number**: The phone-tracking number tied to your permit. You use it to schedule inspections at 503-823-7000.\n- **Like-for-like (re-roof)**: Replacing the same kind of roofing material with the same kind, in the same configuration. The simplest case, usually permit-exempt for 1-or-2-family homes.\n- **Occupancy group**: A code classification (R-2, R-3, B, etc.) for what kind of building it is. **R-3** is one- and two-family residential; **R-2** is multi-family residential (apartments, 3+ units); **B** is business/office. Past permits show your building has been classified as both, depending on the year.\n- **ORSC**: Oregon Residential Specialty Code. The state code for one- and two-family homes and townhouses. Adopted by Portland under PCC 24.10.040.\n- **OSSC**: Oregon Structural Specialty Code. The state code for commercial buildings, including 3+ unit residential.\n- **Overlay zone**: An extra layer of zoning rules on top of the base zone. Examples include design (`d`), environmental (`c`, `p`), historic (`h`). Yours has none.\n- **Overlay (re-roof)**: Putting new shingles on top of old shingles without tearing off. **Portland generally prefers full tear-off**; overlay only allowed in specific conditions.\n- **PBOT**: Portland Bureau of Transportation. Streets, sidewalks, dumpsters in the right-of-way. https://www.portland.gov/transportation.\n- **PCC**: Portland City Code. The whole body of Portland law, organized into Titles. Title 24 = Building Regulations, Title 33 = Zoning, Title 11 = Trees, Title 17 = Public Improvements.\n- **PF&R**: Portland Fire & Rescue. https://www.portland.gov/fire.\n- **PP&D**: Portland Permitting & Development. The bureau that handles building, zoning, trade, and other permits. Phone 503-823-7300. https://www.portland.gov/ppd.\n- **RM1**: Residential Multi-Dwelling 1. Your zoning. Allows multi-unit residential at low density.\n- **ROW**: Right-of-Way. The public area in front of your property: the sidewalk, planting strip, parking lane, and street.\n- **SDC**: System Development Charge. One-time fee on new construction or unit additions to fund city infrastructure. **Doesn't apply to a like-for-like re-roof.**\n- **Square** (as in \"20 squares of shingles\"): A roofer's measurement; 1 square = 100 square feet of roof surface. So 20 squares = 2,000 sq ft.\n- **Tear-off**: Removing the old shingles all the way down to the wood (sheathing/decking) before installing new shingles. The opposite of an overlay.\n- **Title 24, Title 33, Title 11**: see PCC. Title 24 = Building Regulations; Title 33 = Zoning; Title 11 = Trees.\n- **Underlayment**: A water-resistant layer (asphalt felt or synthetic) installed on top of the wood sheathing, before the shingles. The second line of defense if water gets past the shingles.\n- **Urban Forestry**: City team handling tree code under PCC Title 11. Now part of PP&D. 503-823-TREE (8733).\n\nIf you want, after your call with PP&D, send me back what they tell you about the building classification and I'll help you pressure-test the permit/contractor path that actually applies. Good luck; the building has a great story (a real telephone-exchange building from 1914 is a fun thing to own a roof on)."
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Like-for-like reroof exempt for 1-2 family",
+      "claim_full": "In Portland, a like-for-like reroof on a one- or two-family home does not require a building permit.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 24.10.040",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 24.10.040, https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits"
+      },
+      "verified_truth": "Portland's residential reroof exemption applies to one- and two-family dwellings; this is well-supported general guidance."
+    },
+    {
+      "id": "A2",
+      "claim_short": "3+ unit residential auto-commercial track",
+      "claim_full": "A building with three or more dwelling units is automatically placed on the commercial reroof permit track regardless of materials.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.6,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "This conflates building-code occupancy classification with permit track; per the rationale, 3+ unit residential does not automatically fall under the commercial reroof permit track."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Wildfire Hazard Zone codified at 24.51.030",
+      "claim_full": "Portland's Wildfire Hazard Zone is codified in PCC Title 24.51.030, adopted in 2002 and still in effect.",
+      "topic": "citations",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.2,
+      "correctness": "WRONG",
+      "importance": 3,
+      "citation": "Title 24.51.030",
+      "citation_by_variant": {
+        "oob": "Title 24.51.030"
+      },
+      "verified_truth": "Per the rationale, 24.51 is not the Wildfire Hazard Zone section; wildfire hazard provisions are elsewhere and were significantly updated post-2002."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Property not in Wildfire Hazard Zone",
+      "claim_full": "5500 SE Belmont St is not located in a Portland Wildfire Hazard Zone.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PortlandMaps wild_lands_fire_hazard_area: false"
+      },
+      "verified_truth": "The MCP and enhanced variants pulled the wild_lands_fire_hazard_area:false flag from PortlandMaps for this parcel."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Wildfire zones require reroof permits",
+      "claim_full": "Properties in Wildfire Hazard Zones require permits for reroofs.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "https://www.portland.gov/ppd/residential-projects/wildfire-hazard-areas-residential",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/residential-projects/wildfire-hazard-areas-residential"
+      },
+      "verified_truth": "Wildfire Hazard Zone properties have ignition-resistance roofing requirements that trigger permit review."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Townhouses excluded from reroof exemption",
+      "claim_full": "Townhouses are pulled into the reroof permit requirement and are not covered by the residential exemption.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Townhouse exclusion from the reroof exemption is a known Portland rule; not flagged as wrong in the evaluations."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Solar/BIPV roofing requires permit",
+      "claim_full": "Installing solar panels or building-integrated photovoltaic roof coverings requires a permit.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "https://www.portland.gov/ppd/solar-development/solar-permits",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/solar-development/solar-permits"
+      },
+      "verified_truth": "Solar/BIPV installations require permits in Portland."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Heavier material change triggers permit",
+      "claim_full": "Switching to a significantly heavier roofing material (e.g., asphalt to tile) requires a permit.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 24.10.040",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 24.10.040, https://www.portland.gov/code/24/all"
+      },
+      "verified_truth": "Heavier roofing material can overload framing and triggers structural review per Portland reroof guidance."
+    },
+    {
+      "id": "A9",
+      "claim_short": "15% sheathing replacement triggers permit",
+      "claim_full": "If more than 15% of the existing roof sheathing is being removed and replaced, a permit is required.",
+      "topic": "permits",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "vague-correct",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "The 15% threshold is widely cited in Portland reroof guidance but the source page was not linked; needs verification."
+    },
+    {
+      "id": "A10",
+      "claim_short": "10% sheathing limit on commercial reroof",
+      "claim_full": "Under the Commercial Reroof Permit and Inspection Program, sheathing replacement is limited to roughly 10% before a full commercial building permit may be required.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "vague-correct",
+      "importance": 3,
+      "citation": "Commercial Reroof Program Guide Section V.(A)(2)",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/ppd/documents/commercial-reroof-permit-program-guide/download"
+      },
+      "verified_truth": "The 10% sheathing threshold cited from the Program Guide should be verified against the actual document."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Commercial reroof uses inspection codes 285 and 999",
+      "claim_full": "The commercial reroof program uses inspection code 285 (roofing) and 999 (final).",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/commercial-permitting/commercial-permit-inspections/commercial-reroof"
+      },
+      "verified_truth": "Per the OOB rationale, inspection codes 285/999 are not standard Portland reroof inspection codes that could be verified; this specific operational claim needs independent verification."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Commercial reroof uses pre-purchased labels",
+      "claim_full": "Registered contractors can pre-purchase reroof labels (up to 5 at a time) under the Commercial Reroof Permit and Inspection Program.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.4,
+      "correctness": "vague-correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "The reroof-label program exists but the specific cap of 5 labels is plausible-sounding inference; not independently verified in this evaluation."
+    },
+    {
+      "id": "A13",
+      "claim_short": "CCB license required over $1,000",
+      "claim_full": "Any roofing job over $1,000 requires an Oregon CCB-licensed contractor.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Oregon CCB",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Oregon law generally requires CCB licensure for construction work over $1,000; widely accepted."
+    },
+    {
+      "id": "A14",
+      "claim_short": "Owner-occupant DIY exemption (ORS 701.010)",
+      "claim_full": "Oregon's owner-occupant exemption under ORS 701.010(7) lets a homeowner do construction on a home they own and occupy without a CCB license.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "ORS 701.010(7)",
+      "citation_by_variant": {
+        "enhanced": "ORS 701.010(7); https://oregon.public.law/statutes/ors_701.010"
+      },
+      "verified_truth": "Oregon's owner-occupant exemption is correctly cited."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Tear-off mandatory; no overlays",
+      "claim_full": "Portland prohibits overlay reroofs (putting new shingles over old); full tear-off is mandatory for residential reroofs.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.7,
+      "correctness": "vague-correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "The tear-off mandate is repeated in both responses but not anchored to a specific code section; needs verification."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Property zoned RM1",
+      "claim_full": "5500 SE Belmont St is zoned RM1 (Residential Multi-Dwelling 1).",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/bps/zoning/#/zones/base/RM1"
+      },
+      "verified_truth": "RM1 zoning was retrieved from PortlandMaps and confirmed by both MCP-enabled variants."
+    },
+    {
+      "id": "A17",
+      "claim_short": "R-2 vs R-3 occupancy classification ambiguous",
+      "claim_full": "Past permits classify the building as R-2 Multi-Family while other records list it as one- or two-family, making the occupancy classification ambiguous and decisive for the reroof track.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct-judg",
+      "importance": 5,
+      "citation": "Permit 2012-122232-000-00-CO",
+      "citation_by_variant": {
+        "mcp": "Permit 2012-122232-000-00-CO; PortlandMaps",
+        "enhanced": "PortlandMaps permit application 2012-122232-000-00-CO"
+      },
+      "verified_truth": "The classification ambiguity is genuinely identified rather than papered over; the rationale specifically calls this useful diagnostic honesty."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Pink Temple historic conversion",
+      "claim_full": "5500 SE Belmont is the 1921 Pink Temple, a former telephone exchange/Masonic temple converted to triplex+ in 1996.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct-vague",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Per the rationale, the OOB response leans on real-estate listings for this background; the building's history is consistent with other variants identifying it as the Mt. Tabor Telephone Exchange (1914/1921)."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Documented Resource exempt from historic review",
+      "claim_full": "The property is a Documented Resource (Mt. Tabor Telephone Exchange) and is therefore exempt from Portland's historic preservation land use rules.",
+      "topic": "zoning",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "https://www.portland.gov/bps/planning/historic-resources/types",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/bps/planning/historic-resources/types"
+      },
+      "verified_truth": "Documented Resource status was retrieved from city records; the exemption from preservation land use rules is consistent with city documentation."
+    },
+    {
+      "id": "A20",
+      "claim_short": "No historic/conservation overlay on parcel",
+      "claim_full": "The parcel has no historic, conservation, or plan district overlay per spatial intersection on PortlandMaps.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps spatial query",
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Both MCP-enabled variants confirmed via PortlandMaps that no overlays apply to this parcel."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Owner is HUDSON VENTURES LLC",
+      "claim_full": "The current owner of record for 5500 SE Belmont is HUDSON VENTURES LLC, which acquired the property 9/26/2024 for $1.4M.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps assessor",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Owner and sale data retrieved from the PortlandMaps assessor record."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Property ID R114587",
+      "claim_full": "The Property ID for 5500 SE Belmont St is R114587.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Property ID R114587 was retrieved from PortlandMaps."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Recent wood stove permit 2025-082428-MT",
+      "claim_full": "Permit 2025-082428-MT installed a wood stove with Class A venting through the roof and passed final inspection 11/10/2025.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps permit",
+      "citation_by_variant": {
+        "mcp": "Permit 2025-082428-MT",
+        "enhanced": "PortlandMaps permit application 2025-082428-000-00-MT"
+      },
+      "verified_truth": "Recent MT permit was retrieved from city permit records by both MCP variants."
+    },
+    {
+      "id": "A24",
+      "claim_short": "BDS merged into PP&D July 1, 2024",
+      "claim_full": "The Bureau of Development Services merged with permitting teams from Urban Forestry, BES, PBOT, and Water into Portland Permitting & Development on July 1, 2024.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "vague-correct",
+      "importance": 2,
+      "citation": "https://www.portland.gov/ppd",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd; https://www.koin.com/local/portland-launches-new-bureau-to-streamline-permitting-process-07012024/"
+      },
+      "verified_truth": "Per the rationale, the BDS-merger date is among claims that need independent verification."
+    },
+    {
+      "id": "A25",
+      "claim_short": "PP&D phone 503-823-7300",
+      "claim_full": "Portland Permitting & Development general inquiries line is 503-823-7300, and the inspection request line is 503-823-7000.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "https://www.portland.gov/ppd",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd"
+      },
+      "verified_truth": "Phone numbers are widely consistent across responses and are standard PP&D contact lines."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Free 15-minute appointment with PP&D",
+      "claim_full": "Residents can book a free 15-minute appointment with Portland Permitting & Development to confirm permit requirements.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "https://www.portland.gov/ppd/15-min",
+      "citation_by_variant": {
+        "oob": "portland.gov/bds/15-min",
+        "enhanced": "https://www.portland.gov/ppd/15-min"
+      },
+      "verified_truth": "The 15-minute appointment exists; OOB cited the wrong (BDS) URL path per the rationale, while the enhanced variant cites the correct PP&D path."
+    },
+    {
+      "id": "A27",
+      "claim_short": "ORSC R105.2 30% live-load reroof exemption",
+      "claim_full": "Reroofing where work doesn't exceed 30% of required live-load design capacity is permit-exempt under ORSC R105.2.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "vague-correct",
+      "importance": 3,
+      "citation": "ORSC R105.2",
+      "citation_by_variant": {
+        "enhanced": "ORSC R105.2; https://www.oregonbuildingofficials.com/assets/docs/opta_realtor_presentation.pdf"
+      },
+      "verified_truth": "Per the rationale, the ORSC R105.2 30% live-load threshold should be verified against the actual ORSC document."
+    },
+    {
+      "id": "A28",
+      "claim_short": "OSSC adopted by Ordinance 191148/191581",
+      "claim_full": "Portland adopted the 2022 OSSC by reference via Ordinance 191148 (also cited as 191581) under PCC 24.10.040.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.2,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 2,
+      "citation": "Ordinance 191148",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/council/documents/ordinance/passed/191581"
+      },
+      "verified_truth": "Per the rationale, the two ordinance numbers cited (191148 vs 191581) are inconsistent within the response \u2014 at least one is wrong."
+    },
+    {
+      "id": "A29",
+      "claim_short": "SDCs do not apply to like-for-like reroof",
+      "claim_full": "System Development Charges do not apply to a like-for-like reroof because no units or impact are added.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "https://www.portland.gov/ppd/sdcs",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/sdcs"
+      },
+      "verified_truth": "SDCs apply to development that adds units or impact; not to a like-for-like reroof."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Permit fee range $300-$1,000+ for residential reroof",
+      "claim_full": "A residential reroof permit typically costs roughly $300 to $1,000+, plus a 12% state surcharge, per the July 1, 2025 fee schedule.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "vague-correct",
+      "importance": 3,
+      "citation": "Building and Other Permits Fee Schedule (July 1, 2025)",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download"
+      },
+      "verified_truth": "Per the rationale, the fee range and 12% surcharge claim is plausible but not independently verified in this evaluation."
+    },
+    {
+      "id": "A31",
+      "claim_short": "Tree work may need Urban Forestry permit",
+      "claim_full": "Pruning or removing street trees or trimming overhanging branches to access the roof may require an Urban Forestry permit under PCC Title 11.",
+      "topic": "trees",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.8,
+      "correctness": "hedge-correct",
+      "importance": 3,
+      "citation": "PCC Title 11",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 11.40, https://www.portland.gov/code/11/all"
+      },
+      "verified_truth": "Tree code (Title 11) governs street and Heritage Tree work; both variants correctly hedge the requirement."
+    },
+    {
+      "id": "A32",
+      "claim_short": "Dumpster in street needs PBOT permit",
+      "claim_full": "Putting a dumpster, pod, or storage container in the street or parking lane requires a PBOT Temporary Street Use Permit.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "https://www.portland.gov/transportation/permitting/apply-renew-or-change-temporary-street-use-permit",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/transportation/permitting/apply-renew-or-change-temporary-street-use-permit"
+      },
+      "verified_truth": "PBOT Temporary Street Use Permits are required for occupying the right-of-way."
+    },
+    {
+      "id": "A33",
+      "claim_short": "Open permit blocks resale",
+      "claim_full": "Forgetting the final inspection leaves an open permit on the property that can stall a future sale.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "enhanced": null
+      },
+      "verified_truth": "Open permits commonly surface in title searches and can hold up real-estate closings."
+    }
+  ]
+}

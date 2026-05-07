@@ -1,0 +1,621 @@
+{
+  "scenario": "tree-removal",
+  "scenario_label": "Tree removal (front yard)",
+  "address": "3413 NE 33rd Ave, Portland, OR 97212",
+  "neighborhood": "Alameda",
+  "evaluator_model": "claude",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this for you. Tree removal in Portland is more regulated than most people realize, and the answer depends on factors specific to your property (location of the tree, its size, species, and any special designations). Let me check the actual property and current rules.Let me check the actual property details and current tree rules directly:Now let me check your specific property for any special designations (overlay zones, heritage tree status, etc.):Good \u2014 property is in Alameda neighborhood, residential. Now let me check a critical thing most homeowners miss: in Portland, \"front yard\" trees are often actually **street trees** (in the city's right-of-way), which has totally different rules than private trees. Also checking heritage trees in Alameda:Let me get the current permit costs and check for any heritage trees in this area:I want to add a visual for the trickiest part of this \u2014 the right-of-way concept that catches most homeowners off guard. Let me load the diagram guidance:Short answer: probably yes, but Portland regulates this more than most cities \u2014 and there's a wrinkle most people miss about \"front yard\" trees.\n\n**The first thing to check is whether it's actually your tree.** In Portland, the city's right-of-way often extends past the sidewalk and a foot or two into what looks like your front yard. Any tree inside that zone (or even just touching the line) is legally a *street tree*, not a private tree, and street trees follow stricter rules.To find your actual property line, pull up your address on [portlandmaps.com](https://www.portlandmaps.com); the property outline is shown to scale and you can see exactly where the right-of-way sits. (You have the Portland Maps MCP connected too if you want to query it directly.)\n\n## The decision flow\n\n**If it's a street tree** (in or touching the ROW): permit always required, regardless of size, except for self-sown shoots under \u00bd inch. The bar for approval is high; usually only dead, dying, dangerous, or sidewalk-damaging trees are approved, and a replacement is required.\n\n**If it's a private tree:**\n- Under 12 inches diameter at 4.5 feet up (DBH): no permit needed, you can just remove it.\n- 12 inches or larger: permit required, with a replanting condition.\n\nA permit will be granted for a regulated private tree if at least one of these applies:\n- It's dead, dying, or dangerous (arborist report helps).\n- It's within 10 feet of a building or attached structure.\n- It's a [nuisance species](https://www.portland.gov/bes/portland-plant-list) (English holly, English hawthorn, tree of heaven, etc.).\n- It's healthy and ordinary, but you get a quota: up to **4 healthy trees under 20 inches** per site per calendar year (and not Heritage Trees, and not trees required by a prior permit). A single large healthy oak well clear of the house may not be approvable.\n\n**Heritage Trees** are a separate category; if your tree has a small bronze plaque or sign on the trunk, stop and call Urban Forestry first. Any work on a Heritage Tree needs a permit even if it's just a prune.\n\n## Process and cost\n\nPermits are **free** as of July 1, 2025 (funded through the Portland Clean Energy Community Benefits Fund); apply through the city's DevHub portal at [portland.gov/ppd/tree-permits/removal-and-replanting-permits](https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits). You'll need a free City of Portland account. An inspector will visit; you mark the tree with an orange ribbon. Turnaround is generally a couple of weeks.\n\nThe actual removal job is what costs money: typically **$400\u2013$2,000+** depending on size, access, and whether stump grinding is included. Get 2\u20133 written quotes, and verify the contractor is a licensed and insured arborist; ideally [ISA-certified](https://www.treesaregood.org/findanarborist).\n\n## Things you might not have known\n\n- **Free replacement trees.** PP&R Urban Forestry's [Find Your Free Trees](https://www.portland.gov/trees/get-involved/find-your-free-trees) program (and Friends of Trees) can supply your replanting tree at no cost. The replacement doesn't have to go in the front; you can plant it side or back yard, or even pay $50 (reduced from $100) for a replanting waiver if you genuinely have nowhere to put it.\n- **Best planting window is October through April.** If you're removing in the warm months, the city expects you to replant in the next dormant season.\n- **Emergency removal is allowed** for genuinely dangerous trees (cracking, uprooting, leaning on a structure), but you must file a retroactive permit within **7 days** with proof (arborist report or photos). Skipping this if it wasn't a real emergency turns into a code violation.\n- **Watch for the \"we don't need a permit\" pitch.** A small number of tree services will quietly tell homeowners they can skip the permit; the homeowner is the one who eats the violation, which can run into thousands of dollars per tree, plus mandatory replanting at full caliper. If a contractor is dismissive about permits, that's a red flag, not a time-saver.\n- **Neighbor trees and shared trees:** if the tree straddles a property line with your neighbor, it's a shared tree and you need their written agreement before any work.\n\n## Quickest path forward\n\n1. Check the property line on portlandmaps.com to confirm street tree vs private.\n2. Measure trunk diameter at 4.5 feet up.\n3. If it's clearly a private tree under 12 inches, you're free to remove it \u2014 no permit, no replanting.\n4. Otherwise, apply via DevHub or call **503-823-TREE (8733)** with questions; email is trees@portlandoregon.gov.\n\nIf you want, tell me the trunk diameter and roughly how far it sits from the curb and the house, and I can tell you which bucket you're likely in and how strong an approval case you'd have."
+    },
+    "mcp": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I have the property data. Now let me verify Portland's current tree removal rules from the official source \u2014 I want to make sure I'm citing the live regulations and not stale numbers.Short answer: probably yes, but the answer depends on (1) whether the tree is in your planting strip or fully on your side of the sidewalk, and (2) how big it is. The good news after checking your address: nothing tricky is in the way.\n\n**What I verified for 3413 NE 33rd Ave**\n\nStandard R5 lot in Alameda; no historic district, no conservation district, no plan district, no environmental overlay (the only overlay is \"h\" for aircraft landing height, which doesn't touch trees). No heritage trees registered on the property or on the surrounding lots. That clears the special-case landmines that usually complicate Portland tree removals.\n\n**The two questions that decide everything**\n\n1. **Is the tree in the planting strip between sidewalk and curb, or fully on your side of the sidewalk?** Anything in the planting strip is a \"street tree\" in the public right-of-way and requires a permit regardless of size. Important catch: if a tree straddles the private property line and the street, the city treats it as a Street Tree.\n\n2. **If it's fully on your property, is the trunk 12 inches or more in diameter at 4.5 feet up (DBH)?** Under 12 inches you don't need a permit; 12 inches or more, you do. Up to 4 healthy non-heritage trees may be removed per site per calendar year, each under 20 inches DBH. At 36\"+ DBH, you also have to post on-site notice and notify the Alameda Neighborhood Association before applying.\n\n**Two pieces of news that actually matter**\n\n- Since July 1, 2025, most Urban Forestry tree permit fees have been eliminated or significantly reduced (funded by PCEF). So unlike a few years ago, applying is mostly free.\n- Replanting is almost always required, but Portland Parks runs a \"Find Your Free Trees\" program that gives you a free replacement; otherwise the fee in lieu of planting is capped at $1,200 per tree removed for single-family dwellings.\n\n**How to actually do it**\n\nApplications go through the Development Hub online portal (or PDF by mail). Questions: 503-823-TREE (8733) or trees@portlandoregon.gov. Permits last 365 days, and you can self-certify replanting with photos instead of scheduling an inspection.\n\n**The one thing to do before committing**\n\nWalk out front and measure the trunk circumference 4.5 feet up, then divide by \u03c0 (\u22483.14). If the tree is in the planting strip you're applying regardless of size; if it's a private tree under 12\" DBH you're free to go without a permit; 12\"+ means you need one but it's likely free and likely approvable.\n\nIf you want, tell me the tree's location (planting strip vs lawn), approximate trunk diameter, species if you know it, and the reason you want it gone (declining health? foundation conflict? sun for solar? planting something better?); I can draft the application narrative with the right framing for the city's review factors. The justification text is the thing that actually gets a healthy-tree removal approved or denied, and it's the part most homeowners underwrite."
+    },
+    "enhanced": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll research this thoroughly for you. Let me look up your specific property, check the actual Portland code, and verify Urban Forestry's current contact info before writing anything up.Now let me verify the actual Portland tree code, Urban Forestry contact info, and current permit fees.I have enough verified information now. Let me put this together as a single markdown answer you can paste straight into a document. Every claim has both a code section and a working URL inline.\n\n---\n\n# Tree removal at 3413 NE 33rd Ave, Portland, OR 97212: a homeowner's walkthrough\n\n## Plain-English summary (read this first)\n\n**Yes, you can almost certainly remove a tree at this address, but exactly what you need to do depends on which tree you mean.** If the tree sits in the planting strip between the sidewalk and the curb, it is a **street tree**, and you need a permit before any work, no matter how small. If the tree is fully on your private property and is **less than 12 inches thick** (measured 4.5 feet up the trunk), you do not need a permit. If a private tree is **12 inches thick or larger**, you need a permit, and since **July 1, 2025**, the permit itself is **free**; you will be asked to plant a replacement tree on your property. Good news: I checked your address on PortlandMaps, and your lot has **no historic, environmental, or heritage-tree complications**, so the rules apply in their normal form.\n\n---\n\n## What I found about your specific property\n\nI looked your address up on PortlandMaps (https://www.portlandmaps.com/) so the rest of this answer is grounded in what's actually true for your lot, not generic Portland advice.\n\n- **Address:** 3413 NE 33rd Ave, Portland, OR 97212 (Property ID R288441, neighborhood **Alameda**, https://www.portlandmaps.com/detail/property/3413-NE-33RD-AVE/R288441/)\n- **Base zoning:** **R5** (Residential 5,000), which is standard single-dwelling residential and does not add tree-specific rules (https://www.portlandmaps.com/bps/zoning/#/zones/base/R5).\n- **Overlay zone:** Just one, the \"**h\" Aircraft Landing overlay**, which restricts how tall *buildings* can be near PDX flight paths and does **not** add tree-removal restrictions (https://www.portlandmaps.com/bps/zoning/#/zones/overlay/h).\n- **No historic district, no conservation district, no environmental overlay, no plan district** flagged for your lot in the city's data.\n- **No heritage trees** registered on your property or on the lots immediately next door, based on PortlandMaps' heritage-tree layer.\n\nWhat this means in plain English: your address is one of the **simpler cases** in Portland for tree removal. There are no special overlays that pull a smaller tree into the permit system, and no protected trees on the property that would require extra hoops.\n\n> **Friendly caveat:** PortlandMaps is the city's own data, but it can lag behind real life by a few weeks in rare cases. Before you cut anything or pay anyone, **plug your address in yourself** at https://www.portlandmaps.com/ and confirm the same overlays I listed, and call **Urban Forestry at 503-823-8733** to confirm out loud. Belt and suspenders.\n\n---\n\n## 1. Whose tree is it? (this is the most important question)\n\nPortland sorts trees into three buckets, and the bureau in charge changes for each one. Before you do anything else, figure out which bucket your tree is in.\n\n**Street tree (in the right-of-way along the curb).** A \"street tree\" is any tree growing in the city's strip of land along the street; this strip is called the **right-of-way (ROW)**, and the planting strip between the sidewalk and the curb is part of it (PCC 11.80, https://www.portland.gov/code/11/80). On NE 33rd Ave, this is usually the planting strip with grass between the curb and sidewalk. Even though *you* mow it, it is the city's land, and the tree is a street tree managed by **Urban Forestry** (Portland Parks & Recreation, the city's tree office). Any tree that *straddles* the property line and the right-of-way also counts as a street tree (Tree Removal FAQ, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/tree-removal-and-replanting-faqs).\n\n**Private tree (fully on your lot).** A tree completely inside your property line, including in the front yard but inside the sidewalk, is a **private tree** (https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit). Private trees follow Chapter 11.40 of the tree code (PCC 11.40, https://www.portland.gov/code/11/40).\n\n**Heritage tree (a specially designated tree).** Heritage trees are individual trees the city has formally listed for their size, age, or historic value, and **any** work on them needs a permit, even pruning (https://www.portland.gov/trees/heritage-trees-portland). Your lot is **not** flagged for one, based on PortlandMaps' heritage-tree layer for your address.\n\n**How to tell which one yours is, in 60 seconds:**\n\n1. Open https://www.portlandmaps.com/ and search **3413 NE 33rd Ave**.\n2. Zoom in on your lot. Your **property line** is the inner edge of the sidewalk on the NE 33rd side.\n3. Anything between the sidewalk and the street curb is the **public right-of-way** (street tree).\n4. Anything inside the sidewalk on the lot is **private** (your tree).\n5. If the tree's trunk straddles that line, treat it as a **street tree** to be safe (Tree Removal FAQ, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/tree-removal-and-replanting-faqs).\n\nIf you are still unsure, leave a voicemail at **503-823-8733** or email **trees@portlandoregon.gov**, and the city's tree office (Urban Forestry) will tell you for free which kind it is (https://www.portland.gov/trees/tree-care-and-resources/contact-urban-forestry).\n\n---\n\n## 2. Which Portland code chapters apply\n\nPortland's tree rules live in **Title 11 (Trees)** of the **Portland City Code (PCC)**. The chapters that matter for a homeowner removing a tree (no construction project on the property) are:\n\n- **Chapter 11.05 (Legal Frameworks and Relationships)** explains what trees the code covers and how it relates to other laws (PCC 11.05, https://www.portland.gov/code/11/05).\n- **Chapter 11.40 (Tree Permit Requirements \u2013 No Associated Development)** is the main one for you; this is where the permit rules for removing a tree without a construction project live (PCC 11.40, https://www.portland.gov/code/11/40).\n- **Chapter 11.60 (Technical Specifications)** covers replacement-tree size, planting standards, and how to actually remove the tree (PCC 11.60, https://www.portland.gov/code/11/60).\n- **Chapter 11.70 (Enforcement)** lays out the penalties if you cut without a permit (PCC 11.70, https://www.portland.gov/code/11/70). Cutting first and asking later is in here, and the fines are not small (more on this below).\n- **Chapter 11.80 (Definitions and Measurements)** is where terms like \"street tree,\" \"private tree,\" and how to measure thickness are defined (PCC 11.80, https://www.portland.gov/code/11/80).\n\nYou can also click \"View all chapters\" at https://www.portland.gov/code/11/all to see the whole title in one place.\n\n**Title 33 (Planning and Zoning)** only kicks in if you're doing a construction project on the lot at the same time (PCC 33, https://www.portland.gov/code/33). You said you just want to remove a tree, so Title 33 is unlikely to apply unless you're also adding a deck, ADU, etc.\n\n---\n\n## 3. The permit thresholds, in plain English\n\nThis is the meat of the answer. Here are the four cases:\n\n**Case A: Small private tree, under 12 inches around (measured 4.5 feet up the trunk).** **No permit, no fee.** A removal permit is required for trees on private property only when the tree is **12 inches in diameter or larger**, measured 4.5 feet above the ground; this measurement is called the **diameter at breast height (DBH)** (Tree Removal and Replanting Permits, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits). To check if your tree is over the threshold, wrap a tape measure around the trunk at 4.5 feet up: if the *circumference* is about **38 inches or more**, the diameter is 12 inches or more. (Circumference divided by ~3.14 equals diameter; the city has a how-to with photos at https://www.portland.gov/trees/tree-care-and-resources/how-measure-tree.)\n\n**Case B: Private tree, 12 inches thick or larger.** **Permit required; fee is $0.** A non-development tree removal permit is required, but as of **July 1, 2025**, the **Tree Removal and Replanting permit fee was eliminated** thanks to funding from the **Portland Clean Energy Community Benefits Fund (PCEF)** (Do I Need a Tree Permit, https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit). You will need to **plant a replacement tree** as a condition of the permit (PCC 11.40 + 11.60, https://www.portland.gov/code/11/40). You apply through the city's online portal **DevHub** (the Development Hub) at https://www.portland.gov/permitting/development-hub.\n\n**Case C: Street tree (in the planting strip), any size.** **Permit always required; fee is $0.** A permit is required to remove **any** street tree, except for \"sucker shoots\" or self-sown volunteer trees less than half an inch thick (PCC 11.40, https://www.portland.gov/code/11/40 and https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit). Street tree removal permits are also free as of July 1, 2025 (https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit).\n\n**Case D: Heritage tree, any size.** **Permit required and harder to get.** All heritage tree work, including pruning, requires a permit, and the city is much more protective (https://www.portland.gov/trees/heritage-trees-portland). Your address is **not** on the heritage tree list based on PortlandMaps, so this is unlikely to apply.\n\n**What about getting a permit approved?** For private trees, the city will generally approve a removal if at least one of these is true: the tree is **dead, dying, or dangerous**; the tree is **within 10 feet of a building**; the tree is a **nuisance species**; or you remove **fewer than 4 healthy trees smaller than 20 inches** per site per calendar year (PCC 11.40 + Qualifying for a Permit, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit). For street trees, the standard is mostly **dead, dying, or dangerous** with replacement (same source).\n\n**Special rule for very large trees (36 inches and up).** If the private tree's diameter is **36 inches or greater**, you must give written notice to the neighborhood association before the permit decision (Tree Removal Forms list, https://www.portland.gov/trees/trees-forms-and-application-list).\n\n**Species-specific rule worth knowing about.** Oregon has a state-wide quarantine on **elm trees** because of Dutch elm disease; if your tree is an elm, the wood must be chipped or de-barked and buried, not left in chunks (PCC 11.60 + Qualifying page, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit).\n\n---\n\n## 4. The exact bureau and contact info\n\nThe city's tree office is called **Urban Forestry**, and it sits inside **Portland Parks & Recreation (PP&R)**, not inside the building permits bureau. (The building permits bureau is a separate group called **Permitting & Development (PP&D)**, formerly the Bureau of Development Services or **BDS**; you only deal with PP&D if you're doing construction at the same time.)\n\n**Urban Forestry contact info, verified today:**\n\n- **Phone:** **503-823-8733** (also written as 503-823-TREE). The hotline is **not answered live**; you leave a voicemail and they return calls within about 3 business days, currently extended due to volume (https://www.portland.gov/trees/tree-care-and-resources/local-tree-care-providers).\n- **Email:** **trees@portlandoregon.gov** (https://www.portland.gov/trees/tree-care-and-resources/contact-urban-forestry).\n- **Phone menu:** Press **1** for tree emergencies (24/7), **3** for general inquiries (https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit).\n- **Office address (in-person, by appointment only):** **Development Services Center, 1900 SW 4th Ave, Suite 5000, Portland, OR 97201** (https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits).\n- **Where to apply online:** the **DevHub** portal at https://www.portland.gov/permitting/development-hub (you'll need a free Portland account; the application form is also downloadable at https://www.portland.gov/trees/trees-forms-and-application-list).\n\n**If you need building permits at the same time** (say, you're removing the tree to make room for an addition), then **Permitting & Development (PP&D)**, the building permits bureau, also gets involved, and the tree review is folded into the construction permit (PCC 11.50, https://www.portland.gov/code/11/50). For a simple stand-alone tree removal, you only deal with Urban Forestry.\n\n---\n\n## 5. What to do next, in order\n\nHere is the path I'd take if this were my house, ordered so you don't do work twice.\n\n1. **(Free) Confirm whose tree it is on PortlandMaps.** Go to https://www.portlandmaps.com/, search **3413 NE 33rd Ave**, and look at where the tree's trunk sits relative to the sidewalk. If the trunk is between the curb and the sidewalk, it's a **street tree**. If it's behind the sidewalk on the lot, it's **private**. (~5 minutes.)\n\n2. **(Free) Measure the tree.** Wrap a tape measure around the trunk at **4.5 feet above the ground**. If the circumference is **less than about 38 inches** (and the tree is fully private, not in the planting strip), you can probably remove it without a permit at all (PCC 11.40, https://www.portland.gov/code/11/40). If it's larger, or if it's a street tree, go to step 3. (~5 minutes; instructions at https://www.portland.gov/trees/tree-care-and-resources/how-measure-tree.)\n\n3. **(Free) Take a few photos** of the tree (whole tree, the trunk, any decay or damage, distance from the house if it's within 10 feet of a structure). This is what an Urban Forestry inspector will want to see, and it helps your \"dead, dying, dangerous, or within 10 feet of a building\" case (Qualifying page, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit). (~10 minutes.)\n\n4. **(Free) Email Urban Forestry first** at **trees@portlandoregon.gov** with the script in the next section, before you call. Email creates a paper trail. If you'd rather talk, leave a voicemail at **503-823-8733** and press **3** (https://www.portland.gov/trees/tree-care-and-resources/contact-urban-forestry). Expect a response in about **3 business days**, possibly longer right now (same source). (~5 minutes; about a long weekend to hear back.)\n\n5. **(Free) Apply for the permit on DevHub.** Once Urban Forestry confirms which permit type you need, you submit the **Tree Removal and Replanting Permit** application via DevHub at https://www.portland.gov/permitting/development-hub (or download the PDF at https://www.portland.gov/trees/trees-forms-and-application-list). Have ready: your address, the tree's diameter at 4.5 feet, photos, and your reason for removal. **Permit fee: $0** as of July 1, 2025 (https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit). A site plan is **optional** but speeds things up; without one, an inspector will visit (https://www.portland.gov/trees/treepermits/news/2025/1/4/new-tree-removal-replanting-permit-application). (~30 minutes to fill out; **roughly 1-3 weeks** for the city to issue, my estimate based on their current 3-business-day response window plus inspection time. Verify timing with the office.)\n\n6. **(Free) Call 811 before you cut.** Oregon's utility-locate hotline is **811** (or 503-246-6699). They mark underground utilities for free so you don't slice into your sewer lateral when grinding the stump (Qualifying page, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit). Two business days' notice required. (5-minute call.)\n\n7. **Hire a licensed tree service** (not free; see section below for what to ask). Get **at least three quotes**. Cost varies wildly by tree size; a typical mid-size tree (say 20-30 inches thick) often runs **$1,200-$3,000** in Portland; a very large tree near a house can be **$5,000+**. (Range is from current Portland tree-service market data; verify with quotes.)\n\n8. **Have the tree removed within the permit's 365-day window.** Removal/replant permits are valid for **365 days**, and **for street trees** the stump must be ground below grade and debris cleared while the permit is valid (PCC 11.40 + Qualifying page, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit). Roughly: do the cutting any time in the year after the permit issues.\n\n9. **(Free or low-cost) Plant your replacement tree.** Required for permitted private removals. The city has a **Free Trees** program that may give you a qualifying replacement tree at no cost; check https://www.portland.gov/trees/find-your-free-trees. Replacement standards (size, species, planting method) are in PCC 11.60 (https://www.portland.gov/code/11/60), with species lists at https://www.portland.gov/ppd/tree-permits/private-property-tree-replacem. (Roughly **a weekend** of effort to plant a young tree.)\n\n10. **(Free) Self-certify or request final inspection.** Before your permit expires, either submit a **self-certification form** with photos of the planted replacement, or ask Urban Forestry to come do a final inspection (https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/tree-removal-and-replanting-faqs). Done.\n\n---\n\n## 6. What to say to Urban Forestry: copy-paste script\n\n**Email version** (paste into your email body, edit the bracketed parts):\n\n> Subject: Tree removal question, 3413 NE 33rd Ave (97212)\n>\n> Hi Urban Forestry team,\n>\n> I'm a homeowner at **3413 NE 33rd Ave, Portland, OR 97212** (Property ID R288441, Alameda neighborhood), and I'd like to remove a tree in my front yard. Before I apply, I want to make sure I'm doing this the right way.\n>\n> Here's what I know so far:\n>\n> - **Location of the tree:** [for example: \"in the planting strip between the sidewalk and the curb on NE 33rd Ave\" OR \"fully on my private property, about 8 feet behind the sidewalk\"].\n> - **Approximate diameter at 4.5 feet up the trunk:** [for example: \"about 14 inches\"].\n> - **Species (if known):** [for example: \"I think it's a maple, but I'm not sure\"].\n> - **Reason I want it removed:** [for example: \"the trunk has split and the upper third is dead\" OR \"it's within 6 feet of my foundation and the roots are lifting the sidewalk\"].\n> - **Photos attached:** [attach 2-4 photos: whole tree, base, any damage, distance to structure].\n>\n> Could you confirm:\n>\n> 1. Is this a street tree or a private tree based on its location?\n> 2. Do I need a Tree Removal and Replanting Permit, given the size and reason?\n> 3. Are there any overlay zones, plan districts, or heritage-tree designations on my parcel I should know about before I apply? My PortlandMaps lookup shows R5 base zoning with the \"h\" Aircraft Landing overlay only, and no historic, environmental, or heritage flags.\n> 4. What's the typical timeline right now to get a permit issued?\n>\n> Thanks very much for your help.\n>\n> [Your name]\n> [Your phone number]\n\n**Phone version** (read aloud after pressing 3 on the menu at 503-823-8733):\n\n> Hi, my name is [your name]. I'm calling from **3413 NE 33rd Ave in the Alameda neighborhood, zip 97212**. I'd like to remove a tree from my front yard and I want to make sure I do it correctly. The tree is **[in the planting strip / fully on my property]**, the diameter at 4.5 feet is about **[X] inches**, and the reason I want to remove it is **[dead / dying / hazardous / within 10 feet of my house / nuisance species]**. Could you tell me whether I need a permit for this, what the typical timeline looks like right now, and anything specific to my parcel I should know about? Please call me back at **[your number]** or email me at **[your email]**. Thank you.\n\n---\n\n## 7. Replacement and mitigation: what you'll likely have to plant\n\nIf your removal needs a permit (Cases B, C, or D above), the city will require a **replacement tree** as a condition of approval. The rules are in PCC 11.60 (https://www.portland.gov/code/11/60).\n\n**For a private tree replacement,** the city expects you to plant a tree from the **Private Property Tree Replacement List** (https://www.portland.gov/ppd/tree-permits/private-property-tree-replacem). The minimum size is typically a **2-inch caliper** tree (about as thick as a thumb at the base), or a smaller bare-root tree of an approved species.\n\n**If you genuinely don't have room** for a replacement on your private property, you can pay into the **Tree Planting and Preservation Fund** instead, which goes toward planting trees elsewhere in Portland (PCC 11.40, https://www.portland.gov/code/11/40 and PCC 11.50.040, https://www.portland.gov/code/11/50). The mitigation amount is calculated using the per-inch fee in the city's adopted fee schedule (https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit/tree-permitting-fee-schedule). For a typical homeowner in your situation, **planting your own replacement is much cheaper than the in-lieu fee**, and **PP&R Urban Forestry may give you the replacement tree for free** through the Free Trees program at https://www.portland.gov/trees/find-your-free-trees.\n\n**There's also a Replanting Waiver** for situations where the property already has enough other trees to count toward the city's tree density rules; the application fee is $50 (reduced from $100 as of July 1, 2025) and is filed with your removal permit (https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit and https://www.portland.gov/trees/trees-forms-and-application-list).\n\n> **Realistic numbers for your situation, Alameda lot, R5 zoning:** Most homeowners pay **$0 for the permit** plus **$0-$250 for a replacement tree** (free if you get one through PP&R), plus the cost of the actual removal work (usually $1,200-$3,000+). The most expensive part of this whole project is the tree service, not the city.\n\n---\n\n## 8. Common Portland tree-removal traps\n\nThese are the specific mistakes that bite homeowners doing exactly your kind of project:\n\n**\"It's in my front yard, so it must be mine.\"** Trees in the planting strip between the curb and sidewalk are **street trees**, owned/regulated by the city even though *you* mow that strip; cutting one without a permit is a Title 11 violation (https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/tree-removal-and-replanting-faqs). Always check the property line on PortlandMaps first.\n\n**\"It's just a small tree, I'll cut first and ask later.\"** Conducting regulated tree work without a permit is unlawful under PCC 11.70.050.B (https://www.portland.gov/code/11/70/050), and Portland's enforcement is real; civil penalties for unpermitted removal can run **up to $1,000 per day, per tree**, plus required restoration (PCC 11.70, https://www.portland.gov/code/11/70). Get the permit even when it costs nothing.\n\n**Hiring an unlicensed tree service.** Oregon law requires tree-work companies to be registered with the **Construction Contractors Board (CCB)** or the **Landscape Contractors Board (LCB)**, and a Portland business license is required for any company operating in the city (https://www.portland.gov/trees/tree-care-and-resources/tips-hiring-arborist). Unlicensed crews can leave you on the hook for injuries on your property. Verify CCB at https://search.ccb.state.or.us/search/ and LCB at https://www.oregon.gov/lcb/ before you sign anything.\n\n**Removing a tree during nesting season without checking for nests.** Tree work is also subject to the federal **Migratory Bird Treaty Act**, which Portland's tree code explicitly references (PCC 11.05, https://www.portland.gov/code/11/05). Active nests with eggs or chicks (most common **April through July**) make removal illegal under federal law until the nest is empty. A good arborist will check before cutting.\n\n**Missing a heritage tree designation.** Some Portland trees are designated heritage trees and require permits even for pruning (https://www.portland.gov/trees/heritage-trees-portland). I checked your address: **no heritage trees** are flagged on or immediately next to your lot, but always confirm on PortlandMaps before cutting.\n\n**Assuming an \"h\" overlay or other overlay restricts trees.** Your lot's only overlay is the **\"h\" Aircraft Landing overlay**, which restricts building heights near PDX flight paths but does **not** add tree-removal restrictions (https://www.portlandmaps.com/bps/zoning/#/zones/overlay/h). The overlays that *do* add tree restrictions are the environmental overlays (\"c\" and \"p\") and certain plan districts; you have **none** of those.\n\n**Not calling 811 before stump grinding.** If you grind a stump without locating utilities, you can hit a sewer lateral or gas line. **Call 811** at least two business days before, free (Qualifying page, https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit).\n\n**Forgetting the 36-inch neighborhood-notice rule.** If your tree is **36 inches or larger** in diameter, you must send a notice to the neighborhood association (Alameda Neighborhood Association, in your case) and post a sign on the property before the permit decision (https://www.portland.gov/trees/trees-forms-and-application-list).\n\n**Letting your permit expire.** The permit is good for **365 days**, and the replanting must be done before it expires or it's a code violation (https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit).\n\n---\n\n## 9. Hiring a tree service: what to check, what to ask\n\nPortland does **not** have its own tree-service license, but Oregon does, and Portland requires any business operating in the city to hold a city business license (https://www.portland.gov/trees/tree-care-and-resources/tips-hiring-arborist).\n\nThree things to verify before signing a quote:\n\n- **Oregon CCB or LCB license.** Tree removal is regulated by Oregon's **Construction Contractors Board (CCB)** or the **Landscape Contractors Board (LCB)** (https://www.oregon.gov/lcb/Pages/FAQ-Tree-Work.aspx). Verify CCB at **https://search.ccb.state.or.us/search/** by entering the company's CCB number; verify LCB at https://www.oregon.gov/lcb/Pages/Find-a-Licensee.aspx. The CCB also confirms the company is **bonded and insured**, with a state-required minimum of $300,000 in liability coverage (https://www.oregon.gov/lcb/Pages/FAQ-Tree-Work.aspx).\n- **Workers' compensation insurance.** Oregon requires this, but some companies skip it. Ask for a **certificate of insurance addressed to you specifically**; without it, you or your homeowners insurance can be on the hook if a worker is hurt on your property (https://www.portland.gov/trees/tree-care-and-resources/tips-hiring-arborist).\n- **ISA Certified Arborist on the crew.** Not legally required, but an **International Society of Arboriculture (ISA) Certified Arborist** has passed the industry exam and keeps current with continuing education (https://www.portland.gov/trees/tree-care-and-resources/tips-hiring-arborist). Look up an arborist's certification at https://www.treesaregood.org/findanarborist/findanarborist.\n\n**The city maintains a list of local tree care providers** who have attended Urban Forestry's training; it's not an endorsement, but it's a reasonable starting point: https://www.portland.gov/trees/tree-care-and-resources/local-tree-care-providers. Companies on this list have agreed to follow Title 11 and have been removed in the past for code violations (same source).\n\n**Your quote should include, in writing:**\n\n- Total price for removal *and* stump grinding (the city expects stumps ground below grade for street trees, PCC 11.40, https://www.portland.gov/code/11/40)\n- Debris haul-away\n- Whether the company will pull the city tree permit (some do this for you, some don't)\n- Proof of CCB/LCB number, insurance, and workers' comp\n- Whether they will check for active bird nests before cutting (Migratory Bird Treaty Act, PCC 11.05, https://www.portland.gov/code/11/05)\n\n> **Watch out for:** door-to-door solicitations after windstorms (\"storm chasers\"), cash-only / pay-now pressure, no company name on the truck, and \"we can start today\" promises during peak season. These are common red flags from unlicensed operators (https://www.portland.gov/trees/tree-care-and-resources/tips-hiring-arborist).\n\n---\n\n## 10. Accuracy caveats (please read before paying anyone)\n\n- **Verify the overlays yourself.** I pulled your zoning and overlay data from PortlandMaps' API on **May 7, 2026**; data is generally current but can lag. Re-check at https://www.portlandmaps.com/ before applying.\n- **Confirm the tree-permit determination with Urban Forestry.** I'm an AI, not an Urban Forestry inspector. The official answer about your specific tree comes from **trees@portlandoregon.gov** or **503-823-8733**.\n- **Permit fees and code language change.** The July 1, 2025 fee elimination is current as of today (https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit), but Portland's fee schedule is reviewed annually; confirm the current fee at https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit/tree-permitting-fee-schedule before you assume $0.\n- **Heritage tree status can be added.** Heritage tree designations are made by the City Council; the layer I checked is current, but if your tree is exceptionally old or large, ask Urban Forestry directly.\n- **Tree service costs are estimates.** The $1,200-$3,000 range I gave is from the current Portland market and varies a lot with size, access, and location near power lines. Get **three quotes** before paying anyone.\n\n---\n\n## Glossary\n\n- **BDS** \u2014 Bureau of Development Services. Portland's old name for what is now called **Permitting & Development (PP&D)**, the building permits bureau. You only deal with them if you're doing construction.\n- **BES** \u2014 Bureau of Environmental Services. Portland's sewer and stormwater bureau; relevant only for trees in green-street facilities along the curb.\n- **CCB** \u2014 Construction Contractors Board. Oregon's licensing agency for construction trades, including most tree-removal companies.\n- **DBH** \u2014 Diameter at Breast Height. How thick the tree is around, measured 4.5 feet up the trunk. The number that determines whether a private tree needs a permit.\n- **DevHub** \u2014 Portland's online portal for development and tree permits at https://www.portland.gov/permitting/development-hub.\n- **Heritage tree** \u2014 A specific tree the city has designated for protection because of its size, age, or historic significance. Always needs a permit, even for pruning.\n- **ISA** \u2014 International Society of Arboriculture. The certifying body for professional arborists.\n- **LCB** \u2014 Oregon Landscape Contractors Board. The state agency that licenses landscape companies, including those doing tree planting and tree work under the arborist license phase.\n- **Overlay zone** \u2014 An extra layer of zoning that applies on top of the base zone. Some overlays add restrictions on tree removal (such as environmental \"c\" and \"p\" overlays); your lot's only overlay is the \"h\" Aircraft Landing overlay, which does not.\n- **PBOT** \u2014 Portland Bureau of Transportation. Manages city streets and the right-of-way pavement, but **not** street trees in the planting strip; that's Urban Forestry's job.\n- **PCC** \u2014 Portland City Code. The set of all city laws; tree rules are in **Title 11**.\n- **PCEF** \u2014 Portland Clean Energy Community Benefits Fund. The voter-approved fund that started paying for Urban Forestry permit fees in July 2025, which is why the permit is now free.\n- **Planting strip** \u2014 The strip of grass or dirt between the sidewalk and the curb. Even though you mow it, it's part of the public right-of-way.\n- **PP&D** \u2014 Permitting & Development. The current name of the building permits bureau; formerly BDS.\n- **PP&R** \u2014 Portland Parks & Recreation. The bureau that contains Urban Forestry.\n- **ROW** \u2014 Right-of-way. The strip of public land along the street, including the planting strip and (sometimes) part of what looks like your front yard. Anything in the ROW is the city's, even though you maintain it.\n- **Street tree** \u2014 Any tree growing in the right-of-way. Always needs a permit for any work, regardless of size.\n- **Title 11** \u2014 The chapter of Portland City Code covering trees.\n- **Title 33** \u2014 The chapter of Portland City Code covering planning and zoning. Only triggers on tree work if you're doing a construction project at the same time.\n- **Urban Forestry** \u2014 Portland's tree office, part of PP&R. The people you call about any tree question.\n\n---\n\n## One thing you didn't ask but might want to know\n\n**Alameda is a tree-rich neighborhood, and the city pays attention.** Your stretch of NE 33rd between Knott and Fremont has mature street trees that the city actively monitors; my friendly heads-up is that if your tree is the one in the planting strip, expect Urban Forestry to ask whether pruning or root remediation could solve the problem before they approve removal (PCC 11.40, https://www.portland.gov/code/11/40). If the tree is dead, dying, or genuinely hazardous, that's an easy approval; if it's healthy and just inconveniently placed, the answer may be \"prune, don't remove.\" Worth knowing before you spend money on a quote.\n\n**One more bonus:** the **Free Trees** program at https://www.portland.gov/trees/find-your-free-trees runs giveaways twice a year (typically fall and early spring). If your timeline is flexible, apply for the permit now, then time your replacement planting to a giveaway and your replacement tree is **literally $0**."
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Property is R5 Alameda with 'h' overlay only",
+      "claim_full": "3413 NE 33rd Ave is in the Alameda neighborhood with R5 base zoning and only the 'h' Aircraft Landing overlay \u2014 no historic, environmental, conservation, plan district, or heritage tree designations.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/detail/property/3413-NE-33RD-AVE/R288441/"
+      },
+      "verified_truth": "Per evaluator notes, property is R5 in Alameda with only the 'h' aircraft-landing overlay; this address-specific claim should still be independently verified on portlandmaps.com."
+    },
+    {
+      "id": "A2",
+      "claim_short": "Front-yard tree may be street tree in ROW",
+      "claim_full": "In Portland, 'front yard' trees in the planting strip between sidewalk and curb are often legally street trees in the public right-of-way, not private trees.",
+      "topic": "definitions",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 11.80",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/code/11/80"
+      },
+      "verified_truth": "Trees in the public right-of-way (planting strip) are street trees governed by Urban Forestry, distinct from private trees on the lot."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Use PortlandMaps to check property line",
+      "claim_full": "Residents should look up their address on portlandmaps.com to determine whether the tree sits in the right-of-way or fully on private property.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portlandmaps.com",
+      "citation_by_variant": {
+        "oob": "https://www.portlandmaps.com",
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/"
+      },
+      "verified_truth": "PortlandMaps is the city's official property-data tool; checking the property line/right-of-way there is the correct first step."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Trees governed by PCC Title 11",
+      "claim_full": "Portland's tree rules are codified in Title 11 of the Portland City Code, with chapters 11.05, 11.40, 11.50, 11.60, 11.70, and 11.80 covering frameworks, permit requirements, technical specs, enforcement, and definitions.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC Title 11",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/code/11/all"
+      },
+      "verified_truth": "Title 11 of the Portland City Code governs trees; chapter numbers cited (11.05, 11.40, 11.50, 11.60, 11.70, 11.80) are real and authoritative."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Private tree permit threshold 12\" DBH",
+      "claim_full": "Private trees on private property require a removal permit when the trunk is 12 inches or more in diameter measured at 4.5 feet up (DBH).",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 11.40",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits"
+      },
+      "verified_truth": "Per evaluator accuracy flags, the 12-inch DBH threshold measured at 4.5 feet is the published rule for private tree removal permits, though the underlying code language warrants cross-checking."
+    },
+    {
+      "id": "A6",
+      "claim_short": "38\" circumference \u2248 12\" diameter shortcut",
+      "claim_full": "Wrap a tape measure around the trunk at 4.5 feet up; if the circumference is about 38 inches or more, the diameter is 12 inches or more.",
+      "topic": "definitions",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov how-to",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/trees/tree-care-and-resources/how-measure-tree"
+      },
+      "verified_truth": "Circumference divided by \u03c0 (\u22483.14) yields diameter; 38\" circumference is approximately 12\" diameter \u2014 a correct measurement shortcut."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Street tree permit always required",
+      "claim_full": "Removing any street tree in the right-of-way requires a permit regardless of size, except for self-sown shoots under \u00bd inch.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 11.40",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/code/11/40"
+      },
+      "verified_truth": "Per evaluator accuracy flags, street tree removal always requires a permit with the self-sown <\u00bd\" shoot exemption."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Tree permits free since July 1, 2025",
+      "claim_full": "As of July 1, 2025, Portland tree removal and replanting permit fees were eliminated, funded through the Portland Clean Energy Community Benefits Fund (PCEF).",
+      "topic": "fees",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd/tree-permits",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit"
+      },
+      "verified_truth": "Evaluator flags this as a specific claim warranting verification against the current fee schedule, but it is repeated across the three responses and supported by the cited city page."
+    },
+    {
+      "id": "A9",
+      "claim_short": "4 healthy trees under 20\" per year",
+      "claim_full": "A homeowner may remove up to 4 healthy non-heritage trees per site per calendar year, each under 20 inches DBH, as a qualifying criterion for a permit.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Qualifying for a Permit page",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit"
+      },
+      "verified_truth": "Evaluator accuracy flags treat this as a specific quota figure that should be verified against the city's Qualifying page; cited consistently across responses."
+    },
+    {
+      "id": "A10",
+      "claim_short": "10-foot-from-building approval criterion",
+      "claim_full": "A regulated private tree removal permit will be granted if the tree is within 10 feet of a building or attached structure, among other qualifying criteria.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Qualifying for a Permit page",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit"
+      },
+      "verified_truth": "Per evaluator flags, 10-foot proximity to a building is a recognized approval criterion for private tree removal."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Nuisance species qualifies for removal",
+      "claim_full": "A regulated private tree may be approved for removal if it is a nuisance species (e.g., English holly, English hawthorn, tree of heaven).",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Portland Plant List",
+      "citation_by_variant": {
+        "oob": "https://www.portland.gov/bes/portland-plant-list",
+        "enhanced": null
+      },
+      "verified_truth": "Nuisance species listed on the Portland Plant List qualify for removal under Title 11 standards."
+    },
+    {
+      "id": "A12",
+      "claim_short": "36\"+ DBH triggers neighborhood notice",
+      "claim_full": "Private trees 36 inches or larger in diameter require on-site notice and notification of the neighborhood association before the permit decision.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Tree Removal Forms list",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/trees/trees-forms-and-application-list"
+      },
+      "verified_truth": "Evaluator flags 36\" DBH neighborhood-notice trigger as a specific claim warranting verification; cited consistently across responses."
+    },
+    {
+      "id": "A13",
+      "claim_short": "Heritage trees need permit even to prune",
+      "claim_full": "Heritage Trees are a separate protected category, and any work \u2014 including pruning \u2014 requires a permit.",
+      "topic": "trees",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Heritage Trees page",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/trees/heritage-trees-portland"
+      },
+      "verified_truth": "Heritage tree designation requires a permit for any work, including pruning."
+    },
+    {
+      "id": "A14",
+      "claim_short": "Apply through DevHub portal",
+      "claim_full": "Tree removal permit applications are submitted online through the city's Development Hub (DevHub) portal.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portland.gov DevHub",
+      "citation_by_variant": {
+        "oob": "https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits",
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/permitting/development-hub"
+      },
+      "verified_truth": "DevHub is the correct online portal for tree permit applications."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Urban Forestry phone 503-823-TREE",
+      "claim_full": "Urban Forestry's phone number is 503-823-8733 (TREE) and email is trees@portlandoregon.gov.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Urban Forestry contact page",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/trees/tree-care-and-resources/contact-urban-forestry"
+      },
+      "verified_truth": "Phone 503-823-TREE (8733) and email trees@portlandoregon.gov are the published Urban Forestry contacts; verify currency since portlandoregon.gov addresses sometimes change."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Permit valid 365 days",
+      "claim_full": "Tree removal and replanting permits are valid for 365 days from issuance.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Qualifying for a Permit page",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit"
+      },
+      "verified_truth": "Per evaluator flags, the 365-day validity window is a specific claim consistent across responses."
+    },
+    {
+      "id": "A17",
+      "claim_short": "Replanting required for permitted removal",
+      "claim_full": "Replanting is required as a condition of approval for permitted private tree removals.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 11.60",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/code/11/60"
+      },
+      "verified_truth": "Replanting is required for permitted private tree removals 12\"+ DBH per Title 11."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Free replacement trees program",
+      "claim_full": "Portland's 'Find Your Free Trees' program provides homeowners with a free replacement tree to satisfy replanting conditions.",
+      "topic": "fees",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "portland.gov/trees/find-your-free-trees",
+      "citation_by_variant": {
+        "oob": "https://www.portland.gov/trees/get-involved/find-your-free-trees",
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/trees/find-your-free-trees"
+      },
+      "verified_truth": "PP&R Urban Forestry runs a free replacement tree program for homeowners required to replant."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Replanting waiver fee $50",
+      "claim_full": "A replanting waiver application fee is $50 (reduced from $100 as of July 1, 2025) when there is no room on the property to plant a replacement.",
+      "topic": "fees",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "portland.gov/ppd/tree-permits",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit"
+      },
+      "verified_truth": "Evaluator flags the $50-from-$100 waiver fee as a specific number warranting verification, but consistent across responses."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Fee-in-lieu capped at $1,200/tree",
+      "claim_full": "For single-family dwellings, the fee in lieu of planting a replacement tree is capped at $1,200 per tree removed.",
+      "topic": "fees",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "Evaluator notes this $1,200 cap is a specific dollar figure that should be verified against the current Urban Forestry fee schedule."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Best replant window October\u2013April",
+      "claim_full": "The best planting window is October through April, and the city expects warm-month removals to be replanted in the next dormant season.",
+      "topic": "trees",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Per evaluator flags, October\u2013April dormant-season replanting is a recognized requirement/best practice."
+    },
+    {
+      "id": "A22",
+      "claim_short": "7-day retroactive emergency permit",
+      "claim_full": "Emergency removal of genuinely dangerous trees is allowed, but requires a retroactive permit filed within 7 days with proof.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Evaluator flags the 7-day retroactive emergency window as a specific claim warranting verification."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Self-certify replanting with photos",
+      "claim_full": "Homeowners may self-certify replanting with photos rather than scheduling a city inspection.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Tree Removal FAQ",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/tree-removal-and-replanting-faqs"
+      },
+      "verified_truth": "Self-certification with photos is permitted as an alternative to a final inspection."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Penalties up to $1,000/day per tree",
+      "claim_full": "Civil penalties for unpermitted regulated tree removal can run up to $1,000 per day per tree, plus required restoration, under PCC 11.70.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 11.70",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/code/11/70"
+      },
+      "verified_truth": "Evaluator flags the $1,000/day-per-tree penalty figure as a specific number that warrants verification, though consistent with Title 11.70 enforcement provisions."
+    },
+    {
+      "id": "A25",
+      "claim_short": "Shared boundary trees need neighbor consent",
+      "claim_full": "If a tree straddles a property line with a neighbor, it is a shared tree and requires the neighbor's written agreement before any work.",
+      "topic": "trees",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Shared boundary trees require co-owner consent under common practice; not directly cited but consistent with city guidance."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Tree services need CCB/LCB license",
+      "claim_full": "Oregon requires tree-work companies to be registered with the Construction Contractors Board (CCB) or Landscape Contractors Board (LCB), with a state minimum $300,000 liability coverage.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Oregon LCB / CCB",
+      "citation_by_variant": {
+        "oob": "https://www.treesaregood.org/findanarborist",
+        "enhanced": "https://www.oregon.gov/lcb/Pages/FAQ-Tree-Work.aspx"
+      },
+      "verified_truth": "Per evaluator flags, Oregon CCB/LCB licensing with $300,000 minimum liability coverage is the recognized requirement for tree work."
+    },
+    {
+      "id": "A27",
+      "claim_short": "Removal cost $1,200\u2013$3,000 typical",
+      "claim_full": "Hiring a tree service typically costs $1,200\u2013$3,000 for a mid-size tree, with very large trees near a house running $5,000+ (oob cited $400\u2013$2,000+).",
+      "topic": "costs",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": null
+      },
+      "verified_truth": "Tree service costs vary by size, access, and proximity to power lines; the cited ranges are reasonable market estimates."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Elm tree quarantine requires chipping",
+      "claim_full": "Oregon has a state-wide quarantine on elm trees due to Dutch elm disease, requiring removed elm wood to be chipped or de-barked and buried.",
+      "topic": "trees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Qualifying for a Permit page",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit"
+      },
+      "verified_truth": "Per evaluator flags, the elm quarantine and chipping/de-barking/burial rule is a specific claim consistent with Title 11.60."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Migratory Bird Treaty Act applies",
+      "claim_full": "Tree work is subject to the federal Migratory Bird Treaty Act; active nests with eggs or chicks (most common April\u2013July) make removal illegal until the nest is empty.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PCC 11.05",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/code/11/05"
+      },
+      "verified_truth": "The federal Migratory Bird Treaty Act applies to tree work and is referenced in PCC 11.05."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Call 811 before stump grinding",
+      "claim_full": "Call 811 (Oregon utility-locate) at least two business days before stump grinding so underground utilities are marked and you don't hit a sewer lateral or gas line.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "Qualifying for a Permit page",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/qualifying-tree-removal-and-replanting-permit"
+      },
+      "verified_truth": "Calling 811 for utility locates before any digging or stump grinding is the standard, free safety step in Oregon."
+    }
+  ]
+}

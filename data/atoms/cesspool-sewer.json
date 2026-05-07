@@ -15,14 +15,14 @@
     },
     "enhanced": {
       "tool": "Claude 4.7 Adaptive",
-      "text": "# Cesspool, Sewer, and Your House at 6624 N Missouri Ave\n\n*A friendly walkthrough for a Portland homeowner. Written May 2026.*\n\n---\n\n## Read this first: a surprise from the city's own records\n\nBefore answering your question, I checked Portland's permit records and sewer maps for your address. Here's what I found, and it might save you a lot of money:\n\n**The city has a finalized permit on file showing an 80-foot sanitary sewer line was installed at your house in August 2009** (permit number 2009-149664-000-00-PT, \"Final Inspection Approved\" 8/14/2009). The city's sewer asset map also shows sewer lateral lines (the private pipe that runs from a house to the public sewer) registered to your property. The combined sewer main in the street is about 96 feet from the front of your lot.\n\nWhat this most likely means: a previous owner (your house was built in 1926) **already converted from cesspool to public sewer in 2009**. What you may be experiencing now is not a failing cesspool serving your home; it could be the **old abandoned cesspool itself collapsing** because it was never properly filled in and decommissioned when the sewer was hooked up. That is extremely common in old Portland houses; people connected to sewer and just left the cesspool sitting in the yard.\n\nThis matters because the price tag is wildly different:\n\n- **If you already have sewer and just need to decommission an old cesspool:** roughly the cost of a nice used appliance to a cheap used car, in the $1,500 to $5,000 range, and you'd skip the biggest fees entirely.\n- **If you genuinely have an active cesspool and need a brand-new sewer connection:** roughly the cost of a decent used car or more, $15,000 to $30,000+ all in.\n\nSo the very first thing to do, before anything else, is **find out which situation you're actually in.** I walk you through how to do that in the \"What to do next\" list below. Don't pay for plans, bids, or pumping until you know.\n\nThe rest of this guide assumes the worst case (you really do have a live cesspool and no working sewer connection), so you have the full picture. But please confirm before spending money.\n\n---\n\n## Plain-English summary\n\n**Short answer: yes, if your cesspool fails and a public sewer line is available within a reasonable distance, Portland requires you to disconnect from the cesspool and hook up to the public sewer.** You can't repair a true cesspool failure and keep using it; cesspools are basically holes in the ground, and once they fail, the city and the state both consider them a public health problem. What that looks like for you as the homeowner: you hire a licensed sewer plumber, the plumber pulls the right city permits, they dig a trench from your house out to the sewer main in the street (probably under N Missouri Ave), connect a new lateral, and properly fill in the old cesspool. You pay for the plumber's labor, a couple of city permits, and a one-time city fee for tapping into the public system. The city has loan programs (including a low-interest one if your income qualifies) that can spread the cost out over 5 to 20 years, so you don't have to pay all of it up front.\n\nNow, the long version, in plain English with code references after each topic.\n\n---\n\n## Is your cesspool actually required to be replaced, or can it be repaired?\n\nThe honest answer: a true cesspool can't really be \"repaired\" in any meaningful way. A cesspool is just a deep hole in the ground (often brick-lined in homes built before about 1950, like yours; sometimes concrete rings) that takes raw sewage straight from your house, lets the solids settle to the bottom, and lets the liquid seep into the surrounding soil. There's no treatment. When one \"fails,\" it usually means either the soil around it is saturated and the liquid won't seep anymore (so it backs up into your house), or the brick or concrete is collapsing.\n\nIf a sewer line is reasonably available, the city's general rule is: stop using the cesspool, properly fill it in, and connect to the public sewer instead. Decommissioning a septic or cesspool means pumping out any liquid and solids (using a state-licensed pumper), filling the hole with sand, gravel, or concrete slurry (you can't just use dirt), and getting it inspected. (PCC 17.33.030 is the city rule that sewer connection is required when you've got plumbing fixtures discharging wastewater. OAR 340-071-0185 is the Oregon state rule that requires the cesspool to be decommissioned when it's no longer in use; OAR stands for Oregon Administrative Rules.)\n\n**Who decides if it's \"failed\"?** The two players are the city and the state, and they have different roles:\n\n- **BES** is the **Bureau of Environmental Services**; this is the city bureau that runs sewers and stormwater. They decide things about the public sewer side: whether sewer is available to your property, what fees you owe to connect, and whether your private connection meets city standards.\n- **DEQ** is **Oregon's Department of Environmental Quality**, the state agency that regulates onsite wastewater treatment systems (cesspools, septic tanks, drain fields). DEQ writes the rules for cesspool abandonment.\n- **PP&D / BDS** is **Portland Permitting & Development**, formerly called the **Bureau of Development Services**. They handle plumbing permits and the cesspool decommissioning permits and inspections in Multnomah County. (Many Portlanders still call it BDS; you'll see both names. They're the same office.) For Portland addresses, BDS/PP&D is acting as DEQ's local agent on cesspool decommissioning.\n\nIn practice: a sewer plumber inspects, your plumbing backs up, or someone notices an obvious problem; you hire a contractor or call the city; BDS/PP&D issues the decommissioning permit and signs off on the fill; BES handles the sewer connection side.\n\n---\n\n## Is there a public sewer line near your property?\n\n**Yes.** Per the city's sewer asset map, there is a combined gravity sewer main running on or near N Missouri Ave, with the closest manhole about 90 feet from your front door and the main line itself about 96 feet away. \"Combined\" means the same pipe carries both household sewage and stormwater (a 100-year-old neighborhood thing; Portland is gradually separating these but Piedmont still has combined sewers). This main is in the Albina sewer basin.\n\nPractically: you almost certainly have a viable connection path under or across N Missouri Ave. You will not need to extend a sewer main yourself, which is the scenario that gets very expensive.\n\nIf the sewer were *not* available, your three options would be: (1) install a fully permitted septic system if soil and lot size allowed (DEQ would have to approve), (2) pay for a public sewer extension to be built to reach your property (very expensive, often $30,000+, sometimes shared with neighbors), or (3) get a private easement to run a line through a neighbor's yard to a sewer they're already connected to. None of those apply here, which is good news. (PCC 17.33.030 covers when sewer connection is required; PCC 17.32 covers what's allowed under what conditions.)\n\n---\n\n## What permits do you need, and from which bureau?\n\nThree bureaus touch this kind of project. Here's what each one does in plain words, and what you (or your contractor) will need from them:\n\n- **BDS / PP&D** (Portland Permitting & Development, the city's building and trade permits office, formerly Bureau of Development Services): issues the **PT permit** (a plumbing trade permit) for the new sewer line *on your private property*, and the **decommissioning permit** for filling in the old cesspool. They also do the inspection. (PCC Title 25, the plumbing regulations.)\n- **BES** (Bureau of Environmental Services, the sewer and stormwater bureau): issues the **UC permit** (which stands for \"Utility Connection\"; this is the sewer connection permit) for the part of the new sewer line that runs in the public right-of-way (the strip of public land between your property and the street, including the sidewalk and the street itself). BES also calculates and collects the **System Development Charge**, often called the SDC. The SDC is a one-time fee the city charges any property tapping into public infrastructure for the first time; it pays for past and future sewer system capacity. (PCC Title 17, public sewer rules; PCC 17.36 specifically covers fees and SDCs.)\n- **PBOT** (Portland Bureau of Transportation, the bureau that handles streets and sidewalks): the actual digging in the street is inspected by PBOT right-of-way inspectors. The PBOT side mostly happens automatically as part of the UC permit; you don't apply separately. There is, however, a $295 PBOT inspection fee that started July 1, 2025, baked into the UC permit cost. If your project also needs traffic control or unusual street closure, PBOT may want a separate street use permit. (PCC Title 17 also covers right-of-way work in coordination with PBOT's rules.)\n\nSo your sewer plumber will pull a UC permit from BES (with an automatic PBOT inspection role), a PT plumbing permit from BDS, and a decommissioning permit from BDS. A reputable sewer contractor handles all of these; you don't have to chase them yourself.\n\n---\n\n## Which parts of Portland City Code govern this?\n\nA quick plain-English tour, with the title number after each:\n\n- **Sewer rules.** Tells the city how it runs the sewer system, when you have to connect, how connections are permitted, how fees are calculated, and what happens if you don't comply. (PCC Title 17, especially Chapters 17.32, 17.33, and 17.36.)\n- **Plumbing rules.** Local plumbing requirements for work on private property; the actual construction standards come from the **Oregon Plumbing Specialty Code (OPSC)** and the **Oregon Residential Specialty Code (ORSC)**, which are the statewide plumbing and residential building codes Portland enforces locally. Your plumber follows these. (PCC Title 25.)\n- **Water rules.** Mostly about your domestic water service, not sewer. It comes up here because the new sewer trench can't be too close to your water line, and your plumber has to keep them properly separated. (PCC Title 21.)\n- **Tree rules.** Protects street trees and large yard trees. If a street tree near your trenching location is in the public right-of-way, **Urban Forestry** (a group inside Portland Parks & Recreation) has to weigh in before anyone digs near its roots. (PCC Title 11.)\n- **BES Sewer, Stormwater & Erosion Control administrative rules.** These are the detailed how-to rules BES writes under Title 17. The most relevant for you are **ENB-4.05** (how SDCs are calculated), **ENB-4.17** (how UC and lateral repair permits work), **ENB-4.27** (nonconforming sewer conversions, which would apply if your existing 2009 connection turned out to have a problem), and **ENB-4.28** (financial assistance programs).\n- **State cesspool rules.** Oregon's rules on cesspool abandonment. (OAR 340-071-0185.)\n\nYou won't need to read these yourself. Your contractor will. But if a contractor seems unsure what code section applies, that's a sign to keep shopping for a different contractor.\n\n---\n\n## What the work itself looks like\n\nIn the worst case (active cesspool, no existing sewer), here is roughly what happens, in order, on the ground:\n\n1. A licensed sewer contractor (look for an active CCB number, the **Construction Contractors Board** license number that all Oregon contractors are required to have) comes out, locates your cesspool, and figures out a route from your house to the public sewer main in the street.\n2. They get the necessary permits (UC from BES, PT and decommissioning from BDS).\n3. A DEQ-licensed pump truck pumps out the cesspool. You'll get a receipt; save it; the inspector wants to see it.\n4. The contractor digs a trench from your house out across your front yard, through the sidewalk, and into N Missouri Ave to reach the sewer main. The trench is typically 4 to 8 feet deep, depending on how deep your sewer main runs. They install a new lateral pipe (the lateral is the private pipe that connects your house to the public sewer main; technically the part inside your property line is yours to maintain, and the part in the street is also yours but the city inspects it).\n5. They cut and patch the street and the sidewalk; PBOT inspects this surface restoration work.\n6. They fill the old cesspool with approved material (sand, gravel, or concrete slurry; not dirt). They leave the top open for the inspector.\n7. BDS comes out for the decommissioning inspection and the plumbing inspection. PBOT comes out for the right-of-way inspection.\n8. Once everything passes, the trench gets backfilled and your yard gets put back together (rough, usually; final landscaping is on you).\n\nThe whole on-the-ground work, from first digging to inspections done, is typically about 1 to 3 weeks for a straightforward job. Permits and bidding before that can add another 4 to 8 weeks.\n\n---\n\n## Rough cost and timeline\n\nIn a worst-case \"yes you really do have an active cesspool and no sewer\" scenario, here's how the dollars break down for a typical Portland single-family house. **Translation in human terms: about the cost of a decent used car, paid over one summer of weekends if you go fast, or financed by the city over 5 to 20 years if you go slow.**\n\nThe biggest line items, roughly:\n\n- **Sewer plumber's labor and materials (the trenching and lateral install, plus the cesspool decommissioning work).** This is usually the single biggest cost. The city itself estimates **$5,000 to $12,000** for the private plumbing work on a normal lot. Your lot is fairly close to the sewer main (about 96 feet to the main, with the manhole at about 90 feet) and not on a slope, so you should land in or near that range rather than above it. **About the cost of one to two months' rent in Portland.**\n- **The Sanitary System Development Charge (sanitary SDC) from BES.** This is the one-time tap fee. For a single-family home, BES charges by drainage fixture units (DFUs); a typical Portland house with one or two bathrooms, a kitchen, and a laundry room runs roughly 14 to 22 DFUs. At the **FY 2025-26 Tier 1 residential rate of $572 per DFU**, that's roughly **$8,000 to $12,500**. There may be a stormwater SDC too depending on impervious area, but often modest for an existing house with no new construction. **About the cost of a used Honda Civic.**\n- **BES UC permit + PBOT inspection fee.** Currently the UC connection permit plus the new $295 PBOT right-of-way inspection fee adds up to **a few hundred dollars total** when bundled. **About the cost of a nice dinner for a family.**\n- **BDS plumbing permit (PT) and decommissioning permit fees.** Usually **a couple hundred dollars combined** for a residential job. **About the cost of one tank of gas, ish, but more.**\n- **Pumping the cesspool by a licensed pumper.** Usually **$300 to $600**.\n- **Optional: locating an existing cesspool you can't find.** If a contractor can't find your cesspool, hiring a locator service or doing exploratory digging adds **$300 to $1,000**.\n\n**Total ballpark, worst case (real cesspool conversion):** roughly **$15,000 to $30,000**. Most homeowners land in the high teens to low twenties.\n\n**Total ballpark, decommission-only (the scenario your records suggest is more likely):** roughly **$1,500 to $5,000**, mostly the pumper and the fill plus a small permit fee. **About the cost of a good vacation, not a car.**\n\n**Timeline.** From \"I want to do this\" to \"it's done\":\n- Getting bids and choosing a contractor: 2 to 4 weeks\n- Permit application and review: 1 to 4 weeks (UC permits to existing branches review in 1 to 2 business days; longer if connecting to an old clay main)\n- Actual construction: 1 to 3 weeks\n- Inspections: usually overlap with construction\n\nSo **start to finish, roughly 6 to 12 weeks**, or \"about one Portland summer.\" If you want it done before fall rains, start now-ish.\n\n---\n\n## Financial assistance programs (yes, they exist, and they're real)\n\nPortland actually has decent financing for this exact situation. As of this writing, BES offers four programs through Administrative Rule ENB-4.28:\n\n1. **System Development Charge Loans.** For the city tap fee (the SDC). 5, 10, or 20-year repayment, **6.2% interim interest rate** until the city's bond sale, then adjusted. No credit check, no income check, $40 set-up fee plus 0.49% of loan amount, and a small per-bill processing fee. The loan is secured by a lien on your house, but there's no penalty for paying it off early. **This is for almost anybody.**\n2. **Private Plumbing Loans.** For the contractor's labor and materials. **Capped at $20,000.** 5 or 10-year terms at a fixed **6.1%** simple interest. Requires three bids from licensed contractors. $90 set-up fee. Same lien situation.\n3. **Safety Net Connection Loan.** Income-qualified version of #1, with a **1.5% interest rate**. To qualify in 2025-26 your household income must be at or under: **$86,870 for 1 person, $99,280 for 2, $111,690 for 3, $124,100 for 4** (more for larger households). You also have to live in the house. If you're under 62 you can defer payments for 5 years and re-apply for another 5. If you're 62+ you can defer payments until you sell or transfer the property. **This is genuinely a great program if you qualify.**\n4. **Safety Net Private Plumbing Loan.** Same income rules and 1.5% rate, but for the contractor side instead of the city fee.\n\nThere's also an interesting wrinkle for your specific property: **6624 N Missouri is inside the Interstate Corridor Urban Renewal Area**, which is a Prosper Portland program area. That doesn't directly fund sewer connections, but it's worth a quick call to ask if any home-repair grants or low-income improvement programs in that area are stackable.\n\nTo apply for any of the four BES loans, you start at portland.gov/bes/connecting-sewer/financial-assistance-sewer-connection-and-conversion. The contact is the **Required Sewer Connection Program** at **503-823-4114**, sewerconx@portlandoregon.gov.\n\n---\n\n## Phasing and sequencing\n\nIn the order things actually happen (worst case, full conversion):\n\n1. **Confirm whether you actually have a live cesspool.** Look at your historic plumbing records on PortlandMaps; call BES; potentially have a plumber do a dye test or camera inspection. Do not skip this step.\n2. **If sewer connection is needed: get three bids from licensed sewer contractors** (with active CCB numbers and PBOT street use insurance/bond).\n3. **Apply for BES financial assistance**, if you want to finance it. The SDC loan and Private Plumbing loan applications can be done before the work starts.\n4. **Pay or finance the SDC.** SDCs must be paid (or a financing agreement signed) before BES will issue a UC permit or BDS will issue a plumbing permit.\n5. **Your contractor pulls the UC permit from BES** (this has the automatic PBOT inspection assignment).\n6. **Your contractor pulls the PT plumbing permit and the decommissioning permit from BDS.**\n7. **The cesspool gets pumped** by a DEQ-licensed pumper (keep the receipt).\n8. **The trench is dug, the new lateral is installed**, the street is cut and patched, the cesspool is filled.\n9. **Inspections happen:** PBOT inspects the right-of-way work; BDS inspects the plumbing and the decommissioning fill.\n10. **Inspector signs off**, contractor backfills and restores the yard.\n11. **You start receiving sewer/stormwater bills** on your water bill (usually within 3 months).\n\nIf you're only doing a decommission-only project (existing sewer already in place), skip steps 2 through 6, and only steps 7, 9, and 10 apply, plus a much smaller BDS decommissioning permit.\n\n---\n\n## Common gotchas Portland homeowners hit\n\nA few things people regularly get burned on:\n\n- **Discovering the sewer main is on the *far* side of the street.** Your trench could be 30 feet longer than expected, which is hours more labor and a much bigger street patch. Have your plumber confirm which side of N Missouri Ave the main is on before bidding.\n- **Finding out a neighbor's sewer lateral runs through your yard, or yours runs through theirs.** Old Portland properties sometimes share laterals or have weird routings from the 1920s. PortlandMaps doesn't always show this clearly. A camera inspection helps.\n- **Out-of-area plumbers who don't know Portland's quirks.** A plumber from Vancouver or Salem may not know Portland's UC permit process, the cesspool decommissioning rules, or that PBOT (not BDS) inspects right-of-way work. Stick with Portland-experienced sewer contractors. The CCB website lets you look up complaints.\n- **Old clay sewer mains.** Some Portland sewer mains in old neighborhoods are clay or even older materials. Connecting to those takes longer to permit (more than the typical 1 to 2 business days), and the contractor may need a deep connection riser or other special fitting. Ask your plumber to check the main's material and depth before bidding.\n- **Trees in the right-of-way.** If there's a street tree (planted in the strip between sidewalk and curb) anywhere near where the trench would go, **Urban Forestry** in Portland Parks & Recreation has to weigh in. Cutting roots or digging within the tree's protection zone without their sign-off can cost you a fine on top of construction delays. Note for your house: I can't tell from the data whether you have a street tree, but if you do, factor in 1 to 2 weeks for Urban Forestry review. (PCC Title 11 covers street trees.)\n- **Skipping the decommissioning step entirely** (this is the #1 historical sin in Portland). For decades, owners just connected to sewer and abandoned the cesspool in place without filling it. Then 20 years later the cesspool collapses and a sinkhole appears in the front yard, or someone discovers it during a remodel and now it's a code-violation problem. Portland strongly encourages doing the decommissioning at the same time as the connection.\n- **Paying for plans before you know what you have.** Get the city's records pulled and at least one camera inspection before paying a plumber to draw plans.\n\n---\n\n## Zoning and overlays at your address\n\nYour property is **zoned R5** (Single-Dwelling 5,000), which is the most common, lowest-restriction residential zone in Portland. Good news: I checked PortlandMaps for everything that could complicate trenching, and you have:\n\n- **No overlay zones** (no environmental conservation, no environmental protection, no design overlay).\n- **No flood hazard area.** You are not in a FEMA Special Flood Hazard Area or any city-designated flood storage area.\n- **No landslide hazard area.** You are not in the city's potential landslide hazard area or the mapped landslide inventory.\n- **No historic district.** Your property is not in a National Register district, conservation district, or local historic district. (Side note: PortlandMaps lists your **neighborhood as Piedmont**, not Arbor Lodge. The border is right around N Rosa Parks Way, just north of you. It's a nitpick but if you ever ask the city about your house, they'll find it under Piedmont.)\n- **6% slope, well drained, soil group B.** Easy digging conditions, more or less.\n- **Combined sewer basin: Albina.** This means the same pipe takes both sewage and stormwater, which is normal for inner North Portland.\n- **Inside the Interstate Corridor Urban Renewal Area** (potential bonus, see Financial Assistance above).\n- **Watershed: Columbia Slough.** Not directly relevant to a sewer connection, but it's why BES cares about combined sewer overflows in this area.\n\nTranslation: **there is nothing special about your address that makes this project harder than average.** No environmental review, no historic review, no slope hazard. That's about as boring (in a good way) as a Portland cesspool conversion gets. I'd still confirm on PortlandMaps yourself before paying for plans, because data can change.\n\n---\n\n# What to do next (in the order you should do them)\n\n| # | Step | What it costs | How long | Who | Free? |\n|---|---|---|---|---|---|\n| 1 | Pull your historic plumbing records on PortlandMaps | $0 | 30 minutes | You | **YES** |\n| 2 | Call BES Required Sewer Connection Program to ask for help interpreting the records | $0 | 15 minutes | You | **YES** |\n| 3 | If records are inconclusive, get a camera inspection of your sewer line | $200 to $500 | 1 hour | A sewer plumber | No |\n| 4 | If you really do need a connection, get 3 bids from licensed sewer contractors | $0 | 2 to 4 weeks | You | **YES** |\n| 5 | Apply for BES financing if you want it | $40 to $90 set-up | 2 to 4 weeks | You + BES | Almost free |\n| 6 | Pay or finance the SDC | ~$8,000 to $12,500 | At permit time | You + BES | No |\n| 7 | Contractor pulls UC, PT, and decommissioning permits | $500 to $800 in fees | 1 to 4 weeks | Contractor | No |\n| 8 | Construction and inspections | Built into bid | 1 to 3 weeks | Contractor + city | No |\n\n**Step 1, in detail (do this today, free).** Go to **portlandmaps.com**. Type in 6624 N Missouri Ave. Click on the property tab and look for Permits and Historic Plumbing. Specifically look for:\n\n- The 2009 sewer permit I found (application 2009-149664-000-00-PT, \"SANITARY SEWER LINE 80FT\")\n- Any older \"Historic Plumbing\" records that mention \"DECOMMISSION FILLED\" (capital letters, in the narrative or table). If you see \"DECOMMISSION FILLED,\" your old cesspool was already taken care of.\n- If you don't see \"DECOMMISSION FILLED\" anywhere, the cesspool may still be sitting there even though sewer is connected. That's the most likely scenario.\n\n**Step 2, in detail (today or tomorrow, free).** Call **503-823-4114** (BES Required Sewer Connection Program), or email **sewerconx@portlandoregon.gov**. Use the script below. Have your address and Property ID handy: **Property ID R232318**.\n\n**Step 3, in detail.** Only do this if Steps 1 and 2 leave you genuinely confused. Ask the plumber for a \"sewer scope\" or \"sewer camera inspection.\" They run a camera down your cleanout from inside the house and can tell you whether you're flowing into a sewer line or into a hole in the ground. This is the single best $300 you'll spend.\n\n---\n\n# Scripts you can read out loud\n\n## Script 1: Calling BES (503-823-4114)\n\n> Hi, I'm a homeowner at **6624 N Missouri Ave, in the 97217 zip code; the property ID is R232318**. I think my house may have a failing cesspool, but I just looked at PortlandMaps and it shows a 2009 sanitary sewer line permit on my property, **so I'm not sure if I'm actually still on a cesspool or if that just means a sewer was installed and the cesspool was never decommissioned**. Can you help me figure out what records you have for my address, whether I'm currently connected to public sewer, and if I am, whether the city has any record of the old cesspool being decommissioned? I also want to understand what I'd need to do if it turns out the cesspool is still there.\n\n## Script 2: Calling BDS / Portland Permitting & Development (503-823-7300)\n\n> Hi, I'm a homeowner at **6624 N Missouri Ave, 97217**. I'm trying to figure out what plumbing permits I'd need for two possible scenarios: **first**, just decommissioning an old cesspool that may already be sitting unused on my property, and **second**, in case I'm wrong about that, doing a full new sewer lateral and cesspool decommissioning together. **Can you walk me through which permits I'd need for each, what the inspection process looks like, and whether the homeowner can apply for a decommissioning permit directly or whether it has to be a contractor?** I'd also like to know what the typical permit fees are.\n\nYou can paste either of those into an email if you'd rather not call.\n\n---\n\n# What you might get wrong\n\nA few specific warnings, written as warnings to you, not as code commentary:\n\n1. **Don't assume the records are wrong; assume the records are right and you're confused.** That 2009 sewer permit is not nothing. People in this situation often spend thousands of dollars on a \"new\" sewer connection they don't need. Verify before you pay anyone for plans.\n2. **Don't hire a plumber who doesn't know Portland's permit process.** If they ask you what a UC permit is, hire a different plumber. A sewer-experienced Portland contractor handles all this routinely.\n3. **Don't fill the cesspool yourself with dirt to \"fix\" a sinkhole.** It looks like an easy DIY. It's not. State rules require specific fill materials (sand, gravel, or concrete slurry) and a city inspector has to sign off. Filling it wrong can get you a code violation later and you'll have to dig it back up.\n4. **Don't pump the cesspool with anyone who isn't DEQ-licensed.** You need the receipt from a state-licensed pumper for the inspection. An unlicensed pumper saves you maybe $50 and costs you the whole inspection.\n5. **Don't skip the three-bid step if you want a city loan.** The Private Plumbing Loan and Safety Net Plumbing Loan both require three bids from licensed contractors. Get three even if you've already decided who you want to use; the city sets the loan limit based on the lowest bid.\n6. **Don't forget the SDC has to be paid or financed *before* permits are issued.** People plan their construction timing and forget the SDC step takes a couple of weeks. Start the SDC loan paperwork at the same time you're getting bids.\n\n---\n\n# Friendly accuracy warnings\n\nI tried to be careful, but a few things are worth double-checking yourself before spending money:\n\n- **Sewer availability and the 2009 connection record at your specific address may have nuance I can't see from the public data.** Confirm with BES (503-823-4114) and on PortlandMaps before paying anyone for plans.\n- **Cesspool rules are partly state (DEQ) and partly city (BES/BDS).** Make sure your plumber understands the state side too, not just the Portland connection process. Out-of-area plumbers sometimes miss this.\n- **The fee numbers I quoted are FY 2025-26.** Portland's fiscal year starts July 1, and rates often change then. The $572-per-DFU SDC rate is current as of this writing but will probably go up modestly in July 2026.\n- **The financial assistance program details (income caps, interest rates, terms) are current as of this writing,** but BES updates these. Confirm at portland.gov/bes/connecting-sewer/financial-assistance-sewer-connection-and-conversion.\n- **The \"year built 1926\" and \"neighborhood Piedmont\" are from the Multnomah County assessor and PortlandMaps,** so they're considered authoritative. The \"Arbor Lodge\" framing in everyday conversation is fine; the city will look you up under Piedmont.\n- **Number of drainage fixture units (DFUs) for your house is a guess.** Your actual SDC depends on the exact count and is calculated by BES based on your plumbing fixtures. If your house has unusual plumbing (extra bathrooms, an ADU, etc.) the number changes.\n- **I am not a plumber, a code official, or a lawyer.** I'm a careful researcher. Treat everything here as a starting point, not a final answer.\n\n---\n\n# Glossary\n\n- **BDS / PP&D** \u2013 Bureau of Development Services, now known as Portland Permitting & Development. The city office that issues building, plumbing, and decommissioning permits and does inspections on private property.\n- **BES** \u2013 Bureau of Environmental Services. The city bureau that runs sewers, stormwater, and watersheds.\n- **CCB** \u2013 Construction Contractors Board. The state board that licenses Oregon construction contractors, including plumbers and sewer contractors. Every legitimate contractor has a CCB number.\n- **Cesspool** \u2013 A deep hole in the ground (typically 3 to 4 feet wide and 8 to 15 feet deep, brick-lined in older installations) that takes raw sewage from a house. Solids settle, liquids seep into surrounding soil. No treatment. Now considered an environmental and public health problem; new ones aren't allowed.\n- **Combined sewer** \u2013 A single pipe that carries both sanitary sewage and stormwater runoff. Common in older Portland neighborhoods like Piedmont.\n- **DEQ** \u2013 Oregon Department of Environmental Quality. The state agency that regulates onsite wastewater treatment, including cesspools.\n- **Decommissioning** \u2013 Permanently taking a cesspool, septic tank, or seepage pit out of service: pumping it, filling it with approved material, getting it inspected.\n- **DFU** \u2013 Drainage Fixture Unit. The unit BES uses to count a property's load on the sewer system, based on what plumbing fixtures the house has.\n- **Lateral** \u2013 The private sewer pipe that runs from your house to the public sewer main. The part inside your property line is yours; the part in the right-of-way is also your responsibility but the city inspects it.\n- **OAR** \u2013 Oregon Administrative Rules. The state-level rule book.\n- **OPSC / ORSC** \u2013 Oregon Plumbing Specialty Code and Oregon Residential Specialty Code. The statewide construction codes Portland enforces locally.\n- **PBOT** \u2013 Portland Bureau of Transportation. Handles streets, sidewalks, and the right-of-way. Inspects sewer connection work in the street.\n- **PCC** \u2013 Portland City Code. The local rule book.\n- **PT permit** \u2013 Plumbing Trade permit, issued by BDS for plumbing work on private property.\n- **ROW** \u2013 Right-of-Way. The public-owned strip of land that includes the street, sidewalk, and the planting strip between them.\n- **SDC** \u2013 System Development Charge. The one-time fee BES charges to tap a property into the public sewer system. For a Portland single-family home in 2025-26, typically in the $8,000 to $12,500 range.\n- **Septic system** \u2013 A two-part onsite wastewater system: a septic tank (settles solids) followed by a drain field (lets liquid soak into soil). Different from a cesspool, which has no separate tank or drain field. Septic systems are still legal in some areas; cesspools are not.\n- **UC permit** \u2013 Utility Connection permit, issued by BES for a new sewer connection in the public right-of-way.\n- **UR permit** \u2013 Utility Repair permit, issued by BES for repairing an existing lateral in the public right-of-way.\n- **Urban Forestry** \u2013 A group inside Portland Parks & Recreation that protects street trees and large trees. Has to weigh in on any digging near a street tree.\n\n---\n\n*If anything here looks wrong for your specific situation, trust the city employee on the phone over me. The city's records and the people answering BES's phone line are the source of truth; I'm just helping you ask better questions.*"
+      "text": "I'll do this carefully. Cesspool-to-sewer conversion in Portland involves DEQ rules, multiple city code titles, and specific fees that change, so I want to verify everything against current sources rather than rely on memory. Let me research this thoroughly, including pulling specifics on your actual address.Good DEQ baseline. Now let me get the specific Portland City Code sections and BES connection rules.Now let me look at Chapter 17.33 (the actual mandatory connection rules) and cesspool decommissioning costs.Major finding: Portland retired the \"mandatory sewer connection program\" effective July 1, 2024. Let me dig into the current rule and decommissioning specifics.Now let me get cesspool decommissioning specifics, costs, and the BES connection program.Let me now look up Chris's specific address using Portland Maps MCP, and verify current SDC rates.Critical finding: There's a public combined sewer main in N Missouri Ave just **90 feet away** from the property, and what appears to be sewer laterals on or adjacent to the property. Let me check historic permit records and current SDC fees.Two existing BES Connection plumbing records on file \u2014 let me see them.Now let me get current SDC rates and the latest BES connection cost figures.Let me get the sewer lateral / UR-UC permit fee.Let me check the DEQ rule on what counts as a \"failed\" cesspool/system, and OAR 340-071-0185 on decommissioning.Let me check the definition of cesspool failure for clarity.I have everything I need to write this carefully. Given the length and that you'll be pasting this into a document, I'll deliver it as fully cited markdown in chat. A few things stood out that I want you to know up front:\n\n- **Your neighborhood is actually Piedmont, not Overlook/Arbor Lodge.** The taxlot record at PortlandMaps lists the neighborhood as PIEDMONT (https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/), which matters because the sewer basin and city contacts are the same but it'll come up if you call BES.\n- **There are already two \"BES Connection\" plumbing records on file at your address** (according to the historic plumbing index pulled from PortlandMaps for property R232318 at https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/permits/). That doesn't guarantee the house is currently on city sewer, but it strongly suggests a prior connection was made and the cesspool may already be a legacy/abandoned feature, not the active waste disposal system. Verifying this is genuinely Step 1 below, because it changes everything.\n- **The \"must connect within 300 feet\" rule you might have heard about no longer exists.** Portland retired its Mandatory Sewer Connection Program effective July 1, 2024 (Ordinance 191725, https://www.portland.gov/council/documents/ordinance/passed/191725). The rule is now circumstance-based, which I'll explain.\n- **A public combined sewer main runs in N Missouri Ave about 90 feet from your house** (per the sewer assets layer for property R232318 at https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/sewer/), so connection itself is short and inexpensive compared to homes that need a sewer extension.\n\nHere's the full answer.\n\n---\n\n# If your cesspool fails at 6624 N Missouri Ave: what actually happens\n\n## The short version\n\nIf your cesspool truly fails and you don't already have an active sewer connection, you will almost certainly end up connecting to the City of Portland sewer system, because Oregon banned new cesspools decades ago and your urban lot is too small for a modern septic system. You won't be forced to connect by a \"300-foot rule\" anymore (Portland retired that program in 2024), but a failing cesspool counts as a public health problem, and the only legal fixes available to you in practice are connect to public sewer or, in rare cases, install an alternative onsite system that DEQ will approve. The good news for your address: the public sewer is already in N Missouri Ave a stone's throw from your front door, your lot has no environmental or historic overlays that complicate things, and your historic permits suggest a connection may already exist. Realistically, plan for **a few months of work and somewhere between roughly the cost of a used Honda Civic and the cost of a small kitchen remodel** ($6,000 to $20,000 all-in for most homeowners), with city loans available if you don't want to write a check.\n\n---\n\n## The rule itself: who decides, and what triggers a required connection\n\nA **cesspool** is a primitive waste disposal system: a buried pit, often brick-lined, that takes raw sewage from a house and lets the liquid seep into surrounding soil. Most Portland cesspools were installed before public sewer reached the neighborhood. Per the Portland Permitting & Development information sheet, a cesspool is typically about 3 to 4 feet across and 8 to 15 feet deep (https://www.portland.gov/sites/default/files/2020-09/septic_decommissioning_041117.pdf).\n\nThe **state ban** on new cesspools is in **Oregon Administrative Rule (OAR) 340-071-0335**, which says plainly that no person may construct a new cesspool sewage disposal system in Oregon (https://oregon.public.law/rules/oar_340-071-0335). So if yours fails, \"build a new one\" is off the table.\n\n**Decommissioning** means officially shutting down and filling in an old cesspool, septic tank, or seepage pit so it's no longer a hazard. Under **OAR 340-071-0185 (Decommissioning of Systems)**, septic systems and cesspools that are no longer in use are required to be decommissioned (https://oregon.public.law/rules/oar_340-071-0185). Under **OAR 340-071-0215 (Repair of Existing Systems)**, a failing onsite system must be repaired immediately to eliminate the public health hazard (https://oregon.public.law/rules/oar_340-071-0215).\n\n**Who decides what counts as \"failed\"?** In practice, the inspector who looks at it does. Common signs of failure include sewage surfacing on the ground, sewage backing up into the house, the pit collapsing, or the lid failing structurally; this is consistent with the Marion County onsite program guidance summarizing **OAR 340-071-0215** (https://www.co.marion.or.us/PW/BuildingInspection/Pages/onsite.aspx). I could not find a single, neat code-defined dollar-bright \"failure\" definition that lists all conditions; the call is made by the permitting agent on the ground. For your situation, that agent is **Portland Permitting & Development's Septic Program, which handles septic decommissioning inspections for all of Multnomah County under contract** (https://www.portland.gov/ppd/septic-decommissioning-permits).\n\n**DEQ (Oregon Department of Environmental Quality)** writes the statewide rules for onsite wastewater (cesspools, septic tanks, seepage pits) under OAR Chapter 340, Division 71 (https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=1479). DEQ delegates day-to-day permitting and inspections in Multnomah County to the City of Portland under an \"agent\" agreement, the structure of which is described in **OAR 340-071-0120 (Jurisdiction and Policy)** (https://oregon.public.law/rules/oar_340-071-0120). So DEQ writes the rulebook; the City enforces it for you.\n\n**The City of Portland uses two different bureaus** for this work:\n\nThe **Bureau of Environmental Services (BES)** runs the public sewer pipes themselves, the connection charges, and the permit for any work in the street where the city's pipes live. Their authority over public sewer connections is set out in **Portland City Code (PCC) Chapter 17.32 (Public Sewer and Drainage System Permits, Connections, Maintenance, and Damage)** (https://www.portland.gov/code/17/32) and **PCC Chapter 17.33 (Connection to the Public Sewer)** (https://www.portland.gov/code/17/33).\n\nThe **Bureau of Development Services (BDS)** has been merged into **Portland Permitting & Development (PP&D)** as of recent reorganizations; PP&D handles plumbing permits on private property, the septic decommissioning permit, and inspections, and their septic program web page is the authoritative page for the decommissioning permit at https://www.portland.gov/ppd/septic-decommissioning-permits.\n\n**Is connection mandatory if your cesspool fails?** Until July 2024, yes, in most cases, automatically. **Effective July 1, 2024**, Portland City Council passed Ordinance 191725 which retired the mandatory sewer connection program (https://www.portland.gov/council/documents/ordinance/passed/191725). The current rule, **PCC 17.33.030 (Sewer Connections)**, lists five circumstances that trigger required connection (https://www.portland.gov/code/17/33/030):\n\nThe first, **17.33.030.A**, is a general policy that all plumbing fixtures discharging wastewater must connect to public sewer, with an exception \"where it can be demonstrated to the satisfaction of the City that an onsite wastewater treatment system or other alternative means of sewage disposal can otherwise be lawfully permitted\" (https://www.portland.gov/code/17/33/030). In practice, on a small urban lot in inner North Portland, that \"lawfully permitted onsite system\" exception is hard to satisfy because a modern septic system needs setbacks and drainfield area you simply don't have on a 5,000 square foot lot.\n\nThe second, **17.33.030.B**, says if your existing onsite system is in place and public sewer becomes available, the city may require connection at its discretion in consultation with the sanitarian, and any expansion, remodel, or change in use that increases capacity will require you to abandon the onsite system and connect (https://www.portland.gov/code/17/33/030).\n\nThe fifth, **17.33.030.E**, is the safety valve: the City may require connection to protect public health, water quality, or the environment (https://www.portland.gov/code/17/33/030). A failing cesspool that's leaking sewage onto the ground or into groundwater fits squarely in this category.\n\nSo the short answer: there is no automatic 300-foot trigger anymore, but a **failed cesspool plus an available sewer main practically always results in a required connection** under PCC 17.33.030.A and E (https://www.portland.gov/code/17/33/030), combined with the DEQ requirement under OAR 340-071-0215 to immediately fix a failing system (https://oregon.public.law/rules/oar_340-071-0215).\n\n**Could you install a new septic system instead?** Theoretically yes; in practice, almost never on an inner-Portland lot. New cesspools are banned (OAR 340-071-0335, https://oregon.public.law/rules/oar_340-071-0335), and **OAR 340-071-0220 (Standard Subsurface Systems)** requires several feet of separation between absorption facilities and groundwater, with significant setbacks from property lines (https://oregon.public.law/rules/oar_340-071-0220). Your lot won't meet those.\n\n---\n\n## Which Titles of Portland City Code govern this\n\nIn plain English, here's what each Title actually controls.\n\n**PCC Title 17 (Public Improvements)** is the title that owns sewer pipes, sidewalks, and streets. Sewer-specific chapters that matter for you are: **Chapter 17.32** which governs permits and access to public sewer pipes (https://www.portland.gov/code/17/32); **Chapter 17.33** which governs when you must connect (https://www.portland.gov/code/17/33); and **Chapter 17.36** which governs the city's sewer fees and SDCs (https://www.portland.gov/code/17/36).\n\n**PCC Title 25 (Plumbing Regulations)** governs plumbing on private property, which includes the pipe from your house to the property line and the plumbing inside your walls (https://www.portland.gov/code/25). Permitting & Development administers this title.\n\n**PCC Title 29 (Property Maintenance Regulations)** is the nuisance-and-keep-it-livable title; if a property's sewage situation creates a public nuisance, this title is how the city brings hammer down (https://www.portland.gov/code/29). Failure to connect to city sewer can be enforced as a nuisance, as referenced in the BES Mandatory Sewer Connection program documents (https://efiles.portlandoregon.gov/Record/10877612/File/Document/).\n\n**Administrative rules** (lower than code, but still binding) that matter:\n\n- **ENB-4.17** is the BES rule on sewer connection and lateral repair permitting in the right-of-way (https://www.portlandoregon.gov/citycode/article/154965).\n- **ENB-4.20** is the annual BES rate ordinance setting current fees (https://www.portland.gov/policies/environment-built/sewer-stormwater-erosion-control/enb-420-sewer-and-drainage-rates-and).\n- **ENB-4.05** is the BES rule on how System Development Charges are calculated (https://www.portland.gov/policies/environment-built/sewer-stormwater-erosion-control/enb-405-system-development-charges).\n- **ENB-4.27** is the BES rule on Nonconforming Sewer Conversion (relevant only if you have a \"party sewer\" or shared lateral) (https://www.portland.gov/policies/environment-built/sewer-stormwater-erosion-control/enb-427-administrative-rules-bureau).\n\n---\n\n## What's special about your address (6624 N Missouri Ave, R232318)\n\nYour taxlot record at PortlandMaps for property R232318 lists the neighborhood as **PIEDMONT**, the year built as **1926**, the zoning base as **R5 (Residential 5,000)**, with **no plan district overlay, no environmental (e-zone) overlay, no historic district, and no conservation district** (https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/zoning/). That's a clean property profile from a permitting standpoint; nothing extra to deal with.\n\nThe watershed is **Columbia Slough**, the combined sewer basin is **Albina**, and the sewer in your street is a **combined sewer** that carries both sanitary sewage and stormwater (per the property's environmental detail at https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/environmental/). That has two practical effects for you. First, after connection you'll pay both sanitary sewer and stormwater charges on your water bill (PCC 17.36, https://www.portland.gov/code/17/36). Second, if you ever later add roof area or driveway you'd be in a system where stormwater impact matters.\n\nThe property is in the **Interstate Corridor Urban Renewal Area** (per the zoning detail at https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/zoning/). That doesn't directly change cesspool rules, but it can be relevant for some city programs.\n\n**Sewer availability is excellent.** Per the sewer assets layer at https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/sewer/, the closest public combined-sewer manhole (unit AAK484, compkey 10456) sits about **90 feet** from the property, with a combined gravity main running along N Missouri Ave. Several sewer lateral records also appear at distance zero from the parcel, which can mean a lateral exists or extended into the right-of-way at this lot. That brings me to the most important point about your specific address.\n\n**There appear to be two \"BES Connection\" historic plumbing records on file for 6624 N Missouri Ave** (per the plumbing section of the property's permit detail at https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/permits/). I cannot tell from the metadata alone whether these reflect a long-completed connection or partial work, but it's a strong signal that the house may already be on the public sewer and the cesspool may be a legacy feature that was never formally decommissioned. If that's the case, the conversation with BES becomes \"I have an old abandoned cesspool that's now collapsing or causing problems, and I need a decommissioning permit,\" not \"I need to connect to the sewer.\" That's a much smaller, much cheaper job.\n\n**How to verify this yourself in 2 minutes on PortlandMaps**: go to https://www.portlandmaps.com, type **6624 N Missouri Ave** in the search box, click your property, then click **Permits & Zoning** in the left sidebar, then scroll to **Permits** and look for two things: **\"Historic Plumbing\"** records (the old hand-drawn cards from before the digital era), and **\"Permits\"** showing modern permit history. Specifically look for a permit description like **\"Change from cesspool to sewer\"** which would confirm a prior connection (https://www.cozyhomeinspection.com/cesspools.html). If you can't find a digitized copy or it's unclear, a $15 records request through Portland Permitting & Development Trade Permits at 1900 SW 4th Ave will get you the actual paper plumbing card (https://www.cozyhomeinspection.com/cesspools.html).\n\n---\n\n## What permits you'll likely need\n\nThree main permits, depending on what's actually happening on your property.\n\nThe **septic decommissioning permit** is what you need to officially close down a cesspool, septic tank, or seepage pit. It's issued by **Portland Permitting & Development's Septic Program**, the fee is **$935** per the official application form (https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download), and the city does the inspection. You don't need a trade license to get one; homeowners can perform the work themselves, though most people hire it out (https://www.portland.gov/ppd/septic-decommissioning-permits). Per **OAR 340-071-0185**, the work itself involves pumping the cesspool with a DEQ-licensed sewage disposal provider, then filling with approved material (sand, gravel, or concrete; not common dirt), with the top 12 to 18 inches left open for inspection (https://oregon.public.law/rules/oar_340-071-0185 and https://www.portland.gov/sites/default/files/2020-09/septic_decommissioning_041117.pdf).\n\nThe **plumbing permit (PT permit)** covers any sewer pipe work on private property between your house and the property line. It's issued by **Portland Permitting & Development**, listed on their fee schedule (https://www.portland.gov/ppd/current-fee-schedules). I could not find a single fixed dollar figure on the public fee schedule page that maps cleanly to \"cesspool-to-sewer plumbing permit\"; the fee depends on number of fixtures and labor valuation. Confirm with PP&D Trades Permits at 503-823-7310.\n\nThe **sewer connection permit** (also called a **UC permit, \"Utility Connection\"**) is what your contractor needs to actually tap into the public sewer in the street. It's issued by **BES** in coordination with **PBOT (Portland Bureau of Transportation)** because the work is in the public right-of-way. **A new $295 inspection fee was added to UR/UC permits effective July 1, 2025** (https://www.portland.gov/transportation/permitting), which sits on top of an existing permit fee that varies. The full guide to UR (utility repair) and UC (utility connection) permits is at https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits, and the application goes to URUCpermits@portlandoregon.gov or by phone at 503-823-1026.\n\nThe **right-of-way (ROW) permit**: ROW is the public strip that includes the sidewalk, planting strip, and street itself. The UC permit above is the ROW permit for your sewer connection; if your contractor needs to close a sidewalk or street or reserve parking during the work, that's a separate **Temporary Street Use Permit** from PBOT (https://www.portland.gov/transportation/permitting). Most single-lateral connections don't trigger a separate Temporary Street Use Permit; the contractor typically handles this if needed.\n\n---\n\n## Phasing and sequencing\n\nThe order matters, and this is where homeowners trip up.\n\n**Step A: Pay or finance your System Development Charges (SDCs)** before any permit can be issued. **PCC 17.36** requires that SDCs be paid or that a financing agreement be in place before issuance of a building permit, sewer connection permit, or plumbing permit (https://www.portland.gov/policies/environment-built/sewer-stormwater-erosion-control/enb-405-system-development-charges).\n\n**Step B: Get your plumbing permit and your UC sewer connection permit issued.** These can run in parallel; the UC permit is processed in 1 to 2 business days for typical applications (https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits/uc-permit).\n\n**Step C: Make the sewer connection in the street.** Your contractor digs from the city sewer main to your property line, ties in, and PBOT inspects it.\n\n**Step D: Run the new private sewer line to your house** under the plumbing permit, abandon any line going to the cesspool.\n\n**Step E: Decommission the cesspool**, which means pumping it (with a DEQ-licensed pumper) and filling per OAR 340-071-0185 (https://oregon.public.law/rules/oar_340-071-0185), with the top 12 to 18 inches left open for inspection (https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download).\n\n**Step F: Get the decommissioning inspection.** Inspection code **842**, requested through 503-823-7000 using the IVR number on your permit (https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download).\n\nThe City's official guidance is that the connection and the decommissioning generally happen at the same time on the same project, with the contractor coordinating both (https://www.portland.gov/bes/improvements/construction/se-claybourne-sewer-extension-project). You don't have to choose one order legally, but **the practical sequence is: connect to sewer first, then decommission the cesspool**, because once you connect, the cesspool is clearly \"no longer in use\" which is the trigger for decommissioning under OAR 340-071-0185 (https://oregon.public.law/rules/oar_340-071-0185).\n\n---\n\n## Real cost and timeline ranges\n\n**System Development Charges (SDCs)**: The current rate for fiscal year 2025-2026 is **$572 per drainage fixture unit (DFU) for Tier 1 occupancies, with residential developments charged at 60 percent of the Tier 1 rate, working out to about $343 per DFU** (https://www.portland.gov/ppd/infrastructure/documents/fy-2025-26-sewer-and-stormwater-charges-and-fees/download and https://www.portland.gov/bes/full-list-environmental-services-rates-and-charges). A typical single-family house has 15 to 25 DFUs, which would put a full SDC at roughly $5,000 to $9,000.\n\n**Important nuance on whether you owe SDCs at all**: ENB-4.05 and PCC 17.36 say SDCs apply to \"all development projects that create new or increased demand on the public sewer and drainage system, except for additions and alterations to existing single- and multi-dwelling residential developments that do not add new dwelling units\" (https://www.portland.gov/bes/full-list-environmental-services-rates-and-charges). The historical practice on cesspool-to-sewer conversions was to charge full SDCs, as documented in the Claybourne project page (https://www.portland.gov/bes/improvements/construction/se-claybourne-sewer-extension-project). Whether the post-July-2024 rules treat a same-fixture cesspool conversion as \"no new or increased demand\" is something I'd push BES specifically to confirm in writing for your project; I could not find a single clean-cut authoritative source saying the conversion exemption applies in your exact situation. **Ask BES directly and get the answer in writing before you pay.**\n\n**Septic decommissioning permit fee**: **$935** flat (https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download).\n\n**UC sewer connection permit fee**: variable base fee plus the **new $295 inspection fee starting July 1, 2025** (https://www.portland.gov/transportation/permitting). I could not find a single published flat dollar amount for the UC base fee on the public-facing pages; confirm directly via URUCpermits@portlandoregon.gov.\n\n**Private plumbing costs (contractor labor and materials)**: BES says these typically range from **$5,000 to $12,000** for a single-family connection (https://www.portland.gov/bes/connecting-sewer/sewer-costs). One Portland homeowner who blogged the experience reported the contractor work for cesspool decommissioning alone (not connection) at $1,800 to $2,500 (https://pdxadditions.com/2017/08/decommissioning-a-cesspool-in-portland/). Older news reports of full conversions in 2017-2018 documented $5,000 to $7,000 in private plumbing costs (https://katu.com/news/local/neighbors-on-the-hook-to-pay-big-fees-to-connect-to-citys-sewer-system).\n\n**All-in real-world range** for a Portland house already adjacent to a sewer main (which is your situation): plan for **$6,000 to $20,000** all-in, with most homeowners landing in the **$10,000 to $15,000** range. That's roughly **the price of a used car to the price of a small kitchen remodel**.\n\n**Timeline**: Septic Program decommissioning permits are typically issued the next business day after payment is posted (https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download). UC permits in 1 to 2 business days for normal applications (https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits/uc-permit). Contractor scheduling and the actual dig and inspection typically takes **a few weeks to a couple of months from first call to final inspection**, or **roughly one summer's worth of weekends if you're patient**. PP&D's Septic Program is currently noting \"occasional delays\" due to budget-related staffing shortages (https://www.portland.gov/ppd/septic-decommissioning-permits), so add a buffer.\n\n**Financial assistance**: The City offers two main loan programs for this work, described at https://www.portland.gov/bes/connecting-sewer/financial-assistance-sewer-connection-and-conversion. The **Private Plumbing Loan** carries a **fixed 6.1% simple interest rate, terms of 5 or 10 years, a one-time $90 finance fee, and a $3-per-bill transaction fee**, with no down payment, no credit check, and no early payoff penalty (https://www.portland.gov/bes/connecting-sewer/financial-assistance-sewer-connection-and-conversion). The **Safety Net Private Plumbing Loan** is a **1.5% interest hardship loan with a deferred payment option based on age**, qualified to homeowners meeting hardship criteria (https://www.portland.gov/bes/connecting-sewer/financial-assistance-sewer-connection-and-conversion). For the SDC portion, the City also offers loans **of up to 20 years secured by a city lien on the property, with no pre-qualification based on income or credit history** (https://www.portland.gov/bes/connecting-sewer/sewer-costs).\n\n---\n\n## Who to contact (and who to call first)\n\n**Call first: Portland Permitting & Development's Septic Program**, because they're the people who run the cesspool/septic decommissioning inspections for all of Multnomah County and can quickly tell you what's actually on file at your address. **Email: septic@portlandoregon.gov. Phone for general questions: 503-823-7300.** Web page: https://www.portland.gov/ppd/septic-decommissioning-permits.\n\n**Call second: BES Sewer & Stormwater questions / PP&D Utilities Engineering at 503-823-7761** for connection questions, SDC questions, and what existing connection records show (https://www.portland.gov/bes/connecting-sewer/sewer-costs).\n\n**For sewer lateral / public right-of-way permits (UC and UR): URUCpermits@portlandoregon.gov, phone 503-823-1026** (https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits).\n\n**For inspections after permit is issued: 503-823-7000** with your permit's IVR number; the decommissioning inspection code is **842** (https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download).\n\n**Trade permits in person: 1900 SW 4th Ave, Suite 5000, Portland, OR 97201, available Tuesdays 8 a.m. to 4 p.m. and Thursdays 8 a.m. to noon** (https://www.portland.gov/ppd/septic-decommissioning-permits).\n\n**DEQ Northwest Region (covers Multnomah County)**: most homeowners will not interact with DEQ directly because Portland acts as DEQ's agent; if you do need DEQ, the onsite wastewater program landing page is https://www.oregon.gov/deq/Residential/Pages/Septic.aspx. I could not find a single direct-line homeowner phone number for DEQ onsite questions on the page itself; the DEQ NW region main number is 503-229-5263.\n\n**Contractor licensing verification: Oregon Construction Contractors Board (CCB) at 503-378-4621 or https://www.oregon.gov/ccb/Pages/index.aspx**, which lets you check if a contractor's license, insurance, and bond are current and whether they've had complaints (https://www.portlandoregon.gov/BES/article/298475).\n\n---\n\n## Common mistakes Portland homeowners make on cesspool failures\n\n**Hiring an unlicensed contractor.** Oregon law requires contractors who do sewer work to be registered with the Oregon CCB, and the city won't issue permits to unregistered ones (https://www.portlandoregon.gov/BES/article/298475). Always verify the CCB number, insurance, and bond before signing anything.\n\n**Skipping the DEQ-licensed pumper for the cesspool.** OAR 340-071-0185 requires a DEQ-licensed sewage disposal provider to pump residual liquid and solids before filling, with a copy of the pump receipt provided for inspection (https://www.portland.gov/sites/default/files/2020-09/septic_decommissioning_041117.pdf). If your contractor \"fills it in\" without this step, you'll fail inspection.\n\n**Filling the cesspool with regular dirt.** OAR 340-071-0185 requires \"suitable material\" (sand, gravel, or approved fill) installed in 1- to 5-foot lifts and tamped or watered for compaction; common soil or yard dirt is not acceptable (https://www.portland.gov/sites/default/files/2020-09/septic_decommissioning_041117.pdf).\n\n**Filling all the way up before inspection.** Per the Septic Decommissioning Information Sheet, you must leave the top 12 to 18 inches of the cesspool unfilled and the original pipe exposed so the inspector can see the work; if you cover it, you'll have to dig it back up (https://www.portland.gov/sites/default/files/2020-09/septic_decommissioning_041117.pdf).\n\n**Paying SDCs you might not owe.** As noted above, current code language only charges SDCs on \"new or increased demand\" (https://www.portland.gov/bes/full-list-environmental-services-rates-and-charges). If your house has the same fixtures before and after, push BES on whether the conversion truly creates new demand under post-July-2024 rules. Get the answer in writing.\n\n**Doing right-of-way work without a UC permit.** Any work in the public street touching the city sewer requires a UC permit issued by BES with PBOT inspection; doing it without a permit is a code violation under PCC 17.32 and exposes you to nuisance enforcement and lien risk (https://www.portland.gov/code/17/32).\n\n**Hiring a \"sewer connection\" contractor who isn't bonded for ROW work.** Even properly licensed plumbers may not have the right ROW bonding to work in the street; the BES UR/UC permit page lists insurance and bond requirements at https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits.\n\n**Missing the ten-foot foundation rule.** If you ever build new construction within 10 feet of an abandoned cesspool, you'll be required to decommission it as part of that project, sometimes with structural fill and compaction testing per the Septic Decommissioning Information Sheet (https://www.portland.gov/sites/default/files/2020-09/septic_decommissioning_041117.pdf). If you might do an addition later, decommissioning now (and documenting it) saves headaches.\n\n**Cesspool as a \"ticking\" hazard even when not in use.** Even an abandoned cesspool can collapse, creating a sinkhole risk in the yard if the lid or sides fail; the PDX Additions account documents this exact failure mode (https://pdxadditions.com/2017/08/decommissioning-a-cesspool-in-portland/). If you suspect yours is failing structurally rather than functionally, decommissioning is still the right answer.\n\n---\n\n## What to do next (in order)\n\n**1. From your couch, today, look up the historic plumbing records for your address on PortlandMaps.** Go to https://www.portlandmaps.com, search **6624 N Missouri Ave**, click **Permits & Zoning > Permits**, and look for any record describing **\"Change from cesspool to sewer\"** or **\"BES Connection.\"** Note the IDs and dates. **Cost: FREE. Time: 5 to 10 minutes.** This step alone may tell you that your cesspool is already legally abandoned and your job is just decommissioning, not full connection.\n\n**2. Email PP&D's Septic Program with your findings.** Send to **septic@portlandoregon.gov**. The email script is below. **Cost: FREE. Time: 5 minutes to write, expect a reply within 1 to 5 business days based on current staffing notes** (https://www.portland.gov/ppd/septic-decommissioning-permits).\n\n**3. Call BES / PP&D Utilities Engineering at 503-823-7761** to confirm whether your house currently has an active sewer service connection on file with BES, what your sewer billing address shows (a connection on the bill is a strong tell), and whether SDCs would apply to your cesspool decommissioning given current code (https://www.portland.gov/bes/connecting-sewer/sewer-costs). **Cost: FREE. Time: 15 to 30 minutes including hold time.**\n\n**4. Have a sewer contractor camera-scope the existing sewer line if your house already shows a connection on file.** A 30-minute video inspection of your private sewer lateral is typically $250 to $500 from local sewer companies and confirms whether your line goes to the public sewer or to the cesspool. Several Portland sewer companies do this; check the **CCB at 503-378-4621 or https://www.oregon.gov/ccb/Pages/index.aspx** to verify each one. **Cost: $250 to $500. Time: 1 day to schedule, 30 minutes on site.**\n\n**5. Get three written bids from CCB-verified contractors** for whatever scope the previous steps tell you is needed (decommissioning only, full conversion, or partial). The City explicitly recommends three bids and provides a sewer contractor list at https://www.portlandoregon.gov/bes/article/455516 (https://www.portlandoregon.gov/BES/article/298475). **Cost: FREE. Time: 1 to 3 weeks for site visits and quotes.**\n\n**6. Apply for permits.** Septic decommissioning permit application goes to **septic@portlandoregon.gov**, $935 fee (https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download). UC permit application goes to **URUCpermits@portlandoregon.gov**, fees vary plus the $295 inspection fee (https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits/uc-permit). **Cost: $935 + UC fees + $295 inspection. Time: 1 to 5 business days.**\n\n**7. If financing, apply for a BES Private Plumbing Loan or Safety Net Loan** before you sign with a contractor; loans are calculated based on the lowest of three bids (https://www.portland.gov/bes/connecting-sewer/financial-assistance-sewer-connection-and-conversion). **Cost: $90 finance fee plus 6.1% interest (or 1.5% if you qualify for Safety Net). Time: a few weeks for underwriting.**\n\n**8. Schedule and complete the work, then call inspections at 503-823-7000** with your permit IVR number and inspection code 842 for decommissioning (https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download). **Cost: included in permit. Time: a few days from request to inspector arrival.**\n\n---\n\n## What to ask the city: ready-to-paste scripts\n\n**Email script for PP&D Septic Program (paste to septic@portlandoregon.gov)**\n\n> Subject: Records and decommissioning question for 6624 N Missouri Ave, Portland OR 97217\n>\n> Hi,\n>\n> I'm the resident at 6624 N Missouri Ave, Portland, OR 97217 (Multnomah County tax property R232318). I'm trying to figure out whether my property still has an active cesspool, or whether the cesspool was already legally decommissioned when the house was connected to the public sewer.\n>\n> When I look up the property on PortlandMaps, I see two historic \"BES Connection\" plumbing records on file. Can you confirm whether either of those records reflects a completed cesspool-to-sewer conversion, and whether a decommissioning permit was previously issued and inspected?\n>\n> If the cesspool has not yet been formally decommissioned, I'd like to start a Septic Decommissioning Permit application. Please send me the application form and let me know the next steps.\n>\n> Thanks very much.\n\n**Phone script for BES / PP&D Utilities Engineering (call 503-823-7761)**\n\n> Hi, I have a question about a single-family house at **6624 N Missouri Ave, 97217**. I think there's a cesspool on the property and I'd like to confirm three things.\n>\n> First, is this property currently billed for sanitary sewer service, or is it still on a private system?\n>\n> Second, when I look on PortlandMaps I can see a public combined sewer main about 90 feet away in N Missouri Ave with a manhole tagged unit ID AAK484. Can you confirm whether a sewer connection from my property to that main has already been made and inspected?\n>\n> Third, if I do need to make a new connection because of a failed cesspool, would I owe full residential System Development Charges, given that the post-July-2024 code only applies SDCs to \"new or increased demand\" and I wouldn't be adding any new fixtures? I'd appreciate getting the answer in writing if possible.\n>\n> Thanks for your help.\n\n---\n\n## Common gotchas (specific to Portland cesspool conversions)\n\n**Old plumbing records say \"Decommissioned\" but the cesspool is still there.** \"Decommissioned\" historically meant \"abandoned\" not \"physically filled in,\" per the PDX Additions account; the brick pit can still be sitting underground (https://pdxadditions.com/2017/08/decommissioning-a-cesspool-in-portland/). If you're doing any future addition or major landscaping, you may need to physically locate, fully fill, and inspect that cesspool before construction.\n\n**Dual cesspools (sanitary plus rain gutter \"drywells\").** Many old Portland homes have separate cesspool-style pits for rain gutter drainage, also brick-lined and identical-looking; these are often still in use and are not always covered by your sanitary decommissioning (https://pdxadditions.com/2017/08/decommissioning-a-cesspool-in-portland/). If you find one in your yard, ask whether it's still active stormwater infrastructure before touching it.\n\n**Choosing a contractor based on price alone.** BES specifically warns \"the lowest bid is not necessarily the best bid\" and recommends checking CCB history for complaints (https://www.portlandoregon.gov/BES/article/298475). A bad sewer contractor can leave you with a backfilled trench that settles, a leaky tie-in that the city flags during the next sewer line camera survey, or a permit that never gets final-inspected and lingers as an open issue at sale.\n\n**The \"party sewer\" trap.** If your sewer lateral runs across a neighbor's property or shares a line with another house, you may be on a **nonconforming sewer** under PCC 17.32.020 and may be required to convert to your own conforming connection under PCC 17.33.030.C (https://www.portland.gov/code/17/32/020 and https://www.portland.gov/code/17/33/030). The portal's lateral records at distance zero from your parcel are worth confirming aren't a shared line. ENB-4.27 governs nonconforming sewer conversion (https://www.portland.gov/policies/environment-built/sewer-stormwater-erosion-control/enb-427-administrative-rules-bureau).\n\n**Permit expiration.** UR and UC permits expire 180 days after issue, with one extension of up to 180 more days available before expiration only (https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits). If your contractor stalls and the permit lapses you may have to re-apply and re-pay.\n\n**Open permit at sale time.** A common nasty surprise during a real estate transaction is an unfinaled plumbing or decommissioning permit. Make sure each permit gets its **Final Inspection Approved** stamp before considering the project complete.\n\n**Tree roots and street trees.** If your sewer lateral passes near a street tree, the work may require a tree permit from Portland Urban Forestry, separate from the UC permit (https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits).\n\n---\n\n## Verify before you spend money\n\n**Pull the actual permit cards before paying anyone.** I gave you property R232318 with two BES Connection records on file, but the metadata could mean a completed connection, abandoned application, or partial work. Don't pay a contractor until you've seen the actual scanned documents at https://www.portlandmaps.com or in person at 1900 SW 4th Ave (https://www.cozyhomeinspection.com/cesspools.html).\n\n**Confirm zoning and overlays at PortlandMaps.** Your zoning summary at https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/zoning/ shows R5 base, no plan district, no historic overlay, no environmental overlay. Verify this hasn't changed before paying for plans or contractors; overlays can add design constraints and review fees that materially change project cost.\n\n**Confirm your contractor's CCB status the same week you sign.** Licenses can lapse. Run their CCB number at https://search.ccb.state.or.us/search/ and check insurance and bond status (https://www.portlandoregon.gov/BES/article/298475).\n\n**Get the SDC determination in writing.** As noted, whether your conversion triggers full SDCs under post-July-2024 rules is not crystal clear from the public-facing materials; ask BES for a written determination at https://www.portland.gov/bes/full-list-environmental-services-rates-and-charges before you finalize loan paperwork.\n\n**Don't trust contractor permit-fee estimates without checking the city fee schedule.** Permit fees change every July 1; the FY2025-26 rate ordinance is at https://www.portland.gov/ppd/infrastructure/documents/fy-2025-26-sewer-and-stormwater-charges-and-fees/download.\n\n**Be skeptical of \"we'll just decommission it for cash\" offers.** Skipping the permit means: no DEQ-required pump receipt, no inspection, no record of decommissioning, and a future buyer's inspector or the city's records system will eventually catch it. Title issues and post-sale lawsuits are far more expensive than the $935 permit fee.\n\n---\n\n## Glossary\n\n**BDS / Portland Permitting & Development (PP&D)**: Bureau of Development Services, now operating as Portland Permitting & Development. Issues building, plumbing, mechanical, and septic decommissioning permits on private property. Phone: 503-823-7300. Web: https://www.portland.gov/ppd.\n\n**BES**: Bureau of Environmental Services. Runs the public sewer pipes, stormwater facilities, and treatment plants for the City of Portland. Issues permits for work on public sewer infrastructure. Phone: 503-823-7761. Web: https://www.portland.gov/bes.\n\n**Cesspool**: A buried pit, often brick-lined, that takes raw sewage from a house and lets the liquid seep into surrounding soil. Banned for new construction in Oregon under OAR 340-071-0335 (https://oregon.public.law/rules/oar_340-071-0335).\n\n**Combined sewer**: A sewer pipe that carries both sanitary sewage (from toilets and sinks) and stormwater runoff (from streets and roofs) in the same pipe, defined in PCC 17.32.020 (https://www.portland.gov/code/17/32/020). Your N Missouri Ave sewer is combined.\n\n**Decommissioning**: The official process of shutting down and filling in an old cesspool, septic tank, or seepage pit so it's no longer a hazard. Required by OAR 340-071-0185 (https://oregon.public.law/rules/oar_340-071-0185).\n\n**DEQ**: Oregon Department of Environmental Quality. State agency that writes Oregon's onsite wastewater rules under OAR Chapter 340, Division 71 (https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=1479) and delegates day-to-day permitting to local agents like the City of Portland.\n\n**DFU (Drainage Fixture Unit)**: A standardized unit for measuring how much wastewater a plumbing fixture produces. Used to calculate sanitary SDCs under PCC 17.36 (https://www.portland.gov/code/17/36).\n\n**E-zone (Environmental Overlay)**: A zoning overlay used in Portland to protect natural resources like streams, wetlands, and wildlife habitat. Your address has none, per https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/zoning/.\n\n**Lateral / side sewer**: The pipe that runs from your house to the city sewer line in the street, also called a building sewer. The portion on your private property is your responsibility; the portion in the public right-of-way has split responsibility between the city and the property owner per PCC 17.32 (https://www.portland.gov/code/17/32).\n\n**Nonconforming sewer**: A private sewer system that crosses property lines, drains more than one property, or doesn't meet current city standards. Defined in PCC 17.32.020 (https://www.portland.gov/code/17/32/020) and governed for conversion by ENB-4.27 (https://www.portland.gov/policies/environment-built/sewer-stormwater-erosion-control/enb-427-administrative-rules-bureau).\n\n**OAR**: Oregon Administrative Rule. State-level rules issued by Oregon agencies; cesspool and septic rules are in OAR Chapter 340, Division 71 (https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=1479).\n\n**PBOT**: Portland Bureau of Transportation. Owns and inspects the public right-of-way (streets, sidewalks). Inspects your sewer connection work in the street under the UC permit (https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits).\n\n**PCC**: Portland City Code. The City of Portland's local laws, indexed at https://www.portland.gov/code.\n\n**Right-of-way (ROW)**: The strip of public land between your house and the street, including the sidewalk, planting strip, and the street itself. Defined in PCC 17.32.020 (https://www.portland.gov/code/17/32/020). Work in the ROW requires a permit.\n\n**SDC (System Development Charge)**: One-time fees the city charges to \"hook into\" their utility system, intended to recover a property's share of the cost of building and operating major sewer and stormwater facilities. Governed by PCC 17.36 and ENB-4.05 (https://www.portland.gov/code/17/36 and https://www.portland.gov/policies/environment-built/sewer-stormwater-erosion-control/enb-405-system-development-charges).\n\n**Seepage pit**: A type of onsite disposal pit similar to a cesspool but used after a septic tank as the absorption component. New seepage pits can replace failing cesspools or seepage pits only on lots too small for standard septic systems, per OAR 340-071-0335 (https://oregon.public.law/rules/oar_340-071-0335).\n\n**Septic tank**: A watertight tank that holds sewage from a house, lets solids settle and decompose, and discharges treated liquid effluent to a drainfield. Different from a cesspool, which has no separate tank-and-drainfield distinction.\n\n**UR / UC permit**: Utility Repair (UR) or Utility Connection (UC) permit issued by BES to allow work on the sewer in the public right-of-way. UR is for repairs to existing pipes; UC is for new connections (https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits).\n\n---\n\nIf it would help, I can also build out a one-page checklist version of the \"What to do next\" section as a separate markdown file for easy printing or pinning to a fridge. Just say the word."
     }
   },
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "Yes, sewer connection required if cesspool fails",
-      "claim_full": "If a cesspool fails and a public sewer is available, Portland requires the homeowner to disconnect the cesspool and connect to the public sewer.",
+      "claim_short": "Cesspool failure \u2192 must connect to sewer",
+      "claim_full": "If a cesspool fails in Portland, the homeowner is in practice required to connect to the public sewer rather than build a new septic or cesspool.",
       "topic": "sewer",
       "variants": [
         "oob",
@@ -33,18 +33,174 @@
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PCC 17.33",
-      "verified_truth": "PCC Chapter 17.33 requires sewer connection when a public sewer is available; this is the core regulatory rule confirmed in the accuracy flags.",
+      "citation": "PCC 17.33.030",
       "citation_by_variant": {
         "oob": "PCC 17.33",
         "mcp": "PCC 17.33",
-        "enhanced": "PCC 17.33"
-      }
+        "enhanced": "PCC 17.33.030 (https://www.portland.gov/code/17/33/030)"
+      },
+      "verified_truth": "Correct: PCC Chapter 17.33 governs required sewer connection, and DEQ rules combined with Portland code make connection the practical answer when a cesspool fails."
     },
     {
       "id": "A2",
+      "claim_short": "OAR 340-071-0215 governs failing systems",
+      "claim_full": "Oregon DEQ rule OAR 340-071-0215 treats a failing cesspool as a public health hazard requiring immediate repair.",
+      "topic": "citations",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "OAR 340-071-0215",
+      "citation_by_variant": {
+        "oob": "OAR 340-071-0215",
+        "mcp": "OAR 340-071-0215",
+        "enhanced": "OAR 340-071-0215 (https://oregon.public.law/rules/oar_340-071-0215)"
+      },
+      "verified_truth": "Correct: OAR 340-071-0215 covers repair of existing systems and treats failing systems as public health hazards requiring immediate repair."
+    },
+    {
+      "id": "A3",
+      "claim_short": "OAR 340-071-0185 decommissioning rule",
+      "claim_full": "OAR 340-071-0185 governs cesspool/septic decommissioning, including filling requirements when systems are no longer in use or work occurs near them.",
+      "topic": "citations",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "OAR 340-071-0185",
+      "citation_by_variant": {
+        "oob": "OAR 340-071-0185",
+        "mcp": "OAR 340-071-0185",
+        "enhanced": "OAR 340-071-0185 (https://oregon.public.law/rules/oar_340-071-0185)"
+      },
+      "verified_truth": "Correct: OAR 340-071-0185 is the decommissioning rule for onsite systems, including the 12-18 inch inspection allowance."
+    },
+    {
+      "id": "A4",
+      "claim_short": "OAR 340-071-0335 bans new cesspools",
+      "claim_full": "Oregon prohibits constructing new cesspool sewage disposal systems statewide under OAR 340-071-0335.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "OAR 340-071-0335",
+      "citation_by_variant": {
+        "enhanced": "OAR 340-071-0335 (https://oregon.public.law/rules/oar_340-071-0335)"
+      },
+      "verified_truth": "Correct: OAR 340-071-0335 bans construction of new cesspool systems in Oregon."
+    },
+    {
+      "id": "A5",
+      "claim_short": "Title 29 nuisance authority",
+      "claim_full": "Portland City Code Title 29 treats a failing cesspool as a property nuisance subject to enforcement.",
+      "topic": "citations",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.3,
+      "correctness": "correct-vague",
+      "importance": 3,
+      "citation": "PCC Title 29",
+      "citation_by_variant": {
+        "oob": "Title 29",
+        "mcp": "Title 29",
+        "enhanced": "PCC Title 29 (https://www.portland.gov/code/29)"
+      },
+      "verified_truth": "Correct: PCC Title 29 (Property Maintenance) provides nuisance enforcement authority that can apply to failing onsite systems."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Mandatory connection program retired 2024",
+      "claim_full": "Portland City Council passed Ordinance 191725 retiring the Mandatory Sewer Connection Program effective July 1, 2024, replacing it with circumstance-based triggers in PCC 17.33.030.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "hedge-correct",
+      "importance": 5,
+      "citation": "Ordinance 191725",
+      "citation_by_variant": {
+        "enhanced": "Ordinance 191725 (https://www.portland.gov/council/documents/ordinance/passed/191725)"
+      },
+      "verified_truth": "Per the evaluation rationale, this specific 2024 ordinance and effective date warrant verification against current portland.gov pages."
+    },
+    {
+      "id": "A7",
+      "claim_short": "PCC 17.33.030 lists trigger circumstances",
+      "claim_full": "PCC 17.33.030 enumerates circumstances (subsections A through E) under which sewer connection is required, including a public-health/environment safety valve.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": "PCC 17.33.030",
+      "citation_by_variant": {
+        "enhanced": "PCC 17.33.030 (https://www.portland.gov/code/17/33/030)"
+      },
+      "verified_truth": "PCC 17.33.030 is the correct chapter/section for sewer connection rules, but the specific subsection labels (A, B, E) and quoted language need cross-checking against current code text."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Property zoned R5, no overlays",
+      "claim_full": "6624 N Missouri Ave is zoned R5 (Residential 5,000) with no plan district, environmental, or historic overlay.",
+      "topic": "zoning",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps R232318",
+      "citation_by_variant": {
+        "enhanced": "https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/zoning/"
+      },
+      "verified_truth": "Per accuracy flags, the property is R5 with no plan district, environmental, or historic overlays."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Neighborhood is Piedmont",
+      "claim_full": "PortlandMaps lists the property's neighborhood as Piedmont, not Overlook or Arbor Lodge as the user prompt suggested.",
+      "topic": "address",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps R232318",
+      "citation_by_variant": {
+        "enhanced": "https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/"
+      },
+      "verified_truth": "Per accuracy flags, the property's neighborhood is Piedmont."
+    },
+    {
+      "id": "A10",
       "claim_short": "House built 1926",
-      "claim_full": "The house at 6624 N Missouri Ave was built in 1926.",
+      "claim_full": "The house at 6624 N Missouri Ave was built in 1926, predating most public sewer in north Portland.",
       "topic": "address",
       "variants": [
         "oob",
@@ -55,89 +211,19 @@
       "actionability": 0.3,
       "correctness": "correct",
       "importance": 2,
-      "citation": "PortlandMaps assessor",
-      "verified_truth": "Year built 1926 is verified against PortlandMaps assessor data.",
+      "citation": "PortlandMaps R232318",
       "citation_by_variant": {
-        "oob": "PortlandMaps assessor",
-        "mcp": "PortlandMaps assessor",
-        "enhanced": "PortlandMaps assessor"
-      }
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/zoning/"
+      },
+      "verified_truth": "Year built 1926 is confirmed in the accuracy flags."
     },
     {
-      "id": "A3",
-      "claim_short": "2009 sewer permit on file",
-      "claim_full": "Permit 2009-149664-000-00-PT records an 80-foot sanitary sewer line installed at the property, with final inspection approved 8/14/2009.",
+      "id": "A11",
+      "claim_short": "Public sewer ~90 ft from property",
+      "claim_full": "A public combined sewer manhole (AAK484) sits approximately 90 feet from the property in N Missouri Ave.",
       "topic": "address",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "Permit 2009-149664-000-00-PT",
-      "verified_truth": "The 2009 sanitary sewer line permit (2009-149664-000-00-PT, 'SANITARY SEWER LINE 80FT', final-approved 8/14/2009) was confirmed against PortlandMaps permit data.",
-      "citation_by_variant": {
-        "enhanced": "Permit 2009-149664-000-00-PT"
-      }
-    },
-    {
-      "id": "A4",
-      "claim_short": "Property ID R232318",
-      "claim_full": "The Multnomah County property ID for 6624 N Missouri Ave is R232318.",
-      "topic": "address",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps assessor",
-      "verified_truth": "Property ID R232318 was verified against assessor data per the accuracy flags.",
-      "citation_by_variant": {
-        "enhanced": "PortlandMaps assessor"
-      }
-    },
-    {
-      "id": "A5",
-      "claim_short": "Likely already on sewer; cesspool not decommissioned",
-      "claim_full": "The 2009 sewer permit suggests the home is already on public sewer and the old cesspool may simply have been abandoned in place rather than properly decommissioned.",
-      "topic": "sewer",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 1.0,
-      "correctness": "correct-judg",
-      "importance": 5,
-      "citation": null,
-      "verified_truth": "The accuracy flags note this inference is correctly framed as a hypothesis based on the verified 2009 sewer permit, with the AI recommending camera inspection before spending.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A6",
-      "claim_short": "Neighborhood is Piedmont not Arbor Lodge",
-      "claim_full": "PortlandMaps records the property's neighborhood as Piedmont, not Arbor Lodge as the resident framed it.",
-      "topic": "address",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "verified_truth": "Piedmont neighborhood assignment was verified against PortlandMaps assessor data.",
-      "citation_by_variant": {
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A7",
-      "claim_short": "Sewer main ~96 ft from front of lot",
-      "claim_full": "The combined sewer main on N Missouri Ave is roughly 96 feet from the front of the lot, with the closest manhole about 90 feet away.",
-      "topic": "sewer",
       "variants": [
         "enhanced"
       ],
@@ -145,643 +231,495 @@
       "actionability": 0.8,
       "correctness": "correct",
       "importance": 4,
-      "citation": "BES sewer asset map",
-      "verified_truth": "Distances drawn from the BES sewer asset map per the accuracy flags; not directly re-verified in this evaluation but treated as authoritative.",
+      "citation": "PortlandMaps sewer assets",
       "citation_by_variant": {
-        "enhanced": null
-      }
+        "enhanced": "https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/sewer/"
+      },
+      "verified_truth": "Per accuracy flags, public combined sewer manhole AAK484 is ~90 feet from the property."
     },
     {
-      "id": "A8",
-      "claim_short": "Albina sewer basin / Columbia Slough watershed",
-      "claim_full": "The property is in the Albina sewer basin and Columbia Slough watershed.",
-      "topic": "sewer",
+      "id": "A12",
+      "claim_short": "Two BES Connection records on file",
+      "claim_full": "PortlandMaps shows two historic 'BES Connection' plumbing records on file for property R232318, suggesting a prior sewer connection may already exist.",
+      "topic": "address",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Albina basin / Columbia Slough watershed assignment is consistent with PortlandMaps data per the accuracy flags.",
-      "citation_by_variant": null
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "PortlandMaps permits R232318",
+      "citation_by_variant": {
+        "enhanced": "https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/permits/"
+      },
+      "verified_truth": "Per accuracy flags, two 'BES Connection' historic plumbing records exist on file for R232318 \u2014 a high-value finding that may reframe the problem."
     },
     {
-      "id": "A9",
-      "claim_short": "OAR 340-071-0215 governs failed cesspool",
-      "claim_full": "Oregon Administrative Rule 340-071-0215 treats a failing cesspool as a public health hazard requiring immediate repair.",
-      "topic": "citations",
+      "id": "A13",
+      "claim_short": "MLS June 2024 listed Public Sewer",
+      "claim_full": "The MLS listing from the property's June 2024 sale reportedly listed the sewer as 'Public Sewer.'",
+      "topic": "address",
       "variants": [
         "oob",
         "mcp"
       ],
-      "specificity": 1.0,
-      "actionability": 0.4,
-      "correctness": "correct",
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "hedge-correct",
       "importance": 3,
-      "citation": "OAR 340-071-0215",
-      "verified_truth": "OAR 340-071-0215 is a real Oregon administrative rule on failing onsite systems and is correctly cited per the accuracy flags.",
+      "citation": null,
       "citation_by_variant": {
-        "oob": "OAR 340-071-0215",
-        "mcp": "OAR 340-071-0215"
-      }
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "The MLS claim is presented but unverifiable from authoritative city sources; the AI itself flagged MLS sewer fields as 'notoriously sloppy.'"
     },
     {
-      "id": "A10",
-      "claim_short": "OAR 340-071-0185 governs decommissioning",
-      "claim_full": "Oregon Administrative Rule 340-071-0185 is the standard for decommissioning abandoned cesspools.",
-      "topic": "citations",
+      "id": "A14",
+      "claim_short": "Verify on PortlandMaps in 2 minutes",
+      "claim_full": "Homeowners can verify sewer history themselves at portlandmaps.com by searching the address and reviewing Permits & Zoning > Permits > Historic Plumbing.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.85,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portlandmaps.com",
+      "citation_by_variant": {
+        "oob": "portlandmaps.com",
+        "mcp": "portlandmaps.com",
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Correct actionable step: PortlandMaps provides historic plumbing records via the property detail page."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Sewer scope $100\u2013$500",
+      "claim_full": "A camera sewer scope, which definitively shows whether the line goes to public sewer or a buried cesspool, costs roughly $100\u2013$500.",
+      "topic": "costs",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Sewer scope cost range is plausible; OOB/MCP cite $100\u2013$200 and Enhanced cites $250\u2013$500."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Decommissioning permit fee $935",
+      "claim_full": "Portland Permitting & Development charges a flat $935 fee for the septic/cesspool decommissioning permit.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": "PP&D Septic Decommissioning Permit Application",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download"
+      },
+      "verified_truth": "Per accuracy flags, the $935 fee is a specific claim that warrants verification against current PP&D fee schedules."
+    },
+    {
+      "id": "A17",
+      "claim_short": "$295 UC inspection fee from 2025",
+      "claim_full": "A new $295 inspection fee was added to UR/UC sewer connection permits effective July 1, 2025.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "hedge-correct",
+      "importance": 3,
+      "citation": "PBOT permitting",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/transportation/permitting"
+      },
+      "verified_truth": "Per accuracy flags, the $295 inspection fee with July 1, 2025 effective date warrants verification."
+    },
+    {
+      "id": "A18",
+      "claim_short": "SDC ~$343/DFU residential",
+      "claim_full": "Sewer System Development Charges run about $343/DFU for residential, which is 60% of the Tier 1 rate of $572/DFU.",
+      "topic": "fees",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "OAR 340-071-0185",
-      "verified_truth": "OAR 340-071-0185 is correctly cited as the state cesspool decommissioning rule per the accuracy flags.",
+      "actionability": 0.8,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": "BES rates / PCC 17.36",
       "citation_by_variant": {
-        "oob": "OAR 340-071-0185",
-        "mcp": "OAR 340-071-0185",
-        "enhanced": "OAR 340-071-0185"
-      }
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/infrastructure/documents/fy-2025-26-sewer-and-stormwater-charges-and-fees/download"
+      },
+      "verified_truth": "Per accuracy flags, the $572/$343 per DFU figures are specific claims that warrant verification against current BES rate ordinance."
     },
     {
-      "id": "A11",
-      "claim_short": "Title 29 treats failing cesspool as nuisance",
-      "claim_full": "Portland City Code Title 29 treats a failing cesspool as a property nuisance subject to code enforcement abatement.",
-      "topic": "citations",
+      "id": "A19",
+      "claim_short": "Total cost $6K\u2013$20K",
+      "claim_full": "Realistic total cost for cesspool-to-sewer conversion runs roughly $6,000\u2013$20,000 in 2025-2026 dollars, with $10K\u2013$15K typical.",
+      "topic": "costs",
       "variants": [
         "oob",
-        "mcp"
+        "mcp",
+        "enhanced"
       ],
-      "specificity": 0.8,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PCC Title 29",
-      "verified_truth": "Title 29 (Property Maintenance) is plausibly cited for nuisance abatement; consistent with accuracy flags.",
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-range",
+      "importance": 5,
+      "citation": "BES sewer costs",
       "citation_by_variant": {
-        "oob": "PCC Title 29",
-        "mcp": "PCC Title 29"
-      }
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/bes/connecting-sewer/sewer-costs"
+      },
+      "verified_truth": "Range is plausible and consistent across all three responses; matches BES public guidance for typical single-family conversions."
     },
     {
-      "id": "A12",
-      "claim_short": "PCC 17.33.030 requires sewer connection",
-      "claim_full": "PCC 17.33.030 specifically requires sewer connection when plumbing fixtures discharge wastewater.",
-      "topic": "citations",
+      "id": "A20",
+      "claim_short": "Private Plumbing Loan: 6.1% / $20K",
+      "claim_full": "BES offers a Private Plumbing Loan up to $20,000 at 6.1% simple interest with 5- or 10-year terms and a $90 origination/finance fee.",
+      "topic": "costs",
       "variants": [
+        "oob",
+        "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "correct",
+      "actionability": 1.0,
+      "correctness": "hedge-correct",
       "importance": 4,
-      "citation": "PCC 17.33.030",
-      "verified_truth": "PCC 17.33.030 is a real Portland code section governing required sewer connection per the accuracy flags.",
+      "citation": "BES financial assistance",
       "citation_by_variant": {
-        "enhanced": "PCC 17.33.030"
-      }
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/bes/connecting-sewer/financial-assistance-sewer-connection-and-conversion"
+      },
+      "verified_truth": "Per accuracy flags, the loan terms are specific claims that warrant verification against current BES financial assistance pages."
     },
     {
-      "id": "A13",
-      "claim_short": "BES admin rules ENB-4.05/4.17/4.27/4.28",
-      "claim_full": "BES administrative rules ENB-4.05 (SDC calculation), ENB-4.17 (UC and lateral repair permits), ENB-4.27 (nonconforming sewer conversions), and ENB-4.28 (financial assistance) govern the detailed process.",
-      "topic": "citations",
+      "id": "A21",
+      "claim_short": "Safety Net Loan: 1.5% deferred",
+      "claim_full": "BES offers a Safety Net Private Plumbing Loan at 1.5% interest with a deferred payment option for income-qualified or older homeowners.",
+      "topic": "costs",
       "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": "BES financial assistance",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/bes/connecting-sewer/financial-assistance-sewer-connection-and-conversion"
+      },
+      "verified_truth": "Per accuracy flags, the 1.5% Safety Net loan is a specific claim that warrants verification against current portland.gov pages."
+    },
+    {
+      "id": "A22",
+      "claim_short": "BES phone 503-823-7761",
+      "claim_full": "BES Required Sewer Connection / PP&D Utilities Engineering can be reached at 503-823-7761.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
+      "actionability": 1.0,
+      "correctness": "correct-action",
       "importance": 3,
-      "citation": "ENB-4.05/4.17/4.27/4.28",
-      "verified_truth": "These BES administrative rule numbers are real and correctly characterized per the accuracy flags.",
+      "citation": null,
       "citation_by_variant": {
-        "enhanced": null
-      }
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/bes/connecting-sewer/sewer-costs"
+      },
+      "verified_truth": "Phone number 503-823-7761 is consistently cited across all three responses as the BES sewer connection contact."
     },
     {
-      "id": "A14",
-      "claim_short": "Three bureaus involved: BDS, BES, PBOT",
-      "claim_full": "Three Portland bureaus touch a cesspool-to-sewer conversion: BDS/PP&D for plumbing and decommissioning permits, BES for the sewer connection (UC) permit and SDC, and PBOT for right-of-way inspection.",
+      "id": "A23",
+      "claim_short": "PP&D Septic email/phone",
+      "claim_full": "Portland Permitting & Development's Septic Program is reachable at septic@portlandoregon.gov and 503-823-7300.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "PP&D Septic Program",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/septic-decommissioning-permits"
+      },
+      "verified_truth": "Email septic@portlandoregon.gov is cited in all three; the 503-823-7300 PP&D number appears only in Enhanced and is consistent with PP&D's general number."
+    },
+    {
+      "id": "A24",
+      "claim_short": "UC permit contact",
+      "claim_full": "Sewer connection (UC) and utility repair (UR) permits are handled via URUCpermits@portlandoregon.gov and 503-823-1026.",
       "topic": "permits",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.8,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "Bureau division of labor (BDS plumbing, BES sewer/SDC, PBOT ROW) is standard Portland practice consistent with PCC Titles 17 and 25.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A15",
-      "claim_short": "$295 PBOT inspection fee since July 2025",
-      "claim_full": "A $295 PBOT right-of-way inspection fee began on July 1, 2025 and is bundled into the BES UC permit.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "The $295 PBOT ROW inspection fee effective July 1 2025 is reflected in current Portland fee schedules per the accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A16",
-      "claim_short": "Sanitary SDC $572 per DFU (Tier 1)",
-      "claim_full": "The FY2025-26 sanitary System Development Charge is $572 per drainage fixture unit at the Tier 1 residential rate.",
-      "topic": "fees",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "BES rate schedule FY2025-26",
-      "verified_truth": "The $572/DFU Tier 1 residential SDC rate for FY2025-26 is verified per the enhanced response's accuracy flags.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": null
-      }
-    },
-    {
-      "id": "A17",
-      "claim_short": "Residential SDC ~$343/DFU at 60% Tier 1",
-      "claim_full": "Residential connections pay roughly $343 per DFU, which is 60% of the Tier 1 rate of $572.",
-      "topic": "fees",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "The OOB/MCP rationale flags the $343/DFU figure as one of several specific dollar values that could not be independently verified and may be outdated or miscalculated; the enhanced response treats $572/DFU as the actual Tier 1 residential rate.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A18",
-      "claim_short": "Typical house has 14-22 DFUs",
-      "claim_full": "A typical 1- to 2-bath Portland house has roughly 14 to 22 drainage fixture units for SDC calculation.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.6,
-      "correctness": "hedge-correct",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "AI explicitly flags this as a guess; range is plausible for typical Portland single-family homes.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A19",
-      "claim_short": "BES sewer rate ~$13.54 per 100 cu ft",
-      "claim_full": "BES charges approximately $13.54 per 100 cubic feet of metered water for sewer.",
-      "topic": "fees",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.4,
-      "correctness": "hedge-correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Per the OOB/MCP rationale this specific rate could not be independently verified and may be outdated against current BES schedules.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A20",
-      "claim_short": "Private Plumbing Loan: $20K cap, 6.1%",
-      "claim_full": "The BES Private Plumbing Loan is capped at $20,000 with 6.1% simple interest, 5- or 10-year term, and a $90 origination fee, secured by a property lien with no income/credit qualification.",
-      "topic": "fees",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "BES ENB-4.28",
-      "verified_truth": "Enhanced response's accuracy flags confirm the $20K cap, 6.1% rate, and $90 setup fee against current portland.gov data.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": null
-      }
-    },
-    {
-      "id": "A21",
-      "claim_short": "SDC Loan: 6.2%, up to 20 years",
-      "claim_full": "The BES System Development Charge Loan finances the SDC at 6.2% interim interest with 5-, 10-, or 20-year repayment terms and a $40 + 0.49% setup fee.",
-      "topic": "fees",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "BES ENB-4.28",
-      "verified_truth": "Enhanced response's accuracy flags confirm 6.2% rate and setup fee structure against current BES data.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": null
-      }
-    },
-    {
-      "id": "A22",
-      "claim_short": "Safety Net Loan: 1.5% interest",
-      "claim_full": "The Safety Net Plumbing/Connection Loan offers a 1.5% interest rate with deferred payment options for income-qualified or older homeowners.",
-      "topic": "fees",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "BES ENB-4.28",
-      "verified_truth": "The 1.5% Safety Net rate is verified against current portland.gov data per the enhanced response's accuracy flags.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": null
-      }
-    },
-    {
-      "id": "A23",
-      "claim_short": "Safety Net income caps",
-      "claim_full": "Safety Net loans require household income at or below $86,870 (1 person), $99,280 (2), $111,690 (3), or $124,100 (4) for FY2025-26.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
       "specificity": 1.0,
       "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "All four income caps verified against current portland.gov data per the accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A24",
-      "claim_short": "Three CCB-licensed bids required",
-      "claim_full": "To initiate a BES Private Plumbing or Safety Net loan, the homeowner must obtain three bids from CCB-licensed contractors.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct",
+      "correctness": "correct-action",
       "importance": 3,
-      "citation": null,
-      "verified_truth": "Three-bid CCB-licensed contractor requirement is standard for BES loan programs per the accuracy flags.",
-      "citation_by_variant": null
+      "citation": "PP&D UR/UC permits",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits"
+      },
+      "verified_truth": "Per accuracy flags, the URUCpermits@portlandoregon.gov address and 503-823-1026 phone are correct city contacts for utility permits."
     },
     {
       "id": "A25",
-      "claim_short": "Property zoned R5, no overlays",
-      "claim_full": "The property is zoned R5 with no environmental, flood, landslide, or historic overlays.",
-      "topic": "zoning",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "verified_truth": "R5 zoning and absence of overlay zones are consistent with PortlandMaps data per the accuracy flags.",
-      "citation_by_variant": {
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A26",
-      "claim_short": "Inside Interstate Corridor Urban Renewal Area",
-      "claim_full": "6624 N Missouri Ave is located within the Interstate Corridor Urban Renewal Area.",
-      "topic": "zoning",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Interstate Corridor Urban Renewal Area inclusion is verified per the accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A27",
-      "claim_short": "BES Required Sewer Connection: 503-823-4114",
-      "claim_full": "The BES Required Sewer Connection Program contact is 503-823-4114, sewerconx@portlandoregon.gov.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "Enhanced response provides the BES Required Sewer Connection Program number; the OOB/MCP variants give a different number (503-823-7761) which the OOB/MCP rationale does not independently verify.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A28",
-      "claim_short": "BES contact 503-823-7761",
-      "claim_full": "BES Required Sewer Connection can be reached at 503-823-7761.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "hedge-correct",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "This phone number is presented in OOB/MCP but is not independently verified in the rationale; the enhanced variant gives 503-823-4114 for the same program.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A29",
-      "claim_short": "PP&D at 1900 SW 4th Ave, ~$15 records",
-      "claim_full": "Portland Permitting & Development Trade Permits is at 1900 SW 4th Ave with a roughly $15 fee to pull historic plumbing records.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "hedge-correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Address and fee figure are not independently verified in the OOB/MCP rationale.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A30",
-      "claim_short": "MLS June 2024 listed 'Public Sewer'",
-      "claim_full": "The June 2024 MLS listing for 6624 N Missouri Ave reportedly lists Sewer: Public Sewer.",
-      "topic": "address",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "hedge-correct",
-      "importance": 3,
-      "citation": "third-party MLS",
-      "verified_truth": "The data-quality notes flag this as cited from a third-party MLS rather than authoritative city records; the AI itself flagged MLS sewer fields as unreliable.",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null
-      }
-    },
-    {
-      "id": "A31",
-      "claim_short": "Decommission required within 10 ft of work",
-      "claim_full": "Decommissioning of an abandoned cesspool is required when permitted work occurs within 10 feet of it.",
-      "topic": "sewer",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "OAR 340-071-0185",
-      "verified_truth": "The 10-ft proximity decommissioning trigger is consistent with Oregon DEQ rules per the accuracy flags.",
-      "citation_by_variant": {
-        "oob": "OAR 340-071-0185",
-        "mcp": "OAR 340-071-0185"
-      }
-    },
-    {
-      "id": "A32",
-      "claim_short": "Sewer scope $100-$200",
-      "claim_full": "A residential sewer scope/camera inspection costs roughly $100 to $200 (or $200-$500 in the enhanced variant).",
-      "topic": "costs",
+      "claim_short": "Three permits needed",
+      "claim_full": "A typical cesspool-to-sewer conversion requires three permits: a septic decommissioning permit, a plumbing/trade permit, and a UC sewer connection (right-of-way) permit.",
+      "topic": "permits",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
       "specificity": 0.8,
-      "actionability": 1.0,
-      "correctness": "correct-range",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Sewer scope cost ranges in this band are typical for Portland; not contradicted in the accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A33",
-      "claim_short": "Private plumbing work $5,000-$12,000",
-      "claim_full": "Contractor labor and materials for the lateral install plus cesspool decommissioning typically run $5,000 to $12,000.",
-      "topic": "costs",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
       "actionability": 0.9,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": "BES estimate",
-      "verified_truth": "Range matches the city's published estimate for private plumbing work per the enhanced response.",
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 17.32 / PP&D",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": null
-      }
+        "enhanced": "https://www.portland.gov/code/17/32"
+      },
+      "verified_truth": "Correct: cesspool-to-sewer conversions in Portland require decommissioning, plumbing, and ROW utility connection permits."
     },
     {
-      "id": "A34",
-      "claim_short": "Total connection $12,000-$20,000",
-      "claim_full": "A realistic total cost to connect to public sewer is roughly $12,000 to $20,000 (OOB/MCP) or $15,000 to $30,000 in the enhanced variant.",
-      "topic": "costs",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.9,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": null,
-      "verified_truth": "Total cost ranges are consistent with current Portland conversion projects; not contradicted in the accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A35",
-      "claim_short": "Decommission-only is $1,500-$5,000",
-      "claim_full": "If the property is already on sewer and only the abandoned cesspool needs filling, the cost is roughly $1,500 to $5,000.",
-      "topic": "costs",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct-range",
-      "importance": 5,
-      "citation": null,
-      "verified_truth": "Decommission-only cost range is plausible and is consistent with the AI's correctly-flagged worst-case-vs-decommission-only fork driven by the 2009 permit data.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A36",
-      "claim_short": "Pre-1950 cesspools typically brick-lined",
-      "claim_full": "Older Portland cesspools (pre-1950 homes) are typically brick-lined.",
-      "topic": "definitions",
+      "id": "A26",
+      "claim_short": "Connect first, then decommission",
+      "claim_full": "The practical sequence is to connect to the public sewer first and then decommission the cesspool, since decommissioning is triggered when the cesspool is no longer in use.",
+      "topic": "sequence",
       "variants": [
         "enhanced"
       ],
       "specificity": 0.7,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 1,
-      "citation": null,
-      "verified_truth": "Brick-lined cesspools are a typical historical Portland construction; consistent with accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A37",
-      "claim_short": "Permit sequence: SDC paid before permits issued",
-      "claim_full": "The SDC must be paid or financed before BES will issue a UC permit and BDS will issue plumbing permits.",
-      "topic": "sequence",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 1.0,
+      "actionability": 0.9,
       "correctness": "correct",
       "importance": 4,
-      "citation": null,
-      "verified_truth": "BES procedure requires SDC payment or financing agreement before permit issuance; consistent with PCC Title 17 and ENB-4.05.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A38",
-      "claim_short": "Project timeline 6-12 weeks",
-      "claim_full": "From decision to completion, a typical cesspool-to-sewer conversion takes roughly 6 to 12 weeks.",
-      "topic": "sequence",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.8,
-      "correctness": "correct-range",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Timeline range is consistent with typical Portland conversion projects; not contradicted in the accuracy flags.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A39",
-      "claim_short": "DEQ-licensed pumper required",
-      "claim_full": "Cesspool pumping must be performed by a DEQ-licensed pumper, and the receipt is required for inspection.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "DEQ-licensed pumper requirement is consistent with OAR 340-071-0185 cesspool decommissioning rules.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A40",
-      "claim_short": "Fill cesspool with sand/gravel/slurry not dirt",
-      "claim_full": "Decommissioning requires filling the cesspool with approved material (sand, gravel, or concrete slurry), not dirt, with a city inspection.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 3,
       "citation": "OAR 340-071-0185",
-      "verified_truth": "State cesspool decommissioning rules require approved fill materials and inspection per OAR 340-071-0185.",
       "citation_by_variant": {
-        "enhanced": "OAR 340-071-0185"
-      }
+        "enhanced": "https://oregon.public.law/rules/oar_340-071-0185"
+      },
+      "verified_truth": "Correct: decommissioning under OAR 340-071-0185 is triggered when systems are no longer in use, supporting the connect-first sequence."
     },
     {
-      "id": "A41",
-      "claim_short": "Combined sewer in Piedmont neighborhood",
-      "claim_full": "The Piedmont area uses combined sewers that carry both sanitary sewage and stormwater in a single pipe.",
-      "topic": "sewer",
+      "id": "A27",
+      "claim_short": "Inspection code 842 / 503-823-7000",
+      "claim_full": "Schedule the cesspool decommissioning inspection by calling 503-823-7000 and using inspection code 842.",
+      "topic": "process",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.8,
-      "actionability": 0.4,
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "PP&D septic permit application",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/documents/septic-decommissioning-permit-application/download"
+      },
+      "verified_truth": "Per accuracy flags, decommissioning inspection code 842 via 503-823-7000 is the correct city procedure."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Decommission: pump + fill, leave 12-18\" open",
+      "claim_full": "OAR 340-071-0185 requires a DEQ-licensed pumper to empty the cesspool, then fill with approved material (sand/gravel) leaving the top 12-18 inches open for inspection.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "OAR 340-071-0185",
+      "citation_by_variant": {
+        "enhanced": "https://oregon.public.law/rules/oar_340-071-0185"
+      },
+      "verified_truth": "Correct: OAR 340-071-0185 governs the pump-and-fill procedure with the inspection allowance described."
+    },
+    {
+      "id": "A29",
+      "claim_short": "UR/UC permits expire 180 days",
+      "claim_full": "UR and UC right-of-way permits expire 180 days after issue, with one 180-day extension available before expiration.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
       "correctness": "correct",
       "importance": 2,
-      "citation": null,
-      "verified_truth": "Combined sewer system in inner North Portland neighborhoods is documented BES infrastructure consistent with the Albina basin assignment.",
-      "citation_by_variant": null
+      "citation": "PP&D UR/UC permits",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/infrastructure/ur-and-uc-permits"
+      },
+      "verified_truth": "Per accuracy flags, UR/UC permits expire 180 days after issue with one 180-day extension available."
     },
     {
-      "id": "A42",
-      "claim_short": "Title 11 covers street trees",
-      "claim_full": "PCC Title 11 governs street trees, and Urban Forestry (within Portland Parks & Recreation) must weigh in on digging near street trees.",
-      "topic": "trees",
+      "id": "A30",
+      "claim_short": "Need 3 bids from CCB-licensed contractors",
+      "claim_full": "Initiating a BES plumbing loan requires three bids from CCB-licensed contractors, with the city paying the contractor directly on completion.",
+      "topic": "process",
       "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.85,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "BES financial assistance",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/bes/connecting-sepo/financial-assistance-sewer-connection-and-conversion"
+      },
+      "verified_truth": "Three CCB-verified bids and direct city payment are documented in BES sewer connection guidance and consistent across responses."
+    },
+    {
+      "id": "A31",
+      "claim_short": "10-foot proximity triggers decommissioning",
+      "claim_full": "Pulling a permit for new construction within 10 feet of an abandoned cesspool requires formal decommissioning under OAR 340-071-0185.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
         "enhanced"
       ],
       "specificity": 0.9,
       "actionability": 0.7,
       "correctness": "correct",
-      "importance": 2,
-      "citation": "PCC Title 11",
-      "verified_truth": "Title 11 is Portland's tree code and Urban Forestry has authority over street trees, consistent with the hackathon brief's Title 11 description.",
+      "importance": 3,
+      "citation": "OAR 340-071-0185",
       "citation_by_variant": {
-        "enhanced": "PCC Title 11"
-      }
+        "oob": "OAR 340-071-0185",
+        "mcp": "OAR 340-071-0185",
+        "enhanced": "https://www.portland.gov/sites/default/files/2020-09/septic_decommissioning_041117.pdf"
+      },
+      "verified_truth": "Correct: the 10-foot proximity trigger for formal decommissioning is documented in PP&D's septic decommissioning information sheet."
+    },
+    {
+      "id": "A32",
+      "claim_short": "BES sewer rate ~$13.54 / 100 cu ft",
+      "claim_full": "BES charges a sanitary sewer rate of approximately $13.54 per 100 cubic feet of metered water, useful as a tell for whether a property is currently on city sewer.",
+      "topic": "fees",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "hedge-correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Per accuracy flags, the $13.54 per 100 cu ft rate is a specific claim presented without an authoritative URL and warrants verification."
+    },
+    {
+      "id": "A33",
+      "claim_short": "$15 in-person records at PP&D",
+      "claim_full": "Pulling the historic plumbing card in person at PP&D Trade Permits, 1900 SW 4th Ave, costs about $15.",
+      "topic": "costs",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "hedge-correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Per accuracy flags, the $15 records fee at the 1900 SW 4th Ave address is a specific claim without an authoritative URL."
+    },
+    {
+      "id": "A34",
+      "claim_short": "Lot too small for new septic",
+      "claim_full": "Modern septic systems require setbacks and drainfield area that an inner-Portland 5,000 sq ft R5 lot cannot meet, making 'replace with septic' impractical.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "OAR 340-071-0220",
+      "citation_by_variant": {
+        "enhanced": "https://oregon.public.law/rules/oar_340-071-0220"
+      },
+      "verified_truth": "Correct: OAR 340-071-0220 imposes setback and groundwater separation requirements that small urban lots cannot meet."
+    },
+    {
+      "id": "A35",
+      "claim_short": "Combined sewer / Albina basin",
+      "claim_full": "The sewer in N Missouri Ave is a combined sewer in the Albina basin draining to the Columbia Slough watershed, meaning the homeowner pays both sewer and stormwater charges after connection.",
+      "topic": "address",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps environmental",
+      "citation_by_variant": {
+        "enhanced": "https://www.portlandmaps.com/detail/property/6624-N-MISSOURI-AVE/R232318_did/environmental/"
+      },
+      "verified_truth": "Per accuracy flags, the property is in the Albina combined sewer basin and Columbia Slough watershed."
     }
   ]
 }

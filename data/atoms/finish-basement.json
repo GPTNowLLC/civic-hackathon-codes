@@ -1,0 +1,703 @@
+{
+  "scenario": "finish-basement",
+  "scenario_label": "Finish basement",
+  "address": "1860 SE Ladd Ave, Portland, OR 97214",
+  "neighborhood": "Ladd's Addition",
+  "evaluator_model": "claude",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this for you. Ladd's Addition is a notable Portland address, so there could be some wrinkles beyond the standard basement permit checklist.Now let me check the property's historic district status, since Ladd's Addition is a historic neighborhood and that affects what's required.Let me verify the property is actually in the historic district and check a couple more specifics.Here's the picture for 1860 SE Ladd Ave, with the Ladd's Addition angle factored in (since that changes a few things you might not see in a generic answer).\n\n## The basic permit bundle\n\nFinishing a basement to habitable space always requires a **building permit** in Portland; there is no DIY exemption, even if you're not adding a bathroom. The moment you frame walls and drywall to create livable area, the permit is on. You'll almost certainly want a **Residential Combination permit**, which bundles building plus the trade permits you need (electrical, plumbing, mechanical) under one IVR number with one set of inspections.\n\nWhat goes into the application:\n\n1. Building Permit Application (the city has a fillable PDF)\n2. A site plan (sample on portland.gov)\n3. Architectural plans drawn to scale; can be hand-drawn at 11x17 with 12pt or larger text, no architect required for a basic finish\n4. Trade permit applications if doing combination (electrical, mechanical, plumbing)\n5. Owner Doing Work form if you're self-permitting\n\nYou can do your own electrical only if you both own and occupy the home and are not planning to sell or rent within six months. Plumbing/mechanical can be DIY too if you sign the form.\n\nThe code that governs you is **Oregon Residential Specialty Code** plus Portland's **Building Code Guide 96-12 (the \"Habitable Spaces Code Guide\")**, which is the relaxed-standards document for converting older spaces. This is important because Ladd's Addition homes (mostly 1905-1925 vintage) almost never meet new-construction ceiling heights. Under BCG 96-12 you can get reduced clearances; new-construction standards would be much stricter. The companion document is **Brochure 9** (\"Converting Attics, Basements and Garages to Living Space\"). Both are free PDFs on portland.gov; pull them before you design anything.\n\n## The Ladd's Addition wrinkle (this is where most generic guides miss the point)\n\nYour property sits inside the **Ladd's Addition Historic District**, which has been on the National Register since 1988. That sounds scary, but here is the actual rule:\n\n**Interior alterations are not subject to Historic Resource Review.** Framing, drywall, electrical, finishes, even adding a bathroom; none of that triggers historic review. You're treated like any other Portland homeowner for interior work.\n\n**The trap is egress.** Oregon R310 requires every basement bedroom to have an emergency escape and rescue opening: 5.7 sq ft of clear opening (5.0 if it's at grade level), minimum 24\" tall and 20\" wide, with the sill no higher than 44\" off the floor. If your basement doesn't already have a window that meets this, you'll need to cut a new opening in the foundation wall and likely build an egress well outside. **Cutting a new exterior opening is an exterior alteration**, which triggers Historic Resource Review (typically Type I, 4-8 week processing), plus the well, grate, and any window style/material may be reviewed for compatibility. The visible-from-street vs rear-of-house axis matters here; rear-facing egress is reviewed more lightly than street-facing.\n\nThe cleanest path: make any basement bedroom use an existing window opening if at all possible, and keep new openings (for non-bedroom rooms) on rear elevations. If you're not adding a bedroom at all and can keep the basement as living/family/office space, you avoid the whole egress-window-historic-review problem.\n\n## What you're NOT in for (good news)\n\nA basement-only finish (no exterior wall removal, no footprint expansion) does **not** trigger MRAA (Major Residential Alteration and Addition). That means no 35-day neighbor notification delay and no Recognized Organization notice. The MRAA threshold is 50%+ exterior wall removal or 500+ sq ft of new footprint; a basement finish is well below that.\n\nYou also do not need land use review for a normal basement finish. Zoning (Title 33) is reviewed as part of the building permit application.\n\n## Pre-application checklist (the stuff that saves you real money)\n\nBefore you even file, do these:\n\n**Pull the permit history for the property.** Portland keeps inspection cards and microfilmed plans for old houses. Order them through portland.gov public records. This tells you what's been permitted previously, which framing you can rely on, and (importantly) flags any prior unpermitted basement work that would need retroactive permitting before you could legally add to it.\n\n**Test for radon.** Portland sits in an elevated radon zone per Oregon Health Authority. A passive sub-slab depressurization rough-in costs hundreds while the slab is exposed; retrofitting after finish costs thousands. Test now; if elevated, plan the rough-in into the framing inspection.\n\n**Plan for lead paint.** Your house is pre-1978 (likely 1905-1925 vintage given the address). Federal RRP rule applies: any disturbance of painted surfaces requires a **Certified Renovator** working for a Certified Firm. If you DIY, you can get certified yourself (one-day class, ~$200-300). If you hire out, verify the CCB license number AND the EPA lead-safe firm certification.\n\n**Check for asbestos** on any old pipe insulation, vinyl floor tile, or popcorn ceiling material before demo. OAR 340-248 governs handling; testing through a licensed lab is the way.\n\n**Consider a voluntary seismic retrofit while walls are open.** Portland's brochure on residential seismic strengthening is free, and the cheapest possible window to bolt the sill plate to the foundation and add shear panels is exactly when the basement walls are framed but not yet drywalled. Ladd's Addition homes are almost always unbolted from their foundations as built. This is a \"two-for-one\" while you're already in there.\n\n## Two things that will save you time and money\n\n**The free 15-minute appointment with PP&D.** Portland Permitting & Development offers free 15-minute virtual appointments with a Building Code Reviewer, a City Planner, or a Permit Technician. Book one before you finalize plans. Get the egress question, the historic review interplay, and the BCG 96-12 ceiling-height numbers confirmed in writing for your specific situation. Phone is 503-823-7300.\n\n**Oregon Special Assessment of Historic Property.** This is unrelated to your basement permit, but since you're sitting on a contributing structure in Ladd's Addition, you may qualify for a 10-year property tax freeze in exchange for a preservation plan. The tradeoff is that exterior changes get more scrutiny during the assessment period, but if you're doing interior work (basement finish, kitchen, bathrooms) and not touching the street-facing exterior, the math can be very favorable. Worth asking the State Historic Preservation Office (SHPO) about; applications are accepted in specific windows. To know if you qualify, you need to confirm your home is classified as \"contributing\" in the district, which you can check on Portland Maps under the Zoning and Districts tab.\n\n## A note on sources\n\nI leaned mostly on portland.gov primary sources (the basement conversion page, BCG 96-12, MRAA page) and the official Ladd's Addition Conservation/Historic District guidelines. Some of the contractor blogs (H&C, Arciform, Lamont Bros, Revive Works) are useful for context but they're also selling services, so I cross-checked their specifics against city documents before passing them along. The 15-minute city appointment is the authoritative way to confirm anything specific to your property.\n\nWant me to dig into a specific piece next? I can pull the actual BCG 96-12 ceiling-height numbers, sketch what a code-compliant egress well looks like under historic review, walk through fee estimation for your likely scope, or check Portland Maps for your home's contributing-structure classification."
+    },
+    "mcp": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into both the general permit requirements and the property-specific considerations for your address. Ladd's Addition is a historic district, which adds a layer most \"how to permit a basement\" guides won't cover, so let me pull both threads at once.Now let me verify the current Portland Permitting Services rules and Ladd's Addition Historic Design Review requirements.Here's the picture for your specific property, and there's one big wrinkle the generic \"Portland basement permit\" articles will never tell you.\n\n## Your property in one paragraph\n\n1860 SE Ladd Ave is a 1923 single-family home, R5 zoning, 2,662 sq ft, in the **Ladd's Addition Historic District**, classified as a **\"Contributing\" historic resource** (\"Armacher, Max R., Residence\" on the Oregon historic register). It's in a **Moderate liquefaction hazard zone** but not in a FEMA flood area. Permit history shows a 2009\u20132013 alteration/addition project that already went through Historic Design Review (LU 09-159670 HDZ), plus a sewer repair in 2008.\n\n## The big wrinkle: historic review, not just a building permit\n\nMost \"finish your basement in Portland\" guides assume a normal lot. Yours isn't one. Because the house is a Contributing structure in Ladd's Addition, **any change to the exterior triggers Historic Resource Review (HRR) before a building permit can issue**. For a basement finish, the exterior change you almost certainly need is **egress windows and window wells** for any sleeping rooms. There's a direct precedent two blocks from you: LU 15-165780 HR approved two basement egress aluminum-clad wood windows with concrete window wells, with findings explicitly stating \"Historic resource review is required for basement windows and exterior alterations in historic districts that are not otherwise exempt from review\". The approval criteria are the **Ladd's Addition Conservation District Design Guidelines, Exterior Rehabilitation** chapter; key practical implications: aluminum-clad wood is acceptable, vinyl is not, and the wells should be concrete (not corrugated metal) and placed below the lowest wood trim line so they don't disrupt the streetside fa\u00e7ade.\n\nIf you can confine sleeping rooms to areas served by **existing** basement window openings at code-compliant size, you can sometimes avoid HRR; that's worth designing around if at all possible.\n\n## What you'll actually need to permit\n\nFor a typical basement finish with bedroom(s) and a bathroom, you'll be filing:\n\n- **Residential Building Permit** for the conversion itself. Portland requires a building permit any time you convert a basement to habitable space, and the project may also need electrical, plumbing, and mechanical permits. A \"Residential Combination\" permit bundles all of these under one IVR number, which is usually what you want.\n- **Electrical, plumbing, mechanical** trade permits (bundled if combo).\n- **Historic Resource Review (Type II Land Use Review)** if you're altering any exterior opening, window, or grade. Type II is staff-level (no public hearing) but includes a public notice period; budget 6\u201310 weeks.\n- **Plot plan, floor plans (existing + proposed), section through the basement, and a smoke/CO alarm plan** as part of the building submittal.\n- **Structural calcs** if you're cutting a new window opening, removing/modifying a bearing wall, or doing anything to the floor framing above.\n\n## Code-specific things that bite older Ladd's homes\n\nA 1923 house has some predictable issues; flagging in priority order:\n\n1. **Ceiling height.** Code wants 7'0\" for habitable space, but Portland's Building Code Guide 96-12 provides alternative standards for existing homes that are more forgiving than new construction. Get this confirmed in plan review before you finalize ductwork or soffits, because a single misplaced beam can cost you a usable room.\n2. **Egress.** 5.7 sq ft clear opening, 20\" min width, 24\" min height, with the 5.0 sq ft reduction allowed at grade and at basements where the well bottom is no more than 44 inches below grade. The well needs a 36\" x 36\" clear area in front of the window. If the well is deeper than 44\", a permanently attached ladder is required.\n3. **Foundation bolting.** This is the one I'd push hardest on. Portland explicitly recommends voluntary seismic strengthening while the floor framing and basement walls are exposed; you're in a Moderate liquefaction zone, the house was built in 1923 (predates anchor-bolt requirements), and the walls will be open exactly once. Adding foundation bolts and shear plywood while the studs are exposed costs a fraction of what it does retroactively, and it materially changes the house's earthquake survivability.\n4. **Knob-and-tube and 1923-vintage wiring.** Insurance carriers increasingly won't write policies on active K&T. If any is in the basement ceiling/walls, plan to replace it as part of the electrical permit; it's much cheaper open than later.\n5. **Radon.** Portland-area homes show measurable radon risk and the Oregon Health Authority recommends testing homes with basements. Test before you frame; if it's high, a sub-slab depressurization rough-in while the slab is accessible is much cheaper than retrofitting.\n6. **Moisture.** LVP or porcelain tile are the safe finish floor choices for Portland basements; standard hardwood, laminate, and carpet directly on concrete are not.\n7. **Lead paint and possibly asbestos** (vinyl floor tiles, pipe wrap, plaster). RRP-certified contractor handling is required if disturbing painted surfaces.\n\n## Suggested sequence\n\n1. **Pull the existing plans first.** PP&D has microfilmed plans and inspection cards for older houses. The 2010-era HDZ approval (LU 09-159670) and 2011-2013 alteration (2011-111637-RS) on file probably contain framing, foundation, and possibly some basement-relevant drawings. Email PP&D Records or use their public records portal; this can save you a survey.\n2. **Free pre-application meeting with PP&D.** They'll tell you exactly which permits and reviews apply, and a Historic Review staffer can flag specific window-well design issues before you spend on an architect.\n3. **Bring a designer who has done HRR in Ladd's.** This is not generic remodeling work; familiarity with the Conservation District guidelines will save weeks.\n4. **Run radon and consider seismic.** Both are time-of-construction decisions.\n5. **Submit HRR (if needed) in parallel with building plan prep.** HRR can run concurrently with building plan check, but no permit issues until HRR is recorded with Multnomah County.\n6. **Apply for the combination permit.** Do this through Portland's online permit portal.\n7. **Build, inspect, final.**\n\n## A small thing worth verifying\n\nThe Multnomah County assessor record currently shows the owner of 1860 SE Ladd as **Joseph T. Nelson** with a 2007 sale on file. If you've recently purchased it, that's normal lag; if not, worth confirming the parcel before you spend on plans, since some permits and HRR submittals require owner authorization.\n\n---\n\nIf it's useful, I can draft a project doc formatted for your Obsidian vault with the permit numbers, decision points, contact info, and a checklist sequenced as a project plan; just say the word."
+    },
+    "enhanced": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll do this properly \u2014 start with research before writing a single sentence. Portland reorganized its permitting bureaus recently, so I need to verify the current (2026) names and contact info, plus pull the actual code sections for every claim. Let me work through this carefully.Excellent \u2014 confirmed it's R5 base zoning, in the Ladd's Addition Historic District, classified as a \"Contributing\" resource (the 1923 Max R. Armacher Residence). Let me pull more property-specific data.Good \u2014 I have the property profile. Now let me verify Portland's current permitting structure (the user mentioned PP&D, which was a recent reorganization).Confirmed: BDS was phased out and replaced by **Portland Permitting & Development (PP&D)** in June 2024. PP&D is now the front door for everything. Let me dig into basement-finish-specific rules.Now let me look at historic district rules for Ladd's Addition specifically.Critical finding: Ladd's Addition triggers Historic Resource Review for any exterior changes \u2014 and adding a basement egress window IS an exterior change. Let me confirm the code and look at the simple bathroom path and SDCs.Now let me check SDCs (the impact fees triggered by adding bedrooms or ADUs) and the simple bathroom path.Let me get the simple bathroom permit details and check BES sewer requirements.Let me confirm a few more details: tree code, fire bureau, contractor licensing, and verify the 15-min appointment process.I have everything I need. Now let me write this carefully, with every claim cited inline. Here's the comprehensive answer:\n\n---\n\n# Finishing Your Basement at 1860 SE Ladd Ave: A Plain-English Permit Guide\n\n## The short answer\n\nYou'll definitely need permits, but the news is mostly good: **interior basement work in Ladd's Addition is not gated by historic review** \u2014 only changes you can see from outside are. So framing, drywall, electrical, and plumbing inside your basement walls do not need to go before any historic landmarks board (Portland Zoning Code Section 33.846.020.A.4 lists what triggers historic review, https://www.portland.gov/code/33/800s/846). The big exception is the **egress window** required for any new bedroom, because cutting a new opening in your foundation and installing a window well counts as an exterior change and *does* need historic review (the city has approved similar Ladd's basement-window cases before, like LU 15-165780 HR, https://efiles.portlandoregon.gov/Record/16230506/File/Document). Plan on roughly **$1,500 to $3,500 in city fees** for a typical basement finish with a bedroom and bathroom, plus extra time and money if you need an egress window or you're going for an actual second dwelling unit. Your single most important early step is **a free 15-minute virtual appointment** with a Portland Permitting & Development planner before you spend a dime on plans (https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments).\n\n---\n\n## 1. Is Ladd's Addition special? (Yes, but mostly for outside stuff.)\n\nYour address sits inside the **Ladd's Addition Historic District** \u2014 a National Register of Historic Places district designated in 1988 (https://en.wikipedia.org/wiki/Ladd's_Addition). Portland's zoning system flags your specific lot with the historic district code \"LA\" and identifies your house as a **\"Contributing\" resource** built in 1923, recorded in the Oregon historic inventory as the *\"Max R. Armacher Residence\"* (https://heritagedata.prd.state.or.us/historic/index.cfm?do=v.dsp_siteSummary&resultDisplay=647931). \"Contributing\" means the building itself helps tell the story of the district, so the city pays closer attention to changes than it would for a non-contributing house.\n\nHere's the key plain-English rule: **the rules about how rooms in your basement have to be built so they're safe to live in are written in the building code, not the historic code**. Interior changes by themselves are not subject to Historic Resource Review (the formal city process where a planner checks your project against historic district rules). A historic preservation Q&A document published by Restore Oregon, summarizing the city's policy, states it directly: interior alterations are not subject to historic resource review unless they cause an exterior change like adding, moving, or removing a window or door (https://restoreoregon.org/wp-content/uploads/2017/03/QA-Handout.pdf). The triggering rule itself is in Portland Zoning Code Section 33.846.060, which is the chapter that governs Historic Resource Reviews (PCC 33.846.060, https://www.portland.gov/code/33/800s/846).\n\n**Your base zoning is R5 (Residential 5,000)** \u2014 the most common single-family zoning in Portland \u2014 with no overlays beyond the historic district itself (https://www.portlandmaps.com/bps/zoning/#/zones/base/R5). No conservation district, no environmental zone, no design overlay, no plan district.\n\nThe catch: **adding a basement bedroom almost always means cutting a new egress window into your foundation wall**, because old Ladd's basements rarely have one big enough. That window \u2014 visible from outside, even partly \u2014 is an exterior alteration and does require Historic Resource Review under PCC 33.846.060 (https://www.portland.gov/code/33/800s/846). Type I (staff-level, no public hearing) review is typical for one new basement window if it faces a side or rear yard and uses a compatible window style; Type II review (8\u201310 weeks, public notice) gets used for more visible or substantial work.\n\nYour property has been through historic review before \u2014 there's a 2009 Type II Historic Design Review on file (LU 09-159670 HDZ, viewable through PortlandMaps permit history at https://www.portlandmaps.com), so this isn't unfamiliar territory for the lot.\n\n## 2. What permits will you likely need?\n\nPortland separates work into a **building permit** (the structural and life-safety side) and three **trade permits** \u2014 **plumbing**, **electrical**, and **mechanical** (heating/ventilation). You can bundle them all into a single \"Residential Combination Permit\" so one inspector schedule covers everything (https://www.portland.gov/ppd/residential-permitting/home-projects/attic-basement-or-garage-conversion).\n\n**Just framing, drywall, and lighting (a finished family room, no bathroom, no bedroom):** Building permit + electrical permit. The state of Oregon explicitly lists \"finishing an attic, garage, or basement to make additional living space\" as a project that requires a permit (Oregon Building Codes Division, https://www.oregon.gov/bcd/lbdd/pages/oregon-permits.aspx).\n\n**Adding a bathroom (and nothing else habitable):** You can use the **Simple Bathroom Permit** path \u2014 a faster, plans-light process \u2014 as long as the work is interior only, no load-bearing changes, the property has no more than three toilets total, and it's in your primary residence (https://www.portland.gov/ppd/residential-permitting/home-projects/simple-bathroom-permits). You apply by emailing one PDF to ppdsbp@portlandoregon.gov and the city reviews within five business days.\n\n**Adding a bedroom:** Building permit + the egress window trigger discussed above. Bedrooms in basements must have an emergency escape and rescue opening (an \"egress window\") with a clear opening of not more than 44 inches above the floor, sized to the Oregon Residential Specialty Code Section R310 standard (PCC reference at https://www.portland.gov/ppd/residential-permitting/residential-projects/emergency-escape-and-rescue-openings). In Portland, the standard ORSC sizes are a clear opening of 5.7 square feet (5.0 sq ft if the sill is at grade), with a minimum opening height of 24 inches and minimum opening width of 20 inches (Oregon Residential Specialty Code R310, summarized by H&C Design-Build, https://www.hcdesignbuild.co/blog/portland-basement-finishing-guide/).\n\n**Bedroom + bathroom (the typical basement suite):** Building + plumbing + electrical + mechanical, plus the egress window plus historic review for the window. Best approach is the combination permit.\n\n**Adding a kitchenette \u2014 careful here:** Two paths. If the new kitchen is *not* closed off from the main house (no separating door, shared circulation), Portland may treat it as an **\"accessory kitchen\"** \u2014 allowed, but you have to sign a covenant (a deed restriction) saying it won't be used as part of an independent dwelling unit, per Building Official Determination 19-06 (BOD 19-06, https://www.portland.gov/ppd/code-policy/building-official-determinations/bod-19-06-accessory-kitchens). If the kitchen *is* closed off and combined with a bathroom and sleeping space, the city treats the basement as an **Accessory Dwelling Unit (ADU)** \u2014 a separate, legally independent home (PCC 29.10, item U \"Dwelling Unit,\" https://www.portland.gov/code/29/10). ADUs are allowed in the R5 zone (PCC 33.205, https://www.portland.gov/code/33/200s/205), but trigger their own permitting path with extra fees and requirements detailed in Section 4 below.\n\n**Zoning permit:** A separate \"zoning permit\" usually isn't needed for an interior basement finish in R5 because you're not changing the building's footprint or height. Zoning compliance gets checked as part of the building permit review. The exception is if you create an ADU, which has its own zoning standards (PCC 33.205.030, https://www.portland.gov/code/33/200s/205).\n\n**The \"minor remodel\" question:** Portland used to have a true over-the-counter (same-day) permit for small projects, but that's now mostly online review. There is a **Small Project Permit Program** that aims to review qualifying simple projects within about two days of intake and 15 days total (per a 2024 Mackenzie firm summary, https://www.mcknze.com/city-portland-permit-updates), and the Simple Bathroom Permit above is its own fast-track path. For a full basement conversion, plan on a regular plan review.\n\n## 3. The Portland City Code titles that govern your basement\n\nPortland's building rules live across several code \"Titles,\" each handling a different slice of the work. You don't have to read these; your contractor or designer does. Here's what each one covers in plain English, with the specific sections that hit a basement finish.\n\n**Title 24 \u2014 Building Regulations** (https://www.portland.gov/code/24) is the structural and life-safety code; Portland adopts the Oregon Residential Specialty Code (ORSC) by reference for one- and two-family homes (PCC 24.10, https://www.portland.gov/code/24/10). The most important Portland-specific document for your project is **Building Code Guide 96-12: Habitable Spaces** (BCG 96-12, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide), which gives older homes a friendlier ceiling-height standard than new construction. New houses need 7 feet, but BCG 96-12 lets *existing* basements being converted to living space have a minimum ceiling height of **6 feet 8 inches** (with overhead beams as low as 6 feet allowed if they're within 2 feet of a wall), and **6 feet 2 inches** in bathrooms (BCG 96-12 Section 1, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide). For a 1923 Ladd's house, this is often the difference between a feasible project and an impossible one. And BCG 96-12 lets you use a recorded **covenant** \u2014 a deed restriction \u2014 to allow ceiling heights even slightly lower than 6 feet 8 inches, but only once every five years and never for an ADU or rental (BCG 96-12 Section 8, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide).\n\n**Egress windows** are governed by Oregon Residential Specialty Code Section R310, which Portland enforces; a basement bedroom must have an emergency escape opening, and a basement with any sleeping rooms needs at least one such opening (https://www.portland.gov/ppd/residential-permitting/residential-projects/emergency-escape-and-rescue-openings). The clear opening sits no more than 44 inches above the floor (ORSC R310 / Portland code guide, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide). An exterior basement door at least 6 feet 2 inches tall and 30 inches wide can substitute for a window if it's at least one step below the floor above (BCG 96-12 Section 6.3, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide).\n\n**Title 25 \u2014 Plumbing** (https://www.portland.gov/code/25) governs water supply, drains, vents, and fixtures. A new bathroom or kitchenette needs a plumbing permit. Portland adopts the Oregon Plumbing Specialty Code by reference (PCC 25.01, https://www.portland.gov/code/25). **Bathroom ventilation** must follow ORSC and is enforced through the plumbing/mechanical permits.\n\n**Title 26 \u2014 Electrical** (https://www.portland.gov/code/26) is the wiring code. Adding circuits, outlets, lighting, or upgrading the panel needs an electrical permit. The state Electrical Specialty Code requires **GFCI** (ground-fault circuit interrupter \u2014 the protected outlets that trip when they detect a leak to ground) and **AFCI** (arc-fault) protection on circuits in finished basement areas, including bathrooms, kitchens, and unfinished portions; requirements are in the National Electrical Code as adopted by Oregon (Oregon Building Codes Division, https://www.oregon.gov/bcd/codes-stand/Pages/electrical.aspx). Bathroom outlets must be GFCI; bedroom and family-room outlets need AFCI.\n\n**Title 27 \u2014 Heating and Ventilating** (https://www.portland.gov/code/27) covers furnaces, ducts, water heaters (the heating side), and bath fans. New ductwork or a relocated furnace needs a mechanical permit.\n\n**Title 29 \u2014 Property Maintenance** (https://www.portland.gov/code/29) is the \"keep your house safe and habitable\" code; Section 29.10 contains the dwelling unit definitions that decide whether a kitchen plus a bedroom plus a bathroom equals an ADU (PCC 29.10, https://www.portland.gov/code/29/10).\n\n**Title 33 \u2014 Planning and Zoning** (https://www.portland.gov/code/33) covers what's allowed where. The R5 single-dwelling rules are in Chapter 33.110 (PCC 33.110, https://www.portland.gov/code/33/100s/110), ADU standards are in Chapter 33.205 (PCC 33.205, https://www.portland.gov/code/33/200s/205), and the historic district rules that would apply if you cut a new exterior window are in Chapter 33.846 (PCC 33.846, https://www.portland.gov/code/33/800s/846).\n\n**Smoke and CO alarms when you pull the permit:** This one surprises homeowners. Pulling a building permit for the basement triggers an upgrade to **the entire house's smoke alarms**, not just the basement. ORSC R314.2.2 says when alterations requiring a permit occur, the whole dwelling unit must be equipped with smoke alarms located as required for new dwellings (Portland summary at https://www.portland.gov/ppd/smoke-alarm-and-carbon-monoxide-alarm-requirements). That means a smoke alarm in every existing bedroom, outside every sleeping area, and on every floor \u2014 interconnected so when one goes off, they all do (ORSC R314, https://www.portland.gov/ppd/smoke-alarm-and-carbon-monoxide-alarm-requirements). Carbon monoxide alarms (ORSC R315) are required outside each separate sleeping area and within 15 feet of each bedroom door, in any home with a fuel-fired appliance or attached garage (https://www.portland.gov/ppd/smoke-alarm-and-carbon-monoxide-alarm-requirements). There's a narrow exception: trade-only work like swapping plumbing or repairing siding doesn't trigger the whole-house upgrade, but a basement *building* permit does.\n\n**Insulation upgrades when walls are opened:** When you remove drywall (or there isn't any to remove) on an existing exterior basement wall, Portland's BCG 96-12 requires you insulate that exposed cavity to **R-15** (BCG 96-12 Section 7.2, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide). Existing R-11 or better insulation can stay. The rest of the house is not pulled into the energy code unless you're separately disturbing finishes elsewhere.\n\n**Electrical panel upgrade:** Not automatic. Whether your current panel needs to be upgraded depends on the new circuits' total load. Your electrician runs the load calculation; if the basement adds a kitchen, electric heat, an EV charger, or a heat pump, an upgrade to a 200-amp service is often required. A panel upgrade is a separate electrical permit (about $225, per the 2026 PermitCalculator analysis of Portland fees, https://permitcalculator.com/cities/portland-or/).\n\n**Kitchenette = ADU? It depends.** This is the single most consequential decision in your project. The legal definition of a \"Dwelling Unit\" in Portland City Code Section 29.10 (item U) requires a space that provides for living, sleeping, eating, *cooking*, and sanitation \u2014 independent of the rest of the house (PCC 29.10, https://www.portland.gov/code/29/10). A bedroom + bathroom + a sink and microwave bar that's open to the main house = not a dwelling unit; it's an \"accessory kitchen\" with a covenant under Building Official Determination 19-06 (BOD 19-06, https://www.portland.gov/ppd/code-policy/building-official-determinations/bod-19-06-accessory-kitchens). A bedroom + bathroom + a real kitchen (range/cooktop) + a separating door = ADU, with all the extras described in Section 4 below.\n\n## 4. Sewer, stormwater, and the BES angle\n\nYour house drains into the **Alder Combined Sewer Basin** \u2014 a \"combined\" system where sanitary sewage and stormwater share one pipe (PortlandMaps environmental data confirms this, https://www.portlandmaps.com). All of inner SE Portland uses combined sewers, which is normal for neighborhoods built before about 1950, but it has two practical consequences: (1) heavy rain can occasionally cause sewer backups in basements, so a backwater valve on any new basement bathroom is a smart investment, and (2) Portland's BES sometimes requires stormwater management when projects expand impervious surfaces, but a basement finish doesn't add any new impervious area, so this rarely applies to you.\n\n**Adding one bathroom to your existing private sewer lateral:** As of a 2019 BES policy update, you only need a **plumbing trade permit (PT)**, not a separate BES sewer connection permit, as long as you're connecting to your existing sewer lateral on private property and not doing work in the right-of-way (https://www.portland.gov/bds/news/2019/4/29/bureau-environmental-services-bes-update). Big simplification.\n\n**If your sewer lateral needs repair or a new connection in the street:** That requires a **UR Permit** (lateral repair) or **UC Permit** (new connection) from BES, in addition to the plumbing permit (https://www.portland.gov/bes/connecting-sewer/ur-uc-permit-guide). UR and UC reviews take 1\u20132 business days and cost roughly $500 each, per the BES guide (https://www.portlandoregon.gov/BES/article/298475). For a typical inner SE house with a working lateral, you almost certainly don't need this \u2014 but it's worth running a **sewer scope** ($100\u2013$200 from a plumber) before you commit, especially because some Ladd's homes have shared \"party sewers\" that complicate things (https://www.portlandoregon.gov/bes/article/411807).\n\n**System Development Charges (SDCs) and the basement bedroom myth:** A common worry is \"if I add a bedroom, do I owe SDCs?\" Generally no, for a remodel that doesn't create a new dwelling unit. Portland's SDC page lists \"remodels that don't change the use of the building\" as exempt (https://www.portland.gov/ppd/current-fee-schedules/system-development-charges). SDCs are tied to creating new dwelling units, not adding bedrooms or bathrooms within an existing one.\n\n**SDCs if you do create an ADU:** ADUs trigger four SDCs \u2014 Sanitary, Stormwater, Parks, and Transportation \u2014 that together can run roughly $15,000\u2013$30,000 for a typical ADU at current rates, which would feel like buying a used Honda Civic worth of fees on top of construction. But Portland has an **ADU SDC Waiver Program** that waives all four SDCs in exchange for a **10-year covenant** that the unit (and the rest of the property) won't be used as a short-term rental like Airbnb (https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver). To apply, you email a completed application packet to aducovenant@portlandoregon.gov.\n\n**Temporary SDC exemption (worth knowing about):** From August 15, 2025 through September 30, 2028, Portland is temporarily exempting most newly created housing units from SDCs, but **ADUs are explicitly excluded** from this temporary program (PCC 17.14.070(J), https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption). For ADUs the only path to waived SDCs remains the 10-year covenant program above.\n\n**BES contact for sewer questions:** PP&D Utilities Engineering at **503-823-7761** handles sewer and stormwater questions for development, including lateral permits (https://www.portlandoregon.gov/BES/article/298475).\n\n## 5. Costs and timelines, in everyday terms\n\nPortland's permitting agency budgets for fees that update every July. Here's what a planner can estimate for you.\n\nA typical basement finish that adds a family room, a bedroom (with new egress window), and a small bathroom for a construction valuation around $40,000\u2013$60,000 will run roughly **$1,500\u2013$3,500 in city fees combined** \u2014 building permit, plan review, plumbing, electrical, mechanical, and the small Development Services Fee \u2014 based on the FY 2025\u201326 Portland fee schedule (https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download) and a 2026 analysis by PermitCalculator estimating Portland fees by valuation (https://permitcalculator.com/cities/portland-or/). For perspective, that's about a third of what a single high-end appliance costs in the finished kitchen \u2014 small relative to the project as a whole.\n\nPortland values residential alterations at **33.3% of new-construction cost per square foot** from the ICC valuation data table, so a 600-square-foot basement finish typically values around $30,000\u2013$50,000 for fee purposes (Portland Valuation Methods page, https://www.portland.gov/ppd/current-fee-schedules/valuation-methods). The **Oregon state surcharge of 12%** gets added to every permit (https://permitcalculator.com/cities/portland-or/).\n\n**Plan review timeline:** Roughly **3\u20138 weeks** for a residential basement conversion that doesn't need historic review or Major Residential Alteration & Addition (MRAA) treatment. The Simple Bathroom Permit reviews in **5 business days** (https://www.portland.gov/ppd/residential-permitting/home-projects/simple-bathroom-permits). If you add a new exterior window in the historic district, layer on **4\u20138 weeks** for a Type I Historic Resource Review or **8\u201310 weeks** for a Type II review (Lamont Bros. summary of Portland review types, https://www.lamontbros.com/learning-center/a-guide-to-remodeling-in-portland-historic-districts).\n\n**Total project time** from \"I have a sketch\" to \"passed final inspection\" is realistically **4\u20138 months** \u2014 about one summer's worth of weekends plus the lead time before you start swinging hammers.\n\n**Inspection sequence (the order people show up):** After your permit is issued, you call the city's automated inspection request line **503-823-7000** with your IVR (the unique permit number) and an inspection code (https://www.portland.gov/ppd/residential-permitting/home-projects/attic-basement-or-garage-conversion). The typical sequence is rough framing \u2192 rough plumbing \u2192 rough electrical \u2192 rough mechanical \u2192 insulation/drywall \u2192 final plumbing \u2192 final electrical \u2192 final mechanical \u2192 final building. An inspector checks each stage before it's covered up. Inspectors come from PP&D's residential inspections team, **PPDinspections@portlandoregon.gov, 503-823-7388** (https://www.portland.gov/ppd/residential-permitting/residential-inspections).\n\n**Comparing the three most common basement finish scenarios** \u2014 a one-paragraph summary above the table is: a family room is the cheapest and fastest path, a bedroom-and-bathroom suite is the typical project, and an ADU is dramatically more involved.\n\n| Scenario | City fees (rough) | Plan review time | Triggers historic review? | SDCs apply? |\n|---|---|---|---|---|\n| Family room only (no plumbing, no bedroom) | ~$700\u2013$1,200 | 3\u20136 weeks | No | No |\n| Bedroom + bathroom (typical) | ~$1,500\u2013$3,500 | 4\u201310 weeks | Yes \u2014 for the new egress window | No |\n| Full basement ADU | ~$5,000\u2013$8,000 + SDCs of $15k\u2013$30k unless waived | 8\u201314 weeks | Likely yes | Yes (waivable with 10-year covenant) |\n\nFee ranges are planning estimates based on the Portland FY 2025\u201326 building permit schedule (https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download) and PermitCalculator's 2026 Portland analysis (https://permitcalculator.com/cities/portland-or/); your final number depends on construction valuation.\n\n## 6. Who exactly to contact\n\nThe big change you may not know about: **the Bureau of Development Services (BDS) was phased out as of June 2024**, replaced by **Portland Permitting & Development (PP&D)** (Radler White Parks & Alexander legal summary, https://radlerwhite.com/blog/major-structural-change-in-city-of-portland-permitting-administration/). PP&D absorbed permitting roles from BDS, BES, PBOT, Water, and Parks. So the modern front door for almost everything is PP&D.\n\n**Portland Permitting & Development (PP&D)** \u2014 your main contact for everything. Phone **503-823-7300** (M\u2013F, 8 a.m.\u20135 p.m.), main page https://www.portland.gov/ppd, contact form https://www.portland.gov/ppd/contact, address 1900 SW 4th Avenue, Suite 5000, Portland, OR 97201. Free 15-minute appointments at https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments. Online portal for applying and paying for permits is **DevHub PDX** at https://devhub.portlandoregon.gov.\n\n**Bureau of Environmental Services (BES)** \u2014 sewer and stormwater. For development-related sewer questions, use **PP&D Utilities Engineering at 503-823-7761** (https://www.portlandoregon.gov/BES/article/298475). General BES site: https://www.portland.gov/bes.\n\n**Portland Bureau of Transportation (PBOT)** \u2014 only matters if your project touches the public **right-of-way** (the area between your property line and the street, including sidewalks). For basement work it almost never does. Driveway-related questions: **503-823-7002, option 3** (https://www.portland.gov/transportation/development/driveways).\n\n**Permitting & Development front door (the 2026 name):** That's PP&D. The \"PP&D\" acronym is the current branding \u2014 you'll see it on city pages and signage at 1900 SW 4th. The website is https://www.portland.gov/ppd. Some older city pages still link to portlandoregon.gov/bds \u2014 those are legacy pages; the current site is portland.gov/ppd.\n\n**Urban Forestry** \u2014 under Portland Parks & Recreation, governs trees under Title 11. For a basement finish that doesn't disturb trees, you usually have nothing to do here. But Ladd's Addition is famous for its American elm canopy maintained by the Save Our Elms organization (https://en.wikipedia.org/wiki/Ladd's_Addition), and Urban Forestry reviews any project valued at $25,000 or greater that *might* impact a street tree, city tree, or heritage tree \u2014 including digging a window well near one (https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit/tree-requirements-building-permits). Phone **503-823-TREE (8733)**, email **trees@portlandoregon.gov**, page https://www.portland.gov/trees.\n\n**Portland Fire & Rescue (PF&R)** \u2014 for one- and two-family dwellings, fire-bureau review for a basement finish is uncommon and gets handled inside PP&D's normal building plan review. PF&R life-safety review is usually invoked only for ADUs with separation requirements or for unusual layouts. Their general info: https://www.portland.gov/fire. If you go the ADU route, the 1-hour fire separation between basement ADU and main dwelling is enforced through PP&D's plan check, not a separate fire permit (https://www.permitpaths.com/permits/portland/scenarios/basement-finishing).\n\n**Historic Resource staff at PP&D** \u2014 for Ladd's Addition questions, ask the 15-minute appointment system to schedule you with a \"City Planner\" specifically for historic review questions (https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments). General planning/zoning questions also flow through **503-823-7700** historically used for the Bureau of Planning & Sustainability; for permit-stage historic review, route through PP&D's main 503-823-7300 line.\n\n## 7. Common gotchas in Portland for basement finishes\n\nThese are the mistakes Portland homeowners actually make.\n\n**Framing in a bedroom without an egress window and getting red-tagged at framing inspection.** A \"red tag\" means the inspector orders the work stopped until corrected. This happens because owners frame the closet wall first, then realize the existing window is too small or too high. The fix is expensive \u2014 concrete cutting, structural header, window well, drainage, and Historic Resource Review for the exterior change. *Always* confirm your egress strategy on plans before you order lumber (https://www.vreshconstruction.com/egress-windows).\n\n**Accidentally creating an unpermitted ADU by adding a stove.** A range or cooktop in the basement, plus a bedroom and bathroom, plus a separating door that creates an \"independent living\" space, equals an ADU under the dwelling unit definition in PCC 29.10 (https://www.portland.gov/code/29/10). If you don't go through ADU permitting, the city can issue a violation; future buyers will discover it during home inspection or a permit history check. A microwave and bar sink in an open-plan accessory kitchen, with a signed covenant under BOD 19-06, is the safe path (https://www.portland.gov/ppd/code-policy/building-official-determinations/bod-19-06-accessory-kitchens).\n\n**Hiring an unlicensed contractor and being personally on the hook.** Oregon law requires construction contractors to be licensed by the **Oregon Construction Contractors Board (CCB)** with a current bond and insurance (https://www.oregon.gov/ccb/Pages/index.aspx). If an unlicensed contractor damages your house, hurts themselves, or walks off with a deposit, your legal recourse is dramatically weaker, and you can be on the hook for unpaid subcontractors and workers' comp. Verify any contractor's CCB license at https://www.oregon.gov/ccb/search/Pages/default.aspx before signing.\n\n**Doing the work without a permit and having it surface during a future home sale.** Oregon real estate disclosure forms ask sellers to identify known code compliance issues. A non-permitted basement bedroom is a known nonconforming condition that has to be disclosed; below-grade bedrooms without egress are commonly called out in inspection reports (https://www.vreshconstruction.com/egress-windows). The cheaper-feeling option of skipping a permit becomes an expensive renegotiation \u2014 or a deal-killer \u2014 at closing.\n\n**Investigation fees for work started before the permit.** Portland charges an investigation fee with a minimum of $153 per hour for unpermitted work the city catches mid-project (https://permitcalculator.com/cities/portland-or/). It's not a flat fine; it's hourly for as long as it takes to figure out what's there.\n\n**Ceiling height being just under code in older Ladd's Addition basements.** Many 1900s\u20131920s SE Portland basements measure 6 feet 4 inches to 6 feet 6 inches floor-to-joist. The BCG 96-12 standard of 6 feet 8 inches is friendlier than the 7-foot new-construction rule but still hard to hit if joists are deep or ducts hang low. Solutions before you commit: lower the slab (expensive but possible), reroute ducts, or use a covenant to allow a small portion below code (covenant allowed only every 5 years, never for an ADU, per BCG 96-12 Section 8, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide). Measure carefully before drawing plans.\n\n**Missing the whole-house smoke alarm upgrade** required by ORSC R314.2.2 when you pull a structural permit (https://www.portland.gov/ppd/smoke-alarm-and-carbon-monoxide-alarm-requirements). Inspectors check for hardwired, interconnected alarms in every existing bedroom, outside every sleeping area, and on every floor. Plan to have your electrician swap them all when they wire the basement \u2014 much easier than adding it as an afterthought.\n\n**Combined-sewer backup risk in inner SE.** Heavy storms can briefly back combined-sewer systems up; if your basement bathroom doesn't have a backwater valve, you can get a sewage-water backup into your new bathroom. Backwater valves are required in many cases by the Oregon Plumbing Specialty Code and are a small added cost on the rough plumbing (https://www.portland.gov/code/25). Worth it.\n\n**Phishing scam targeting permit applicants.** PP&D has issued a public warning about scammers posing as city officials and asking for wire transfers to \"complete review\" (https://www.portland.gov/ppd/development-permit-processes). The city does not request payment by wire. Pay only through DevHub or in person at 1900 SW 4th.\n\n**Letting your designer skip the historic review pre-check.** If you cut even one new exterior opening, factor in 4\u201310 weeks of historic review on top of building plan review. Asking the staff planner during your 15-minute appointment whether your specific opening location qualifies for Type I (faster, staff-only) versus Type II (slower, public notice) Historic Resource Review can save weeks (PCC 33.846.060, https://www.portland.gov/code/33/800s/846).\n\n## 8. Numbered next-step list (in the order to do them)\n\nThese are sequenced so the cheap, low-risk steps come first. Do not skip the early ones; they save real money.\n\n**Step 1 \u2014 Look up your property on PortlandMaps. Free. 15 minutes.** Go to https://www.portlandmaps.com, enter 1860 SE Ladd Ave, click into the Permits, Zoning, Environmental, and Sewer tabs. Confirm zoning (R5), historic district (Ladd's Addition), and pull up the existing permit history so you know what's already been built and approved. This data is what an experienced designer charges you to look up.\n\n**Step 2 \u2014 Book a free 15-minute appointment with a PP&D City Planner. Free. 15 minutes plus prep.** Schedule at https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments. Pick \"City Planner\" (for zoning, historic district, ADU questions) or \"Building Code and Engineering Reviewer\" (for ceiling height, egress, structural questions) \u2014 or both, in two separate appointments. Bring the questions in Section 9 below.\n\n**Step 3 \u2014 Get a sewer scope. ~$100\u2013$200. 1\u20132 hours on site.** Hire a plumber to camera-scope your sewer lateral. This catches problems (root intrusion, party sewer connections, broken pipe) before you spend money on plans. Find a plumber on the city's Sewer Contractors List (https://www.portland.gov/bes/connecting-sewer/understanding-sewer-connection).\n\n**Step 4 \u2014 Measure the basement. Free. 30 minutes.** Floor-to-joist height in five locations across the basement. If the lowest measurement is below 6 feet 8 inches, flag this for your designer; you may need to plan around beams or use BCG 96-12's covenant exemption (https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide). Note any existing windows' rough opening dimensions and sill heights \u2014 most existing Ladd's basement windows are too small and too high to count for egress.\n\n**Step 5 \u2014 Decide your scope (with your spouse, if applicable). Free. One conversation.** Family room only? Bedroom + bathroom? Kitchenette but not a full ADU? Full ADU? Each path has different cost, time, and complexity. The decision changes everything downstream.\n\n**Step 6 \u2014 Hire a designer or design-build contractor experienced in historic districts. ~$2,500\u2013$10,000 for plans depending on scope. 4\u20138 weeks.** Verify CCB license at https://www.oregon.gov/ccb/search/Pages/default.aspx. Ask specifically whether they've worked in Ladd's Addition; the historic review experience matters. They'll produce architectural plans, a site plan, and (if needed) structural calculations meeting the Convert an Attic, Basement or Garage submittal requirements (https://www.portland.gov/ppd/documents/submittal-requirements-convert-attic-basement-or-garage/download).\n\n**Step 7 \u2014 If you'll need an exterior egress window, file Historic Resource Review concurrently with the building permit. 4\u201310 weeks for review.** Type I review fees start around $250 for minor alterations; Type II fees range higher (per Portland's Historic Resource Reviews fee page at https://www.portland.gov/ppd/zoning-land-use/land-use-review-fees-and-types/historic-resource-reviews). Your designer or contractor handles this; you sign as property owner.\n\n**Step 8 \u2014 Apply for your building permit (and trade permits, bundled as a Residential Combination Permit) on DevHub. ~$1,500\u2013$3,500 in city fees. 3\u20138 weeks for review.** Submit at https://devhub.portlandoregon.gov. Upload the building permit application, site plan, architectural plans, and the trade permit applications (electrical, plumbing, mechanical) (https://www.portland.gov/ppd/residential-permitting/home-projects/attic-basement-or-garage-conversion).\n\n**Step 9 \u2014 Pay the fees, receive the issued permit. ~Same week as approval.** Permits and IVR numbers are issued on DevHub once you pay. Print the inspection record card and post it on site.\n\n**Step 10 \u2014 Request your first inspection. Free (included in permit). Same-week scheduling.** Call **503-823-7000** with your IVR number and the inspection code. Rough framing first; the inspector walks through and signs off before drywall goes up.\n\n**Step 11 \u2014 Build through the inspection sequence to final.** Each stage gets inspected. Don't cover work until it passes.\n\n**Step 12 \u2014 Final inspection. Free.** When the last inspector signs off (final building), the permit is closed and the work is officially recorded as legal. Save your IVR-stamped final inspection record forever; it lives in your house's permit history on PortlandMaps and protects you at sale.\n\n## 9. The \"what to ask the city\" script\n\nRead this aloud or paste it into the Send-us-a-Message form at https://www.portland.gov/ppd/contact, or use it during your 15-minute appointment.\n\n> \"Hi, my name is [your name]. I own the property at **1860 SE Ladd Ave, Portland, OR 97214**. I'm researching an unfinished basement conversion and want to confirm a few things before I spend money on plans.\n>\n> First: my property is inside the Ladd's Addition Historic District as a Contributing resource per PortlandMaps. Can you confirm that interior basement work alone \u2014 framing, drywall, electrical, plumbing, mechanical \u2014 does *not* trigger Historic Resource Review, and that historic review is only needed if I add or modify exterior features like windows, doors, or a window well?\n>\n> Second: I'm considering finishing the basement in one of three ways \u2014 (a) family room only with no plumbing, (b) family room + bedroom + bathroom, or (c) family room + bedroom + bathroom + a small kitchenette. For each option, can you tell me which permits I'll need (building, plumbing, electrical, mechanical, zoning), whether option (c) would be considered an Accessory Dwelling Unit or could be handled as an accessory kitchen with a covenant under BOD 19-06, and whether any of the three options would trigger System Development Charges?\n>\n> Third: my basement has approximately [X] feet [X] inches of floor-to-joist clearance at its lowest point. Can you confirm whether Building Code Guide 96-12 lets me use the 6-foot-8-inch alternative ceiling height standard, and what the process would be for a covenant if a small area falls below that?\n>\n> Fourth: if I add a basement bedroom and need a new egress window cut into the foundation, what type of Historic Resource Review (Type I, Type Ix, Type II) would apply, and roughly how long does that review take in addition to the building permit review?\n>\n> Fifth: my house is in the Alder Combined Sewer Basin. If I add one bathroom that connects to my existing private sewer lateral on the property, is the plumbing trade permit alone sufficient, or would I also need a UC or UR permit through BES?\n>\n> Could you also confirm the current PP&D contact information for the historic resource staff planner I'd work with, and let me know whether a free 15-minute appointment with a planner is the right next step?\n>\n> Thank you.\"\n\n## 10. Friendly accuracy warnings\n\nThese are not legal disclaimers; they're real things that can change between now and when you submit a permit, and double-checking saves money.\n\n**Zoning, overlays, and historic status for your specific address can change.** Verify on PortlandMaps before spending money on plans (https://www.portlandmaps.com). Your house is currently shown as R5 zoning, Ladd's Addition Historic District, Contributing classification, no overlays \u2014 but city plan amendments happen periodically.\n\n**Permit fees and SDCs are updated annually each July.** The numbers in this guide are based on the FY 2025\u201326 schedule effective July 1, 2025 (https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download). They go up about 5% most years (https://www.portland.gov/council/documents/ordinance/ppd-fee-change-ordinance-fy25-26). Use these figures for planning, not as a quote. Your final number depends on the construction valuation entered on your permit application.\n\n**The BDS-to-PP&D transition is recent.** Some city web pages still link to portlandoregon.gov/bds \u2014 those redirect or are legacy. The current site is portland.gov/ppd. If you see \"BDS\" in a 2024-or-older PDF, mentally substitute \"PP&D\" and the same staff is doing the same work.\n\n**The temporary SDC exemption sunsets September 30, 2028.** If you go the ADU route and want to time it around that program, remember ADUs are *excluded* from the temporary exemption \u2014 the only ADU SDC waiver is the 10-year covenant program (https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver).\n\n**Permit timelines are estimates, not guarantees.** Portland's permitting volume swings with the economy; review times can lengthen during busy periods. Build a buffer into your plans.\n\n**This guide does not replace a free 15-minute appointment with a real PP&D planner.** I can be wrong, codes can change, and your address is the only one that matters. The 15-minute appointment is the fastest way to confirm everything specific to your project, and it's free.\n\n## 11. Glossary\n\n**ADU (Accessory Dwelling Unit)** \u2014 A second, complete, legally independent home on the same lot as a single-family house. Has its own kitchen, bathroom, sleeping area, and entrance. Allowed in R5 under PCC 33.205 (https://www.portland.gov/code/33/200s/205).\n\n**BCG (Building Code Guide)** \u2014 A Portland document that explains how the city interprets a tricky part of the building code. BCG 96-12 is the habitable spaces guide that gives older basements a friendlier ceiling height standard (https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide).\n\n**BDS (Bureau of Development Services)** \u2014 Former name for Portland's permitting bureau. Phased out and replaced by PP&D as of June 2024 (https://radlerwhite.com/blog/major-structural-change-in-city-of-portland-permitting-administration/).\n\n**BES (Bureau of Environmental Services)** \u2014 Portland's sewer, stormwater, and watershed bureau. https://www.portland.gov/bes.\n\n**BOD (Building Official Determination)** \u2014 A formal interpretation by Portland's Building Official on a specific code question, like BOD 19-06 on accessory kitchens (https://www.portland.gov/ppd/code-policy/building-official-determinations/bod-19-06-accessory-kitchens).\n\n**CCB (Construction Contractors Board)** \u2014 Oregon's state agency that licenses construction contractors. Required for anyone doing construction work for hire (https://www.oregon.gov/ccb/Pages/index.aspx).\n\n**Contributing resource** \u2014 A building inside a historic district that the city considers important to the district's historic character. Yours is one. Triggers more careful historic review than non-contributing buildings (PCC 33.846, https://www.portland.gov/code/33/800s/846).\n\n**Combination Permit / Residential Combination Permit** \u2014 A bundled permit that includes building, plumbing, electrical, and mechanical, all under one IVR number with one set of inspections (https://www.portland.gov/ppd/residential-permitting/home-projects/attic-basement-or-garage-conversion).\n\n**Combined Sewer** \u2014 A sewer system where sanitary waste and stormwater share one pipe. All of inner SE Portland uses combined sewers (https://www.portland.gov/bes).\n\n**Covenant** \u2014 A deed restriction recorded against the property title, enforceable by the city. Used in Portland for accessory kitchens (BOD 19-06), ceiling-height exemptions (BCG 96-12), and the ADU SDC waiver.\n\n**DevHub PDX** \u2014 Portland's online permit portal at https://devhub.portlandoregon.gov.\n\n**DSC (Development Services Center)** \u2014 PP&D's in-person counter at 1900 SW 4th Ave., Suite 5000 (https://www.portland.gov/service-locations/development-services-center).\n\n**Egress window / emergency escape and rescue opening** \u2014 A window large enough for a person to escape through during a fire. Required in every basement bedroom and in any basement containing a sleeping room (ORSC R310, https://www.portland.gov/ppd/residential-permitting/residential-projects/emergency-escape-and-rescue-openings).\n\n**GFCI (ground-fault circuit interrupter)** \u2014 An outlet (or breaker) that trips quickly when it senses electricity leaking to ground. Required in bathrooms, kitchens, and unfinished basement areas under the National Electrical Code (https://www.oregon.gov/bcd/codes-stand/Pages/electrical.aspx).\n\n**Habitable space** \u2014 A space used for living, sleeping, eating, or cooking. Defined in BCG 96-12, has minimum ceiling height, light, ventilation, and egress requirements (https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide).\n\n**Historic Resource Review (HRR)** \u2014 The land-use review process for changes to historic resources or buildings inside historic districts. Governed by PCC 33.846 (https://www.portland.gov/code/33/800s/846).\n\n**IVR (Interactive Voice Response)** \u2014 The automated phone system at 503-823-7000 used to schedule inspections; also the unique number assigned to your permit.\n\n**MRAA (Major Residential Alteration & Addition)** \u2014 A larger residential project that triggers neighborhood notification and a delay period (https://www.portland.gov/ppd/residential-permitting/home-projects/major-residential-alteration-addition-permits).\n\n**ORSC (Oregon Residential Specialty Code)** \u2014 The state-level building code for one- and two-family homes, adopted by Portland under PCC Title 24 (https://www.portland.gov/ppd/oregon-residential-specialty-code).\n\n**Overlay zone** \u2014 An additional zoning rule layered on top of base zoning, like a design overlay or environmental overlay. Your property has no overlays beyond the historic district itself.\n\n**PBOT (Portland Bureau of Transportation)** \u2014 Portland's streets and right-of-way bureau (https://www.portland.gov/transportation).\n\n**PCC (Portland City Code)** \u2014 The Portland city code. Cited as PCC followed by title and chapter (e.g., PCC 33.846).\n\n**PF&R (Portland Fire & Rescue)** \u2014 Portland's fire bureau (https://www.portland.gov/fire).\n\n**PP&D (Portland Permitting & Development)** \u2014 Portland's permitting bureau as of June 2024, replacing BDS. https://www.portland.gov/ppd.\n\n**Right-of-way (ROW)** \u2014 The publicly owned strip between your property line and the street, including sidewalks and the planting strip.\n\n**SDC (System Development Charge)** \u2014 One-time impact fees Portland charges for new development to offset effects on parks, sewers, water, and streets (https://www.portland.gov/ppd/current-fee-schedules/system-development-charges).\n\n**Setback** \u2014 The minimum distance from property line to building. Defined in the base zoning chapter (PCC 33.110 for R5, https://www.portland.gov/code/33/100s/110).\n\n**Simple Bathroom Permit** \u2014 Portland's fast-track bathroom permit path, reviewed in five business days (https://www.portland.gov/ppd/residential-permitting/home-projects/simple-bathroom-permits).\n\n**UC permit / UR permit** \u2014 BES sewer permits. UC is for new connections to the public sewer; UR is for sewer lateral repairs (https://www.portland.gov/bes/connecting-sewer/ur-uc-permit-guide).\n\n---\n\n## One last surprise \u2014 a property fact you didn't ask about\n\nYour house is recorded in the Oregon historic inventory as the **\"Max R. Armacher Residence,\"** built 1923, classified as a *Contributing* resource in Ladd's Addition (https://heritagedata.prd.state.or.us/historic/index.cfm?do=v.dsp_siteSummary&resultDisplay=647931). That historic name is searchable when you talk to PP&D's historic planners, and it gives the staff context faster than just an address. Drop \"the Armacher Residence on Ladd Ave\" into your 15-minute appointment and watch how quickly the planner finds your property in the system. Small thing, big time-saver."
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Building permit always required for basement finish",
+      "claim_full": "Finishing an unfinished basement into habitable space requires a building permit in Portland \u2014 there is no DIY exemption.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "Oregon BCD permits page",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.oregon.gov/bcd/lbdd/pages/oregon-permits.aspx"
+      },
+      "verified_truth": "Portland and Oregon both require a building permit to convert a basement to habitable space; this is consistent across all three responses and confirmed by the rationale."
+    },
+    {
+      "id": "A2",
+      "claim_short": "Use Residential Combination Permit",
+      "claim_full": "A Residential Combination Permit bundles building plus the trade permits (electrical, plumbing, mechanical) under one IVR with a single inspection schedule.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd attic-basement-or-garage-conversion",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/home-projects/attic-basement-or-garage-conversion"
+      },
+      "verified_truth": "Portland's combination permit pattern is a standard route for a basement finish; documented on the PP&D conversion page cited by the enhanced response."
+    },
+    {
+      "id": "A3",
+      "claim_short": "DIY electrical: owner-occupant, no sale 6 months",
+      "claim_full": "A homeowner can pull their own electrical permit only if they own and occupy the home and won't sell or rent it within six months.",
+      "topic": "electrical",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Per accuracy flags, the DIY electrical exemption requires owner-occupant with no sale/rent within 6 months \u2014 the OOB response stated this correctly."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Property is in Ladd's Addition Historic District",
+      "claim_full": "1860 SE Ladd Ave is inside the Ladd's Addition Historic District, listed on the National Register since 1988.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "Wikipedia Ladd's Addition / PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://en.wikipedia.org/wiki/Ladd's_Addition"
+      },
+      "verified_truth": "Accuracy flags confirm Ladd's Addition is on the National Register since 1988 and that the property is within the district; the OOB and enhanced responses are consistent with this."
+    },
+    {
+      "id": "A5",
+      "claim_short": "House is Contributing 'Armacher Residence', built 1923",
+      "claim_full": "The property is a Contributing historic resource recorded as the 'Max R. Armacher Residence,' built 1923, on a 2,662 sq ft R5 lot.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Oregon historic inventory ID 647931",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://heritagedata.prd.state.or.us/historic/index.cfm?do=v.dsp_siteSummary&resultDisplay=647931"
+      },
+      "verified_truth": "Accuracy flags confirm the property's classification as Contributing, the Armacher Residence name, 1923 construction, R5 zoning, and 2,662 sq ft lot."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Interior basement work doesn't trigger historic review",
+      "claim_full": "Interior alterations to the basement (framing, drywall, finishes, electrical, plumbing) are not subject to Historic Resource Review in Ladd's Addition.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.846",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/code/33/800s/846"
+      },
+      "verified_truth": "Accuracy flags affirm Historic Resource Review does not apply to interior alterations in Ladd's Addition. The triggering rule lives in PCC Title 33 historic chapters."
+    },
+    {
+      "id": "A7",
+      "claim_short": "New egress window triggers Historic Resource Review",
+      "claim_full": "Cutting a new exterior basement opening (e.g., for an egress window) is an exterior alteration and requires Historic Resource Review.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.846.060 / LU 15-165780 HR",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "LU 15-165780 HR",
+        "enhanced": "https://www.portland.gov/code/33/800s/846"
+      },
+      "verified_truth": "Accuracy flags support that an exterior opening triggers HRR; the MCP variant cites a real precedent case (LU 15-165780 HR) and the enhanced variant cites the historic-review chapter PCC 33.846."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Type I HRR 4\u20138 weeks for new openings",
+      "claim_full": "A Type I Historic Resource Review for a new exterior opening is staff-level and processes in roughly 4\u20138 weeks.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.6,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.lamontbros.com/learning-center/a-guide-to-remodeling-in-portland-historic-districts"
+      },
+      "verified_truth": "Accuracy flags note Type I HRR at 4\u20138 weeks (OOB) and the enhanced variant gives the same range \u2014 supported by accuracy flags."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Type II HRR 6\u201310 weeks with public notice",
+      "claim_full": "Type II Historic Resource Review is staff-level with public notice but no hearing, processing in roughly 6\u201310 weeks.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Accuracy flags confirm Type II HRR review timing of 6\u201310 (MCP) and 8\u201310 (enhanced) weeks with public notice \u2014 both are within accepted ranges."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Egress window: 5.7 sq ft / 24\"H / 20\"W / 44\" sill",
+      "claim_full": "Basement bedrooms must have an emergency escape opening of 5.7 sq ft clear (5.0 if at grade), minimum 24\" tall and 20\" wide, with sill \u226444\" above the floor.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "ORSC R310 / PCC 24",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/residential-projects/emergency-escape-and-rescue-openings"
+      },
+      "verified_truth": "Accuracy flags confirm the standard ORSC R310 figures: 5.7 sq ft (5.0 at grade), 24\"x20\", and 44\" max sill height."
+    },
+    {
+      "id": "A11",
+      "claim_short": "BCG 96-12 reduces ceiling height for old homes",
+      "claim_full": "Building Code Guide 96-12 provides relaxed ceiling-height standards for converting existing spaces to habitable use, friendlier than the new-construction 7-foot rule.",
+      "topic": "structural",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "BCG 96-12",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
+      },
+      "verified_truth": "Accuracy flags confirm BCG 96-12 governs alternative ceiling heights for existing homes; the OOB response named the title 'Habitable Spaces Code Guide' (flagged as needing verification)."
+    },
+    {
+      "id": "A12",
+      "claim_short": "BCG 96-12 allows 6'8\" ceiling, 6'2\" in baths",
+      "claim_full": "BCG 96-12 permits a minimum ceiling height of 6'8\" in habitable basements, 6'2\" in bathrooms, with beams as low as 6'0\" within 2 feet of a wall.",
+      "topic": "structural",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "BCG 96-12 Section 1",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
+      },
+      "verified_truth": "The accuracy-flag list flags these specific BCG 96-12 numbers as claims to verify; the enhanced rationale notes they 'need verification' but does not assert they are wrong."
+    },
+    {
+      "id": "A13",
+      "claim_short": "MRAA threshold 50% wall removal or 500 sq ft",
+      "claim_full": "Major Residential Alteration & Addition (MRAA) is triggered by 50%+ exterior wall removal or 500+ sq ft of new footprint, so a basement-only finish does not trigger MRAA.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "correct-judg",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Accuracy flags list this MRAA threshold as a specific OOB claim that needs verification; the qualitative conclusion (basement finish does not trigger MRAA) is correct directionally."
+    },
+    {
+      "id": "A14",
+      "claim_short": "BDS replaced by PP&D in June 2024",
+      "claim_full": "Portland phased out the Bureau of Development Services (BDS) and replaced it with Portland Permitting & Development (PP&D) in June 2024.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Radler White summary",
+      "citation_by_variant": {
+        "enhanced": "https://radlerwhite.com/blog/major-structural-change-in-city-of-portland-permitting-administration/"
+      },
+      "verified_truth": "Accuracy flags identify the BDS-to-PP&D June 2024 transition as a flagged-but-not-disputed enhanced-response claim \u2014 directionally correct; the date may need verification."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Free 15-minute appointment with PP&D",
+      "claim_full": "PP&D offers free 15-minute virtual appointments with a Building Code Reviewer, City Planner, or Permit Technician \u2014 book before finalizing plans.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "portland.gov/ppd 15-minute appointments",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments"
+      },
+      "verified_truth": "Accuracy flags confirm the 15-minute appointment exists; OOB notes the 503-823-7300 phone, MCP and enhanced reinforce the same."
+    },
+    {
+      "id": "A16",
+      "claim_short": "PP&D phone 503-823-7300",
+      "claim_full": "Portland Permitting & Development's main phone number is 503-823-7300.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd/contact",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/ppd/contact"
+      },
+      "verified_truth": "Accuracy flags confirm the PP&D 503-823-7300 phone number from OOB and enhanced responses."
+    },
+    {
+      "id": "A17",
+      "claim_short": "Pre-1978 home: lead-paint RRP rules apply",
+      "claim_full": "Because the house pre-dates 1978, federal RRP rules require a Certified Renovator from a Certified Firm if painted surfaces will be disturbed.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Federal RRP rule applies to pre-1978 homes; this is standard and consistent across responses, although neither cited an authoritative URL."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Test for radon before finishing",
+      "claim_full": "Portland sits in an elevated radon zone, so test before framing and rough in sub-slab depressurization while the slab is exposed.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Both responses make a directionally-correct radon recommendation; not specifically flagged as wrong by the accuracy notes."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Voluntary seismic retrofit while walls are open",
+      "claim_full": "While basement walls and floor framing are exposed is the cheapest opportunity to bolt the sill plate to the foundation and add shear panels.",
+      "topic": "structural",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Sound advice consistent with Portland's published seismic-strengthening brochure; flagged in MCP as a Moderate liquefaction zone consideration."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Property is in Moderate liquefaction zone",
+      "claim_full": "1860 SE Ladd Ave sits in a Moderate liquefaction hazard zone but is not in a FEMA flood area.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Accuracy flags confirm Moderate liquefaction hazard zone classification and absence of FEMA flood area for this property."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Prior LU case 09-159670 HDZ on file",
+      "claim_full": "The property has a prior Type II Historic Design Review (LU 09-159670 HDZ) on file from a 2009\u20132013 alteration.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps permit history",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Accuracy flags confirm permit history including LU 09-159670 HDZ alteration/addition 2009\u20132013."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Ladd's labeled both Historic and Conservation District",
+      "claim_full": "The MCP response refers to Ladd's Addition as both a 'Historic District' and a 'Conservation District,' applying Ladd's Addition Conservation District design guidelines.",
+      "topic": "zoning",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "Per data-quality notes, Ladd's Addition is a Historic District (not a Conservation District); these are distinct designations in Portland and conflating them is a meaningful technical error."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Vinyl windows not acceptable; aluminum-clad wood OK",
+      "claim_full": "Per Ladd's Addition design guidelines, aluminum-clad wood windows are acceptable for new openings while vinyl windows are not.",
+      "topic": "zoning",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Ladd's Conservation District Design Guidelines",
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "Accuracy flags list this as a flagged MCP claim consistent with Ladd's Addition design guidance; supported by referenced precedent case."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Smoke alarms upgrade triggered house-wide",
+      "claim_full": "Pulling a building permit for the basement triggers ORSC R314.2.2 whole-house smoke-alarm upgrades \u2014 interconnected alarms in every existing bedroom, outside sleeping areas, and on every floor.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "ORSC R314.2.2",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/smoke-alarm-and-carbon-monoxide-alarm-requirements"
+      },
+      "verified_truth": "Accuracy flags confirm the ORSC R314.2.2 whole-house smoke-alarm trigger when a permit is pulled for alterations; cited correctly."
+    },
+    {
+      "id": "A25",
+      "claim_short": "BCG 96-12 R-15 insulation when walls opened",
+      "claim_full": "BCG 96-12 Section 7.2 requires R-15 insulation in exterior basement wall cavities when those walls are opened.",
+      "topic": "structural",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "BCG 96-12 Section 7.2",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
+      },
+      "verified_truth": "Accuracy flags confirm BCG 96-12 Section 7.2's R-15 insulation requirement is one of the specific claims the enhanced response made; flagged for verification but not as wrong."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Kitchenette + door + bedroom = ADU",
+      "claim_full": "Adding a closed-off kitchen with a range plus bedroom and bathroom converts the basement into an Accessory Dwelling Unit; an open accessory kitchen with a covenant under BOD 19-06 stays non-ADU.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "BOD 19-06 / PCC 29.10",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/code-policy/building-official-determinations/bod-19-06-accessory-kitchens"
+      },
+      "verified_truth": "Accuracy flags confirm BOD 19-06 governs accessory kitchens with a covenant; the dwelling-unit definition is in PCC 29.10. Decision-changing for a homeowner adding cooking facilities."
+    },
+    {
+      "id": "A27",
+      "claim_short": "Simple Bathroom Permit reviewed in 5 business days",
+      "claim_full": "Portland's Simple Bathroom Permit reviews in five business days; submission is by emailing one PDF to ppdsbp@portlandoregon.gov.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov/ppd simple-bathroom-permits",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/home-projects/simple-bathroom-permits"
+      },
+      "verified_truth": "Accuracy flags confirm the 5-business-day Simple Bathroom Permit review and the ppdsbp@portlandoregon.gov email submission path."
+    },
+    {
+      "id": "A28",
+      "claim_short": "ADU SDC waiver via 10-year covenant",
+      "claim_full": "The ADU SDC Waiver Program waives all four ADU System Development Charges in exchange for a 10-year covenant against short-term rental use, applied via aducovenant@portlandoregon.gov.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd adu-sdc-waiver",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver"
+      },
+      "verified_truth": "Accuracy flags confirm the ADU SDC waiver requires a 10-year covenant submitted to aducovenant@portlandoregon.gov."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Temporary SDC exemption excludes ADUs",
+      "claim_full": "From August 15, 2025 through September 30, 2028 Portland exempts most new housing units from SDCs, but ADUs are explicitly excluded under PCC 17.14.070(J).",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 17.14.070(J)",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption"
+      },
+      "verified_truth": "Accuracy flags confirm the temporary SDC exemption window (Aug 15 2025 \u2013 Sep 30 2028) and the explicit ADU exclusion under PCC 17.14.070(J)."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Typical city fees ~$1,500\u2013$3,500 for basement finish",
+      "claim_full": "A typical basement finish with bedroom and bathroom (valuation $40k\u2013$60k) runs about $1,500\u2013$3,500 in combined Portland city permit fees.",
+      "topic": "costs",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct-range",
+      "importance": 4,
+      "citation": "Portland FY 2025\u201326 fee schedule",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download"
+      },
+      "verified_truth": "Cited against the Portland FY25\u201326 fee schedule and PermitCalculator; reasonable planning estimate range. Not contradicted by accuracy flags."
+    },
+    {
+      "id": "A31",
+      "claim_short": "Address sits in Alder Combined Sewer Basin",
+      "claim_full": "1860 SE Ladd drains into the Alder Combined Sewer Basin (a combined sanitary + stormwater system), which is typical for inner SE Portland.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Accuracy flags confirm property is in Alder Combined Sewer Basin per PortlandMaps lookup."
+    },
+    {
+      "id": "A32",
+      "claim_short": "Bathroom on existing lateral needs only PT permit",
+      "claim_full": "Adding one bathroom that connects to an existing private sewer lateral requires only a plumbing trade permit, not a separate BES sewer connection permit.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov/bds news 2019-04-29",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/bds/news/2019/4/29/bureau-environmental-services-bes-update"
+      },
+      "verified_truth": "Reflects the 2019 BES policy update; well-cited by the enhanced response and not flagged as wrong."
+    },
+    {
+      "id": "A33",
+      "claim_short": "Investigation fee minimum $153/hour for unpermitted work",
+      "claim_full": "Portland charges an investigation fee with a minimum of $153 per hour for work started before a permit is issued.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PermitCalculator Portland",
+      "citation_by_variant": {
+        "enhanced": "https://permitcalculator.com/cities/portland-or/"
+      },
+      "verified_truth": "Accuracy flags identify this $153/hr investigation-fee figure as a specific enhanced-response claim that warrants verification against the current Portland fee schedule but not as wrong."
+    },
+    {
+      "id": "A34",
+      "claim_short": "Inspection request line 503-823-7000",
+      "claim_full": "Portland's automated inspection request line is 503-823-7000; PP&D residential inspections are at PPDinspections@portlandoregon.gov / 503-823-7388.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov/ppd residential-inspections",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/residential-inspections"
+      },
+      "verified_truth": "Accuracy flags confirm the 503-823-7000 IVR and 503-823-7388 / PPDinspections@portlandoregon.gov inspection contacts."
+    },
+    {
+      "id": "A35",
+      "claim_short": "Oregon Special Assessment 10-year tax freeze",
+      "claim_full": "Contributing structures in Ladd's Addition may qualify for the Oregon Special Assessment of Historic Property \u2014 a 10-year property tax freeze in exchange for a preservation plan.",
+      "topic": "fees",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Accuracy flags list the Oregon Special Assessment 10-year property tax freeze as a flagged-but-correct OOB claim \u2014 the program exists for contributing historic structures."
+    }
+  ]
+}

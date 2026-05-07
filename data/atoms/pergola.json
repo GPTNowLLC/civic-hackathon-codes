@@ -15,164 +15,118 @@
     },
     "enhanced": {
       "tool": "Claude Opus 4.7 Adaptive",
-      "text": "I'll dig into this properly for you. Since you gave me an actual address, I'm going to look up the real property data through Portland's official systems first, then verify the current pergola rules through Portland's code, rather than guessing from neighborhood patterns. Give me a few minutes.Now let me verify the current pergola permit rules from Portland's official sources:I have everything I need. Let me load the diagram module so I can draw you a visual of your lot's setback rules, then put it all together.Here's the answer, in plain English first, then the details.\n\n## The short version\n\nYes, you can almost certainly put up a pergola at 4773 SE 52nd Ave. Your property is in a regular single-family residential zone called **R5**, with no historic, environmental, or design overlays to worry about (which is great news; those are the things that complicate small projects). For a typical backyard pergola that is freestanding, no taller than 15 feet, smaller than 200 square feet, kept at least 5 feet from your side and back property lines, and at least 10 feet from your front property line on SE 52nd Ave, you generally do not need a building permit, though you may still need a quick zoning permit. Once you start attaching it to the house, going bigger or taller, adding a solid roof, or putting it in your front yard, the rules get stricter and you'll likely need permits.\n\nLet me show you what your lot looks like in terms of the rules, then walk through everything else.Now the full walkthrough.\n\n## What's specific to your property\n\nI pulled your property up on Portland's official **PortlandMaps** system (portlandmaps.com), which is the city's authoritative database. Here is what it says, in plain language:\n\nYour lot sits in the **R5 zone** (full name: \"Residential 5,000,\" which means single-family neighborhoods with minimum lots around 5,000 square feet). The city actually classifies your block as part of the **Woodstock** neighborhood, not Foster-Powell; SE 52nd Ave is the boundary between the two, and the city's records put you on the Woodstock side, though most people in the area use the names loosely. This doesn't change any of the rules; it's just a useful little fact.\n\nYour lot is about **50 feet wide by 100 feet deep**, so right around 4,800 square feet (a classic Portland city lot). Your home (built in 1988) is 810 square feet, leaving you a lot of yard to work with. The front of the property faces west onto SE 52nd Ave, and the lot extends 100 feet east into the block, so your back yard is on the east side.\n\nThe really good news: **your property has no overlay zones**. Overlays are extra layers of rules that get stacked on top of the base zone. The most common ones in Portland are:\n\nA **historic district** or **conservation district** would mean you'd need design review for almost anything visible from the street. Yours has none. An **environmental overlay** (often labeled \"c\" or \"p\") would protect natural resources like streams, wetlands, or steep slopes; yours has none. A **design overlay** (a \"d\" zone) would require design review even outside historic areas; yours has none. A **plan district** (like Eastmoreland or Laurelhurst) would add neighborhood-specific rules; yours has none. None of those apply to you, which makes a pergola project simpler than it would be in many parts of Portland.\n\nA few other things worth knowing that I dug up on your specific lot. Your property has **no flood hazard, no landslide hazard, and no steep slope concerns**, so soil and drainage rules will be straightforward. There is **no heritage tree** registered on your lot. There is, however, a **2016 tree permit** on file at your address (a removal-with-replanting permit, now expired), which suggests a tree was removed and a replacement was planted somewhere on the property; if the replacement is still alive and is now 12 inches across or bigger, the tree code rules I describe below could apply to it. Your sewer lateral connects from the south side (the line runs in SE Long Street, with a branch coming up to your house roughly 10 feet underground), and the city's records show one **sewer backup history** at the address, so you'll want to know roughly where that line runs before you set any post holes (more on this in the \"gotchas\" section).\n\n## Permits \u2014 what you need and what triggers them\n\nThe very condensed version: a small open backyard pergola usually slips under both permit thresholds. The moment it gets bigger, taller, attached, or covered, you need permits.\n\nTwo different rule books apply to your project, and they ask different questions.\n\nThe **building code** (Portland City Code Title 24, which is the city adopting the **Oregon Residential Specialty Code**) cares about whether the structure is safe \u2014 wind loads, post anchoring, that sort of thing. Under that code, you do not need a building permit for a freestanding (detached) pergola that is one story, has a footprint of 200 square feet or less, is no taller than 15 feet measured to the average roof height, and sits at least 3 feet from any property line. For a pergola that is **attached** to your house (bolted to the wall with a ledger board), the threshold is similar but slightly different: 200 square feet or less, 12-foot average roof height or less, and 3 feet or more from any property line. (Reference: Building Official Determination 21-05 and BOD 21-01, which apply Oregon Residential Specialty Code section R105.2.)\n\nThe **zoning code** (Portland City Code Title 33, specifically Chapter 33.110 for single-family zones) cares about *where* the structure sits and *how big* it is in proportion to the lot. Even if you are exempt from the building permit, **you may still need a zoning permit** to confirm your pergola meets setbacks, height, and lot coverage rules. The city is straightforward about this; PP&D (Portland Permitting & Development, the bureau that handles these reviews; renamed from BDS, the Bureau of Development Services, in July 2024) treats the zoning permit as a quick check rather than a full plan review.\n\nA simple way to think about the lines you might cross:\n\nIf your pergola is **bigger than 200 square feet** of footprint, you cross into building permit territory. (PCC Title 24; ORSC R105.2.) About 14 feet by 14 feet is roughly 200 square feet, so plan around that if you want to stay exempt.\n\nIf your pergola is **taller than 15 feet** (detached) or 12 feet average roof height (attached patio cover), same answer \u2014 building permit. (PCC Title 24.)\n\nIf you **attach the pergola to your house**, even a small one, the city looks at the connection point more carefully because it affects your house's framing and waterproofing. Small attached pergolas can still be permit-exempt, but the threshold is lower (12-foot average roof height instead of 15), and inspectors are more likely to want to see how you attached it.\n\nIf you **add a solid roof** (real roofing material instead of open beams or slats), it stops being a pergola in the city's eyes and starts being a \"patio cover,\" which has its own rules under Title 24 and under PCC 33.110.245 (detached and connected covered accessory structures). Solid roofs also create new impervious area, which has stormwater consequences.\n\nIf you build it in your **front yard** (the area between the house and SE 52nd Ave), the city is much pickier. Front yards have to stay relatively open in single-family zones, and small accessory structures generally can't be in the front 10 feet at all. (PCC 33.110.220 and 33.110.245.)\n\nIf your pergola goes **over a deck that's more than 30 inches off the ground**, the deck itself triggers a building permit regardless of the pergola, so the whole thing gets permitted together. (Oregon Residential Specialty Code; this is consistent across Oregon.)\n\nFor most regular backyard pergolas in your situation, you'll either need no permits, or just a quick zoning permit. Plan for a building permit if you cross any of the lines above.\n\n## Trees\n\nPortland is serious about trees. The rule book is **Title 11**, and it's run by **Urban Forestry** (a team that used to live under Portland Parks & Recreation and is now mostly merged into PP&D as part of the 2024 reorganization, though tree expertise still sits in Urban Forestry within Parks).\n\nTwo situations matter for your pergola.\n\n**If you're not disturbing any tree's roots**, you generally don't have to do anything for trees. \"Not disturbing roots\" means no digging, no construction staging, no driving heavy equipment within the **root protection zone** of any regulated tree. The root protection zone is roughly 1 foot of radius for every inch of trunk diameter; so a 12-inch tree has a 12-foot RPZ around it.\n\n**If your pergola posts will be in the root zone of a sizable tree**, you cross into Title 11 territory. The threshold is set in PCC 11.50.020 and 11.50.030: you need to deal with the tree code if your project disturbs more than 100 square feet within the root protection zone of a **private tree 12 inches or bigger** in diameter (measured at breast height, abbreviated DBH), or a **City tree 6 inches or bigger**, or a **street tree 3 inches or bigger**.\n\nA **regulated tree** in plain English is any tree the city tracks. **Street trees** are the ones in the planting strip between sidewalk and curb (the city basically owns them even though they're on your frontage). **City trees** are on city-owned property, like in the right-of-way or in parks. **Private trees** are everything else on your lot. Heritage trees are a separate, more protected category; you don't have any.\n\nPractical advice: if there's a mature tree anywhere near where you're thinking of putting the pergola, get out a tape measure and check the trunk diameter at about 4.5 feet off the ground (that's \"breast height\"). If it's 12 inches or more, sketch a circle around it with a radius equal to the diameter in feet. If your pergola posts fall in that circle, you'll likely need a tree review as part of your permit, which Urban Forestry handles. **The 2016 tree permit** I found on your property suggests a tree was planted there about nine years ago \u2014 depending on species, that tree might or might not have hit the 12-inch threshold yet. Worth a quick measurement before you start.\n\nIf a tree needs to be removed for the pergola, that's a separate Tree Permit under PCC 11.40, and Urban Forestry has to approve it. Removing a regulated tree without a permit is one of the more expensive mistakes you can make in Portland; mitigation fees run around $472 per inch of trunk diameter, and there are daily penalty options too. Always call Urban Forestry first if there's any tree question.\n\n## Setbacks, lot coverage, and yard rules\n\nYour zoning code uses the word **setback** to mean \"the strip along each property line where you're not allowed to build.\" For your R5 lot, the rules from Title 33 Table 110-3 are:\n\n**10 feet from the front property line** (the line along SE 52nd Ave). (PCC 33.110.220, Table 110-3.) Your pergola has to sit at least that far back from the sidewalk side of your lot.\n\n**5 feet from each side property line** (north and south). (Same table.)\n\n**5 feet from the rear property line** (the back of your lot). (Same table.)\n\n**Lot coverage** is the share of your lot that's covered by buildings. It's calculated as the footprint of your house plus the footprint of any other roofed structures, divided by the total lot size. Your house is 810 square feet on a 4,800-square-foot lot, so you're at about 17% coverage. A 200-square-foot pergola would push you to about 21%. The R5 zone has a maximum building coverage that varies with lot size (Table 110-5); you have plenty of room. There's also a separate rule that *all detached accessory structures combined* cannot exceed 20% of the lot, which for you is about 960 square feet \u2014 way more than a pergola. (PCC 33.110.225 and 33.110.245.)\n\nIt absolutely matters whether the pergola is in the front yard or the back yard. The setbacks alone push it into the back: 10 feet from the front means a pergola right next to your front porch is generally not allowed. Beyond that, Portland's zoning code wants front yards to feel open, so accessory structures in front yards are heavily restricted. **Keep it behind the house** and you avoid almost all of these issues.\n\nThere's a useful exception worth knowing about: a small pergola **can encroach into the side or rear setbacks** (closer than 5 feet to those property lines) if it meets a specific list of conditions in PCC 33.110.245.C.2.b. Roughly: it has to be no more than 24 feet by 24 feet, no more than 15 feet tall overall, walls no more than 10 feet, screened by a fence or wall, with no doors or windows facing the neighbor, no rooftop deck, and at least 40 feet from the front lot line. A typical pergola easily clears those bars, so if you want to put it close to the back fence, you can \u2014 just keep it 3 feet from the line for the building code, which is the harder of the two limits.\n\n## What to do next, in order\n\nHere is the order I'd actually go in.\n\n1. **Verify everything yourself on PortlandMaps.** Go to portlandmaps.com, type in 4773 SE 52nd Ave, and click around the \"Permits & Zoning\" and \"Property\" sections. This costs nothing and takes 15 minutes. You're double-checking the zone (R5) and the absence of overlays. This is the step where you catch anything I might have gotten wrong.\n\n2. **Sketch a rough site plan.** Just paper and pencil is fine. Draw your lot to scale (50 feet wide on 52nd, 100 feet deep going east), mark the four property lines, sketch your house, and then draw where you want the pergola. Note the dimensions: how wide, how deep, how tall, how far from each property line. You'll need this for any permit conversation. Free, an afternoon.\n\n3. **Schedule a free 15-minute appointment with PP&D.** Portland Permitting & Development offers free 15-minute virtual appointments with a planner specifically for questions like yours. This is the highest-leverage step in the whole process. Go to portland.gov/ppd/15-min or call 503-823-7300 to book it. Have your sketch ready, plus your address and your property ID (R336087, from the city's records). The planner can confirm in real time whether you need a zoning permit, a building permit, both, or neither. Free, 15 minutes plus scheduling time.\n\n4. **If a tree is in play, call Urban Forestry.** If your pergola posts will be near a sizable tree, call Urban Forestry directly at 503-823-TREE (503-823-8733) before you commit to a design. They can tell you whether the tree counts as regulated, and whether you need a tree review. Free, 10 minutes.\n\n5. **If no permit is needed, build it.** Source: lumber yard, weekend project, or hire a contractor. Make sure your contractor is licensed by the Oregon Construction Contractors Board (CCB), which you can verify at oregon.gov/ccb. Cost varies wildly; a DIY 12x12 cedar pergola runs roughly $1,500 to $3,500 in materials (cost of a decent home appliance), a contractor-built one $5,000 to $15,000 (cost of a used car).\n\n6. **If a zoning permit is needed, apply online.** Go to portland.gov/ppd and look for residential permits. Upload your site plan, pay the fee, and wait for a planner to review and stamp it. Costs roughly $150 to $400 for a small project, takes one to three weeks typically.\n\n7. **If a building permit is needed, the application is more involved.** You'll need a more detailed plan showing dimensions, post sizes, anchoring details, and footing depth. Same online portal. Fees on a $5,000-$10,000 project run roughly $300 to $700 depending on valuation, plus a 12% state surcharge that Oregon adds to all building, plumbing, electrical, and mechanical permits. Plan review typically takes two to four weeks for something this small.\n\n8. **Schedule inspections if a building permit was issued.** You'll usually have a footing inspection (before you pour concrete in the post holes) and a final inspection (when you're done). The inspector is the friendly part; their job is to make sure it's safe, not to find reasons to fail you.\n\n## What to actually say when you call PP&D\n\nYou can paste this straight into an email or read it on the phone.\n\n\"Hi, my name is [your name]. I own a single-family home at 4773 SE Fifty-Second Avenue in Portland, ZIP 97206. The property ID is R three three six zero eight seven, and I'm in the R Five zone with no overlays. I'd like to put up a freestanding pergola in my back yard. It would be about [X] feet by [Y] feet, no taller than [Z] feet, with an open lattice roof and no electrical or plumbing. It would be at least [N] feet from each property line. Can you confirm whether I need a zoning permit, a building permit, both, or neither for this project? And can you tell me whether there are any special site conditions I should know about, like trees, sewer easements, or right-of-way concerns?\"\n\nFor email, send it to permits@portlandoregon.gov or use the contact form on portland.gov/ppd. They typically respond within a few business days.\n\nIf you talk to anyone about the trees specifically, here's a cleaner version of that:\n\n\"Hi, I'm planning to build a backyard pergola at 4773 SE Fifty-Second Avenue, property ID R three three six zero eight seven. I've got [a tree of about X inches diameter] on the property near where the pergola would go, and I want to make sure my post holes won't run into Title 11 issues. Can you walk me through what you'd need to see, and whether this rises to a tree review?\"\n\n## What people most often get wrong\n\nThese are the ones that actually trip up Portland homeowners on pergola projects. I'll give you the real-life version of each.\n\n**Putting it too close to the property line.** Most people eyeball it. Their fence isn't always on the actual property line; sometimes it's a foot or two over. Before you set posts, get a survey, or at minimum measure carefully from any existing reference points (and assume you're wrong by a foot). The penalty for being too close is having to move it.\n\n**Attaching to the house \"just for stability\" without realizing that triggers a permit.** A free-standing pergola near the house is one thing; bolting a ledger board to your siding is another. The bolt pattern, flashing, and load transfer all matter to the building code. If you want it close to the house, build it freestanding with its own posts unless you're prepared to permit it.\n\n**Adding a solid roof \"later.\"** Lots of homeowners build an open pergola, then a year later add corrugated panels or shingles to keep the rain off. That conversion turns the pergola into a \"patio cover\" under both Title 24 and PCC 33.110.245. The new impervious roof can also push you into stormwater rules (BES \u2014 the Bureau of Environmental Services, which runs sewers and stormwater \u2014 cares about anything that adds runoff). Best to decide on the roof before you build.\n\n**Building over the sewer cleanout or a buried utility.** Your property has a sewer lateral running roughly south from the house out to the main line in SE Long Street, and there's a documented sewer backup history at the address. Setting a 4-foot-deep concrete post on top of a sewer line is a real way to ruin a Saturday. **Call 811** before you dig (Oregon Utility Notification Center, free, 48 hours notice required). They send out crews who mark gas, water, electric, cable, and sometimes sewer for free. This is the single most important thing on this whole list.\n\n**Removing or seriously trimming a tree without checking.** Title 11 protects regulated trees. Even on your own property, taking down a 14-inch maple without a tree permit can result in mitigation fees in the thousands. The 2016 tree code permit on your property suggests you (or the previous owner) already went through this once. If anything is going to come out, talk to Urban Forestry first.\n\n**Forgetting about easements.** Easements are legal rights other parties have to use part of your property \u2014 utility companies, the city, sometimes neighbors. Pergolas built on top of an easement can be required to come down. Your title report should list any easements; the city's records show none on your lot, which is a good sign, but verify with your closing documents from when you bought the place.\n\n**Treating \"no permit needed\" as \"no rules apply.\"** Permit-exempt structures still have to meet the building code, the zoning code, and the tree code. A neighbor complaint can trigger an inspection even after the fact, and \"I didn't pull a permit\" doesn't get you out of a code violation if the structure isn't compliant.\n\n## Cost and timeline reality check\n\nFor a normal backyard pergola in your situation, here's what to plan around financially.\n\nIf you stay under all the permit thresholds (under 200 square feet, under 15 feet tall, freestanding, 3+ feet from property lines), permit fees can be **zero to about $200** for a quick zoning permit if one is needed. About the cost of a nice dinner out.\n\nIf you need a building permit because the pergola is bigger or attached, expect roughly **$300 to $700** in city fees for a project of $5,000-$10,000 valuation, plus the 12% state surcharge (so add another $35-$80). The minimum permit fee in Portland for FY 2025-26 is $153. About the cost of a nice power tool.\n\n**System Development Charges** (the city's term for one-time fees the city charges for new construction that adds load to sewers, streets, parks, and water systems \u2014 abbreviated SDCs) generally **do not apply** to a pergola. SDCs are tied to new dwelling units (new houses, new ADUs, new apartments), not accessory structures like pergolas. The one edge case is if you add a lot of impervious roof area; very large solid-roof patio covers can trigger a small stormwater SDC from BES. An open-slat pergola in your size range will be exempt.\n\nThe **1% Affordable Housing Construction Excise Tax** kicks in only at $100,000 valuation or more, so you don't need to worry about it.\n\nFor timeline: a permit-exempt project is whenever you and the lumber are ready. A zoning permit usually clears in **one to three weeks**. A building permit for a small accessory structure typically clears in **two to four weeks** for the review, then there's the build itself plus inspections (usually two: footing and final, scheduled with about a week of lead time each). Roughly one summer's worth of weekends if you DIY.\n\n## Friendly accuracy check\n\nA few honest caveats so you don't go spend money on something I got wrong.\n\nI pulled your zoning, lot size, and overlay status straight from PortlandMaps using the city's API, but **the city updates that data periodically**, and your situation could have changed. **Look it up yourself** at portlandmaps.com before you spend money on plans or materials. It takes five minutes and is the difference between being right and being mostly right.\n\nSetback distances and permit thresholds in this answer reflect the current version of the Portland City Code as I read it today, but **codes get amended**, and the ones around residential infill, ADUs, and trees have been changing every couple of years. The version I cited (Title 33 Chapter 33.110, accessed via portland.gov/code/33) was current as of late 2024 / 2025. The 15-minute appointment with a PP&D planner exists specifically to give you the current answer, and it's free. Use it.\n\nI'm a friendly explainer, not your zoning officer. If your project is borderline (bigger pergola, attached, near a tree, near a property line), get the question in writing from PP&D \u2014 usually an email reply from a planner is enough \u2014 before you build. That's the shield that protects you if a neighbor complains later.\n\nIf something I said about your specific lot doesn't match what you see on the ground (the property line is in a different place, there's a tree I didn't know about, the back fence is on a strange angle), trust your eyes and verify before building. The city's records are usually right but not always.\n\n## Glossary\n\n**BDS** \u2014 Bureau of Development Services, the old name for the city bureau that handled permits. Renamed PP&D in July 2024. You may still see \"BDS\" on older documents and signs.\n\n**BES** \u2014 Bureau of Environmental Services, the city bureau that runs the sewers and stormwater system. Phone 503-823-7740.\n\n**DBH** \u2014 Diameter at Breast Height, how the city measures tree trunks (about 4.5 feet off the ground).\n\n**FAR** \u2014 Floor Area Ratio, the total floor area of all buildings on a lot divided by the lot size. Pergolas don't have enclosed floor area, so they don't count toward FAR.\n\n**Lot coverage** \u2014 The share of your lot covered by buildings, measured as the footprint divided by the lot area.\n\n**Overlay** \u2014 An extra set of rules layered on top of the base zoning, used for historic districts, environmental zones, design review areas, and certain neighborhoods. Your lot has none.\n\n**PBOT** \u2014 Portland Bureau of Transportation, the bureau that owns streets and sidewalks. They get involved when you're working in the public right-of-way.\n\n**PCC** \u2014 Portland City Code, the official rule book. Title 11 is trees. Title 24 is building regulations. Title 33 is zoning.\n\n**PF&R** \u2014 Portland Fire & Rescue, the fire bureau. They mostly care about access and clearances around buildings, which doesn't typically come up for backyard pergolas.\n\n**PP&D** \u2014 Portland Permitting & Development, the city bureau that handles building permits, zoning permits, tree permits, and inspections (formerly BDS, plus permit functions absorbed from Urban Forestry, BES, PBOT, and Water as of July 2024). 1900 SW Fourth Avenue, phone 503-823-7300.\n\n**Regulated tree** \u2014 A tree the city tracks under Title 11. Private tree at 12+ inches DBH, City tree at 6+ inches, or street tree at 3+ inches.\n\n**ROW** \u2014 Right-of-Way, the public strip along your property that the city owns (street, sidewalk, and the planting strip between them). You can't build on it.\n\n**RPZ** \u2014 Root Protection Zone, the protected circle around a regulated tree. Roughly 1 foot of radius for every inch of trunk diameter.\n\n**R5** \u2014 Residential 5,000 zone, single-family neighborhoods with minimum lots around 5,000 square feet. Your zone.\n\n**SDC** \u2014 System Development Charge, the city's one-time fees for new construction that adds load to sewers, streets, parks, and water. Doesn't apply to typical pergolas.\n\n**Setback** \u2014 The strip along each property line where you can't normally build. Your setbacks are 10 feet front, 5 feet sides, 5 feet rear.\n\n**Urban Forestry** \u2014 The city group that handles tree code review, tree permits, and street trees. Phone 503-823-TREE (503-823-8733).\n\n---\n\nIf you want, I can save this as a markdown file you can keep on your computer for the permit conversation, or I can sketch a more detailed version of the diagram showing exactly where you're thinking of putting the pergola if you tell me roughly where on the lot you want it. Happy to keep going."
+      "text": "I'll start by looking up your specific property in PortlandMaps and then verify the current pergola rules from Portland's authoritative sources. Let me load the tools I need.Now let me verify the current Portland building code requirements for pergolas. I want to check the actual rules from authoritative sources.Let me check the specific accessory structure rules and the latest pergola guidance.Let me check whether an open-top pergola counts as \"covered\" or \"uncovered\" in Portland's rules.Let me verify the exact permit thresholds and find the contact info for Portland Permitting & Development.Let me verify a couple more specifics \u2014 the tree code threshold and BES contact info.Let me confirm one more thing \u2014 the exact R5 setbacks and SDC question for accessory structures.I have everything I need. Now I'll write your answer.\n\n---\n\n# Can I Build a Pergola at 4773 SE 52nd Ave, Portland, OR 97206?\n\n## Plain-English Summary\n\n**Yes, you can almost certainly build a pergola here.** Your property is in a regular single-family residential zone with no historic district, no environmental overlay, and no special design rules attached to it, so the path is as straightforward as it gets in Portland. If you keep your pergola **detached from the house, no taller than 15 feet, and no bigger than 200 square feet** (think roughly a 12 ft x 16 ft footprint or smaller), and you keep it **at least 5 feet from your side and rear fences** and **10 feet back from the front sidewalk**, you do not need a building permit. The single biggest thing to know: **even when you don't need a building permit, you still must follow the zoning rules** (setbacks, lot coverage, height); breaking those is what gets people fined or forced to tear things down. Also, **attaching the pergola to your house** flips it from \"small accessory project\" to \"addition\" and changes the rules immediately, so plan it as a freestanding structure if you want the simplest path.\n\n---\n\n## Your Property at a Glance\n\nBefore walking through the rules, here's what PortlandMaps shows for your address (you can verify any of this at https://www.portlandmaps.com/detail/property/4773-SE-52ND-AVE/R336087/):\n\n- **Zoning:** R5 (Residential 5,000), the city's most common single-family zone (https://www.portlandmaps.com/bps/zoning/#/zones/base/R5)\n- **Lot size:** about 4,792 square feet (0.11 acres)\n- **House size:** 810 sq ft, built 1988\n- **Neighborhood:** Woodstock\n- **Overlays / special districts:** None. No historic, conservation, environmental, plan district, or design overlay applies.\n- **Watershed:** Willamette River, Taggart subwatershed (combined sewer area, eligible for Clean River Rewards stormwater discount)\n\nThat \"no overlays\" line is genuinely good news; overlays are where most surprise rules come from, and you don't have any.\n\n---\n\n## The Rules, In Plain Language\n\n### What \"zoning\" means and what your zone (R5) allows\n\n**Zoning** is just the city's rulebook for what you can build on your land and how big it can be. Your property is zoned **R5 (Residential 5,000)**, which is Portland's standard single-dwelling residential zone built around lots of about 5,000 square feet (PCC 33.110.010, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf). R5 allows houses, accessory dwelling units (small second homes, often called \"ADUs\"), and **accessory structures** like sheds, garages, covered patios, and pergolas (PCC 33.110.100, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf).\n\nThe rules for your zone live in **Title 33** of the Portland City Code (the **Zoning Code**); the building safety rules live in **Title 24** (the **Building Regulations**). Every project has to satisfy both (https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits).\n\n### What counts as an \"accessory structure\"\n\nAn **accessory structure** is just a stand-alone building on your lot that supports the main house but isn't lived in; sheds, garages, greenhouses, **covered patios**, and **covered decks** are the city's listed examples (https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures). A pergola fits in this family.\n\nPortland's Zoning Code splits these into two flavors that matter a lot for pergolas:\n\n- **Detached covered accessory structure** = roof or top that blocks rain (a solid roof, dense slats, polycarbonate panel, fabric stretched tight). These follow PCC 33.110.245 (https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf).\n- **Detached uncovered vertical structure** = open lattice, \"arbor,\" \"trellis,\" or other \"garden structure\" without a true cover (PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf).\n\nA classic open-top pergola (rafters with sky between them) sits in the second bucket; a pergola with a solid roof, dense louvers angled to shed water, or a permanent canopy sits in the first.\n\n### How far the pergola has to sit from your property lines (setbacks)\n\nA **setback** is just \"how far the building has to sit from each property line.\" For R5, the standard minimums (PCC 33.110.220, Table 110-3, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf) are:\n\n- **Front: 10 feet** from the front property line (so, roughly 10 feet back from the sidewalk).\n- **Side: 5 feet** from each side fence.\n- **Rear: 5 feet** from the back fence.\n\n(Verified in a 2008 BDS land use decision for an R5 lot: structures over 6 feet tall must be 5 feet from side and rear and 10 feet from the front, https://efiles.portlandoregon.gov/record/16220213/file/document.)\n\nThere's a **side-and-rear setback exception** for accessory structures: you can put a covered accessory structure inside the side or rear setback (right up near the fence) only if **all** of these are true (PCC 33.110.245.C.2.b, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf and https://www.portland.gov/ppd/documents/detached-covered-accessory-structures-worksheet/download):\n\n- It's at least **40 feet from the front property line** (or 20 feet from a side street on a corner lot).\n- The footprint is **24 feet by 24 feet or smaller**.\n- The total length of accessory structures along that property line is **24 feet or less**.\n- It's **15 feet tall or less**, with walls **10 feet or less**.\n- The portion in the setback is screened from neighbors by a fence.\n- No doors or windows in the setback walls face the neighbor.\n- No rooftop deck.\n\nPlain English: if your pergola is small (10x12, 12x12, 12x14 are typical), in the back yard, under 15 feet tall, and you have a fence between you and the neighbor, you can place it close to the fence. Otherwise, hold the 5-foot setback.\n\n### When you actually need a building permit\n\nThis is where Title 24 (the **Building Regulations**) takes over. Portland follows the Oregon Residential Specialty Code (the state building code Portland adopts). The simple rule (https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits):\n\n> A building permit is required to build, demolish, or move any structure that is **more than 200 square feet in area** OR **has a height of more than 15 feet** (measured from the ground to the average roof height).\n\nSo a freestanding, non-habitable pergola is **exempt from a building permit** if all of these are true (Building Official Determination 21-05, https://www.portland.gov/ppd/codes-rules-and-guides/bod-21-05-habitable-vs-non-habitable-accessory-structures and Oregon BCD permits guide, https://www.oregon.gov/bcd/lbdd/pages/oregon-permits.aspx):\n\n1. **200 sq ft or less** in area;\n2. **15 feet or less** in height (measured from grade plane to the average height of the highest roof surface);\n3. **Detached** (not attached to your house);\n4. **One story**;\n5. **Non-habitable** (no kitchen, bathroom, sleeping space).\n\nCross either threshold (over 200 sq ft, over 15 ft tall, attached to the house, or with utilities and walls turning it into a \"room\") and you need a residential building permit.\n\n**Important even if no building permit is needed:** the **zoning rules still apply**. Setbacks, lot coverage, height, the accessory-structure standards in 33.110.245, and Title 11 tree rules all govern your project regardless (https://www.portland.gov/ppd/zoning-land-use/zoning-permits). A \"no permit needed\" pergola that violates a setback is still illegal and the city can make you fix or remove it.\n\n### Other permits that might apply\n\n- **Electrical permit (Title 26).** If you want lights, outlets, a ceiling fan, or any hardwired wiring in the pergola, you need an electrical permit, even if no building permit is required (https://www.portland.gov/ppd/residential-permitting/residential-electrical-permits). You can pull this yourself only if you both **own and live in** the home; otherwise a licensed electrical contractor must do it.\n- **Mechanical permit (Title 27).** Adding a gas line for a heater or fire feature, or a vented heating/cooling appliance, triggers a mechanical permit (https://www.portland.gov/ppd/residential-permitting/residential-mechanical-permits).\n- **Plumbing permit.** Outdoor sinks, drinking fountains, or anything tying into water/sewer lines require a plumbing permit (https://www.portland.gov/ppd/residential-permitting/residential-plumbing-permits).\n- **Zoning permit.** If your pergola does not need a building permit, but the city wants confirmation it complies with zoning (for example, you're stretching toward setback limits, or it's an unusually large covered structure inside a setback exception), you may apply for a **zoning permit** (PCC Title 33; https://www.portland.gov/ppd/zoning-land-use/zoning-permits). A zoning permit is a smaller, paper-only review of your site plan against the Zoning Code.\n\n### Does covering it change anything? (The most common gotcha)\n\nYes; this is where people trip. The category your pergola falls into depends on the top:\n\n- **Open lattice / spaced rafters / no rain cover:** treated as a **detached uncovered vertical structure** (an \"arbor or other garden structure,\" PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf). Looser setback options.\n- **Solid roof, slats angled to shed rain, polycarbonate panels, taut fabric, or fixed shade cloth:** treated as a **detached covered accessory structure** (covered patio family, PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf). Stricter setback options.\n- **Retractable canopy:** the city looks at whether, in its closed/extended position, the structure presents a permanent rain-shedding cover. A canopy that's permanently installed and primarily extended is treated as covered; a clearly retractable system that is stowed open most of the time generally is not. Confirm with PP&D for your specific design (no specific public code section answers this; verify with PP&D at 503-823-7300).\n\n**Attaching the pergola to your house** flips it again; it becomes part of the house, not an accessory structure. The relevant rule: a \"porch cover, patio cover, carport, or other open-sided roofed structure\" attached to the house **and over 200 square feet needs a building permit** (https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits). If you bolt rafters to your siding or roof, the city is going to look at the loads on your house.\n\n### Lot coverage and floor-area limits\n\n**Lot coverage** = the share of your lot covered by buildings (footprints, basically). **Floor area ratio (FAR)** = the total square footage of all enclosed buildings divided by the lot size; it controls how much building you can stack on a lot.\n\nFor accessory structures, the city's Detached Covered Accessory Structures Worksheet sets three coverage tests (https://www.portland.gov/ppd/documents/detached-covered-accessory-structures-worksheet/download):\n\n1. **No single accessory structure** can have a footprint bigger than the smallest primary house on the lot, **or 900 sq ft**, whichever is greater (PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf).\n2. **Total accessory structure coverage** can't exceed **20% of lot size** (PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf).\n3. **Total building coverage** (house + everything else) must stay within the maximum for your zone in Table 110-5 (PCC 33.110.225, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf).\n\nFor your specific lot (4,792 sq ft), 20% = about **958 square feet of total accessory structures allowed**. With your 810 sq ft house, you have plenty of headroom for a pergola plus a future shed or even a future ADU.\n\nA pergola without enclosing walls usually doesn't count toward FAR (FAR measures enclosed buildings), but a covered structure does count toward **building coverage**; the rule of thumb is anything more than 6 feet above grade with an impervious cover (something rain doesn't pass through) counts as building coverage (PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf). Open-rafter pergolas typically don't count, because they aren't impervious.\n\n### Tree rules (Title 11)\n\nPortland's tree code (**Title 11**) is administered by **Urban Forestry** (a division of Portland Parks & Recreation). The big trigger:\n\n- **Private trees 12 inches or more in diameter at breast height (DBH)** (DBH = trunk diameter measured 4.5 feet up from the ground) are protected; removing one needs a tree permit (PCC 11.40, https://www.portland.gov/code/11/all and https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/tree-removal-and-replanting-faqs).\n- During development (and digging counts), if your **ground disturbance is more than 100 sq ft within the root protection zone** of a private tree 12 inches DBH or larger (or a city tree 6 inches or larger), Title 11.50 development rules kick in, and you may need a tree plan (PCC 11.50.020, https://www.portland.gov/code/11/50).\n- The **root protection zone** is roughly **1 foot of radius per 1 inch of trunk diameter** (a 12-inch tree gets a 12-foot protection radius). Digging post holes inside that circle can require an arborist's review.\n- **Street trees** (the trees in the planting strip between sidewalk and curb) are regulated regardless of size; almost any work on them needs an Urban Forestry permit (https://www.portland.gov/ppd/tree-permits/removal-and-replanting-permits/tree-removal-and-replanting-faqs).\n\nIf you have a notable tree where you want the pergola, walk the project past Urban Forestry **before you dig**: 503-823-TREE (8733), https://www.portland.gov/trees.\n\n### HOAs, easements, and underground utilities\n\n- **HOAs and deed restrictions.** The city does not enforce private homeowners' association rules or **deed restrictions** (the conditions, covenants, and restrictions (\"CC&Rs\") recorded against a property when it was developed). These are private and you'll need to read your title report or ask a title company. Worth checking; CC&Rs sometimes ban unenclosed accessory structures or require certain materials.\n- **Easements.** An **easement** is a recorded right someone else has to use part of your land (a sewer line, a power line, a shared driveway). You can usually find these on your title report and on PortlandMaps under the property detail page (https://www.portlandmaps.com). For sewer easements specifically, you can look them up at https://www.portlandmaps.com using the property search. Building over an easement can force you to tear the structure down later when the utility needs access.\n- **Call before you dig.** Oregon law requires you to call **811** (the Oregon Utility Notification Center, https://digsafelyoregon.com) at least **two business days before any digging**, including post holes for a pergola. It is free; utilities come out and mark gas, electric, and communications lines. Skipping this step and hitting a gas line is one of the fastest ways to ruin your weekend (and your day in court).\n\n### Cost and timeline in human terms\n\nA few things to know up front:\n\n- **System Development Charges (SDCs)** are one-time city fees for new construction that adds demand on water, sewer, transportation, parks, and schools. SDCs are tied to creating new dwellings or adding plumbing fixtures; **a non-habitable pergola without water or sewer hookup typically does not trigger SDCs** (https://www.portland.gov/ppd/sdc). I could not find a published code section that explicitly says \"pergolas are SDC-exempt\"; verify with PP&D at 503-823-7300 if you plan to add plumbing fixtures.\n- **No-permit pergola** (under 200 sq ft, freestanding, no electrical): cost is materials + labor only. **Free** from the city's side. Timeline: a couple of weekends if you're handy; about a week of build time for a contractor.\n- **Pergola that needs a building permit** (over 200 sq ft, over 15 ft tall, or attached to the house): residential building permit fees scale with valuation; for a small simple structure expect roughly **$300 to $1,200** in city fees (about the cost of a nice family dinner out for a small one, up to a month of groceries for a bigger one). Online review through Development Hub PDX typically takes **2 to 6 weeks** for a small structure, sometimes longer in busy season; budget a full season (https://www.portland.gov/ppd/get-permit). Verify current fee schedules at https://www.portland.gov/ppd/fees because fees change.\n- **Electrical permit** for a couple of outlets and lights: typically **$100 to $250** (https://www.portland.gov/ppd/residential-permitting/residential-electrical-permits). Same-day or 1-week review online.\n\n### Who to actually contact\n\n- **Portland Permitting & Development (PP&D)** is the city bureau that handles all the building, zoning, electrical, mechanical, and plumbing permits. (PP&D is the new name; you may still see \"Bureau of Development Services\" or \"BDS\" on older pages; same agency.) Phone: **503-823-7300**, Mon-Fri 8 AM to 5 PM. Walk-in (Development Services Center, 1900 SW 4th Ave): **Tuesdays 8 AM-4 PM, Thursdays 8 AM-noon**, appointment recommended (https://www.portland.gov/service-locations/development-services-center). Free 15-minute appointments with a planner: https://www.portland.gov/ppd/15-min.\n- **Urban Forestry** (Portland Parks & Recreation) handles all tree rules under Title 11. Phone: **503-823-TREE (8733)**. Web: https://www.portland.gov/trees.\n- **Bureau of Environmental Services (BES)** handles sewer, stormwater, and watershed health questions. You'd call BES if you're disturbing a lot of soil or building near a stormwater system. Web: https://www.portland.gov/bes (use the contact page for current numbers; verify before relying on a specific phone number).\n- **Portland Bureau of Transportation (PBOT)** handles anything in the **right-of-way (ROW)** (the public sidewalk, planting strip, alley, or street). For most pergolas this isn't relevant unless you're working near an alley or street tree. Phone: **503-823-5185** (alley/curb cut questions, https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits).\n- **Portland Fire & Rescue (PF&R)** sets fire code rules. For an open pergola in a back yard, PF&R rarely gets involved; but if you build within 3 feet of the property line, additional fire-resistance requirements kick in (https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures).\n- **Oregon 811 (Utility Notification Center):** dial **811** or **1-800-332-2344** at least two business days before digging (https://digsafelyoregon.com). Free.\n\n---\n\n## What To Do Next (In Order)\n\n1. **Look up your property on PortlandMaps.** FREE. About 10 minutes. Visit https://www.portlandmaps.com, type in your address, and confirm: zoning is **R5**, no overlay zones, no historic, no environmental. Click \"Permits & Zoning\" then \"Zoning & Districts.\" You should see what I've written above.\n2. **Locate your property lines.** Free if you already have a copy of your **plot plan** or **survey** from when you bought the house; otherwise expect $400 to $900 for a licensed surveyor. About a week. The city does not determine where your property lines are; the only authoritative source is a survey (https://www.portland.gov/ppd/zoning-land-use/commonly-asked-questions). Eyeballing from the fence is risky because fences are often a foot or two off the actual line.\n3. **Sketch your pergola on a site plan.** FREE; an afternoon. Draw your lot to scale, mark the house, the proposed pergola location, and distances to all property lines. Note size (length x width), height, whether it's attached to the house, and whether the top is open or covered.\n4. **Read the city's worksheet.** FREE; about 30 minutes. https://www.portland.gov/ppd/documents/detached-covered-accessory-structures-worksheet/download. This is the same worksheet city planners use; if you can check the boxes, you're cleared for the zoning side.\n5. **Book a free 15-minute appointment with a Portland planner.** FREE. Online booking at https://www.portland.gov/ppd/15-min. Bring your sketch and questions. The planner will tell you whether you need a permit and which one. Do this **before** you buy materials; it can save you a re-design.\n6. **Call Oregon 811.** FREE. Phone **811** at least two business days before you dig the post holes. Online at https://digsafelyoregon.com.\n7. **Check your title report for easements and CC&Rs.** Free if you still have your closing packet from when you bought; otherwise contact a title company (typically $50 to $150). About a week.\n8. **If you need a permit, apply online via Development Hub PDX.** Cost varies (roughly $300 to $1,200 for a small accessory structure plus any trade permits); a few weeks for review. https://www.portland.gov/ppd/permits-online.\n9. **Build, then close out the permit with inspections.** If you got a permit, schedule the required inspections at the right stages. Inspection request line: **503-823-7000** (https://www.portland.gov/ppd/residential-permitting/residential-inspections).\n\n---\n\n## What To Ask the City (Phone or Email Script)\n\nIf you call PP&D General Inquiries at **503-823-7300** (or send a message at https://www.portland.gov/ppd/contact), here's a script you can read straight off:\n\n> \"Hi, my name is [your name] and I own the property at **4773 SE 52nd Avenue, Portland, OR 97206**. PortlandMaps shows it as zoned **R5** with no overlays. I want to build a **freestanding pergola** in the back yard. It will be **about [length] feet by [width] feet**, **[X] feet tall** at the highest point, **[open lattice / solid roof / retractable canopy]** on top, and **[at least 5 feet] from the side and rear property lines**. It will not be attached to the house, won't be lived in, and will not have plumbing. Can you confirm whether I need a **building permit**, a **zoning permit**, or both? And can you confirm the project meets the standards in **PCC 33.110.245** for detached accessory structures? I'd also like to schedule a free 15-minute appointment with a planner to walk through my site plan.\"\n\nIf you'd rather email, paste that into the contact form at https://www.portland.gov/ppd/contact and attach your site plan sketch and a photo of your back yard.\n\n---\n\n## Common Gotchas (What People Get Wrong)\n\n- **\"Under 200 sq ft means no permit, period.\"** Wrong. The 200 sq ft / 15 ft rule is the **building permit** trigger. Zoning rules (setbacks, height, lot coverage, accessory structure standards in PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf) apply at all sizes. People build a 10x12 pergola without a permit, plant it 18 inches from the fence, and then get a code complaint from a neighbor. The pergola was small enough to skip a building permit, but never small enough to skip the 5-foot side setback.\n- **Attaching to the house \"to save a post.\"** Bolting a pergola to your siding or roof turns it into an addition. A \"porch cover, patio cover, carport, or other open-sided roofed structure\" attached to the house and over 200 sq ft requires a building permit (https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits). Even under 200 sq ft, attachment requires structural review of how the new loads tie into your house.\n- **Adding a solid roof or polycarbonate panels later.** People build an open-rafter pergola (technically uncovered) and then \"upgrade\" with polycarbonate panels. That changes its category to a covered accessory structure, which can change the setback rules and may require a permit and a zoning review (PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf).\n- **Stringing lights and outlets without an electrical permit.** Hardwired electrical work needs an electrical permit even when no building permit is required (https://www.portland.gov/ppd/residential-permitting/residential-electrical-permits). Plug-in fairy lights, fine; outlets and ceiling fans, permit.\n- **Building within 3 feet of the property line.** This triggers fire-protection requirements (1-hour fire-rated walls and other rules) under the Building Code (https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures). You might still be allowed to build there, but the construction details get more expensive.\n- **Forgetting the front setback if you have a corner lot or unusual shape.** A \"front\" lot line can be confusing; if your house faces SE 52nd, the front yard setback is 10 feet from that line. On a corner lot, the front lot line is the **shorter** of the two street lot lines, regardless of which direction your front door points (https://www.portland.gov/ppd/documents/detached-covered-accessory-structures-worksheet/download).\n- **Digging post holes near a tree.** A 14-inch DBH maple has roughly a 14-foot root protection radius. Augering a post hole there can be a Title 11 violation (PCC 11.50.020, https://www.portland.gov/code/11/50) and can also kill the tree. Walk the spot with Urban Forestry first (503-823-TREE).\n- **Skipping 811.** It's free and required by Oregon law. Hitting a gas or fiber line with a post hole digger is a bad day; hitting a buried electrical service is worse.\n- **Assuming HOA / CC&R rules don't apply because Portland says it's fine.** The city does not enforce private deed restrictions, but your neighbor (or HOA) can sue you. Read your CC&Rs before you build.\n- **Trusting the fence as the property line.** Fences in Portland are often a foot or two off the legal line. If you're tight on a setback, get a survey.\n\n---\n\n## Friendly Caveats\n\n- Zoning, fees, and even bureau names change. **Verify on PortlandMaps before you spend money on plans:** https://www.portlandmaps.com.\n- Some items above are clearly stated in code; others (especially fees, retractable canopies, and SDCs for non-habitable structures) require a quick phone call to confirm against the latest interpretation. When in doubt, ask the planner during your free 15-minute appointment.\n- \"Bureau of Development Services\" (BDS) and \"Portland Permitting & Development\" (PP&D) are the same agency; the city renamed it but older documents still say BDS. Either name should get you to the right people.\n- The setback numbers I cited (10 / 5 / 5) are the standard R5 minimums, but corner lots, **flag lots** (lots with a long driveway and the buildable area set behind another lot), and lots with environmental overlays follow different rules. Your property is none of those, but if any of that changes, the numbers can change too.\n- I am not a Portland city employee or a lawyer. Treat this as a well-organized starting point, not legal advice. The 15-minute appointment with a real city planner is the gold standard for your specific design.\n\n---\n\n## A Worked Example for Your Lot (Above and Beyond)\n\nBecause you said \"regular homeowner,\" here's the concrete happy-path scenario for **4773 SE 52nd Ave** that lets you build with the **least friction**:\n\n**Build a 12-foot by 14-foot freestanding open-rafter pergola** (168 square feet total) in the back yard, **at least 5 feet from the rear fence and 5 feet from each side fence**, and **at least 40 feet back from the front sidewalk** (your house is already there, so this is automatic if it goes behind the house). Keep the height **at most 12 feet** at the top of the rafters. **Don't attach** any part of it to the house. **Don't add a solid roof or fixed panels** (open rafters or removable shade cloth only). **Run no hardwired electrical**; if you want light, use plug-in string lights from an existing exterior outlet.\n\nIn that scenario:\n\n- No building permit (under 200 sq ft, under 15 ft tall, freestanding, non-habitable: BOD 21-05, https://www.portland.gov/ppd/codes-rules-and-guides/bod-21-05-habitable-vs-non-habitable-accessory-structures).\n- No zoning permit needed if you're not in an overlay (you aren't, per PortlandMaps R336087 detail).\n- No electrical or mechanical permit (no hardwired work).\n- No tree permit needed (no tree removal; if you have a 12+ inch DBH tree on the lot, just keep post holes well outside its root protection zone).\n- Total city cost: **$0**. Total time: a couple of weekends.\n- 168 sq ft adds well under 4% to your lot coverage, leaving you nearly **800 sq ft of accessory structure capacity** in reserve (your 20% limit on this lot is about 958 sq ft) for a future shed, garage, or even a detached ADU later.\n\nIf you want bigger or fancier, you can absolutely have it; you'll just pay the toll of permits, fees, and review time. Knowing the threshold lets you choose the trade-off knowingly instead of stumbling into it.\n\n---\n\n## Glossary\n\n- **Accessory structure:** A building on your lot that supports the house but isn't lived in (shed, garage, greenhouse, covered patio, pergola).\n- **ADU (Accessory Dwelling Unit):** A small, second dwelling on a lot that already has a main house; basically a legal in-law unit (PCC 33.205).\n- **BDS (Bureau of Development Services):** The old name for the agency that handles permits. Now called PP&D.\n- **BES (Bureau of Environmental Services):** The city bureau that handles sewer, stormwater, and watershed health.\n- **Building coverage:** The footprint of all buildings on the lot; how much of your lot is covered by structure.\n- **CC&Rs (Covenants, Conditions & Restrictions):** Private rules recorded against a property by a developer or HOA. Not enforced by the city, but legally binding.\n- **DBH (Diameter at Breast Height):** A tree's trunk diameter measured 4.5 feet up from the ground. The standard size measure in Portland's tree code.\n- **Easement:** A recorded right that lets someone else use part of your land (a utility line, a shared drive, etc.).\n- **FAR (Floor Area Ratio):** Total building floor area divided by lot area. A measure of how much building is allowed on a lot.\n- **HOA (Homeowners' Association):** A neighborhood organization that enforces private community rules (CC&Rs).\n- **Lot coverage:** The percentage of the lot covered by buildings.\n- **Overlay zone:** An extra layer of rules on top of the base zone (historic, environmental, design, plan district). Your property has none.\n- **PBOT (Portland Bureau of Transportation):** Handles streets, sidewalks, alleys, curb cuts, and the public right-of-way.\n- **PCC (Portland City Code):** The official numbered code; \"PCC 33.110.245\" means Title 33, Chapter 33.110, Section 245.\n- **PF&R (Portland Fire & Rescue):** The fire bureau; sets fire code rules.\n- **PP&D (Permitting & Development, Portland):** The current name for the city's permit agency, formerly BDS.\n- **R5:** Portland's most common single-family residential zone, named after its 5,000 sq ft typical lot size.\n- **ROW (Right-of-Way):** The public strip including sidewalk, planting strip, street, and alley. Owned or controlled by the city.\n- **SDCs (System Development Charges):** One-time city fees for new construction that adds demand on city systems (water, sewer, transportation, parks, schools).\n- **Setback:** The minimum distance a structure has to sit back from a property line.\n- **Title 11 (Trees):** The Portland code chapter that regulates trees on private property and street trees.\n- **Title 24 (Building Regulations):** The Portland code chapter for building safety; this is where building permit rules live.\n- **Title 26 (Electrical):** Portland's electrical code chapter.\n- **Title 27 (Mechanical):** Portland's mechanical (heating/cooling/gas) code chapter.\n- **Title 33 (Zoning):** The Portland Zoning Code; the rulebook for what you can build where.\n- **Urban Forestry:** A division of Portland Parks & Recreation that administers Title 11 and is the contact point for any tree question.\n- **Zoning permit:** A small permit confirming your project complies with the Zoning Code when no building permit is needed.\n\n---\n\n**Sources I leaned on most heavily** (already cited inline above; collected here for convenience, not as a substitute):\n\n- PortlandMaps property detail for R336087: https://www.portlandmaps.com/detail/property/4773-SE-52ND-AVE/R336087/\n- PCC Title 33, Chapter 33.110 (Single-Dwelling Zones, current PDF): https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf\n- Detached Covered Accessory Structures Worksheet (PP&D): https://www.portland.gov/ppd/documents/detached-covered-accessory-structures-worksheet/download\n- Building Official Determination 21-05 (Habitable vs. Non-habitable Accessory Structures): https://www.portland.gov/ppd/codes-rules-and-guides/bod-21-05-habitable-vs-non-habitable-accessory-structures\n- \"Do you need a permit for your home project?\" (PP&D): https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits\n- \"Garages, sheds, and accessory structures\" (PP&D): https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures\n- PCC Title 11 (Trees): https://www.portland.gov/code/11/all and Chapter 11.50: https://www.portland.gov/code/11/50\n- Free 15-minute planner appointments: https://www.portland.gov/ppd/15-min\n- Oregon 811 / Utility Notification Center: https://digsafelyoregon.com\n\nGood luck with the build; this is one of the gentler permitting paths in Portland, and your specific lot is set up about as cleanly for it as you could ask for."
     }
   },
   "atoms": [
     {
       "id": "A1",
       "claim_short": "Property zoned R5",
-      "claim_full": "The property at 4773 SE 52nd Ave is in the R5 (Residential 5,000) single-dwelling zone.",
+      "claim_full": "The property at 4773 SE 52nd Ave is in Portland's R5 (Residential 5,000) single-dwelling zone.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.010",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 33.110.010, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf"
+      },
+      "verified_truth": "R5 is consistent with the surrounding neighborhood per the MCP variant's PortlandMaps lookup; the OOB variant admitted it could not confirm and the user should verify on PortlandMaps."
+    },
+    {
+      "id": "A2",
+      "claim_short": "No overlays or historic district",
+      "claim_full": "The property has no overlay zones, no historic or conservation district, no environmental constraints, and no plan district.",
       "topic": "zoning",
       "variants": [
         "mcp",
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags for both MCP and enhanced confirm the property is zoned R5; OOB admitted it could not retrieve and inferred R5 or R2.5.",
-      "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A2",
-      "claim_short": "OOB admitted zoning lookup failed",
-      "claim_full": "OOB explicitly admitted it could not pull zoning from PortlandMaps and fell back to inferring R5 or R2.5 from neighborhood patterns.",
-      "topic": "address",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.6,
-      "actionability": 0.4,
-      "correctness": "admitted-gap",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Data-quality note confirms OOB admitted the gap and inferred zoning from neighborhood patterns rather than authoritative data.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A3",
-      "claim_short": "No overlays on this property",
-      "claim_full": "The property has no historic, environmental, design, or plan-district overlays.",
-      "topic": "zoning",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.8,
       "actionability": 0.6,
       "correctness": "correct",
       "importance": 4,
       "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm no overlays at 4773 SE 52nd Ave for both MCP and enhanced.",
       "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/detail/property/4773-SE-52ND-AVE/R336087/"
+      },
+      "verified_truth": "Both MCP-enabled variants pulled this from PortlandMaps; not flagged as incorrect in the evaluator notes."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Lot 4,792 sf, house 810 sf, 1988",
+      "claim_full": "The lot is approximately 4,792 sq ft and the house is 810 sq ft, built in 1988.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.3,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com/detail/property/4773-SE-52ND-AVE/R336087/"
+      },
+      "verified_truth": "Property facts appear in all three responses; OOB notes the source may be a real-estate listing rather than the assessor record. Evaluator flags suggest exact tax-lot/assessor figures should be verified."
     },
     {
       "id": "A4",
-      "claim_short": "Block is officially Woodstock",
-      "claim_full": "City records classify this block as Woodstock rather than Foster-Powell, with SE 52nd Ave as the boundary.",
+      "claim_short": "Neighborhood identification",
+      "claim_full": "The AI identified the neighborhood (OOB: Mt. Scott-Arleta; Enhanced: Woodstock); the actual hackathon scenario lists Foster-Powell.",
       "topic": "address",
       "variants": [
+        "oob",
         "enhanced"
       ],
       "specificity": 0.8,
-      "actionability": 0.2,
-      "correctness": "correct",
-      "importance": 2,
+      "actionability": 0.1,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 1,
       "citation": null,
-      "verified_truth": "Accuracy flag confirms the block is officially classified Woodstock, not Foster-Powell.",
-      "citation_by_variant": null
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": null
+      },
+      "verified_truth": "Per the scenario meta, the neighborhood is Foster-Powell. The Enhanced response's 'Woodstock' label and OOB's 'Mt. Scott-Arleta' are both flagged as inaccurate by the evaluator."
     },
     {
       "id": "A5",
-      "claim_short": "Neighborhood is Mt. Scott-Arleta",
-      "claim_full": "OOB identifies the property as being in the Mt. Scott-Arleta neighborhood.",
-      "topic": "address",
+      "claim_short": "Pergola is an accessory structure",
+      "claim_full": "A pergola is governed by Portland's accessory-structure rules in PCC 33.110.245.",
+      "topic": "definitions",
       "variants": [
-        "oob"
+        "oob",
+        "mcp",
+        "enhanced"
       ],
-      "specificity": 0.6,
-      "actionability": 0.1,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Accuracy flag notes 4773 SE 52nd is on the Foster-Powell / Mt. Scott-Arleta boundary; the city officially classifies the block as Woodstock.",
-      "citation_by_variant": null
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.110.245",
+      "citation_by_variant": {
+        "oob": "Zoning Code 33.110.245",
+        "mcp": null,
+        "enhanced": "PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf"
+      },
+      "verified_truth": "33.110.245 is the correct chapter range for accessory-structure rules; evaluator flagged that the exact subsection number should be confirmed but the section family is real."
     },
     {
       "id": "A6",
-      "claim_short": "Property ID R336087",
-      "claim_full": "The property's PortlandMaps ID is R336087.",
-      "topic": "address",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag confirms property ID R336087 for the address.",
-      "citation_by_variant": {
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A7",
-      "claim_short": "Lot ~4,800 sqft, house 810 sqft, built 1988",
-      "claim_full": "The lot is roughly 50x100 (~4,792\u20134,800 sqft) with an 810 sqft house built in 1988.",
-      "topic": "address",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags across all three variants confirm lot ~4,792 sqft, house 810 sqft, built 1988; OOB sourced from a real-estate listing rather than assessor data.",
-      "citation_by_variant": {
-        "oob": "PortlandMaps",
-        "mcp": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
-    },
-    {
-      "id": "A8",
-      "claim_short": "R5 setbacks 10/5/5",
-      "claim_full": "R5 requires 10 ft front, 5 ft side, and 5 ft rear setbacks for the primary structure.",
-      "topic": "setbacks",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 33.110.220 / Title 33.110 Table 110-3",
-      "verified_truth": "Accuracy flags confirm 10 ft front / 5 ft side / 5 ft rear setbacks in R5 per Title 33.110 Table 110-3.",
-      "citation_by_variant": {
-        "oob": "PCC 33.110.220 / Title 33.110 Table 110-3",
-        "mcp": null,
-        "enhanced": "PCC 33.110.220 / Title 33.110 Table 110-3"
-      }
-    },
-    {
-      "id": "A9",
-      "claim_short": "Open pergola = uncovered vertical structure",
-      "claim_full": "A pergola with an open lattice or beam top is classified as a detached uncovered vertical structure (trellis/arbor category) under Portland code.",
+      "claim_short": "Open vs covered pergola matters",
+      "claim_full": "An open-lattice (no rain-shedding cover) pergola is treated as a 'detached uncovered vertical structure / arbor' while a solid-roof or paneled pergola is a 'detached covered accessory structure', and the rules differ sharply.",
       "topic": "definitions",
       "variants": [
         "oob",
@@ -180,39 +134,41 @@
         "enhanced"
       ],
       "specificity": 0.8,
-      "actionability": 0.6,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.245",
+      "citation_by_variant": {
+        "oob": "Zoning Code 33.110.245",
+        "mcp": null,
+        "enhanced": "PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf"
+      },
+      "verified_truth": "Portland's zoning code does distinguish covered vs uncovered accessory structures; this is one of the most decision-relevant facts and is consistent across all three responses."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Open pergolas excluded from coverage/FAR",
+      "claim_full": "An open-rafter pergola without an impervious cover does not count toward building coverage or floor area ratio (FAR).",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 4,
-      "citation": "PCC Title 33.110",
-      "verified_truth": "Accuracy flags confirm the open-lattice pergola is classified as a detached uncovered vertical structure / arbor under Portland code.",
-      "citation_by_variant": {
-        "oob": "PCC Title 33.110",
-        "mcp": null,
-        "enhanced": "PCC Title 33.110"
-      }
-    },
-    {
-      "id": "A10",
-      "claim_short": "OOB cites wrong PCC section 33.110.245",
-      "claim_full": "OOB cites PCC 33.110.245 as classifying pergolas, but accessory structures in Title 33.110 typically appear around 33.110.250.",
-      "topic": "citations",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.3,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 3,
       "citation": "PCC 33.110.245",
-      "verified_truth": "Accuracy flag notes accessory structures live around PCC 33.110.250; section 33.110.245 may not exist as cited by OOB. Enhanced uses 33.110.245.C.2.b for setback encroachments which is also flagged for verification.",
       "citation_by_variant": {
-        "oob": "PCC 33.110.245"
-      }
+        "oob": null,
+        "enhanced": "PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf"
+      },
+      "verified_truth": "Consistent with Portland's treatment of impervious vs non-impervious overhead structures; not contradicted by evaluator flags."
     },
     {
-      "id": "A11",
-      "claim_short": "Detached permit-exempt \u2264200 sqft, \u226415 ft, \u22653 ft from PL",
-      "claim_full": "A freestanding pergola is exempt from a building permit if it is \u2264200 sqft, \u226415 ft tall, non-habitable, and \u22653 ft from any property line.",
+      "id": "A8",
+      "claim_short": "Permit-free: \u2264200 sf and \u226415 ft",
+      "claim_full": "A freestanding, non-habitable, one-story pergola is exempt from a building permit if it is 200 sq ft or smaller AND 15 ft tall or shorter.",
       "topic": "permits",
       "variants": [
         "oob",
@@ -223,71 +179,75 @@
       "actionability": 1.0,
       "correctness": "correct",
       "importance": 5,
-      "citation": "BOD 21-05 / BOD 21-01, ORSC R105.2 (enhanced); PCC Title 24 (oob/mcp)",
-      "verified_truth": "Accuracy flags confirm building-permit exemption thresholds of \u2264200 sqft, \u226415 ft tall, \u22653 ft from property lines per BOD 21-05/21-01 applying ORSC R105.2.",
+      "citation": "BOD 21-05",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "BOD 21-05 / BOD 21-01, ORSC R105.2 (enhanced); PCC Title 24 (oob/mcp)"
-      }
+        "enhanced": "BOD 21-05, https://www.portland.gov/ppd/codes-rules-and-guides/bod-21-05-habitable-vs-non-habitable-accessory-structures"
+      },
+      "verified_truth": "Oregon Residential Specialty Code adopted by Portland exempts accessory structures \u2264200 sq ft from building permits; the 15 ft height pairing is a Portland practice. Evaluator flagged the height figure for confirmation against current Oregon code, but this is the most decision-relevant claim and is plausibly correct."
     },
     {
-      "id": "A12",
-      "claim_short": "Attached pergola exemption: \u2264200 sqft, \u226412 ft avg, \u22653 ft",
-      "claim_full": "An attached pergola/patio cover is permit-exempt if \u2264200 sqft, average roof height \u226412 ft, and \u22653 ft from property lines.",
+      "id": "A9",
+      "claim_short": "Attached patio-cover thresholds",
+      "claim_full": "For a pergola attached to the house and covering a patio, no building permit is required if it is \u2264200 sq ft, has an average roof height \u226412 ft, and is at least 3 ft from any property line.",
       "topic": "permits",
       "variants": [
-        "oob",
-        "enhanced"
+        "oob"
       ],
       "specificity": 1.0,
       "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC Title 24 / BOD 21-05",
-      "verified_truth": "Accuracy flags confirm attached patio-cover exemption threshold of 12 ft average roof height and 3 ft setback.",
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
       "citation_by_variant": {
-        "oob": null,
-        "enhanced": "PCC Title 24 / BOD 21-05"
-      }
+        "oob": null
+      },
+      "verified_truth": "Evaluator did not flag this as wrong; the thresholds are consistent with state residential code exemptions for attached patio covers, but no specific code section was cited by the OOB variant."
     },
     {
-      "id": "A13",
-      "claim_short": "Setback encroachment thresholds for accessory",
-      "claim_full": "A pergola can encroach into side/rear setbacks if \u226424x24 ft, \u226415 ft tall, walls \u226410 ft, \u226540 ft from front lot line, and no rooftop deck.",
+      "id": "A10",
+      "claim_short": "R5 setbacks 10/5/5",
+      "claim_full": "Standard R5 setbacks are 10 ft from the front property line, 5 ft from each side, and 5 ft from the rear.",
       "topic": "setbacks",
       "variants": [
+        "oob",
+        "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.8,
+      "actionability": 1.0,
       "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.110.245.C.2.b",
-      "verified_truth": "Accuracy flag confirms PCC 33.110.245.C.2.b setback-encroachment conditions as stated, though the flag notes the cite warrants verification.",
+      "importance": 5,
+      "citation": "PCC 33.110.220 / Table 110-3",
       "citation_by_variant": {
-        "enhanced": "PCC 33.110.245.C.2.b"
-      }
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.110.220, Table 110-3, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf"
+      },
+      "verified_truth": "10/5/5 are the standard R5 minimums per Table 110-3 for primary structures; accessory-structure setbacks can differ but the front/side/rear baseline is correct."
     },
     {
-      "id": "A14",
-      "claim_short": "Tiny uncovered structures allowed in setback",
-      "claim_full": "An open uncovered vertical structure \u22643 ft wide/deep and \u22648 ft tall is allowed inside required building setbacks.",
+      "id": "A11",
+      "claim_short": "Tiny uncovered structure setback exception",
+      "claim_full": "An open uncovered vertical structure (e.g., a slim arbor) up to 3 ft wide/deep and 8 ft tall is allowed inside the required setbacks.",
       "topic": "setbacks",
       "variants": [
         "oob"
       ],
       "specificity": 1.0,
       "actionability": 0.6,
-      "correctness": "correct",
+      "correctness": "correct-range",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Accuracy flag lists the 3 ft x 8 ft uncovered-structure-in-setback rule as needing verification; not affirmatively confirmed in this evaluation.",
-      "citation_by_variant": null
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Not flagged as wrong by evaluator; consistent with Portland's narrow setback carve-outs for uncovered vertical structures, though no precise citation was offered."
     },
     {
-      "id": "A15",
-      "claim_short": "Single arbor 6x3x8 in front setback",
+      "id": "A12",
+      "claim_short": "Front-setback arbor 6\u00d73\u00d78",
       "claim_full": "A single arbor up to 6 ft wide, 3 ft deep, and 8 ft tall is allowed in the front setback.",
       "topic": "setbacks",
       "variants": [
@@ -295,320 +255,465 @@
       ],
       "specificity": 1.0,
       "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 2,
+      "correctness": "correct-range",
+      "importance": 1,
       "citation": null,
-      "verified_truth": "Accuracy flag lists the 6x3x8 single-arbor allowance in front setback as needing verification; not affirmatively confirmed.",
-      "citation_by_variant": null
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Not flagged as wrong; this is a narrow front-yard exception in Portland's accessory-structure rules."
+    },
+    {
+      "id": "A13",
+      "claim_short": "Covered accessory setback exception",
+      "claim_full": "A detached covered accessory structure can sit inside the side/rear setback if it is 24x24 ft or smaller, 24 ft total along the property line, 15 ft tall (10 ft walls), at least 40 ft from the front line, screened, and meets other conditions.",
+      "topic": "setbacks",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": "PCC 33.110.245.C.2.b",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.245.C.2.b, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf"
+      },
+      "verified_truth": "Evaluator flagged the exact thresholds for verification against current 33.110.245, but the citation is to a real subsection and the structure of the rule matches Portland practice."
+    },
+    {
+      "id": "A14",
+      "claim_short": "20% accessory coverage cap",
+      "claim_full": "Total accessory-structure coverage on the lot may not exceed 20% of the lot size.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.110.245",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf"
+      },
+      "verified_truth": "The 20% cap is a real Portland accessory-structure rule; evaluator flagged it for verification but did not contradict it."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Single structure cap: 900 sf or main",
+      "claim_full": "A single accessory structure's footprint cannot exceed the smallest primary house on the lot OR 900 sq ft, whichever is greater.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct-range",
+      "importance": 2,
+      "citation": "PCC 33.110.245",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.245, https://www.portland.gov/sites/default/files/code/110-sd-zone_1.pdf"
+      },
+      "verified_truth": "Evaluator flagged the wording and number for verification; the citation is to a real section of Portland code."
     },
     {
       "id": "A16",
-      "claim_short": "20% accessory-structure coverage cap in R5",
-      "claim_full": "All detached accessory structures combined cannot exceed 20% of the lot area in R5.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.110.225 / 33.110.245",
-      "verified_truth": "Accuracy flag confirms 20% maximum aggregate detached accessory structure coverage in R5; OOB version flagged for verification, enhanced version corroborated.",
-      "citation_by_variant": {
-        "oob": "PCC 33.110.225 / 33.110.245",
-        "enhanced": "PCC 33.110.225 / 33.110.245"
-      }
-    },
-    {
-      "id": "A17",
-      "claim_short": "250 sqft FAR exception every 5 years",
-      "claim_full": "R5 properties whose primary structure passed final inspection \u22655 years ago have a one-time 250 sqft FAR exception per 5-year period.",
+      "claim_short": "250 sf FAR bonus per 5 years",
+      "claim_full": "There is a one-time 250 sq ft FAR exception per 5-year period for properties whose primary structure passed final inspection at least 5 years ago.",
       "topic": "size",
       "variants": [
         "oob"
       ],
       "specificity": 1.0,
-      "actionability": 0.3,
-      "correctness": "correct-vague",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Accuracy flag lists the one-time 250 sqft FAR exception per 5-year period as needing verification; not affirmatively confirmed.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A18",
-      "claim_short": "Building coverage counts only impervious overhead",
-      "claim_full": "Building coverage in Portland only counts impervious overhead structures, so an open pergola is excluded.",
-      "topic": "size",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.6,
-      "actionability": 0.6,
-      "correctness": "correct-vague",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Accuracy flag lists the framing as needing verification; the directional claim is consistent with how open structures are treated but not affirmatively verified here.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A19",
-      "claim_short": "Tree size thresholds 12/6/3 inches DBH",
-      "claim_full": "Tree code applies at private trees \u226512 inches DBH, City trees \u22656 inches, and street trees \u22653 inches.",
-      "topic": "trees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 11.50.020 / 11.50.030",
-      "verified_truth": "Accuracy flag confirms tree-code thresholds: private 12\" DBH, City 6\", street 3\" per PCC 11.50.020/030.",
-      "citation_by_variant": {
-        "enhanced": "PCC 11.50.020 / 11.50.030"
-      }
-    },
-    {
-      "id": "A20",
-      "claim_short": "Tree mitigation $472 per inch DBH",
-      "claim_full": "Tree mitigation fees run about $472 per inch of trunk diameter.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.5,
+      "actionability": 0.4,
       "correctness": "correct-range",
       "importance": 2,
       "citation": null,
-      "verified_truth": "Accuracy flag lists the $472/inch DBH mitigation figure as warranting verification; not affirmatively confirmed.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A21",
-      "claim_short": "RPZ = 1 ft radius per inch DBH",
-      "claim_full": "The root protection zone is roughly 1 foot of radius for every inch of trunk diameter.",
-      "topic": "trees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Accuracy flag confirms RPZ rule of 1 ft radius per inch of trunk diameter.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A22",
-      "claim_short": "2016 tree permit at address",
-      "claim_full": "A 2016 tree-removal-with-replanting permit (application 2016-176242) is on file at this address and expired without final inspection.",
-      "topic": "trees",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flags confirm a 2016 tree permit (2016-176242) on file at the address, expired without final inspection.",
       "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "PortlandMaps"
-      }
+        "oob": null
+      },
+      "verified_truth": "Not flagged as wrong by the evaluator; the FAR-exception structure is consistent with Portland's small-lot bonuses but no specific code section was provided."
     },
     {
-      "id": "A23",
-      "claim_short": "Urban Forestry 503-823-TREE",
-      "claim_full": "Urban Forestry can be reached at 503-823-8733 (TREE) for tree-permit and regulated-tree questions.",
-      "topic": "process",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": null,
-      "verified_truth": "Accuracy flag confirms Urban Forestry phone 503-823-8733 (TREE).",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A24",
-      "claim_short": "PP&D 15-minute free planner appointment",
-      "claim_full": "PP&D offers a free 15-minute zoning consultation with a planner; phone 503-823-7300.",
+      "id": "A17",
+      "claim_short": "PP&D 503-823-7300, free 15-min appt",
+      "claim_full": "Portland Permitting & Development can be reached at 503-823-7300 and offers a free 15-minute consultation with a planner.",
       "topic": "process",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.9,
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd/15-min",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/15-min"
+      },
+      "verified_truth": "503-823-7300 is the standard PP&D number and the 15-minute appointment program is real; evaluator flagged for verification but not contradicted."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Verify zoning on PortlandMaps",
+      "claim_full": "The resident should look up zoning, overlays, and property facts at portlandmaps.com.",
+      "topic": "sequence",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
       "actionability": 1.0,
       "correctness": "correct-action",
-      "importance": 5,
-      "citation": null,
-      "verified_truth": "Accuracy flag confirms PP&D 15-minute consultation phone 503-823-7300.",
-      "citation_by_variant": null
+      "importance": 4,
+      "citation": "portlandmaps.com",
+      "citation_by_variant": {
+        "oob": "portlandmaps.com",
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "PortlandMaps is the authoritative public-facing source for zoning and overlay lookups."
     },
     {
-      "id": "A25",
-      "claim_short": "BDS renamed PP&D in July 2024",
-      "claim_full": "BDS was renamed Permitting & Development (PP&D) in July 2024, absorbing permit functions from Urban Forestry, BES, PBOT, and Water.",
-      "topic": "process",
+      "id": "A19",
+      "claim_short": "OOB couldn't pull zoning programmatically",
+      "claim_full": "The OOB response explicitly admitted it could not retrieve zoning data from PortlandMaps and asked the user to verify it themselves.",
+      "topic": "citations",
       "variants": [
-        "enhanced"
+        "oob"
       ],
-      "specificity": 1.0,
-      "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Accuracy flag confirms BDS was renamed to PP&D in July 2024 and absorbed Urban Forestry/BES/PBOT/Water permit functions.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A26",
-      "claim_short": "Minimum permit fee $153 FY25-26",
-      "claim_full": "The Portland minimum permit fee is $153 for FY 2025-26.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Accuracy flag lists $153 minimum FY 2025-26 permit fee as warranting verification; not affirmatively confirmed.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A27",
-      "claim_short": "12% Oregon state permit surcharge",
-      "claim_full": "Oregon adds a 12% state surcharge to building, plumbing, electrical, and mechanical permits.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
+      "specificity": 0.9,
       "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
+      "correctness": "admitted-gap",
+      "importance": 3,
       "citation": null,
-      "verified_truth": "Accuracy flag confirms the 12% Oregon state surcharge on building/plumbing/electrical/mechanical permits.",
-      "citation_by_variant": null
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "This is an explicit admitted gap; the OOB variant flagged its own inability to confirm zoning, which the evaluator credited as good epistemic hygiene but capped completeness at 2."
     },
     {
-      "id": "A28",
-      "claim_short": "1% Affordable Housing CET at $100k",
-      "claim_full": "The Affordable Housing Construction Excise Tax of 1% applies starting at $100,000 valuation.",
-      "topic": "fees",
+      "id": "A20",
+      "claim_short": "Expired tree permit 2016-176242",
+      "claim_full": "A tree removal permit application 2016-176242 was filed at this address but expired without a final inspection.",
+      "topic": "trees",
       "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "verified_truth": "Accuracy flag confirms 1% Affordable Housing CET threshold at $100,000 valuation.",
-      "citation_by_variant": null
-    },
-    {
-      "id": "A29",
-      "claim_short": "Sewer lateral runs south, ~10 ft deep",
-      "claim_full": "The sewer lateral runs south to SE Long Street about 10 ft deep, with a documented backup history at the address.",
-      "topic": "sewer",
-      "variants": [
-        "enhanced"
+        "mcp"
       ],
       "specificity": 1.0,
       "actionability": 0.7,
       "correctness": "correct",
       "importance": 3,
       "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag lists sewer lateral path south to SE Long Street ~10 ft deep with backup history; flagged as warranting verification.",
       "citation_by_variant": {
-        "enhanced": "PortlandMaps"
-      }
+        "mcp": null
+      },
+      "verified_truth": "Address-specific MCP claim verifiable on PortlandMaps; not contradicted by the evaluator."
     },
     {
-      "id": "A30",
-      "claim_short": "Soil group B, bedrock at 6 ft",
-      "claim_full": "Soil at the property is hydrologic group B, well-drained, with bedrock at 6 ft.",
+      "id": "A21",
+      "claim_short": "Soil group B, bedrock 6 ft",
+      "claim_full": "Soil at the property is hydrologic group B with bedrock at about 6 ft, supporting standard concrete pier footings.",
       "topic": "structural",
       "variants": [
         "mcp"
       ],
       "specificity": 1.0,
-      "actionability": 0.4,
+      "actionability": 0.6,
       "correctness": "correct",
       "importance": 2,
       "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag lists soil hydrologic group B, well-drained, bedrock at 6 ft as a specific claim warranting verification.",
       "citation_by_variant": {
-        "mcp": "PortlandMaps"
-      }
+        "mcp": null
+      },
+      "verified_truth": "Soil hydrologic group and bedrock depth are PortlandMaps fields the MCP variant queried; not flagged as wrong."
     },
     {
-      "id": "A31",
-      "claim_short": "Taggart B/C combined sewer basin",
-      "claim_full": "The property is in the Taggart B/C combined sewer basin.",
+      "id": "A22",
+      "claim_short": "Taggart combined sewer basin",
+      "claim_full": "The property is in the Taggart combined sewer basin (Willamette subwatershed), which affects stormwater rules for impervious surfaces.",
       "topic": "sewer",
       "variants": [
-        "mcp"
+        "mcp",
+        "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.3,
+      "actionability": 0.5,
       "correctness": "correct",
       "importance": 2,
-      "citation": "PortlandMaps",
-      "verified_truth": "Accuracy flag confirms property is in the Taggart B/C combined sewer basin.",
+      "citation": "BES",
       "citation_by_variant": {
-        "mcp": "PortlandMaps"
-      }
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Evaluator flagged for verification in BES watershed data but did not contradict; consistent with the SE Portland combined-sewer area."
     },
     {
-      "id": "A32",
-      "claim_short": "Roofed >200 sqft must drain to permeable area",
-      "claim_full": "Roofed structures over 200 sqft must drain to a permeable area rather than the gutter system.",
-      "topic": "sewer",
+      "id": "A23",
+      "claim_short": "Urban Forestry 503-823-TREE",
+      "claim_full": "Urban Forestry handles tree-related permitting and is reachable at 503-823-8733 (TREE).",
+      "topic": "trees",
       "variants": [
-        "mcp"
+        "mcp",
+        "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.6,
-      "correctness": "correct-vague",
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
       "importance": 3,
-      "citation": null,
-      "verified_truth": "Accuracy flag lists the stormwater rule for roofed structures over 200 sqft as warranting verification.",
-      "citation_by_variant": null
+      "citation": "portland.gov/trees",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/trees"
+      },
+      "verified_truth": "503-823-TREE / 8733 is the published Urban Forestry number; not flagged as wrong."
     },
     {
-      "id": "A33",
-      "claim_short": "Brochure 3 is the official reference",
-      "claim_full": "PP&D Brochure 3 (Fences, Decks and Outdoor Residential Projects) is the official one-stop reference for these projects.",
-      "topic": "citations",
+      "id": "A24",
+      "claim_short": "12-inch DBH tree protection",
+      "claim_full": "Private trees 12 inches or more in diameter at breast height (DBH) are protected and require a tree permit to remove or substantially disturb.",
+      "topic": "trees",
       "variants": [
-        "mcp"
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": "PCC 11.40 / 11.50.020",
+      "citation_by_variant": {
+        "enhanced": "PCC 11.50.020, https://www.portland.gov/code/11/50"
+      },
+      "verified_truth": "Evaluator flagged the exact threshold for verification against current Title 11.50, but Portland's tree code does center on DBH thresholds in this range."
+    },
+    {
+      "id": "A25",
+      "claim_short": "Root protection zone formula",
+      "claim_full": "The root protection zone is roughly 1 foot of radius per 1 inch of trunk diameter, so a 12-inch tree gets a 12-foot protection radius.",
+      "topic": "trees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct-range",
+      "importance": 2,
+      "citation": "Urban Forestry",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/code/11/50"
+      },
+      "verified_truth": "Evaluator flagged for verification against current Urban Forestry guidance; the 1-foot-per-inch rule of thumb is widely used in Portland practice."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Electrical permit for hardwired work",
+      "claim_full": "Adding lights, outlets, or any hardwired wiring to the pergola requires an electrical permit under Title 26, even when no building permit is needed.",
+      "topic": "electrical",
+      "variants": [
+        "enhanced"
       ],
       "specificity": 0.9,
       "actionability": 0.9,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": "portland.gov/ppd/residential-permitting/b3-residential-fences-decks-outdoor-projects",
-      "verified_truth": "Rationale notes the Brochure 3 link is authoritative; this is a portland.gov citation.",
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Title 26",
       "citation_by_variant": {
-        "mcp": "portland.gov/ppd/residential-permitting/b3-residential-fences-decks-outdoor-projects"
-      }
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/residential-electrical-permits"
+      },
+      "verified_truth": "Hardwired electrical work in Portland always needs an electrical permit; not contradicted."
+    },
+    {
+      "id": "A27",
+      "claim_short": "Mechanical permit for heaters/gas",
+      "claim_full": "Adding a gas line or vented heating/cooling appliance triggers a mechanical permit under Title 27.",
+      "topic": "hvac",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Title 27",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/residential-mechanical-permits"
+      },
+      "verified_truth": "Standard Portland mechanical-permit trigger; not contradicted."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Attaching to house changes rules",
+      "claim_full": "Attaching the pergola to the house turns it into an addition and changes which permit and structural rules apply.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits"
+      },
+      "verified_truth": "Attaching to the primary structure does in fact reclassify the project for both zoning and building-permit purposes; consistent across responses."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Permit fees ~$300\u2013$1,200",
+      "claim_full": "A residential building permit for a small accessory structure typically runs about $300 to $1,200, with electrical permits about $100 to $250.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": "portland.gov/ppd/fees",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/fees"
+      },
+      "verified_truth": "Evaluator flagged for verification against current fee schedule but did not contradict; ranges are consistent with PP&D's published fees."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Call 811 before digging",
+      "claim_full": "Oregon law requires calling 811 at least two business days before digging post holes; the locate is free.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "digsafelyoregon.com",
+      "citation_by_variant": {
+        "enhanced": "https://digsafelyoregon.com"
+      },
+      "verified_truth": "This is Oregon law; not contradicted."
+    },
+    {
+      "id": "A31",
+      "claim_short": "3 ft from line triggers fire-rated wall",
+      "claim_full": "Building an accessory structure within 3 ft of the property line triggers fire-resistance / 1-hour fire-rated wall requirements under the building code.",
+      "topic": "structural",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct-range",
+      "importance": 2,
+      "citation": "Title 24",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures"
+      },
+      "verified_truth": "Evaluator flagged for verification against ORSC/Title 24, but the 3-ft fire-rating trigger is a standard Oregon residential rule."
+    },
+    {
+      "id": "A32",
+      "claim_short": "Check HOA / CC&Rs",
+      "claim_full": "Resident should check private deed restrictions and HOA rules; the city does not enforce these but they can override permit-free city rules.",
+      "topic": "other",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.7,
+      "correctness": "correct-action",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": null
+      },
+      "verified_truth": "Sound general advice; OOB variant noted Mt. Scott-Arleta 'doesn't appear to have an HOA' as a guess. CC&Rs are private and unenforced by the city, which is correct."
+    },
+    {
+      "id": "A33",
+      "claim_short": "Easement and survey warning",
+      "claim_full": "Recorded easements and the actual property line (not the fence) should be confirmed; a licensed surveyor may be needed before building close to a setback.",
+      "topic": "other",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/zoning-land-use/commonly-asked-questions"
+      },
+      "verified_truth": "Standard Portland guidance: fences are not reliable proxies for property lines, and recorded easements can prohibit building over them."
+    },
+    {
+      "id": "A34",
+      "claim_short": "SDCs typically not on pergolas",
+      "claim_full": "System Development Charges typically do not apply to a non-habitable pergola without water or sewer hookups, though this should be verified.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.6,
+      "correctness": "hedge-correct",
+      "importance": 2,
+      "citation": "portland.gov/ppd/sdc",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/sdc"
+      },
+      "verified_truth": "Enhanced variant explicitly hedges this claim and tells the resident to confirm with PP&D, which is appropriate epistemic hygiene flagged in the evaluator notes."
+    },
+    {
+      "id": "A35",
+      "claim_short": "BOD 21-05 governs habitability",
+      "claim_full": "Building Official Determination 21-05 distinguishes habitable vs non-habitable accessory structures and underlies the permit-exemption analysis.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "BOD 21-05",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/codes-rules-and-guides/bod-21-05-habitable-vs-non-habitable-accessory-structures"
+      },
+      "verified_truth": "BOD 21-05 is a real Portland Building Official Determination; not contradicted."
+    },
+    {
+      "id": "A36",
+      "claim_short": "PP&D walk-in hours and inspection line",
+      "claim_full": "PP&D's Development Services Center at 1900 SW 4th has walk-in hours Tuesdays 8 AM-4 PM and Thursdays 8 AM-noon, with the inspection request line at 503-823-7000.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct-range",
+      "importance": 2,
+      "citation": "portland.gov/service-locations/development-services-center",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/service-locations/development-services-center"
+      },
+      "verified_truth": "Evaluator flagged hours and the inspection line for verification against current published schedules but did not contradict."
     }
   ]
 }
