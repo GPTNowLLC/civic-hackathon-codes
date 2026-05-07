@@ -25,7 +25,95 @@
     --s1: #f97316;
     --s2: #eab308;
     --s3: #22c55e;
+
+    /* Surface tokens used by light-mode overrides — match the existing
+       hardcoded dark values so nothing changes for the default theme. */
+    --header-grad-top:    #0d121d;
+    --card-bg:            rgba(15, 23, 42, 0.55);
+    --grade-bg:           rgba(15, 23, 42, 0.45);
+    --row-header-bg:      #0c1119;
+    --row-expanded-bg:    #0c1119;
+    --row-detail-bg:      #080c14;
+    --gauge-track:        rgba(148, 163, 184, 0.12);
+    --bar-track-bg:       rgba(148, 163, 184, 0.08);
+    --carousel-btn-bg:    rgba(148, 163, 184, 0.06);
+    --carousel-btn-hover: rgba(125, 211, 252, 0.10);
+    --comp-track-bg:      rgba(148, 163, 184, 0.04);
+    --dot-btn-bg:         rgba(148, 163, 184, 0.18);
+    --rubric-link-hover:  rgba(125, 211, 252, 0.10);
+    --row-link-bg:        rgba(125, 211, 252, 0.06);
+    --row-link-hover:     rgba(125, 211, 252, 0.12);
+    --row-link-b-bg:      rgba(168, 85, 247, 0.06);
+    --row-link-b-hover:   rgba(168, 85, 247, 0.12);
+    --hero-grad-1:        rgba(56, 189, 248, 0.08);
+    --hero-grad-2:        rgba(34, 197, 94, 0.05);
+    --crit-matrix-grad:   rgba(125, 211, 252, 0.04);
+    --strong-text:        #f8fafc;
+    --shadow-card:        0 12px 28px -16px rgba(0, 0, 0, 0.6);
   }
+
+  :root[data-theme="light"] {
+    --bg: #f8fafc;
+    --bg-panel: #ffffff;
+    --bg-elev: #f1f5f9;
+    --bg-hover: #e2e8f0;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --text: #0f172a;
+    --text-dim: #1e293b;
+    --text-muted: #475569;
+    --accent: #0369a1;
+
+    /* Color-scale: keep hue, choose shades that read on white. */
+    --c1: #dc2626;
+    --c2: #d97706;
+    --c3: #16a34a;
+
+    --header-grad-top:    #f1f5f9;
+    --card-bg:            #ffffff;
+    --grade-bg:           rgba(15, 23, 42, 0.04);
+    --row-header-bg:      #ffffff;
+    --row-expanded-bg:    #f8fafc;
+    --row-detail-bg:      #f1f5f9;
+    --gauge-track:        rgba(15, 23, 42, 0.08);
+    --bar-track-bg:       rgba(15, 23, 42, 0.06);
+    --carousel-btn-bg:    rgba(15, 23, 42, 0.04);
+    --carousel-btn-hover: rgba(3, 105, 161, 0.10);
+    --comp-track-bg:      rgba(15, 23, 42, 0.03);
+    --dot-btn-bg:         rgba(15, 23, 42, 0.12);
+    --rubric-link-hover:  rgba(3, 105, 161, 0.10);
+    --row-link-bg:        rgba(3, 105, 161, 0.06);
+    --row-link-hover:     rgba(3, 105, 161, 0.12);
+    --row-link-b-bg:      rgba(124, 58, 237, 0.06);
+    --row-link-b-hover:   rgba(124, 58, 237, 0.14);
+    --hero-grad-1:        rgba(3, 105, 161, 0.05);
+    --hero-grad-2:        rgba(22, 163, 74, 0.04);
+    --crit-matrix-grad:   rgba(3, 105, 161, 0.03);
+    --strong-text:        #0f172a;
+    --shadow-card:        0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 20px -12px rgba(15, 23, 42, 0.18);
+  }
+
+  /* Theme toggle button */
+  .theme-toggle {
+    margin-left: 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 6px;
+    width: 32px; height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { color: var(--text); border-color: var(--border-strong); background: var(--bg-elev); }
+  .theme-toggle .icon-sun  { display: none; }
+  .theme-toggle .icon-moon { display: inline; }
+  :root[data-theme="light"] .theme-toggle .icon-sun  { display: inline; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -46,7 +134,7 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    background: linear-gradient(180deg, #0d121d 0%, var(--bg) 100%);
+    background: linear-gradient(180deg, var(--header-grad-top) 0%, var(--bg) 100%);
   }
   header .brand {
     display: flex;
@@ -89,19 +177,19 @@
     padding: 28px 32px 24px;
     border-bottom: 1px solid var(--border);
     background:
-      radial-gradient(ellipse 600px 200px at 20% 0%, rgba(56, 189, 248, 0.08), transparent),
-      radial-gradient(ellipse 500px 200px at 80% 100%, rgba(34, 197, 94, 0.05), transparent);
+      radial-gradient(ellipse 600px 200px at 20% 0%, var(--hero-grad-1), transparent),
+      radial-gradient(ellipse 500px 200px at 80% 100%, var(--hero-grad-2), transparent);
   }
   /* summary chart card with carousel of 4 chart variants */
   .crit-matrix {
     max-width: 1080px;
     background:
-      radial-gradient(ellipse 700px 260px at 50% 0%, rgba(125, 211, 252, 0.04), transparent 70%),
+      radial-gradient(ellipse 700px 260px at 50% 0%, var(--crit-matrix-grad), transparent 70%),
       var(--bg-panel);
     border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.03) inset, 0 12px 28px -16px rgba(0,0,0,0.6);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.03) inset, var(--shadow-card);
   }
   .ccm-header {
     padding: 16px 22px 14px;
@@ -120,7 +208,7 @@
     font-weight: 600;
   }
   .ccm-header-title strong {
-    color: #f8fafc;
+    color: var(--strong-text);
     font-weight: 700;
     letter-spacing: 0.02em;
     text-transform: none;
@@ -140,7 +228,7 @@
     transition: all 0.15s;
   }
   .ccm-rubric-link:hover {
-    background: rgba(125, 211, 252, 0.1);
+    background: var(--rubric-link-hover);
     text-decoration: none;
   }
   .ccm-evaluated {
@@ -172,7 +260,7 @@
   .ccm-carousel-btn {
     width: 32px; height: 32px;
     border-radius: 50%;
-    background: rgba(148, 163, 184, 0.06);
+    background: var(--carousel-btn-bg);
     border: 1px solid rgba(148, 163, 184, 0.14);
     color: var(--text-dim);
     cursor: pointer;
@@ -187,7 +275,7 @@
     user-select: none;
   }
   .ccm-carousel-btn:hover {
-    background: rgba(125, 211, 252, 0.10);
+    background: var(--carousel-btn-hover);
     border-color: rgba(125, 211, 252, 0.4);
     color: var(--accent);
   }
@@ -222,7 +310,7 @@
   .ccm-dot-btn {
     width: 22px; height: 5px;
     border-radius: 3px;
-    background: rgba(148, 163, 184, 0.18);
+    background: var(--dot-btn-bg);
     border: none;
     cursor: pointer;
     transition: background 0.2s, width 0.2s;
@@ -396,7 +484,7 @@
   }
   .ccm-comp-track {
     height: 40px;
-    background: rgba(148, 163, 184, 0.04);
+    background: var(--comp-track-bg);
     border-radius: 6px;
     display: flex;
     overflow: hidden;
@@ -478,8 +566,8 @@
     gap: 14px;
   }
   .ccm-card {
-    background: rgba(15, 23, 42, 0.55);
-    border: 1px solid rgba(148, 163, 184, 0.10);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 18px 18px 16px;
     position: relative;
@@ -504,7 +592,7 @@
     border-color: rgba(34, 197, 94, 0.4);
     background:
       radial-gradient(ellipse 200px 90px at 50% 0%, rgba(34, 197, 94, 0.10), transparent 70%),
-      rgba(15, 23, 42, 0.55);
+      var(--card-bg);
   }
   .ccm-card-best-tag {
     position: absolute;
@@ -530,7 +618,7 @@
     padding: 6px 10px 5px;
     border-radius: 8px;
     border: 1px solid currentColor;
-    background: rgba(15, 23, 42, 0.45);
+    background: var(--grade-bg);
   }
   .ccm-card-grade.tier-a { color: var(--c3); background: rgba(34, 197, 94, 0.12); }
   .ccm-card-grade.tier-b { color: #a3e635; background: rgba(163, 230, 53, 0.10); }
@@ -565,7 +653,7 @@
     width: 132px; height: 132px;
   }
   .ccm-card-gauge svg { display: block; }
-  .ccm-card-gauge-track { stroke: rgba(148, 163, 184, 0.12); fill: none; stroke-width: 9; }
+  .ccm-card-gauge-track { stroke: var(--gauge-track); fill: none; stroke-width: 9; }
   .ccm-card-gauge-fill {
     fill: none; stroke-width: 9;
     stroke-linecap: round;
@@ -634,7 +722,7 @@
   }
   .ccm-card-bar-track {
     height: 5px;
-    background: rgba(148, 163, 184, 0.08);
+    background: var(--bar-track-bg);
     border-radius: 3px;
     overflow: hidden;
   }
@@ -689,7 +777,7 @@
     grid-template-columns: 280px repeat(3, 1fr);
     gap: 0;
     border-bottom: 1px solid var(--border);
-    background: #0c1119;
+    background: var(--row-header-bg);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -748,7 +836,7 @@
     transition: background 0.15s;
   }
   .scenario-row:hover .row-header { background: var(--bg-hover); }
-  .scenario-row.expanded { background: #0c1119; }
+  .scenario-row.expanded { background: var(--row-expanded-bg); }
   .scenario-row.expanded .row-header { border-bottom: 1px solid var(--border); }
 
   .row-header {
@@ -808,8 +896,8 @@
     font-weight: 500;
     padding: 6px 12px;
     border-radius: 6px;
-    border: 1px solid #1e3a5f;
-    background: rgba(125, 211, 252, 0.06);
+    border: 1px solid var(--border-strong);
+    background: var(--row-link-bg);
     color: var(--accent);
     text-decoration: none;
     cursor: pointer;
@@ -818,18 +906,18 @@
   }
   .row-detail-link:hover {
     border-color: var(--accent);
-    background: rgba(125, 211, 252, 0.12);
+    background: var(--row-link-hover);
   }
   /* Variant B link styled with a different accent so the two designs are
      immediately distinguishable in the row. */
   .row-detail-link.variant-b {
     border-color: #5a3f8a;
-    background: rgba(168, 85, 247, 0.06);
+    background: var(--row-link-b-bg);
     color: #c4a5f5;
   }
   .row-detail-link.variant-b:hover {
     border-color: #a855f7;
-    background: rgba(168, 85, 247, 0.12);
+    background: var(--row-link-b-hover);
   }
 
   .expand-icon {
@@ -917,7 +1005,7 @@
   /* ── Expanded detail panel ── */
   .row-detail {
     display: none;
-    background: #080c14;
+    background: var(--row-detail-bg);
     border-top: 1px solid var(--border);
   }
   .scenario-row.expanded .row-detail { display: block; }
@@ -1174,6 +1262,17 @@
   }
   .detail-clear-all-btn:hover { border-color: #ef4444; background: #2a1518; }
 </style>
+<script>
+  // Apply saved theme before first paint to avoid a flash.
+  (function() {
+    try {
+      var t = localStorage.getItem('ccmTheme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    } catch (e) { /* localStorage unavailable — keep default */ }
+  })();
+</script>
 </head>
 <body>
 
@@ -1185,6 +1284,11 @@
   <div class="nav-links">
     <a href="/" class="active">Dashboard</a>
     <a href="/rubric.html">Rubric</a>
+    <button type="button" class="theme-toggle" id="theme-toggle"
+            aria-label="Toggle light / dark theme" title="Toggle light / dark">
+      <span class="icon-moon" aria-hidden="true">&#9789;</span>
+      <span class="icon-sun"  aria-hidden="true">&#9788;</span>
+    </button>
   </div>
 </header>
 
@@ -2341,6 +2445,19 @@ function refreshRow(scenarioId) {
 // The server routes /api/three-column-state as GET (load) and POST (save).
 // These are wired to the same data/state.json sidecar under a 'threecol' key.
 // If the server doesn't know this endpoint yet, we fall back to localStorage only.
+
+// ── Theme toggle ──────────────────────────────────────────────────────────────
+(function bindThemeToggle() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next = cur === 'light' ? 'dark' : 'light';
+    if (next === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    else                  document.documentElement.removeAttribute('data-theme');
+    try { localStorage.setItem('ccmTheme', next); } catch (e) {}
+  });
+})();
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 initState3col();
