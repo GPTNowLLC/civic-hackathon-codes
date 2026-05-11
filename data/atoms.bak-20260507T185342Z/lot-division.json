@@ -21,73 +21,31 @@
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "Zoning is CM2 with Design overlay",
-      "claim_full": "The property at 4435 SE Belmont is zoned CM2 (Commercial Mixed Use 2) with a 'd' Design overlay.",
+      "claim_short": "Property is CM2 with d Design overlay",
+      "claim_full": "4435 SE Belmont St is zoned CM2 (Commercial Mixed Use 2) with a 'd' Design overlay.",
       "topic": "zoning",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.7,
+      "specificity": 1.0,
+      "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PCC 33.130 / PortlandMaps",
+      "citation": "PCC 33.130",
       "citation_by_variant": {
         "oob": null,
-        "mcp": "Chapter 33.130",
-        "enhanced": "PCC 33.130 (https://www.portland.gov/code/33/100s/130); PCC 33.420 (https://www.portland.gov/code/33/400s/420)"
+        "mcp": "PCC 33.130",
+        "enhanced": "PCC 33.130 (https://www.portland.gov/code/33/100s/130)"
       },
-      "verified_truth": "Accuracy flags across all three variants confirm CM2 base zone with 'd' Design overlay; comp plan designation MU-U is also confirmed in the enhanced flags."
+      "verified_truth": "All three responses correctly identify the property as CM2 with a Design overlay; flagged as correct in accuracy notes."
     },
     {
       "id": "A2",
-      "claim_short": "Existing 12-unit building built 1911",
-      "claim_full": "The lot already holds a 12-unit multifamily walk-up of roughly 8,952 sq ft, built in 1911.",
-      "topic": "address",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PortlandMaps / Multnomah County assessor",
-      "citation_by_variant": {
-        "oob": "Redfin/MLS listing",
-        "mcp": "Multnomah County / Portland Maps records"
-      },
-      "verified_truth": "Accuracy flags confirm a 12-unit, 8,952 sq ft multifamily building constructed 1911 on this parcel."
-    },
-    {
-      "id": "A3",
-      "claim_short": "Lot ~8,000\u20138,952 sq ft",
-      "claim_full": "The parcel is roughly 8,000\u20138,952 square feet (about 0.20 acres), with some sources reporting 6,000 SF.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.4,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 3,
-      "citation": "Multnomah County assessor / PortlandMaps",
-      "citation_by_variant": {
-        "oob": "Redfin/MLS",
-        "mcp": "PARADISE SPR TR Block 4, Lots 3 & 4",
-        "enhanced": "PortlandMaps geometry (R233406)"
-      },
-      "verified_truth": "Authoritative assessor square_feet is 8,952. OOB cited a discrepancy (6,000 vs 8,712); MCP gave 8,763; enhanced inferred 8,000\u20138,500 from geometry and flagged the inference. The 6,000 SF figure is incorrect."
-    },
-    {
-      "id": "A4",
-      "claim_short": "Owner is Monterey Cypress LLC",
-      "claim_full": "The deeded owner of record is Monterey Cypress LLC, mailing address 120 SE 28th Ave.",
-      "topic": "address",
+      "claim_short": "Comp plan designation MU-U",
+      "claim_full": "The comprehensive plan designation for the property is Mixed Use - Urban Center (MU-U).",
+      "topic": "zoning",
       "variants": [
         "mcp",
         "enhanced"
@@ -96,18 +54,118 @@
       "actionability": 0.5,
       "correctness": "correct",
       "importance": 3,
-      "citation": "PortlandMaps / Multnomah County",
+      "citation": "PortlandMaps",
       "citation_by_variant": {
-        "mcp": "Multnomah County / Portland Maps",
-        "enhanced": "PortlandMaps for property R233406"
+        "mcp": "PortlandMaps",
+        "enhanced": "https://www.portlandmaps.com/"
       },
-      "verified_truth": "Accuracy flags confirm owner of record as MONTEREY CYPRESS LLC at 120 SE 28th Ave."
+      "verified_truth": "Both MCP and enhanced responses identified MU-U comp plan; consistent with PortlandMaps record."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Existing 12-unit building built 1911",
+      "claim_full": "The lot already contains a 12-unit multifamily building built in 1911.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": "Redfin/MLS listing",
+        "mcp": "PortlandMaps / Multnomah County"
+      },
+      "verified_truth": "Confirmed by accuracy flags: 12-unit walk-up apartment, 8,952 sq ft, built 1911."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Lot size approximately 6,000\u20138,952 sq ft",
+      "claim_full": "The lot is approximately 8,000\u20138,952 square feet (with disagreement between Redfin's 6,000 SF and MLS/county records).",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": "Multnomah County assessor",
+      "citation_by_variant": {
+        "oob": "Redfin/MLS",
+        "mcp": "PortlandMaps (8,763 sq ft)",
+        "enhanced": "PortlandMaps geometry (~8,000\u20138,500 sq ft, inferred)"
+      },
+      "verified_truth": "Actual assessor record shows 8,952 sq ft; MCP cited 8,763 sq ft, enhanced inferred 8,000\u20138,500 from geometry, OOB flagged a discrepancy."
     },
     {
       "id": "A5",
-      "claim_short": "Prior land-use cases on file",
-      "claim_full": "Two recent cases attach to the property: PR 2023-050963 (Property Line Adjustment) and LU 2023-113827 (Type II Adjustment).",
-      "topic": "process",
+      "claim_short": "Owner is Monterey Cypress LLC",
+      "claim_full": "The owner of record is Monterey Cypress LLC, mailing address 120 SE 28th Ave Portland.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps / Multnomah County",
+        "enhanced": "PortlandMaps property R233406"
+      },
+      "verified_truth": "Accuracy flags confirm owner Monterey Cypress LLC at 120 SE 28th Ave."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Last sale Oct 2020 at $1,585,100",
+      "claim_full": "The property last sold in October 2020 for $1,585,100.",
+      "topic": "address",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.3,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps"
+      },
+      "verified_truth": "Accuracy flag confirms last sale Oct 2020 at $1,585,100."
+    },
+    {
+      "id": "A7",
+      "claim_short": "Currently listed for sale ~$1.65M",
+      "claim_full": "The property is currently listed for sale at approximately $1.65\u20131.78M with a 6.0% CAP rate.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "MLS #520360821",
+      "citation_by_variant": {
+        "oob": "Redfin/MLS",
+        "mcp": "MLS# 520360821"
+      },
+      "verified_truth": "OOB and MCP both report active listing; accuracy flags confirm MLS listing."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Prior land-use case PR 2023-050963 PLA",
+      "claim_full": "There is a prior Property Line Adjustment case PR 2023-050963 with decision rendered April 2025 attached to the property.",
+      "topic": "address",
       "variants": [
         "mcp",
         "enhanced"
@@ -116,268 +174,244 @@
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PortlandMaps land-use records",
+      "citation": "PCC 33.677",
       "citation_by_variant": {
-        "mcp": "PCC 33.805",
-        "enhanced": "PCC 33.677 (https://www.portland.gov/code/33/600s/677); PCC 33.805 (https://www.portland.gov/code/33/800s/805)"
+        "mcp": "PortlandMaps land use cases",
+        "enhanced": "PCC 33.677 (https://www.portland.gov/code/33/600s/677)"
       },
-      "verified_truth": "Accuracy flags confirm both case numbers and statuses (PR 23-050963 PLA decision rendered 2025-04-15; LU 23-113827 AD recorded 2024-04-17)."
-    },
-    {
-      "id": "A6",
-      "claim_short": "No min lot size in commercial zones",
-      "claim_full": "Commercial/mixed-use zones have no fixed minimum lot square footage; CM2 only requires a 10-foot minimum front lot line dimension.",
-      "topic": "size",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.130 / 33.613",
-      "citation_by_variant": {
-        "mcp": "Chapter 33.130 / 33.613"
-      },
-      "verified_truth": "Accuracy flags confirm the no-minimum-lot-size rule for commercial/mixed-use zones and the 10-foot minimum front lot line in CM2."
-    },
-    {
-      "id": "A7",
-      "claim_short": "CM2 max FAR 2.5:1 (4:1 bonus)",
-      "claim_full": "CM2 allows a base FAR of 2.5:1, increasing to 4:1 with bonuses such as affordable housing or plaza dedication.",
-      "topic": "size",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.130",
-      "citation_by_variant": {
-        "mcp": "Chapter 33.130"
-      },
-      "verified_truth": "Accuracy flags list this as a verifiable CM2 standard; specific subsection not given but FAR figures match Portland CM2 base/bonus structure."
-    },
-    {
-      "id": "A8",
-      "claim_short": "CM2 base height 45 ft (~4 stories)",
-      "claim_full": "CM2 has a base height limit of about 45 feet (roughly 4 stories), with step-down rules adjacent to residential zones.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 33.130",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": "Chapter 33.130",
-        "enhanced": "PCC 33.130 (https://www.portland.gov/code/33/100s/130)"
-      },
-      "verified_truth": "Accuracy flags confirm CM2 base height of ~45 ft and step-downs adjacent to residential, though OOB phrased it as '4 stories base, 5 with bonuses'."
+      "verified_truth": "Accuracy flags confirm case PR 2023-050963 PLA with Decision Rendered 2025-04-15."
     },
     {
       "id": "A9",
-      "claim_short": "CM2 min density 1 unit / 1,450 sf",
-      "claim_full": "CM2 requires a minimum density of one unit per 1,450 sq ft of site area, supporting up to ~30 small units on this lot.",
-      "topic": "size",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.130",
-      "citation_by_variant": {
-        "mcp": "Chapter 33.130"
-      },
-      "verified_truth": "Accuracy flags list this as a CM2 standard; subsection not cited but figure matches Portland CM2 density floor."
-    },
-    {
-      "id": "A10",
-      "claim_short": "Most CM2 has no parking minimum",
-      "claim_full": "Under PCC 33.266, most CM2 sites have no minimum off-street residential parking requirement after the 2022 code update.",
-      "topic": "size",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.266",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.266 (https://www.portland.gov/code/33/200s/266)"
-      },
-      "verified_truth": "Accuracy flags confirm PCC 33.266 governs parking and that most CM2 has no residential minimum after the 2022 update."
-    },
-    {
-      "id": "A11",
-      "claim_short": "Design overlay triggers Design Review",
-      "claim_full": "The 'd' overlay (PCC 33.420) means new buildings face either objective Design Standards or discretionary Design Review under PCC 33.825.",
-      "topic": "process",
+      "claim_short": "Prior land-use case LU 2023-113827 Adjustment",
+      "claim_full": "There is a prior Type 2 Adjustment case LU 2023-113827 recorded April 2024 attached to the property.",
+      "topic": "address",
       "variants": [
         "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.8,
+      "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PCC 33.420 / 33.825",
+      "citation": "PCC 33.805",
       "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PCC 33.420.041, .045, .055 (https://www.portland.gov/code/33/400s/420); PCC 33.825 (https://www.portland.gov/code/33/800s/825)"
+        "mcp": "PCC 33.805",
+        "enhanced": "PCC 33.805 (https://www.portland.gov/code/33/800s/805)"
       },
-      "verified_truth": "Accuracy flags confirm PCC 33.420 (Design overlay) and 33.825 (Design Review) and that objective standards vs. discretionary review are the two paths."
+      "verified_truth": "Accuracy flags confirm LU 2023-113827 Type 2 Adjustment Recorded 2024-04-17."
     },
     {
-      "id": "A12",
-      "claim_short": "Design Review ~6 months, $15\u201325K",
-      "claim_full": "Discretionary Design Review under the 'd' overlay is a Type II process taking roughly six months and costing $15,000\u2013$25,000 in city fees.",
-      "topic": "costs",
+      "id": "A10",
+      "claim_short": "Condos don't require lot division",
+      "claim_full": "Condominium ownership sits on top of one parcel and does not require physically dividing the lot.",
+      "topic": "definitions",
       "variants": [
+        "oob",
         "mcp",
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": "PCC 33.825",
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "ORS 100.022",
       "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PCC 33.825 (https://www.portland.gov/code/33/800s/825)"
+        "oob": "ORS Chapter 100",
+        "mcp": "ORS 100",
+        "enhanced": "ORS 100.022 (https://oregon.public.law/statutes/ors_100.022)"
       },
-      "verified_truth": "Accuracy flags accept the timeline and cost range as plausible city-fee figures for Type II Design Review on a small CM2 project."
+      "verified_truth": "All three correctly explain condos are an ownership form, not a land division; enhanced cites ORS 100.022 specifically."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Three ownership paths: condo, townhouse, apartment",
+      "claim_full": "The resident has three distinct paths: condo conversion, townhouses on individual fee-simple lots, or apartment ownership.",
+      "topic": "definitions",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "ORS Chapter 100; PCC 33.662",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": "ORS Chapter 100",
+        "enhanced": "ORS Chapter 100; PCC 33.662"
+      },
+      "verified_truth": "All three lay out the same three options for the resident."
+    },
+    {
+      "id": "A12",
+      "claim_short": "CM2 max height ~45 ft / 4 stories",
+      "claim_full": "The CM2 base zone allows building heights up to about 45 feet (roughly 4 stories), with bonuses possible.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.130",
+      "citation_by_variant": {
+        "oob": "Title 33",
+        "mcp": "PCC 33.130",
+        "enhanced": "PCC 33.130"
+      },
+      "verified_truth": "Accuracy flag confirms CM2 base height 45 ft (4 stories)."
     },
     {
       "id": "A13",
-      "claim_short": "Condos don't require lot division",
-      "claim_full": "Condos are an ownership form that sits on top of one piece of land, so a physical lot split is not needed to do condos under ORS 100.022.",
+      "claim_short": "CM2 max FAR 2.5:1 base, up to 4:1 bonus",
+      "claim_full": "CM2 maximum floor-area-ratio is 2.5:1 base, up to 4:1 with affordable housing or other bonuses.",
+      "topic": "size",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.130",
+      "citation_by_variant": {
+        "mcp": "PCC 33.130"
+      },
+      "verified_truth": "Accuracy flag confirms CM2 max FAR 2.5:1 base, up to 4:1 with bonuses."
+    },
+    {
+      "id": "A14",
+      "claim_short": "No minimum lot size in CM2",
+      "claim_full": "There is no required minimum lot size for development of land in commercial/mixed use zones.",
+      "topic": "size",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.130 / 33.613",
+      "citation_by_variant": {
+        "mcp": "Chapter 33.130 / 33.613",
+        "enhanced": "PCC 33.613 / 33.130 Tables 130-1 & 130-2"
+      },
+      "verified_truth": "Accuracy flag confirms claim is attributed to Chapter 33.130/33.613 in MCP; enhanced echoes the same idea."
+    },
+    {
+      "id": "A15",
+      "claim_short": "RIP / middle housing doesn't apply to CM2",
+      "claim_full": "Residential Infill Project rules and HB 2001 middle-housing rules apply only in residential zones, not CM2.",
       "topic": "definitions",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.95,
+      "actionability": 1.0,
       "correctness": "correct",
       "importance": 5,
-      "citation": "ORS 100.022",
+      "citation": "PCC 33.110; PCC 33.671",
       "citation_by_variant": {
-        "enhanced": "ORS 100.022 (https://oregon.public.law/statutes/ors_100.022)"
+        "enhanced": "PCC 33.110 (https://www.portland.gov/code/33/100s/110); PCC 33.671 (https://www.portland.gov/code/33/600s/671)"
       },
-      "verified_truth": "Accuracy flags confirm ORS 100.022 separates zoning/condo form-of-ownership and that the city cannot regulate whether a building is owned as condos vs apartments."
+      "verified_truth": "Accuracy notes confirm enhanced response correctly identifies RIP/HB 2001 as residential-only and correctly directs the user to CM2 use tables instead."
     },
     {
-      "id": "A14",
-      "claim_short": "Three paths: convert, split, redevelop",
-      "claim_full": "Owner has three options: condo-convert the existing building, split the lot, or demolish and redevelop a new mixed-use building.",
-      "topic": "definitions",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 0.6,
-      "actionability": 0.85,
-      "correctness": "correct-judg",
-      "importance": 4,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null
-      },
-      "verified_truth": "Accuracy flags treat the three-path framing as a reasonable judgment call; condo conversion is realistic given existing 12-unit configuration."
-    },
-    {
-      "id": "A15",
-      "claim_short": "Land division uses PCC 33.662",
-      "claim_full": "Splitting this CM2 lot is governed by PCC 33.662 (commercial/mixed-use land divisions), not PCC 33.660 (residential).",
+      "id": "A16",
+      "claim_short": "Land division in CM2 uses PCC 33.662",
+      "claim_full": "Land divisions in commercial/mixed use zones are processed under PCC 33.662, not the residential land-division chapter 33.660.",
       "topic": "process",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.8,
+      "actionability": 0.9,
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 33.662",
       "citation_by_variant": {
         "enhanced": "PCC 33.662 (https://www.portland.gov/code/33/600s/662)"
       },
-      "verified_truth": "Accuracy flags confirm PCC 33.662 as the commercial/mixed-use land-division chapter (vs 33.660 for residential)."
-    },
-    {
-      "id": "A16",
-      "claim_short": "RIP / middle housing doesn't apply",
-      "claim_full": "Residential Infill Project and Oregon HB 2001 'middle housing' rules apply only to residential zones, not CM2.",
-      "topic": "definitions",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 33.110 / 33.671",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.110 (https://www.portland.gov/code/33/100s/110); PCC 33.671 (https://www.portland.gov/code/33/600s/671)"
-      },
-      "verified_truth": "Accuracy flags confirm RIP/middle-housing rules are residential-only and that CM2 already permits multifamily by right under different mechanisms."
+      "verified_truth": "Accuracy notes list PCC 33.662 as the correct commercial land-division chapter."
     },
     {
       "id": "A17",
-      "claim_short": "ORS 100 condo procedural rules",
-      "claim_full": "Oregon condo conversion under ORS 100 requires a 120-day notice before declaration recording, a 30-day pre-offer notice, and a 60-day tenant right of first refusal, with a copy of notice to the Mayor of Portland.",
+      "claim_short": "Design overlay triggers Design Review or Standards",
+      "claim_full": "The 'd' overlay requires either passing the objective Design Standards (faster) or going through discretionary Design Review.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.420 / 33.825",
+      "citation_by_variant": {
+        "oob": "Title 33",
+        "mcp": "Type 2, ~6 months, $15\u201325K",
+        "enhanced": "PCC 33.420.041; 33.420.055; 33.825"
+      },
+      "verified_truth": "Accuracy flag confirms enhanced cites PCC 33.420.041 threshold and 33.420.045/.055 standards path; design review process correctly described."
+    },
+    {
+      "id": "A18",
+      "claim_short": "Oregon condo conversion notice rules",
+      "claim_full": "Oregon law requires 30-day notice before offer and 120-day notice before recording the condo declaration, plus right of first refusal for tenants.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "ORS Chapter 100",
+      "citation_by_variant": {
+        "oob": "ORS Chapter 100",
+        "mcp": "ORS 100"
+      },
+      "verified_truth": "Accuracy flags confirm 30-day before offer, 120-day before recording, and 60-day tenant right of first refusal."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Notice of conversion copied to Mayor",
+      "claim_full": "A copy of the conversion notice must go to the Mayor of Portland.",
       "topic": "process",
       "variants": [
         "oob"
       ],
       "specificity": 1.0,
-      "actionability": 0.85,
+      "actionability": 0.6,
       "correctness": "correct",
-      "importance": 4,
+      "importance": 2,
       "citation": "ORS 100",
       "citation_by_variant": {
-        "oob": "ORS Chapter 100"
+        "oob": "ORS 100"
       },
-      "verified_truth": "Accuracy flags confirm the 30/120/60-day windows, ROFR, and mayor-notice requirements as substantively correct ORS 100 procedure."
+      "verified_truth": "Accuracy flag confirms notice of conversion must be copied to the Mayor of Portland."
     },
     {
-      "id": "A18",
-      "claim_short": "ORS 100 declaration & filing path",
-      "claim_full": "To create condos, the owner records a declaration (ORS 100.105) and plat (ORS 100.115), gets Real Estate Commissioner approval (ORS 100.110), and files annual reports (ORS 100.480) plus a disclosure statement (ORS 100.655).",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "ORS 100.105/.115/.110/.480/.655",
-      "citation_by_variant": {
-        "enhanced": "ORS 100.105, 100.115, 100.110, 100.480, 100.655 (https://oregon.public.law/statutes/ors_chapter_100)"
-      },
-      "verified_truth": "Accuracy flags confirm these ORS sections as accurate citations for the condo declaration, plat, agency approval, annual filings, and disclosure statement."
-    },
-    {
-      "id": "A19",
-      "claim_short": "Portland relocation $2,900\u2013$4,500/unit",
-      "claim_full": "Portland's mandatory tenant relocation ordinance pays $2,900 (studio) / $3,300 (1BR) / $4,200 (2BR) / $4,500 (3BR+) when triggered by no-cause termination or 10%+ rent increase.",
+      "id": "A20",
+      "claim_short": "Portland tenant relocation $2,900\u2013$4,500",
+      "claim_full": "Portland's mandatory relocation assistance ranges from $2,900 (studio) to $4,500 (3BR+) per displaced tenant.",
       "topic": "costs",
       "variants": [
         "oob",
         "mcp"
       ],
       "specificity": 1.0,
-      "actionability": 0.85,
+      "actionability": 1.0,
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 30.01.085",
@@ -385,12 +419,66 @@
         "oob": null,
         "mcp": null
       },
-      "verified_truth": "Accuracy flags confirm the dollar amounts and the 10% / no-cause triggers; OOB and MCP both cited the figures but neither cited PCC 30.01.085 directly."
+      "verified_truth": "Accuracy flags confirm relocation amounts; OOB notes PCC 30.01.085 as the uncited governing section."
     },
     {
-      "id": "A20",
-      "claim_short": "SDC waiver window 2025\u20132028",
-      "claim_full": "Portland is waiving most housing-unit System Development Charges for permits issued August 15, 2025 through September 30, 2028.",
+      "id": "A21",
+      "claim_short": "10% rent hike or no-cause triggers relocation",
+      "claim_full": "Triggering a 10%+ rent increase or a no-cause termination during conversion activates Portland's mandatory relocation ordinance.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Accuracy flag confirms 10% rent increase or no-cause termination triggers relocation ordinance."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Four UST records on parcel",
+      "claim_full": "The property has four Underground Storage Tank records flagged on PortlandMaps, requiring Phase I ESA before purchase.",
+      "topic": "safety",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps"
+      },
+      "verified_truth": "Accuracy flag confirms four UST records on the parcel."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Property in MULTE/HOLTE eligibility area",
+      "claim_full": "The property falls within the eligibility areas for the MULTE and HOLTE tax-abatement programs.",
+      "topic": "costs",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps"
+      },
+      "verified_truth": "Accuracy flag confirms the property is in MULTE and HOLTE eligibility areas."
+    },
+    {
+      "id": "A24",
+      "claim_short": "SDC waiver Aug 2025 \u2013 Sep 2028",
+      "claim_full": "Portland is temporarily waiving System Development Charges for new housing units permitted between August 15, 2025 and September 30, 2028, saving roughly $20K\u2013$40K per unit.",
       "topic": "fees",
       "variants": [
         "enhanced"
@@ -399,111 +487,205 @@
       "actionability": 1.0,
       "correctness": "correct",
       "importance": 5,
-      "citation": "portland.gov/ppd housing SDC exemption",
+      "citation": "portland.gov/ppd/current-fee-schedules/housing-sdc-exemption",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption"
       },
-      "verified_truth": "Accuracy flags confirm the SDC waiver window dates (Aug 15, 2025 \u2013 Sep 30, 2028) for newly created housing units."
+      "verified_truth": "Accuracy flag confirms SDC housing-unit waiver window August 15, 2025 through September 30, 2028 and per-unit SDC magnitude $20,000\u2013$40,000+."
     },
     {
-      "id": "A21",
-      "claim_short": "SDCs ~$20K\u2013$40K+ per unit",
-      "claim_full": "Per-unit SDCs in Portland have historically run roughly $20,000\u2013$40,000+ per new dwelling unit before any waiver.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": "portland.gov/ppd SDC schedule",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules/system-development-charges"
-      },
-      "verified_truth": "Accuracy flags accept this magnitude as a representative per-unit SDC range in Portland."
-    },
-    {
-      "id": "A22",
-      "claim_short": "Early Assistance ~$1,400\u2013$3,500",
-      "claim_full": "A paid Early Assistance meeting with PP&D Land Use Services costs roughly $1,400\u2013$3,500 for a CM2 project.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.9,
-      "correctness": "correct-range",
-      "importance": 3,
-      "citation": "PP&D Early Assistance",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/zoning-land-use/early-assistance/early-assistance-review"
-      },
-      "verified_truth": "Accuracy flags confirm Early Assistance fees in this range."
-    },
-    {
-      "id": "A23",
+      "id": "A25",
       "claim_short": "BDS consolidated into PP&D in 2024",
-      "claim_full": "What used to be the Bureau of Development Services (BDS) is now Portland Permitting & Development (PP&D), reachable at 503-823-7300.",
+      "claim_full": "The Bureau of Development Services (BDS) was consolidated into Portland Permitting & Development (PP&D) in 2024.",
       "topic": "definitions",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.85,
+      "actionability": 0.6,
       "correctness": "correct",
       "importance": 3,
       "citation": "portland.gov/ppd",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/ppd"
       },
-      "verified_truth": "Accuracy flags confirm the 2024 consolidation of BDS into PP&D and the 503-823-7300 phone number."
+      "verified_truth": "Accuracy flag confirms BDS was consolidated into PP&D in 2024."
     },
     {
-      "id": "A24",
-      "claim_short": "BDS general line 503-823-7300",
-      "claim_full": "The general planner line for Portland permitting is 503-823-7300, M\u2013F 8\u20135.",
-      "topic": "address",
+      "id": "A26",
+      "claim_short": "Tree rules Title 11 / PCC 11.50",
+      "claim_full": "Tree preservation and mitigation rules in development apply under Title 11, with 20-inch trees triggering preservation/mitigation under PCC 11.50.040 and on-site tree density under 11.50.050.",
+      "topic": "trees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 11.50.040 / 11.50.050",
+      "citation_by_variant": {
+        "enhanced": "PCC 11.50.040 (https://www.portland.gov/code/11/50); PCC 11.50.050"
+      },
+      "verified_truth": "Accuracy flag confirms PCC 11.50.040 cited as 20-inch threshold and 11.50.050 as on-site tree density rule."
+    },
+    {
+      "id": "A27",
+      "claim_short": "BES handles sewer/stormwater review",
+      "claim_full": "The Bureau of Environmental Services (BES) reviews sewer and stormwater under the Stormwater Management Manual; older Sunnyside combined-sewer mains commonly require on-site stormwater management.",
+      "topic": "sewer",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/bes/stormwater/swmm",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/bes/stormwater/swmm; 503-823-7740"
+      },
+      "verified_truth": "Enhanced response correctly directs to BES contact 503-823-7740 and Stormwater Management Manual; consistent with city practice."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Most CM2 has no minimum residential parking",
+      "claim_full": "After Portland's 2022 code update, most CM2 has no minimum off-street parking requirement for residential under PCC 33.266.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.266",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.266 (https://www.portland.gov/code/33/200s/266)"
+      },
+      "verified_truth": "Accuracy flag confirms claim that most CM2 has no minimum residential parking under PCC 33.266 after 2022 update."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Early Assistance fee $1,400\u2013$3,500",
+      "claim_full": "A paid Early Assistance meeting with PP&D Land Use Services costs roughly $1,400\u2013$3,500.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-range",
+      "importance": 4,
+      "citation": "portland.gov/ppd/early-assistance",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/early-assistance"
+      },
+      "verified_truth": "Accuracy flag confirms Early Assistance meeting fee $1,400\u2013$3,500."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Free 15-min planner call at 503-823-7300",
+      "claim_full": "PP&D offers a free 15-minute Land Use Services consultation at 503-823-7300 as the recommended free first step.",
+      "topic": "sequence",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.95,
+      "specificity": 1.0,
+      "actionability": 1.0,
       "correctness": "correct",
-      "importance": 3,
-      "citation": "portland.gov/bds (now /ppd)",
+      "importance": 5,
+      "citation": "portland.gov/ppd/early-assistance",
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "https://www.portland.gov/ppd/early-assistance"
+        "oob": "503-823-7300",
+        "mcp": "503-823-7300",
+        "enhanced": "503-823-7300 (https://www.portland.gov/ppd/early-assistance)"
       },
-      "verified_truth": "Accuracy flags confirm 503-823-7300 as the BDS/PP&D general planner line."
+      "verified_truth": "All three responses surface the BDS/PP&D 503-823-7300 line; accuracy notes confirm the number is plausible and current."
     },
     {
-      "id": "A25",
-      "claim_short": "Bureau phones BES/PBOT/Forestry",
-      "claim_full": "Other key bureaus: BES at 503-823-7740, PBOT at 503-823-5185, and Urban Forestry at 503-823-8733.",
-      "topic": "address",
+      "id": "A31",
+      "claim_short": "ORS 100 declaration & plat requirements",
+      "claim_full": "Creating condos requires recording a declaration (ORS 100.105), a condo plat by a licensed surveyor (ORS 100.115), bylaws, and Real Estate Commissioner approval (ORS 100.110).",
+      "topic": "process",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.95,
+      "actionability": 1.0,
       "correctness": "correct",
-      "importance": 3,
-      "citation": "portland.gov bureau pages",
+      "importance": 4,
+      "citation": "ORS 100.105 / 100.110 / 100.115",
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/bes; https://www.portland.gov/transportation; https://www.portland.gov/trees"
+        "enhanced": "ORS 100.105; 100.110; 100.115 (oregon.public.law/statutes/ors_chapter_100)"
       },
-      "verified_truth": "Accuracy flags list these phone numbers as accurate for BES, PBOT, and Urban Forestry."
+      "verified_truth": "Accuracy flag confirms ORS 100.105 declaration, 100.115 plat, 100.110 Real Estate Commissioner approval."
     },
     {
-      "id": "A26",
-      "claim_short": "Trees: 20-inch threshold (PCC 11.50)",
-      "claim_full": "Under PCC 11.50.040, trees 20 inches in diameter or larger must generally be preserved or trigger per-inch mitigation fees, and PCC 11.50.050 sets on-site tree density.",
-      "topic": "trees",
+      "id": "A32",
+      "claim_short": "L-shaped lot needs survey",
+      "claim_full": "The property is L-shaped (roughly 100x110 ft bounding box) and requires a survey-grade boundary survey before design.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-judg",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "PortlandMaps property R233406"
+      },
+      "verified_truth": "Enhanced response correctly notes the unusual L-shape and need for a survey; accuracy notes confirm lot area was inferred from geometry."
+    },
+    {
+      "id": "A33",
+      "claim_short": "Demolition delay PCC 33.785",
+      "claim_full": "Portland's demolition-delay rules in PCC 33.785 mostly target single-dwelling residences and may not apply to a CM2 commercial structure here.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "hedge-correct",
+      "importance": 3,
+      "citation": "PCC 33.785",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.785 (https://www.portland.gov/code/33/700s/785)"
+      },
+      "verified_truth": "Accuracy flag confirms PCC 33.785 cited as demolition delay chapter."
+    },
+    {
+      "id": "A34",
+      "claim_short": "No historic/conservation/plan-district overlay",
+      "claim_full": "PortlandMaps shows no historic district, conservation district, plan district, or environmental overlay touching this parcel.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps",
+        "enhanced": "https://www.portlandmaps.com/"
+      },
+      "verified_truth": "MCP and enhanced both confirm no historic/conservation/plan-district overlays; OOB hedged on Sunnyside Conservation District. Accuracy notes list this as correct in MCP/enhanced."
+    },
+    {
+      "id": "A35",
+      "claim_short": "Condo HOA has ongoing annual filings",
+      "claim_full": "A condo HOA must register with the Oregon Real Estate Agency and submit annual filings under ORS 100.480.",
+      "topic": "process",
       "variants": [
         "enhanced"
       ],
@@ -511,119 +693,11 @@
       "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
-      "citation": "PCC 11.50.040 / .050",
+      "citation": "ORS 100.480",
       "citation_by_variant": {
-        "enhanced": "PCC 11.50.040 (https://www.portland.gov/code/11/50); PCC 11.50.050 (https://www.portland.gov/code/11/50/050)"
+        "enhanced": "ORS 100.480 (https://oregon.public.law/statutes/ors_100.480)"
       },
-      "verified_truth": "Accuracy flags confirm PCC 11.50.040 as the 20-inch preservation/mitigation threshold and 11.50.050 as on-site density rules."
-    },
-    {
-      "id": "A27",
-      "claim_short": "Four UST records on parcel",
-      "claim_full": "PortlandMaps shows four underground storage tank (UST) records on this parcel, likely historic heating-oil tanks.",
-      "topic": "safety",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "mcp": "Portland Maps records"
-      },
-      "verified_truth": "Accuracy flags confirm four UST records attached to this parcel."
-    },
-    {
-      "id": "A28",
-      "claim_short": "Property in MULTE/HOLTE area",
-      "claim_full": "The site is within the eligibility area for both MULTE and HOLTE tax-abatement programs.",
-      "topic": "fees",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "mcp": null
-      },
-      "verified_truth": "Accuracy flags list MULTE and HOLTE eligibility but caution that 'MULTE/HOLTE' acronyms were not defined for the resident."
-    },
-    {
-      "id": "A29",
-      "claim_short": "BES combined-sewer / stormwater rules",
-      "claim_full": "BES requires on-site stormwater management per the Stormwater Management Manual, and Sunnyside-area mains are part of the older combined sewer system.",
-      "topic": "sewer",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.85,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "BES SWMM",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/bes/stormwater/swmm"
-      },
-      "verified_truth": "Accuracy flags accept the combined-sewer description and BES SWMM citation as factually correct for this corridor."
-    },
-    {
-      "id": "A30",
-      "claim_short": "Demolition delay (PCC 33.785)",
-      "claim_full": "Demolition of older single-dwelling residences may be subject to demolition-delay rules under PCC 33.785, though those mostly do not apply to a CM2 commercial structure.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PCC 33.785",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.785 (https://www.portland.gov/code/33/700s/785)"
-      },
-      "verified_truth": "Accuracy flags confirm PCC 33.785 as the demolition-delay chapter and note its limited application to CM2 commercial buildings."
-    },
-    {
-      "id": "A31",
-      "claim_short": "Sunnyside Conservation District unverified",
-      "claim_full": "The Sunnyside Conservation District may or may not touch this parcel and would need to be verified on PortlandMaps.",
-      "topic": "zoning",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.4,
-      "actionability": 0.5,
-      "correctness": "hedge-correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "oob": "PortlandMaps"
-      },
-      "verified_truth": "OOB hedged this; MCP and enhanced both confirmed that no conservation district, historic district, or plan district overlay applies to this parcel."
-    },
-    {
-      "id": "A32",
-      "claim_short": "Fannie/Freddie warrantability concerns",
-      "claim_full": "A 12-unit condo association is on the small side for Fannie/Freddie warrantability, which can limit buyer financing options.",
-      "topic": "costs",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.6,
-      "correctness": "correct-judg",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null
-      },
-      "verified_truth": "Accuracy flags treat this as a correct judgment call about secondary-market warrantability for small condo associations."
+      "verified_truth": "Accuracy flag confirms ORS 100.480 cited for annual filings."
     }
   ]
 }

@@ -21,9 +21,9 @@
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "Interior basement work skips historic review",
-      "claim_full": "Interior alterations to a basement in Ladd's Addition (framing, drywall, electrical, plumbing) are not subject to Historic Resource Review.",
-      "topic": "zoning",
+      "claim_short": "Building permit always required for basement finish",
+      "claim_full": "Finishing an unfinished basement into habitable space requires a building permit in Portland \u2014 there is no DIY exemption.",
+      "topic": "permits",
       "variants": [
         "oob",
         "mcp",
@@ -33,18 +33,100 @@
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PCC 33.846 / 33.846.020.A.4",
+      "citation": "Oregon BCD permits page",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "PCC 33.846.020.A.4, https://www.portland.gov/code/33/800s/846"
+        "enhanced": "https://www.oregon.gov/bcd/lbdd/pages/oregon-permits.aspx"
       },
-      "verified_truth": "Per the accuracy flags, Historic Resource Review does not apply to interior alterations in Ladd's Addition. Enhanced miscites 33.846.020.A.4 instead of 33.846.060 but the substantive claim is correct."
+      "verified_truth": "Portland and Oregon both require a building permit to convert a basement to habitable space; this is consistent across all three responses and confirmed by the rationale."
     },
     {
       "id": "A2",
-      "claim_short": "Egress window triggers historic review",
-      "claim_full": "Cutting a new exterior basement window or window well to meet egress for a new bedroom is an exterior alteration that does require Historic Resource Review.",
+      "claim_short": "Use Residential Combination Permit",
+      "claim_full": "A Residential Combination Permit bundles building plus the trade permits (electrical, plumbing, mechanical) under one IVR with a single inspection schedule.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd attic-basement-or-garage-conversion",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/home-projects/attic-basement-or-garage-conversion"
+      },
+      "verified_truth": "Portland's combination permit pattern is a standard route for a basement finish; documented on the PP&D conversion page cited by the enhanced response."
+    },
+    {
+      "id": "A3",
+      "claim_short": "DIY electrical: owner-occupant, no sale 6 months",
+      "claim_full": "A homeowner can pull their own electrical permit only if they own and occupy the home and won't sell or rent it within six months.",
+      "topic": "electrical",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Per accuracy flags, the DIY electrical exemption requires owner-occupant with no sale/rent within 6 months \u2014 the OOB response stated this correctly."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Property is in Ladd's Addition Historic District",
+      "claim_full": "1860 SE Ladd Ave is inside the Ladd's Addition Historic District, listed on the National Register since 1988.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "Wikipedia Ladd's Addition / PortlandMaps",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://en.wikipedia.org/wiki/Ladd's_Addition"
+      },
+      "verified_truth": "Accuracy flags confirm Ladd's Addition is on the National Register since 1988 and that the property is within the district; the OOB and enhanced responses are consistent with this."
+    },
+    {
+      "id": "A5",
+      "claim_short": "House is Contributing 'Armacher Residence', built 1923",
+      "claim_full": "The property is a Contributing historic resource recorded as the 'Max R. Armacher Residence,' built 1923, on a 2,662 sq ft R5 lot.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Oregon historic inventory ID 647931",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://heritagedata.prd.state.or.us/historic/index.cfm?do=v.dsp_siteSummary&resultDisplay=647931"
+      },
+      "verified_truth": "Accuracy flags confirm the property's classification as Contributing, the Armacher Residence name, 1923 construction, R5 zoning, and 2,662 sq ft lot."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Interior basement work doesn't trigger historic review",
+      "claim_full": "Interior alterations to the basement (framing, drywall, finishes, electrical, plumbing) are not subject to Historic Resource Review in Ladd's Addition.",
       "topic": "zoning",
       "variants": [
         "oob",
@@ -55,41 +137,43 @@
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PCC 33.846.060",
+      "citation": "PCC 33.846",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/code/33/800s/846"
+      },
+      "verified_truth": "Accuracy flags affirm Historic Resource Review does not apply to interior alterations in Ladd's Addition. The triggering rule lives in PCC Title 33 historic chapters."
+    },
+    {
+      "id": "A7",
+      "claim_short": "New egress window triggers Historic Resource Review",
+      "claim_full": "Cutting a new exterior basement opening (e.g., for an egress window) is an exterior alteration and requires Historic Resource Review.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.846.060 / LU 15-165780 HR",
       "citation_by_variant": {
         "oob": null,
         "mcp": "LU 15-165780 HR",
-        "enhanced": "PCC 33.846.060, https://www.portland.gov/code/33/800s/846"
+        "enhanced": "https://www.portland.gov/code/33/800s/846"
       },
-      "verified_truth": "Exterior changes for new openings in a contributing structure trigger HRR; the rationale supports this and cites a precedent (LU 15-165780)."
+      "verified_truth": "Accuracy flags support that an exterior opening triggers HRR; the MCP variant cites a real precedent case (LU 15-165780 HR) and the enhanced variant cites the historic-review chapter PCC 33.846."
     },
     {
-      "id": "A3",
-      "claim_short": "Type I HRR 4\u20138 weeks",
-      "claim_full": "A Type I Historic Resource Review for a new exterior opening typically takes 4\u20138 weeks.",
+      "id": "A8",
+      "claim_short": "Type I HRR 4\u20138 weeks for new openings",
+      "claim_full": "A Type I Historic Resource Review for a new exterior opening is staff-level and processes in roughly 4\u20138 weeks.",
       "topic": "process",
       "variants": [
         "oob",
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.7,
-      "correctness": "correct-range",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null,
-        "enhanced": "https://www.lamontbros.com/learning-center/a-guide-to-remodeling-in-portland-historic-districts"
-      },
-      "verified_truth": "Accuracy flags list Type I HRR at 4\u20138 weeks as a stated timeline; treated as a planning estimate."
-    },
-    {
-      "id": "A4",
-      "claim_short": "Type II HRR 8\u201310 weeks",
-      "claim_full": "Type II Historic Resource Review (with public notice but no hearing) takes 8\u201310 weeks (sometimes cited 6\u201310 weeks).",
-      "topic": "process",
-      "variants": [
-        "mcp",
         "enhanced"
       ],
       "specificity": 0.8,
@@ -98,77 +182,79 @@
       "importance": 3,
       "citation": null,
       "citation_by_variant": {
-        "mcp": null,
+        "oob": null,
         "enhanced": "https://www.lamontbros.com/learning-center/a-guide-to-remodeling-in-portland-historic-districts"
       },
-      "verified_truth": "MCP states 6\u201310 weeks; enhanced states 8\u201310 weeks. Accuracy flags accept Type II as 6\u201310 weeks."
+      "verified_truth": "Accuracy flags note Type I HRR at 4\u20138 weeks (OOB) and the enhanced variant gives the same range \u2014 supported by accuracy flags."
     },
     {
-      "id": "A5",
-      "claim_short": "Building permit required for finish",
-      "claim_full": "Converting an unfinished basement into habitable space always requires a Portland building permit; combination permit bundles building, electrical, plumbing, mechanical.",
-      "topic": "permits",
+      "id": "A9",
+      "claim_short": "Type II HRR 6\u201310 weeks with public notice",
+      "claim_full": "Type II Historic Resource Review is staff-level with public notice but no hearing, processing in roughly 6\u201310 weeks.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.5,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Accuracy flags confirm Type II HRR review timing of 6\u201310 (MCP) and 8\u201310 (enhanced) weeks with public notice \u2014 both are within accepted ranges."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Egress window: 5.7 sq ft / 24\"H / 20\"W / 44\" sill",
+      "claim_full": "Basement bedrooms must have an emergency escape opening of 5.7 sq ft clear (5.0 if at grade), minimum 24\" tall and 20\" wide, with sill \u226444\" above the floor.",
+      "topic": "safety",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.8,
-      "actionability": 1.0,
+      "specificity": 1.0,
+      "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "Oregon BCD / portland.gov/ppd",
+      "citation": "ORSC R310 / PCC 24",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "https://www.portland.gov/ppd/residential-permitting/home-projects/attic-basement-or-garage-conversion"
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/residential-projects/emergency-escape-and-rescue-openings"
       },
-      "verified_truth": "Permit requirement for habitable basement conversion is correct and standard Portland practice."
+      "verified_truth": "Accuracy flags confirm the standard ORSC R310 figures: 5.7 sq ft (5.0 at grade), 24\"x20\", and 44\" max sill height."
     },
     {
-      "id": "A6",
-      "claim_short": "DIY electrical: owner-occupant 6mo",
-      "claim_full": "Owner-occupants who do not plan to sell or rent within six months may pull their own electrical permit.",
-      "topic": "electrical",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null
-      },
-      "verified_truth": "Accuracy flags confirm DIY electrical exemption requires owner-occupant with no sale/rent within six months."
-    },
-    {
-      "id": "A7",
-      "claim_short": "BCG 96-12 relaxed ceiling heights",
-      "claim_full": "Portland Building Code Guide 96-12 provides relaxed ceiling-height standards for converting existing basements (lower than the 7' new-construction minimum).",
+      "id": "A11",
+      "claim_short": "BCG 96-12 reduces ceiling height for old homes",
+      "claim_full": "Building Code Guide 96-12 provides relaxed ceiling-height standards for converting existing spaces to habitable use, friendlier than the new-construction 7-foot rule.",
       "topic": "structural",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.7,
-      "actionability": 0.8,
+      "specificity": 0.8,
+      "actionability": 0.7,
       "correctness": "correct",
-      "importance": 5,
+      "importance": 4,
       "citation": "BCG 96-12",
       "citation_by_variant": {
-        "oob": "Building Code Guide 96-12",
-        "mcp": "Building Code Guide 96-12",
+        "oob": null,
+        "mcp": null,
         "enhanced": "https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
       },
-      "verified_truth": "BCG 96-12 exists and provides alternative ceiling-height standards for existing homes; OOB's exact title 'Habitable Spaces Code Guide' should be verified."
+      "verified_truth": "Accuracy flags confirm BCG 96-12 governs alternative ceiling heights for existing homes; the OOB response named the title 'Habitable Spaces Code Guide' (flagged as needing verification)."
     },
     {
-      "id": "A8",
-      "claim_short": "BCG 96-12: 6'8\" / 6'2\" baths",
-      "claim_full": "BCG 96-12 allows 6'8\" minimum ceiling height in habitable space and 6'2\" in bathrooms, with overhead beams as low as 6'0\" within 2' of a wall.",
+      "id": "A12",
+      "claim_short": "BCG 96-12 allows 6'8\" ceiling, 6'2\" in baths",
+      "claim_full": "BCG 96-12 permits a minimum ceiling height of 6'8\" in habitable basements, 6'2\" in bathrooms, with beams as low as 6'0\" within 2 feet of a wall.",
       "topic": "structural",
       "variants": [
         "enhanced"
@@ -179,72 +265,228 @@
       "importance": 4,
       "citation": "BCG 96-12 Section 1",
       "citation_by_variant": {
-        "enhanced": "BCG 96-12 Section 1, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
+        "enhanced": "https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
       },
-      "verified_truth": "Accuracy flags list BCG 96-12 alternative ceiling heights of 6'8\"/6'2\"/6'0\" near walls as a stated specific that warrants verification."
+      "verified_truth": "The accuracy-flag list flags these specific BCG 96-12 numbers as claims to verify; the enhanced rationale notes they 'need verification' but does not assert they are wrong."
     },
     {
-      "id": "A9",
-      "claim_short": "BCG 96-12 covenant for low ceilings",
-      "claim_full": "BCG 96-12 Section 8 allows a recorded covenant for ceilings below 6'8\", but only once every five years and never for an ADU or rental.",
-      "topic": "structural",
+      "id": "A13",
+      "claim_short": "MRAA threshold 50% wall removal or 500 sq ft",
+      "claim_full": "Major Residential Alteration & Addition (MRAA) is triggered by 50%+ exterior wall removal or 500+ sq ft of new footprint, so a basement-only finish does not trigger MRAA.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "correct-judg",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Accuracy flags list this MRAA threshold as a specific OOB claim that needs verification; the qualitative conclusion (basement finish does not trigger MRAA) is correct directionally."
+    },
+    {
+      "id": "A14",
+      "claim_short": "BDS replaced by PP&D in June 2024",
+      "claim_full": "Portland phased out the Bureau of Development Services (BDS) and replaced it with Portland Permitting & Development (PP&D) in June 2024.",
+      "topic": "process",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
       "actionability": 0.7,
       "correctness": "correct",
-      "importance": 3,
-      "citation": "BCG 96-12 Section 8",
+      "importance": 4,
+      "citation": "Radler White summary",
       "citation_by_variant": {
-        "enhanced": "BCG 96-12 Section 8, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
+        "enhanced": "https://radlerwhite.com/blog/major-structural-change-in-city-of-portland-permitting-administration/"
       },
-      "verified_truth": "Accuracy flags list this covenant rule as a stated specific that should be verified against the actual BCG."
+      "verified_truth": "Accuracy flags identify the BDS-to-PP&D June 2024 transition as a flagged-but-not-disputed enhanced-response claim \u2014 directionally correct; the date may need verification."
     },
     {
-      "id": "A10",
-      "claim_short": "Egress: 5.7 sq ft / 5.0 at grade",
-      "claim_full": "Egress windows must provide 5.7 sq ft clear opening (5.0 sq ft at grade), minimum 24\" tall, 20\" wide, sill no more than 44\" off the floor.",
-      "topic": "safety",
+      "id": "A15",
+      "claim_short": "Free 15-minute appointment with PP&D",
+      "claim_full": "PP&D offers free 15-minute virtual appointments with a Building Code Reviewer, City Planner, or Permit Technician \u2014 book before finalizing plans.",
+      "topic": "process",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "portland.gov/ppd 15-minute appointments",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments"
+      },
+      "verified_truth": "Accuracy flags confirm the 15-minute appointment exists; OOB notes the 503-823-7300 phone, MCP and enhanced reinforce the same."
+    },
+    {
+      "id": "A16",
+      "claim_short": "PP&D phone 503-823-7300",
+      "claim_full": "Portland Permitting & Development's main phone number is 503-823-7300.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
       "specificity": 1.0,
       "actionability": 1.0,
       "correctness": "correct",
-      "importance": 5,
-      "citation": "ORSC R310",
+      "importance": 4,
+      "citation": "portland.gov/ppd/contact",
       "citation_by_variant": {
-        "oob": "Oregon R310",
-        "mcp": null,
-        "enhanced": "ORSC R310, https://www.portland.gov/ppd/residential-permitting/residential-projects/emergency-escape-and-rescue-openings"
+        "oob": null,
+        "enhanced": "https://www.portland.gov/ppd/contact"
       },
-      "verified_truth": "ORSC R310 egress dimensions are correctly stated across all three variants."
+      "verified_truth": "Accuracy flags confirm the PP&D 503-823-7300 phone number from OOB and enhanced responses."
     },
     {
-      "id": "A11",
-      "claim_short": "Window well 36x36, ladder if >44\"",
-      "claim_full": "Egress window wells require a 36\" x 36\" clear area; a permanently attached ladder is required if the well is deeper than 44\".",
+      "id": "A17",
+      "claim_short": "Pre-1978 home: lead-paint RRP rules apply",
+      "claim_full": "Because the house pre-dates 1978, federal RRP rules require a Certified Renovator from a Certified Firm if painted surfaces will be disturbed.",
       "topic": "safety",
       "variants": [
+        "oob",
         "mcp"
       ],
-      "specificity": 1.0,
-      "actionability": 0.9,
+      "specificity": 0.8,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
       "citation": null,
       "citation_by_variant": {
+        "oob": null,
         "mcp": null
       },
-      "verified_truth": "Accuracy flags list the 36x36 well and 44\" ladder threshold as stated specifics consistent with ORSC R310 enforcement."
+      "verified_truth": "Federal RRP rule applies to pre-1978 homes; this is standard and consistent across responses, although neither cited an authoritative URL."
     },
     {
-      "id": "A12",
-      "claim_short": "Whole-house smoke alarm trigger",
-      "claim_full": "Pulling a building permit for basement alterations triggers a whole-house smoke alarm upgrade per ORSC R314.2.2.",
+      "id": "A18",
+      "claim_short": "Test for radon before finishing",
+      "claim_full": "Portland sits in an elevated radon zone, so test before framing and rough in sub-slab depressurization while the slab is exposed.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Both responses make a directionally-correct radon recommendation; not specifically flagged as wrong by the accuracy notes."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Voluntary seismic retrofit while walls are open",
+      "claim_full": "While basement walls and floor framing are exposed is the cheapest opportunity to bolt the sill plate to the foundation and add shear panels.",
+      "topic": "structural",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Sound advice consistent with Portland's published seismic-strengthening brochure; flagged in MCP as a Moderate liquefaction zone consideration."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Property is in Moderate liquefaction zone",
+      "claim_full": "1860 SE Ladd Ave sits in a Moderate liquefaction hazard zone but is not in a FEMA flood area.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Accuracy flags confirm Moderate liquefaction hazard zone classification and absence of FEMA flood area for this property."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Prior LU case 09-159670 HDZ on file",
+      "claim_full": "The property has a prior Type II Historic Design Review (LU 09-159670 HDZ) on file from a 2009\u20132013 alteration.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps permit history",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Accuracy flags confirm permit history including LU 09-159670 HDZ alteration/addition 2009\u20132013."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Ladd's labeled both Historic and Conservation District",
+      "claim_full": "The MCP response refers to Ladd's Addition as both a 'Historic District' and a 'Conservation District,' applying Ladd's Addition Conservation District design guidelines.",
+      "topic": "zoning",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "Per data-quality notes, Ladd's Addition is a Historic District (not a Conservation District); these are distinct designations in Portland and conflating them is a meaningful technical error."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Vinyl windows not acceptable; aluminum-clad wood OK",
+      "claim_full": "Per Ladd's Addition design guidelines, aluminum-clad wood windows are acceptable for new openings while vinyl windows are not.",
+      "topic": "zoning",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Ladd's Conservation District Design Guidelines",
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "Accuracy flags list this as a flagged MCP claim consistent with Ladd's Addition design guidance; supported by referenced precedent case."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Smoke alarms upgrade triggered house-wide",
+      "claim_full": "Pulling a building permit for the basement triggers ORSC R314.2.2 whole-house smoke-alarm upgrades \u2014 interconnected alarms in every existing bedroom, outside sleeping areas, and on every floor.",
       "topic": "safety",
       "variants": [
         "enhanced"
@@ -255,203 +497,33 @@
       "importance": 4,
       "citation": "ORSC R314.2.2",
       "citation_by_variant": {
-        "enhanced": "ORSC R314.2.2, https://www.portland.gov/ppd/smoke-alarm-and-carbon-monoxide-alarm-requirements"
+        "enhanced": "https://www.portland.gov/ppd/smoke-alarm-and-carbon-monoxide-alarm-requirements"
       },
-      "verified_truth": "Accuracy flags confirm ORSC R314.2.2 whole-house smoke alarm upgrade trigger when permit pulled for alterations."
+      "verified_truth": "Accuracy flags confirm the ORSC R314.2.2 whole-house smoke-alarm trigger when a permit is pulled for alterations; cited correctly."
     },
     {
-      "id": "A13",
-      "claim_short": "Property is Contributing 1923 Armacher",
-      "claim_full": "1860 SE Ladd Ave is a 1923 Contributing historic resource named the 'Max R. Armacher Residence' (Oregon historic inventory ID 647931).",
-      "topic": "address",
+      "id": "A25",
+      "claim_short": "BCG 96-12 R-15 insulation when walls opened",
+      "claim_full": "BCG 96-12 Section 7.2 requires R-15 insulation in exterior basement wall cavities when those walls are opened.",
+      "topic": "structural",
       "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "Oregon historic inventory 647931",
-      "citation_by_variant": {
-        "mcp": "Oregon historic register",
-        "enhanced": "https://heritagedata.prd.state.or.us/historic/index.cfm?do=v.dsp_siteSummary&resultDisplay=647931"
-      },
-      "verified_truth": "Accuracy flags confirm property is Contributing, named 'Armacher, Max R., Residence', built 1923."
-    },
-    {
-      "id": "A14",
-      "claim_short": "Property zoned R5 with LA overlay",
-      "claim_full": "The property is zoned R5 (Residential 5,000) with the Ladd's Addition Historic District ('LA') overlay and no other overlays.",
-      "topic": "zoning",
-      "variants": [
-        "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
       "actionability": 0.7,
       "correctness": "correct",
       "importance": 3,
-      "citation": "PortlandMaps / PCC 33.110",
+      "citation": "BCG 96-12 Section 7.2",
       "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "https://www.portlandmaps.com/bps/zoning/#/zones/base/R5"
+        "enhanced": "https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
       },
-      "verified_truth": "Accuracy flags confirm R5 zoning, LA historic overlay, no other overlays."
+      "verified_truth": "Accuracy flags confirm BCG 96-12 Section 7.2's R-15 insulation requirement is one of the specific claims the enhanced response made; flagged for verification but not as wrong."
     },
     {
-      "id": "A15",
-      "claim_short": "Lot 2,662 sq ft in moderate liquefaction",
-      "claim_full": "Lot is 2,662 sq ft, in a Moderate liquefaction hazard zone and not in a FEMA flood area.",
-      "topic": "address",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "mcp": "PortlandMaps"
-      },
-      "verified_truth": "Accuracy flags confirm lot size 2,662 sq ft, Moderate liquefaction zone, no FEMA flood."
-    },
-    {
-      "id": "A16",
-      "claim_short": "Prior LU 09-159670 HDZ on file",
-      "claim_full": "Property has prior permit history including LU 09-159670 HDZ historic design review (2009-2013) and 2011-111637-RS alteration.",
-      "topic": "address",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps permit history",
-      "citation_by_variant": {
-        "mcp": "LU 09-159670 HDZ",
-        "enhanced": "LU 09-159670 HDZ, https://www.portlandmaps.com"
-      },
-      "verified_truth": "Accuracy flags confirm prior LU 09-159670 HDZ and 2011-111637-RS on file."
-    },
-    {
-      "id": "A17",
-      "claim_short": "Ladd's is conservation district",
-      "claim_full": "Ladd's Addition is a Conservation District (HRCD) and the response refers to it as such.",
-      "topic": "zoning",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.4,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "mcp": null
-      },
-      "verified_truth": "Per data-quality notes, MCP conflates 'Historic District' and 'Conservation District' \u2014 these are distinct designations and Ladd's status as Conservation District vs Historic District is materially different for review purposes."
-    },
-    {
-      "id": "A18",
-      "claim_short": "Vinyl windows not allowed",
-      "claim_full": "Per Ladd's Addition design guidelines, vinyl windows are not acceptable but aluminum-clad wood is, and wells should be concrete (not corrugated metal).",
-      "topic": "zoning",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "Ladd's Addition Conservation District Design Guidelines",
-      "citation_by_variant": {
-        "mcp": "Ladd's Addition Conservation District Design Guidelines"
-      },
-      "verified_truth": "Accuracy flags list this design-guideline claim as a stated specific consistent with Ladd's Addition guidelines."
-    },
-    {
-      "id": "A19",
-      "claim_short": "Basement finish doesn't trigger MRAA",
-      "claim_full": "An interior-only basement finish stays under the MRAA threshold (50%+ exterior wall removal or 500+ sq ft new footprint) so does not trigger neighbor notification.",
-      "topic": "process",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null
-      },
-      "verified_truth": "Accuracy flags reference the 50%/500 sq ft MRAA thresholds as stated specifics that warrant verification."
-    },
-    {
-      "id": "A20",
-      "claim_short": "BDS replaced by PP&D June 2024",
-      "claim_full": "The Bureau of Development Services (BDS) was phased out and replaced by Portland Permitting & Development (PP&D) in June 2024.",
-      "topic": "process",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "https://radlerwhite.com/blog/major-structural-change-in-city-of-portland-permitting-administration/",
-      "citation_by_variant": {
-        "enhanced": "https://radlerwhite.com/blog/major-structural-change-in-city-of-portland-permitting-administration/"
-      },
-      "verified_truth": "Accuracy flags list this transition as a stated specific that should be verified."
-    },
-    {
-      "id": "A21",
-      "claim_short": "Free 15-minute PP&D appointment",
-      "claim_full": "PP&D offers free 15-minute virtual appointments with Building Code Reviewers, City Planners, or Permit Technicians; main phone 503-823-7300.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments",
-      "citation_by_variant": {
-        "oob": "503-823-7300",
-        "enhanced": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments"
-      },
-      "verified_truth": "Accuracy flags confirm PP&D 503-823-7300 and free 15-minute appointment availability."
-    },
-    {
-      "id": "A22",
-      "claim_short": "Simple Bathroom Permit 5-day review",
-      "claim_full": "Portland's Simple Bathroom Permit reviews in 5 business days via email submission to ppdsbp@portlandoregon.gov.",
+      "id": "A26",
+      "claim_short": "Kitchenette + door + bedroom = ADU",
+      "claim_full": "Adding a closed-off kitchen with a range plus bedroom and bathroom converts the basement into an Accessory Dwelling Unit; an open accessory kitchen with a covenant under BOD 19-06 stays non-ADU.",
       "topic": "permits",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "https://www.portland.gov/ppd/residential-permitting/home-projects/simple-bathroom-permits",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/residential-permitting/home-projects/simple-bathroom-permits"
-      },
-      "verified_truth": "Accuracy flags list 5-business-day review and ppdsbp@portlandoregon.gov as stated specifics."
-    },
-    {
-      "id": "A23",
-      "claim_short": "Kitchenette can create ADU",
-      "claim_full": "Adding a closed-off kitchen with bedroom and bathroom can legally create an Accessory Dwelling Unit; an open accessory kitchen with a covenant under BOD 19-06 is the alternative.",
-      "topic": "definitions",
       "variants": [
         "enhanced"
       ],
@@ -461,33 +533,15 @@
       "importance": 5,
       "citation": "BOD 19-06 / PCC 29.10",
       "citation_by_variant": {
-        "enhanced": "BOD 19-06, https://www.portland.gov/ppd/code-policy/building-official-determinations/bod-19-06-accessory-kitchens; PCC 29.10, https://www.portland.gov/code/29/10"
+        "enhanced": "https://www.portland.gov/ppd/code-policy/building-official-determinations/bod-19-06-accessory-kitchens"
       },
-      "verified_truth": "Accuracy flags confirm BOD 19-06 as the controlling determination on accessory kitchens with covenant requirement."
+      "verified_truth": "Accuracy flags confirm BOD 19-06 governs accessory kitchens with a covenant; the dwelling-unit definition is in PCC 29.10. Decision-changing for a homeowner adding cooking facilities."
     },
     {
-      "id": "A24",
-      "claim_short": "Basement on Alder combined sewer",
-      "claim_full": "The address sits in the Alder Combined Sewer Basin (combined sanitary + stormwater pipe).",
-      "topic": "sewer",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "enhanced": "https://www.portlandmaps.com"
-      },
-      "verified_truth": "Accuracy flags confirm address sits in Alder Combined Sewer Basin."
-    },
-    {
-      "id": "A25",
-      "claim_short": "One bathroom: just plumbing permit",
-      "claim_full": "Adding one bathroom on an existing private sewer lateral requires only a plumbing trade permit (PT), not a separate BES sewer connection permit, per a 2019 BES policy update.",
-      "topic": "sewer",
+      "id": "A27",
+      "claim_short": "Simple Bathroom Permit reviewed in 5 business days",
+      "claim_full": "Portland's Simple Bathroom Permit reviews in five business days; submission is by emailing one PDF to ppdsbp@portlandoregon.gov.",
+      "topic": "permits",
       "variants": [
         "enhanced"
       ],
@@ -495,16 +549,16 @@
       "actionability": 1.0,
       "correctness": "correct",
       "importance": 3,
-      "citation": "https://www.portland.gov/bds/news/2019/4/29/bureau-environmental-services-bes-update",
+      "citation": "portland.gov/ppd simple-bathroom-permits",
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/bds/news/2019/4/29/bureau-environmental-services-bes-update"
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/home-projects/simple-bathroom-permits"
       },
-      "verified_truth": "Per data-quality notes the response is well-cited; not flagged as wrong."
+      "verified_truth": "Accuracy flags confirm the 5-business-day Simple Bathroom Permit review and the ppdsbp@portlandoregon.gov email submission path."
     },
     {
-      "id": "A26",
-      "claim_short": "ADU SDC waiver: 10-year covenant",
-      "claim_full": "ADUs trigger ~$15k\u2013$30k in SDCs, but Portland waives them in exchange for a 10-year no-short-term-rental covenant via aducovenant@portlandoregon.gov.",
+      "id": "A28",
+      "claim_short": "ADU SDC waiver via 10-year covenant",
+      "claim_full": "The ADU SDC Waiver Program waives all four ADU System Development Charges in exchange for a 10-year covenant against short-term rental use, applied via aducovenant@portlandoregon.gov.",
       "topic": "fees",
       "variants": [
         "enhanced"
@@ -513,16 +567,16 @@
       "actionability": 1.0,
       "correctness": "correct",
       "importance": 4,
-      "citation": "https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver",
+      "citation": "portland.gov/ppd adu-sdc-waiver",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver"
       },
-      "verified_truth": "Accuracy flags confirm ADU SDC waiver requires 10-year covenant via aducovenant@portlandoregon.gov."
+      "verified_truth": "Accuracy flags confirm the ADU SDC waiver requires a 10-year covenant submitted to aducovenant@portlandoregon.gov."
     },
     {
-      "id": "A27",
+      "id": "A29",
       "claim_short": "Temporary SDC exemption excludes ADUs",
-      "claim_full": "From Aug 15, 2025 through Sep 30, 2028, Portland temporarily exempts new housing units from SDCs, but ADUs are explicitly excluded under PCC 17.14.070(J).",
+      "claim_full": "From August 15, 2025 through September 30, 2028 Portland exempts most new housing units from SDCs, but ADUs are explicitly excluded under PCC 17.14.070(J).",
       "topic": "fees",
       "variants": [
         "enhanced"
@@ -533,50 +587,86 @@
       "importance": 3,
       "citation": "PCC 17.14.070(J)",
       "citation_by_variant": {
-        "enhanced": "PCC 17.14.070(J), https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption"
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption"
       },
-      "verified_truth": "Accuracy flags confirm temporary SDC exemption Aug 15 2025 \u2013 Sep 30 2028 with ADUs explicitly excluded."
+      "verified_truth": "Accuracy flags confirm the temporary SDC exemption window (Aug 15 2025 \u2013 Sep 30 2028) and the explicit ADU exclusion under PCC 17.14.070(J)."
     },
     {
-      "id": "A28",
-      "claim_short": "Permit fees ~$1,500\u2013$3,500",
-      "claim_full": "Typical city fees for a basement finish with bedroom + bathroom run roughly $1,500\u2013$3,500 (building + trades + plan review).",
+      "id": "A30",
+      "claim_short": "Typical city fees ~$1,500\u2013$3,500 for basement finish",
+      "claim_full": "A typical basement finish with bedroom and bathroom (valuation $40k\u2013$60k) runs about $1,500\u2013$3,500 in combined Portland city permit fees.",
       "topic": "costs",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.8,
+      "specificity": 0.9,
       "actionability": 0.9,
       "correctness": "correct-range",
       "importance": 4,
-      "citation": "Portland FY2025-26 fee schedule",
+      "citation": "Portland FY 2025\u201326 fee schedule",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download"
       },
-      "verified_truth": "Per data-quality notes, fee figures are confidently stated planning estimates; treat as ranges to verify against current schedule."
+      "verified_truth": "Cited against the Portland FY25\u201326 fee schedule and PermitCalculator; reasonable planning estimate range. Not contradicted by accuracy flags."
     },
     {
-      "id": "A29",
-      "claim_short": "Alteration valued at 33.3% of new",
-      "claim_full": "Portland values residential alterations at 33.3% of new-construction cost per square foot from the ICC valuation table, and adds a 12% Oregon state surcharge to every permit.",
+      "id": "A31",
+      "claim_short": "Address sits in Alder Combined Sewer Basin",
+      "claim_full": "1860 SE Ladd drains into the Alder Combined Sewer Basin (a combined sanitary + stormwater system), which is typical for inner SE Portland.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Accuracy flags confirm property is in Alder Combined Sewer Basin per PortlandMaps lookup."
+    },
+    {
+      "id": "A32",
+      "claim_short": "Bathroom on existing lateral needs only PT permit",
+      "claim_full": "Adding one bathroom that connects to an existing private sewer lateral requires only a plumbing trade permit, not a separate BES sewer connection permit.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov/bds news 2019-04-29",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/bds/news/2019/4/29/bureau-environmental-services-bes-update"
+      },
+      "verified_truth": "Reflects the 2019 BES policy update; well-cited by the enhanced response and not flagged as wrong."
+    },
+    {
+      "id": "A33",
+      "claim_short": "Investigation fee minimum $153/hour for unpermitted work",
+      "claim_full": "Portland charges an investigation fee with a minimum of $153 per hour for work started before a permit is issued.",
       "topic": "fees",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.6,
+      "actionability": 0.7,
       "correctness": "correct",
-      "importance": 2,
-      "citation": "https://www.portland.gov/ppd/current-fee-schedules/valuation-methods",
+      "importance": 3,
+      "citation": "PermitCalculator Portland",
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules/valuation-methods"
+        "enhanced": "https://permitcalculator.com/cities/portland-or/"
       },
-      "verified_truth": "Accuracy flags list 33.3% factor and 12% state surcharge as stated specifics that warrant verification."
+      "verified_truth": "Accuracy flags identify this $153/hr investigation-fee figure as a specific enhanced-response claim that warrants verification against the current Portland fee schedule but not as wrong."
     },
     {
-      "id": "A30",
+      "id": "A34",
       "claim_short": "Inspection request line 503-823-7000",
-      "claim_full": "Inspections are requested via the IVR phone line 503-823-7000; PP&D residential inspections at 503-823-7388 / PPDinspections@portlandoregon.gov.",
+      "claim_full": "Portland's automated inspection request line is 503-823-7000; PP&D residential inspections are at PPDinspections@portlandoregon.gov / 503-823-7388.",
       "topic": "process",
       "variants": [
         "enhanced"
@@ -585,103 +675,29 @@
       "actionability": 1.0,
       "correctness": "correct",
       "importance": 3,
-      "citation": "https://www.portland.gov/ppd/residential-permitting/residential-inspections",
+      "citation": "portland.gov/ppd residential-inspections",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/ppd/residential-permitting/residential-inspections"
       },
-      "verified_truth": "Accuracy flags confirm 503-823-7000 inspection request line and PP&D inspections 503-823-7388."
+      "verified_truth": "Accuracy flags confirm the 503-823-7000 IVR and 503-823-7388 / PPDinspections@portlandoregon.gov inspection contacts."
     },
     {
-      "id": "A31",
-      "claim_short": "Investigation fee \u2265$153/hr",
-      "claim_full": "Portland charges an investigation fee with a minimum of $153 per hour for unpermitted work the city catches mid-project.",
+      "id": "A35",
+      "claim_short": "Oregon Special Assessment 10-year tax freeze",
+      "claim_full": "Contributing structures in Ladd's Addition may qualify for the Oregon Special Assessment of Historic Property \u2014 a 10-year property tax freeze in exchange for a preservation plan.",
       "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "https://permitcalculator.com/cities/portland-or/",
-      "citation_by_variant": {
-        "enhanced": "https://permitcalculator.com/cities/portland-or/"
-      },
-      "verified_truth": "Accuracy flags list $153/hr investigation fee as a stated specific to verify."
-    },
-    {
-      "id": "A32",
-      "claim_short": "BCG 96-12 R-15 wall insulation",
-      "claim_full": "BCG 96-12 Section 7.2 requires R-15 insulation when an exterior basement wall is opened during the conversion.",
-      "topic": "structural",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "BCG 96-12 Section 7.2",
-      "citation_by_variant": {
-        "enhanced": "BCG 96-12 Section 7.2, https://www.portland.gov/ppd/codes-rules-and-guides/bcg-96-12-habitable-space-code-guide"
-      },
-      "verified_truth": "Accuracy flags list R-15 requirement when exterior basement walls opened as a stated specific to verify."
-    },
-    {
-      "id": "A33",
-      "claim_short": "Pre-1978 lead paint RRP rule",
-      "claim_full": "Pre-1978 homes require a Certified Renovator under the federal RRP rule whenever painted surfaces are disturbed during the remodel.",
-      "topic": "safety",
       "variants": [
         "oob"
       ],
-      "specificity": 0.9,
-      "actionability": 1.0,
+      "specificity": 0.8,
+      "actionability": 0.5,
       "correctness": "correct",
-      "importance": 3,
+      "importance": 2,
       "citation": null,
       "citation_by_variant": {
         "oob": null
       },
-      "verified_truth": "Federal RRP rule for pre-1978 housing is a standard EPA requirement; not flagged as wrong."
-    },
-    {
-      "id": "A34",
-      "claim_short": "Voluntary seismic retrofit while open",
-      "claim_full": "Old Ladd's homes (built before anchor-bolt requirements) benefit from voluntary seismic strengthening \u2014 bolt the sill plate and add shear panels \u2014 while basement walls are exposed.",
-      "topic": "structural",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null
-      },
-      "verified_truth": "Standard Portland recommendation for pre-code homes; not flagged as wrong."
-    },
-    {
-      "id": "A35",
-      "claim_short": "Oregon historic tax freeze 10 yr",
-      "claim_full": "Oregon offers a 10-year property tax freeze on contributing historic structures (Special Assessment of Historic Property) in exchange for a preservation plan.",
-      "topic": "fees",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "Oregon SHPO",
-      "citation_by_variant": {
-        "oob": "Oregon State Historic Preservation Office"
-      },
-      "verified_truth": "Accuracy flags confirm the Oregon Special Assessment 10-year property tax freeze for contributing historic structures."
+      "verified_truth": "Accuracy flags list the Oregon Special Assessment 10-year property tax freeze as a flagged-but-correct OOB claim \u2014 the program exists for contributing historic structures."
     }
   ]
 }

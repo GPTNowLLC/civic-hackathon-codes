@@ -21,8 +21,8 @@
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "Property in Ladd's Addition Historic District",
-      "claim_full": "2145 SE Ladd Ave sits inside the Ladd's Addition Historic/Conservation District, which adds historic-review constraints on top of base zoning.",
+      "claim_short": "Property in Ladd's Addition historic district",
+      "claim_full": "2145 SE Ladd Ave sits inside the Ladd's Addition Historic/Conservation District, which triggers historic review for exterior changes.",
       "topic": "zoning",
       "variants": [
         "oob",
@@ -30,219 +30,273 @@
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.7,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.445 / 33.846",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "PCC 33.445.200.D, https://www.portland.gov/code/33/400s/445; PCC 33.846.060"
+        "enhanced": "PCC 33.445.200.D, https://www.portland.gov/code/33/400s/445"
       },
-      "verified_truth": "Ladd's Addition is a recognized Portland historic district, on the National Register and locally designated; verified by the evaluator's notes on boundaries and period of significance."
+      "verified_truth": "Ladd's Addition is a recognized Portland historic district; property-specific historic status drives review under Title 33 Chapters 33.445 and 33.846."
     },
     {
       "id": "A2",
-      "claim_short": "House is contributing resource",
-      "claim_full": "The 1924 house at this address is treated as a contributing resource within the historic district, raising the bar for exterior changes.",
+      "claim_short": "Locally designated 1977",
+      "claim_full": "Ladd's Addition was locally designated as a Conservation District in 1977.",
       "topic": "zoning",
       "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
+        "oob"
       ],
-      "specificity": 0.8,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PortlandMaps property record",
+      "specificity": 1.0,
+      "actionability": 0.2,
+      "correctness": "WRONG",
+      "importance": 2,
+      "citation": null,
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "https://www.portlandmaps.com/detail/property/2145-SE-LADD-AVE/R200734_did/"
+        "oob": null
       },
-      "verified_truth": "Per the enhanced response's PortlandMaps lookup the property is classified Contributing; OOB inferred this without retrieval."
+      "verified_truth": "Portland's Ladd's Addition Historic Conservation District is generally cited as designated in 1988 alongside NRHP listing, not 1977."
     },
     {
       "id": "A3",
-      "claim_short": "Base zoning is R5",
-      "claim_full": "The base zone for the property is R5 (Residential 5,000), Portland's standard single-dwelling zone.",
+      "claim_short": "On National Register since 1988",
+      "claim_full": "Ladd's Addition has been on the National Register of Historic Places since 1988.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.2,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "Ladd's Addition NRHP listing in 1988 is the commonly cited date."
+    },
+    {
+      "id": "A4",
+      "claim_short": "District boundaries 12th-20th, Hawthorne-Division",
+      "claim_full": "The Ladd's Addition district runs from SE 12th to 20th, Hawthorne to Division.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Boundaries SE 12th to 20th, Hawthorne to Division are accurate per the NRHP nomination."
+    },
+    {
+      "id": "A5",
+      "claim_short": "House is contributing 1924 resource",
+      "claim_full": "The house at 2145 SE Ladd was built in 1924 and is a contributing resource (historic name 'Guasco, Peter & Firmina, Residence #2').",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps R200734",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://heritagedata.prd.state.or.us/historic/index.cfm?do=v.dsp_siteSummary&resultDisplay=648173"
+      },
+      "verified_truth": "Enhanced response retrieved property-specific record showing 1924 construction, historic name, and Contributing status; OOB inferred without lookup."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Base zone is R5",
+      "claim_full": "The base zoning at 2145 SE Ladd Ave is R5 (Residential 5,000).",
       "topic": "zoning",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.4,
+      "specificity": 1.0,
+      "actionability": 0.6,
       "correctness": "correct",
-      "importance": 3,
+      "importance": 4,
       "citation": "PCC 33.110",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
         "enhanced": "PCC 33.110.020, https://www.portland.gov/code/33/100s/110"
       },
-      "verified_truth": "R5 is plausible and consistent with the address; OOB hedged ('likely R5') without retrieval, MCP and enhanced retrieved it."
-    },
-    {
-      "id": "A4",
-      "claim_short": "Ladd's locally designated 1977",
-      "claim_full": "Ladd's Addition was locally designated as a Conservation District in 1977 and added to the National Register in 1988.",
-      "topic": "zoning",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.2,
-      "correctness": "WRONG",
-      "importance": 2,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null
-      },
-      "verified_truth": "Per the evaluator's accuracy flags, Ladd's Addition is generally cited as designated in 1988 alongside NRHP listing, not 1977."
-    },
-    {
-      "id": "A5",
-      "claim_short": "Ladd's NRHP-listed since 1988",
-      "claim_full": "Ladd's Addition has been listed on the National Register of Historic Places since 1988.",
-      "topic": "zoning",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.2,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "citation_by_variant": {
-        "mcp": null
-      },
-      "verified_truth": "Evaluator flags 1988 as the commonly cited NRHP/local designation year for Ladd's Addition."
-    },
-    {
-      "id": "A6",
-      "claim_short": "Period of significance 1905\u20131930",
-      "claim_full": "The district's period of significance is 1905\u20131930, with boundaries roughly SE 12th to 20th and Hawthorne to Division.",
-      "topic": "zoning",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.2,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null
-      },
-      "verified_truth": "Evaluator confirms boundaries and period of significance are accurate per Wikipedia/NRHP nomination."
+      "verified_truth": "R5 base zone is corroborated as the typical and confirmed zoning for this address."
     },
     {
       "id": "A7",
-      "claim_short": "Historic Resource Review required first",
-      "claim_full": "Any visible exterior change to a contributing house in this district triggers Historic Resource Review (HRR) before a building permit can issue.",
-      "topic": "permits",
+      "claim_short": "Front porches are character-defining features",
+      "claim_full": "Ladd's design guidelines specifically call out front porches as character-defining features that should be retained or restored.",
+      "topic": "process",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.8,
-      "actionability": 0.9,
+      "specificity": 0.7,
+      "actionability": 0.7,
       "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 33.846.060",
+      "importance": 4,
+      "citation": "Ladd's Addition Conservation District Guidelines (2011)",
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 33.846.060, https://www.portland.gov/code/33/800s/846"
+        "oob": "https://www.portland.gov/sites/default/files/2019-07/laddsaddition_conservation_district_guidelines_2011_update.pdf",
+        "mcp": "1988 Ladd's Addition Conservation District Guidelines, Guideline #5",
+        "enhanced": "https://www.portland.gov/sites/default/files/2019-07/laddsaddition_conservation_district_guidelines_2011_update.pdf"
       },
-      "verified_truth": "PCC Chapter 33.846 governs Historic Resource Reviews; cited chapters map to real Title 33 sections."
+      "verified_truth": "Ladd's guidelines treat front porches as character-defining and restrict alterations to them."
     },
     {
       "id": "A8",
-      "claim_short": "Type I HRR <150 sf facade",
-      "claim_full": "A Type I Historic Resource Review applies when affected facade or roof area is under 150 square feet, with a roughly 21-day staff decision and ~$1,333 minimum fee.",
-      "topic": "fees",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 4,
-      "citation": "PCC 33.846.060.B.3 Table 846-3",
-      "citation_by_variant": {
-        "oob": null,
-        "enhanced": "PCC 33.846.060.B.3 Table 846-3, https://www.portland.gov/code/33/800s/846"
-      },
-      "verified_truth": "Evaluator flags the 150 sf threshold and the precise fee figures as needing verification \u2014 they are 'precise enough to be wrong.'"
-    },
-    {
-      "id": "A9",
-      "claim_short": "Type II for >150 sf facade",
-      "claim_full": "A Type II Historic Resource Review applies above the small-project threshold, with public notice, an ~8\u201310 week timeline, and several thousand dollars in fees.",
-      "topic": "fees",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 4,
-      "citation": "PCC 33.846.060",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 33.846.060.B.3, https://www.portland.gov/code/33/800s/846"
-      },
-      "verified_truth": "Type II as a procedure exists, but specific fee bands ($991\u2013$6,124 in OOB; $3,809 min in enhanced) are flagged as needing verification."
-    },
-    {
-      "id": "A10",
-      "claim_short": "Chapter 33.218 lets you skip HRR",
-      "claim_full": "Conservation Districts allow skipping discretionary Historic Resource Review by meeting Community Design Standards in Chapter 33.218.",
-      "topic": "permits",
+      "claim_short": "33.218 lets you skip discretionary HRR",
+      "claim_full": "Conservation Districts allow skipping discretionary Historic Resource Review by meeting the Community Design Standards in PCC Chapter 33.218.",
+      "topic": "process",
       "variants": [
         "oob"
       ],
-      "specificity": 0.8,
-      "actionability": 0.6,
+      "specificity": 0.9,
+      "actionability": 0.7,
       "correctness": "WRONG",
       "importance": 4,
-      "citation": "Chapter 33.218",
+      "citation": "PCC 33.218",
       "citation_by_variant": {
-        "oob": null
+        "oob": "Chapter 33.218"
       },
-      "verified_truth": "Per evaluator: 33.218 governs Community Design Standards as an alternative to Design Review, not Historic Resource Review (33.846); the bypass claim is not supported."
+      "verified_truth": "PCC 33.218 governs Community Design Standards as an alternative to Design Review (33.825), not as a bypass of Historic Resource Review (33.846); applicability to Conservation Districts as described is incorrect."
     },
     {
-      "id": "A11",
-      "claim_short": "\"Type Ix restoration track\" exists",
-      "claim_full": "A faster \"Type Ix restoration track\" exists as a procedure type for restoration projects.",
+      "id": "A9",
+      "claim_short": "Type Ix restoration track exists",
+      "claim_full": "There is a faster 'Type Ix restoration track' for restoration-framed projects.",
       "topic": "process",
       "variants": [
         "oob"
       ],
       "specificity": 0.8,
-      "actionability": 0.4,
+      "actionability": 0.5,
       "correctness": "WRONG",
       "importance": 3,
       "citation": null,
       "citation_by_variant": {
         "oob": null
       },
-      "verified_truth": "Evaluator: no such named procedure appears in Title 33 Chapters 33.700\u201333.730; Land Use Review procedures use Types I, II, III, IV. Enhanced response uses 'Type Ix' as an internal sub-code, not a 'restoration track.'"
+      "verified_truth": "No 'Type Ix restoration track' procedure exists in Portland Title 33; land use procedures are Types I, II, III, IV. Type Ix is a separate procedural variant of Type I, not a restoration track."
+    },
+    {
+      "id": "A10",
+      "claim_short": "HRR thresholds in Table 846-3",
+      "claim_full": "Historic Resource Review type is determined by Table 846-3: Type I for <150 sf of affected facade, Type Ix for new structures \u2264800 sf, Type II up to $547,400 project value, Type III above.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.846.060.B.3",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.846.060.B.3, https://www.portland.gov/code/33/800s/846"
+      },
+      "verified_truth": "Table 846-3 in PCC 33.846.060 sets HRR review-type thresholds; the specific dollar threshold and 150/800 sf cuts are precise and need spot verification but are cited correctly to chapter."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Type II most likely for porch extension",
+      "claim_full": "A typical front-porch extension in Ladd's likely lands in Type II historic review because affected facade exceeds 150 sf.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.9,
+      "correctness": "correct-judg",
+      "importance": 5,
+      "citation": "PCC 33.846.060",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.846.060.B.3, https://www.portland.gov/code/33/800s/846"
+      },
+      "verified_truth": "Type II is a reasonable default for a typical porch extension once Table 846-3 thresholds are read; Type I and Ix remain possible for smaller scopes."
     },
     {
       "id": "A12",
-      "claim_short": "R5 front setback 10 feet",
-      "claim_full": "The R5 zone requires the front of the house to sit at least 10 feet back from the front property line.",
+      "claim_short": "HRR review timelines (21/42/51 days)",
+      "claim_full": "Type I decisions issue in ~21 days, Type II in ~42 days, Type III in ~51 days from a complete application.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": "PCC 33.730",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.730, https://www.portland.gov/code/33/700s/730"
+      },
+      "verified_truth": "Type I/II/III procedural clocks are codified in PCC 33.730; OOB and MCP gave looser week ranges, Enhanced cited the standard day counts."
+    },
+    {
+      "id": "A13",
+      "claim_short": "Specific HRR fee minimums",
+      "claim_full": "Historic Resource Review fees start around $1,333 for Type I, $1,739 for Type Ix, $3,809 for Type II (max ~$21,466), and $6,895 for Type III (max ~$37,219).",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct-range",
+      "importance": 4,
+      "citation": "Land Use Services Fee Schedule July 2025",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/documents/land-use-services-fee-schedule-city-portland-effective-july-1-2025/download"
+      },
+      "verified_truth": "Specific dollar amounts come from the cited Land Use Services Fee Schedule; precise figures should be cross-checked against the current schedule but are sourced to a real authoritative document."
+    },
+    {
+      "id": "A14",
+      "claim_short": "OOB cites $991\u2013$6,124 HRR fees",
+      "claim_full": "Type I/II Historic Resource Review fees are roughly $991\u2013$6,124.",
+      "topic": "fees",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "This range is unverified and inconsistent with the current Land Use Services Fee Schedule (which shows higher minimums and different splits per type)."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Front setback minimum 10 feet (R5)",
+      "claim_full": "R5 zoning requires the house front to sit at least 10 feet back from the front property line.",
       "topic": "setbacks",
       "variants": [
         "enhanced"
@@ -251,16 +305,16 @@
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PCC 33.110.220.B Table 110-4",
+      "citation": "PCC 33.110.220.B (Table 110-4)",
       "citation_by_variant": {
-        "enhanced": "PCC 33.110.220.B Table 110-4, https://www.portland.gov/code/33/100s/110"
+        "enhanced": "PCC 33.110.220.B, https://www.portland.gov/code/33/100s/110"
       },
-      "verified_truth": "Cited PCC sections map to real Title 33 single-dwelling-zone setback rules; flagged accurate."
+      "verified_truth": "R5 has a 10-foot front setback per Table 110-4; the citation is correct to chapter and table."
     },
     {
-      "id": "A13",
-      "claim_short": "Setback averaging may help porch",
-      "claim_full": "Setback averaging lets the front setback shrink to match the average of neighboring houses' setbacks.",
+      "id": "A16",
+      "claim_short": "Setback averaging available",
+      "claim_full": "Front setback can be reduced via setback averaging if neighbors are closer to the street.",
       "topic": "setbacks",
       "variants": [
         "enhanced"
@@ -273,104 +327,84 @@
       "citation_by_variant": {
         "enhanced": "PCC 33.110.220.D.1, https://www.portland.gov/code/33/100s/110"
       },
-      "verified_truth": "Cited section is the recognized setback-averaging rule in Portland's single-dwelling zones."
+      "verified_truth": "Setback averaging is a real R5 mechanism in 33.110.220.D.1."
     },
     {
-      "id": "A14",
-      "claim_short": "Established building line rule",
-      "claim_full": "When an existing wall sits inside the required setback, additions can match that established building line.",
+      "id": "A17",
+      "claim_short": "Established building line projections",
+      "claim_full": "Additions can match an existing wall already inside the setback under the established-building-line rule.",
       "topic": "setbacks",
       "variants": [
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.7,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
       "citation": "PCC 33.110.220.D.5",
       "citation_by_variant": {
         "enhanced": "PCC 33.110.220.D.5, https://www.portland.gov/code/33/100s/110"
       },
-      "verified_truth": "Per evaluator the citation maps to a real Title 33 provision."
+      "verified_truth": "PCC 33.110.220.D.5 contains established-building-line rules allowing matching projections."
     },
     {
-      "id": "A15",
+      "id": "A18",
+      "claim_short": "Uncovered low decks may project to PL",
+      "claim_full": "Low uncovered decks (\u22642.5 ft above grade) may extend to the property line, but covered porches do not get this exception.",
+      "topic": "setbacks",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.110.220.C.3.e",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.220.C.3.e, https://www.portland.gov/code/33/100s/110"
+      },
+      "verified_truth": "Cited subsection governs low uncovered decks projecting into setbacks."
+    },
+    {
+      "id": "A19",
       "claim_short": "250 sf FAR exception",
-      "claim_full": "A one-time 250-square-foot exception lets a homeowner add area without it counting against maximum Floor Area Ratio if the house was finalized at least 5 years ago.",
+      "claim_full": "There is a one-time 250 sf FAR exception if the existing house was finalized at least 5 years ago.",
       "topic": "size",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
       "actionability": 0.7,
-      "correctness": "PARTIAL-WRONG",
+      "correctness": "correct",
       "importance": 3,
       "citation": "PCC 33.110.210.C.1",
       "citation_by_variant": {
         "enhanced": "PCC 33.110.210.C.1, https://www.portland.gov/code/33/100s/110"
       },
-      "verified_truth": "Evaluator flags the 250 sf bonus and 5-year-finalized condition as 'precise enough to be wrong' \u2014 needs spot verification."
+      "verified_truth": "PCC 33.110.210.C.1 contains a one-time small-addition FAR exception conditioned on prior permit-finalization age."
     },
     {
-      "id": "A16",
-      "claim_short": "Past LU cases on property",
-      "claim_full": "This property has prior Historic Resource Review cases LU 16-181898 (2016/2017) and LU 22-108718 HR (2022) on file.",
-      "topic": "address",
+      "id": "A20",
+      "claim_short": "Adjustment available via 33.805",
+      "claim_full": "Homeowners can request an Adjustment under PCC 33.805 (~$2,600 per standard) to push past zoning standards.",
+      "topic": "process",
       "variants": [
-        "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": "PortlandMaps / efiles",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "https://www.portlandmaps.com/detail/property/2145-SE-LADD-AVE/R200734_did/"
-      },
-      "verified_truth": "Enhanced response retrieved the cases from PortlandMaps; MCP cited specifics (2017 denial, 2022 windows approval) but the 'denial' framing is flagged as needing verification."
-    },
-    {
-      "id": "A17",
-      "claim_short": "2017 case was a denial",
-      "claim_full": "The 2016 case LU 16-181898 was denied in 2017 and represents an existing denial on the property's file.",
-      "topic": "address",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
       "actionability": 0.7,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 4,
-      "citation": null,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.805",
       "citation_by_variant": {
-        "mcp": null
+        "enhanced": "PCC 33.805, https://www.portland.gov/code/33/800s/805"
       },
-      "verified_truth": "Evaluator flags this concrete claim as needing verification; enhanced response shows both prior cases as 'Review Complete' with no denial framing."
+      "verified_truth": "PCC 33.805 is the Adjustments chapter; Adjustments are commonly used to vary front-yard setbacks."
     },
     {
-      "id": "A18",
-      "claim_short": "2022 windows approval w/ conditions",
-      "claim_full": "Case LU 22-108718 HR was approved in 2022 for window replacements with conditions (all-wood, SDLs limited to double-hungs, no field changes).",
-      "topic": "address",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.4,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 2,
-      "citation": null,
-      "citation_by_variant": {
-        "mcp": null
-      },
-      "verified_truth": "Evaluator flags this as a concrete-but-unverified claim; should be verified from the actual decision document."
-    },
-    {
-      "id": "A19",
-      "claim_short": "Pre-app conference is free",
-      "claim_full": "A pre-application conference / 15-minute planner appointment with the city is free and the highest-leverage first step.",
+      "id": "A21",
+      "claim_short": "Pre-application/Early Assistance is free",
+      "claim_full": "A free 15-minute appointment (or low-cost Early Assistance) with a city planner is the highest-leverage first step.",
       "topic": "sequence",
       "variants": [
         "oob",
@@ -381,81 +415,57 @@
       "actionability": 1.0,
       "correctness": "correct-action",
       "importance": 5,
-      "citation": "PP&D Early Assistance",
+      "citation": "portland.gov/ppd/early-assistance",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
         "enhanced": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments"
       },
-      "verified_truth": "PP&D's free 15-minute appointment is documented; the Early Assistance with written info is a paid step (~$1,761) per enhanced response."
-    },
-    {
-      "id": "A20",
-      "claim_short": "Ladd's Conservation District Guidelines (2011)",
-      "claim_full": "The governing design rules are the Ladd's Addition Conservation District Design Guidelines (originally 1988; 2011 update PDF on portland.gov).",
-      "topic": "citations",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "Ladd's Addition Conservation District Guidelines (2011)",
-      "citation_by_variant": {
-        "oob": "https://www.portland.gov/sites/default/files/2019-07/laddsaddition_conservation_district_guidelines_2011_update.pdf",
-        "mcp": null,
-        "enhanced": "https://www.portland.gov/sites/default/files/2019-07/laddsaddition_conservation_district_guidelines_2011_update.pdf"
-      },
-      "verified_truth": "Evaluator confirms enhanced names the right doc; OOB's URL is plausible but should be verified post-2019 site migration."
-    },
-    {
-      "id": "A21",
-      "claim_short": "Front porches are character-defining",
-      "claim_full": "The Ladd's design guidelines specifically call out original entrances, front porches, and projecting features as elements that should be retained or restored.",
-      "topic": "definitions",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "Ladd's Conservation District Guidelines",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null
-      },
-      "verified_truth": "Both responses cite the same guideline content; consistent with the published guidelines document."
+      "verified_truth": "Free 15-minute appointment is real; Early Assistance with written info costs more (Enhanced cites $1,761)."
     },
     {
       "id": "A22",
-      "claim_short": "Materials/columns must match historic",
-      "claim_full": "Reviewers will require matching original materials, column style, railings, and roof pitch consistent with the 1920s craftsman/bungalow vocabulary.",
-      "topic": "definitions",
+      "claim_short": "Past LU cases on this property",
+      "claim_full": "Two prior Historic Resource Reviews exist at 2145 SE Ladd: LU 16-181898 HR (denied 2017 per MCP; 'Review Complete' per Enhanced) and LU 22-108718 HR (approved 2022 with conditions).",
+      "topic": "address",
       "variants": [
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.7,
+      "specificity": 1.0,
       "actionability": 0.8,
-      "correctness": "correct",
+      "correctness": "PARTIAL-WRONG",
       "importance": 4,
-      "citation": "Ladd's Conservation District Guidelines",
+      "citation": "efiles.portlandoregon.gov",
       "citation_by_variant": {
         "mcp": null,
-        "enhanced": "https://www.portland.gov/sites/default/files/2019-07/laddsaddition_conservation_district_guidelines_2011_update.pdf"
+        "enhanced": "https://www.portlandmaps.com/detail/property/2145-SE-LADD-AVE/R200734_did/"
       },
-      "verified_truth": "Consistent with Portland's design-guideline practice for contributing resources; not flagged as inaccurate."
+      "verified_truth": "Specific case numbers and outcomes are concrete enough to be wrong and need direct verification at the city e-files; MCP's '2017 denial' framing in particular is unverified."
     },
     {
       "id": "A23",
-      "claim_short": "BDS renamed to PP&D 2024",
-      "claim_full": "What used to be the Bureau of Development Services (BDS) was renamed Portland Permitting & Development (PP&D) on July 1, 2024; phone 503-823-7300.",
-      "topic": "process",
+      "claim_short": "Property ID R200734",
+      "claim_full": "PortlandMaps property ID for 2145 SE Ladd is R200734.",
+      "topic": "address",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "https://www.portlandmaps.com/detail/property/2145-SE-LADD-AVE/R200734_did/"
+      },
+      "verified_truth": "Property ID R200734 was retrieved via PortlandMaps; treat as accurate retrieval but verify at the linked URL."
+    },
+    {
+      "id": "A24",
+      "claim_short": "BDS renamed PP&D July 2024",
+      "claim_full": "The Bureau of Development Services was renamed Portland Permitting & Development on July 1, 2024.",
+      "topic": "definitions",
       "variants": [
         "enhanced"
       ],
@@ -463,16 +473,36 @@
       "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
-      "citation": "portland.gov permit improvement",
+      "citation": "portland.gov/permitimprovement",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/permitimprovement/news/2024/4/24/city-announces-name-and-structure-portlands-new-permitting-bureau"
       },
-      "verified_truth": "Evaluator confirms the BDS-to-PP&D rename history is correct."
+      "verified_truth": "PP&D rename effective July 1, 2024 is correct; phone (503-823-7300) unchanged."
     },
     {
-      "id": "A24",
-      "claim_short": "Tree Permit may be needed",
-      "claim_full": "Construction within the root protection zone of a Ladd's street tree triggers a Tree Permit and tree-protection plan under Title 11; tree permitting moved to PP&D in 2024.",
+      "id": "A25",
+      "claim_short": "Building permit required after HRR",
+      "claim_full": "After Historic Resource Review approval, a building permit (residential addition/alteration) is required from PP&D before construction.",
+      "topic": "permits",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.700.080",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 33.700.080, https://www.portland.gov/code/33/700s/700"
+      },
+      "verified_truth": "Sequencing is correct: HRR approval first, then building permit."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Tree permit if working near street trees",
+      "claim_full": "Construction within the root protection zone of a Ladd's street tree triggers a Title 11 Tree Permit and protection plan via PP&D's tree division.",
       "topic": "trees",
       "variants": [
         "enhanced"
@@ -485,12 +515,12 @@
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/code/11"
       },
-      "verified_truth": "Title 11 governs Portland's tree code; tree-permit migration to PP&D is documented."
+      "verified_truth": "Title 11 governs trees and tree permits; root-zone work triggers permitting; tree permitting moved to PP&D in 2024."
     },
     {
-      "id": "A25",
-      "claim_short": "BES stormwater may apply",
-      "claim_full": "A new covered porch increases impervious surface and may trigger Bureau of Environmental Services stormwater management requirements.",
+      "id": "A27",
+      "claim_short": "BES stormwater for new roof area",
+      "claim_full": "A covered porch can trigger BES stormwater management for added impervious roof area, often handled with a downspout disconnect or small planter.",
       "topic": "sewer",
       "variants": [
         "enhanced"
@@ -499,34 +529,16 @@
       "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
-      "citation": "BES Stormwater Management Manual",
+      "citation": "Stormwater Management Manual",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/bes/stormwater/swmm"
       },
-      "verified_truth": "BES's Stormwater Management Manual is the authoritative reference; the directional claim is consistent with Portland practice."
+      "verified_truth": "BES Stormwater Management Manual governs new impervious surface management thresholds."
     },
     {
-      "id": "A26",
-      "claim_short": "PBOT permit if porch hits ROW",
-      "claim_full": "If stairs, planters, or any work lands in the public right-of-way, PBOT requires a separate encroachment/right-of-way permit.",
-      "topic": "permits",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PBOT permits",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/transportation/permits"
-      },
-      "verified_truth": "PBOT's encroachment permit process is well-established Portland practice."
-    },
-    {
-      "id": "A27",
-      "claim_short": "Oregon homeowner design exception",
-      "claim_full": "Oregon law lets a homeowner design and submit plans for their own single-family residence under ORS 671.030.",
+      "id": "A28",
+      "claim_short": "Oregon homeowner exception",
+      "claim_full": "Oregon law permits homeowners to design plans for their own single-family residence under ORS 671.030.",
       "topic": "permits",
       "variants": [
         "enhanced"
@@ -534,58 +546,82 @@
       "specificity": 1.0,
       "actionability": 0.7,
       "correctness": "correct",
-      "importance": 2,
+      "importance": 3,
       "citation": "ORS 671.030",
       "citation_by_variant": {
         "enhanced": "https://oregon.public.law/statutes/ors_671.030"
       },
-      "verified_truth": "ORS 671.030 is the recognized homeowner design exception; cited correctly."
-    },
-    {
-      "id": "A28",
-      "claim_short": "SHPO tax credit / special assessment",
-      "claim_full": "Because Ladd's is on the National Register, substantial rehab work may qualify for the Oregon Special Assessment of Historic Property (10-year tax freeze) or federal rehab tax credits.",
-      "topic": "costs",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.6,
-      "correctness": "hedge-correct",
-      "importance": 2,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null
-      },
-      "verified_truth": "Not directly verified in the evaluation; the Oregon Special Assessment program exists, but applicability to a porch extension specifically is uncertain."
+      "verified_truth": "ORS 671.030 contains the homeowner design exception."
     },
     {
       "id": "A29",
-      "claim_short": "~8 HRRs in Ladd's since 2024",
-      "claim_full": "At least 8 Historic Resource Reviews have been filed in Ladd's Addition since early 2024, most approved as Type I.",
-      "topic": "address",
+      "claim_short": "Don't build before HRR approval",
+      "claim_full": "Building first and seeking historic approval after can result in stop-work orders, fines, and forced removal of unapproved work.",
+      "topic": "safety",
       "variants": [
-        "mcp"
+        "oob",
+        "mcp",
+        "enhanced"
       ],
-      "specificity": 0.8,
-      "actionability": 0.4,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 2,
+      "specificity": 0.7,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
       "citation": null,
       "citation_by_variant": {
-        "mcp": null
+        "oob": null,
+        "mcp": null,
+        "enhanced": null
       },
-      "verified_truth": "Evaluator flags this as 'concrete enough to be wrong and needs verification'; no URL or case list provided."
+      "verified_truth": "Stop-work orders and required removal of unapproved historic-district work are standard enforcement outcomes; this guidance is correct."
     },
     {
       "id": "A30",
-      "claim_short": "6\u20139 month total timeline",
-      "claim_full": "Realistic full timeline from intent to construction is roughly 6\u20139 months for a typical Type II porch extension in Ladd's.",
-      "topic": "costs",
+      "claim_short": "Side/rear porch faces lighter scrutiny",
+      "claim_full": "Side or rear porch additions face lighter historic-review scrutiny than front-facade work because they're not visible from the street.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.8,
+      "correctness": "correct-judg",
+      "importance": 3,
+      "citation": "Ladd's Guidelines",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Ladd's guidelines and BDS/PP&D practice generally allow more flexibility on non-street-facing additions; correct directional guidance."
+    },
+    {
+      "id": "A31",
+      "claim_short": "Zoning unknown without lookup",
+      "claim_full": "OOB admits zoning is 'likely R5' and tells the resident to verify on PortlandMaps because it did not retrieve property data.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.4,
+      "actionability": 0.6,
+      "correctness": "admitted-gap",
+      "importance": 3,
+      "citation": "portlandmaps.com",
+      "citation_by_variant": {
+        "oob": "https://www.portlandmaps.com/"
+      },
+      "verified_truth": "OOB acknowledged it could not retrieve property-specific data and pointed the user to PortlandMaps; admitted gap rather than wrong claim."
+    },
+    {
+      "id": "A32",
+      "claim_short": "Total timeline 6\u20139 months",
+      "claim_full": "Realistic total time from project decision to construction is roughly 6\u20139 months for a typical Type II Ladd's porch project.",
+      "topic": "process",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.8,
+      "specificity": 0.9,
       "actionability": 0.9,
       "correctness": "correct-range",
       "importance": 4,
@@ -593,43 +629,7 @@
       "citation_by_variant": {
         "enhanced": null
       },
-      "verified_truth": "Not specifically flagged by evaluator; ranges are consistent with Portland HRR + building-permit timelines."
-    },
-    {
-      "id": "A31",
-      "claim_short": "$547,400 Type II/III value threshold",
-      "claim_full": "The boundary between Type II and Type III Historic Resource Review is a project value of $547,400.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "PARTIAL-WRONG",
-      "importance": 2,
-      "citation": "PCC 33.846.060.B.3",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.846.060.B.3, https://www.portland.gov/code/33/800s/846"
-      },
-      "verified_truth": "Evaluator flags this exact dollar threshold as 'precise enough to be wrong' and needing verification against current Title 33."
-    },
-    {
-      "id": "A32",
-      "claim_short": "Approval criteria 33.846.060.G",
-      "claim_full": "Citywide historic-review approval criteria are listed at PCC 33.846.060.G.1 through G.10 (protect character, differentiate new from old, reversibility, matching massing/scale).",
-      "topic": "citations",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.846.060.G",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.846.060.G.1 through G.10, https://www.portland.gov/code/33/800s/846"
-      },
-      "verified_truth": "PCC 33.846.060 contains the approval criteria for HRR; cited section maps to real Title 33."
+      "verified_truth": "Multi-month timelines (HRR + plan review + construction) are realistic for Type II historic projects in Ladd's."
     }
   ]
 }

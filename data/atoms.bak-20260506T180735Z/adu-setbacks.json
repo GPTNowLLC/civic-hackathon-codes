@@ -1,0 +1,496 @@
+{
+  "scenario": "adu-setbacks",
+  "scenario_label": "ADU setbacks",
+  "address": "5112 SE Belmont St, Portland, OR 97215",
+  "neighborhood": "Sunnyside",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "I'll dig into this thoroughly. Setback rules are zone-specific, so I need to pull the actual zoning, overlays, and lot data for your property before answering. Let me check whether I can reach the city's GIS layer first.Path A is blocked. Let me try web sources to confirm the zoning for this specific property, then pull the actual code text.I can see the property is described as a corner lot with an existing detached one-car garage, but I need to confirm the actual zoning (the rule that drives setback numbers). Let me grab the live Title 33 text while I'm at it, since the setback numbers are zone-specific.Now I have a strong picture of the rules. Let me fetch the BDS worksheet for the precise setback table and confirm what I need.Let me grab the zoning map app for confirmation of the actual zoning, plus the setback table from 33.110.I have enough now to give you a thorough answer. Let me build a setback diagram for your specific situation, since the corner-lot detail materially changes the ADU rules.Now I'll build the diagram. The corner-lot detail is the biggest non-obvious piece, so the diagram will lead with that.Here's the picture, with the important caveats and the practical takeaways:\n\n**Heads up on the zoning.** I couldn't reach PortlandMaps directly from this session (the API surface is blocked), so I'm working from web sources. Inner SE Belmont near 52nd is essentially all R5, but please confirm before spending design dollars: open [portlandmaps.com](https://www.portlandmaps.com/), search the address, and look at the **Property** panel for the Base Zone and any Overlay codes (a one-character code like `c`, `p`, `d`, or `h` would change the rules). The ADU rules below assume **R5 with no overlays**.\n\n**Setback numbers (R5, from Title 33.110.220, Table 110-4):**\n- Front: 10 ft\n- Side: 5 ft (each)\n- Rear: 5 ft\n\n**ADU-specific rules layered on top (Title 33.205, plus the Detached Covered Accessory Structures Worksheet):**\n- A detached ADU must either sit behind the rear wall of the main house, or be at least 40 ft from the front lot line.\n- Maximum size: 800 sq ft (since 75% of your 2,156 sq ft house = ~1,617, the 800 cap binds).\n- Maximum height: 20 ft if it's outside the setbacks, 15 ft if any part sits inside a side or rear setback.\n- Detached accessory structures together can't cover more than 20% of the lot, and the ADU's footprint can't exceed the main house's footprint.\n- No additional parking required.\n\n**The corner-lot wrinkle (this is the part most people miss).** On a corner lot, the *front lot line* is the shorter of the two street frontages, regardless of where your front door is. The other street frontage is treated as a side street. So:\n- If 52nd Pl is your shorter street, 52nd Pl is your \"front\" for zoning, even if the house addresses to Belmont.\n- That changes which wall counts as the \"rear wall\" for ADU placement (it's the wall furthest from your front lot line).\n- And if you ever want to use the *setback exception* to push an accessory structure into a side or rear setback, the worksheet adds a corner-lot-only condition: the structure must be at least 20 ft from the side street lot line. That can quietly eliminate a chunk of buildable area on a corner.\n\nPull a tape measure on both street frontages; whichever is shorter is your \"front.\"\n\n**Three things that go above the question you asked:**\n\n1. **Your existing detached garage is probably the highest-leverage path.** Garage-to-ADU conversion in Portland is permitted with a building permit, and an *existing* structure that doesn't currently meet setbacks is generally allowed to stay where it is for the conversion (you'd just need to meet the ADU-specific standards: 800 sq ft cap, height limits, exterior standards if over 15 ft, plus building/energy code for habitability). That sidesteps the setback question almost entirely. The \"oversized one-car garage\" mentioned in the listing is exactly the kind of structure people convert.\n\n2. **A basement ADU dodges the size cap entirely.** If your basement is part of a primary structure that's at least five years old (yours is, by a wide margin), a basement ADU is *exempt* from the 800 sq ft / 75% rule. The Redfin description mentioned an unfinished basement with \"amazing ceiling height\" \u2014 that's potentially the easiest, cheapest, fewest-setback-questions path of all, since basement ADUs have no exterior placement issues.\n\n3. **Free pre-approved plans.** Portland publishes four free pre-approved detached-ADU plan sets (gable/shed roof \u00d7 slab/crawlspace combinations) at the [ADU Permits page](https://www.portland.gov/ppd/residential-permitting/home-projects/accessory-dwelling-units). They're not right for every lot, but they speed up review noticeably if one fits. Worth a look before commissioning custom plans.\n\n**My suggested next step,** given the userPreferences \"double-check before recommending\": confirm zoning on PortlandMaps, then book a free 15-minute appointment with a city planner (503-823-7300, or [ppd/early-assistance](https://www.portland.gov/ppd/early-assistance)). Bring the lot dimensions, the existing garage footprint, and a question about which path (garage conversion / basement ADU / new detached) makes most sense given your specific corner-lot orientation. They'll give you a definitive answer in 15 minutes that no document can.\n\nIf you can paste back what PortlandMaps shows under the Property panel (Base Zone, Overlay, Lot Size, Comprehensive Plan), I can re-run the numbers against your actual zoning rather than assumed R5."
+    },
+    "mcp": {
+      "tool": "Claude 4.7 Adaptive",
+      "text": "I'll dig into this properly \u2014 pulling the actual property data, then cross-referencing with current Title 33 rules. ADU regs in Portland have been shifting quite a bit, so I want to verify against the live code rather than memory.Got the property data. Now let me pull the current Title 33 rules \u2014 both the ADU chapter (33.205) and the R5 zone setbacks for accessory structures (33.110), since both apply.Now I need the R5 base zone rules for covered accessory structures, since 33.205.040.C.3 says ADUs must meet those standards too:I have what I need from the city data and the current code. Before I write up the answer, let me sketch a lot diagram so the setback envelope is visible at a glance, not just numbers.Now I have what I need. Here's the answer; the headline is that for this specific lot the setback numbers are the easy part, and the lot's geometry is the harder part.\n\n## Setback rules that apply\n\nYour property is zoned **R5** (Residential 5,000), with no overlays and no plan district. That means two layers of setback rules stack on a detached ADU:\n\n**From Title 33.205.040.C.2 (the ADU chapter, current as of 10/1/24):** A detached ADU must be either set back 40 feet from the front lot line, *or* located behind the rear building wall of the primary dwelling (defined as the wall furthest from the main-entrance side facing the street). One of those two has to be true; that is the special siting rule for ADUs.\n\n**Plus, from Title 33.110.245.C (R5 base-zone rules for covered accessory structures):** the ADU must meet the standard side and rear setbacks of **5 ft side, 5 ft rear, 10 ft front**, with max height 20 ft.\n\nThere is a useful exception in 33.110.245.C.2.b: in R5, a detached accessory structure (which includes an ADU) is *allowed inside the side and rear setbacks* (so effectively to the property line, subject to building-code fire separation) if **all** of the following are met:\n\n- It is at least 40 ft from the front lot line (the same threshold from 33.205);\n- Footprint does not exceed 24 ft \u00d7 24 ft (576 sq ft, eaves excluded);\n- Max height 15 ft, walls max 10 ft (gable portion excluded);\n- Walls inside the setback have no doors or windows facing the neighbor;\n- The setback portion is screened to the L3/F2 standard of 33.248;\n- No rooftop deck;\n- Dormers stay 5+ ft from the side/rear lot lines.\n\nSo you have two siting modes: the standard envelope (5 ft from sides/rear, up to 20 ft tall) or the \"tucked-in cottage\" mode (effectively 0 ft from sides/rear, capped at 24\u00d724 and 15 ft tall).\n\n## The geometry behind your question\n\nThis is where the more useful answer lives. PortlandMaps shows your lot is a \"N 1/2 OF LOT 1&2\" parcel, which from the geometry comes out to roughly **107 ft wide along Belmont by ~50 ft deep**. That is unusually shallow (most R5 lots are 50\u00d7100 oriented the other way), and it changes which of the rules above is actually binding.Here is what the diagram is showing and why it matters:\n\nThe \"40 ft from the front\" line lands almost on top of the rear wall of any reasonable house footprint. That line and the \"behind the rear wall\" rule end up enforcing roughly the same place. Whichever route you take from 33.205.040.C.2.a or .b, the detached ADU has to live in the strip between the back of your house and the rear lot line. Side-yard placement (east or west of the house) does not satisfy either prong, because that area is neither 40 ft from Belmont nor behind the rear wall.\n\nThat strip is the binding constraint. Eyeballing it from the assessor record (2,156 sq ft house, built 1957, likely a single-story or 1.5-story footprint of ~25\u201330 ft deep), you are probably looking at **10\u201315 ft of usable depth across the back, by ~97 ft of width** if you sit inside the standard setback envelope, or the full ~107 ft if you use the accessory exception. A 24\u00d724 cottage will not fit; a long narrow form (something like 14\u00d730 or 16\u00d726, possibly two stories) likely will. The exact answer hinges on where the rear wall of your house actually sits, which is the one fact I can not get from public data; you would need to measure or pull the original BDS plans.\n\n## Other things worth knowing while you're thinking about this\n\n**Maximum ADU size.** The 75% rule gives you 1,617 sq ft (75% of 2,156), but the cap is the lesser of that or 800 sq ft. So your ADU is capped at **800 sq ft of living area**.\n\n**You may qualify for two ADUs, not one.** R5 allows two ADUs on a site with a house if the lot is at least 3,000 sq ft (Table 205-2). Your lot is approximately 5,350 sq ft, so the area test is met. If you go to two, at least one must be detached, and a visitability standard kicks in for at least one of the units (33.205.040.C.4); but the lot is exempt from visitability if there is more than a 3-ft rise from the street.\n\n**Steep slope flag.** PortlandMaps lists this property as inside a Title 33 steep slope area. That is a flag, not a deal-killer, and it does *not* trigger the environmental overlay rules (you have no `c` or `p` overlay). It does mean any building permit will get extra geotechnical attention, and it may affect grading and stormwater design. Worth asking BDS about during early assistance.\n\n**Easier paths than a detached new build.** Given the rear-yard tightness, three alternatives are worth weighing:\n- *Internal/basement ADU.* If the house has a basement and is more than 5 years old (it is; built 1957), the 800 sq ft cap does **not** apply to a basement conversion (33.205.040.C.1). You can carve out a much larger unit, with no setback issue at all because it is inside the existing structure.\n- *Attached ADU.* Sharing a wall with the house also dodges the detached-ADU siting rules (the 40-ft / \"behind rear wall\" rule applies to detached *and* connected ADUs, but an ADU built within the existing footprint follows the primary structure's existing nonconforming rights if any).\n- *Pre-approved plans.* The City offers free pre-approved detached ADU plans that are designed to meet the 24\u00d724 envelope; permitting is significantly faster. Worth checking against your buildable strip before paying for custom design.\n\n## Where I would go next\n\nTwo things I would do before paying any architect:\n\n1. **Free 15-minute Early Assistance with PP&D.** This is exactly the kind of marginal-geometry case it is designed for. Phone 503-823-7300; bring a tape measurement of where your rear house wall actually sits relative to the front lot line. They will tell you on the spot whether your rear strip is workable.\n2. **Pull the original 1957 building plans** (or a current survey if you have one) so you have the actual house footprint, not my estimate. PortlandMaps's Permit panel sometimes has scanned originals; if not, BDS records are public.\n\nA couple of caveats on what I just told you. The Title 33.205 PDF I worked from has an effective date of 10/1/24, and the chapter page lists a 6/1/25 update packet that I could not separately verify changed (or did not change) the setback subsection; the substantive content above matches what is currently published. Lot dimensions are computed from the PortlandMaps geometry rings and rounded; verify against a survey before any design commitment. And the house-footprint placement on the diagram is illustrative, not a measurement of where your actual rear wall sits."
+    },
+    "enhanced": {
+      "tool": "Claude 4.7 Adaptive",
+      "text": "# ADU Feasibility Guide: 5112 SE Belmont St, Portland, OR 97215\n\n*Prepared May 1, 2026. Citations are to Portland City Code (PCC) and official Portland.gov sources. Verify everything important against current code at portland.gov/code; rules change.*\n\n---\n\n## Quick verdict (read this first)\n\n**Yes, you can almost certainly build an ADU on this property.** The lot is zoned R5 (Residential 5,000), there are no historic, design, environmental, or constrained-site overlays flagged, and the lot meets the minimum size for one ADU paired with a single-family house. A detached ADU up to 800 square feet of living area, up to 20 feet tall (15 feet inside the side/rear setback), is allowed by right under PCC 33.205 if you stay within the development standards.\n\n**The two things that will most affect your design**:\n\n1. **Setback geometry on a shallow lot.** Your lot is roughly 50 feet deep (north-south) and 107 feet wide (east-west) per PortlandMaps geometry. After the front setback (10 ft), rear setback (5 ft), and the \"ADU must be 40 ft from front lot line OR behind the rear wall of the house\" rule, your buildable envelope for a detached ADU is narrow. Garage conversion or attached ADU may be better fits depending on how the existing house sits.\n2. **Steep slope flag.** PortlandMaps shows `steep_slope_area: true` for this parcel. This is not a formal Potential Landslide Hazard Area (which is `false`), but it can trigger Title 24 building-code requirements for foundation design and may require a slope hazard evaluation per Building Code Guide 19-12 (depending on actual slopes at the foundation footprint).\n\n**Property facts I verified via PortlandMaps**:\n\n- Property ID R194819; State ID 1S2E06BA 17100\n- Zoning: **R5** (Residential 5,000) (PCC 33.110); no overlays listed\n- Neighborhood: Mt. Tabor; Council District 3\n- House: ~2,156 sq ft living area, built 1957, 2 full + 1 half baths\n- Lot footprint per geometry: ~50 ft \u00d7 ~107 ft, ~5,378 sq ft (verify with a survey; the legal description \"N 1/2 OF LOT 1&2\" of Karlinda Terrace plat suggests a re-platted half-lot configuration)\n- Hazards: not in landslide inventory, not in flood zone, not wildland fire; flagged as steep slope area\n- Recent permits on file: 2022 heat pump/furnace; 2023 200A electrical service upgrade; 2024 EV charger; 2025 street tree planting (active). The 200A panel upgrade is a meaningful asset; it likely has capacity to feed an ADU sub-panel.\n\n**Owner per public record**: Moreno (purchased April 2022 for $675,000). If you're doing pre-purchase research rather than working on a property you already own, factor that in to the timeline.\n\n---\n\n## 1. Zoning and what's allowed on the lot\n\n### Base zone: R5 (Residential 5,000)\n\nR5 is a single-dwelling residential zone. The standards live in **PCC 33.110, Single-Dwelling Zones**.\n\nIn plain English: this is a standard residential lot zoned for a single house, with one ADU permitted by right under PCC 33.205. The minimum lot size for an R5 lot with one house and one ADU is **5,000 sq ft** (PCC 33.205, Table 205-1). Your lot at ~5,378 sq ft clears that threshold.\n\n### Overlay zones\n\nPortlandMaps returned **no overlay zone designations** for this address. That means you're not flagged for any of:\n\n- 'a' Alternative Design Density (PCC 33.405)\n- 'd' Design (PCC 33.420)\n- 'h' Historic Resource (PCC 33.445)\n- 'z' Constrained Sites (PCC 33.435); the absence of 'z' matters because Constrained Sites overlay disqualifies you from the 2-ADU bonus\n- Environmental Conservation/Protection (PCC 33.430)\n- Scenic Resource (PCC 33.480)\n- Plan District (PCC 33.5xx)\n\n**Verify yourself**: Go to https://www.portlandmaps.com, search \"5112 SE Belmont St\", expand \"Permits & Zoning\" \u2192 \"Zoning & Districts.\" This is the single most important verification step before designing anything.\n\n### Historic / Conservation district\n\nNot in one per the data returned, and Mt. Tabor / South Tabor is not a designated Historic or Conservation District (those exist in Irvington, Ladd's Addition, Alphabet Historic District, etc.). However, PCC 33.445 (Historic Resource Overlay Zone) includes individually-listed historic resources (landmarks); confirm via PortlandMaps that no individual landmark is associated with the parcel or immediately adjacent.\n\n### What does PCC 33.205 say specifically?\n\nThis is the chapter for ADUs. The current rules (after the 2025 code consolidation):\n\n- **One ADU allowed by right** on a lot with a house, attached house, or manufactured home (PCC 33.205.030)\n- **Two ADUs allowed** if the lot has frontage on a City-maintained street, meets Table 205-2 minimums (R5 = 6,000 sq ft), and is not in 'z' overlay. Your ~5,378 sq ft lot does NOT clear 6,000 sq ft, so two ADUs is **not** available unless you can document a larger lot via survey.\n- **Maximum size**: 800 sq ft of living area, OR 75% of the primary structure's living area, whichever is smaller (PCC 33.205.040.C). Your house is ~2,156 sq ft, so 75% \u00d7 2,156 = 1,617 sq ft, which means the **800 sq ft cap controls**. Basement ADUs in a 5+ year old structure are exempt from the size cap.\n- **Height (detached)**: 20 ft outside required setbacks, **15 ft inside** required setbacks (PCC 33.205.040.G; PCC 33.110.245.C.4)\n- **Front setback for the ADU itself**: 40 ft from front lot line, OR located behind the rear wall of the main structure (PCC 33.205.040.E)\n- **Building coverage** (detached ADU specific): The detached ADU's footprint cannot exceed the primary structure's footprint, and all detached accessory structures combined cannot cover more than 20% of the site (PCC 33.205.040.F)\n- **Parking**: Zero additional spaces required (PCC 33.205.040.H)\n- **Visitability**: Triggered only for two-ADU projects or ADU-with-duplex; not your situation\n\n### What ADU types are available to you\n\n| Type | Definition | Practical consideration on your lot |\n|------|-----------|-------------------------------------|\n| **Detached** | Stand-alone backyard cottage | Possible, but constrained by your shallow lot depth; the \"behind the rear wall\" rule will dominate |\n| **Attached (addition)** | New structure sharing a wall with house | Often the simplest path; no 40 ft front setback rule since it's part of the house |\n| **Internal conversion** | Convert basement, attic, or part of house into separate dwelling | Cheapest path if your 1957 house has a usable basement and meets ceiling-height requirements |\n| **Garage conversion** | Convert existing detached garage | Excellent if you have one; PCC 33.110.245.C.2.c allows existing pre-2005 garages in the setback to convert |\n\nI don't have a record of whether the property has a detached garage; verify on PortlandMaps' aerial view.\n\n---\n\n## 2. Setbacks: the core question\n\n### Base R5 setbacks for a primary or attached structure (PCC 33.110.220, Table 110-4)\n\n| Setback | R5 Standard |\n|---------|-------------|\n| Front | **10 feet** |\n| Side | **5 feet** |\n| Rear | **5 feet** |\n| Street side (corner lot) | 10 feet |\n| Garage entrance | 18 feet (so a car can park in front of garage door) |\n\nNote: the front setback can be reduced to match the average of immediately adjacent properties' actual setbacks (PCC 33.110.220.C, \"setback averaging\"), and there's an \"established building line\" exception if the existing nonconforming wall covers \u226560% of the facade (PCC 33.110.220.E).\n\n### Setbacks for a **detached ADU** specifically (PCC 33.110.245)\n\nThis is where it gets nuanced. The default rule is that detached covered accessory structures, including ADUs, are subject to the **same** building setbacks as the base zone (so 10/5/5 for R5). **But** PCC 33.110.245.C.2 allows you to build closer to side and rear lot lines if all of the following are met:\n\n- Structure is at least **40 feet from the front lot line** (or 20 feet from a side-street line on a corner)\n- Footprint dimensions \u2264 **24 ft \u00d7 24 ft** (excluding eaves)\n- Structure \u2264 **15 feet high**, with walls \u2264 10 feet high (excluding gables)\n- Walls within the setback have **no doors or windows** facing the adjacent lot line\n- Combined length of structures within the setback adjacent to each property line \u2264 24 ft\n- No rooftop deck on the portion in the setback\n- Dormers \u2265 5 ft from side and rear lot lines\n- Screening (fence or landscaping) for non-enclosed walls within the setback\n\nSo the \"5-ft rear/side ADU\" pattern you may have heard of is real, but it carries multiple constraints; and crucially, you **lose 5 feet of allowed height** when the structure is inside the setback (15 ft cap, vs 20 ft outside).\n\n### How setbacks differ by ADU type\n\n| ADU Type | Front | Side | Rear | Notes |\n|----------|-------|------|------|-------|\n| **Detached, outside setbacks** | 40 ft from front lot line OR behind rear wall of house | 5 ft | 5 ft | Up to 20 ft tall |\n| **Detached, inside side/rear setback** | 40 ft from front lot line | as close as ~0 ft (subject to building code separation) | as close as ~0 ft | 15 ft tall max, 24\u00d724 footprint max, no openings facing line |\n| **Attached / addition** | 10 ft (R5 base) | 5 ft | 5 ft | Treated as part of primary structure |\n| **Conversion of existing structure** | Existing footprint OK (legal nonconforming) | Existing OK | Existing OK | No new encroachment beyond existing walls |\n\n### Building height interaction with setbacks\n\nTwo distinct rules interact:\n\n1. **R5 max height for primary structure**: 1.2 \u00d7 the structure width, up to **30 ft** absolute (PCC 33.110.215, Table 110-3); 35 ft on lots that slope downhill from the street with 20%+ average slope (PCC 33.110.215.D)\n2. **Detached accessory structure height**: 20 ft outside setbacks, 15 ft inside setbacks (PCC 33.110.245.C.4)\n\nFor a detached ADU, the accessory rule controls. There's no setback \"step-back\" formula for ADUs the way commercial zones have step-down requirements adjacent to residential.\n\n### Lot coverage and building coverage\n\n**Building coverage** (PCC 33.110.225, Table 110-5) caps the **footprint** of all covered structures combined. For R5:\n\n- Lot < 3,000 sq ft: 50%\n- Lot 3,000\u20135,000 sq ft: 1,500 sq ft + 15% of area over 3,000\n- Lot \u2265 5,000 sq ft: **2,250 sq ft + 15% of area over 5,000**\n\nFor your ~5,378 sq ft lot: 2,250 + (378 \u00d7 0.15) = **~2,307 sq ft total building footprint allowed**.\n\nWithout footprint data on the existing house, I can't tell you exactly how much room is left. The 2,156 sq ft figure is *living area*, not footprint; the house could be a single story (footprint = 2,156, leaving ~150 sq ft of coverage allowance, which is essentially nothing) or two stories (footprint ~1,000\u20131,200, leaving plenty).\n\n**Verify**: Pull the original building permit drawings via Portland's public records request: https://www.portland.gov/ppd/contact-us/public-records-records-request\n\n**Detached accessory structures coverage cap** (PCC 33.205.040.F; PCC 33.110.245.D):\n- All detached accessory structures combined: \u2264 **20% of site area**\n- Detached ADU footprint: \u2264 primary structure footprint\n\nFor your lot: 20% \u00d7 5,378 = **~1,076 sq ft maximum** for all detached accessory structures combined. An 800 sq ft footprint ADU fits inside that cap with room for a small shed.\n\n---\n\n## 3. Related rules you probably didn't think to ask about\n\n### Title 11: Trees\n\nThis is the rule that catches people. Per **PCC 11.50.040.B.2**, sites **less than 5,000 sq ft are exempt** from tree preservation requirements. Your lot at ~5,378 sq ft is **above** that threshold, which means **Title 11 applies**.\n\nWhat that means in practice (PCC 11.50.040.C):\n\n- **Tree Plan required** with development permit if there are any private trees \u2265 12 inches diameter at breast height (DBH), city trees \u2265 6 inches DBH, or street trees \u2265 3 inches DBH on or adjacent to the site\n- **Retention**: must preserve at least **1/3 of non-exempt trees \u2265 12\" DBH** on site, OR pay mitigation\n- **All trees \u2265 20\" DBH** must be preserved or pay mitigation; trees \u2265 36\" DBH require neighborhood notice if removed\n- **Mitigation fees**: per inch of DBH for trees \u2265 20\"; cost of two replacement trees for trees 12\u201320\" DBH (Table 50-1)\n- **Street trees**: planting standards under PCC 11.50.060; you already have an active 2025 street tree planting permit, so Urban Forestry has a record at this address\n\n**Practical move**: Before you finalize ADU siting, walk the property and identify every tree \u2265 12\" DBH. Measure DBH at 4.5 ft above grade. Decisions about ADU location should consider tree root protection zones (typically 1 foot of radius per inch of DBH).\n\nIf you remove \u2265 5 trees on a site with average slope \u2265 20%, **Title 24 also requires a geotechnical engineering report** per PCC 24.70.020.D.\n\n### Title 17: Stormwater (BES rules)\n\nAuthorized under **PCC 17.38**; design rules in the **2025 Stormwater Management Manual** (effective March 1, 2025).\n\nTrigger threshold (new in the 2025 SWMM): if your project creates or replaces **\u2265 1,000 sq ft of impervious area**, you must manage that stormwater on-site (the threshold was 500 sq ft under the 2020 SWMM, so this got more lenient).\n\nFor an 800 sq ft detached ADU footprint plus a walkway/patio, you may be right at the threshold. Solutions: drywell, rain garden, ecoroof, or stormwater planter, sized via the BES Presumptive Approach Calculator.\n\n**Sewer connection**: BES will charge a sewer SDC (potentially waivable for ADUs; see SDC section). Your house is on city sewer (verified). Plumbing connection of the ADU may require a new lateral or a tie-in to the existing lateral; BES requires permit and inspection. Contact BES Development Services Permits: 503-823-7761.\n\n**Cheap diligence step**: Pay $300\u2013$500 to a plumber to camera-scope your existing sewer lateral now. A 1957 house may have clay or Orangeburg pipe; finding out it needs replacement *after* you've spent $200K on an ADU is a classic Portland gotcha.\n\n### Title 24: Building Code\n\nThe Oregon Residential Specialty Code (ORSC) governs construction; Portland modifies it via Title 24. ADU-specific modifications are in **Building Code Guide BCG 00-10** (always check the current version). Key points:\n\n- ADUs comply with ORSC requirements for two-family dwellings\n- BCG 00-10 allows reduced fire/STC/IIC separations between the ADU and the house, especially for existing walls/floors that received final inspection \u2265 2 years before the ADU permit\n- Slope hazard: per **BCG 19-12**, a slope hazard evaluation is required when development slopes are steeper than 2H:1V (50%), foundation setback per OSSC 1808.7 / ORSC 403.1.9 isn't satisfied, or there's evidence of past instability. Your \"steep slope area\" flag means: confirm with a slope check at your specific footprint location before assuming you don't need a geotech report.\n\n### Titles 25, 26, 27: Plumbing, Electrical, Mechanical\n\nEach ADU needs trade permits in addition to the building permit:\n\n- **Title 25 (Plumbing)**: water connection, sewer connection, fixtures\n- **Title 26 (Electrical)**: subpanel, circuits; the 200A service upgraded in 2023 may have capacity to feed the ADU as a sub-fed panel\n- **Title 27 (Mechanical)**: heating, ventilation, kitchen exhaust\n\nYou can apply for trade permits **with** the building permit (one permit number, simpler) or later. Trade permits typically require a licensed contractor; some homeowner work is allowed but **electrical work must be done by a licensed electrician** in Oregon.\n\n### Floor area and FAR\n\nFor R5, FAR limits apply (PCC 33.110.210, Table 110-4) and depend on number of dwelling units. Adding an ADU **increases your allowed FAR** because R7 through R2.5 zones grant extra floor area for each ADU (per the official ADU zoning page; verify exact bonus in Table 110-4 of the current code). This is rarely the binding constraint.\n\n### Parking\n\n**No additional parking required** for an ADU (PCC 33.205.040.H). Portland eliminated ADU parking minimums years ago.\n\n### Short-term rental (STR) rules\n\nIf you ever want to use the ADU for short-term rental:\n\n- **Type A ASTR** (1\u20132 bedrooms, < 30-day stays): allowed in the ADU per PCC 33.207. Requires permit.\n- **Type B ASTR** (3\u20135 bedrooms): conditional use, follows PCC 33.815.040.B.1.\n- **CRITICAL CATCH**: If you take the ADU SDC waiver (see next section), you sign a **10-year covenant prohibiting any short-term rental on the property**, including individual bedrooms in your main house. Violating it costs 150% of the SDC fees. Plan accordingly.\n\n### System Development Charges (SDCs)\n\nThis is where the most policy churn has happened recently. **There are now two distinct SDC programs**, and one specifically excludes ADUs:\n\n| Program | Authority | Applies to ADUs? | What it requires |\n|---------|-----------|------------------|------------------|\n| **ADU-specific SDC Waiver** | PCC 17.14.070.D (longstanding) | **Yes** | 10-year covenant: no STRs on any structure on the property |\n| **Temporary Housing SDC Exemption** (Aug 15, 2025 \u2013 Sept 30, 2028) | PCC 17.14.070.J (new) | **NO \u2013 ADUs explicitly excluded** | Goal: 5,000 new housing units; for new dwellings, NOT ADUs |\n\nThe new temporary exemption getting press from the City does **not** apply to your ADU. You will use the older ADU SDC Waiver Program (administered by Revenue Division at aducovenant@portlandoregon.gov), which has a 99% approval rate when followed correctly per the application instructions PDF.\n\nWithout the waiver, expect SDCs roughly **$10,000\u2013$15,000** total across Parks, Transportation, BES (sewer/stormwater), and Water bureaus. The waiver eliminates most of these, but commits you to long-term rental only for 10 years.\n\n---\n\n## 4. Permits and process\n\n### Permits required for a typical detached ADU\n\n1. **Zoning Permit** (often combined with building permit application; verifies setbacks, height, lot coverage, etc.)\n2. **Building Permit** (PCC Title 24; the \"main\" permit)\n3. **Plumbing Permit** (PCC Title 25)\n4. **Electrical Permit** (PCC Title 26)\n5. **Mechanical Permit** (PCC Title 27)\n6. **Sewer Connection Permit** (BES)\n7. **Water Service** (Water Bureau; new SDC only if you upsize the meter)\n8. **Possibly a Tree Plan / Tree Permit** (Title 11; required if any qualifying trees on site)\n9. **Possibly a Land Use Review (Adjustment)** (PCC 33.805) if you can't meet a development standard. ~8-10 weeks, ~$1,922 fee, no guarantee of approval.\n10. **Possibly a Geotechnical Report** (Title 24, if slope-hazard triggered)\n11. **Possibly Erosion Control Permit** if disturbing > certain area\n\nThe first 8 are routine. Items 9\u201311 are where projects get delayed or expensive.\n\n### What can be combined\n\n- Building + trade (plumbing/electrical/mechanical) permits can be applied for together; this is recommended (single permit number, easier coordination)\n- Sewer connection is a separate BES permit but processed in parallel\n- Tree Plan goes with the building permit submittal\n\n### Pre-application / Early Assistance\n\n**I strongly recommend you use this**, especially given your shallow lot, the steep-slope flag, and the just-over-5,000-sq-ft tree code threshold.\n\nTwo free options:\n\n1. **Free 15-minute appointment** with a city planner (zoning), building reviewer (engineering), or permit technician (process). Book at: https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments\n2. **Early Assistance meeting** (longer, more in-depth): https://www.portland.gov/ppd/early-assistance\n\nUse the 15-minute slot first to confirm zoning, ask about the steep-slope implication for your specific footprint, and confirm the tree code applicability. Then if anything is borderline, escalate to Early Assistance.\n\n### Timeline (typical, current as of 2026)\n\nPer Portland BDS published guidance and recent practitioner reports:\n\n- **Permit review**: 4\u20138 weeks for standard plan review; some pre-approved plans qualify for over-the-counter review\n- **Submittal to permit issuance**: 8\u201320 weeks typical, depending on review queue and whether corrections are required\n- **Construction**: 4\u20139 months for new detached ADU\n- **From \"I want to do this\" to certificate of occupancy**: realistically 12\u201318 months for a new detached ADU; 6\u201312 months for a basement conversion\n\n### Cost ballparks (Portland 2026 dollars)\n\n| Item | Range | Notes |\n|------|-------|-------|\n| **Architect / designer** | $5,000 \u2013 $25,000 | Or zero if using City pre-approved plans |\n| **City pre-approved plans (purchase)** | $1,500 \u2013 $5,000 | Available via Portland's pre-approved ADU plan program |\n| **Permit fees (building + trades)** | $5,000 \u2013 $15,000 | Scales with valuation |\n| **SDCs (without waiver)** | $10,000 \u2013 $15,000 | Parks, Transportation, BES, Water combined |\n| **SDC waiver (if 10-year STR ban acceptable)** | $0 | Plus $1 recording fee for covenant |\n| **Tree mitigation (if any 12+ inch trees removed)** | $0 \u2013 $5,000+ | Per Table 50-1, scales with tree size |\n| **Geotech report (if triggered)** | $3,000 \u2013 $8,000 | Standalone cost for slope hazard evaluation |\n| **Survey** | $1,000 \u2013 $3,000 | Strongly recommended; cheap insurance against setback/property line errors |\n| **Sewer scope** | $300 \u2013 $500 | Cheap diligence; reveals condition of existing lateral |\n| **Construction (new detached ADU)** | $200,000 \u2013 $350,000+ | Portland market 2026; ~$350-450/sq ft is current; higher with high finishes |\n| **Construction (basement conversion)** | $80,000 \u2013 $200,000 | Far cheaper if structure already adequate |\n| **Construction (garage conversion)** | $100,000 \u2013 $200,000 | Depends heavily on existing structure quality |\n\n**TOTAL ballpark**: $250K\u2013$400K all-in for a new detached 800 sq ft ADU; $100K\u2013$250K for a conversion.\n\nPlus: **affordable housing construction excise tax** of 1% of permit valuation if valuation \u2265 $100,000 (PCC, since Aug 1, 2016).\n\n---\n\n## 5. Sequencing: what to do, in order, starting today\n\n1. **Verify the zoning data yourself** at https://www.portlandmaps.com (search \"5112 SE Belmont St\" \u2192 expand \"Permits & Zoning\" \u2192 \"Zoning & Districts\" and \"Hazards\"). Screenshot what you see. *Today, 15 minutes.* Bureau: BPS via PortlandMaps.\n2. **Order or pull the existing house's permit history** so you know the as-built footprint. https://www.portland.gov/ppd/contact-us/public-records-records-request *This week. ~$25\u201350, ~2 weeks turnaround.* Bureau: BDS Records.\n3. **Walk the lot with a tape measure**. Note: existing house footprint, all trees \u2265 12\" DBH, distance from house rear wall to rear lot line, distance to side lot lines, slope/grade. Take photos. *This week, 1 hour.*\n4. **Camera-scope the sewer lateral.** Hire a plumber for $300\u2013$500. *This month.* This is the cheapest piece of due diligence with the highest expected information value.\n5. **Book a free 15-minute appointment with a city planner** at https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments. Bring the PortlandMaps screenshots, the lot measurements, and a list of three or four siting options. Ask specifically about: (a) the steep-slope flag and what it triggers for your footprint, (b) the front setback (rule plus any setback averaging), (c) whether your tree inventory triggers a Tree Plan. *This month.* Bureau: BDS / Portland Permitting & Development.\n6. **Decide ADU type** (detached, attached, basement conversion, garage conversion). The 15-minute appointment will help you make this decision realistically.\n7. **Order a property survey** if you're going for a detached ADU near setback lines. *Before design.* ~$1,000\u2013$3,000.\n8. **Consider Portland's pre-approved ADU plans**. https://www.portland.gov/ppd/residential-permitting/home-projects/accessory-dwelling-units (look for the pre-approved plans link). Saves ~$10K\u2013$20K vs. custom architect, and lets you skip much of the design review phase.\n9. **Hire an architect/designer or contractor** with Portland ADU experience, OR commit to a pre-approved plan path. Get bids.\n10. **Schedule an Early Assistance meeting** at https://www.portland.gov/ppd/early-assistance if anything is non-standard (steep slope, attached vs detached uncertainty, tree preservation strategy). *Before submittal.* Free or low-cost.\n11. **Apply for the ADU SDC Waiver** in parallel with permitting if you'll commit to the 10-year no-STR covenant. https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver. Email aducovenant@portlandoregon.gov.\n12. **Submit building permit + trade permits + Tree Plan + sewer connection permit** through Portland's online permitting portal.\n13. **Address corrections** when BDS responds; budget 2\u20133 rounds of corrections as normal.\n14. **Once permit issued**: pull required pre-construction inspections (erosion control, foundation forms before pour); construct.\n15. **Pass final inspections** in this order: foundation, framing, rough plumbing/electrical/mechanical, insulation, drywall, final building, sewer connection final.\n16. **Certificate of Occupancy**, then your ADU is legal to occupy or rent.\n\n### Bureau quick-reference\n\n| Bureau | Role | Phone |\n|--------|------|-------|\n| **Portland Permitting & Development (PP&D, formerly BDS)** | Building, zoning, trade permits, plan review | 503-823-7300 |\n| **Bureau of Planning and Sustainability (BPS)** | Zoning code, comprehensive plan | 503-823-7700 |\n| **Bureau of Environmental Services (BES)** | Sewer, stormwater, drainage | 503-823-7740 (general); 503-823-7761 (development services) |\n| **Portland Bureau of Transportation (PBOT)** | Right-of-way, driveways, street trees | 503-823-7002 |\n| **Urban Forestry (Parks)** | Title 11 tree code, tree permits | 503-823-4489 |\n| **Water Bureau** | Water service, meter sizing | 503-823-7404 |\n| **Revenue Division** | ADU SDC waiver covenants | aducovenant@portlandoregon.gov |\n\n---\n\n## 6. Common gotchas (especially in older SE neighborhoods)\n\n### General Portland ADU gotchas\n\n1. **Property line uncertainty**: pre-1960 plats often have surveying ambiguity; shifting an ADU 2 feet because of a survey error is expensive. Always survey before designing a detached ADU near setback lines.\n2. **Sewer lateral surprises**: 1957 housing stock often has clay-tile or Orangeburg sewer laterals. Replacing a lateral can cost $5,000\u2013$25,000+ depending on length and obstructions. Scope it before you're committed.\n3. **Tree review missed**: people forget that trees on the *neighbor's* property near the proposed ADU may have root protection zones that limit excavation. Title 11 protects trees on or partially on the development site.\n4. **Height calculations on sloped lots**: PCC 33.930 (Measurements) defines how to measure height; on sloped lots, height is measured from the average finished grade of the building, not from a single point. This trips up DIY designers.\n5. **Setback measured from property line, not from fence/curb**: PCC 33.930. Fences are not property lines.\n6. **Forgetting the 40 ft / behind rear wall rule**: this is the most common ADU siting mistake. Even if you meet the setbacks, a detached ADU cannot sit in your front yard.\n7. **Garage conversion eligibility**: only legally constructed pre-Jan 1, 2005 garages get the side/rear setback grandfather under PCC 33.110.245.C.2.c.\n8. **STR covenant scope**: people don't realize the SDC waiver covenant prohibits STRs on the *entire property*, including individual bedrooms in the main house, for 10 years.\n9. **The new \"5,000 housing units\" SDC exemption excludes ADUs** (PCC 17.14.070.J). Don't assume it applies; it doesn't.\n\n### Specific to your situation (5112 SE Belmont St area)\n\n1. **\"Just barely\" lot size**: Your lot is just over 5,000 sq ft, which puts you over the Title 11 tree code exemption (PCC 11.50.040.B.2). If it were under 5,000, no tree obligations on the development. Don't assume your neighbors' experience applies to you.\n2. **\"N 1/2 OF LOT 1&2\" legal description**: This suggests a re-platted half-lot configuration in the Karlinda Terrace plat. In older SE plats, the original lots were often 50' \u00d7 100'. A \"N 1/2 of Lot 1 & 2\" indicates the property may have unusual dimensions or shared boundaries with the south half. Survey this; it could affect both setback measurements and the Title 11 5,000 sq ft threshold question.\n3. **Steep slope flag**: Mt. Tabor / South Tabor sits on volcanic terrain with localized slopes. The flag doesn't automatically require a geotech report, but it does mean: (a) check actual grade at your proposed footprint, (b) be ready for foundation requirements per OSSC 1808.7 if any slope at the foundation exceeds 1:3 (33% slope), (c) Title 24 may require foundation setbacks from descending and ascending slopes per OSSC 1808.7.1\u20131808.7.3.\n4. **Belmont St traffic**: SE Belmont is a busy collector street; PBOT may have specific right-of-way requirements for any new driveway curb cut. Likely you won't need a new curb cut, but verify.\n5. **Lot orientation**: shallow lots like yours (~50 ft deep) work best with attached ADUs or basement conversions, because the \"behind the rear wall\" rule plus the 5 ft rear setback eats most of the rear yard. A detached ADU in a 50-ft-deep lot is geometrically tight.\n6. **Pre-1978 lead paint**: 1957 construction means lead paint was in use. If converting interior space, lead-safe RRP rules apply; demo and renovation work require lead-safe certified contractors.\n7. **Mt. Tabor neighborhood association notification**: not a regulatory requirement for an ADU permit, but the recognized Neighborhood Association is **South Tabor Neighborhood Association** (under Southeast Uplift District Coalition). They appreciate a heads-up; this is a good-neighbor practice.\n\n---\n\n## 7. Accuracy caveats and pending changes\n\n### Where my answer may differ from your specific situation\n\n- **Lot dimensions**: I estimated ~50 ft \u00d7 107 ft = ~5,378 sq ft from PortlandMaps geometry (Web Mercator polygon, latitude-corrected). This is approximate. **Get a survey** before committing to a design. The legal description \"N 1/2 OF LOT 1&2\" requires interpretation against the original Karlinda Terrace plat at the County Recorder.\n- **Existing house footprint**: I have living area (2,156 sq ft) but not footprint. If single-story, lot coverage is already very tight; if two-story, you have plenty of room. Pull the original plans.\n- **Steep slope at your specific footprint**: the parcel-level flag is `true`, but your buildable area may be flat. Confirm with on-site grade measurement.\n- **Trees on site**: I have no inventory. The 2025 street tree planting permit indicates Urban Forestry interaction, but doesn't tell you about private trees in the rear yard.\n- **Front setback exception**: PCC 33.110.220.C allows setback averaging based on adjacent properties. Your actual buildable front line may differ from the 10 ft default.\n- **Owner of record**: Public records show Lauren and Raul Moreno (purchased April 25, 2022 for $675,000). If you are the owner under a different name (LLC, trust, etc.), confirm the assessor record matches. If you are evaluating before purchase, factor in the closing timeline.\n\n### Pending / recently changed rules to watch\n\n- **2025 Stormwater Management Manual** (effective March 1, 2025) raised the impervious area threshold from 500 to 1,000 sq ft. Use the current SWMM, not older versions.\n- **Temporary Housing SDC Exemption** (PCC 17.14.070.J, ordinance 192082, July 2025) runs Aug 15, 2025 \u2013 Sept 30, 2028, but **does not apply to ADUs**. Don't get this confused with the ADU-specific waiver.\n- **Title 11 Large Tree Amendment** sunset date was removed by City Council in November 2024; tree preservation rules for trees \u2265 20\" DBH are now permanent.\n- **Oregon HB 2138 / SB 1537** continue middle-housing reforms; some provisions take effect 2027 (e.g., removing private CC&R restrictions on ADUs). Unlikely to affect your project unless your property has an HOA or recorded covenants, which Mt. Tabor / South Tabor older homes typically don't.\n- **PBOT and PP&R SDC methodology updates**: PP&R completing summer 2026; PBOT updates underway for late 2026 adoption. SDC rates may change; lock in rates by getting your permit issued before any new schedule effective date.\n\n### Where I genuinely could not retrieve address-specific data and you should look up yourself\n\n1. **Existing house footprint and floor plan**: I have living area only. Pull permit history at https://www.portland.gov/ppd/contact-us/public-records-records-request.\n2. **Tree inventory on the lot**: I have no data. Walk the lot.\n3. **Existing detached structures (garage, shed)**: not visible in PortlandMaps property record I retrieved. Check aerial imagery and assessor.\n4. **Actual grade/slope at foundation footprint**: walk it with a level, or hire a surveyor.\n5. **Sewer lateral condition**: scope it; ~$300\u2013$500.\n6. **CC&Rs or recorded covenants**: rarely an issue in Mt. Tabor older homes, but check the title report or the County Recorder.\n\n---\n\n## Summary of citations referenced\n\n| Topic | Citation |\n|-------|----------|\n| ADU zoning rules (master) | **PCC 33.205** |\n| Single-dwelling zone standards | **PCC 33.110** |\n| R5 setback table | PCC 33.110.220, Table 110-4 |\n| R5 height | PCC 33.110.215, Table 110-3 |\n| R5 building coverage | PCC 33.110.225, Table 110-5 |\n| R5 FAR | PCC 33.110.210, Table 110-4 |\n| Detached accessory structures | **PCC 33.110.245** |\n| ADU minimum lot size (1 ADU) | PCC 33.205.030, Table 205-1 |\n| ADU minimum lot size (2 ADUs) | PCC 33.205.030, Table 205-2 |\n| ADU size (800 sq ft / 75%) | PCC 33.205.040.C |\n| ADU front siting (40 ft / behind rear wall) | PCC 33.205.040.E |\n| ADU height | PCC 33.205.040.G |\n| ADU coverage cap (20%) | PCC 33.205.040.F |\n| ADU parking (none required) | PCC 33.205.040.H |\n| Adjustment Reviews | **PCC 33.805** |\n| Constrained Sites overlay 'z' | PCC 33.435 |\n| Historic Resource overlay | PCC 33.445 |\n| Community Design Standards | PCC 33.218 |\n| Short-term rentals (Type A) | PCC 33.207 |\n| Short-term rentals (Type B / Conditional Use) | PCC 33.815.040.B.1 |\n| Trees in development | **PCC 11.50** (esp. 11.50.040) |\n| Tree code exemptions | PCC 11.50.040.B |\n| Building code | **PCC Title 24** |\n| Plumbing code | **PCC Title 25** |\n| Electrical code | **PCC Title 26** |\n| Mechanical code | **PCC Title 27** |\n| Slope hazard / clearing & grading | PCC 24.70 |\n| Slope hazard evaluation guide | Building Code Guide BCG 19-12 |\n| ADU building code modifications | Building Code Guide BCG 00-10 |\n| Foundation on or adjacent to slopes | OSSC 1808.7 / ORSC 403.1.9 |\n| Stormwater management authority | PCC 17.38 + 2025 SWMM |\n| ADU SDC Waiver | PCC 17.14.070.D |\n| Temporary housing SDC exemption (NOT ADUs) | PCC 17.14.070.J |\n| Affordable Housing Construction Excise Tax | PCC since 2016 |\n| Measurements (how setbacks/heights are measured) | PCC 33.930 |\n| Definitions | PCC 33.910 |\n\n### Authoritative web pages\n\n- ADU zoning: https://www.portland.gov/ppd/zoning-land-use/zoning-code-overview/adu-zoning\n- ADU permits and process: https://www.portland.gov/ppd/residential-permitting/home-projects/accessory-dwelling-units\n- ADU SDC Waiver Program: https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver\n- Temporary housing SDC exemption (not ADUs): https://www.portland.gov/ppd/current-fee-schedules/housing-sdc-exemption\n- Detached Covered Accessory Structures Worksheet (PDF): https://www.portland.gov/ppd/documents/detached-covered-accessory-structures-worksheet/download\n- Building Code Guide 00-10 (ADU): https://www.portland.gov/bds/codes-rules-and-guides/bcg-00-10-adu-code-guide\n- 2025 Stormwater Management Manual: https://www.portland.gov/bes/stormwater/2025-stormwater-management-manual\n- Free 15-minute planner appointments: https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments\n- Early Assistance: https://www.portland.gov/ppd/early-assistance\n- Public records request: https://www.portland.gov/ppd/contact-us/public-records-records-request\n- PortlandMaps property lookup: https://www.portlandmaps.com\n\n---\n\n*If you find anything in this guide that doesn't match what BDS / PP&D tells you in person, trust them, not me. Code interpretation by city staff at the counter is the binding answer; this document is a starting point and a citation roadmap.*"
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Property zoned R5",
+      "claim_full": "The property at 5112 SE Belmont St is zoned R5 (Residential 5,000) under Title 33.110.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110",
+      "verified_truth": "Accuracy flags for MCP and enhanced confirm R5 zoning retrieved from PortlandMaps; OOB inferred R5 from web sources without retrieval."
+    },
+    {
+      "id": "A2",
+      "claim_short": "No overlay zones apply",
+      "claim_full": "The parcel has no overlay zones (no historic, design, environmental, or constrained-site overlays).",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "verified_truth": "Both MCP and enhanced flags confirm no overlays returned from PortlandMaps lookup."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Steep slope flag on parcel",
+      "claim_full": "PortlandMaps returns steep_slope_area: true for this parcel, which can trigger Title 24 foundation requirements.",
+      "topic": "safety",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "BCG 19-12; OSSC 1808.7",
+      "verified_truth": "Accuracy flags confirm the steep_slope_area: true flag; enhanced cites BCG 19-12 and 2H:1V trigger threshold."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Lot ~50x107 ft, ~5,378 sf",
+      "claim_full": "Lot geometry computed from PortlandMaps rings is approximately 50 ft \u00d7 107 ft, roughly 5,350-5,378 sq ft.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "hedge-correct",
+      "importance": 3,
+      "citation": "PortlandMaps geometry",
+      "verified_truth": "Both flags note dimensions are inferred/approximate from geometry rings and recommend a survey to confirm."
+    },
+    {
+      "id": "A5",
+      "claim_short": "House 2,156 sf built 1957",
+      "claim_full": "The primary structure is approximately 2,156 sq ft of living area, built in 1957.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps assessor",
+      "verified_truth": "Accuracy flags for both MCP and enhanced confirm 2,156 sf, built 1957."
+    },
+    {
+      "id": "A6",
+      "claim_short": "ADU max 800 sf or 75% of house",
+      "claim_full": "Detached ADU living area is capped at the lesser of 800 sq ft or 75% of the primary structure.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.205.040.C",
+      "verified_truth": "All three responses are confirmed by accuracy flags; the 800 sf cap binds since 75% of 2,156 = 1,617 sf."
+    },
+    {
+      "id": "A7",
+      "claim_short": "ADU height 20 ft / 15 ft in setback",
+      "claim_full": "Detached ADU height is 20 ft outside setbacks, but 15 ft maximum if any portion sits inside a side or rear setback.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.205.040.G; 33.110.245.C.4",
+      "verified_truth": "All three flags confirm 20 ft outside / 15 ft inside setback height limits."
+    },
+    {
+      "id": "A8",
+      "claim_short": "R5 setbacks 10/5/5",
+      "claim_full": "R5 base zone setbacks are 10 ft front, 5 ft side, and 5 ft rear per Title 33.110.220 Table 110-4.",
+      "topic": "setbacks",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.220, Table 110-4",
+      "verified_truth": "All three flag sets confirm 10/5/5 setbacks for R5 from Table 110-4."
+    },
+    {
+      "id": "A9",
+      "claim_short": "ADU 40 ft from front or behind rear wall",
+      "claim_full": "A detached ADU must be at least 40 ft from the front lot line OR located behind the rear wall of the primary dwelling.",
+      "topic": "setbacks",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.205.040.E (enhanced); 33.205.040.C.2 (mcp)",
+      "verified_truth": "All three flag sets confirm the 40 ft / behind rear wall siting rule for detached ADUs."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Accessory exception 24x24, 15 ft",
+      "claim_full": "A detached accessory structure may sit inside the side/rear setbacks if footprint \u226424x24, height \u226415 ft, walls \u226410 ft, no openings facing the line, with L3/F2 screening.",
+      "topic": "setbacks",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.110.245.C.2.b",
+      "verified_truth": "Accuracy flags for both MCP and enhanced confirm the 24x24/15 ft/10 ft wall exception standards including screening."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Detached accessory \u226420% of lot",
+      "claim_full": "All detached accessory structures combined cannot cover more than 20% of the site, and the ADU footprint cannot exceed the primary structure footprint.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.205.040.F; 33.110.245.D",
+      "verified_truth": "Accuracy flags confirm the 20% combined cap and ADU-footprint-\u2264-primary rule."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Basement ADU exempt from size cap",
+      "claim_full": "A basement ADU is exempt from the 800 sq ft / 75% rule when the primary structure is at least 5 years old.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.205.040.C.1",
+      "verified_truth": "All three flag sets confirm the 5+ year basement ADU exemption from the size cap."
+    },
+    {
+      "id": "A13",
+      "claim_short": "Garage conversion can keep nonconforming setbacks",
+      "claim_full": "An existing legal detached garage may be converted to an ADU without meeting current setbacks, with pre-2005 garages explicitly grandfathered.",
+      "topic": "setbacks",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.110.245.C.2.c (enhanced)",
+      "verified_truth": "OOB and enhanced flag sets confirm garage conversion grandfather; enhanced specifies pre-2005 cutoff."
+    },
+    {
+      "id": "A14",
+      "claim_short": "Two ADUs threshold (conflicting)",
+      "claim_full": "R5 lots qualify for a second ADU under Table 205-2, but MCP states the threshold is 3,000 sq ft while enhanced states 6,000 sq ft.",
+      "topic": "size",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": "PCC 33.205, Table 205-2",
+      "verified_truth": "The two responses cite the same table but give different minimum lot sizes (3,000 vs 6,000 sq ft); accuracy flags repeat each variant's claim verbatim and do not adjudicate. Resident must verify against current Table 205-2."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Visitability exemption above 3 ft rise",
+      "claim_full": "The visitability requirement for two-ADU configurations is exempted when there is more than a 3-ft rise from the street.",
+      "topic": "size",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PCC 33.205.040.C.4",
+      "verified_truth": "MCP accuracy flags confirm the >3 ft rise visitability exemption."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Tree code applies above 5,000 sf",
+      "claim_full": "Title 11 tree preservation rules exempt sites under 5,000 sq ft; this lot at ~5,378 sf clears the threshold and is subject to tree retention requirements.",
+      "topic": "trees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 11.50.040.B.2",
+      "verified_truth": "Enhanced accuracy flags confirm the 5,000 sf exemption threshold and the retention rules for trees \u226512, 20, and 36 inch DBH."
+    },
+    {
+      "id": "A17",
+      "claim_short": "2025 SWMM threshold 1,000 sf",
+      "claim_full": "The 2025 Stormwater Management Manual (effective March 1, 2025) raised the impervious-area trigger from 500 to 1,000 sq ft.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "2025 SWMM; PCC 17.38",
+      "verified_truth": "Enhanced accuracy flags confirm the 2025 SWMM effective date and 1,000 sf threshold."
+    },
+    {
+      "id": "A18",
+      "claim_short": "ADU SDC waiver requires 10-yr no-STR",
+      "claim_full": "The ADU SDC Waiver requires a 10-year covenant prohibiting short-term rentals on the property; violation costs 150% of SDC fees.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 17.14.070.D",
+      "verified_truth": "Enhanced accuracy flags confirm the 10-year covenant and 150% violation penalty under PCC 17.14.070.D."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Temporary SDC exemption excludes ADUs",
+      "claim_full": "The Temporary Housing SDC Exemption (PCC 17.14.070.J, ordinance 192082, Aug 15 2025 \u2013 Sept 30 2028) explicitly does not apply to ADUs.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 17.14.070.J",
+      "verified_truth": "Enhanced accuracy flags confirm the ordinance number, date range, and ADU exclusion."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Construction excise tax 1% on \u2265$100K",
+      "claim_full": "Portland levies a 1% affordable-housing construction excise tax on permits valued at $100,000 or more (since Aug 1, 2016).",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PCC (since Aug 1, 2016)",
+      "verified_truth": "Enhanced accuracy flags confirm the 1% excise tax on permit valuations \u2265$100,000."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Cost ballpark $250K-$400K",
+      "claim_full": "All-in cost for a new detached 800 sf ADU runs roughly $250K-$400K; basement or garage conversion is significantly cheaper.",
+      "topic": "costs",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.9,
+      "correctness": "correct-range",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Enhanced accuracy flags confirm permit fees $5K-$15K, SDCs $10K-$15K, construction $200K-$350K+ at ~$350-$450/sf."
+    },
+    {
+      "id": "A22",
+      "claim_short": "PP&D phone 503-823-7300",
+      "claim_full": "Portland Permitting & Development handles building/zoning/trade permits and offers free 15-minute Early Assistance appointments at 503-823-7300.",
+      "topic": "sequence",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "portland.gov/ppd/early-assistance",
+      "verified_truth": "OOB and enhanced flags confirm the 503-823-7300 number for Early Assistance appointments."
+    },
+    {
+      "id": "A23",
+      "claim_short": "OOB could not reach PortlandMaps",
+      "claim_full": "OOB explicitly admitted PortlandMaps API was blocked and assumed R5 zoning rather than retrieving address-specific data.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "admitted-gap",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "OOB rationale and data-quality notes confirm the AI admitted the API was unreachable and inferred zoning from web sources, triggering the address-specific cap."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Recent permits on file at address",
+      "claim_full": "Recent permit history includes a 2022 heat pump/furnace, 2023 200A electrical service upgrade, 2024 EV charger, and 2025 street tree planting.",
+      "topic": "address",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps permits",
+      "verified_truth": "Enhanced accuracy flags confirm the four-permit history retrieved from PortlandMaps."
+    },
+    {
+      "id": "A25",
+      "claim_short": "Property ID and legal description",
+      "claim_full": "Property ID R194819, State ID 1S2E06BA 17100, legal description 'N 1/2 OF LOT 1&2' of Karlinda Terrace plat.",
+      "topic": "address",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps assessor",
+      "verified_truth": "Enhanced accuracy flags confirm property ID, state ID, and legal description."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Adjustment review ~$1,922, 8-10 wks",
+      "claim_full": "A Land Use Review Adjustment under PCC 33.805 takes about 8-10 weeks and costs roughly $1,922 with no guarantee of approval.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct-range",
+      "importance": 2,
+      "citation": "PCC 33.805",
+      "verified_truth": "Enhanced accuracy flags confirm the ~$1,922 fee and 8-10 week timeline for Adjustment review."
+    },
+    {
+      "id": "A27",
+      "claim_short": "Pre-approved ADU plans available",
+      "claim_full": "The City offers free or low-cost pre-approved detached ADU plan sets that speed up permitting.",
+      "topic": "sequence",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "portland.gov ADU Permits page",
+      "verified_truth": "All three responses reference Portland's pre-approved ADU plans program; OOB and enhanced flags confirm the offering."
+    },
+    {
+      "id": "A28",
+      "claim_short": "R5 building coverage 2,250 + 15%",
+      "claim_full": "R5 building coverage on lots \u22655,000 sq ft is 2,250 sq ft plus 15% of area over 5,000, capping total footprint of all covered structures.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.110.225, Table 110-5",
+      "verified_truth": "Enhanced accuracy flags confirm the 2,250 + 15% formula for R5 building coverage."
+    },
+    {
+      "id": "A29",
+      "claim_short": "No additional parking required",
+      "claim_full": "No additional parking spaces are required for an ADU at this address.",
+      "topic": "size",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.205.040.H",
+      "verified_truth": "MCP and enhanced both state zero parking required; consistent with current Portland ADU code."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Title 11 large tree sunset removed",
+      "claim_full": "The Title 11 Large Tree Amendment sunset was removed by City Council in November 2024, making preservation of trees \u226520 inch DBH permanent.",
+      "topic": "trees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PCC Title 11",
+      "verified_truth": "Enhanced accuracy flags confirm the November 2024 Council action removing the sunset on the large tree amendment."
+    }
+  ]
+}

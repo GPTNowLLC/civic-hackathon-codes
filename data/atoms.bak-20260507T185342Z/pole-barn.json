@@ -21,8 +21,8 @@
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "Truss spacing comes from stamped drawings",
-      "claim_full": "For a 40-foot clear-span workshop, truss spacing is set by the truss manufacturer's stamped engineered drawings rather than a single Portland code number.",
+      "claim_short": "Truss spacing comes from engineered drawings",
+      "claim_full": "Truss spacing for a 40-foot clear span is determined by the truss manufacturer's stamped engineered drawings, not a single prescriptive number in code.",
       "topic": "structural",
       "variants": [
         "oob",
@@ -39,76 +39,30 @@
         "mcp": "ANSI/ASABE EP 484.3 / ICC AC322",
         "enhanced": "ORSC R802.10, https://up.codes/viewer/oregon/irc-2021/chapter/8/roof-ceiling-construction"
       },
-      "verified_truth": "ORSC R802.10 requires manufacturer-stamped truss design drawings showing slope, span, spacing, and loads \u2014 confirmed in the enhanced rationale's accuracy flags."
+      "verified_truth": "ORSC R802.10 requires manufacturer-stamped truss design drawings showing slope, span, spacing, and design loads."
     },
     {
       "id": "A2",
-      "claim_short": "8 ft on center common pole-barn spacing",
-      "claim_full": "8 feet on center is the most common / industry default truss spacing for post-frame pole-barn construction with single trusses.",
+      "claim_short": "4 ft OC is standard truss spacing",
+      "claim_full": "4 feet on center is the universal default truss spacing for residential workshops because standard sheathing spans 4 feet easily.",
       "topic": "structural",
       "variants": [
-        "oob",
-        "mcp",
         "enhanced"
       ],
-      "specificity": 0.6,
-      "actionability": 0.7,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": null
-      },
-      "verified_truth": "Not verified in this evaluation; treated as industry practice rather than a code-mandated number."
-    },
-    {
-      "id": "A3",
-      "claim_short": "12 ft OC practical maximum single trusses",
-      "claim_full": "12 feet on center is the practical maximum spacing for single trusses on a 40-foot span, with double trusses needed beyond that for 14-16 ft bays.",
-      "topic": "structural",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.6,
-      "correctness": "correct-range",
+      "specificity": 0.8,
+      "actionability": 0.8,
+      "correctness": "correct",
       "importance": 3,
       "citation": null,
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null
+        "enhanced": null
       },
-      "verified_truth": "Not verified in this evaluation; consistent industry guidance across both responses."
+      "verified_truth": "Not verified in this evaluation; spacing depends on engineered design per ORSC R802.10."
     },
     {
-      "id": "A4",
-      "claim_short": "Portland roof snow load 25 psf",
-      "claim_full": "Portland's design roof snow load is 25 psf (20 psf base plus 5 psf rain-on-snow surcharge).",
-      "topic": "structural",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "OSSC 1608.1",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "Oregon Structural Specialty Code 1608.1, https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures"
-      },
-      "verified_truth": "Accuracy flags confirm Portland's 25 psf design roof snow load (20 + 5 rain-on-snow) per OSSC 1608.1."
-    },
-    {
-      "id": "A5",
-      "claim_short": "Portland design wind 18 psf ASD",
-      "claim_full": "Portland's prescriptive design wind pressure is 18 psf ASD, corresponding to roughly a 95-100 mph 3-second-gust basic wind speed.",
+      "id": "A3",
+      "claim_short": "8 ft OC common pole-barn spacing",
+      "claim_full": "8 feet on center is the most common pole-barn spacing for single trusses, requiring 2x6 or 2x8 purlins to support roofing between trusses.",
       "topic": "structural",
       "variants": [
         "oob",
@@ -116,43 +70,41 @@
         "enhanced"
       ],
       "specificity": 0.8,
-      "actionability": 0.5,
+      "actionability": 0.8,
       "correctness": "correct",
-      "importance": 3,
+      "importance": 4,
       "citation": null,
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures"
+        "enhanced": null
       },
-      "verified_truth": "Accuracy flags confirm 18 psf ASD / ~95-100 mph 3-second gust as Portland's design wind."
+      "verified_truth": "Not verified in this evaluation; convention from post-frame industry, but final spacing is per stamped drawings."
     },
     {
-      "id": "A6",
-      "claim_short": "Portland is Seismic Design Category D",
-      "claim_full": "Portland sits in Seismic Design Category D (D1 for most residential parcels), which affects pole-barn lateral design.",
+      "id": "A4",
+      "claim_short": "12 ft OC max single truss",
+      "claim_full": "12 feet on center is the practical maximum for a single-truss design at a 40-foot span; beyond that requires double trusses.",
       "topic": "structural",
       "variants": [
         "oob",
-        "mcp",
-        "enhanced"
+        "mcp"
       ],
-      "specificity": 0.7,
-      "actionability": 0.4,
-      "correctness": "correct",
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct-range",
       "importance": 3,
       "citation": null,
       "citation_by_variant": {
         "oob": null,
-        "mcp": null,
-        "enhanced": "Oregon Design Criteria Hub, https://www.oregon.gov/bcd/codes-stand/pages/design-criteria.aspx"
+        "mcp": null
       },
-      "verified_truth": "Accuracy flags confirm SDC D/D1 designation for Portland."
+      "verified_truth": "Not verified in this evaluation; consistent with post-frame industry practice."
     },
     {
-      "id": "A7",
+      "id": "A5",
       "claim_short": "Lot is 0.18 acres / ~7,840 sf",
-      "claim_full": "The property at 450 NE 103rd Ave is roughly 0.18 acres (~7,840 sq ft).",
+      "claim_full": "The property at 450 NE 103rd Ave is approximately 0.18 acres or roughly 7,840 square feet.",
       "topic": "address",
       "variants": [
         "oob",
@@ -169,12 +121,12 @@
         "mcp": null,
         "enhanced": "https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/"
       },
-      "verified_truth": "Accuracy flags confirm the 0.18 ac / ~7,840 sf lot size from PortlandMaps assessor data."
+      "verified_truth": "Lot size of 0.18 acres / ~7,840 sf is confirmed by the data-quality notes."
     },
     {
-      "id": "A8",
-      "claim_short": "Existing house is 1,082 sf, built 1951",
-      "claim_full": "The existing house on the lot has a footprint of about 1,082 sq ft and was built in 1951.",
+      "id": "A6",
+      "claim_short": "House is 1,082 sf, built 1951",
+      "claim_full": "The existing house on the lot has a footprint of about 1,082 square feet and was built in 1951.",
       "topic": "address",
       "variants": [
         "oob",
@@ -184,115 +136,77 @@
       "specificity": 1.0,
       "actionability": 0.7,
       "correctness": "correct",
-      "importance": 5,
+      "importance": 4,
       "citation": "PortlandMaps",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
         "enhanced": "https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/"
       },
-      "verified_truth": "Accuracy flags confirm 1,082 sf 1951 house footprint from PortlandMaps."
+      "verified_truth": "House footprint 1,082 sf, built 1951, confirmed by accuracy flags."
     },
     {
-      "id": "A9",
-      "claim_short": "Lot zoned R5",
-      "claim_full": "The lot is almost certainly zoned R5 (5,000 sq ft minimum lot).",
+      "id": "A7",
+      "claim_short": "Lot is zoned R2.5",
+      "claim_full": "The property is in the R2.5 (Residential 2,500) base zone in the East Corridor plan district with no environmental overlays.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.020",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "PCC 33.110.020, https://www.portland.gov/code/33/110/020"
+      },
+      "verified_truth": "Property is R2.5 in East Corridor plan district with no overlays per accuracy flags."
+    },
+    {
+      "id": "A8",
+      "claim_short": "OOB guessed R5 zoning",
+      "claim_full": "Out-of-the-box response inferred the lot was zoned R5 (5,000 sq ft min lot) without retrieving actual zoning data.",
       "topic": "zoning",
       "variants": [
         "oob"
       ],
-      "specificity": 0.6,
-      "actionability": 0.4,
+      "specificity": 0.7,
+      "actionability": 0.3,
       "correctness": "WRONG",
       "importance": 5,
       "citation": null,
       "citation_by_variant": {
         "oob": null
       },
-      "verified_truth": "The actual base zone is R2.5, not R5. OOB explicitly admits it inferred zoning from acreage rather than retrieving it; MCP and enhanced confirmed R2.5 from PortlandMaps."
+      "verified_truth": "Lot is actually R2.5, not R5; OOB explicitly admitted this was an inference from acreage."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Accessory structures rules at PCC 33.110.245",
+      "claim_full": "Detached accessory structures in single-dwelling zones are governed by Portland City Code Chapter 33.110.245.",
+      "topic": "citations",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": "PCC 33.110.245",
+      "citation_by_variant": {
+        "oob": "PCC 33.110.245",
+        "enhanced": "PCC 33.110.245, https://www.portland.gov/code/33/110/245"
+      },
+      "verified_truth": "OOB evaluator flagged that R-zone accessory structures may instead be at PCC 33.110.250; needs verification against current code."
     },
     {
       "id": "A10",
-      "claim_short": "Lot zoned R2.5",
-      "claim_full": "The lot is in the R2.5 (Residential 2,500) base zone, Portland's smallest single-dwelling lot zone.",
-      "topic": "zoning",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 33.110.020",
-      "citation_by_variant": {
-        "mcp": "Title 33 / portland.gov/code/33",
-        "enhanced": "PCC 33.110.020, https://www.portland.gov/code/33/110/020 and https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/"
-      },
-      "verified_truth": "Accuracy flags confirm R2.5 base zone for this parcel via PortlandMaps."
-    },
-    {
-      "id": "A11",
-      "claim_short": "East Corridor plan district, no overlays",
-      "claim_full": "The lot sits in the East Corridor plan district with no environmental, historic, flood, or landslide overlays.",
-      "topic": "zoning",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "enhanced": "https://www.portlandmaps.com/bps/zoning/#/zones/plandistrict/EC and https://www.portlandmaps.com/detail/property/450-NE-103RD-AVE/R319825/"
-      },
-      "verified_truth": "Accuracy flag confirms East Corridor plan district designation and no overlays for this parcel."
-    },
-    {
-      "id": "A12",
-      "claim_short": "20 ft max height for accessory",
-      "claim_full": "Detached accessory structures in residential zones max out at 20 feet in total height.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 33.110.245.C.1",
-      "citation_by_variant": {
-        "oob": "PCC 33.110.245",
-        "mcp": "Title 33 / Detached Covered Accessory Structures worksheet",
-        "enhanced": "PCC 33.110.245.C.1, https://www.portland.gov/code/33/110/245"
-      },
-      "verified_truth": "Accuracy flags confirm 20 ft maximum height for detached accessory structures (measured to midpoint of sloped roof) per PCC 33.110.245.C.1."
-    },
-    {
-      "id": "A13",
-      "claim_short": "15 ft compatibility/design threshold",
-      "claim_full": "Once an accessory structure exceeds 15 feet tall, compatibility design standards apply (e.g., shingle/clapboard cladding, narrow board widths).",
-      "topic": "size",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.5,
-      "correctness": "hedge-correct",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "mcp": null
-      },
-      "verified_truth": "Accuracy flag lists this as needing verification against Title 33.218 or 33.110 standards; directionally consistent with Portland's tiered accessory-structure rules."
-    },
-    {
-      "id": "A14",
-      "claim_short": "20% lot-coverage cap for accessory",
-      "claim_full": "Combined detached accessory structures cannot exceed 20% of lot area, capping coverage at about 1,568 sf on this 7,840 sf lot.",
+      "claim_short": "20 ft max accessory height",
+      "claim_full": "Detached accessory structures are limited to 20 feet maximum height, measured to the midpoint of a sloped roof.",
       "topic": "size",
       "variants": [
         "oob",
@@ -303,18 +217,40 @@
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PCC 33.110.245.C.3.a",
+      "citation": "PCC 33.110.245.C.1",
       "citation_by_variant": {
-        "oob": "PCC 33.110.245",
-        "mcp": "Title 33 / Detached Covered Accessory Structures worksheet",
-        "enhanced": "PCC 33.110.245.C.3.a, https://www.portland.gov/code/33/110/245"
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.110.245.C.1, https://www.portland.gov/code/33/110/245"
       },
-      "verified_truth": "Accuracy flags confirm the 20% lot-area cap on combined detached accessory structure coverage per PCC 33.110.245.C.3.a."
+      "verified_truth": "20 ft max height for detached accessory structures confirmed in accuracy flags."
     },
     {
-      "id": "A15",
-      "claim_short": "Single-structure cap = house footprint",
-      "claim_full": "A single detached accessory structure cannot exceed the building coverage of the smallest primary structure on the lot, or 900 sf, whichever is greater \u2014 limiting this lot to ~1,082 sf.",
+      "id": "A11",
+      "claim_short": "20% lot coverage cap on accessories",
+      "claim_full": "Combined building coverage of all detached accessory structures cannot exceed 20% of lot area, yielding ~1,568 sf on this 7,840 sf lot.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.95,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.110.245.C.3.a",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "PCC 33.110.245.C.3.a, https://www.portland.gov/code/33/110/245"
+      },
+      "verified_truth": "20% lot-area cap for combined detached accessory coverage confirmed in accuracy flags."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Single accessory cap = house footprint or 900 sf",
+      "claim_full": "A single detached accessory structure footprint cannot exceed the building coverage of the smallest primary structure or 900 sf, whichever is greater \u2014 capping this lot's workshop at ~1,082 sf.",
       "topic": "size",
       "variants": [
         "enhanced"
@@ -327,69 +263,259 @@
       "citation_by_variant": {
         "enhanced": "PCC 33.110.245.C.3.b, https://www.portland.gov/code/33/110/245"
       },
-      "verified_truth": "Accuracy flag confirms PCC 33.110.245.C.3.b imposes the primary-structure / 900 sf cap, the binding constraint on this lot."
+      "verified_truth": "PCC 33.110.245.C.3.b cap rule confirmed in accuracy flags; this is the binding constraint for this lot."
     },
     {
-      "id": "A16",
-      "claim_short": "R2.5 setbacks 10/5/5",
-      "claim_full": "In R2.5 the accessory setbacks are 10 ft front, 5 ft side, and 5 ft rear under Table 110-4.",
+      "id": "A13",
+      "claim_short": "R2.5 setbacks: 10/5/5",
+      "claim_full": "R2.5 zone setbacks are 10 feet front, 5 feet side, and 5 feet rear per Table 110-4.",
       "topic": "setbacks",
       "variants": [
         "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.9,
+      "actionability": 1.0,
       "correctness": "correct",
       "importance": 5,
       "citation": "PCC 33.110.220 Table 110-4",
       "citation_by_variant": {
-        "mcp": "Table 110-4",
+        "mcp": null,
         "enhanced": "PCC 33.110.220.B and Table 110-4, https://www.portland.gov/code/33/110/220"
       },
-      "verified_truth": "Accuracy flag confirms R2.5 setbacks of 10 ft front, 5 ft sides, 5 ft rear from Table 110-4."
+      "verified_truth": "R2.5 setbacks 10 ft front, 5 ft sides, 5 ft rear from Table 110-4 confirmed in accuracy flags."
     },
     {
-      "id": "A17",
-      "claim_short": "R5 setbacks 5'/5' + 40 ft from front",
-      "claim_full": "In R5 accessory structures need 5 ft side and 5 ft rear setbacks plus must sit behind the rear wall of the house or 40 ft from the front lot line.",
+      "id": "A14",
+      "claim_short": "OOB cited 5/5 setbacks for R5",
+      "claim_full": "OOB stated 5 ft side and 5 ft rear setbacks in R5 with structure 40 ft from front lot line or behind rear wall of house.",
       "topic": "setbacks",
       "variants": [
         "oob"
       ],
-      "specificity": 0.8,
-      "actionability": 0.5,
+      "specificity": 0.9,
+      "actionability": 0.7,
       "correctness": "PARTIAL-WRONG",
-      "importance": 3,
+      "importance": 4,
       "citation": null,
       "citation_by_variant": {
         "oob": null
       },
-      "verified_truth": "OOB applied R5 setback rules to a parcel that is actually R2.5; the correct R2.5 setbacks are 10 ft front, 5 ft side, 5 ft rear per Table 110-4."
+      "verified_truth": "Lot is R2.5 not R5; while 5/5 side/rear values match, the underlying zone identification was wrong."
     },
     {
-      "id": "A18",
-      "claim_short": "24x24 small-shed setback exception",
-      "claim_full": "There is a side/rear setback exception that allows accessory structures up to 24x24 ft, 15 ft tall with walls under 10 ft, located at least 40 ft from the front lot line.",
+      "id": "A15",
+      "claim_short": "Garage entrance setback 18 ft",
+      "claim_full": "Vehicle/garage entrances must be set back at least 18 feet from the front lot line.",
       "topic": "setbacks",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.6,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.110.220 Table 110-4",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.220 Table 110-4, https://www.portland.gov/code/33/110/220"
+      },
+      "verified_truth": "18 ft garage entrance setback per Table 110-4 confirmed in accuracy flags."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Side/rear setback small-shed exception",
+      "claim_full": "An exception allows reduced side/rear setbacks but only if the structure is \u226424x24 ft, \u226415 ft tall, with walls under 10 ft, and \u226540 ft from front lot line.",
+      "topic": "setbacks",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
       "correctness": "correct",
       "importance": 2,
       "citation": "PCC 33.110.245.C.2.b",
       "citation_by_variant": {
         "enhanced": "PCC 33.110.245.C.2.b, https://www.portland.gov/code/33/110/245"
       },
-      "verified_truth": "Accuracy flag confirms the 24x24 / 15 ft / 10 ft wall / 40 ft from front side-and-rear setback exception in 33.110.245.C.2.b."
+      "verified_truth": "Side/rear setback exception parameters confirmed in accuracy flags."
+    },
+    {
+      "id": "A17",
+      "claim_short": "Lot building coverage cap ~2,676 sf",
+      "claim_full": "Lot-wide building coverage on a 7,840 sf lot is capped at about 2,676 sf, calculated as 2,250 + 15% of lot area over 5,000 sf.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.110.225 Table 110-5",
+      "citation_by_variant": {
+        "enhanced": "PCC 33.110.225 Table 110-5, https://www.portland.gov/code/33/110/225"
+      },
+      "verified_truth": "Building coverage formula 2,250 + 15% over 5,000 sf yielding ~2,676 sf confirmed in accuracy flags."
+    },
+    {
+      "id": "A18",
+      "claim_short": "200 sf permit-exempt threshold",
+      "claim_full": "Non-habitable accessory buildings under 200 sq ft (and under 15 ft tall) are exempt from building permit requirements.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "ORSC R105.2",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "ORSC R105.2"
+      },
+      "verified_truth": "200 sf / 15 ft permit-exempt threshold under ORSC R105.2 confirmed in accuracy flags."
     },
     {
       "id": "A19",
-      "claim_short": "18 ft garage-entrance setback",
-      "claim_full": "A garage or vehicle entrance has to sit at least 18 feet back from the front lot line.",
-      "topic": "setbacks",
+      "claim_short": "Portland snow load 25 psf",
+      "claim_full": "Portland's minimum design roof snow load is 25 psf (20 psf base plus 5 psf rain-on-snow surcharge).",
+      "topic": "structural",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "OSSC 1608.1",
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": "Oregon Structural Specialty Code 1608.1, https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures"
+      },
+      "verified_truth": "25 psf design roof snow load (20+5) per OSSC 1608.1 confirmed in accuracy flags."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Portland design wind 18 psf ASD",
+      "claim_full": "Portland's prescriptive design wind pressure is 18 psf ASD, corresponding to roughly 95\u2013100 mph 3-second-gust basic design wind speed.",
+      "topic": "structural",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Portland PPD residential structural guidance",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/ppd/residential-permitting/structural-engineering/one-and-two-family-residential-structures"
+      },
+      "verified_truth": "18 psf ASD wind / ~95-100 mph 3-second gust confirmed in accuracy flags."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Portland is Seismic Design Category D",
+      "claim_full": "Portland residential parcels are typically Seismic Design Category D (D1 in enhanced response).",
+      "topic": "structural",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Oregon Design Criteria Hub",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.oregon.gov/bcd/codes-stand/pages/design-criteria.aspx"
+      },
+      "verified_truth": "Portland SDC D (D1) confirmed in accuracy flags."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Stormwater triggered at 1,000 sf impervious",
+      "claim_full": "Projects creating 1,000 square feet or more of new impervious area trigger Portland's Stormwater Management Manual requirements.",
+      "topic": "sewer",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.95,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Portland BES SWMM",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/bes/stormwater/swmm-and-right-way-projects/determine-requirements"
+      },
+      "verified_truth": "1,000 sf new impervious threshold for SWMM confirmed in accuracy flags."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Tree small-lot exemption only \u22645,000 sf",
+      "claim_full": "The Title 11 small-lot tree exemption applies only to lots 5,000 square feet or smaller, so this 7,840 sf lot does not qualify.",
+      "topic": "trees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 11.50.040.B.2",
+      "citation_by_variant": {
+        "enhanced": "PCC 11.50.040.B.2, https://www.portland.gov/code/11/50/040"
+      },
+      "verified_truth": "PCC 11.50.040.B.2 small-lot tree exemption limited to lots \u22645,000 sf confirmed in accuracy flags."
+    },
+    {
+      "id": "A24",
+      "claim_short": "3-ft fire-rated wall rule",
+      "claim_full": "Building walls less than 3 feet from a property line require 1-hour fire-rated wall assemblies with no openings.",
+      "topic": "safety",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "ORSC R302.1",
+      "citation_by_variant": {
+        "enhanced": "ORSC R302.1"
+      },
+      "verified_truth": "ORSC R302.1 fire-rated wall requirement for walls <3 ft from property line confirmed in accuracy flags."
+    },
+    {
+      "id": "A25",
+      "claim_short": "12% Oregon state surcharge on fees",
+      "claim_full": "Oregon adds a 12% state surcharge on building permit and plan review fees.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Portland fee schedule",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules"
+      },
+      "verified_truth": "12% Oregon state surcharge confirmed in accuracy flags."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Plan review = 65% of permit fee",
+      "claim_full": "Portland's plan review fee is approximately 65% of the building permit fee.",
+      "topic": "fees",
       "variants": [
         "enhanced"
       ],
@@ -397,168 +523,52 @@
       "actionability": 0.7,
       "correctness": "correct",
       "importance": 2,
-      "citation": "PCC 33.110.220 Table 110-4",
+      "citation": "Portland fee schedule",
       "citation_by_variant": {
-        "enhanced": "PCC 33.110.220 Table 110-4, https://www.portland.gov/code/33/110/220"
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules"
       },
-      "verified_truth": "Accuracy flag confirms the 18 ft garage-entrance setback from front lot line per Table 110-4."
+      "verified_truth": "Plan review = 65% of permit fee confirmed in accuracy flags."
     },
     {
-      "id": "A20",
-      "claim_short": "200 sf permit-exempt threshold",
-      "claim_full": "Non-habitable accessory buildings under 200 sq ft (and 15 ft tall) are permit-exempt; over that, a building permit is required.",
-      "topic": "permits",
+      "id": "A27",
+      "claim_short": "CET 1% only at $100k+",
+      "claim_full": "Portland's Construction Excise Tax of 1% applies only when permit valuation reaches $100,000 or more.",
+      "topic": "fees",
       "variants": [
-        "oob",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.9,
+      "actionability": 0.8,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "ORSC R105.2",
+      "importance": 2,
+      "citation": "Portland PHB CET",
       "citation_by_variant": {
-        "oob": null,
-        "enhanced": "ORSC R105.2 Item 1; https://www.portland.gov/ppd/residential-permitting/home-projects/garage-shed-and-accessory-structures"
+        "enhanced": "https://www.portland.gov/phb/cet"
       },
-      "verified_truth": "Accuracy flags confirm the 200 sf / 15 ft permit-exempt threshold for non-habitable accessory buildings under ORSC R105.2."
+      "verified_truth": "CET 1% threshold at $100,000+ valuation confirmed in accuracy flags."
     },
     {
-      "id": "A21",
-      "claim_short": "PCC 33.110.245 governs accessory",
-      "claim_full": "Portland's detached accessory structure rules live in PCC 33.110.245.",
-      "topic": "citations",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.6,
-      "correctness": "hedge-correct",
-      "importance": 3,
-      "citation": "PCC 33.110.245",
-      "citation_by_variant": {
-        "oob": "PCC 33.110.245",
-        "enhanced": "PCC 33.110.245, https://www.portland.gov/code/33/110/245"
-      },
-      "verified_truth": "OOB rationale flagged that R-zone accessory rules are 'typically at 33.110.250 (not .245 as cited)'; enhanced response uses .245 with subsections; verifier should confirm correct section number."
-    },
-    {
-      "id": "A22",
-      "claim_short": "Stormwater triggers at 1,000 sf",
-      "claim_full": "Projects that create 1,000 sq ft or more of new impervious surface trigger Portland's Stormwater Management Manual requirements.",
-      "topic": "sewer",
+      "id": "A28",
+      "claim_short": "BOD 21-05 habitable vs non-habitable",
+      "claim_full": "Portland's Building Official Determination 21-05 governs the distinction between habitable and non-habitable accessory structures (kitchens/bathrooms/sleeping areas trigger habitable reclassification).",
+      "topic": "definitions",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
       "actionability": 0.9,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC Title 17.38 / SWMM",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/bes/stormwater/swmm-and-right-way-projects/determine-requirements and https://www.portland.gov/bes/stormwater-manual"
-      },
-      "verified_truth": "Accuracy flag confirms the 1,000 sf new-impervious threshold for SWMM applicability."
-    },
-    {
-      "id": "A23",
-      "claim_short": "Tree code applies; lot >5,000 sf",
-      "claim_full": "Title 11 tree-code review applies because this lot exceeds 5,000 sf, so the small-lot exemption does not apply.",
-      "topic": "trees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
       "importance": 3,
-      "citation": "PCC 11.50.040.B.2",
-      "citation_by_variant": {
-        "enhanced": "PCC 11.50.040.B.2, https://www.portland.gov/code/11/50/040"
-      },
-      "verified_truth": "Accuracy flag confirms the small-lot tree exemption applies only to lots \u2264 5,000 sf, so a 7,840 sf lot is subject to Title 11.50 review."
-    },
-    {
-      "id": "A24",
-      "claim_short": "3 ft fire-rated wall rule",
-      "claim_full": "Any building wall less than 3 ft from a property line must be a 1-hour fire-rated assembly with no openings.",
-      "topic": "safety",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "ORSC R302.1",
-      "citation_by_variant": {
-        "enhanced": "ORSC R302.1"
-      },
-      "verified_truth": "Accuracy flag confirms ORSC R302.1 fire-rated wall requirement for walls less than 3 ft from property line."
-    },
-    {
-      "id": "A25",
-      "claim_short": "Habitable reclassification gotcha",
-      "claim_full": "Adding a kitchen, bedroom, or bathroom to the workshop reclassifies it as habitable space, triggering ADU rules and additional fees.",
-      "topic": "permits",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
       "citation": "BOD 21-05",
       "citation_by_variant": {
         "enhanced": "BOD 21-05, https://www.portland.gov/ppd/codes-rules-and-guides/bod-21-05-habitable-vs-non-habitable-accessory-structures"
       },
-      "verified_truth": "Accuracy flag confirms BOD 21-05 governs the habitable vs. non-habitable accessory structure determination."
+      "verified_truth": "BOD 21-05 cited as the habitable vs non-habitable accessory structures determination per accuracy flags."
     },
     {
-      "id": "A26",
-      "claim_short": "Owner-occupant electrical permit pathway",
-      "claim_full": "Homeowners can pull their own electrical permit as the owner-occupant under Oregon Administrative Rule 918-309.",
-      "topic": "electrical",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "OAR 918-309",
-      "citation_by_variant": {
-        "enhanced": "OAR 918-309, https://www.oregon.gov/bcd/codes-stand/Pages/electrical.aspx"
-      },
-      "verified_truth": "Accuracy flag confirms the owner-occupant electrical permit pathway under OAR 918-309."
-    },
-    {
-      "id": "A27",
-      "claim_short": "Free 15-min planner appointment",
-      "claim_full": "Portland offers free 15-minute appointments with a city planner; calling 503-823-7300 is the recommended first step.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "503-823-7300",
-      "citation_by_variant": {
-        "oob": "503-823-7300",
-        "mcp": "503-823-7300",
-        "enhanced": "503-823-7300, https://www.portland.gov/ppd/zoning-land-use/free-15-min-appointments"
-      },
-      "verified_truth": "Accuracy flag confirms 503-823-7300 as the BDS/PP&D contact for free 15-minute planner appointments."
-    },
-    {
-      "id": "A28",
-      "claim_short": "BDS renamed Portland Permitting & Development",
-      "claim_full": "The Bureau of Development Services (BDS) was renamed Portland Permitting & Development (PP&D) in mid-2025.",
+      "id": "A29",
+      "claim_short": "BDS renamed to PP&D in mid-2025",
+      "claim_full": "The Bureau of Development Services was renamed Portland Permitting & Development in mid-2025.",
       "topic": "process",
       "variants": [
         "enhanced"
@@ -569,83 +579,67 @@
       "importance": 2,
       "citation": null,
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd"
+        "enhanced": null
       },
-      "verified_truth": "Accuracy flag confirms the mid-2025 BDS-to-PP&D rename."
-    },
-    {
-      "id": "A29",
-      "claim_short": "City fees ~$1,500-$3,500",
-      "claim_full": "City permit, plan review, and related fees for a ~1,000 sf non-habitable workshop run roughly $1,500-$3,500.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.7,
-      "correctness": "correct-range",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules"
-      },
-      "verified_truth": "Accuracy flags confirm 12% Oregon state surcharge, 65% plan review fee multiplier, and CET 1% only at $100k+; aggregate range is plausible but not directly verified."
+      "verified_truth": "BDS rename to Portland Permitting & Development in mid-2025 confirmed in accuracy flags."
     },
     {
       "id": "A30",
-      "claim_short": "SDCs typically don't apply for non-habitable",
-      "claim_full": "Residential System Development Charges generally do not apply to a non-habitable accessory structure with no new dwelling unit.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": null,
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/sdc-fees"
-      },
-      "verified_truth": "Consistent with the accuracy flags noting CET applies only at $100k+ and that residential SDCs key off new dwelling units; verifier should still confirm with BES for stormwater SDCs."
-    },
-    {
-      "id": "A31",
-      "claim_short": "Lot building-coverage cap ~2,676 sf",
-      "claim_full": "Total building coverage on this 7,840 sf lot is capped near 2,676 sf using the 2,250 + 15% over 5,000 sf formula in Table 110-5.",
-      "topic": "size",
+      "claim_short": "Owner-occupant electrical permit pathway",
+      "claim_full": "Homeowner-occupants can sign for and pull their own electrical permits in Oregon under OAR 918-309.",
+      "topic": "electrical",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.7,
+      "actionability": 0.95,
       "correctness": "correct",
       "importance": 3,
-      "citation": "PCC 33.110.225 Table 110-5",
+      "citation": "OAR 918-309",
       "citation_by_variant": {
-        "enhanced": "PCC 33.110.225 Table 110-5, https://www.portland.gov/code/33/110/225"
+        "enhanced": "OAR 918-309, https://www.oregon.gov/bcd/codes-stand/Pages/electrical.aspx"
       },
-      "verified_truth": "Accuracy flag confirms the 2,250 + 15% over 5,000 sf building coverage formula in Table 110-5 of PCC 33.110.225."
+      "verified_truth": "OAR 918-309 owner-occupant electrical permit pathway confirmed in accuracy flags."
+    },
+    {
+      "id": "A31",
+      "claim_short": "Free 15-minute planner appointment",
+      "claim_full": "Portland offers free 15-minute zoning question appointments with a planner; call 503-823-7300 or book online.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "Portland PP&D",
+      "citation_by_variant": {
+        "oob": "503-823-7300",
+        "mcp": "503-823-7300",
+        "enhanced": "https://www.portland.gov/ppd/zoning-land-use/free-15-min-appointments"
+      },
+      "verified_truth": "Free 15-min appointments are a real Portland program; phone number and URL match the city's published guidance."
     },
     {
       "id": "A32",
-      "claim_short": "Reduce span to 30 ft to ease constraints",
-      "claim_full": "Reducing the workshop to a 30-foot span (instead of 40) lowers truss cost, opens the height envelope, and fits the lot more easily.",
-      "topic": "structural",
+      "claim_short": "Home Occupations at PCC 33.203",
+      "claim_full": "Using the workshop for business activity may trigger Home Occupation Permit rules at PCC 33.203.",
+      "topic": "zoning",
       "variants": [
-        "oob",
-        "mcp"
+        "oob"
       ],
-      "specificity": 0.7,
-      "actionability": 0.9,
-      "correctness": "correct-judg",
-      "importance": 3,
-      "citation": null,
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PCC 33.203",
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null
+        "oob": "PCC 33.203"
       },
-      "verified_truth": "Judgment recommendation; consistent with the accessory-structure footprint, height, and coverage constraints documented elsewhere in the responses."
+      "verified_truth": "PCC 33.203 cited as Home Occupations section per accuracy flags."
     }
   ]
 }

@@ -21,30 +21,8 @@
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "1-2 family like-for-like reroof: no permit",
-      "claim_full": "A like-for-like reroof on a one- or two-family dwelling does not require a building permit in Portland.",
-      "topic": "permits",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.95,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 24.10.040",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": "Portland's official guidance",
-        "enhanced": "PCC 24.10.040, https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits"
-      },
-      "verified_truth": "The residential reroof exemption applies to 1- and 2-family dwellings under Portland's adopted ORSC; all three responses identified this rule correctly."
-    },
-    {
-      "id": "A2",
-      "claim_short": "3+ units routes to commercial reroof",
-      "claim_full": "A residential building with three or more dwelling units falls under Portland's commercial reroof permit program rather than the residential exemption.",
+      "claim_short": "Like-for-like reroof exempt for 1-2 family",
+      "claim_full": "In Portland, a like-for-like reroof on a one- or two-family home does not require a building permit.",
       "topic": "permits",
       "variants": [
         "oob",
@@ -52,21 +30,57 @@
         "enhanced"
       ],
       "specificity": 0.7,
-      "actionability": 0.85,
-      "correctness": "hedge-correct",
+      "actionability": 0.9,
+      "correctness": "correct",
       "importance": 5,
-      "citation": "Commercial Reroof Permit Program",
+      "citation": "PCC 24.10.040",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "https://www.portland.gov/ppd/commercial-permitting/commercial-permit-inspections/commercial-reroof"
+        "enhanced": "PCC 24.10.040, https://www.portland.gov/ppd/residential-permitting/do-you-need-permit/residential-permits"
       },
-      "verified_truth": "The Commercial Reroof program does cover 3+ unit residential buildings, but OOB's framing was flagged as conflating building-code occupancy classification with permit track; MCP and enhanced correctly hedge by flagging classification ambiguity."
+      "verified_truth": "Portland's residential reroof exemption applies to one- and two-family dwellings; this is well-supported general guidance."
+    },
+    {
+      "id": "A2",
+      "claim_short": "3+ unit residential auto-commercial track",
+      "claim_full": "A building with three or more dwelling units is automatically placed on the commercial reroof permit track regardless of materials.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.6,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "This conflates building-code occupancy classification with permit track; per the rationale, 3+ unit residential does not automatically fall under the commercial reroof permit track."
     },
     {
       "id": "A3",
+      "claim_short": "Wildfire Hazard Zone codified at 24.51.030",
+      "claim_full": "Portland's Wildfire Hazard Zone is codified in PCC Title 24.51.030, adopted in 2002 and still in effect.",
+      "topic": "citations",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.2,
+      "correctness": "WRONG",
+      "importance": 3,
+      "citation": "Title 24.51.030",
+      "citation_by_variant": {
+        "oob": "Title 24.51.030"
+      },
+      "verified_truth": "Per the rationale, 24.51 is not the Wildfire Hazard Zone section; wildfire hazard provisions are elsewhere and were significantly updated post-2002."
+    },
+    {
+      "id": "A4",
       "claim_short": "Property not in Wildfire Hazard Zone",
-      "claim_full": "5500 SE Belmont is not located within a Portland Wildfire Hazard Zone, so the wildfire-zone reroof permit trigger does not apply.",
+      "claim_full": "5500 SE Belmont St is not located in a Portland Wildfire Hazard Zone.",
       "topic": "address",
       "variants": [
         "oob",
@@ -79,43 +93,45 @@
       "importance": 4,
       "citation": "PortlandMaps",
       "citation_by_variant": {
-        "oob": "Title 24.51.030",
+        "oob": null,
         "mcp": null,
-        "enhanced": "PortlandMaps wild_lands_fire_hazard_area:false"
+        "enhanced": "PortlandMaps wild_lands_fire_hazard_area: false"
       },
-      "verified_truth": "PortlandMaps shows wild_lands_fire_hazard_area:false for this parcel; the property is not in a WHZ. OOB's accompanying code citation for the WHZ itself is wrong (see A4)."
-    },
-    {
-      "id": "A4",
-      "claim_short": "WHZ codified at Title 24.51.030",
-      "claim_full": "Portland's Wildfire Hazard Zone is codified at Title 24.51.030 and the WHZ Map was adopted in 2002 and is still in effect.",
-      "topic": "citations",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.2,
-      "correctness": "WRONG",
-      "importance": 3,
-      "citation": "Title 24.51.030 (cited)",
-      "citation_by_variant": {
-        "oob": "Title 24.51.030"
-      },
-      "verified_truth": "Title 24.51 is not the codification of the WHZ; the WHZ provisions are elsewhere and have been substantially updated since 2002. The OOB citation appears fabricated."
+      "verified_truth": "The MCP and enhanced variants pulled the wild_lands_fire_hazard_area:false flag from PortlandMaps for this parcel."
     },
     {
       "id": "A5",
-      "claim_short": "Townhouses excluded from reroof exemption",
-      "claim_full": "Townhouses are pulled out of the residential reroof exemption and require a permit even for like-for-like work.",
+      "claim_short": "Wildfire zones require reroof permits",
+      "claim_full": "Properties in Wildfire Hazard Zones require permits for reroofs.",
       "topic": "permits",
       "variants": [
-        "oob",
         "mcp",
         "enhanced"
       ],
       "specificity": 0.7,
       "actionability": 0.5,
       "correctness": "correct",
+      "importance": 3,
+      "citation": "https://www.portland.gov/ppd/residential-projects/wildfire-hazard-areas-residential",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/residential-projects/wildfire-hazard-areas-residential"
+      },
+      "verified_truth": "Wildfire Hazard Zone properties have ignition-resistance roofing requirements that trigger permit review."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Townhouses excluded from reroof exemption",
+      "claim_full": "Townhouses are pulled into the reroof permit requirement and are not covered by the residential exemption.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.4,
+      "correctness": "correct",
       "importance": 2,
       "citation": null,
       "citation_by_variant": {
@@ -123,123 +139,139 @@
         "mcp": null,
         "enhanced": null
       },
-      "verified_truth": "Townhouses are not covered by the residential reroof exemption \u2014 flagged as factually correct in the accuracy notes."
+      "verified_truth": "Townhouse exclusion from the reroof exemption is a known Portland rule; not flagged as wrong in the evaluations."
     },
     {
-      "id": "A6",
+      "id": "A7",
       "claim_short": "Solar/BIPV roofing requires permit",
-      "claim_full": "Installing solar panels or building-integrated photovoltaic roof coverings requires a building permit even on a 1-2 family home.",
+      "claim_full": "Installing solar panels or building-integrated photovoltaic roof coverings requires a permit.",
       "topic": "permits",
       "variants": [
-        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "https://www.portland.gov/ppd/solar-development/solar-permits",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/solar-development/solar-permits"
+      },
+      "verified_truth": "Solar/BIPV installations require permits in Portland."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Heavier material change triggers permit",
+      "claim_full": "Switching to a significantly heavier roofing material (e.g., asphalt to tile) requires a permit.",
+      "topic": "permits",
+      "variants": [
         "mcp",
         "enhanced"
       ],
       "specificity": 0.7,
-      "actionability": 0.6,
+      "actionability": 0.7,
       "correctness": "correct",
-      "importance": 2,
-      "citation": "Solar permitting page",
+      "importance": 3,
+      "citation": "PCC 24.10.040",
       "citation_by_variant": {
-        "oob": null,
         "mcp": null,
-        "enhanced": "https://www.portland.gov/ppd/solar-development/solar-permits"
+        "enhanced": "PCC 24.10.040, https://www.portland.gov/code/24/all"
       },
-      "verified_truth": "Solar/BIPV roof coverings require a permit per the accuracy flags."
+      "verified_truth": "Heavier roofing material can overload framing and triggers structural review per Portland reroof guidance."
     },
     {
-      "id": "A7",
-      "claim_short": "Inspection codes 285 and 999",
-      "claim_full": "Commercial reroof inspections in Portland use code 285 (roofing) and code 999 (final).",
+      "id": "A9",
+      "claim_short": "15% sheathing replacement triggers permit",
+      "claim_full": "If more than 15% of the existing roof sheathing is being removed and replaced, a permit is required.",
+      "topic": "permits",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "vague-correct",
+      "importance": 4,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "The 15% threshold is widely cited in Portland reroof guidance but the source page was not linked; needs verification."
+    },
+    {
+      "id": "A10",
+      "claim_short": "10% sheathing limit on commercial reroof",
+      "claim_full": "Under the Commercial Reroof Permit and Inspection Program, sheathing replacement is limited to roughly 10% before a full commercial building permit may be required.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "vague-correct",
+      "importance": 3,
+      "citation": "Commercial Reroof Program Guide Section V.(A)(2)",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://www.portland.gov/ppd/documents/commercial-reroof-permit-program-guide/download"
+      },
+      "verified_truth": "The 10% sheathing threshold cited from the Program Guide should be verified against the actual document."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Commercial reroof uses inspection codes 285 and 999",
+      "claim_full": "The commercial reroof program uses inspection code 285 (roofing) and 999 (final).",
       "topic": "process",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.6,
+      "specificity": 1.0,
+      "actionability": 0.5,
       "correctness": "PARTIAL-WRONG",
-      "importance": 3,
-      "citation": "Commercial Reroof Program page",
+      "importance": 2,
+      "citation": null,
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
         "enhanced": "https://www.portland.gov/ppd/commercial-permitting/commercial-permit-inspections/commercial-reroof"
       },
-      "verified_truth": "OOB's evaluator flagged inspection codes 285/999 as 'not standard Portland reroof inspection codes I can verify.' MCP and enhanced repeat the same numbers; treat as unverified specific operational claims."
+      "verified_truth": "Per the OOB rationale, inspection codes 285/999 are not standard Portland reroof inspection codes that could be verified; this specific operational claim needs independent verification."
     },
     {
-      "id": "A8",
-      "claim_short": "~10% sheathing limit (commercial)",
-      "claim_full": "Under the commercial reroof permit, sheathing replacement is limited to roughly 10% before a full commercial building permit is required.",
-      "topic": "permits",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.6,
-      "correctness": "correct-range",
-      "importance": 3,
-      "citation": "Commercial Reroof Program Guide \u00a7V.(A)(2)",
-      "citation_by_variant": {
-        "oob": null,
-        "enhanced": "Section V.(A)(2), https://www.portland.gov/ppd/documents/commercial-reroof-permit-program-guide/download"
-      },
-      "verified_truth": "Enhanced cites the Commercial Reroof Program Guide \u00a7V.(A)(2). The threshold is flagged as needing verification against actual program documentation."
-    },
-    {
-      "id": "A9",
-      "claim_short": "15% sheathing residential threshold",
-      "claim_full": "More than 15% replacement of existing roof sheathing on a residential reroof flips the project from no-permit to permit-required.",
-      "topic": "permits",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.7,
-      "correctness": "correct-range",
-      "importance": 3,
-      "citation": "Portland's official guidance (uncited URL)",
-      "citation_by_variant": {
-        "mcp": "Portland's official guidance"
-      },
-      "verified_truth": "The 15% sheathing-replacement threshold is consistent with widely cited Portland guidance but the source page was not linked; flagged for verification."
-    },
-    {
-      "id": "A10",
-      "claim_short": "Tear-off mandatory; no overlays",
-      "claim_full": "Portland prohibits overlay reroofs and requires full tear-off down to the wood for residential reroofs.",
+      "id": "A12",
+      "claim_short": "Commercial reroof uses pre-purchased labels",
+      "claim_full": "Registered contractors can pre-purchase reroof labels (up to 5 at a time) under the Commercial Reroof Permit and Inspection Program.",
       "topic": "process",
       "variants": [
         "oob",
-        "mcp",
-        "enhanced"
+        "mcp"
       ],
-      "specificity": 0.7,
-      "actionability": 0.6,
-      "correctness": "hedge-correct",
+      "specificity": 0.9,
+      "actionability": 0.4,
+      "correctness": "vague-correct",
       "importance": 2,
       "citation": null,
       "citation_by_variant": {
         "oob": null,
-        "mcp": null,
-        "enhanced": null
+        "mcp": null
       },
-      "verified_truth": "Tear-off is broadly required in Portland; enhanced response correctly hedges that overlays are 'only allowed in specific conditions.' Flagged for verification across all three."
+      "verified_truth": "The reroof-label program exists but the specific cap of 5 labels is plausible-sounding inference; not independently verified in this evaluation."
     },
     {
-      "id": "A11",
+      "id": "A13",
       "claim_short": "CCB license required over $1,000",
-      "claim_full": "Oregon CCB licensure is required for any roofing job over $1,000.",
-      "topic": "permits",
+      "claim_full": "Any roofing job over $1,000 requires an Oregon CCB-licensed contractor.",
+      "topic": "process",
       "variants": [
         "oob",
         "mcp"
       ],
-      "specificity": 0.8,
-      "actionability": 0.85,
+      "specificity": 0.9,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
       "citation": "Oregon CCB",
@@ -247,399 +279,391 @@
         "oob": null,
         "mcp": null
       },
-      "verified_truth": "Oregon's CCB licensure threshold for construction work is flagged as accurately stated by OOB and MCP."
+      "verified_truth": "Oregon law generally requires CCB licensure for construction work over $1,000; widely accepted."
     },
     {
-      "id": "A12",
+      "id": "A14",
+      "claim_short": "Owner-occupant DIY exemption (ORS 701.010)",
+      "claim_full": "Oregon's owner-occupant exemption under ORS 701.010(7) lets a homeowner do construction on a home they own and occupy without a CCB license.",
+      "topic": "process",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "ORS 701.010(7)",
+      "citation_by_variant": {
+        "enhanced": "ORS 701.010(7); https://oregon.public.law/statutes/ors_701.010"
+      },
+      "verified_truth": "Oregon's owner-occupant exemption is correctly cited."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Tear-off mandatory; no overlays",
+      "claim_full": "Portland prohibits overlay reroofs (putting new shingles over old); full tear-off is mandatory for residential reroofs.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.7,
+      "correctness": "vague-correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null
+      },
+      "verified_truth": "The tear-off mandate is repeated in both responses but not anchored to a specific code section; needs verification."
+    },
+    {
+      "id": "A16",
       "claim_short": "Property zoned RM1",
-      "claim_full": "5500 SE Belmont is zoned RM1 (Residential Multi-Dwelling 1).",
+      "claim_full": "5500 SE Belmont St is zoned RM1 (Residential Multi-Dwelling 1).",
       "topic": "zoning",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.95,
+      "specificity": 1.0,
       "actionability": 0.6,
       "correctness": "correct",
       "importance": 4,
       "citation": "PortlandMaps",
       "citation_by_variant": {
-        "oob": "real-estate listings (RM1)",
+        "oob": null,
         "mcp": null,
         "enhanced": "https://www.portlandmaps.com/bps/zoning/#/zones/base/RM1"
       },
-      "verified_truth": "PortlandMaps confirms RM1 zoning for this parcel. OOB hedges between RM1 and an outdated R2 listing; MCP and enhanced confirm RM1."
+      "verified_truth": "RM1 zoning was retrieved from PortlandMaps and confirmed by both MCP-enabled variants."
     },
     {
-      "id": "A13",
-      "claim_short": "Building is historic Telephone Exchange",
-      "claim_full": "The building at 5500 SE Belmont is the 1914/1921 former Mt. Tabor Telephone Exchange (and was later used as a Masonic Temple), now a multi-unit conversion.",
+      "id": "A17",
+      "claim_short": "R-2 vs R-3 occupancy classification ambiguous",
+      "claim_full": "Past permits classify the building as R-2 Multi-Family while other records list it as one- or two-family, making the occupancy classification ambiguous and decisive for the reroof track.",
       "topic": "address",
       "variants": [
-        "oob",
         "mcp",
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "Oregon Historic Resources Inventory",
+      "actionability": 0.9,
+      "correctness": "correct-judg",
+      "importance": 5,
+      "citation": "Permit 2012-122232-000-00-CO",
       "citation_by_variant": {
-        "oob": "MLS / CoStar listings",
-        "mcp": null,
-        "enhanced": "https://heritagedata.prd.state.or.us/historic/index.cfm?do=v.dsp_siteSummary&resultDisplay=51451"
+        "mcp": "Permit 2012-122232-000-00-CO; PortlandMaps",
+        "enhanced": "PortlandMaps permit application 2012-122232-000-00-CO"
       },
-      "verified_truth": "Enhanced retrieved the Mt. Tabor Telephone Exchange identification from PortlandMaps/Heritage data; OOB independently identified the same history from listings as the 'Pink Temple.'"
+      "verified_truth": "The classification ambiguity is genuinely identified rather than papered over; the rationale specifically calls this useful diagnostic honesty."
     },
     {
-      "id": "A14",
-      "claim_short": "Documented Resource: no historic review",
-      "claim_full": "5500 SE Belmont is a 'Documented Resource' on Portland's Historic Resources Inventory and is explicitly NOT subject to historic preservation land use rules.",
+      "id": "A18",
+      "claim_short": "Pink Temple historic conversion",
+      "claim_full": "5500 SE Belmont is the 1921 Pink Temple, a former telephone exchange/Masonic temple converted to triplex+ in 1996.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct-vague",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Per the rationale, the OOB response leans on real-estate listings for this background; the building's history is consistent with other variants identifying it as the Mt. Tabor Telephone Exchange (1914/1921)."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Documented Resource exempt from historic review",
+      "claim_full": "The property is a Documented Resource (Mt. Tabor Telephone Exchange) and is therefore exempt from Portland's historic preservation land use rules.",
       "topic": "zoning",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.85,
+      "specificity": 1.0,
+      "actionability": 0.8,
       "correctness": "correct",
-      "importance": 5,
-      "citation": "Portland Historic Resources types",
+      "importance": 4,
+      "citation": "https://www.portland.gov/bps/planning/historic-resources/types",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/bps/planning/historic-resources/types"
       },
-      "verified_truth": "Documented Resource is the lowest tier on Portland's Historic Resources Inventory and is exempt from historic preservation land use rules \u2014 flagged as a meaningful, correct address-specific finding."
+      "verified_truth": "Documented Resource status was retrieved from city records; the exemption from preservation land use rules is consistent with city documentation."
     },
     {
-      "id": "A15",
-      "claim_short": "BDS merged into PP&D July 1 2024",
-      "claim_full": "On July 1, 2024 the Bureau of Development Services merged with permitting teams from Urban Forestry, BES, PBOT, and Water into a single bureau called Portland Permitting & Development (PP&D).",
+      "id": "A20",
+      "claim_short": "No historic/conservation overlay on parcel",
+      "claim_full": "The parcel has no historic, conservation, or plan district overlay per spatial intersection on PortlandMaps.",
+      "topic": "zoning",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": "PortlandMaps spatial query",
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Both MCP-enabled variants confirmed via PortlandMaps that no overlays apply to this parcel."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Owner is HUDSON VENTURES LLC",
+      "claim_full": "The current owner of record for 5500 SE Belmont is HUDSON VENTURES LLC, which acquired the property 9/26/2024 for $1.4M.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps assessor",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "Owner and sale data retrieved from the PortlandMaps assessor record."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Property ID R114587",
+      "claim_full": "The Property ID for 5500 SE Belmont St is R114587.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Property ID R114587 was retrieved from PortlandMaps."
+    },
+    {
+      "id": "A23",
+      "claim_short": "Recent wood stove permit 2025-082428-MT",
+      "claim_full": "Permit 2025-082428-MT installed a wood stove with Class A venting through the roof and passed final inspection 11/10/2025.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps permit",
+      "citation_by_variant": {
+        "mcp": "Permit 2025-082428-MT",
+        "enhanced": "PortlandMaps permit application 2025-082428-000-00-MT"
+      },
+      "verified_truth": "Recent MT permit was retrieved from city permit records by both MCP variants."
+    },
+    {
+      "id": "A24",
+      "claim_short": "BDS merged into PP&D July 1, 2024",
+      "claim_full": "The Bureau of Development Services merged with permitting teams from Urban Forestry, BES, PBOT, and Water into Portland Permitting & Development on July 1, 2024.",
       "topic": "process",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "KOIN announcement / portland.gov/ppd",
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "vague-correct",
+      "importance": 2,
+      "citation": "https://www.portland.gov/ppd",
       "citation_by_variant": {
-        "enhanced": "https://www.koin.com/local/portland-launches-new-bureau-to-streamline-permitting-process-07012024/"
+        "enhanced": "https://www.portland.gov/ppd; https://www.koin.com/local/portland-launches-new-bureau-to-streamline-permitting-process-07012024/"
       },
-      "verified_truth": "BDS rebranded into PP&D; OOB's use of an outdated 'portland.gov/bds/' URL was specifically flagged as wrong because of this rebrand. Specific merger-date claim is flagged for verification."
+      "verified_truth": "Per the rationale, the BDS-merger date is among claims that need independent verification."
     },
     {
-      "id": "A16",
+      "id": "A25",
       "claim_short": "PP&D phone 503-823-7300",
-      "claim_full": "Portland Permitting & Development's general inquiries phone number is 503-823-7300.",
+      "claim_full": "Portland Permitting & Development general inquiries line is 503-823-7300, and the inspection request line is 503-823-7000.",
       "topic": "process",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.95,
-      "correctness": "correct",
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
       "importance": 4,
-      "citation": "portland.gov/ppd",
+      "citation": "https://www.portland.gov/ppd",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
         "enhanced": "https://www.portland.gov/ppd"
       },
-      "verified_truth": "503-823-7300 is the standard PP&D number; flagged consistent across all three responses."
+      "verified_truth": "Phone numbers are widely consistent across responses and are standard PP&D contact lines."
     },
     {
-      "id": "A17",
-      "claim_short": "Reroof labels program (pre-purchased)",
-      "claim_full": "Portland's Commercial Reroof Permit and Inspection Program lets registered contractors pre-purchase reroof labels (OOB specifies up to 5 at a time) tied to individual projects.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "Commercial Reroof Program page",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "https://www.portland.gov/ppd/commercial-permitting/commercial-permit-inspections/commercial-reroof"
-      },
-      "verified_truth": "The reroof-label model is the documented commercial reroof process; the OOB-specific 'up to 5 at a time' detail is flagged as plausible but not independently verified."
-    },
-    {
-      "id": "A18",
-      "claim_short": "Owner: Hudson Ventures LLC",
-      "claim_full": "The property's owner of record is HUDSON VENTURES LLC.",
-      "topic": "address",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PortlandMaps assessor",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "https://www.portlandmaps.com"
-      },
-      "verified_truth": "Owner of record Hudson Ventures LLC is flagged as factual via PortlandMaps assessor data."
-    },
-    {
-      "id": "A19",
-      "claim_short": "Sold 2024-09-26 for $1.4M",
-      "claim_full": "The property was sold on 2024-09-26 for $1.4M (assessed $1.21M).",
-      "topic": "address",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps assessor",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "https://www.portlandmaps.com"
-      },
-      "verified_truth": "Sale date and price flagged as factual per assessor records."
-    },
-    {
-      "id": "A20",
-      "claim_short": "Property ID R114587",
-      "claim_full": "The PortlandMaps property ID for 5500 SE Belmont is R114587.",
-      "topic": "address",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.85,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "https://www.portlandmaps.com"
-      },
-      "verified_truth": "Property ID R114587 confirmed via PortlandMaps lookup; useful for the user to give the city when calling."
-    },
-    {
-      "id": "A21",
-      "claim_short": "Recent wood-stove permit (2025-082428-MT)",
-      "claim_full": "A November 2025 permit (2025-082428-MT) installed a new wood stove with Class A venting through the roof, with final inspection on 2025-11-10.",
-      "topic": "address",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps permits",
-      "citation_by_variant": {
-        "mcp": "permit 2025-082428-MT",
-        "enhanced": "PortlandMaps permit application 2025-082428-000-00-MT"
-      },
-      "verified_truth": "The wood-stove permit and its 'Commercial or Multi-Family Dwelling/Structure' classification are flagged as factual; relevant because new flashing must integrate with the recent vent."
-    },
-    {
-      "id": "A22",
-      "claim_short": "Heavier roof material requires permit",
-      "claim_full": "Switching to a significantly heavier roofing material (e.g., asphalt to clay or concrete tile) requires a building permit because of structural load implications.",
-      "topic": "permits",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 24.10.040 / Title 24",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PCC 24.10.040, https://www.portland.gov/code/24/all"
-      },
-      "verified_truth": "Heavier-material change triggers permit \u2014 flagged as accurate; structural review required because framing may be undersized."
-    },
-    {
-      "id": "A23",
-      "claim_short": "Title 11 trees still applies",
-      "claim_full": "Even though a like-for-like reroof needs no building permit, Title 11 (Trees) can still apply if branches over the roof must be pruned or removed.",
-      "topic": "trees",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PCC Title 11",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "https://www.portland.gov/code/11/all"
-      },
-      "verified_truth": "Title 11 governs Portland's tree code; large-diameter pruning or street-tree work requires Urban Forestry permits."
-    },
-    {
-      "id": "A24",
-      "claim_short": "Urban Forestry: 503-823-TREE",
-      "claim_full": "Portland's Urban Forestry tree line is 503-823-TREE (8733).",
-      "topic": "trees",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "Urban Forestry",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": null
-      },
-      "verified_truth": "503-823-TREE is the standard Urban Forestry phone line."
-    },
-    {
-      "id": "A25",
-      "claim_short": "Free 15-minute PP&D appointment",
-      "claim_full": "Portland Permitting & Development offers a free 15-minute appointment for permit-track questions.",
+      "id": "A26",
+      "claim_short": "Free 15-minute appointment with PP&D",
+      "claim_full": "Residents can book a free 15-minute appointment with Portland Permitting & Development to confirm permit requirements.",
       "topic": "process",
       "variants": [
         "oob",
         "enhanced"
       ],
-      "specificity": 0.85,
-      "actionability": 0.95,
-      "correctness": "PARTIAL-WRONG",
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct-action",
       "importance": 4,
-      "citation": "portland.gov/ppd/15-min",
+      "citation": "https://www.portland.gov/ppd/15-min",
       "citation_by_variant": {
         "oob": "portland.gov/bds/15-min",
         "enhanced": "https://www.portland.gov/ppd/15-min"
       },
-      "verified_truth": "The 15-minute appointment exists, but OOB's URL portland.gov/bds/15-min was specifically flagged as wrong (BDS rebranded to PP&D and the appointment lives at a different URL). Enhanced has the correct path."
+      "verified_truth": "The 15-minute appointment exists; OOB cited the wrong (BDS) URL path per the rationale, while the enhanced variant cites the correct PP&D path."
     },
     {
-      "id": "A26",
-      "claim_short": "Permit fees ~$300-$1,000+ plus 12% surcharge",
-      "claim_full": "For a residential reroof at this scale, permit fees run roughly $300-$1,000+ plus a 12% state surcharge, per the July 1, 2025 fee schedule.",
+      "id": "A27",
+      "claim_short": "ORSC R105.2 30% live-load reroof exemption",
+      "claim_full": "Reroofing where work doesn't exceed 30% of required live-load design capacity is permit-exempt under ORSC R105.2.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "vague-correct",
+      "importance": 3,
+      "citation": "ORSC R105.2",
+      "citation_by_variant": {
+        "enhanced": "ORSC R105.2; https://www.oregonbuildingofficials.com/assets/docs/opta_realtor_presentation.pdf"
+      },
+      "verified_truth": "Per the rationale, the ORSC R105.2 30% live-load threshold should be verified against the actual ORSC document."
+    },
+    {
+      "id": "A28",
+      "claim_short": "OSSC adopted by Ordinance 191148/191581",
+      "claim_full": "Portland adopted the 2022 OSSC by reference via Ordinance 191148 (also cited as 191581) under PCC 24.10.040.",
+      "topic": "citations",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.2,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 2,
+      "citation": "Ordinance 191148",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/council/documents/ordinance/passed/191581"
+      },
+      "verified_truth": "Per the rationale, the two ordinance numbers cited (191148 vs 191581) are inconsistent within the response \u2014 at least one is wrong."
+    },
+    {
+      "id": "A29",
+      "claim_short": "SDCs do not apply to like-for-like reroof",
+      "claim_full": "System Development Charges do not apply to a like-for-like reroof because no units or impact are added.",
       "topic": "fees",
       "variants": [
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct-range",
+      "actionability": 0.8,
+      "correctness": "correct",
       "importance": 3,
-      "citation": "July 1 2025 fee schedule",
+      "citation": "https://www.portland.gov/ppd/sdcs",
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download"
+        "enhanced": "https://www.portland.gov/ppd/sdcs"
       },
-      "verified_truth": "The fee range and 12% state surcharge are flagged for verification against the current fee schedule."
+      "verified_truth": "SDCs apply to development that adds units or impact; not to a like-for-like reroof."
     },
     {
-      "id": "A27",
-      "claim_short": "SDCs do not apply to like-for-like reroof",
-      "claim_full": "System Development Charges do not apply to a like-for-like reroof because no new units or impervious-area impact are added.",
+      "id": "A30",
+      "claim_short": "Permit fee range $300-$1,000+ for residential reroof",
+      "claim_full": "A residential reroof permit typically costs roughly $300 to $1,000+, plus a 12% state surcharge, per the July 1, 2025 fee schedule.",
       "topic": "fees",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.85,
-      "actionability": 0.8,
-      "correctness": "correct",
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "vague-correct",
       "importance": 3,
-      "citation": "PP&D SDCs page",
+      "citation": "Building and Other Permits Fee Schedule (July 1, 2025)",
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/sdcs"
+        "enhanced": "https://www.portland.gov/ppd/documents/building-and-other-permits-fee-schedule-city-portland-effective-july-1-2025/download"
       },
-      "verified_truth": "SDCs fund infrastructure when development adds units or expands impact; a reroof does neither."
+      "verified_truth": "Per the rationale, the fee range and 12% surcharge claim is plausible but not independently verified in this evaluation."
     },
     {
-      "id": "A28",
-      "claim_short": "ORSC R105.2 30% live-load threshold",
-      "claim_full": "ORSC Section R105.2 lists permit-exempt work and exempts reroofing where the work doesn't exceed 30% of required live-load design capacity and the roof isn't required to be fire-resistant.",
-      "topic": "citations",
+      "id": "A31",
+      "claim_short": "Tree work may need Urban Forestry permit",
+      "claim_full": "Pruning or removing street trees or trimming overhanging branches to access the roof may require an Urban Forestry permit under PCC Title 11.",
+      "topic": "trees",
       "variants": [
+        "mcp",
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.5,
+      "specificity": 0.8,
+      "actionability": 0.8,
       "correctness": "hedge-correct",
       "importance": 3,
-      "citation": "ORSC R105.2",
+      "citation": "PCC Title 11",
       "citation_by_variant": {
-        "enhanced": "https://www.oregonbuildingofficials.com/assets/docs/opta_realtor_presentation.pdf"
+        "mcp": null,
+        "enhanced": "PCC 11.40, https://www.portland.gov/code/11/all"
       },
-      "verified_truth": "The ORSC R105.2 30%-of-live-load threshold is flagged as needing verification against the actual ORSC text rather than an industry summary slide deck."
+      "verified_truth": "Tree code (Title 11) governs street and Heritage Tree work; both variants correctly hedge the requirement."
     },
     {
-      "id": "A29",
-      "claim_short": "Owner-occupant DIY exemption (ORS 701.010(7))",
-      "claim_full": "Under ORS 701.010(7), an owner-occupant can perform construction work on their own home without a CCB license, but the exemption does not apply if the property is intended for sale, lease, or rent.",
-      "topic": "permits",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.85,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "ORS 701.010(7)",
-      "citation_by_variant": {
-        "enhanced": "https://oregon.public.law/statutes/ors_701.010"
-      },
-      "verified_truth": "Oregon's owner-occupant exemption is flagged as accurately characterized; relevant because the LLC ownership and apparent multi-unit status make the exemption unlikely to apply here."
-    },
-    {
-      "id": "A30",
-      "claim_short": "PBOT permit for street dumpster",
-      "claim_full": "A dumpster, pod, or storage container placed in the street or parking lane requires a PBOT Temporary Street Use Permit.",
-      "topic": "permits",
+      "id": "A32",
+      "claim_short": "Dumpster in street needs PBOT permit",
+      "claim_full": "Putting a dumpster, pod, or storage container in the street or parking lane requires a PBOT Temporary Street Use Permit.",
+      "topic": "process",
       "variants": [
         "enhanced"
       ],
       "specificity": 0.9,
       "actionability": 0.9,
-      "correctness": "correct",
+      "correctness": "correct-action",
       "importance": 3,
-      "citation": "PBOT Temporary Street Use",
+      "citation": "https://www.portland.gov/transportation/permitting/apply-renew-or-change-temporary-street-use-permit",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/transportation/permitting/apply-renew-or-change-temporary-street-use-permit"
       },
-      "verified_truth": "PBOT Temporary Street Use Permits are required for ROW dumpster placement; placing the dumpster on the driveway avoids the permit."
+      "verified_truth": "PBOT Temporary Street Use Permits are required for occupying the right-of-way."
     },
     {
-      "id": "A31",
-      "claim_short": "2012 permit classified building R-2",
-      "claim_full": "A 2012 permit (application 2012-122232-000-00-CO) classified the building as R-2 Residential Multi-Family with Type III-B construction, suggesting current classification as 3+ units.",
-      "topic": "address",
+      "id": "A33",
+      "claim_short": "Open permit blocks resale",
+      "claim_full": "Forgetting the final inspection leaves an open permit on the property that can stall a future sale.",
+      "topic": "process",
       "variants": [
         "enhanced"
       ],
-      "specificity": 1.0,
-      "actionability": 0.95,
+      "specificity": 0.7,
+      "actionability": 0.8,
       "correctness": "correct",
-      "importance": 5,
-      "citation": "PortlandMaps permit 2012-122232-000-00-CO",
+      "importance": 3,
+      "citation": null,
       "citation_by_variant": {
-        "enhanced": "PortlandMaps permit application 2012-122232-000-00-CO"
+        "enhanced": null
       },
-      "verified_truth": "Past permit history shows R-2 Multi-family classification on a 2012 permit; this is the load-bearing finding for whether the residential reroof exemption applies. Flagged as the single most important thing the user should confirm with PP&D before acting."
+      "verified_truth": "Open permits commonly surface in title searches and can hold up real-estate closings."
     }
   ]
 }

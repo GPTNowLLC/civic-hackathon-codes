@@ -1,0 +1,532 @@
+{
+  "scenario": "front-porch",
+  "scenario_label": "Front porch extension",
+  "address": "2145 SE Ladd Ave, Portland, OR 97214",
+  "neighborhood": "Ladd's Addition",
+  "evaluator_model": "claude",
+  "responses": {
+    "oob": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "Short answer: yes, you can probably extend it; but at this address, \"yes\" comes with a catch most homeowners don't see coming. Your house sits inside the **Ladd's Addition Conservation District**, and front porches are specifically called out in the design guidelines as character-defining features. So this is less a permit question than a design-review question.\n\n## Why this matters for your address specifically\n\nA few things stack up here:\n\n1. **The whole neighborhood is a Conservation District** (locally designated 1977, on the National Register since 1988). Boundaries: SE 12th to 20th, Hawthorne to Division. You're well inside.\n2. **Ladd Avenue is one of the two diagonal \"boulevards\"** in the wagon-wheel plan; it's one of the most visible streets in the district, so anything on your front facade will get extra scrutiny.\n3. **Your 1924 bungalow was built squarely in the period of significance** (1905-1930), which makes it almost certainly a contributing structure. That raises the bar further.\n4. **The Ladd's guidelines literally name front porches.** From section 5 of the Exterior Rehabilitation guidelines: original entrances, front porches, and projecting features \"should be retained or restored.\" For bungalows, defining elements include \"open porch with square wood posts, multi-pane double-hung windows, simple pipe handrails.\"\n\nSo an extension is doable, but the Historic Landmarks Commission (or staff, depending on size) will want to see that:\n- The original porch isn't being destroyed; it's being added to in a way that's compatible\n- The new portion is differentiated from the old (no faking history)\n- It's reversible in principle, so the historic form could be recovered later\n- Massing, materials, columns, railings, and roofline match the original Craftsman vocabulary\n\n## The two procedural paths\n\nThis is the part most blog posts gloss over. Conservation Districts (unlike full Historic Districts) give you a choice:\n\n**Path A: Historic Resource Review (discretionary).** Type I if the project is small; Type II if it affects more than 150 sq ft of facade elevation. Type I is staff-approved and relatively quick (4-8 weeks); Type II involves notice to neighbors and longer review (8-10 weeks), with fees roughly $991-$6,124 last time the city published them.\n\n**Path B: Community Design Standards (clear and objective).** Conservation Districts in Portland allow you to skip discretionary HRR if your design meets the objective standards in Chapter 33.218. This is the faster, cheaper path if your porch extension fits the box. Most people don't know this option exists; it's worth asking about specifically.\n\n## What I'd actually do, in order\n\n1. **Pull the official record for your address.** Go to [portlandmaps.com](https://www.portlandmaps.com/), enter 2145 SE Ladd Ave, and check the \"Zoning and Districts\" tab. Confirms zoning (likely R5), the Conservation District overlay, and any other overlays (tree code, etc.).\n2. **Read the actual guidelines.** The current document is the [Ladd's Addition Conservation District Design Guidelines (2011 update)](https://www.portland.gov/sites/default/files/2019-07/laddsaddition_conservation_district_guidelines_2011_update.pdf) on portland.gov. It's the approval criteria; the ~25 MB original 1990 PDF is also on the [city's design guidelines page](https://www.portland.gov/bps/planning/design-guideline-documents).\n3. **Request a free pre-application conference** with Portland Permitting & Development (formerly BDS). They'll tell you which review type you fall into and flag issues early; this is the single highest-leverage thing you can do.\n4. **Talk to a designer who has been through Ladd's review specifically.** Arciform is the name that came up most often in my research as a Ladd's Addition specialist; there are others. Worth getting two opinions before committing.\n5. **Loop in HAND** (Hosford-Abernethy Neighborhood Development Association) early. They're the recognized neighborhood association and get notice on Type II reviews; their support smooths things considerably.\n\n## Two things you might not have considered\n\n**Tax credit upside.** Because Ladd's is on the National Register and your house likely contributes, substantial rehabilitation work can qualify for the Oregon Special Assessment of Historic Property program (a 10-year property tax freeze) or federal rehab tax credits if any portion is for income-producing use. If your porch extension is part of a larger rehab, this can change the math meaningfully. Worth asking the State Historic Preservation Office (SHPO) before you finalize scope.\n\n**Sequencing matters.** If the existing porch has any rot or deferred maintenance, framing the project as \"restoration with compatible expansion\" rather than \"addition\" generally lands better in review; restoration is preferred over replacement in the guidelines, and there's a Type Ix restoration track that's faster.\n\nWant me to dig into any of these next: the specific objective standards in 33.218 to see if your project could skip discretionary review, the pre-app process and what to bring, or the SHPO tax-incentive angle?"
+    },
+    "mcp": {
+      "tool": "",
+      "text": "Great question \u2014 and one with more layers than it might seem, because 2145 SE Ladd Ave sits in **Ladd's Addition**, one of Portland's most strictly regulated historic districts. Let me pull the actual property data and figure out what's really possible here, not just what zoning theoretically allows.I have rich data. Let me also check what's happening with porch projects in Ladd's Addition more broadly so I can give Chris real precedents.Let me verify what kinds of porch projects actually get approved in Ladd's Addition by checking the city's design guidelines and recent precedents.I've pulled the actual property record, permit history, and the official Ladd's Addition design guidelines. Here's what's really going on with your house, including one fact I think will surprise you.\n\n## The short answer\n\n**Yes, but with very real constraints.** Your house is a *contributing resource* in the Ladd's Addition Historic District (city-designated and on the National Register since 1988), so any change to the front porch that's visible from the street triggers **Historic Resource Review** before you can pull a building permit. R5 zoning is the easy part; the historic overlay is what governs the design.\n\n## The fact you probably want to know\n\n**There's already a denial in your file.** A Historic Resource Review at 2145 SE Ladd was denied in 2017 (case LU 16-181898). I can't see the description in the public permit data, but a denial on the property is unusual and you should ask the Bureau of Development Services (BDS) for the decision document before you propose anything new. If the prior denial touched the front facade, your application history will be the first thing the reviewer pulls up.\n\nThe good news: a later 2022 case (LU 22-108718 HR) at the same address was *approved* for window replacements, with conditions (all-wood windows, simulated divided lites limited to double-hungs, no field changes). That tells me the bureau will work with this house when the proposal respects original materials. The 2025 garage deconstruction also went through cleanly.\n\n## The framework: what's actually approvable\n\nThink of porch work on a contributing Ladd's Addition house as a spectrum:\n\n**Easy (Type I review, ~4\u20136 weeks, ~$1.5\u20133.5k in fees):**\n- Restoring the existing porch to its original configuration (replacing rotted decking, columns, railings, ceiling boards in-kind with historic-matching materials)\n- Repairing or replicating original details based on documentary evidence\n\n**Possible but real work (Type II, 8\u201310 weeks, $5k+ fees, public notice):**\n- Extending the porch *if* you can show photographic or Sanborn-map evidence that it was originally larger\n- Wrapping a porch around a side fa\u00e7ade *if* there's documentation it once existed that way\n- Side or rear additions that don't change the street-facing character\n\n**Very hard or won't be approved:**\n- Pushing the porch significantly forward of the established front building line (the guidelines specifically protect \"continuity of scale, setback, orientation, and materials\" along the block face)\n- Enclosing the porch with screens or glazing (the guidelines literally illustrate \"enclosed porch\" as an *inappropriate change*)\n- Adding a porch where none existed historically; falsifying history is a non-starter\n\nGuideline #5 in the 1988 Ladd's Addition Conservation District guidelines is specifically about your situation: original entrances to buildings, front porches and projecting features, such as balconies, bays and dormer windows should be retained or restored. The bureau reads \"extended\" very differently from \"restored.\"\n\n## What's been approved on neighboring blocks recently\n\nLadd's Addition is an active permit area. I count at least 8 Historic Resource Reviews in the district since early 2024, most recorded as approved (i.e., Type I administrative approvals). The neighborhood is not a no-go zone; it's a \"do it right\" zone. Several of those cases are on adjacent blocks to yours.\n\n## The smart first move (and it's free)\n\nBefore you spend a dollar on an architect, request a **Pre-Application Conference** (also called Early Assistance) with BDS's Land Use Services. It's free or very low-cost depending on scope, and you'll meet with a historic preservation planner who will tell you, on the record, what they'd want to see in an application. For Ladd's Addition contributing resources, this conversation routinely saves people from spending $20k+ on plans that don't make it through review.\n\nTwo specific things to bring:\n1. **Historic photos of your house.** The Oregon Historical Society and Multnomah County tax photos (Portland Maps has a \"tax assessor photos\" layer with historical imagery) sometimes show what the porch looked like in the 1930s\u201350s. If your proposed extension matches the original, your case writes itself.\n2. **The 2017 denial decision document.** Walk in already understanding what the bureau objected to last time.\n\n## Two creative angles you may not have considered\n\nBecause the front facade is the most regulated surface on your house, homeowners in Ladd's often get the porch experience they want by *not* fighting the front:\n\n- **Side or rear porch addition.** These face much lighter scrutiny if they're not visible from the public right-of-way. The Arciform-style guidance and BDS practice both note that rear or non-character-defining additions often allow greater flexibility.\n- **Sleeping porch reactivation.** Ladd's bungalows and foursquares often have second-story sleeping porches that were enclosed mid-century. Restoring one to its open original form is the *opposite* of falsification; it can be a Type I and you get an outdoor room without touching the front.\n\n## A trust note (per your preferences)\n\nEverything above is sourced from Portland's official permit and assessor APIs, the 1988 city-adopted Ladd's Addition Conservation District Guidelines (handpdx.org and Portland.gov copies), and current land-use case records. I'd still verify the specifics with BDS directly before acting; permit thresholds and fees change, and the exact reading of \"contributing\" status for your house deserves confirmation from the planner assigned to your case. The free Pre-Application Conference is the right place to do that confirmation.\n\nWant me to dig into the 2017 denial details, pull historic tax-assessor photos for your house, or draft the Early Assistance request?"
+    },
+    "enhanced": {
+      "tool": "Opus 4.7 Adaptive",
+      "text": "Great question \u2014 and one with more layers than it might seem, because 2145 SE Ladd Ave sits in **Ladd's Addition**, one of Portland's most strictly regulated historic districts. Let me pull the actual property data and figure out what's really possible here, not just what zoning theoretically allows.I have rich data. Let me also check what's happening with porch projects in Ladd's Addition more broadly so I can give Chris real precedents.Let me verify what kinds of porch projects actually get approved in Ladd's Addition by checking the city's design guidelines and recent precedents.I've pulled the actual property record, permit history, and the official Ladd's Addition design guidelines. Here's what's really going on with your house, including one fact I think will surprise you.\n\n## The short answer\n\n**Yes, but with very real constraints.** Your house is a *contributing resource* in the Ladd's Addition Historic District (city-designated and on the National Register since 1988), so any change to the front porch that's visible from the street triggers **Historic Resource Review** before you can pull a building permit. R5 zoning is the easy part; the historic overlay is what governs the design.\n\n## The fact you probably want to know\n\n**There's already a denial in your file.** A Historic Resource Review at 2145 SE Ladd was denied in 2017 (case LU 16-181898). I can't see the description in the public permit data, but a denial on the property is unusual and you should ask the Bureau of Development Services (BDS) for the decision document before you propose anything new. If the prior denial touched the front facade, your application history will be the first thing the reviewer pulls up.\n\nThe good news: a later 2022 case (LU 22-108718 HR) at the same address was *approved* for window replacements, with conditions (all-wood windows, simulated divided lites limited to double-hungs, no field changes). That tells me the bureau will work with this house when the proposal respects original materials. The 2025 garage deconstruction also went through cleanly.\n\n## The framework: what's actually approvable\n\nThink of porch work on a contributing Ladd's Addition house as a spectrum:\n\n**Easy (Type I review, ~4\u20136 weeks, ~$1.5\u20133.5k in fees):**\n- Restoring the existing porch to its original configuration (replacing rotted decking, columns, railings, ceiling boards in-kind with historic-matching materials)\n- Repairing or replicating original details based on documentary evidence\n\n**Possible but real work (Type II, 8\u201310 weeks, $5k+ fees, public notice):**\n- Extending the porch *if* you can show photographic or Sanborn-map evidence that it was originally larger\n- Wrapping a porch around a side fa\u00e7ade *if* there's documentation it once existed that way\n- Side or rear additions that don't change the street-facing character\n\n**Very hard or won't be approved:**\n- Pushing the porch significantly forward of the established front building line (the guidelines specifically protect \"continuity of scale, setback, orientation, and materials\" along the block face)\n- Enclosing the porch with screens or glazing (the guidelines literally illustrate \"enclosed porch\" as an *inappropriate change*)\n- Adding a porch where none existed historically; falsifying history is a non-starter\n\nGuideline #5 in the 1988 Ladd's Addition Conservation District guidelines is specifically about your situation: original entrances to buildings, front porches and projecting features, such as balconies, bays and dormer windows should be retained or restored. The bureau reads \"extended\" very differently from \"restored.\"\n\n## What's been approved on neighboring blocks recently\n\nLadd's Addition is an active permit area. I count at least 8 Historic Resource Reviews in the district since early 2024, most recorded as approved (i.e., Type I administrative approvals). The neighborhood is not a no-go zone; it's a \"do it right\" zone. Several of those cases are on adjacent blocks to yours.\n\n## The smart first move (and it's free)\n\nBefore you spend a dollar on an architect, request a **Pre-Application Conference** (also called Early Assistance) with BDS's Land Use Services. It's free or very low-cost depending on scope, and you'll meet with a historic preservation planner who will tell you, on the record, what they'd want to see in an application. For Ladd's Addition contributing resources, this conversation routinely saves people from spending $20k+ on plans that don't make it through review.\n\nTwo specific things to bring:\n1. **Historic photos of your house.** The Oregon Historical Society and Multnomah County tax photos (Portland Maps has a \"tax assessor photos\" layer with historical imagery) sometimes show what the porch looked like in the 1930s\u201350s. If your proposed extension matches the original, your case writes itself.\n2. **The 2017 denial decision document.** Walk in already understanding what the bureau objected to last time.\n\n## Two creative angles you may not have considered\n\nBecause the front facade is the most regulated surface on your house, homeowners in Ladd's often get the porch experience they want by *not* fighting the front:\n\n- **Side or rear porch addition.** These face much lighter scrutiny if they're not visible from the public right-of-way. The Arciform-style guidance and BDS practice both note that rear or non-character-defining additions often allow greater flexibility.\n- **Sleeping porch reactivation.** Ladd's bungalows and foursquares often have second-story sleeping porches that were enclosed mid-century. Restoring one to its open original form is the *opposite* of falsification; it can be a Type I and you get an outdoor room without touching the front.\n\n## A trust note (per your preferences)\n\nEverything above is sourced from Portland's official permit and assessor APIs, the 1988 city-adopted Ladd's Addition Conservation District Guidelines (handpdx.org and Portland.gov copies), and current land-use case records. I'd still verify the specifics with BDS directly before acting; permit thresholds and fees change, and the exact reading of \"contributing\" status for your house deserves confirmation from the planner assigned to your case. The free Pre-Application Conference is the right place to do that confirmation.\n\nWant me to dig into the 2017 denial details, pull historic tax-assessor photos for your house, or draft the Early Assistance request?"
+    }
+  },
+  "atoms": [
+    {
+      "id": "A1",
+      "claim_short": "Property in Ladd's Addition historic district",
+      "claim_full": "The property at 2145 SE Ladd Ave sits in Ladd's Addition, a historic/conservation district in inner SE Portland.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Confirmed by evaluator: address is genuinely inside Ladd's Addition, a designated Conservation District."
+    },
+    {
+      "id": "A2",
+      "claim_short": "House is contributing resource",
+      "claim_full": "The house at 2145 SE Ladd Ave is a contributing resource in the Ladd's Addition Historic District.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.4,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "OOB hedges with 'almost certainly contributing'; MCP/enhanced state it as fact. Contributing-resource status was not independently verified in this evaluation; should be confirmed with BDS."
+    },
+    {
+      "id": "A3",
+      "claim_short": "Listed on National Register 1988",
+      "claim_full": "Ladd's Addition was listed on the National Register of Historic Places in 1988.",
+      "topic": "address",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.2,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Date is asserted but flagged for verification; National Register listing year is not independently verified in this evaluation."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Locally designated Conservation District 1977",
+      "claim_full": "Ladd's Addition was locally designated as a Conservation District in 1977.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.1,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Date is flagged for verification by the evaluator and not independently confirmed."
+    },
+    {
+      "id": "A5",
+      "claim_short": "District boundaries 12th\u201320th, Hawthorne\u2013Division",
+      "claim_full": "The Conservation District runs SE 12th to 20th and Hawthorne to Division.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.2,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Boundary description is flagged for verification and not independently confirmed."
+    },
+    {
+      "id": "A6",
+      "claim_short": "Period of significance 1905\u20131930",
+      "claim_full": "Ladd's Addition's period of significance runs 1905\u20131930, and the 1924 house falls within it.",
+      "topic": "address",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.85,
+      "actionability": 0.2,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Period dates are flagged for verification; not independently confirmed in this evaluation."
+    },
+    {
+      "id": "A7",
+      "claim_short": "R5 zoning",
+      "claim_full": "The property is zoned R5 (single-dwelling residential).",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.4,
+      "correctness": "hedge-correct",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "OOB hedges 'likely R5'; MCP/enhanced assert R5. Not independently verified in this evaluation; resident should confirm via PortlandMaps."
+    },
+    {
+      "id": "A8",
+      "claim_short": "Front-porch changes trigger Historic Resource Review",
+      "claim_full": "Any visible-from-the-street change to the front porch triggers Historic Resource Review (HRR) before a building permit can issue.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Conservation District status means HRR is the governing process for visible exterior changes; the framework is correct, though specific PCC sections (33.445 overlay, 33.846 procedures) were not cited."
+    },
+    {
+      "id": "A9",
+      "claim_short": "Two procedural paths: HRR or Community Design Standards",
+      "claim_full": "In Conservation Districts the applicant can choose between discretionary Historic Resource Review or the clear-and-objective Community Design Standards path.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "Chapter 33.218",
+      "verified_truth": "The two-path framework is correct in principle, but OOB miscites: HRR procedures live in PCC 33.846, not 33.218. Community Design Standards are in 33.218 generally, but their applicability as the clear-and-objective alternative for Conservation Districts is misframed."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Type II HRR triggered at 150 sq ft facade",
+      "claim_full": "A Type II Historic Resource Review is triggered when a project affects more than 150 sq ft of facade elevation.",
+      "topic": "permits",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.5,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Evaluator flagged this 150 sq ft threshold as warranting verification; not a confirmed Portland threshold."
+    },
+    {
+      "id": "A11",
+      "claim_short": "Type I HRR ~4\u20138 weeks",
+      "claim_full": "Type I Historic Resource Review takes about 4\u20138 weeks (OOB) or 4\u20136 weeks (MCP/enhanced).",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.6,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Timing ranges are flagged as plausible but unverified in this evaluation."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Type II HRR ~8\u201310 weeks with notice",
+      "claim_full": "Type II Historic Resource Review takes 8\u201310 weeks and involves public notice to neighbors.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.85,
+      "actionability": 0.6,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Timing range and notice requirement are plausible; not independently verified."
+    },
+    {
+      "id": "A13",
+      "claim_short": "HRR fee range $991\u2013$6,124",
+      "claim_full": "Historic Resource Review fees range roughly $991 to $6,124.",
+      "topic": "fees",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.5,
+      "correctness": "correct-vague",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Fee range was flagged for verification; not independently confirmed."
+    },
+    {
+      "id": "A14",
+      "claim_short": "Type I fees ~$1.5\u20133.5k",
+      "claim_full": "Type I Historic Resource Review fees run about $1.5k\u2013$3.5k.",
+      "topic": "fees",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Fee range is flagged for verification; not independently confirmed."
+    },
+    {
+      "id": "A15",
+      "claim_short": "Type II fees $5k+",
+      "claim_full": "Type II Historic Resource Review fees start around $5,000.",
+      "topic": "fees",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.85,
+      "actionability": 0.5,
+      "correctness": "correct-range",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Fee figure is flagged for verification; not independently confirmed."
+    },
+    {
+      "id": "A16",
+      "claim_short": "Prior 2017 denial at this address",
+      "claim_full": "A Historic Resource Review at 2145 SE Ladd was denied in 2017 under case LU 16-181898.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 5,
+      "citation": "LU 16-181898",
+      "verified_truth": "Case number and 2017 denial are flagged as unverifiable from the response and load-bearing for the advice; if wrong, framing is misleading. Not independently confirmed in this evaluation."
+    },
+    {
+      "id": "A17",
+      "claim_short": "2022 window replacement approval",
+      "claim_full": "Case LU 22-108718 HR was approved in 2022 for window replacements at 2145 SE Ladd with conditions limiting work to all-wood windows and simulated divided lites on double-hungs.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": "LU 22-108718 HR",
+      "verified_truth": "Case number and conditions are flagged as unverified specifics; plausible in format but not independently confirmed."
+    },
+    {
+      "id": "A18",
+      "claim_short": "2025 garage deconstruction permit",
+      "claim_full": "A garage deconstruction permit was issued at 2145 SE Ladd in 2025.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.2,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Permit claim flagged as unverified specific in the evaluation."
+    },
+    {
+      "id": "A19",
+      "claim_short": "Guideline #5 protects original porches",
+      "claim_full": "Guideline #5 of the 1988 Ladd's Addition Conservation District Guidelines says original entrances, front porches, and projecting features should be retained or restored.",
+      "topic": "citations",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Ladd's Addition Conservation District Guidelines (1988) \u00a75",
+      "verified_truth": "Guideline framing is consistent across responses and aligns with Ladd's Addition design guidelines philosophy; specific section number not independently verified."
+    },
+    {
+      "id": "A20",
+      "claim_short": "Bungalow elements: square posts, simple railings",
+      "claim_full": "Defining bungalow elements per Ladd's guidelines include open porches with square wood posts, multi-pane double-hung windows, and simple pipe handrails.",
+      "topic": "citations",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.3,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": "Ladd's Exterior Rehabilitation guidelines \u00a75",
+      "verified_truth": "Quoted language flagged for verification; not independently confirmed."
+    },
+    {
+      "id": "A21",
+      "claim_short": "Cannot push porch past front building line",
+      "claim_full": "Pushing the porch significantly forward of the established front building line is unlikely to be approved because guidelines protect continuity of setback and scale along the block face.",
+      "topic": "setbacks",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Consistent with Conservation District design philosophy; specific PCC setback section not cited."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Enclosing porch is inappropriate change",
+      "claim_full": "Enclosing the front porch with screens or glazing is illustrated as an inappropriate change in the Ladd's guidelines.",
+      "topic": "citations",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Ladd's Addition Conservation District Guidelines",
+      "verified_truth": "Consistent with Ladd's design guidelines treatment of enclosed porches; specific illustration not independently verified."
+    },
+    {
+      "id": "A23",
+      "claim_short": "~8 HRRs in district since 2024, most approved",
+      "claim_full": "There have been at least 8 Historic Resource Reviews in Ladd's Addition since early 2024, most recorded as approved.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.85,
+      "actionability": 0.4,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Count flagged as unverified specific; not independently confirmed."
+    },
+    {
+      "id": "A24",
+      "claim_short": "Free Pre-Application Conference recommended",
+      "claim_full": "Request a free (or very low-cost) Pre-Application Conference / Early Assistance with BDS Land Use Services before spending money on plans.",
+      "topic": "sequence",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "BDS Early Assistance is the canonical free first step for historic-overlay projects; cost characterization plausible."
+    },
+    {
+      "id": "A25",
+      "claim_short": "PortlandMaps zoning lookup as first step",
+      "claim_full": "Use portlandmaps.com to confirm zoning, Conservation District overlay, and other overlays for the address.",
+      "topic": "sequence",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "portlandmaps.com",
+      "verified_truth": "PortlandMaps is the city's authoritative public lookup for zoning and overlays."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Type Ix restoration track",
+      "claim_full": "There is a faster 'Type Ix' restoration procedure type that applies when work is framed as restoration with compatible expansion.",
+      "topic": "process",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "WRONG",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Evaluator flagged 'Type Ix' as not a recognized Portland procedure type \u2014 likely a hallucination."
+    },
+    {
+      "id": "A27",
+      "claim_short": "Bring historic photos to support extension",
+      "claim_full": "Historic photos (Oregon Historical Society, Multnomah County tax photos) showing an originally larger porch can support an extension proposal.",
+      "topic": "sequence",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.9,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": null,
+      "verified_truth": "Documentary evidence of original configuration is standard support for HRR; framing is sound."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Side/rear porch faces lighter scrutiny",
+      "claim_full": "Side or rear porch additions not visible from the public right-of-way face lighter HRR scrutiny than front-facade work.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": null,
+      "verified_truth": "Consistent with how Conservation District review weights street-visible facades; non-visible additions face less design scrutiny."
+    },
+    {
+      "id": "A29",
+      "claim_short": "Sleeping porch reactivation as alternative",
+      "claim_full": "Restoring an enclosed second-story sleeping porch to its original open form is often a Type I review and can deliver the desired outdoor space.",
+      "topic": "process",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.6,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Plausible characterization of restoration-favored review; specifics not independently verified."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Loop in HAND neighborhood association",
+      "claim_full": "Engage the Hosford-Abernethy Neighborhood Development Association (HAND) early because it receives notice on Type II reviews.",
+      "topic": "sequence",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.7,
+      "correctness": "correct-action",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "HAND is the recognized neighborhood association for the area; involvement on Type II notice is standard."
+    },
+    {
+      "id": "A31",
+      "claim_short": "SHPO tax credit / special assessment available",
+      "claim_full": "Substantial rehabilitation of a contributing house may qualify for the Oregon Special Assessment of Historic Property (10-year property-tax freeze) or federal rehab tax credits.",
+      "topic": "costs",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.6,
+      "correctness": "correct-vague",
+      "importance": 2,
+      "citation": null,
+      "verified_truth": "Programs exist in concept (SHPO Special Assessment, federal rehab credits); applicability to this owner-occupied porch project not verified."
+    },
+    {
+      "id": "A32",
+      "claim_short": "Setbacks and structural permit topics omitted",
+      "claim_full": "None of the responses concretely address front-yard setback rules for porch projection or the Title 24 building-permit/structural requirements for the extension itself.",
+      "topic": "setbacks",
+      "variants": [],
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "correctness": "admitted-gap",
+      "importance": 5,
+      "citation": null,
+      "verified_truth": "Evaluator flagged that core topics (front-yard setbacks under PCC 33.110, allowed encroachments, Title 24 building-permit thresholds) were never addressed across the responses."
+    }
+  ]
+}

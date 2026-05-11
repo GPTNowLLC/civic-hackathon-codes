@@ -1030,20 +1030,24 @@
     padding: 10px 20px;
     border-bottom: 1px solid var(--border);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 8px;
     flex-wrap: wrap;
   }
   .detail-actions-link {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--accent);
     text-decoration: none;
-    padding: 6px 12px;
+    padding: 8px 16px;
     border: 1px solid var(--border-strong);
     border-radius: 6px;
     background: var(--row-link-bg);
     transition: all 0.15s;
+  }
+  .detail-actions-link.primary {
+    font-size: 14px;
+    padding: 9px 18px;
   }
   .detail-actions-link:hover {
     border-color: var(--accent);
@@ -1310,6 +1314,101 @@
     text-align: left;
   }
   .detail-clear-all-btn:hover { border-color: #ef4444; background: #2a1518; }
+
+  /* ── Light-mode overrides for the expanded detail panel ── */
+  :root[data-theme="light"] .row-detail {
+    background: #f8fafc;
+    border-top-color: var(--border);
+  }
+  :root[data-theme="light"] .detail-label-col {
+    background: #ffffff;
+    border-right-color: var(--border);
+  }
+  :root[data-theme="light"] .detail-col {
+    background: #ffffff;
+    border-left-color: var(--border);
+  }
+  :root[data-theme="light"] .detail-label-section,
+  :root[data-theme="light"] .detail-col-header,
+  :root[data-theme="light"] .dsi-label,
+  :root[data-theme="light"] .detail-response-label,
+  :root[data-theme="light"] .detail-flags-label,
+  :root[data-theme="light"] .detail-input-label { color: var(--text-muted); }
+
+  :root[data-theme="light"] .detail-query,
+  :root[data-theme="light"] .detail-addr-block,
+  :root[data-theme="light"] .detail-rationale { color: var(--text-dim); }
+
+  :root[data-theme="light"] .detail-col-header {
+    border-bottom-color: var(--border);
+  }
+  :root[data-theme="light"] .detail-col-header.c1 { color: #b91c1c; }
+  :root[data-theme="light"] .detail-col-header.c2 { color: #b45309; }
+  :root[data-theme="light"] .detail-col-header.c3 { color: #15803d; }
+
+  :root[data-theme="light"] .detail-response-text {
+    background: #ffffff;
+    border-color: var(--border);
+    color: var(--text);
+  }
+  :root[data-theme="light"] .detail-response-text.empty { color: var(--text-muted); }
+
+  :root[data-theme="light"] .detail-input-section {
+    border-top-color: var(--border);
+  }
+  :root[data-theme="light"] .detail-response-textarea,
+  :root[data-theme="light"] .detail-tool-select {
+    background: #ffffff;
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+  :root[data-theme="light"] .detail-response-textarea:focus { border-color: var(--accent); }
+  :root[data-theme="light"] .detail-response-textarea::placeholder { color: var(--text-muted); }
+
+  :root[data-theme="light"] .detail-save-btn {
+    background: #ffffff;
+    border-color: var(--border-strong);
+    color: var(--accent);
+  }
+  :root[data-theme="light"] .detail-save-btn:hover { border-color: var(--accent); background: var(--row-link-bg); }
+  :root[data-theme="light"] .detail-eval-btn {
+    background: #ffffff;
+    border-color: var(--border-strong);
+    color: #7c3aed;
+  }
+  :root[data-theme="light"] .detail-eval-btn:hover:not(:disabled) { border-color: #7c3aed; background: var(--row-link-b-bg); }
+
+  :root[data-theme="light"] .detail-clear-btn,
+  :root[data-theme="light"] .detail-clear-all-btn {
+    background: #ffffff;
+    border-color: rgba(220, 38, 38, 0.35);
+    color: #b91c1c;
+  }
+  :root[data-theme="light"] .detail-clear-btn:hover,
+  :root[data-theme="light"] .detail-clear-all-btn:hover {
+    border-color: #dc2626;
+    background: rgba(220, 38, 38, 0.06);
+  }
+
+  :root[data-theme="light"] .detail-enrich-btn {
+    background: rgba(22, 163, 74, 0.06);
+    border-color: rgba(22, 163, 74, 0.35);
+    color: #15803d;
+  }
+  :root[data-theme="light"] .detail-enrich-btn:hover:not(:disabled) {
+    border-color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+  }
+
+  :root[data-theme="light"] .enriched-q-block {
+    background: rgba(22, 163, 74, 0.05);
+    border-color: rgba(22, 163, 74, 0.30);
+  }
+  :root[data-theme="light"] .enriched-q-block,
+  :root[data-theme="light"] .enriched-q-block > summary { color: #15803d; }
+  :root[data-theme="light"] .enriched-q-block[open] > summary { border-bottom-color: rgba(22, 163, 74, 0.30); }
+
+  :root[data-theme="light"] .detail-flags-list { color: #b45309; }
 </style>
 <script>
   // Apply saved theme before first paint to avoid a flash.
@@ -2207,7 +2306,7 @@ function renderDetailPanel(s, ss) {
   const enriched = ss.enrichedQuestion || '';
 
   return `<div class="detail-actions">
-    <a class="detail-actions-link"
+    <a class="detail-actions-link primary"
        href="/comparison/${encodeURIComponent(s.id)}"
        title="Side-by-side comparison: out-of-the-box vs MCP+enriched, with 4-dim rubric">Open side-by-side comparison &rarr;</a>
     <a class="detail-actions-link variant-b"

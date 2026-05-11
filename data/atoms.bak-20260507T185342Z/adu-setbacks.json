@@ -21,8 +21,8 @@
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "Property is zoned R5",
-      "claim_full": "The base zoning at 5112 SE Belmont is R5 (Residential 5,000).",
+      "claim_short": "Property zoned R5",
+      "claim_full": "The property at 5112 SE Belmont St is in the R5 (Residential 5,000) base zone.",
       "topic": "zoning",
       "variants": [
         "oob",
@@ -36,15 +36,15 @@
       "citation": "PortlandMaps",
       "citation_by_variant": {
         "oob": null,
-        "mcp": "PortlandMaps zoning record",
-        "enhanced": "PortlandMaps API"
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps zoning record"
       },
-      "verified_truth": "R5 is the operative base zone in this part of inner SE Belmont; only the enhanced response claims to have verified it directly via PortlandMaps. OOB explicitly hedged because its API access was blocked."
+      "verified_truth": "Inner SE Belmont near 52nd is essentially all R5; OOB explicitly inferred this without API access while MCP and Enhanced report it as verified from PortlandMaps."
     },
     {
       "id": "A2",
-      "claim_short": "No overlays on the parcel",
-      "claim_full": "The parcel has no environmental, historic, conservation, design, or plan-district overlays affecting ADU rules.",
+      "claim_short": "No overlays on this lot",
+      "claim_full": "No environmental, historic, conservation, design, plan-district, scenic, or flood overlays apply to this parcel.",
       "topic": "zoning",
       "variants": [
         "mcp",
@@ -56,56 +56,74 @@
       "importance": 4,
       "citation": "PortlandMaps",
       "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PortlandMaps API"
+        "mcp": "PortlandMaps",
+        "enhanced": "PortlandMaps record"
       },
-      "verified_truth": "Accuracy flags confirm no environmental, historic, or conservation overlay on the parcel."
+      "verified_truth": "Accuracy flags confirm no environmental, historic, or conservation overlay on the parcel \u2014 meaningfully simplifies permitting."
     },
     {
       "id": "A3",
-      "claim_short": "Lot ~5,344 sq ft, ~50x107",
-      "claim_full": "The lot is approximately 5,335\u20135,344 sq ft, roughly 50 ft deep by 107 ft wide.",
+      "claim_short": "Mt. Tabor neighborhood",
+      "claim_full": "The property is in the Mt. Tabor neighborhood with Mt. Tabor Neighborhood Association as the recognized NA.",
+      "topic": "address",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 0.3,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "enhanced": null
+      },
+      "verified_truth": "Per the scenario metadata, the address is in Sunnyside; accuracy flag notes it sits on the Mt. Tabor/Sunnyside boundary and the actual NA needs verification."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Lot ~5,344 sq ft",
+      "claim_full": "The lot is approximately 5,344 sq ft, roughly 50 ft deep by 107 ft wide.",
       "topic": "address",
       "variants": [
         "mcp",
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.5,
-      "correctness": "correct-range",
+      "actionability": 0.6,
+      "correctness": "hedge-correct",
       "importance": 3,
       "citation": "PortlandMaps tax-lot polygon",
       "citation_by_variant": {
         "mcp": null,
         "enhanced": "PortlandMaps tax-lot polygon"
       },
-      "verified_truth": "Both responses derive the same approximate lot size from the city tax-lot polygon; enhanced flags it as needing assessor or survey confirmation. Accuracy flags note this is inferred, not assessor-confirmed."
+      "verified_truth": "Lot dimensions inferred from polygon (~50\u00d7107, ~5,335\u20135,344 sq ft); enhanced explicitly flagged this as polygon-derived, not assessor-confirmed."
     },
     {
-      "id": "A4",
-      "claim_short": "House 2,156 sf built 1957",
-      "claim_full": "The primary house is 2,156 sq ft of living area and was built in 1957.",
+      "id": "A5",
+      "claim_short": "House 1957, 2,156 sq ft",
+      "claim_full": "The primary dwelling was built in 1957 with about 2,156 sq ft of living area.",
       "topic": "address",
       "variants": [
         "mcp",
         "enhanced"
       ],
       "specificity": 0.95,
-      "actionability": 0.4,
+      "actionability": 0.7,
       "correctness": "correct",
-      "importance": 3,
+      "importance": 4,
       "citation": "PortlandMaps / assessor",
       "citation_by_variant": {
         "mcp": null,
         "enhanced": "PortlandMaps API"
       },
-      "verified_truth": "Accuracy flags list these as address-specific claims that should be verified against the assessor; the 5-year-age threshold for the basement ADU exemption is comfortably satisfied either way."
+      "verified_truth": "Both responses cite 1957 build year and 2,156 sq ft; matters because 75% of 2,156 = 1,617, so the 800 sq ft cap binds, and 5+ year basement exemption is unlocked."
     },
     {
-      "id": "A5",
+      "id": "A6",
       "claim_short": "Two ADUs allowed on R5",
-      "claim_full": "R5 lots that are at least 3,000 sq ft, front a maintained street, and aren't in the Constrained Sites overlay may host two ADUs (with at least one detached).",
-      "topic": "zoning",
+      "claim_full": "Two ADUs are allowed on this R5 lot because it exceeds the 3,000 sq ft minimum and has frontage on a maintained street.",
+      "topic": "size",
       "variants": [
         "enhanced"
       ],
@@ -117,76 +135,12 @@
       "citation_by_variant": {
         "enhanced": "PCC 33.205.020.B.2"
       },
-      "verified_truth": "Accuracy flag confirms PCC 33.205.020.B.2 allows two ADUs on R5 lots \u22653,000 sq ft with frontage on a maintained street."
-    },
-    {
-      "id": "A6",
-      "claim_short": "ADU cap 800 sf or 75%",
-      "claim_full": "An ADU's living area is capped at the lesser of 800 sq ft or 75% of the primary dwelling's living area.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 33.205.040.C.1",
-      "citation_by_variant": {
-        "oob": "Title 33.205",
-        "mcp": "33.205",
-        "enhanced": "PCC 33.205.040.C.1"
-      },
-      "verified_truth": "Accuracy flags confirm the 800 sf / 75% cap under PCC 33.205.040.C.1."
+      "verified_truth": "33.205.020.B.2 allows two ADUs on R5 when lot \u22653,000 sq ft with maintained-street frontage and not in the Constrained Sites overlay; the 5,344 sq ft lot qualifies."
     },
     {
       "id": "A7",
-      "claim_short": "Basement ADU exempt if 5+ yrs",
-      "claim_full": "A basement (interior) ADU in a primary structure at least five years old is exempt from the 800 sq ft / 75% size cap.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.85,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "PCC 33.205.040.C.1",
-      "citation_by_variant": {
-        "oob": "Title 33.205",
-        "enhanced": "PCC 33.205.040.C.1"
-      },
-      "verified_truth": "Accuracy flags confirm the 5-year basement-conversion exemption from the size cap; the 1957 house qualifies."
-    },
-    {
-      "id": "A8",
-      "claim_short": "ADU max height 20 ft",
-      "claim_full": "A detached or attached ADU can be up to 20 ft tall outside required setbacks.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 33.110.245.C.1",
-      "citation_by_variant": {
-        "oob": "Title 33.205 / accessory worksheet",
-        "mcp": "33.205",
-        "enhanced": "PCC 33.110.245.C.1"
-      },
-      "verified_truth": "Accuracy flag confirms 20 ft max height per PCC 33.110.245.C.1 (raised from 18 ft in 2021)."
-    },
-    {
-      "id": "A9",
       "claim_short": "R5 setbacks 10/5/5",
-      "claim_full": "R5 base-zone setbacks are 10 ft front, 5 ft side, 5 ft rear.",
+      "claim_full": "R5 base-zone setbacks for the primary structure are 10 ft front, 5 ft side, 5 ft rear.",
       "topic": "setbacks",
       "variants": [
         "oob",
@@ -199,17 +153,39 @@
       "importance": 5,
       "citation": "PCC 33.110.220 Table 110-4",
       "citation_by_variant": {
-        "oob": "Title 33.110.220 Table 110-4",
-        "mcp": "33.110.220 Table 110-4",
-        "enhanced": "PCC 33.110.220 Table 110-4"
+        "oob": "Title 33.110.220, Table 110-4",
+        "mcp": "33.110.220, Table 110-4",
+        "enhanced": "Table 110-4 in 33.110.220"
       },
-      "verified_truth": "Accuracy flag: R5 front 10 ft, side 5 ft, rear 5 ft per Table 110-4."
+      "verified_truth": "Table 110-4 of PCC 33.110.220 sets R5 setbacks at 10 ft front, 5 ft side, 5 ft rear for primary buildings."
     },
     {
-      "id": "A10",
-      "claim_short": "40 ft front or behind rear wall",
-      "claim_full": "A detached ADU must sit at least 40 ft from the front lot line OR behind the rear wall of the primary house.",
+      "id": "A8",
+      "claim_short": "Detached ADU 40 ft or behind rear wall",
+      "claim_full": "A detached ADU must be at least 40 ft from the front lot line OR located behind the rear building wall of the primary dwelling.",
       "topic": "setbacks",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.85,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.205.040.C.2",
+      "citation_by_variant": {
+        "oob": "Title 33.205 / Detached Covered Accessory Structures Worksheet",
+        "mcp": "33.205",
+        "enhanced": "33.205.040.C.2"
+      },
+      "verified_truth": "PCC 33.205.040.C.2 requires a detached or connected ADU to be \u226540 ft from the front lot line or behind the primary's rear building wall."
+    },
+    {
+      "id": "A9",
+      "claim_short": "ADU 800 sf or 75% cap",
+      "claim_full": "ADU floor area is capped at 800 sq ft or 75% of the primary dwelling's living area, whichever is less.",
+      "topic": "size",
       "variants": [
         "oob",
         "mcp",
@@ -219,42 +195,64 @@
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "PCC 33.205.040.C.2",
+      "citation": "PCC 33.205.040.C.1",
       "citation_by_variant": {
         "oob": "Title 33.205",
         "mcp": "33.205",
-        "enhanced": "PCC 33.205.040.C.2"
+        "enhanced": "33.205.040.C.1"
       },
-      "verified_truth": "Accuracy flag confirms PCC 33.205.040.C.2: detached ADU must be \u226540 ft from front lot line OR behind rear wall of main house."
+      "verified_truth": "33.205.040.C.1 caps ADU living area at the lesser of 800 sq ft or 75% of primary; with a 2,156 sq ft house, 800 sq ft is the binding cap."
+    },
+    {
+      "id": "A10",
+      "claim_short": "Basement ADU 5-yr exemption",
+      "claim_full": "A basement (or interior) ADU in a primary dwelling at least 5 years old is exempt from the 800 sq ft / 75% size cap.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.95,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "PCC 33.205.040.C.1",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "33.205.040.C.1"
+      },
+      "verified_truth": "33.205.040.C.1 exempts basement/interior conversions from the 800 sq ft cap when the primary dwelling is \u22655 years old; the 1957 house qualifies."
     },
     {
       "id": "A11",
-      "claim_short": "15 ft height inside setback",
-      "claim_full": "An ADU positioned inside required side or rear setbacks is capped at 15 ft height with 10 ft exterior wall height.",
-      "topic": "setbacks",
+      "claim_short": "ADU max height 20 ft",
+      "claim_full": "An ADU's maximum height is 20 ft when located outside required setbacks.",
+      "topic": "size",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.95,
-      "actionability": 0.7,
+      "specificity": 1.0,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 4,
-      "citation": "PCC 33.110.245.C.2.b",
+      "citation": "PCC 33.110.245.C.1",
       "citation_by_variant": {
-        "oob": "Detached Covered Accessory Structures Worksheet",
-        "mcp": "33.205",
-        "enhanced": "PCC 33.110.245.C.2.b"
+        "oob": null,
+        "mcp": null,
+        "enhanced": "33.110.245.C.1"
       },
-      "verified_truth": "Accuracy flag confirms reduced-setback height of 15 ft / 10 ft wall per PCC 33.110.245.C.2.b."
+      "verified_truth": "33.110.245.C.1 caps ADU/covered-accessory-structure height at 20 ft (raised from 18 ft in 2021)."
     },
     {
       "id": "A12",
-      "claim_short": "Reduced setback 24x24 conditions",
-      "claim_full": "Reduced side/rear setbacks under 33.110.245.C.2.b require a footprint \u226424'x24', \u226540 ft from front, screening, no windows facing the neighbor, and \u226415 ft height.",
+      "claim_short": "Reduced setback 15 ft / 10 ft wall",
+      "claim_full": "Inside the required side or rear setback, an ADU is limited to 15 ft total height with exterior walls capped at 10 ft.",
       "topic": "setbacks",
       "variants": [
+        "oob",
+        "mcp",
         "enhanced"
       ],
       "specificity": 1.0,
@@ -263,14 +261,34 @@
       "importance": 4,
       "citation": "PCC 33.110.245.C.2.b",
       "citation_by_variant": {
-        "enhanced": "PCC 33.110.245.C.2.b"
+        "oob": "Detached Covered Accessory Structures Worksheet",
+        "mcp": null,
+        "enhanced": "33.110.245.C.2.b"
       },
-      "verified_truth": "Accuracy flag confirms PCC 33.110.245.C.2.b reduced-setback option: 24'x24' footprint, \u226415 ft height, \u226410 ft wall, \u226540 ft from front, screening required."
+      "verified_truth": "33.110.245.C.2.b allows reduced side/rear setbacks if footprint \u226424\u00d724, height \u226415 ft, exterior walls \u226410 ft, \u226540 ft from front, with screening and no doors/windows on setback walls."
     },
     {
       "id": "A13",
-      "claim_short": "ADU footprint \u2264 main house",
-      "claim_full": "An ADU's footprint cannot exceed the primary house's footprint.",
+      "claim_short": "Reduced setback 24x24 footprint",
+      "claim_full": "The reduced-setback small-accessory option requires a footprint no larger than 24 ft x 24 ft (~576 sq ft) and screening of setback portions.",
+      "topic": "setbacks",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 33.110.245.C.2.b",
+      "citation_by_variant": {
+        "enhanced": "33.110.245.C.2.b"
+      },
+      "verified_truth": "33.110.245.C.2.b imposes the 24\u00d724 footprint cap, screening (L3/F2), and no-window restrictions on the side facing adjacent lots."
+    },
+    {
+      "id": "A14",
+      "claim_short": "ADU footprint \u2264 primary",
+      "claim_full": "An ADU's footprint cannot exceed the footprint of the primary dwelling.",
       "topic": "size",
       "variants": [
         "oob",
@@ -281,18 +299,18 @@
       "actionability": 0.6,
       "correctness": "correct",
       "importance": 3,
-      "citation": "PCC 33.110.245",
+      "citation": "PCC 33.205 / 33.110.245",
       "citation_by_variant": {
-        "oob": null,
+        "oob": "Title 33.205",
         "mcp": "33.205",
-        "enhanced": "PCC 33.110.245"
+        "enhanced": null
       },
-      "verified_truth": "Accuracy flag confirms ADU footprint cannot exceed primary house footprint."
+      "verified_truth": "Accuracy flags confirm the ADU footprint cannot exceed the primary structure's footprint."
     },
     {
-      "id": "A14",
-      "claim_short": "Accessory coverage cap",
-      "claim_full": "All accessory structures combined are capped at a percentage of the lot area (oob/mcp say 20%; enhanced says 15%).",
+      "id": "A15",
+      "claim_short": "Accessory coverage cap (15% vs 20%)",
+      "claim_full": "Combined coverage of detached/connected accessory structures is limited as a percentage of lot area.",
       "topic": "size",
       "variants": [
         "oob",
@@ -307,14 +325,32 @@
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "PCC 33.110.245.C.3"
+        "enhanced": "33.110.245.C.3"
       },
-      "verified_truth": "Accuracy flag confirms the cap is 15% of lot area per PCC 33.110.245.C.3. OOB and MCP both stated 20%, which is incorrect; enhanced's 15% is right."
+      "verified_truth": "Per accuracy flags, 33.110.245.C.3 caps accessory-structure coverage at 15% of lot area; OOB and MCP both stated 20%, which appears to be outdated/incorrect."
     },
     {
-      "id": "A15",
-      "claim_short": "Required outdoor area 250 sf",
-      "claim_full": "R5 requires a contiguous 250 sq ft outdoor area that fits a 12'x12' square outside the front setback.",
+      "id": "A16",
+      "claim_short": "Building coverage formula",
+      "claim_full": "Maximum building coverage on a 5,000\u201320,000 sq ft R5 lot is 2,250 sq ft plus 15% of lot area over 5,000 sq ft.",
+      "topic": "size",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 33.110.225 Table 110-5",
+      "citation_by_variant": {
+        "enhanced": "Table 110-5 in 33.110.225"
+      },
+      "verified_truth": "Table 110-5 in 33.110.225 sets the building-coverage formula as 2,250 sq ft + 15% of lot area over 5,000 sq ft for R5."
+    },
+    {
+      "id": "A17",
+      "claim_short": "FAR 0.5/0.6/0.7 with bonus",
+      "claim_full": "R5 FAR limits are 0.5:1 for 1 unit, 0.6:1 for 2 units, and up to 0.7:1 with the preserve-existing-dwelling bonus.",
       "topic": "size",
       "variants": [
         "enhanced"
@@ -322,325 +358,206 @@
       "specificity": 1.0,
       "actionability": 0.6,
       "correctness": "correct",
-      "importance": 2,
-      "citation": "PCC 33.110.240 / Table 110-4",
+      "importance": 3,
+      "citation": "PCC 33.110.210.D.2",
       "citation_by_variant": {
-        "enhanced": "PCC 33.110.240"
+        "enhanced": "33.110.210.D.2"
       },
-      "verified_truth": "Accuracy flag confirms 250 sq ft required outdoor area with 12'x12' fit per Table 110-4 / 33.110.240."
+      "verified_truth": "Accuracy flags confirm FAR limits of 0.5/0.6/0.7 with preservation bonus per 33.110.210.D.2."
     },
     {
-      "id": "A16",
-      "claim_short": "No parking required for ADU",
-      "claim_full": "Portland does not require off-street parking for an ADU anywhere in the city.",
-      "topic": "permits",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "Chapter 33.266",
-      "citation_by_variant": {
-        "oob": null,
-        "enhanced": "Chapter 33.266"
-      },
-      "verified_truth": "Accuracy flag confirms parking minimums were eliminated citywide via amended Chapter 33.266."
-    },
-    {
-      "id": "A17",
-      "claim_short": "Tree code applies; ~$472/inch",
-      "claim_full": "Title 11.50 tree preservation applies (lot exceeds 5,000 sf threshold); mitigation runs $472/DBH inch for trees \u226520\".",
+      "id": "A18",
+      "claim_short": "Tree code 5,000 sf threshold",
+      "claim_full": "Title 11.50 tree preservation requirements apply to lots 5,000 sq ft or larger; smaller lots are exempt.",
       "topic": "trees",
       "variants": [
         "enhanced"
       ],
-      "specificity": 1.0,
-      "actionability": 0.85,
+      "specificity": 0.95,
+      "actionability": 0.7,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 11.50.040.C.1; Table 50-1",
+      "importance": 3,
+      "citation": "PCC 11.50.040.C.1",
       "citation_by_variant": {
-        "enhanced": "PCC 11.50.040.C.1; Table 50-1"
+        "enhanced": "11.50.040.C.1"
       },
-      "verified_truth": "Accuracy flags confirm 5,000 sf exemption threshold, 1/3 preservation requirement, and FY 25-26 mitigation rate of $472/DBH inch for trees \u226520 inches."
+      "verified_truth": "11.50.040.C.1 sets the 5,000 sq ft exemption threshold and 1/3 preservation requirement for non-exempt trees \u226512 inch DBH."
     },
     {
-      "id": "A18",
+      "id": "A19",
+      "claim_short": "Tree mitigation $472/inch",
+      "claim_full": "Tree mitigation for trees \u226520 inch DBH is $472 per DBH inch in FY 2025-26.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "Title 11.50 Table 50-1",
+      "citation_by_variant": {
+        "enhanced": "Title 11, 11.50.040 and Table 50-1"
+      },
+      "verified_truth": "Accuracy flags confirm $472/DBH inch for trees \u226520 inches in FY 2025-26 mitigation rate."
+    },
+    {
+      "id": "A20",
       "claim_short": "Stark combined sewer basin",
-      "claim_full": "The property sits in the Stark combined sewer basin where sanitary and storm flow share a pipe, triggering on-site stormwater management.",
+      "claim_full": "The property sits in the Stark combined sewer basin, where sanitary and storm flow share one pipe.",
       "topic": "sewer",
       "variants": [
         "enhanced"
       ],
-      "specificity": 1.0,
+      "specificity": 0.95,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "PortlandMaps"
+      },
+      "verified_truth": "Accuracy flags confirm the combined sewer basin is labeled 'Stark' for this address; on-site stormwater management is implicated."
+    },
+    {
+      "id": "A21",
+      "claim_short": "No parking required for ADU",
+      "claim_full": "No off-street parking is required for an ADU in Portland.",
+      "topic": "permits",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.85,
       "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
-      "citation": "BES / SWMM",
+      "citation": "PCC Chapter 33.266",
       "citation_by_variant": {
-        "enhanced": "PortlandMaps; SWMM; Title 17.32"
+        "oob": null,
+        "enhanced": "Chapter 33.266"
       },
-      "verified_truth": "Accuracy flag confirms Stark combined sewer basin and sewer compkey 140255 for this address."
+      "verified_truth": "Citywide residential parking minimums were eliminated under amended Chapter 33.266; no parking is required for an ADU."
     },
     {
-      "id": "A19",
-      "claim_short": "SDC waiver: 10-yr no-STR",
-      "claim_full": "Portland waives ~$13-22K of SDCs for an ADU if the owner records a 10-year covenant prohibiting short-term rentals (150% repayment penalty for violation).",
-      "topic": "costs",
+      "id": "A22",
+      "claim_short": "SDC waiver with 10-yr no-STR covenant",
+      "claim_full": "Portland waives ADU System Development Charges (~$13\u201322K) in exchange for a recorded 10-year covenant prohibiting short-term rental of any structure on the property.",
+      "topic": "fees",
       "variants": [
         "mcp",
         "enhanced"
       ],
-      "specificity": 1.0,
+      "specificity": 0.95,
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 5,
-      "citation": "Revenue Division ADU SDC Waiver",
+      "citation": "Revenue Division ADU SDC Waiver Program",
       "citation_by_variant": {
         "mcp": null,
-        "enhanced": "Revenue Division (aducovenant@portlandoregon.gov); Chapter 17.14"
+        "enhanced": "Revenue Division; aducovenant@portlandoregon.gov"
       },
-      "verified_truth": "Accuracy flags confirm the SDC waiver, 10-year no-STR covenant, and 150% repayment penalty for STR violations."
-    },
-    {
-      "id": "A20",
-      "claim_short": "Existing 200A panel sufficient",
-      "claim_full": "A 2023 200A panel upgrade and 2024 EV charger install on file mean electrical service has capacity for an ADU subpanel without a utility upgrade.",
-      "topic": "electrical",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.85,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps permit history",
-      "citation_by_variant": {
-        "mcp": null
-      },
-      "verified_truth": "Accuracy flag confirms 2023 200A panel upgrade and 2024 EV charger permits on record. Enhanced lists tree-planting/electrical/mechanical permits but does not specifically tie capacity to ADU readiness."
-    },
-    {
-      "id": "A21",
-      "claim_short": "Permit bundle: building+trades+BES",
-      "claim_full": "An ADU requires a building permit plus plumbing, electrical, and mechanical sub-permits, plus a BES sewer connection, erosion control (if disturbing >500 sf), and possibly PBOT and Urban Forestry permits.",
-      "topic": "permits",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.95,
-      "correctness": "correct",
-      "importance": 5,
-      "citation": "Titles 24/25/26/27; Title 10; Title 17",
-      "citation_by_variant": {
-        "enhanced": "Titles 24, 25, 26, 27; Title 10; Title 17.32"
-      },
-      "verified_truth": "Accuracy flag confirms erosion control triggered at 500 sq ft soil disturbance per Title 10. Other permit types are standard for Portland ADU projects."
-    },
-    {
-      "id": "A22",
-      "claim_short": "Detached ADU $200-350K",
-      "claim_full": "Construction cost for a turnkey ~600-800 sq ft detached ADU in Portland runs about $200,000-$350,000.",
-      "topic": "costs",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.8,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": null,
-      "citation_by_variant": {
-        "enhanced": null
-      },
-      "verified_truth": "Not verified in this evaluation; range is consistent with industry estimates but not from a city source. Enhanced explicitly flags as builder-blog/industry estimates."
+      "verified_truth": "Accuracy flags confirm the SDC waiver program with a 10-year no-STR covenant; enhanced gives $13-22K range and the dedicated email for applications."
     },
     {
       "id": "A23",
-      "claim_short": "Timeline 9-15 months custom",
-      "claim_full": "From schematic design to final inspection a custom detached ADU takes about 9-15 months; basement conversion 6-9 months.",
-      "topic": "sequence",
+      "claim_short": "150% STR penalty",
+      "claim_full": "Violating the SDC waiver covenant by operating a short-term rental triggers a 150% repayment penalty on the waived fees.",
+      "topic": "fees",
       "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.75,
-      "correctness": "correct-range",
-      "importance": 3,
-      "citation": null,
-      "citation_by_variant": {
-        "enhanced": null
-      },
-      "verified_truth": "Not verified in this evaluation; ranges align with general Portland ADU experience."
-    },
-    {
-      "id": "A24",
-      "claim_short": "Free 15-min planner appointment",
-      "claim_full": "Portland offers free 15-minute appointments with a city planner for zoning questions before design.",
-      "topic": "sequence",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.95,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": "portland.gov/ppd/early-assistance",
-      "citation_by_variant": {
-        "oob": "portland.gov/ppd/early-assistance",
-        "enhanced": "portland.gov/ppd/zoning-land-use/free-15-minute-appointments-permit-code-and"
-      },
-      "verified_truth": "Free 15-minute zoning appointments are a documented BDS/PP&D service."
-    },
-    {
-      "id": "A25",
-      "claim_short": "BDS/PP&D phone 503-823-7300",
-      "claim_full": "The Bureau of Development Services / Portland Permitting & Development general line is 503-823-7300.",
-      "topic": "permits",
-      "variants": [
-        "oob",
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "portland.gov/ppd",
-      "citation_by_variant": {
-        "oob": "portland.gov/ppd",
-        "enhanced": "portland.gov/ppd"
-      },
-      "verified_truth": "Accuracy flag confirms BDS planner line 503-823-7300."
-    },
-    {
-      "id": "A26",
-      "claim_short": "Free pre-approved ADU plans",
-      "claim_full": "Portland publishes four free pre-approved detached-ADU plan sets (gable/shed roof \u00d7 slab/crawlspace) that speed up permit review.",
-      "topic": "sequence",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.85,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "portland.gov/ppd/residential-permitting",
-      "citation_by_variant": {
-        "oob": "portland.gov/ppd/residential-permitting/home-projects/accessory-dwelling-units",
-        "enhanced": "portland.gov/ppd"
-      },
-      "verified_truth": "Pre-approved ADU plan sets are a documented BDS offering; both responses cite the BDS/PP&D ADU page."
-    },
-    {
-      "id": "A27",
-      "claim_short": "Garage conversion path",
-      "claim_full": "An existing nonconforming detached garage can be converted to an ADU without curing the setback nonconformity, often the cheapest path.",
-      "topic": "setbacks",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.85,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 4,
-      "citation": "PCC 33.110.245.C.2.c",
+      "citation": "Revenue Division ADU SDC Waiver covenant",
       "citation_by_variant": {
-        "oob": null,
-        "enhanced": "PCC 33.110.245.C.2.c"
+        "enhanced": "Revenue Division covenant"
       },
-      "verified_truth": "Accuracy flag confirms an existing nonconforming garage may be converted to an ADU without curing the setback nonconformity."
+      "verified_truth": "Accuracy flag confirms 150% repayment penalty for STR violation under the recorded SDC waiver covenant."
     },
     {
-      "id": "A28",
+      "id": "A24",
+      "claim_short": "ADUs excluded from temp SDC exemption",
+      "claim_full": "The 2025\u20132028 temporary residential SDC exemption explicitly excludes ADUs.",
+      "topic": "fees",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 17.14.070.J",
+      "citation_by_variant": {
+        "enhanced": "Title 17.14.070.J"
+      },
+      "verified_truth": "17.14.070.J (Aug 15 2025\u2013Sept 30 2028 temporary residential SDC exemption) explicitly excludes ADUs; the standard ADU SDC waiver remains the route."
+    },
+    {
+      "id": "A25",
       "claim_short": "Adjustment Review for >800 sf",
-      "claim_full": "An Adjustment Review under Chapter 33.805 can be requested to exceed the 800 sq ft cap (recent approvals around 1,000 sq ft); ~8-10 weeks added.",
+      "claim_full": "An Adjustment Review under Chapter 33.805 can be requested to exceed the 800 sq ft ADU cap.",
       "topic": "process",
       "variants": [
         "enhanced"
       ],
-      "specificity": 0.95,
+      "specificity": 0.9,
       "actionability": 0.7,
       "correctness": "correct",
       "importance": 3,
-      "citation": "Chapter 33.805",
+      "citation": "PCC Chapter 33.805",
       "citation_by_variant": {
         "enhanced": "Chapter 33.805"
       },
-      "verified_truth": "Accuracy flag confirms Adjustment Review pathway via Chapter 33.805 to exceed the 800 sq ft cap."
+      "verified_truth": "Accuracy flag confirms the Adjustment Review pathway via Chapter 33.805 is available to exceed the 800 sq ft ADU cap."
     },
     {
-      "id": "A29",
-      "claim_short": "Karlinda Terrace N 1/2 lot",
-      "claim_full": "The legal description is 'N 1/2 of Lot 1 & 2, Karlinda Terrace' (north half of two original platted lots).",
-      "topic": "address",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "Multnomah County assessor",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "Multnomah County assessor"
-      },
-      "verified_truth": "Accuracy flag confirms the Karlinda Terrace plat / 'N 1/2 OF LOT 1&2' legal description for this parcel."
-    },
-    {
-      "id": "A30",
-      "claim_short": "RIP allows duplex/triplex",
-      "claim_full": "Post-Residential Infill Project, R5 lots can host duplexes, triplexes, fourplexes, attached/internal ADU combinations beyond the single-family default.",
-      "topic": "zoning",
-      "variants": [
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.85,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.110.200 Table 110-2",
-      "citation_by_variant": {
-        "mcp": null,
-        "enhanced": "PCC 33.110.200 Table 110-2"
-      },
-      "verified_truth": "Accuracy flag confirms RIP allows duplex/triplex on R5 lots."
-    },
-    {
-      "id": "A31",
-      "claim_short": "Corner lot front=shorter frontage",
-      "claim_full": "On a corner lot the front lot line is the shorter of the two street frontages, regardless of the addressed front door.",
-      "topic": "setbacks",
+      "id": "A26",
+      "claim_short": "Pre-approved ADU plans available",
+      "claim_full": "Portland publishes free pre-approved detached-ADU plan sets that speed permit review.",
+      "topic": "process",
       "variants": [
         "oob"
       ],
-      "specificity": 0.9,
-      "actionability": 0.5,
-      "correctness": "hedge-correct",
-      "importance": 2,
-      "citation": "Title 33",
+      "specificity": 0.7,
+      "actionability": 0.85,
+      "correctness": "correct-action",
+      "importance": 3,
+      "citation": "portland.gov ADU Permits page",
       "citation_by_variant": {
-        "oob": null
+        "oob": "portland.gov/ppd/residential-permitting/home-projects/accessory-dwelling-units"
       },
-      "verified_truth": "Accuracy flag notes this 'corner-lot shorter-frontage = front' default was stated with more confidence than independent verification supports. The other two responses do not treat the parcel as a corner lot."
+      "verified_truth": "Pre-approved ADU plan sets are published by Portland and reduce review time; OOB recommended this resource directly."
     },
     {
-      "id": "A32",
-      "claim_short": "Verify zoning on PortlandMaps",
-      "claim_full": "The resident should confirm zoning, overlays, and lot data themselves on portlandmaps.com before spending money on plans.",
-      "topic": "sequence",
+      "id": "A27",
+      "claim_short": "BDS planner 503-823-7300",
+      "claim_full": "Free 15-minute appointments with a Portland city planner are available at 503-823-7300 to confirm zoning questions.",
+      "topic": "process",
       "variants": [
         "oob",
-        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.95,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "PP&D / BDS Early Assistance",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/early-assistance",
+        "enhanced": "portland.gov/ppd"
+      },
+      "verified_truth": "Accuracy flags confirm BDS/PP&D planner line 503-823-7300 and the free 15-minute appointment program."
+    },
+    {
+      "id": "A28",
+      "claim_short": "Verify on PortlandMaps",
+      "claim_full": "The resident should confirm zoning, overlays, and lot data on PortlandMaps before spending money on plans.",
+      "topic": "process",
+      "variants": [
+        "oob",
         "enhanced"
       ],
       "specificity": 0.7,
@@ -650,10 +567,83 @@
       "citation": "portlandmaps.com",
       "citation_by_variant": {
         "oob": "portlandmaps.com",
-        "mcp": null,
-        "enhanced": "portlandmaps.com"
+        "enhanced": "https://www.portlandmaps.com/"
       },
-      "verified_truth": "All three responses correctly point the user to PortlandMaps for self-verification of address-specific data."
+      "verified_truth": "Both responses appropriately direct the user to PortlandMaps to verify zoning, overlays, and hazards \u2014 the authoritative homeowner-facing source."
+    },
+    {
+      "id": "A29",
+      "claim_short": "OOB admitted no PortlandMaps access",
+      "claim_full": "OOB transparently admitted it could not reach the PortlandMaps API and was working from inferred (assumed-R5) data.",
+      "topic": "citations",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.6,
+      "actionability": 0.5,
+      "correctness": "admitted-gap",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "OOB explicitly flagged that PortlandMaps API access was blocked and that R5 zoning was inferred \u2014 appropriate hedging given the data gap."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Karlinda Terrace plat",
+      "claim_full": "The legal description is 'N 1/2 of Lot 1 & 2, Karlinda Terrace,' the north half of two original platted lots.",
+      "topic": "address",
+      "variants": [
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.4,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": "PortlandMaps / Multnomah County plat",
+      "citation_by_variant": {
+        "mcp": null,
+        "enhanced": "Multnomah County Assessor / PortlandMaps"
+      },
+      "verified_truth": "Accuracy flags confirm the Karlinda Terrace plat / 'N 1/2 OF LOT 1&2' legal description for this parcel."
+    },
+    {
+      "id": "A31",
+      "claim_short": "Attached/interior ADU no 40-ft rule",
+      "claim_full": "An attached ADU or interior conversion follows base R5 setbacks (10/5/5) and is not subject to the 40-ft front-setback rule for detached ADUs.",
+      "topic": "setbacks",
+      "variants": [
+        "mcp"
+      ],
+      "specificity": 0.85,
+      "actionability": 0.8,
+      "correctness": "PARTIAL-WRONG",
+      "importance": 3,
+      "citation": null,
+      "citation_by_variant": {
+        "mcp": null
+      },
+      "verified_truth": "Interior conversions face no setback issue, but per PCC 33.205.040.C.2 the 40-ft / behind-rear-wall rule applies to BOTH detached and connected (attached) ADUs \u2014 Enhanced corrects this point."
+    },
+    {
+      "id": "A32",
+      "claim_short": "Corner lot front line shorter frontage",
+      "claim_full": "On a corner lot, the front lot line is the shorter of the two street frontages, regardless of where the front door is.",
+      "topic": "setbacks",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "hedge-correct",
+      "importance": 2,
+      "citation": "PCC Title 33",
+      "citation_by_variant": {
+        "oob": "Title 33"
+      },
+      "verified_truth": "The 'shorter frontage = front lot line' rule is correct general code for corner lots; OOB inferred this lot was a corner lot from a Redfin listing, which MCP/Enhanced did not corroborate \u2014 applicability is uncertain."
     }
   ]
 }

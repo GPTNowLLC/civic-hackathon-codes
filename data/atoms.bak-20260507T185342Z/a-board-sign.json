@@ -22,8 +22,8 @@
     {
       "id": "A1",
       "claim_short": "Yes, A-boards allowed at this address",
-      "claim_full": "You are legally allowed to put an A-board sign on the sidewalk at 1022 SW Morrison St, subject to registration and placement rules.",
-      "topic": "permits",
+      "claim_full": "An A-board sign is permitted on the sidewalk at 1022 SW Morrison St subject to registration and placement rules.",
+      "topic": "signs",
       "variants": [
         "oob",
         "mcp",
@@ -39,34 +39,52 @@
         "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
         "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
       },
-      "verified_truth": "Confirmed. A-boards are permitted via registration in CX and other commercial zones per portland.gov/ppd/sign-permits/portable-signs-boards."
+      "verified_truth": "Confirmed by accuracy flags: portable A-boards are allowed in CX zones with registration; verified against the official portland.gov portable-signs page."
     },
     {
       "id": "A2",
-      "claim_short": "Property zoned CX (Central Commercial)",
-      "claim_full": "The property at 1022 SW Morrison St is zoned CX (Central Commercial), which permits portable A-board signs.",
+      "claim_short": "Zoned CX (Central Commercial)",
+      "claim_full": "The property at 1022 SW Morrison St is in the CX (Central Commercial) zone, which permits permanent portable signs.",
       "topic": "zoning",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 1.0,
+      "specificity": 0.9,
       "actionability": 0.7,
       "correctness": "correct",
       "importance": 4,
       "citation": "PortlandMaps",
       "citation_by_variant": {
-        "oob": null,
+        "oob": "portlandmaps.com (hedged inference)",
         "mcp": null,
         "enhanced": "portlandmaps.com/detail/property/1022-SW-MORRISON-ST/P652977_did/"
       },
-      "verified_truth": "CX zoning at 1022 SW Morrison is consistent with downtown classification; OOB explicitly hedged this as inference, MCP and enhanced asserted it directly."
+      "verified_truth": "Enhanced response confirmed CX with 'd' overlay via PortlandMaps lookup; OOB explicitly hedged the classification; MCP asserted CX without showing the lookup."
     },
     {
       "id": "A3",
-      "claim_short": "Inside Central City / West End sub-district",
-      "claim_full": "The address sits within the Central City plan district, West End sub-district, which carries a Design ('d') overlay.",
+      "claim_short": "In Central City / West End sub-district",
+      "claim_full": "The address sits inside the Central City plan district, West End sub-district.",
+      "topic": "zoning",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "enhanced": "portlandmaps.com/detail/property/1022-SW-MORRISON-ST/P652977_did/"
+      },
+      "verified_truth": "Accuracy flag confirms Central City / West End sub-district designation at 1022 SW Morrison."
+    },
+    {
+      "id": "A4",
+      "claim_short": "Building is Arminius Hotel landmark",
+      "claim_full": "The building at 1022 SW Morrison is the Arminius Hotel (1904), a designated Historic Landmark.",
       "topic": "zoning",
       "variants": [
         "enhanced"
@@ -79,30 +97,12 @@
       "citation_by_variant": {
         "enhanced": "portlandmaps.com"
       },
-      "verified_truth": "Confirmed by accuracy flags: zone classification CX with 'd' overlay in Central City / West End sub-district."
-    },
-    {
-      "id": "A4",
-      "claim_short": "Building is Arminius Hotel historic landmark",
-      "claim_full": "The building at 1022 SW Morrison is the Arminius Hotel (1904), a designated Historic Landmark.",
-      "topic": "zoning",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "enhanced": "portlandmaps.com/detail/property/1022-SW-MORRISON-ST/P652977_did/"
-      },
-      "verified_truth": "Confirmed: building identified as Arminius Hotel (1904) with Historic Landmark designation."
+      "verified_truth": "Accuracy flag confirms the building is the Arminius Hotel (1904) with Historic Landmark designation."
     },
     {
       "id": "A5",
       "claim_short": "Property owner is MUCCA LLC",
-      "claim_full": "The property is owned by MUCCA LLC, so tenants must coordinate registration with the owner.",
+      "claim_full": "The property is owned by MUCCA LLC, so tenants must coordinate with the owner before registering a sign.",
       "topic": "address",
       "variants": [
         "mcp",
@@ -117,50 +117,50 @@
         "mcp": null,
         "enhanced": "portlandmaps.com"
       },
-      "verified_truth": "Property ID P652977, owner MUCCA LLC per accuracy flags."
+      "verified_truth": "Accuracy flag lists owner as MUCCA LLC; MCP asserted without citation, enhanced sourced from PortlandMaps."
     },
     {
       "id": "A6",
       "claim_short": "A-boards exempt from Design Review",
-      "claim_full": "Portable A-board signs are explicitly exempt from Design Review even in design overlay zones.",
+      "claim_full": "Portable A-boards are exempt from Design Review even in the Design overlay zone.",
       "topic": "permits",
       "variants": [
         "mcp",
         "enhanced"
       ],
-      "specificity": 1.0,
-      "actionability": 0.7,
+      "specificity": 0.9,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 32.34.020 B.1.a",
       "citation_by_variant": {
         "mcp": null,
-        "enhanced": "PCC 32.34.020 B.1.a, portland.gov/code/32/34"
+        "enhanced": "PCC 32.34.020 B.1.a, https://www.portland.gov/code/32/34"
       },
-      "verified_truth": "Confirmed: PCC 32.34.020 B.1.a exempts portable signs from Design Review."
+      "verified_truth": "Enhanced cites PCC 32.34.020 B.1.a; accuracy flag confirms portable signs are exempt from Design Review."
     },
     {
       "id": "A7",
       "claim_short": "A-boards exempt from Historic Review",
-      "claim_full": "Portable signs are exempt from Historic Resource Review even when on a designated landmark.",
+      "claim_full": "Portable A-boards are exempt from Historic Resource Review even on a designated Historic Landmark.",
       "topic": "permits",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.7,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 32.34.020 C.1.a",
       "citation_by_variant": {
-        "enhanced": "PCC 32.34.020 C.1.a, portland.gov/code/32/34"
+        "enhanced": "PCC 32.34.020 C.1.a, https://www.portland.gov/code/32/34"
       },
-      "verified_truth": "Confirmed: PCC 32.34.020 C.1.a exempts portable signs from Historic Resource Review."
+      "verified_truth": "Accuracy flag confirms PCC 32.34.020 C.1.a exempts portable signs from Historic Resource Review."
     },
     {
       "id": "A8",
-      "claim_short": "Register with PP&D, not PBOT",
-      "claim_full": "A-board signs are registered through Portland Permitting & Development under the sign code, not through PBOT right-of-way permits.",
+      "claim_short": "Register sign with PP&D",
+      "claim_full": "Registration of the portable A-board is done through Portland Permitting & Development (PP&D), not PBOT or BDS.",
       "topic": "permits",
       "variants": [
         "oob",
@@ -171,18 +171,18 @@
       "actionability": 1.0,
       "correctness": "correct-action",
       "importance": 5,
-      "citation": "portland.gov/ppd/sign-permits",
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
       "citation_by_variant": {
         "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
         "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "enhanced": "portland.gov/ppd/sign-permits"
+        "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
       },
-      "verified_truth": "Confirmed: PP&D handles A-board registration; A-boards are pulled out of PBOT ROW permitting."
+      "verified_truth": "Confirmed by accuracy flags: registration goes through PP&D via mail-in form."
     },
     {
       "id": "A9",
-      "claim_short": "Fees: $114/$203/$364 for 1/2/4 years",
-      "claim_full": "Registration costs $114 for one year, $203 for two years, or $364 for four years, valid July 1, 2025 to July 1, 2026.",
+      "claim_short": "Fees: $114 / $203 / $364",
+      "claim_full": "Registration fees are $114 for 1 year, $203 for 2 years, and $364 for 4 years (valid 7/1/2025\u20137/1/2026).",
       "topic": "fees",
       "variants": [
         "oob",
@@ -191,42 +191,20 @@
       ],
       "specificity": 1.0,
       "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "portland.gov/ppd/current-fee-schedules",
-      "citation_by_variant": {
-        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "enhanced": "portland.gov/ppd/current-fee-schedules"
-      },
-      "verified_truth": "Confirmed against portland.gov fee schedule for 7/1/2025\u20137/1/2026."
-    },
-    {
-      "id": "A10",
-      "claim_short": "Mail form to 1900 SW 4th Ave Ste 5000",
-      "claim_full": "Mail the registration form and check (made out to City of Portland) to PP&D at 1900 SW 4th Ave, Ste 5000, Portland OR 97201, Attn: A-Board Sign Permits.",
-      "topic": "process",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
+      "correctness": "correct",
       "importance": 5,
       "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
       "citation_by_variant": {
         "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "mcp": null,
-        "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules; https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
       },
-      "verified_truth": "Confirmed mailing address per portland.gov."
+      "verified_truth": "All three fees verified against portland.gov fee schedule for 7/1/2025\u20137/1/2026."
     },
     {
-      "id": "A11",
-      "claim_short": "PP&D phone 503-823-7300",
-      "claim_full": "PP&D's general phone line for sign permitting questions is 503-823-7300.",
+      "id": "A10",
+      "claim_short": "PP&D mail-in address",
+      "claim_full": "Mail the registration form and check to Portland Permitting & Development, Attn: A-Board Sign Permits, 1900 SW 4th Ave, Ste 5000, Portland OR 97201.",
       "topic": "process",
       "variants": [
         "oob",
@@ -237,18 +215,40 @@
       "actionability": 1.0,
       "correctness": "correct-action",
       "importance": 4,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": null,
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Mailing address verified against accuracy flags."
+    },
+    {
+      "id": "A11",
+      "claim_short": "PP&D phone 503-823-7300",
+      "claim_full": "PP&D's general line for sign questions is 503-823-7300.",
+      "topic": "process",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 3,
       "citation": "portland.gov/ppd",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
       },
-      "verified_truth": "Plausible/verified PP&D general line."
+      "verified_truth": "Phone number 503-823-7300 confirmed by accuracy flags as PP&D general line."
     },
     {
       "id": "A12",
-      "claim_short": "Max 8 sq ft, 4 ft tall, 30 in wide",
-      "claim_full": "In the public right-of-way the sign cannot exceed 8 square feet per face, 4 feet (48 inches) tall, and 2.5 feet (30 inches) wide.",
+      "claim_short": "Max 8 sq ft per face in ROW",
+      "claim_full": "In the public right-of-way, an A-board may be at most 8 square feet per face.",
       "topic": "size",
       "variants": [
         "oob",
@@ -257,20 +257,20 @@
       ],
       "specificity": 1.0,
       "actionability": 1.0,
-      "correctness": "correct-action",
+      "correctness": "correct",
       "importance": 5,
       "citation": "PCC 32.32.030 C.3.b",
       "citation_by_variant": {
         "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
         "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "enhanced": "PCC 32.32.030 C.3.b, portland.gov/code/32/32/030"
+        "enhanced": "PCC 32.32.030 C.3.b, https://www.portland.gov/code/32/32/030"
       },
-      "verified_truth": "Confirmed: PCC 32.32.030 C.3.b sets 8 sq ft / 4 ft tall / 2.5 ft wide for ROW placement."
+      "verified_truth": "8 sq ft per face confirmed by accuracy flags; enhanced provides specific PCC subsection."
     },
     {
       "id": "A13",
-      "claim_short": "12 sq ft allowed only on private property",
-      "claim_full": "The 12 square foot allowance applies only when the sign is entirely on private property, not in the public right-of-way.",
+      "claim_short": "Max 4 ft tall, 30 in wide",
+      "claim_full": "The sign may be at most 4 feet (48 inches) tall and 30 inches (2.5 ft) wide in the public right-of-way.",
       "topic": "size",
       "variants": [
         "oob",
@@ -278,22 +278,44 @@
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.8,
+      "actionability": 1.0,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 32.32.030 G.3",
+      "importance": 5,
+      "citation": "PCC 32.32.030 C.3.b",
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 32.32.030 G.3, portland.gov/code/32/32/030"
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.b, https://www.portland.gov/code/32/32/030"
       },
-      "verified_truth": "Confirmed against portland.gov sign rules."
+      "verified_truth": "Dimensions verified by accuracy flags."
     },
     {
       "id": "A14",
+      "claim_short": "12 sq ft only on private property",
+      "claim_full": "A 12-square-foot portable sign is permitted only when kept entirely on private property, not in the right-of-way.",
+      "topic": "size",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.9,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 32.32.030 G.3",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 G.3, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "12 sq ft on private property only is verified by accuracy flags."
+    },
+    {
+      "id": "A15",
       "claim_short": "Place within 6 inches of curb",
-      "claim_full": "On the sidewalk the sign must be placed within 6 inches of the curb edge, not against the building.",
-      "topic": "setbacks",
+      "claim_full": "The A-board must be placed within 6 inches of the curb, not against the building.",
+      "topic": "safety",
       "variants": [
         "oob",
         "mcp",
@@ -307,15 +329,15 @@
       "citation_by_variant": {
         "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
         "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "enhanced": "PCC 32.32.030 C.3.e, portland.gov/code/32/32/030"
+        "enhanced": "PCC 32.32.030 C.3.e, https://www.portland.gov/code/32/32/030"
       },
-      "verified_truth": "Confirmed: PCC 32.32.030 C.3.e requires within 6 inches of curb."
+      "verified_truth": "6-inch curb placement rule confirmed by accuracy flags."
     },
     {
-      "id": "A15",
-      "claim_short": "Maintain 6-foot clear pedestrian path",
+      "id": "A16",
+      "claim_short": "6-foot clear pedestrian path",
       "claim_full": "At least 6 feet of clear pedestrian path must remain on the sidewalk past the sign.",
-      "topic": "setbacks",
+      "topic": "safety",
       "variants": [
         "oob",
         "mcp",
@@ -323,21 +345,21 @@
       ],
       "specificity": 1.0,
       "actionability": 1.0,
-      "correctness": "correct-action",
+      "correctness": "correct",
       "importance": 5,
       "citation": "PCC 32.32.030 C.3.f",
       "citation_by_variant": {
         "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
         "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "enhanced": "PCC 32.32.030 C.3.f, portland.gov/code/32/32/030"
+        "enhanced": "PCC 32.32.030 C.3.f, https://www.portland.gov/code/32/32/030"
       },
-      "verified_truth": "Confirmed: PCC 32.32.030 C.3.f requires 6-foot clearance."
+      "verified_truth": "6-foot pedestrian clearance verified by accuracy flags."
     },
     {
-      "id": "A16",
-      "claim_short": "Sidewalk must be at least 8 ft wide",
-      "claim_full": "A-boards in the right-of-way are not allowed unless the sidewalk is at least 8 feet wide.",
-      "topic": "setbacks",
+      "id": "A17",
+      "claim_short": "Sidewalk must be \u22658 ft wide",
+      "claim_full": "A-boards are not allowed on sidewalks less than 8 feet wide.",
+      "topic": "safety",
       "variants": [
         "oob",
         "mcp",
@@ -345,39 +367,39 @@
       ],
       "specificity": 1.0,
       "actionability": 1.0,
-      "correctness": "correct-action",
+      "correctness": "correct",
       "importance": 4,
       "citation": "PCC 32.32.030 C.3.i.(3)",
       "citation_by_variant": {
         "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
         "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "enhanced": "PCC 32.32.030 C.3.i.(3), portland.gov/code/32/32/030"
+        "enhanced": "PCC 32.32.030 C.3.i.(3), https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
       },
-      "verified_truth": "Confirmed: 8-foot minimum sidewalk width required."
+      "verified_truth": "8-foot minimum sidewalk width verified by accuracy flags."
     },
     {
-      "id": "A17",
-      "claim_short": "Downtown 8-ft pedestrian zone, 7am-9pm",
-      "claim_full": "Because the address is in the Downtown High Pedestrian Traffic Area, an 8-foot pedestrian zone applies on sidewalks over 10 feet wide between 7 a.m. and 9 p.m.",
-      "topic": "setbacks",
+      "id": "A18",
+      "claim_short": "Downtown 8-ft pedestrian zone 7am-9pm",
+      "claim_full": "In the Downtown High Pedestrian Traffic Area, the pedestrian use zone is 8 feet on sidewalks more than 10 feet wide between 7 a.m. and 9 p.m.",
+      "topic": "safety",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
       "actionability": 0.9,
       "correctness": "correct",
-      "importance": 4,
+      "importance": 3,
       "citation": "PCC 14A.50.030 A.3 / F.1",
       "citation_by_variant": {
-        "enhanced": "PCC 14A.50.030 A.3, F.1, portland.gov/code/14/a50/030"
+        "enhanced": "PCC 14A.50.030 A.3, https://www.portland.gov/code/14/a50/030; PCC 14A.50.030 F.1"
       },
-      "verified_truth": "Confirmed: PCC 14A.50.030 governs Downtown High Pedestrian Traffic Area pedestrian-use zone."
+      "verified_truth": "PCC 14A.50.030 Downtown High Pedestrian Traffic Area rule verified by accuracy flags."
     },
     {
-      "id": "A18",
+      "id": "A19",
       "claim_short": "One sign per public entrance",
-      "claim_full": "Only one sign is allowed per public entrance; tenants who share an entrance share the single sign allowance.",
-      "topic": "size",
+      "claim_full": "Only one A-board is allowed per public entrance; shared entrances get one sign total for all tenants.",
+      "topic": "signs",
       "variants": [
         "oob",
         "mcp",
@@ -389,35 +411,17 @@
       "importance": 4,
       "citation": "PCC 32.32.030 G.2.a",
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 32.32.030 G.2.a, portland.gov/code/32/32/030"
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 G.2.a, https://www.portland.gov/code/32/32/030"
       },
-      "verified_truth": "Confirmed: PCC 32.32.030 G.2.a one-sign-per-entrance rule."
-    },
-    {
-      "id": "A19",
-      "claim_short": "Sign must be adjacent to own property",
-      "claim_full": "The sign may only be placed adjacent to the property where it is registered, not across the street or on neighboring property.",
-      "topic": "setbacks",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
-      "citation_by_variant": {
-        "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
-      },
-      "verified_truth": "Consistent with portland.gov sign rules."
+      "verified_truth": "One-sign-per-entrance rule verified by accuracy flags."
     },
     {
       "id": "A20",
-      "claim_short": "No corners, transit stops, or ADA ramps",
-      "claim_full": "A-boards are prohibited at street corners, near transit stops, at ADA curb ramps, and at building exits or fire escapes.",
-      "topic": "setbacks",
+      "claim_short": "Prohibited at corners, transit, ramps",
+      "claim_full": "A-boards are prohibited at street corners, near transit stops, at ADA curb ramps, and at building exits/fire escapes.",
+      "topic": "safety",
       "variants": [
         "oob",
         "mcp",
@@ -425,124 +429,142 @@
       ],
       "specificity": 0.9,
       "actionability": 1.0,
-      "correctness": "correct-action",
+      "correctness": "correct",
       "importance": 5,
       "citation": "PCC 32.32.030 C.3.c / C.3.g",
       "citation_by_variant": {
         "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
         "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "enhanced": "PCC 32.32.030 C.3.c, C.3.g.(1), portland.gov/code/32/32/030"
+        "enhanced": "PCC 32.32.030 C.3.c & C.3.g.(1), https://www.portland.gov/code/32/32/030"
       },
-      "verified_truth": "Confirmed: prohibited at corners, transit stops, ADA ramps, exits per PCC 32.32.030."
+      "verified_truth": "Prohibited locations verified by accuracy flags; enhanced cites specific subsections."
     },
     {
       "id": "A21",
-      "claim_short": "Cannot attach to anything",
-      "claim_full": "The sign cannot be attached to poles, meters, trees, the sidewalk, or any street furniture; it must remain portable.",
-      "topic": "safety",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": "PCC 32.32.030 C.3.h",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 32.32.030 C.3.h, portland.gov/code/32/32/030"
-      },
-      "verified_truth": "Confirmed: PCC 32.32.030 C.3.h portability requirement."
-    },
-    {
-      "id": "A22",
-      "claim_short": "No lights, electrical, or digital displays",
-      "claim_full": "Portable signs may not include lighting, electrical components, digital screens, or changing-image features.",
-      "topic": "safety",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 32.32.030 G.4",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": null,
-        "enhanced": "PCC 32.32.030 G.4, portland.gov/code/32/32/030"
-      },
-      "verified_truth": "Confirmed: PCC 32.32.030 G.4 prohibits electrical/changing-image features."
-    },
-    {
-      "id": "A23",
-      "claim_short": "MAX stop at SW 10th & Morrison",
-      "claim_full": "The MAX Blue/Red Line Galleria/SW 10th Ave platform is at the SW 10th corner immediately east of the building, creating a no-sign zone.",
+      "claim_short": "MAX stop at 10th & Morrison",
+      "claim_full": "The Galleria/SW 10th Ave MAX Blue/Red Line platform sits adjacent to the property's east end, creating a no-sign zone there.",
       "topic": "address",
       "variants": [
         "mcp",
         "enhanced"
       ],
-      "specificity": 1.0,
+      "specificity": 0.9,
       "actionability": 1.0,
-      "correctness": "correct-judg",
+      "correctness": "correct",
       "importance": 4,
       "citation": null,
       "citation_by_variant": {
         "mcp": null,
         "enhanced": null
       },
-      "verified_truth": "Galleria/SW 10th Ave platform is on Morrison; proximity to 1022 SW Morrison should be confirmed but matches accuracy flags."
+      "verified_truth": "Accuracy flag confirms Galleria/SW 10th Ave MAX platform location east of building; transit-stop exclusion is judgment-based per code."
     },
     {
-      "id": "A24",
-      "claim_short": "Streetcar stops at 10th & Alder, 11th & Taylor",
-      "claim_full": "Portland Streetcar NS line stops at 10th & Alder and 11th & Taylor add additional corner constraints near the property.",
+      "id": "A22",
+      "claim_short": "Streetcar stops on the corridor",
+      "claim_full": "The Portland Streetcar NS line stops at 10th & Alder and 11th & Taylor, adding constraints near the corners.",
       "topic": "address",
       "variants": [
         "oob"
       ],
       "specificity": 1.0,
-      "actionability": 0.7,
-      "correctness": "correct",
+      "actionability": 0.6,
+      "correctness": "correct-judg",
       "importance": 2,
       "citation": null,
       "citation_by_variant": {
         "oob": null
       },
-      "verified_truth": "Plausible per accuracy flags; NS streetcar line runs the corridor."
+      "verified_truth": "Plausible per accuracy notes; streetcar NS line runs the corridor."
     },
     {
-      "id": "A25",
-      "claim_short": "Three citations triggers impound",
-      "claim_full": "Three citations on the same sign can trigger impoundment, registration revocation, and a bar on future registrations.",
-      "topic": "safety",
+      "id": "A23",
+      "claim_short": "No attaching to anything",
+      "claim_full": "The sign cannot be attached to poles, meters, trees, street furniture, or the sidewalk; it must remain portable.",
+      "topic": "signs",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "PCC 32.32.030 C.3.h",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 C.3.h, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "No-attachment rule verified by accuracy flags."
+    },
+    {
+      "id": "A24",
+      "claim_short": "No lights, electrical, or digital",
+      "claim_full": "Lights, electrical components, and digital/changing displays are prohibited on portable signs.",
+      "topic": "signs",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "PCC 32.32.030 G.4",
+      "citation_by_variant": {
+        "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
+        "enhanced": "PCC 32.32.030 G.4, https://www.portland.gov/code/32/32/030"
+      },
+      "verified_truth": "Electrical/digital prohibition verified by accuracy flags."
+    },
+    {
+      "id": "A25",
+      "claim_short": "Signs only adjacent to own property",
+      "claim_full": "A-boards may only be placed adjacent to the property where they are registered, not across the street or on neighboring property.",
+      "topic": "signs",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
+      },
+      "verified_truth": "Adjacent-property rule cited from official portland.gov page."
+    },
+    {
+      "id": "A26",
+      "claim_short": "Three citations \u2192 impound + revocation",
+      "claim_full": "Three citations on the same sign result in impoundment, registration revocation, and a future-registration ban.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 4,
       "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
       "citation_by_variant": {
         "oob": "portland.gov/ppd/sign-permits/portable-signs-boards",
         "mcp": "portland.gov/ppd/sign-permits/portable-signs-boards",
-        "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
       },
-      "verified_truth": "Confirmed: impound + revocation after three citations."
+      "verified_truth": "Three-citation enforcement consequence verified by accuracy flags."
     },
     {
-      "id": "A26",
-      "claim_short": "Free 15-minute permitting appointment",
-      "claim_full": "PP&D offers a free 15-minute virtual appointment with a Residential & Signs permitting technician to vet placement before submitting.",
+      "id": "A27",
+      "claim_short": "Free 15-minute appointment available",
+      "claim_full": "PP&D offers a free 15-minute virtual appointment with a Residential & Signs Permitting Technician to confirm specifics before submission.",
       "topic": "process",
       "variants": [
         "oob",
@@ -555,16 +577,52 @@
       "importance": 3,
       "citation": "portland.gov/ppd/early-assistance/15-minute-question-appointments",
       "citation_by_variant": {
-        "oob": "portland.gov/ppd/early-assistance/15-minute-question-appointments",
-        "mcp": "portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs",
-        "enhanced": "portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs"
+        "oob": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments",
+        "mcp": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs",
+        "enhanced": "https://www.portland.gov/ppd/early-assistance/15-minute-question-appointments#rs-signs"
       },
-      "verified_truth": "Confirmed: free 15-minute Residential & Signs appointment is available."
+      "verified_truth": "15-minute appointment program verified on portland.gov."
     },
     {
-      "id": "A27",
+      "id": "A28",
+      "claim_short": "No PBOT right-of-way permit needed",
+      "claim_full": "A-boards do not require a separate PBOT right-of-way permit; Portland intentionally handles them under Title 32 via PP&D.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 1.0,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "portland.gov/ppd/sign-permits",
+      "citation_by_variant": {
+        "enhanced": "https://www.portland.gov/ppd/sign-permits"
+      },
+      "verified_truth": "Enhanced response correctly distinguishes PP&D vs. PBOT jurisdiction for A-boards, per accuracy notes."
+    },
+    {
+      "id": "A29",
+      "claim_short": "No insurance bond required",
+      "claim_full": "Portland does not require an encroachment insurance bond or rider for A-board signs.",
+      "topic": "permits",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.8,
+      "correctness": "correct-judg",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "enhanced": null
+      },
+      "verified_truth": "Not contradicted by accuracy flags; Portland treats A-boards under Title 32 rather than as Title 17 encroachments."
+    },
+    {
+      "id": "A30",
       "claim_short": "Tenants must coordinate with owner",
-      "claim_full": "Tenants and property owners must coordinate registration; written sign-off from the owner is recommended before submitting.",
+      "claim_full": "Tenants and property owners must coordinate registration and display of the sign.",
       "topic": "process",
       "variants": [
         "mcp",
@@ -577,65 +635,47 @@
       "citation": "portland.gov/ppd/sign-permits/portable-signs-boards",
       "citation_by_variant": {
         "mcp": null,
-        "enhanced": "portland.gov/ppd/sign-permits/portable-signs-boards"
+        "enhanced": "https://www.portland.gov/ppd/sign-permits/portable-signs-boards"
       },
-      "verified_truth": "Confirmed: owner-tenant coordination required per portland.gov."
+      "verified_truth": "Coordination requirement is on the official portable-signs page; consistent with accuracy flags."
     },
     {
-      "id": "A28",
-      "claim_short": "No insurance or bond required",
-      "claim_full": "Portland does not require an insurance rider or liability bond for portable A-board signs in the right-of-way.",
-      "topic": "permits",
+      "id": "A31",
+      "claim_short": "Verify zone on PortlandMaps",
+      "claim_full": "Confirm the base zone and overlays for 1022 SW Morrison via portlandmaps.com before spending money on a sign.",
+      "topic": "process",
       "variants": [
+        "oob",
         "enhanced"
       ],
-      "specificity": 0.8,
-      "actionability": 0.7,
-      "correctness": "correct",
+      "specificity": 0.7,
+      "actionability": 1.0,
+      "correctness": "correct-action",
       "importance": 3,
-      "citation": null,
+      "citation": "portlandmaps.com",
       "citation_by_variant": {
-        "enhanced": null
+        "oob": "https://www.portlandmaps.com",
+        "enhanced": "https://www.portlandmaps.com/"
       },
-      "verified_truth": "Consistent with portland.gov A-board page; no insurance requirement listed."
+      "verified_truth": "Standard verification step; PortlandMaps is the city's authoritative property lookup."
     },
     {
-      "id": "A29",
-      "claim_short": "OOB hedged on zoning lookup",
-      "claim_full": "The OOB response explicitly admitted it could not pull parcel/zoning data and inferred CX zoning from address context.",
-      "topic": "citations",
+      "id": "A32",
+      "claim_short": "OOB couldn't pull parcel data",
+      "claim_full": "The OOB response explicitly admitted it could not directly pull parcel/zoning data and was inferring CX from the address.",
+      "topic": "other",
       "variants": [
         "oob"
       ],
-      "specificity": 0.6,
+      "specificity": 1.0,
       "actionability": 0.4,
       "correctness": "admitted-gap",
-      "importance": 3,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "oob": "portlandmaps.com"
-      },
-      "verified_truth": "Honest hedge per accuracy flags; CX assignment was inference, not retrieval."
-    },
-    {
-      "id": "A30",
-      "claim_short": "Sign must be portable / brought in",
-      "claim_full": "The sign must remain portable and is typically brought in after business hours since it cannot be anchored to the ground.",
-      "topic": "safety",
-      "variants": [
-        "oob",
-        "mcp"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
+      "importance": 2,
       "citation": null,
       "citation_by_variant": {
-        "oob": null,
-        "mcp": null
+        "oob": null
       },
-      "verified_truth": "Consistent with PCC 32.32.030 C.3.h portability requirement."
+      "verified_truth": "OOB honestly hedged \u2014 appropriate transparency given lack of MCP access."
     }
   ]
 }

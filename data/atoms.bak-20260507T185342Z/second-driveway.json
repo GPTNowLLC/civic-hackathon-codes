@@ -21,9 +21,9 @@
   "atoms": [
     {
       "id": "A1",
-      "claim_short": "Bottom line: second driveway not allowed",
-      "claim_full": "A second curb cut is almost certainly not approvable at this address under Portland's current rules.",
-      "topic": "permits",
+      "claim_short": "Second driveway almost certainly not allowed",
+      "claim_full": "Adding a second curb cut at 4043 NE 33rd Ave is almost certainly not approvable under Portland's current rules.",
+      "topic": "zoning",
       "variants": [
         "oob",
         "mcp",
@@ -31,20 +31,20 @@
       ],
       "specificity": 0.7,
       "actionability": 0.9,
-      "correctness": "correct",
+      "correctness": "correct-judg",
       "importance": 5,
       "citation": "TRN-10.40",
       "citation_by_variant": {
         "oob": "TRN-10.40",
         "mcp": "TRN-10.40",
-        "enhanced": "TRN-10.40"
+        "enhanced": "TRN-10.40 D.2"
       },
-      "verified_truth": "All three responses correctly conclude that the combination of single-dwelling-zone limits and the 100 ft separation rule on a 50 ft frontage forecloses a second curb cut."
+      "verified_truth": "Single-dwelling lots cannot have driveway access on more than one frontage and need 100 ft separation between centerlines on a single frontage; ~50 ft of frontage makes a second cut impossible."
     },
     {
       "id": "A2",
-      "claim_short": "Property is zoned R5",
-      "claim_full": "The base zoning at 4043 NE 33rd Ave is R5 (single-dwelling, ~5,000 sq ft minimum lot).",
+      "claim_short": "Property is R5 single-dwelling",
+      "claim_full": "The property is zoned R5 (Residential 5,000), a single-dwelling residential zone.",
       "topic": "zoning",
       "variants": [
         "oob",
@@ -55,18 +55,18 @@
       "actionability": 0.6,
       "correctness": "correct",
       "importance": 4,
-      "citation": "PCC 33.110 / PortlandMaps",
+      "citation": "PortlandMaps / PCC 33.110",
       "citation_by_variant": {
         "oob": null,
-        "mcp": "PortlandMaps record",
-        "enhanced": "PCC 33.110, https://www.portland.gov/code/33/100s/110"
+        "mcp": null,
+        "enhanced": "PCC 33.110 (https://www.portland.gov/code/33/100s/110)"
       },
-      "verified_truth": "Confirmed: zoning is R5 with 'h' (Aircraft Landing) overlay."
+      "verified_truth": "Zoning is R5 with an 'h' Aircraft Landing overlay; oob only hedged 'probably R5,' mcp and enhanced confirmed via PortlandMaps."
     },
     {
       "id": "A3",
-      "claim_short": "Aircraft Landing 'h' overlay only",
-      "claim_full": "The lot's only overlay is the 'h' Aircraft Landing overlay; no historic, conservation, design, environmental, or plan-district overlays apply.",
+      "claim_short": "'h' Aircraft Landing overlay only",
+      "claim_full": "The only overlay on the parcel is the 'h' Aircraft Landing overlay; there is no historic, conservation, design, environmental, or plan-district overlay.",
       "topic": "zoning",
       "variants": [
         "mcp",
@@ -76,83 +76,17 @@
       "actionability": 0.5,
       "correctness": "correct",
       "importance": 3,
-      "citation": "PortlandMaps zoning record",
+      "citation": "PortlandMaps",
       "citation_by_variant": {
-        "mcp": "PortlandMaps",
-        "enhanced": "https://www.portlandmaps.com"
+        "mcp": null,
+        "enhanced": "PortlandMaps zoning record"
       },
-      "verified_truth": "Confirmed: 'h' Aircraft Landing overlay is the only overlay; no other special districts apply."
+      "verified_truth": "Accuracy flags confirm 'h' Aircraft Landing is the only overlay; no historic/conservation/plan-district overlays."
     },
     {
       "id": "A4",
-      "claim_short": "Lot ~50 ft x ~105 ft, ~5,250 sq ft",
-      "claim_full": "The lot is approximately 50 ft of frontage on NE 33rd by ~105\u2013107 ft deep, totaling ~5,227\u20135,353 sq ft.",
-      "topic": "address",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": "PortlandMaps",
-        "enhanced": "https://www.portlandmaps.com"
-      },
-      "verified_truth": "Confirmed: lot dimensions ~50 ft \u00d7 105\u2013107 ft, ~5,227\u20135,353 sq ft, Tax ID R101172."
-    },
-    {
-      "id": "A5",
-      "claim_short": "House 1,853 sq ft, built 1930",
-      "claim_full": "The existing house is 1,853 sq ft and was built in 1930.",
-      "topic": "address",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": "PortlandMaps",
-        "enhanced": "https://www.portlandmaps.com"
-      },
-      "verified_truth": "Confirmed: 1,853 sq ft single-family house built 1930."
-    },
-    {
-      "id": "A6",
-      "claim_short": "Neighborhood is Alameda",
-      "claim_full": "PortlandMaps lists the property's neighborhood as Alameda, not Beaumont-Wilshire.",
-      "topic": "address",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.3,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "PortlandMaps",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": "PortlandMaps",
-        "enhanced": "https://www.portlandmaps.com"
-      },
-      "verified_truth": "Confirmed: PortlandMaps lists neighborhood as Alameda."
-    },
-    {
-      "id": "A7",
-      "claim_short": "Lot is mid-block with no alley",
-      "claim_full": "The lot is mid-block on the west side of NE 33rd between Mason and Skidmore, with no alley access and no side-street frontage.",
+      "claim_short": "Lot ~50 ft \u00d7 ~105 ft (~5,250 sf)",
+      "claim_full": "The lot is approximately 50 ft of frontage on NE 33rd by ~105\u2013107 ft deep, totaling roughly 5,227\u20135,353 sq ft.",
       "topic": "address",
       "variants": [
         "oob",
@@ -166,60 +100,60 @@
       "citation": "PortlandMaps",
       "citation_by_variant": {
         "oob": null,
-        "mcp": "PortlandMaps",
+        "mcp": null,
         "enhanced": "https://www.portlandmaps.com"
       },
-      "verified_truth": "Confirmed: mid-block lot with no alley and only NE 33rd frontage."
+      "verified_truth": "Confirmed in flags: ~50 ft \u00d7 ~105\u2013107 ft, ~5,250\u20135,353 sq ft (Tax ID R101172, Alameda Park Block 27 Lot 5)."
     },
     {
-      "id": "A8",
-      "claim_short": "NE 33rd is a District Collector",
-      "claim_full": "NE 33rd Ave at this location is classified as a District Collector under Portland's Transportation System Plan.",
-      "topic": "zoning",
+      "id": "A5",
+      "claim_short": "House 1,853 sf built 1930",
+      "claim_full": "The existing house is 1,853 sq ft, built in 1930.",
+      "topic": "address",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.6,
+      "actionability": 0.3,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "PBOT TSP",
+      "importance": 2,
+      "citation": "PortlandMaps",
       "citation_by_variant": {
         "oob": null,
         "mcp": null,
-        "enhanced": "https://grantpark-na.org/wp-content/uploads/PBOT-email-no-addresses.pdf ; https://portland-tsp.com/"
+        "enhanced": "https://www.portlandmaps.com"
       },
-      "verified_truth": "Plausibly correct per PBOT's Transportation System Plan; the enhanced response flags that block-by-block confirmation against the TSP map is recommended."
+      "verified_truth": "Property record confirms 1,853 sq ft house built 1930."
     },
     {
-      "id": "A9",
-      "claim_short": "TRN-10.40 governs driveways",
-      "claim_full": "PBOT's administrative rule TRN-10.40 (Driveways: Operation and Location) is the controlling rule for driveway location, number, and design.",
-      "topic": "citations",
+      "id": "A6",
+      "claim_short": "Neighborhood is Alameda",
+      "claim_full": "PortlandMaps lists this address in the Alameda neighborhood, not Beaumont-Wilshire.",
+      "topic": "address",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
       "specificity": 0.9,
-      "actionability": 0.5,
+      "actionability": 0.4,
       "correctness": "correct",
-      "importance": 4,
-      "citation": "TRN-10.40",
+      "importance": 2,
+      "citation": "PortlandMaps",
       "citation_by_variant": {
-        "oob": "TRN-10.40",
-        "mcp": "TRN-10.40",
-        "enhanced": "https://www.portland.gov/auditor/council-clerk/documents/trn-1040-driveways-operation-and-location/download"
+        "oob": null,
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
       },
-      "verified_truth": "Correct: TRN-10.40 is PBOT's published driveway rule."
+      "verified_truth": "Neighborhood is Alameda per PortlandMaps; the enriched prompt's 'Beaumont-Wilshire' label is incorrect for this address."
     },
     {
-      "id": "A10",
-      "claim_short": "One driveway frontage in single-dwelling zones",
-      "claim_full": "Lots in single-dwelling zones cannot have driveway access on more than one street frontage.",
-      "topic": "permits",
+      "id": "A7",
+      "claim_short": "Mid-block, no alley or side street",
+      "claim_full": "The lot is mid-block on the west side of NE 33rd Ave with no alley behind it and no side-street frontage.",
+      "topic": "address",
       "variants": [
         "oob",
         "mcp",
@@ -229,18 +163,126 @@
       "actionability": 0.8,
       "correctness": "correct",
       "importance": 5,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null,
+        "mcp": null,
+        "enhanced": null
+      },
+      "verified_truth": "Confirmed in flags: no alley access west side of NE 33rd between Mason and Skidmore; mid-block lot with single frontage."
+    },
+    {
+      "id": "A8",
+      "claim_short": "NE 33rd is a District Collector",
+      "claim_full": "NE 33rd Ave at this block is classified as a District Collector, an arterial street with stricter driveway review.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "Portland TSP",
+      "citation_by_variant": {
+        "oob": null,
+        "enhanced": "https://grantpark-na.org/wp-content/uploads/PBOT-email-no-addresses.pdf and https://www.portland.gov/transportation/planning/tsp"
+      },
+      "verified_truth": "NE 33rd is a District Collector per the Transportation System Plan; mcp said 'Neighborhood Collector or higher' which is directionally correct but less specific."
+    },
+    {
+      "id": "A9",
+      "claim_short": "TRN-10.40 governs driveways",
+      "claim_full": "PBOT administrative rule TRN-10.40 (Driveways: Operation and Location) sets the rules for driveway location, number, and design.",
+      "topic": "citations",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 4,
+      "citation": "TRN-10.40",
+      "citation_by_variant": {
+        "oob": "TRN-10.40",
+        "mcp": "PBOT TRN-10.40",
+        "enhanced": "TRN-10.40 (https://www.portland.gov/auditor/council-clerk/documents/trn-1040-driveways-operation-and-location/download)"
+      },
+      "verified_truth": "TRN-10.40 is the controlling PBOT administrative rule for driveway location, number, and design."
+    },
+    {
+      "id": "A10",
+      "claim_short": "One driveway frontage in single-dwelling zones",
+      "claim_full": "Single-dwelling zone lots cannot have driveway access on more than one street frontage.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.7,
+      "correctness": "correct",
+      "importance": 5,
       "citation": "TRN-10.40 D.2",
       "citation_by_variant": {
         "oob": "TRN-10.40",
-        "mcp": "TRN-10.40",
-        "enhanced": "TRN-10.40 D.2, https://www.portland.gov/auditor/council-clerk/documents/trn-1040-driveways-operation-and-location/download"
+        "mcp": "TRN-10.40 (2022 code update)",
+        "enhanced": "TRN-10.40 D.2"
       },
-      "verified_truth": "Correct per TRN-10.40 (forces corner lots in single-dwelling zones to use only the lower-classified street)."
+      "verified_truth": "TRN-10.40 D.2 limits single-dwelling lots to one driveway frontage."
     },
     {
       "id": "A11",
       "claim_short": "100 ft centerline separation required",
-      "claim_full": "Two driveways on the same frontage must have at least 100 feet of separation between centerlines.",
+      "claim_full": "Two driveways on the same frontage require 100 feet of separation between centerlines.",
+      "topic": "zoning",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 0.8,
+      "correctness": "correct",
+      "importance": 5,
+      "citation": "TRN-10.40 D.2",
+      "citation_by_variant": {
+        "oob": "TRN-10.40",
+        "mcp": "TRN-10.40",
+        "enhanced": "TRN-10.40 D.2"
+      },
+      "verified_truth": "100-foot centerline separation between driveways on the same frontage is required by TRN-10.40 D.2; ~50 ft of frontage makes this impossible."
+    },
+    {
+      "id": "A12",
+      "claim_short": "Forward-motion required on collectors",
+      "claim_full": "Driveways accessing a Neighborhood Collector or higher street must support forward-motion entry and exit.",
+      "topic": "safety",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.5,
+      "correctness": "correct",
+      "importance": 3,
+      "citation": "TRN-10.40 D.4",
+      "citation_by_variant": {
+        "oob": "TRN-10.40",
+        "mcp": "TRN-10.40",
+        "enhanced": "TRN-10.40 D.4"
+      },
+      "verified_truth": "TRN-10.40 D.4 requires forward-motion entry/exit on Neighborhood Collector or higher streets."
+    },
+    {
+      "id": "A13",
+      "claim_short": "Max double-width driveway 20 ft",
+      "claim_full": "A residential driveway may be widened to a maximum double-width of 20 feet without needing a second curb cut.",
       "topic": "size",
       "variants": [
         "oob",
@@ -250,41 +292,19 @@
       "specificity": 1.0,
       "actionability": 0.9,
       "correctness": "correct",
-      "importance": 5,
-      "citation": "TRN-10.40 D.2",
+      "importance": 4,
+      "citation": "TRN-10.40 E.1.a.(1)",
       "citation_by_variant": {
         "oob": "TRN-10.40",
-        "mcp": "TRN-10.40",
-        "enhanced": "TRN-10.40 D.2, https://www.portland.gov/auditor/council-clerk/documents/trn-1040-driveways-operation-and-location/download"
+        "mcp": null,
+        "enhanced": "TRN-10.40 E.1.a.(1)"
       },
-      "verified_truth": "Cited consistently across responses; ~50 ft of frontage makes compliance mathematically impossible."
+      "verified_truth": "Maximum double-width residential driveway is 20 ft per TRN-10.40 E.1.a.(1)."
     },
     {
-      "id": "A12",
-      "claim_short": "Forward-motion required on Collectors+",
-      "claim_full": "Driveways on Neighborhood Collector or higher streets must allow forward-motion entry and exit, demonstrated by engineer-stamped turning movements.",
-      "topic": "safety",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "TRN-10.40 D.4",
-      "citation_by_variant": {
-        "oob": "TRN-10.40",
-        "mcp": "TRN-10.40",
-        "enhanced": "TRN-10.40 D.4, https://www.portland.gov/auditor/council-clerk/documents/trn-1040-driveways-operation-and-location/download"
-      },
-      "verified_truth": "Correct per TRN-10.40; applies to NE 33rd as a District Collector."
-    },
-    {
-      "id": "A13",
+      "id": "A14",
       "claim_short": "5 ft straight curb between driveways",
-      "claim_full": "Any two driveways must have at least 5 feet of straight curb between them.",
+      "claim_full": "Even where two driveways are allowed, 5 feet of straight curb between them is required.",
       "topic": "size",
       "variants": [
         "enhanced"
@@ -295,14 +315,14 @@
       "importance": 2,
       "citation": "TRN-10.40 E.2",
       "citation_by_variant": {
-        "enhanced": "TRN-10.40 E.2, https://www.portland.gov/auditor/council-clerk/documents/trn-1040-driveways-operation-and-location/download"
+        "enhanced": "TRN-10.40 E.2"
       },
-      "verified_truth": "Cited only in the enhanced response; consistent with TRN-10.40 standards."
+      "verified_truth": "TRN-10.40 E.2 requires 5 feet of straight curb between driveway cuts."
     },
     {
-      "id": "A14",
-      "claim_short": "25 ft from corner",
-      "claim_full": "No part of a driveway may be closer than 25 feet to a street intersection.",
+      "id": "A15",
+      "claim_short": "25 ft from street corner",
+      "claim_full": "No part of a driveway can be closer than 25 feet to a street intersection corner.",
       "topic": "size",
       "variants": [
         "enhanced"
@@ -313,149 +333,93 @@
       "importance": 2,
       "citation": "TRN-10.40 D.1",
       "citation_by_variant": {
-        "enhanced": "TRN-10.40 D.1, https://www.portland.gov/auditor/council-clerk/documents/trn-1040-driveways-operation-and-location/download"
+        "enhanced": "TRN-10.40 D.1"
       },
-      "verified_truth": "Cited only in the enhanced response; standard TRN-10.40 corner-clearance rule."
-    },
-    {
-      "id": "A15",
-      "claim_short": "Driveway widths 9-12 single, up to 20 double",
-      "claim_full": "Residential single-family driveways are permitted at 9\u201312 ft single-width or up to 20 ft double-width.",
-      "topic": "size",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 0.95,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "TRN-10.40 E.1.a.(1)",
-      "citation_by_variant": {
-        "oob": null,
-        "mcp": "TRN-10.40",
-        "enhanced": "TRN-10.40 E.1.a.(1), https://www.portland.gov/auditor/council-clerk/documents/trn-1040-driveways-operation-and-location/download"
-      },
-      "verified_truth": "Correct: 20 ft double-width is the maximum allowed for residential."
+      "verified_truth": "TRN-10.40 D.1 requires a 25-foot setback from any street corner; not directly relevant to this mid-block lot."
     },
     {
       "id": "A16",
       "claim_short": "40% front-yard paving cap",
-      "claim_full": "No more than 40% of the area between the front lot line and the front building line may be paved or used as vehicle area.",
+      "claim_full": "No more than 40 percent of the area between the front lot line and front building line may be paved or used for vehicle area.",
       "topic": "size",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.9,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 4,
       "citation": "PCC 33.266.120.C.1.b",
       "citation_by_variant": {
-        "enhanced": "PCC 33.266.120.C.1.b, https://www.portland.gov/sites/default/files/code/266-parking_1.pdf"
+        "enhanced": "PCC 33.266.120.C.1.b (https://www.portland.gov/sites/default/files/code/266-parking_1.pdf)"
       },
-      "verified_truth": "Correct: 40% front-yard paving cap is the published Title 33 standard."
+      "verified_truth": "PCC 33.266.120.C.1.b limits front-yard vehicle/paved area to 40% between front lot line and front building line."
     },
     {
       "id": "A17",
-      "claim_short": "RVs/trailers banned in front yard",
-      "claim_full": "Trailers, RVs, and medium-truck motor homes cannot be parked between the front lot line and the front building line.",
-      "topic": "definitions",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "correct",
-      "importance": 4,
-      "citation": "PCC 33.266.150.E and D.2",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.266.150.E and D.2, https://www.portland.gov/sites/default/files/code/266-parking_1.pdf"
-      },
-      "verified_truth": "Correct: Title 33 restricts front-yard parking of RVs/trailers."
-    },
-    {
-      "id": "A18",
-      "claim_short": "Driveways must be paved",
-      "claim_full": "Gravel parking pads count as driveways and must be paved per Title 33.",
-      "topic": "definitions",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.8,
-      "actionability": 0.7,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 33.266.120.E.1",
-      "citation_by_variant": {
-        "enhanced": "PCC 33.266.120.E.1, https://www.portland.gov/sites/default/files/code/266-parking_1.pdf"
-      },
-      "verified_truth": "Correct: driveways and parking areas must be paved with limited exceptions."
-    },
-    {
-      "id": "A19",
-      "claim_short": "PBOT can revoke driveway permits",
-      "claim_full": "PCC 17.28.110 gives PBOT authority to deny or revoke driveway permits and require corrections within 60 days.",
+      "claim_short": "PCC 17.28.110 curb-cut permit authority",
+      "claim_full": "Portland City Code 17.28.110 governs curb-cut permits and gives PBOT authority to approve, condition, or deny driveway access.",
       "topic": "permits",
       "variants": [
         "oob",
+        "mcp",
         "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.5,
+      "specificity": 1.0,
+      "actionability": 0.7,
       "correctness": "correct",
-      "importance": 3,
-      "citation": "PCC 17.28.110.B/D/E",
+      "importance": 4,
+      "citation": "PCC 17.28.110",
       "citation_by_variant": {
-        "oob": "Title 17.28.110.D",
-        "enhanced": "PCC 17.28.110.B and 17.28.110.E, https://www.portland.gov/code/17/28/110"
+        "oob": "Title 17.28.110",
+        "mcp": "PCC 17.28.110.F",
+        "enhanced": "PCC 17.28.110 (https://www.portland.gov/code/17/28/110)"
       },
-      "verified_truth": "Correct: PBOT has revocation/correction authority under PCC 17.28.110."
+      "verified_truth": "PCC 17.28.110 is the curb-cut permit authority; flags also confirm 17.28.110.D revocation power and 17.28.110.E correction window."
     },
     {
-      "id": "A20",
+      "id": "A18",
       "claim_short": "Driveway Design Exception path",
-      "claim_full": "A Driveway Design Exception under PCC 17.28.110 (subsection F per MCP, unspecified per enhanced) is the only path to deviate from TRN-10.40 standards.",
-      "topic": "process",
+      "claim_full": "A Driveway Design Exception is the only legal path to vary from TRN-10.40 standards, reviewed by PBOT's Traffic Engineer.",
+      "topic": "permits",
       "variants": [
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.7,
+      "specificity": 0.9,
       "actionability": 0.7,
-      "correctness": "PARTIAL-WRONG",
+      "correctness": "correct",
       "importance": 3,
       "citation": "PCC 17.28.110.F",
       "citation_by_variant": {
         "mcp": "PCC 17.28.110.F",
         "enhanced": "https://www.portland.gov/transportation/development/permit-and-appeal-applications"
       },
-      "verified_truth": "The exception path itself is real, but the MCP response's specific subsection citation (17.28.110.F) needs verification \u2014 at least one specific code/rule reference may be slightly off per evaluator notes."
+      "verified_truth": "A Design Exception under PCC 17.28.110 is the formal mechanism to depart from TRN-10.40 standards; mcp specifies subsection .F (verify exact subsection)."
     },
     {
-      "id": "A21",
-      "claim_short": "Parking minimums removed citywide 2022",
-      "claim_full": "Portland eliminated parking minimums citywide in 2022, so ADUs and similar uses do not require dedicated parking.",
-      "topic": "zoning",
+      "id": "A19",
+      "claim_short": "2025 SWMM threshold 1,000 sq ft",
+      "claim_full": "The 2025 Stormwater Management Manual raised the impervious-area trigger from 500 to 1,000 sq ft of new or replaced impervious area.",
+      "topic": "permits",
       "variants": [
-        "oob"
+        "enhanced"
       ],
-      "specificity": 0.9,
-      "actionability": 0.6,
+      "specificity": 1.0,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
-      "citation": null,
+      "citation": "2025 SWMM / PCC 17.38.040",
       "citation_by_variant": {
-        "oob": null
+        "enhanced": "https://www.portland.gov/bes/stormwater/2025-stormwater-management-manual and PCC 17.38.040"
       },
-      "verified_truth": "Correct per evaluator accuracy flags: Portland eliminated parking minimums citywide in 2022."
+      "verified_truth": "2025 SWMM raised the trigger from 500 to 1,000 sq ft, effective March 1, 2025."
     },
     {
-      "id": "A22",
-      "claim_short": "2025 SWMM threshold raised to 1,000 sf",
-      "claim_full": "The 2025 Stormwater Management Manual raised the impervious-area trigger from 500 to 1,000 sq ft, effective March 1, 2025.",
-      "topic": "sewer",
+      "id": "A20",
+      "claim_short": "RV/trailer banned from front yard",
+      "claim_full": "Trailers, RVs, and medium-truck motor homes cannot be parked between the front lot line and the front building line.",
+      "topic": "zoning",
       "variants": [
         "enhanced"
       ],
@@ -463,52 +427,132 @@
       "actionability": 0.9,
       "correctness": "correct",
       "importance": 4,
-      "citation": "PCC 17.38.040 / 2025 SWMM",
+      "citation": "PCC 33.266.150.E and D.2",
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/bes/stormwater/2025-stormwater-management-manual ; PCC 17.38.040, https://www.portland.gov/code/17/38/040"
+        "enhanced": "PCC 33.266.150.E and 33.266.150.D.2 (https://www.portland.gov/sites/default/files/code/266-parking_1.pdf)"
       },
-      "verified_truth": "Correct: 2025 SWMM raised the threshold from 500 to 1,000 sq ft, effective March 1, 2025."
+      "verified_truth": "PCC 33.266.150.E (trailers/RVs) and 33.266.150.D.2 (medium-truck motor homes) prohibit front-yard parking \u2014 material to the resident's likely RV-storage motivation."
     },
     {
-      "id": "A23",
-      "claim_short": "SDCs likely don't apply",
-      "claim_full": "Adding a second driveway to an existing single-family home does not add a dwelling unit, so transportation/parks SDCs typically don't apply; stormwater SDCs only kick in if SWMM thresholds are crossed.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 0.7,
-      "actionability": 0.8,
-      "correctness": "correct",
-      "importance": 3,
-      "citation": "PP&D fee schedule",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/current-fee-schedules"
-      },
-      "verified_truth": "Correct directional answer; verify with PP&D SDC team at 503-823-3270."
-    },
-    {
-      "id": "A24",
-      "claim_short": "PBOT permit $2.10/sf, $75 minimum",
-      "claim_full": "PBOT's Sidewalk/Driveway Construction Permit costs $2.10 per square foot of work, with a $75 minimum.",
-      "topic": "fees",
+      "id": "A21",
+      "claim_short": "Tree Root Pruning Permit needed",
+      "claim_full": "Cutting any street tree root 1/4 inch or larger requires a Tree Root Pruning Permit from Urban Forestry.",
+      "topic": "trees",
       "variants": [
         "enhanced"
       ],
       "specificity": 1.0,
-      "actionability": 0.9,
+      "actionability": 0.8,
       "correctness": "correct",
       "importance": 3,
-      "citation": "FY25-26 Transportation Fee Schedule",
+      "citation": "Title 11 / PCC 11.40.050",
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/documents/transportation-review-fee-schedule-city-portland-effective-july-1-2025/download"
+        "enhanced": "https://www.portland.gov/ppd/tree-permits/root-pruning-permits and PCC 11.40.050"
       },
-      "verified_truth": "Cited from the FY25-26 Transportation Review Fee Schedule effective July 1, 2025."
+      "verified_truth": "Urban Forestry requires a Tree Root Pruning Permit for street-tree roots \u22651/4 inch; most Urban Forestry fees were eliminated/reduced as of July 1, 2025 via PCEF."
+    },
+    {
+      "id": "A22",
+      "claim_short": "Parking minimums removed in 2022",
+      "claim_full": "Portland eliminated parking minimums citywide in 2022, so an ADU does not require separate access or parking.",
+      "topic": "zoning",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.8,
+      "actionability": 0.6,
+      "correctness": "correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Portland eliminated parking minimums citywide in 2022 (confirmed in flags)."
+    },
+    {
+      "id": "A23",
+      "claim_short": "2024 protected bike lane on NE 33rd",
+      "claim_full": "A protected bike lane was added on NE 33rd at Mason/Skidmore in 2024.",
+      "topic": "safety",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.9,
+      "actionability": 0.3,
+      "correctness": "hedge-correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Flags note this specific 2024 bike-lane installation date should be independently verified; treat as unverified."
+    },
+    {
+      "id": "A24",
+      "claim_short": "PortlandMaps lookup as first step",
+      "claim_full": "The free first step is to look up the property at PortlandMaps to confirm zoning, overlays, and street classification.",
+      "topic": "sequence",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 0.7,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "PortlandMaps",
+      "citation_by_variant": {
+        "oob": "PortlandMaps.com",
+        "mcp": null,
+        "enhanced": "https://www.portlandmaps.com"
+      },
+      "verified_truth": "PortlandMaps is the authoritative free city portal for parcel zoning, overlays, and permit history."
     },
     {
       "id": "A25",
-      "claim_short": "Design Exception fee $994",
-      "claim_full": "A residential Driveway Design Exception application costs $994.",
+      "claim_short": "Free 15-min PP&D appointment",
+      "claim_full": "Residents can book a free 15-minute zoning appointment with PP&D (formerly BDS) by calling 503-823-7300.",
+      "topic": "sequence",
+      "variants": [
+        "oob",
+        "mcp",
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 5,
+      "citation": "503-823-7300",
+      "citation_by_variant": {
+        "oob": "503-823-7300",
+        "mcp": "https://www.portland.gov/ppd/zoning-land-use/15-minute-question-appointments",
+        "enhanced": "503-823-7300 (https://www.portland.gov/service-locations/development-services-center)"
+      },
+      "verified_truth": "PP&D's free 15-minute zoning appointment is the cheapest authoritative confirmation path; phone 503-823-7300 confirmed in flags."
+    },
+    {
+      "id": "A26",
+      "claim_short": "PBOT phone 503-823-7002",
+      "claim_full": "PBOT's Sidewalk/Driveway Permits desk can be reached at 503-823-7002 to discuss curb-cut feasibility before applying.",
+      "topic": "sequence",
+      "variants": [
+        "enhanced"
+      ],
+      "specificity": 1.0,
+      "actionability": 1.0,
+      "correctness": "correct-action",
+      "importance": 4,
+      "citation": "503-823-7002",
+      "citation_by_variant": {
+        "enhanced": "503-823-7002 (https://www.portland.gov/transportation/permitting/apply-sidewalk-curb-or-driveway-repair-permit)"
+      },
+      "verified_truth": "503-823-7002 is the PBOT Sidewalk/Driveway Permits line per the city's permit page (confirmed in flags)."
+    },
+    {
+      "id": "A27",
+      "claim_short": "Driveway Design Exception fee $994",
+      "claim_full": "PBOT's Driveway Design Exception fee is $994 under the FY25-26 Transportation Review Fee Schedule.",
       "topic": "fees",
       "variants": [
         "enhanced"
@@ -516,202 +560,70 @@
       "specificity": 1.0,
       "actionability": 0.7,
       "correctness": "correct",
-      "importance": 2,
-      "citation": "FY25-26 Transportation Fee Schedule",
+      "importance": 3,
+      "citation": "FY25-26 Transportation Review Fee Schedule",
       "citation_by_variant": {
         "enhanced": "https://www.portland.gov/ppd/documents/transportation-review-fee-schedule-city-portland-effective-july-1-2025/download"
       },
-      "verified_truth": "Correct per the FY25-26 Transportation Review Fee Schedule."
-    },
-    {
-      "id": "A26",
-      "claim_short": "Plan review fee $709",
-      "claim_full": "A one- or two-family residential plan review through PP&D costs $709.",
-      "topic": "fees",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.6,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "FY25-26 Transportation Fee Schedule",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/ppd/documents/transportation-review-fee-schedule-city-portland-effective-july-1-2025/download"
-      },
-      "verified_truth": "Cited from the published FY25-26 fee schedule."
-    },
-    {
-      "id": "A27",
-      "claim_short": "Construction $4-9k all-in",
-      "claim_full": "Realistic all-in construction budget for widening or extending the existing driveway is roughly $4,000\u2013$9,000 (concrete at $6\u2013$12 per sq ft) over a 2\u20134 month timeline.",
-      "topic": "costs",
-      "variants": [
-        "oob",
-        "enhanced"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.9,
-      "correctness": "correct-range",
-      "importance": 4,
-      "citation": "HomeBlue / Angi",
-      "citation_by_variant": {
-        "oob": null,
-        "enhanced": "https://www.homeblue.com/concrete-driveway/portland-or-concrete-driveway-cost.htm ; https://www.angi.com/articles/how-much-does-concrete-driveway-cost/or/portland"
-      },
-      "verified_truth": "Reasonable range supported by current Portland concrete pricing references; OOB's 'low thousands' framing is consistent."
+      "verified_truth": "Driveway Design Exception fee is $994 per the FY25-26 Transportation Review Fee Schedule effective July 1, 2025."
     },
     {
       "id": "A28",
-      "claim_short": "Free 15-min PP&D appointment",
-      "claim_full": "Portland Permitting & Development offers a free 15-minute zoning appointment by calling 503-823-7300.",
-      "topic": "sequence",
-      "variants": [
-        "oob",
-        "mcp",
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 5,
-      "citation": "PP&D 15-minute appointments",
-      "citation_by_variant": {
-        "oob": "503-823-7300",
-        "mcp": "https://www.portland.gov/ppd/zoning-land-use/15-minute-question-appointments",
-        "enhanced": "https://www.portland.gov/service-locations/development-services-center"
-      },
-      "verified_truth": "Confirmed: PP&D offers free 15-minute appointments via 503-823-7300."
-    },
-    {
-      "id": "A29",
-      "claim_short": "PBOT phone 503-823-7002",
-      "claim_full": "PBOT's Sidewalk/Driveway Permits team is reachable at 503-823-7002.",
-      "topic": "sequence",
-      "variants": [
-        "enhanced"
-      ],
-      "specificity": 1.0,
-      "actionability": 1.0,
-      "correctness": "correct-action",
-      "importance": 4,
-      "citation": "PBOT permitting",
-      "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/transportation/permitting/apply-sidewalk-curb-or-driveway-repair-permit"
-      },
-      "verified_truth": "Correct PBOT contact for sidewalk/driveway permits."
-    },
-    {
-      "id": "A30",
-      "claim_short": "Urban Forestry rules apply to street trees",
-      "claim_full": "Modifying a driveway near the planting strip requires Urban Forestry review; a Tree Root Pruning Permit is needed for cutting roots \u22651/4 inch, and most UF permit fees were eliminated/reduced July 1, 2025 via PCEF.",
-      "topic": "trees",
+      "claim_short": "Concrete cost $6\u201312 per sq ft",
+      "claim_full": "Concrete driveway construction in Portland runs roughly $6\u201312 per square foot installed.",
+      "topic": "costs",
       "variants": [
         "enhanced"
       ],
       "specificity": 0.9,
       "actionability": 0.8,
-      "correctness": "correct",
+      "correctness": "correct-range",
       "importance": 3,
-      "citation": "Title 11 / Urban Forestry",
+      "citation": "HomeBlue / Angi",
       "citation_by_variant": {
-        "enhanced": "https://www.portland.gov/code/11/all ; https://www.portland.gov/ppd/tree-permits/root-pruning-permits ; https://www.portland.gov/ppd/tree-permits/do-i-need-tree-permit"
+        "enhanced": "https://www.homeblue.com/concrete-driveway/portland-or-concrete-driveway-cost.htm and https://www.angi.com/articles/how-much-does-concrete-driveway-cost/or/portland"
       },
-      "verified_truth": "Correct: Title 11 governs street trees; PCEF-funded fee reductions took effect July 1, 2025."
+      "verified_truth": "Local cost guides cite $6\u201312 per sq ft installed; total for 12\u00d750 ft extension \u2248 $3,600\u2013$7,200."
     },
     {
-      "id": "A31",
-      "claim_short": "Workaround: widen to 20 ft / extend back",
-      "claim_full": "Resident's underlying need (more parking, RV/trailer, future detached garage) can be met by widening the existing driveway up to 20 ft or extending it back to a rear garage, without a second curb cut.",
-      "topic": "process",
+      "id": "A29",
+      "claim_short": "Curb-cut permit costs low thousands",
+      "claim_full": "The curb-cut permit fee for design review and construction runs in the low thousands of dollars.",
+      "topic": "costs",
+      "variants": [
+        "oob"
+      ],
+      "specificity": 0.4,
+      "actionability": 0.4,
+      "correctness": "vague-correct",
+      "importance": 2,
+      "citation": null,
+      "citation_by_variant": {
+        "oob": null
+      },
+      "verified_truth": "Enhanced response shows actual PBOT sidewalk/driveway permit is $2.10/sq ft with $75 minimum and typical $200\u2013$500 total \u2014 oob's 'low thousands' overstates the permit-only cost."
+    },
+    {
+      "id": "A30",
+      "claim_short": "Widen existing driveway as alternative",
+      "claim_full": "The realistic alternative for more parking, RV/trailer storage, or rear-garage access is to widen the existing driveway up to 20 ft and/or extend it back along the side of the house, not add a second curb cut.",
+      "topic": "zoning",
       "variants": [
         "oob",
         "mcp",
         "enhanced"
       ],
-      "specificity": 0.85,
+      "specificity": 0.8,
       "actionability": 1.0,
       "correctness": "correct-action",
       "importance": 5,
-      "citation": "TRN-10.40 / PCC 33.266",
+      "citation": "TRN-10.40",
       "citation_by_variant": {
         "oob": "TRN-10.40",
         "mcp": "TRN-10.40",
-        "enhanced": "TRN-10.40 E.1.a.(1) and PCC 33.266.120"
+        "enhanced": "TRN-10.40 E.1.a.(1)"
       },
-      "verified_truth": "Correct: 20 ft double-width and rear-of-lot extension are permitted under existing rules."
-    },
-    {
-      "id": "A32",
-      "claim_short": "Attached housing gets one shared cut",
-      "claim_full": "Attached housing on lots \u226460 ft deep gets a single shared 20-ft curb cut; deeper lots get a 14-ft tapered shared driveway.",
-      "topic": "size",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.5,
-      "correctness": "correct",
-      "importance": 2,
-      "citation": "TRN-10.40",
-      "citation_by_variant": {
-        "mcp": "TRN-10.40"
-      },
-      "verified_truth": "Cited only by MCP variant; consistent with TRN-10.40 attached-housing provisions per evaluator flags."
-    },
-    {
-      "id": "A33",
-      "claim_short": "Bike lane added on NE 33rd 2024",
-      "claim_full": "A protected bike lane was added on NE 33rd at Mason/Skidmore in 2024, increasing PBOT scrutiny of curb-cut applications on this street.",
-      "topic": "safety",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.9,
-      "actionability": 0.5,
-      "correctness": "hedge-correct",
-      "importance": 2,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null
-      },
-      "verified_truth": "Evaluator flagged this as needing verification; the specific 2024 installation date is not clearly grounded."
-    },
-    {
-      "id": "A34",
-      "claim_short": "Owner record shows Warner",
-      "claim_full": "Multnomah County assessor data lists the owners of record as Warner (Alison & Nicolas J D).",
-      "topic": "address",
-      "variants": [
-        "mcp"
-      ],
-      "specificity": 1.0,
-      "actionability": 0.4,
-      "correctness": "correct",
-      "importance": 1,
-      "citation": "PortlandMaps assessor data",
-      "citation_by_variant": {
-        "mcp": "PortlandMaps"
-      },
-      "verified_truth": "Specific owner-record claim from PortlandMaps; should be independently verifiable but is address-bound."
-    },
-    {
-      "id": "A35",
-      "claim_short": "Zone 'probably R5' (hedged)",
-      "claim_full": "OOB hedged on the exact zone code, calling it 'probably R5' rather than confirming via PortlandMaps.",
-      "topic": "zoning",
-      "variants": [
-        "oob"
-      ],
-      "specificity": 0.4,
-      "actionability": 0.3,
-      "correctness": "admitted-gap",
-      "importance": 2,
-      "citation": null,
-      "citation_by_variant": {
-        "oob": null
-      },
-      "verified_truth": "OOB explicitly hedged; MCP and enhanced confirmed zone is R5 with 'h' overlay via PortlandMaps."
+      "verified_truth": "Widening to 20 ft double-width and extending back to a rear garage is the code-compliant way to achieve the resident's likely goals without a second curb cut."
     }
   ]
 }
